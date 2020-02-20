@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12311> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12311 {
+    bda:LGC9EA891FC6477D92
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T10:43:49.225Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12311  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12311 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "92/P8LS12311.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12311 ;
+        adm:logEntry        bda:LGC9EA891FC6477D92 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F1F3B3699AA9ACA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:EV1440E3D4E533CC39
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2E22A5C61C1D63CA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde chen sprul sku che ba tshang /"@bo-x-ewts .
+    
+    bdr:NM54375C4111465744
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 21"@bo-x-ewts .
+    
+    bdr:NT6E128D5D8716EA30
+        a                   :Note ;
+        :locationStatement  "p. 380" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12311  a        :Person ;
+        skos:prefLabel      "bde chen sprul sku che ba tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E128D5D8716EA30 ;
+        :personEvent        bdr:EV0F1F3B3699AA9ACA , bdr:EV1440E3D4E533CC39 ;
+        :personName         bdr:NM2E22A5C61C1D63CA , bdr:NM54375C4111465744 .
+}

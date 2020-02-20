@@ -1,0 +1,69 @@
+@base          <bdg:P2KG210032> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG210032 {
+    bda:LG002DF899BBC6FB73
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-05T12:52:28.884Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG210032  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG210032 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b0/P2KG210032.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG210032 ;
+        adm:logEntry        bda:LG002DF899BBC6FB73 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV96B6C02AD9B3120F
+        a                   :PersonDeath ;
+        :onYear             "1946"^^xsd:gYear .
+    
+    bdr:EVC5CD741CD1FFE440
+        a                   :PersonBirth ;
+        :onYear             "1901"^^xsd:gYear .
+    
+    bdr:EVE5A44D741FF04CB8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3278 .
+    
+    bdr:NM877FC5829C09898F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang thub bstan nyi ma/"@bo-x-ewts .
+    
+    bdr:NM974B40AF58644831
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rgya nag pa 03"@bo-x-ewts .
+    
+    bdr:NM9A8FA2A7205B920D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya nag pa 03 blo bzang thub bstan nyi ma/"@bo-x-ewts .
+    
+    bdr:NT34CD5CEAA3B6B1AC
+        a                   :Note ;
+        :locationStatement  "pp. 120-146" ;
+        :noteSource         bdr:MW2KG209788 ;
+        :noteText           "Biography"@en .
+    
+    bdr:P2KG210032  a       :Person ;
+        skos:prefLabel      "blo bzang thub bstan nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2KG210031 ;
+        :isRoot             true ;
+        :note               bdr:NT34CD5CEAA3B6B1AC ;
+        :personEvent        bdr:EV96B6C02AD9B3120F , bdr:EVC5CD741CD1FFE440 , bdr:EVE5A44D741FF04CB8 ;
+        :personName         bdr:NM877FC5829C09898F , bdr:NM974B40AF58644831 , bdr:NM9A8FA2A7205B920D .
+}

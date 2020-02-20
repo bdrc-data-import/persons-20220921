@@ -1,0 +1,55 @@
+@base          <bdg:P7079> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7079 {
+    bda:P7079  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7079 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fe/P7079.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7079 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB297A7A6A4766D59
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G880 .
+    
+    bdr:EVDF190428F50A14DF
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMBF6E32EBBCEF0C74
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "maitri bsam gtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME2C0AD5B4009017C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6B760908FBA56293
+        a                   :Note ;
+        :locationStatement  "colophon" ;
+        :noteSource         bdr:MW21021 ;
+        :noteText           "sa skya pa monk, perhaps an abbot of sa skya\nborn into a bon po lineage\nwrote his manual for vinaya ordination in an earth rat year at sa skya"@en .
+    
+    bdr:P7079  a            :Person ;
+        skos:prefLabel      "bsam gtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6B760908FBA56293 ;
+        :personEvent        bdr:EVB297A7A6A4766D59 , bdr:EVDF190428F50A14DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBF6E32EBBCEF0C74 , bdr:NME2C0AD5B4009017C .
+}

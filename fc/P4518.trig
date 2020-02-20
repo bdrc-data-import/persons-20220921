@@ -1,0 +1,87 @@
+@base          <bdg:P4518> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4518 {
+    bda:LG03605806064D5962
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-20T17:01:55.471Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG63663C8909B145A7
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T15:40:54.092Z"^^xsd:dateTime ;
+        adm:logMessage      "created link to Treasury of Lives"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG639A8020E312242E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-20T12:59:00.551Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P4518  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4518 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "fc/P4518.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4518 ;
+        adm:logEntry        bda:LG03605806064D5962 , bda:LG63663C8909B145A7 , bda:LG639A8020E312242E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB76CF15F81650450
+        a                   :PersonDeath ;
+        :onYear             "1168"^^xsd:gYear .
+    
+    bdr:EVEBDE291B6CBB1BD3
+        a                   :PersonBirth ;
+        :onYear             "1052"^^xsd:gYear .
+    
+    bdr:NM094F8D4B3F2ABD4F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzeng sgom d+harma bo dhi/"@bo-x-ewts .
+    
+    bdr:NME2C00BB6ACEC409C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "d+harma bo dhi"@sa-x-ewts .
+    
+    bdr:NT743F3544F1FF7030
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma\n\n-- Atiyoga"@en .
+    
+    bdr:NTBE3A2793DACA87F0
+        a                   :Note ;
+        :locationStatement  "p. 1420" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTF65FD1720E0EAAEE
+        a                   :Note ;
+        :locationStatement  "207" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n\nAn important master in the transmission of the klong sde of rdzogs pa chen po."@en .
+    
+    bdr:P4518  a            :Person ;
+        skos:prefLabel      "d+harma bo dhi"@sa-x-ewts ;
+        :hasFather          bdr:P4519 , bdr:P4520 ;
+        :hasMother          bdr:P4520 ;
+        :isRoot             true ;
+        :note               bdr:NT743F3544F1FF7030 , bdr:NTBE3A2793DACA87F0 , bdr:NTF65FD1720E0EAAEE ;
+        :personEvent        bdr:EVB76CF15F81650450 , bdr:EVEBDE291B6CBB1BD3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM094F8D4B3F2ABD4F , bdr:NME2C00BB6ACEC409C ;
+        :personStudentOf    bdr:P2JM113 , bdr:P2JM116 ;
+        :personTeacherOf    bdr:P2JM117 , bdr:P2JM118 , bdr:P2JM119 , bdr:P2JM120 , bdr:P2JM121 , bdr:P2JM122 , bdr:P2JM123 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dzeng-Dharmabhodhi/6962"^^xsd:anyURI .
+}

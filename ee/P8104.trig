@@ -1,0 +1,51 @@
+@base          <bdg:P8104> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8104 {
+    bda:P8104  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8104 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ee/P8104.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8104 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8168976AA31759F3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:NM217FAA619E475F26
+        a                   :PersonPersonalName ;
+        rdfs:label          "dge 'dun bkra shis/"@bo-x-ewts .
+    
+    bdr:NM8214372A91203380
+        a                   :PersonPersonalName ;
+        rdfs:label          "lcang skya dge 'dun bkra shis/"@bo-x-ewts .
+    
+    bdr:NT7D7B7AD36090C918
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW25188 ;
+        :noteText           "biodata of individual"@en .
+    
+    bdr:P8104  a            :Person ;
+        skos:prefLabel      "dge 'dun bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7D7B7AD36090C918 ;
+        :personEvent        bdr:EV8168976AA31759F3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM217FAA619E475F26 , bdr:NM8214372A91203380 .
+}

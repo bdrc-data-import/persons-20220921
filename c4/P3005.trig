@@ -1,0 +1,92 @@
+@base          <bdg:P3005> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3005 {
+    bda:LG84DAE417467F6673
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-15T15:16:19.386Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGBB0681AF933CF90A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:41:31.21Z"^^xsd:dateTime ;
+        adm:logMessage      "shad 'then pa"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3005  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3005 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c4/P3005.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3005 ;
+        adm:logEntry        bda:LG84DAE417467F6673 , bda:LGBB0681AF933CF90A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB3A40EA9DE763EEC
+        a                   :PersonDeath ;
+        :onYear             "1202"^^xsd:gYear .
+    
+    bdr:EVF4043D3552824E4E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3CN302 ;
+        :onYear             "1126"^^xsd:gYear .
+    
+    bdr:NM27B451363E76210B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yu thog gsar ma yon tan mgon po/"@bo-x-ewts .
+    
+    bdr:NM3B47E54AA90E0341
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan mgon po/"@bo-x-ewts .
+    
+    bdr:NT0304DFBBAA8A51D5
+        a                   :Note ;
+        :noteText           "Student (not recorded): Bsod-seng."@en .
+    
+    bdr:NT29638CE9D05D2208
+        a                   :Note ;
+        :locationStatement  "p. 249" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:NTA1E6763E43E37250
+        a                   :Note ;
+        :locationStatement  "p. 1584" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTB7944311337C5A0D
+        a                   :Note ;
+        :locationStatement  "p. 356" ;
+        :noteSource         bdr:MW27524 ;
+        :noteText           "'khrungs sa rgyal rtse rdzong gi khra ring shang khongs su yod pa shes thub/"@bo-x-ewts .
+    
+    bdr:NTF39299B2D18282C6
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "important teacher in the transmission lineage of the rgyud bzhi"@en .
+    
+    bdr:P3005  a            :Person ;
+        skos:prefLabel      "yon tan mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0304DFBBAA8A51D5 , bdr:NT29638CE9D05D2208 , bdr:NTA1E6763E43E37250 , bdr:NTB7944311337C5A0D , bdr:NTF39299B2D18282C6 ;
+        :personEvent        bdr:EVB3A40EA9DE763EEC , bdr:EVF4043D3552824E4E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27B451363E76210B , bdr:NM3B47E54AA90E0341 ;
+        :personStudentOf    bdr:P2472 ;
+        :personTeacherOf    bdr:P3006 , bdr:P3008 , bdr:P4969 , bdr:P4970 , bdr:P4972 , bdr:P4973 , bdr:P4974 , bdr:P4975 .
+}

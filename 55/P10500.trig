@@ -1,0 +1,82 @@
+@base          <bdg:P10500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10500 {
+    bda:LG1E0BA17645D7A00A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-03T10:13:43.609Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB48EBBAC1E59AB1C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-03T10:12:20.272Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10500  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10500 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "55/P10500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10500 ;
+        adm:logEntry        bda:LG1E0BA17645D7A00A , bda:LGB48EBBAC1E59AB1C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBB3776568FA8533B
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVEE6ACCBBCDBA97DB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFECE911F9D869158
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:NM70B0769E569D3974
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling mkhan chen 05"@bo-x-ewts .
+    
+    bdr:NMF48603B7569A84B9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT7D39BC73B089CB64
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:NTB37ECAE7335E2DEF
+        a                   :Note ;
+        :noteText           "rnying ma master of the smin grol gling tradition"@en .
+    
+    bdr:NTC6312F5D0FA60F9C
+        a                   :Note ;
+        :locationStatement  "p. 171" ;
+        :noteSource         bdr:MW1CZ2290 .
+    
+    bdr:P10500  a           :Person ;
+        skos:prefLabel      "o rgyan chos 'phel/"@bo-x-ewts ;
+        :hasBrother         bdr:P1815 ;
+        :hasFather          bdr:P2542 ;
+        :isRoot             true ;
+        :note               bdr:NT7D39BC73B089CB64 , bdr:NTB37ECAE7335E2DEF , bdr:NTC6312F5D0FA60F9C ;
+        :personEvent        bdr:EVBB3776568FA8533B , bdr:EVEE6ACCBBCDBA97DB , bdr:EVFECE911F9D869158 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM70B0769E569D3974 , bdr:NMF48603B7569A84B9 .
+}

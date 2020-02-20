@@ -1,0 +1,51 @@
+@base          <bdg:P3504> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3504 {
+    bda:P3504  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3504 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "72/P3504.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3504 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDB043EC3571747F3
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM18FD4F8E274FEA25
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM366B1C87C3F0DC1D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde drug mkhan po blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTD2A99BF59ECAD532
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3504  a            :Person ;
+        skos:prefLabel      "blo bzang dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD2A99BF59ECAD532 ;
+        :personEvent        bdr:EVDB043EC3571747F3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18FD4F8E274FEA25 , bdr:NM366B1C87C3F0DC1D ;
+        :personStudentOf    bdr:P37 ;
+        :personTeacherOf    bdr:P2277 .
+}

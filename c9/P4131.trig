@@ -1,0 +1,104 @@
+@base          <bdg:P4131> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4131 {
+    bda:LGB4DBD9532A13329C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGCA66E34F0C0ACC74
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T14:18:56.062Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD918DC264DEBC67A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T13:41:29.95Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF5C90E7DB4E8E95A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T14:21:39.397Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4131  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4131 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "c9/P4131.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4131 ;
+        adm:logEntry        bda:LGB4DBD9532A13329C , bda:LGCA66E34F0C0ACC74 , bda:LGD918DC264DEBC67A , bda:LGF5C90E7DB4E8E95A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV390ADBAB6517EF28
+        a                   :PersonDeath ;
+        :onYear             "1682"^^xsd:gYear .
+    
+    bdr:EV52841D0BAE444DE9
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1285 ;
+        :onYear             "1610"^^xsd:gYear .
+    
+    bdr:EV5F51713C1F357C6C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4822 .
+    
+    bdr:EV67CBA98D36CC65CD
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13139 .
+    
+    bdr:NM1DD87349B426D4A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha khang lung pa 01 yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM33B59809AB17D1DA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lha khang lung pa 01"@bo-x-ewts .
+    
+    bdr:NMBFDCFD9D7525D605
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMDF805B68BF6892A8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lhakang Lungpa 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT1DAC85CFA0A8BE04
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT1E6B8002D43E2329
+        a                   :Note ;
+        :locationStatement  "p. 1842" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT4D178769C946A735
+        a                   :Note ;
+        :noteText           "Travelled to Tibet where he studied at Dga'-ldan\nReturned to his own monastery at Rgyal-mo-bsam-grub-gling."@en .
+    
+    bdr:P4131  a            :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1DAC85CFA0A8BE04 , bdr:NT1E6B8002D43E2329 , bdr:NT4D178769C946A735 ;
+        :personEvent        bdr:EV390ADBAB6517EF28 , bdr:EV52841D0BAE444DE9 , bdr:EV5F51713C1F357C6C , bdr:EV67CBA98D36CC65CD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DD87349B426D4A0 , bdr:NM33B59809AB17D1DA , bdr:NMBFDCFD9D7525D605 , bdr:NMDF805B68BF6892A8 ;
+        :personStudentOf    bdr:P4132 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12510> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12510 {
+    bda:LG3D365F610F0FEE60
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-20T16:04:05.506Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGABBA21037123D62C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-26T09:40:24.836Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCAA10CB3EEAB7EE6
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS12510  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12510 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f1/P8LS12510.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12510 ;
+        adm:logEntry        bda:LG3D365F610F0FEE60 , bda:LGABBA21037123D62C , bda:LGCAA10CB3EEAB7EE6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB9B145C8CDA172D1
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12803 .
+    
+    bdr:NM4380BC42CE9F0B35
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "spo bo spang lab sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM4F81D6466349D088
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Powo Panglab Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMCC257D0E514F8EAE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos grags/"@bo-x-ewts .
+    
+    bdr:NTE966AF1562807FE0
+        a                   :Note ;
+        :noteText           "incarnation lineage of uncertain sectarian affiliation; probably from khams, possibly from spo bo\nrgya'i tang tser 'khod kyang gser snyan du mi 'gro gras\n\n1) dang po ni/ bstan 'dzin chos grags/ karma zur mongs su 'khrungs/ dgung lo zhe dgur gshegs/"@en .
+    
+    bdr:P8LS12510  a        :Person ;
+        skos:prefLabel      "bstan 'dzin chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE966AF1562807FE0 ;
+        :personEvent        bdr:EVB9B145C8CDA172D1 ;
+        :personName         bdr:NM4380BC42CE9F0B35 , bdr:NM4F81D6466349D088 , bdr:NMCC257D0E514F8EAE .
+}

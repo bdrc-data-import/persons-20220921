@@ -1,0 +1,50 @@
+@base          <bdg:P3919> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3919 {
+    bda:P3919  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3919 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "05/P3919.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3919 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1045BBA5EF3C3E92
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM7E09E813F1920EC1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tig gya dkon mchog"@bo-x-ewts .
+    
+    bdr:NMA8A4C6EF22F9FD10
+        a                   :PersonReversal ;
+        rdfs:label          "dkon mchog, tig gya"@sa-x-ewts .
+    
+    bdr:NTF8ECEC63E2E66B09
+        a                   :Note ;
+        :noteText           "dge lugs teacher of the 19th cent."@en .
+    
+    bdr:P3919  a            :Person ;
+        skos:prefLabel      "dkon mchog, tig gya"@sa-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF8ECEC63E2E66B09 ;
+        :personEvent        bdr:EV1045BBA5EF3C3E92 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7E09E813F1920EC1 , bdr:NMA8A4C6EF22F9FD10 ;
+        :personTeacherOf    bdr:P3096 .
+}

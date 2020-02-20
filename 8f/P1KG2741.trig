@@ -1,0 +1,71 @@
+@base          <bdg:P1KG2741> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG2741 {
+    bda:LG113F52FCD962D78B
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-28T11:27:19.726Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG30B6DC92F4199BB9
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-22T10:32:58.088Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG8E4538C081429BC5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T10:30:39.149Z"^^xsd:dateTime ;
+        adm:logMessage      "non actors"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P1KG2741  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG2741 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8f/P1KG2741.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG2741 ;
+        adm:logEntry        bda:LG113F52FCD962D78B , bda:LG30B6DC92F4199BB9 , bda:LG8E4538C081429BC5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV26FEF7D0BF5D2574
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EVEF572D488C1D6973
+        a                   :PersonDeath ;
+        :onYear             "1947"^^xsd:gYear .
+    
+    bdr:NMC3719FF3111317BC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "theos casimir bernard"@en .
+    
+    bdr:NMD3A4F5CEBEE6AF48
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bernard, theos"@en .
+    
+    bdr:NT3F2363E614C3FC60
+        a                   :Note ;
+        :noteSource         bdr:MW1KG2740 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG2741  a         :Person ;
+        skos:prefLabel      "bernard, theos"@en ;
+        :isRoot             true ;
+        :note               bdr:NT3F2363E614C3FC60 ;
+        :personEvent        bdr:EV26FEF7D0BF5D2574 , bdr:EVEF572D488C1D6973 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC3719FF3111317BC , bdr:NMD3A4F5CEBEE6AF48 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P5958> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5958 {
+    bda:LG145ED556EB196A71
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T13:07:06.953Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typo"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB0C0F745520D9D8B
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-01T10:54:58.192Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and names"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5958  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5958 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b4/P5958.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5958 ;
+        adm:logEntry        bda:LG145ED556EB196A71 , bda:LGB0C0F745520D9D8B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B3F39EE72D2C3AC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1483 ;
+        :onYear             "1915"^^xsd:gYear .
+    
+    bdr:EVEAF55895A2FA43E3
+        a                   :PersonDeath ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:NM172F5A27FF408412
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NM489CCF13FDD0A985
+        a                   :PersonTitle ;
+        rdfs:label          "rgyal thang a sbong rin po che bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NM7508CE73869CD4FE
+        a                   :PersonPersonalName ;
+        rdfs:label          "a bu bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NMBE33D79C56EC6C95
+        a                   :PersonPersonalName ;
+        rdfs:label          "a sbong bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NT691D7B9C963BBCB7
+        a                   :Note ;
+        :noteText           "dge lugs teacher"@en .
+    
+    bdr:P5958  a            :Person ;
+        skos:prefLabel      "bstan 'dzin 'phrin las kun mkhyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT691D7B9C963BBCB7 ;
+        :personEvent        bdr:EV5B3F39EE72D2C3AC , bdr:EVEAF55895A2FA43E3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM172F5A27FF408412 , bdr:NM489CCF13FDD0A985 , bdr:NM7508CE73869CD4FE , bdr:NMBE33D79C56EC6C95 ;
+        :personStudentOf    bdr:P230 ;
+        :personTeacherOf    bdr:P5957 .
+}

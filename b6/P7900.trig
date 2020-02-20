@@ -1,0 +1,52 @@
+@base          <bdg:P7900> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7900 {
+    bda:P7900  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7900 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b6/P7900.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7900 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA00677226D3ED210
+        a                   :PersonBirth ;
+        :onYear             "1670"^^xsd:gYear .
+    
+    bdr:NM2D703E8AAA484B1D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zur mchog sprul ngag dbang kun dga' bsod nams mchog grub bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCA0CB3AFD412B10C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang kun dga' bsod nams mchog grub bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD323B0C452DF79CF
+        a                   :Note ;
+        :locationStatement  "intro" ;
+        :noteSource         bdr:MW24575 ;
+        :noteText           "teacher of rig 'dzin dpal ldan bkra shis"@en .
+    
+    bdr:P7900  a            :Person ;
+        skos:prefLabel      "ngag dbang kun dga' bsod nams mchog grub bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationOf      bdr:P650 ;
+        :isRoot             true ;
+        :note               bdr:NTD323B0C452DF79CF ;
+        :personEvent        bdr:EVA00677226D3ED210 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D703E8AAA484B1D , bdr:NMCA0CB3AFD412B10C ;
+        :personTeacherOf    bdr:P665 .
+}

@@ -1,0 +1,74 @@
+@base          <bdg:P8621> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8621 {
+    bda:LGA141C60508A65622
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-14T14:33:04.438Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGA4A3B641A09D0650
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-08T14:41:00.08Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnate relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEA29B73F7A169459
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-11T14:53:39.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added phonetic tulku title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8621  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8621 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "85/P8621.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8621 ;
+        adm:logEntry        bda:LGA141C60508A65622 , bda:LGA4A3B641A09D0650 , bda:LGEA29B73F7A169459 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM07FBC76FC5C94C64
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong sprul 06 dkon mchog bstan 'dzin 'gro 'dul dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM196DF9F088C99814
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brong sprul 06"@bo-x-ewts .
+    
+    bdr:NM6ED3826216CD602F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin 'gro 'dul dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMC2A8D32C557970CE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drong Tulku 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT475B743FCFCF0EC1
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8621  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin 'gro 'dul dpal bzang /"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8620 ;
+        :isRoot             true ;
+        :note               bdr:NT475B743FCFCF0EC1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07FBC76FC5C94C64 , bdr:NM196DF9F088C99814 , bdr:NM6ED3826216CD602F , bdr:NMC2A8D32C557970CE ;
+        :personTeacherOf    bdr:P4582 , bdr:P8LS12189 .
+}

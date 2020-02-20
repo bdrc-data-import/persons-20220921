@@ -1,0 +1,70 @@
+@base          <bdg:P5001> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5001 {
+    bda:LGF0391FF3D6CD7548
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-08T12:45:42.969Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and sanskrit"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5001  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5001 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "2d/P5001.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5001 ;
+        adm:logEntry        bda:LGF0391FF3D6CD7548 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF140BEA22FA4FD09
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM0E6F6B407BF6FB43
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:NMC2329866DDA27D6D
+        a                   :PersonOtherName ;
+        rdfs:label          "sde dge bla sman zhal chen lha rje/"@bo-x-ewts .
+    
+    bdr:NMEEC1D4FE2C3856F7
+        a                   :PersonOtherName ;
+        rdfs:label          "rat+na ra smir"@sa-x-ewts .
+    
+    bdr:NMF3E2286D9C33B25E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge bla sman rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:NT01A562C5700EAB1F
+        a                   :Note ;
+        :locationStatement  "p. 148" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "biographical note"@en .
+    
+    bdr:NT4DB990FE09C9FF0B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P5001  a            :Person ;
+        skos:prefLabel      "rin chen 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT01A562C5700EAB1F , bdr:NT4DB990FE09C9FF0B ;
+        :personEvent        bdr:EVF140BEA22FA4FD09 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E6F6B407BF6FB43 , bdr:NMC2329866DDA27D6D , bdr:NMEEC1D4FE2C3856F7 , bdr:NMF3E2286D9C33B25E .
+}

@@ -1,0 +1,48 @@
+@base          <bdg:P5386> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5386 {
+    bda:P5386  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5386 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "bd/P5386.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5386 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7261A095CD8A0954
+        a                   :PersonDeath ;
+        :onYear             "1926"^^xsd:gYear .
+    
+    bdr:EVD35558D449C2D2AE
+        a                   :PersonBirth ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:NM697EC605770A87BB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs lung rtogs/"@bo-x-ewts .
+    
+    bdr:NT43C515F7C0119CDC
+        a                   :Note ;
+        :noteText           "Teacher and friend of Johannes van Manen"@en .
+    
+    bdr:P5386  a            :Person ;
+        skos:prefLabel      "phun tshogs lung rtogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT43C515F7C0119CDC ;
+        :personEvent        bdr:EV7261A095CD8A0954 , bdr:EVD35558D449C2D2AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM697EC605770A87BB .
+}

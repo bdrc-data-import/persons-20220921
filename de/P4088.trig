@@ -1,0 +1,119 @@
+@base          <bdg:P4088> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4088 {
+    bda:LG7088A6AE04FD3DD9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-13T14:46:10.201Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA41F60AEA7F0AE61
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T17:38:29.265Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGA98196DF23CE052F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-16T16:41:09.034Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student, leaves office dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4088  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4088 ;
+        adm:facetIndex      18 ;
+        adm:gitPath         "de/P4088.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4088 ;
+        adm:logEntry        bda:LG7088A6AE04FD3DD9 , bda:LGA41F60AEA7F0AE61 , bda:LGA98196DF23CE052F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AEC9F09C8A5F726
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:EV13AB394A881CE171
+        a                   :PersonBirth ;
+        :onYear             "1127"^^xsd:gYear .
+    
+    bdr:EV165CEA03C71ABC95
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1185"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB7E0B0C5926EFFF7
+        a                   :PersonDeath ;
+        :onYear             "1185"^^xsd:gYear .
+    
+    bdr:EVFF2F49FB235A5B4A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1166"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1980F51D3809F965
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab grags/"@bo-x-ewts .
+    
+    bdr:NM714FE0230A6997DB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo ston shes rab grags/"@bo-x-ewts .
+    
+    bdr:NMC245B0FDCE30D7D3
+        a                   :PersonTitle ;
+        rdfs:label          "snar thang gdan rabs 02 shes rab grags/"@bo-x-ewts .
+    
+    bdr:NMC3E9A94618C65878
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 02"@bo-x-ewts .
+    
+    bdr:NMF5C383CED14E1A07
+        a                   :PersonTitle ;
+        rdfs:label          "g.yas chen po shes rab grags/"@bo-x-ewts .
+    
+    bdr:NT4F54C3F337EAAE64
+        a                   :Note ;
+        :locationStatement  "p. 27" ;
+        :noteSource         bdr:MW1CZ2413 .
+    
+    bdr:NT690CEA7C91207FE6
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 48" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "noted here as g.yas chen po shes rab grags; master in the transmission lineage of the abhidharmakosakarika"@en .
+    
+    bdr:NTB9BFC030D8B44BA9
+        a                   :Note ;
+        :locationStatement  "p. 899" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTF746378C4948E6FD
+        a                   :Note ;
+        :noteText           "1166. Ascends khri of Snar-thang"@en .
+    
+    bdr:P4088  a            :Person ;
+        skos:prefLabel      "shes rab grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F54C3F337EAAE64 , bdr:NT690CEA7C91207FE6 , bdr:NTB9BFC030D8B44BA9 , bdr:NTF746378C4948E6FD ;
+        :personEvent        bdr:EV0AEC9F09C8A5F726 , bdr:EV13AB394A881CE171 , bdr:EV165CEA03C71ABC95 , bdr:EVB7E0B0C5926EFFF7 , bdr:EVFF2F49FB235A5B4A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1980F51D3809F965 , bdr:NM714FE0230A6997DB , bdr:NMC245B0FDCE30D7D3 , bdr:NMC3E9A94618C65878 , bdr:NMF5C383CED14E1A07 ;
+        :personStudentOf    bdr:P3446 , bdr:P4849 ;
+        :personTeacherOf    bdr:P2271 , bdr:P4456 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Donton-Sherab-Drakpa/6491"^^xsd:anyURI .
+}

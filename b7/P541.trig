@@ -1,0 +1,103 @@
+@base          <bdg:P541> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P541 {
+    bda:LG277CC413CCD74075
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T09:03:41.539Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG497E5EE13A947F2C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T11:44:19.432Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGFBE7DE8944A6DEF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-14T15:08:43.724Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P541  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P541 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "b7/P541.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P541 ;
+        adm:logEntry        bda:LG277CC413CCD74075 , bda:LG497E5EE13A947F2C , bda:LGFBE7DE8944A6DEF2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV26B97E13AEDADE64
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1755"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV33C96282BDA19E45
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV8539EB5A28FA263C
+        a                   :PersonDeath ;
+        :notAfter           "1767"^^xsd:gYear ;
+        :notBefore          "1766"^^xsd:gYear .
+    
+    bdr:EVB0B21B6621B13B68
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1762"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVD90F13FD349A1D98
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G744 ;
+        :onYear             "1701"^^xsd:gYear .
+    
+    bdr:NM3FF64999C512EB4A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 10"@bo-x-ewts .
+    
+    bdr:NMCFFECAFEBCD48718
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos rgyal/"@bo-x-ewts .
+    
+    bdr:NME8E74B1956C949F0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 10 bstan 'dzin chos rgyal/"@bo-x-ewts .
+    
+    bdr:NT39F5FED5DA833FA4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT5FACCDE921A63A5C
+        a                   :Note ;
+        :locationStatement  "p. 146" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NTD87917F966E9E6A2
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1755-1762.\n1712. Becomes a monk.\n1732. Serves as Se'u-la 'dren-pa for 6 years and as Shar-lung 'dren-pa for 7 years at Dbang-'dus Pho-brang.\nBecomes yongs-'dzin of Rgyal-sras 'Brug-sgra-rnam-rgyal.\nServes as Spung-thang Rdo-rje-slob-dpon.\nReestablishes Chos-rab-rtse monastery.\n1762. Steps down as Rje Mkhan-po.\nFounds Dpal-ri Gzims-khang Gong-ma Chos-bzang-sprin-gyi-yang-rdzong.\nYear of death in MR is 1766; Dge-bshes Brag-phug gives 1767 (me-phag)"@en .
+    
+    bdr:P541  a             :Person ;
+        skos:prefLabel      "bstan 'dzin chos rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT39F5FED5DA833FA4 , bdr:NT5FACCDE921A63A5C , bdr:NTD87917F966E9E6A2 ;
+        :personEvent        bdr:EV26B97E13AEDADE64 , bdr:EV33C96282BDA19E45 , bdr:EV8539EB5A28FA263C , bdr:EVB0B21B6621B13B68 , bdr:EVD90F13FD349A1D98 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3FF64999C512EB4A , bdr:NMCFFECAFEBCD48718 , bdr:NME8E74B1956C949F0 ;
+        :personStudentOf    bdr:P522 , bdr:P523 , bdr:P528 , bdr:P542 ;
+        :personTeacherOf    bdr:P3AG16 , bdr:P534 , bdr:P535 .
+}

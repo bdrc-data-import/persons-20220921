@@ -1,0 +1,73 @@
+@base          <bdg:P100> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P100 {
+    bda:P100  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P100 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9e/P100.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P100 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA0BB2651EFCB1273
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVB719322437CB15A5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G105 .
+    
+    bdr:NM5102AC3E28BC7D5D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun blo bzang /"@bo-x-ewts .
+    
+    bdr:NM6E7B554E110D692D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rta nag pa dge 'dun blo bzang /"@bo-x-ewts .
+    
+    bdr:NT23393085E43A9EB7
+        a                   :Note ;
+        :locationStatement  "p. 59" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates: \"dus rabs 16 pa'i nang\""@en .
+    
+    bdr:NT2A04246CEB4E137B
+        a                   :Note ;
+        :locationStatement  "p. 724" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTBE24AA1E9394FAD1
+        a                   :Note ;
+        :noteText           "dge lugs master of the thos bsam gling grwa tshang of bkra shis lhun po; he is known for his contributions on logic\nstudied at the legs grub grwa tshang"@en .
+    
+    bdr:NTF24DDE586AE72CF0
+        a                   :Note ;
+        :locationStatement  "p. 194" ;
+        :noteSource         bdr:MW19836 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:P100  a             :Person ;
+        skos:prefLabel      "dge 'dun blo bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT23393085E43A9EB7 , bdr:NT2A04246CEB4E137B , bdr:NTBE24AA1E9394FAD1 , bdr:NTF24DDE586AE72CF0 ;
+        :personEvent        bdr:EVA0BB2651EFCB1273 , bdr:EVB719322437CB15A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5102AC3E28BC7D5D , bdr:NM6E7B554E110D692D ;
+        :personStudentOf    bdr:P477 , bdr:P997 ;
+        :personTeacherOf    bdr:P97 .
+}

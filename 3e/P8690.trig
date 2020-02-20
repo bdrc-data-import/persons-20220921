@@ -1,0 +1,69 @@
+@base          <bdg:P8690> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8690 {
+    bda:LG513B57A11374DE0C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-23T16:14:26.682Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG9C7FEB61763FCF9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-12-25T06:21:15.186Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P8690  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8690 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3e/P8690.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8690 ;
+        adm:logEntry        bda:LG513B57A11374DE0C , bda:LG9C7FEB61763FCF9E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV48B03B8B9CBA6BC0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM63B0EE91FA3B09DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "o rgyan theg mchog gling pa/"@bo-x-ewts .
+    
+    bdr:NM81A6696B88A58E7F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gar dbang theg mchog gling pa/"@bo-x-ewts .
+    
+    bdr:NME85977A262FF6310
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yag ze gter ston gar dbang theg mchog gling pa/"@bo-x-ewts .
+    
+    bdr:NT531FC56815A558C3
+        a                   :Note ;
+        :locationStatement  "p. 689" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "mentioned as a teacher of yid lhung 'ja' lus pa bsod nams rnam rgyal"@en .
+    
+    bdr:P8690  a            :Person ;
+        skos:prefLabel      "gar dbang theg mchog gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT531FC56815A558C3 ;
+        :personEvent        bdr:EV48B03B8B9CBA6BC0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM63B0EE91FA3B09DE , bdr:NM81A6696B88A58E7F , bdr:NME85977A262FF6310 ;
+        :personStudentOf    bdr:P1710 , bdr:P8691 ;
+        :personTeacherOf    bdr:P8689 .
+}

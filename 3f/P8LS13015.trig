@@ -1,0 +1,65 @@
+@base          <bdg:P8LS13015> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13015 {
+    bda:LG5A83EB2F2B19BA17
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T10:52:04.314Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF4C2BC309D00A4A0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-08T14:02:23.893Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13015  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13015 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3f/P8LS13015.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13015 ;
+        adm:logEntry        bda:LG5A83EB2F2B19BA17 , bda:LGF4C2BC309D00A4A0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE0BEAE66A3F2A1D0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G157 .
+    
+    bdr:NM36ED62D05BFE3A5E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mchog gling yongs 'dzin sprul sku 04"@bo-x-ewts .
+    
+    bdr:NMA78FDD5A801C4667
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsechok Ling Yongzin Tulku 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC9E74BE3BDD55D72
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe mchog gling sku phreng bzhi pa/"@bo-x-ewts .
+    
+    bdr:NT99C2BDA37EE51BD2
+        a                   :Note ;
+        :noteText           "Among Tibetan Texts, p. 312\nprimary name is not known, died of smallpox at the age of 7"@en .
+    
+    bdr:P8LS13015  a        :Person ;
+        skos:prefLabel      "tshe mchog gling sku phreng bzhi pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13014 ;
+        :isRoot             true ;
+        :note               bdr:NT99C2BDA37EE51BD2 ;
+        :personEvent        bdr:EVE0BEAE66A3F2A1D0 ;
+        :personName         bdr:NM36ED62D05BFE3A5E , bdr:NMA78FDD5A801C4667 , bdr:NMC9E74BE3BDD55D72 .
+}

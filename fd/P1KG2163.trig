@@ -1,0 +1,71 @@
+@base          <bdg:P1KG2163> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG2163 {
+    bda:LG22D76E68434F18D2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-01T14:39:42.417Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6CF1BB49C3AC9389
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-20T14:23:14.224Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG8C599B05CE5035C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-01T14:51:03.726Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG2163  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG2163 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fd/P1KG2163.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG2163 ;
+        adm:logEntry        bda:LG22D76E68434F18D2 , bda:LG6CF1BB49C3AC9389 , bda:LG8C599B05CE5035C7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9E441963CC28106C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVA32DE98AF423FC69
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1980"^^xsd:gYear .
+    
+    bdr:NM31BC65D4FC1A85B5
+        a                   :PersonPersonalName ;
+        rdfs:label          "ser shul rin chen don grub/"@bo-x-ewts .
+    
+    bdr:NM55D4CF58C3780255
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen don grub/"@bo-x-ewts .
+    
+    bdr:NTCC0E3BA8D1FE4A93
+        a                   :Note ;
+        :noteSource         bdr:MW1KG2160 ;
+        :noteText           "short introduction of author rinchen dhondup on french flap of the book"@en .
+    
+    bdr:P1KG2163  a         :Person ;
+        skos:prefLabel      "rin chen don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCC0E3BA8D1FE4A93 ;
+        :personEvent        bdr:EV9E441963CC28106C , bdr:EVA32DE98AF423FC69 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM31BC65D4FC1A85B5 , bdr:NM55D4CF58C3780255 .
+}

@@ -1,0 +1,53 @@
+@base          <bdg:P10035> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10035 {
+    bda:P10035  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10035 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "4b/P10035.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10035 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCA0499D561219F66
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMB38510826CCACF15
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhal snga nas chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NMFA1714978059A44B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NT4A90F772032A351A
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 49" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "dge lugs teacher in the transmission lineage of the abhidharmakosakarika"@en .
+    
+    bdr:P10035  a           :Person ;
+        skos:prefLabel      "chos kyi grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A90F772032A351A ;
+        :personEvent        bdr:EVCA0499D561219F66 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB38510826CCACF15 , bdr:NMFA1714978059A44B ;
+        :personStudentOf    bdr:P4773 ;
+        :personTeacherOf    bdr:P3116 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P7105> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7105 {
+    bda:P7105  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7105 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d6/P7105.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7105 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B019AF1CD0E387A
+        a                   :PersonDeath ;
+        :onYear             "1627"^^xsd:gYear .
+    
+    bdr:NM6837B01D4E2B2212
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFCC17A96A5EABC38
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang bkra shis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT5E3B6E38C7EF3246
+        a                   :Note ;
+        :locationStatement  "p. 348" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1627. died"@en .
+    
+    bdr:P7105  a            :Person ;
+        skos:prefLabel      "bkra shis rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E3B6E38C7EF3246 ;
+        :personEvent        bdr:EV1B019AF1CD0E387A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6837B01D4E2B2212 , bdr:NMFCC17A96A5EABC38 .
+}

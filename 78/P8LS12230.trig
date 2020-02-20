@@ -1,0 +1,76 @@
+@base          <bdg:P8LS12230> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12230 {
+    bda:LGA8B00D037A20B4BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-07-18T11:22:22.844Z"^^xsd:dateTime ;
+        adm:logMessage      "correct birth event"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGBFEED6C154EFE00B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T09:25:10.163Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12230  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12230 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "78/P8LS12230.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12230 ;
+        adm:logEntry        bda:LGA8B00D037A20B4BE , bda:LGBFEED6C154EFE00B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C2DBE4B63311DE3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV5C54F0FD81F7A96F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF1A3FE4B83D95D7F
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM44AFCBCC6017B4A1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ra tsha sprul sku blo bzang dpal ldan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5DE8160424A5DA3D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 67"@bo-x-ewts .
+    
+    bdr:NMF0B157C3628376EA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dpal ldan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2543D5A8FFF0BF2F
+        a                   :Note ;
+        :locationStatement  "p. 193" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12230  a        :Person ;
+        skos:prefLabel      "blo bzang dpal ldan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2543D5A8FFF0BF2F ;
+        :personEvent        bdr:EV0C2DBE4B63311DE3 , bdr:EV5C54F0FD81F7A96F , bdr:EVF1A3FE4B83D95D7F ;
+        :personName         bdr:NM44AFCBCC6017B4A1 , bdr:NM5DE8160424A5DA3D , bdr:NMF0B157C3628376EA ;
+        :personStudentOf    bdr:P3243 .
+}

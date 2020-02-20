@@ -1,0 +1,76 @@
+@base          <bdg:P5403> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5403 {
+    bda:LGCC4B72EA7C529345
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T12:11:35.456Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5403  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5403 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "21/P5403.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5403 ;
+        adm:logEntry        bda:LGCC4B72EA7C529345 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F21A2E93ABD1E70
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EV13DB433A2CC27E2B
+        a                   :PersonDeath ;
+        :onYear             "1950"^^xsd:gYear .
+    
+    bdr:EVD33397D57FE89B26
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM1C4EA76573D1AA1B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 42"@bo-x-ewts .
+    
+    bdr:NM24A041691E1AD95B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "cung dkar mkhan po sprul sku skal bzang mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM35E715DC6F946D45
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1E7C2A5D2CCB632B
+        a                   :Note ;
+        :locationStatement  "p. 437" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "dge lugs prelate of the bla brang bkra shis 'khyil tradition"@en .
+    
+    bdr:NTEB420C2F2CEA0A40
+        a                   :Note ;
+        :locationStatement  "p. 437-440" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:P5403  a            :Person ;
+        skos:prefLabel      "skal bzang mkhyen rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E7C2A5D2CCB632B , bdr:NTEB420C2F2CEA0A40 ;
+        :personEvent        bdr:EV0F21A2E93ABD1E70 , bdr:EV13DB433A2CC27E2B , bdr:EVD33397D57FE89B26 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C4EA76573D1AA1B , bdr:NM24A041691E1AD95B , bdr:NM35E715DC6F946D45 ;
+        :personTeacherOf    bdr:P5401 .
+}

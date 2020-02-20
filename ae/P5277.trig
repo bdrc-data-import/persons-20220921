@@ -1,0 +1,76 @@
+@base          <bdg:P5277> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5277 {
+    bda:LGD02CB7FF2F177254
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-11T18:41:03.76Z"^^xsd:dateTime ;
+        adm:logMessage      "added name \"chag lo gsum pa\" and teacher-student info"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD6623B9F55A8B0FB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-17T09:18:26.265Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth date, 1447"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P5277  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5277 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ae/P5277.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5277 ;
+        adm:logEntry        bda:LGD02CB7FF2F177254 , bda:LGD6623B9F55A8B0FB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB53F43CF5733B883
+        a                   :PersonBirth ;
+        :onYear             "1447"^^xsd:gYear .
+    
+    bdr:NM67804FCF7039199D
+        a                   :PersonTitle ;
+        rdfs:label          "chag lo tsA ba gsum pa/"@bo-x-ewts .
+    
+    bdr:NMABCF4942F1E2405E
+        a                   :PersonTitle ;
+        rdfs:label          "chag lo gsum pa/"@bo-x-ewts .
+    
+    bdr:NMD832CB172909163A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chag lo tsA ba rin chen chos rgyal/"@bo-x-ewts .
+    
+    bdr:NME3631BAC2AA52890
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen chos rgyal/"@bo-x-ewts .
+    
+    bdr:NT5229F7A44C9E108F
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 504" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NT8E135120AA01734A
+        a                   :Note ;
+        :noteText           "Responsible for requesting Sna-nam Btsun-pa Skal-bzang-chos-kyi-rgya-mtsho-bsod-nams-dbang-po to write the Sangs rgyas kyi rnam thar bde bar gshegs pa'i spyod pa mchog gi gter."@en .
+    
+    bdr:P5277  a            :Person ;
+        skos:prefLabel      "rin chen chos rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5229F7A44C9E108F , bdr:NT8E135120AA01734A ;
+        :personEvent        bdr:EVB53F43CF5733B883 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM67804FCF7039199D , bdr:NMABCF4942F1E2405E , bdr:NMD832CB172909163A , bdr:NME3631BAC2AA52890 ;
+        :personStudentOf    bdr:P0RK1009 , bdr:P0RK1580 , bdr:P0RK356 , bdr:P0RK794 , bdr:P0RK858 , bdr:P0RK859 , bdr:P318 ;
+        :personTeacherOf    bdr:P0RK1581 , bdr:P1871 , bdr:P461 , bdr:P463 , bdr:P5276 , bdr:P7194 .
+}

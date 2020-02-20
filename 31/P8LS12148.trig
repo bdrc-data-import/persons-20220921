@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12148> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12148 {
+    bda:LG4C0AD261C849156B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-16T14:42:10.091Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12148  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12148 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "31/P8LS12148.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12148 ;
+        adm:logEntry        bda:LG4C0AD261C849156B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58DB18404695CC7A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVB758843D1488A3BB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1866"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM852756E7B6DE86C5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thor god tho yon gsung rab grags pa/"@bo-x-ewts .
+    
+    bdr:NMDCF5812407DEBF45
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gsung rab grags pa/"@bo-x-ewts .
+    
+    bdr:NME003E41242EC0C9D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 20"@bo-x-ewts .
+    
+    bdr:NT3B90E686DD254E4D
+        a                   :Note ;
+        :locationStatement  "p. 355" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12148  a        :Person ;
+        skos:prefLabel      "gsung rab grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3B90E686DD254E4D ;
+        :personEvent        bdr:EV58DB18404695CC7A , bdr:EVB758843D1488A3BB ;
+        :personName         bdr:NM852756E7B6DE86C5 , bdr:NMDCF5812407DEBF45 , bdr:NME003E41242EC0C9D .
+}

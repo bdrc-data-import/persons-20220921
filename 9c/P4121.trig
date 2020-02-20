@@ -1,0 +1,97 @@
+@base          <bdg:P4121> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4121 {
+    bda:LG6B0B1E377AA7F91A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-25T11:06:50.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF6AB951AA4DEFD3B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:34:13.075Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title to office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4121  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4121 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "9c/P4121.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4121 ;
+        adm:logEntry        bda:LG6B0B1E377AA7F91A , bda:LGF6AB951AA4DEFD3B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03AE5F94C1FF103C
+        a                   :PersonBirth ;
+        :onYear             "1728"^^xsd:gYear .
+    
+    bdr:EV202CE6F9F1984827
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV23E5088FCA90E4AE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1965 ;
+        :onYear             "1784"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA8982739DDD4B658
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1965 ;
+        :onYear             "1794"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM5EBFE507FDED916B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a rig blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM6C99F3AF85C26337
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 15"@bo-x-ewts .
+    
+    bdr:NMA8E831C53A37639F
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang rgyud pa khri 15 blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMC9EAF4A62C3CB24E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NT1A5BB9F264EC40F9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT45B5A7CDE7E38708
+        a                   :Note ;
+        :locationStatement  "p. 1908" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT77C5EAC0D3A72BA7
+        a                   :Note ;
+        :locationStatement  "p. 599" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source notes that he was born in 1728 and came to the khri of urga grwa tshang gsang sngags smin rgyal gling in 1784 and came to the khri again in 1794"@en .
+    
+    bdr:P4121  a            :Person ;
+        skos:prefLabel      "blo bzang sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1A5BB9F264EC40F9 , bdr:NT45B5A7CDE7E38708 , bdr:NT77C5EAC0D3A72BA7 ;
+        :personEvent        bdr:EV03AE5F94C1FF103C , bdr:EV202CE6F9F1984827 , bdr:EV23E5088FCA90E4AE , bdr:EVA8982739DDD4B658 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5EBFE507FDED916B , bdr:NM6C99F3AF85C26337 , bdr:NMA8E831C53A37639F , bdr:NMC9EAF4A62C3CB24E .
+}

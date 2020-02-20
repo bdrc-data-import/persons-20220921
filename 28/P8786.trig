@@ -1,0 +1,66 @@
+@base          <bdg:P8786> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8786 {
+    bda:LG7B979BCAB26690E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-10T16:59:30.47Z"^^xsd:dateTime ;
+        adm:logMessage      "added records and notes"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGB4F37A642B42D43C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:12.823Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8786  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8786 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "28/P8786.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8786 ;
+        adm:logEntry        bda:LG7B979BCAB26690E4 , bda:LGB4F37A642B42D43C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBF84B2DFA2CB8084
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM6F2A83F514AE3D60
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen sbyin pa bzang po/"@bo-x-ewts .
+    
+    bdr:NM6FE98A5886B5B87A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sbyin pa bzang po/"@bo-x-ewts .
+    
+    bdr:NT0DF564CAE2839B06
+        a                   :Note ;
+        :locationStatement  "p. 284" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography\n\nlisted in the transmission of the mkha' 'gro snying thig"@en .
+    
+    bdr:P8786  a            :Person ;
+        skos:prefLabel      "sbyin pa bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0DF564CAE2839B06 ;
+        :personEvent        bdr:EVBF84B2DFA2CB8084 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6F2A83F514AE3D60 , bdr:NM6FE98A5886B5B87A ;
+        :personStudentOf    bdr:P8785 ;
+        :personTeacherOf    bdr:P2JM214 , bdr:P8787 .
+}

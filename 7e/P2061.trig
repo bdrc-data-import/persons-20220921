@@ -1,0 +1,67 @@
+@base          <bdg:P2061> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2061 {
+    bda:LG298E5F7119376888
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T15:38:54.412Z"^^xsd:dateTime ;
+        adm:logMessage      "seat, teacher of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG3E7582183CBF720B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:49:19.19Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2061  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2061 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7e/P2061.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2061 ;
+        adm:logEntry        bda:LG298E5F7119376888 , bda:LG3E7582183CBF720B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV27F7C41F35408B3E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EV4EE587D4E2C58DA0
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM43FFE41CA2FEB802
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dge legs/"@bo-x-ewts .
+    
+    bdr:NM90FFF2D175CE95E5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang rtse blo bzang dge legs/"@bo-x-ewts .
+    
+    bdr:NT3DF548E1FCA95286
+        a                   :Note ;
+        :noteText           "dge lugs teacher connected with byang rtse college"@en .
+    
+    bdr:P2061  a            :Person ;
+        skos:prefLabel      "blo bzang dge legs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3DF548E1FCA95286 ;
+        :personEvent        bdr:EV27F7C41F35408B3E , bdr:EV4EE587D4E2C58DA0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM43FFE41CA2FEB802 , bdr:NM90FFF2D175CE95E5 ;
+        :personStudentOf    bdr:P1813 .
+}

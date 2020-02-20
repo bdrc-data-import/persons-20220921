@@ -1,0 +1,67 @@
+@base          <bdg:P1AG51> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG51 {
+    bda:LG0E1687199A514A3F
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:40:06.188Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG2FE5A2305C4F8514
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:46:40.491Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG51  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG51 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "35/P1AG51.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG51 ;
+        adm:logEntry        bda:LG0E1687199A514A3F , bda:LG2FE5A2305C4F8514 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1DD6EBE9B42EE9CC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G70 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF6CC3F4F3DFB1858
+        a                   :PersonBirth ;
+        :onYear             "1830"^^xsd:gYear .
+    
+    bdr:NM340F8AA425F0E846
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'phags mchog 04"@bo-x-ewts .
+    
+    bdr:NM8A478283F8FA4EA4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen lhun grub grags pa kun gsal nyi ma/"@bo-x-ewts .
+    
+    bdr:NMB36CE68FEF7BA560
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ri bo che gdan rab 19"@bo-x-ewts .
+    
+    bdr:P1AG51  a           :Person ;
+        skos:prefLabel      "rin chen lhun grub grags pa kun gsal nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1AG50 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1DD6EBE9B42EE9CC , bdr:EVF6CC3F4F3DFB1858 ;
+        :personName         bdr:NM340F8AA425F0E846 , bdr:NM8A478283F8FA4EA4 , bdr:NMB36CE68FEF7BA560 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12393> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12393 {
+    bda:LGFD7BF02004F882F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T12:42:15.405Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12393  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12393 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "57/P8LS12393.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12393 ;
+        adm:logEntry        bda:LGFD7BF02004F882F5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12383678B3E32D6A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4C00745E9AB03C16
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM0B724E925C982C40
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen skal bzang /"@bo-x-ewts .
+    
+    bdr:NMA333CD7259A17F39
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 33"@bo-x-ewts .
+    
+    bdr:NT15B1057719D657C8
+        a                   :Note ;
+        :locationStatement  "p. 291" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12393  a        :Person ;
+        skos:prefLabel      "rin chen skal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT15B1057719D657C8 ;
+        :personEvent        bdr:EV12383678B3E32D6A , bdr:EV4C00745E9AB03C16 ;
+        :personName         bdr:NM0B724E925C982C40 , bdr:NMA333CD7259A17F39 .
+}

@@ -1,0 +1,79 @@
+@base          <bdg:P5647> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5647 {
+    bda:LG15ECCD4C140A1D6F
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-12-28T09:37:13.516Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected spelling of karma; jann"@en ;
+        adm:logWho          bdr:U00011 .
+    
+    bda:LGF204BAEB0EDDE98B
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-17T09:09:49.065Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5647  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5647 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "dd/P5647.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5647 ;
+        adm:logEntry        bda:LG15ECCD4C140A1D6F , bda:LGF204BAEB0EDDE98B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV50F7910B065FE78F
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVC5090D75119D960B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G391 .
+    
+    bdr:NM2A9B941BDD6BB09F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser mdog can mkhan po kar+ma bzang po/"@bo-x-ewts .
+    
+    bdr:NMD5E8EAE4696E2C5E
+        a                   :PersonOtherName ;
+        rdfs:label          "kar+ma dar ma bzang po/"@bo-x-ewts .
+    
+    bdr:NMFF71B53C7FEE2986
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bzang po/"@bo-x-ewts .
+    
+    bdr:NT5A17FC6EB9FA8F0C
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 15a3" ;
+        :noteSource         bdr:MW29706 .
+    
+    bdr:NT94E461EB074D8F53
+        a                   :Note ;
+        :locationStatement  "pp. 406-467" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "sa skya master and abbot of gser mdog can"@en .
+    
+    bdr:P5647  a            :Person ;
+        skos:prefLabel      "karma bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A17FC6EB9FA8F0C , bdr:NT94E461EB074D8F53 ;
+        :personEvent        bdr:EV50F7910B065FE78F , bdr:EVC5090D75119D960B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A9B941BDD6BB09F , bdr:NMD5E8EAE4696E2C5E , bdr:NMFF71B53C7FEE2986 ;
+        :personStudentOf    bdr:P2387 , bdr:P460 ;
+        :personTeacherOf    bdr:P5648 .
+}

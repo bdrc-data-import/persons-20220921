@@ -1,0 +1,75 @@
+@base          <bdg:P1AG23> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG23 {
+    bda:LGA5B67D92EBEF1836
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-12T16:02:48.238Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGC3E1E1EC854EE33A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-19T12:05:10.369Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGE0640D5A97CA1D4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-05-21T11:08:04.326Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEF35A4A5967AF990
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-12T15:49:09.089Z"^^xsd:dateTime ;
+        adm:logMessage      "added Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG23  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG23 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e1/P1AG23.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG23 ;
+        adm:logEntry        bda:LGA5B67D92EBEF1836 , bda:LGC3E1E1EC854EE33A , bda:LGE0640D5A97CA1D4C , bda:LGEF35A4A5967AF990 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6810406B2AE6C993
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EVBEEA01EC0DDC9499
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G340 ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear ;
+        :personEventRole    bdr:R1AG22 .
+    
+    bdr:NM1E70E3B746B44436
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje seng ge"@bo-x-ewts .
+    
+    bdr:NME6737E1F1FCE245A
+        a                   :PersonOtherName ;
+        rdfs:label          "Dorje Sengge"@en .
+    
+    bdr:P1AG23  a           :Person ;
+        skos:prefLabel      "rdo rje seng ge"@bo-x-ewts ;
+        :hasBrother         bdr:P2221 , bdr:P4587 ;
+        :hasSon             bdr:P2222 , bdr:P2223 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV6810406B2AE6C993 , bdr:EVBEEA01EC0DDC9499 ;
+        :personName         bdr:NM1E70E3B746B44436 , bdr:NME6737E1F1FCE245A ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dorje-Sengge/13449"^^xsd:anyURI .
+}

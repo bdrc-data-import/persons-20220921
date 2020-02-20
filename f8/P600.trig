@@ -1,0 +1,54 @@
+@base          <bdg:P600> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P600 {
+    bda:P600  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P600 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f8/P600.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3AC7A3946358086F
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM77A6621475D461F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMBE0D2F2A8D5D8CBD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgra slob blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT779A14F55E115613
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTC3F7933333C90A29
+        a                   :Note ;
+        :noteText           "Described as Rtsa-bla in the biographical sketch of 'Jam-dpal-bshes-gnyen, the 50th Rje Mkhan-po of Bhutan,  as his teacher."@en .
+    
+    bdr:P600  a             :Person ;
+        skos:prefLabel      "blo gros rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT779A14F55E115613 , bdr:NTC3F7933333C90A29 ;
+        :personEvent        bdr:EV3AC7A3946358086F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM77A6621475D461F2 , bdr:NMBE0D2F2A8D5D8CBD ;
+        :personTeacherOf    bdr:P599 , bdr:P605 .
+}

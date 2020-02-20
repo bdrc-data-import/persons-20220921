@@ -1,0 +1,89 @@
+@base          <bdg:P1322> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1322 {
+    bda:LG02C1761C1A1E8244
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-11T11:27:49.185Z"^^xsd:dateTime ;
+        adm:logMessage      "office events"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGFA83C8EAC467CA99
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-11T11:15:25.259Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1322  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1322 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3f/P1322.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1322 ;
+        adm:logEntry        bda:LG02C1761C1A1E8244 , bda:LGFA83C8EAC467CA99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AA6C4E4FBB3FB70
+        a                   :PersonDeath ;
+        :onYear             "1082"^^xsd:gYear .
+    
+    bdr:EV19218CBCBA9EDA42
+        a                   :PersonBirth ;
+        :onYear             "1016"^^xsd:gYear .
+    
+    bdr:EVA849636146FF8309
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G74 ;
+        :onYear             "1078"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCBA1AC4A1197FB4B
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G74 ;
+        :onYear             "1083"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2681B616E828DD91
+        a                   :PersonTitle ;
+        rdfs:label          "'dzeng sgom dbang phyug rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM88914FB88AE993CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dgon pa ba dbang phyug rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC24074DC807D424F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang phyug rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT338ED061191D1142
+        a                   :Note ;
+        :locationStatement  "p. 1422" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT6FDB1823A919C945
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P1322  a            :Person ;
+        skos:prefLabel      "dbang phyug rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT338ED061191D1142 , bdr:NT6FDB1823A919C945 ;
+        :personEvent        bdr:EV0AA6C4E4FBB3FB70 , bdr:EV19218CBCBA9EDA42 , bdr:EVA849636146FF8309 , bdr:EVCBA1AC4A1197FB4B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2681B616E828DD91 , bdr:NM88914FB88AE993CA , bdr:NMC24074DC807D424F ;
+        :personStudentOf    bdr:P0RK1100 , bdr:P2557 , bdr:P3379 ;
+        :personTeacherOf    bdr:P0RK1101 , bdr:P1316 , bdr:P1321 , bdr:P3467 , bdr:P3468 , bdr:P3469 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Gonpawa-Wangchuk-Gyeltsen/2598"^^xsd:anyURI .
+}

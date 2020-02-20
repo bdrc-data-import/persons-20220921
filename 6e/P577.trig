@@ -1,0 +1,96 @@
+@base          <bdg:P577> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P577 {
+    bda:LG085A4F3AC6B95B13
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGAFE0198B88F33562
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T10:43:50.338Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCA4A2AA28E0F91B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T10:42:58.864Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P577  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P577 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "6e/P577.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P577 ;
+        adm:logEntry        bda:LG085A4F3AC6B95B13 , bda:LGAFE0198B88F33562 , bda:LGCA4A2AA28E0F91B2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV065E26DEA75889D6
+        a                   :PersonDeath ;
+        :onYear             "1829"^^xsd:gYear .
+    
+    bdr:EV40E5EFE811261848
+        a                   :PersonBirth ;
+        :onYear             "1798"^^xsd:gYear .
+    
+    bdr:EVC446561C8B1CCE90
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM16886AB3BBC2EB64
+        a                   :PersonOtherName ;
+        rdfs:label          "'jigs med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM3025F7F888EEFED0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 06"@bo-x-ewts .
+    
+    bdr:NM6AEB811058F598BF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Gyelse Tulku 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB48B9CC116F3E828
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 06 'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NMEFC57123CF19EBED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NT7E6282F692DA45E6
+        a                   :Note ;
+        :locationStatement  "f. 130v" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "the fifth incarnation of the 'brug rgyal sras incarnation\nbirthplace unknown"@en .
+    
+    bdr:NTBC1DD84CD98B7064
+        a                   :Note ;
+        :locationStatement  "p. 106" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "according to this source he is the sixth in the line of 'brug rgyal sras"@en .
+    
+    bdr:P577  a             :Person ;
+        skos:prefLabel      "'jam dpal rdo rje/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P551 ;
+        :isRoot             true ;
+        :note               bdr:NT7E6282F692DA45E6 , bdr:NTBC1DD84CD98B7064 ;
+        :personEvent        bdr:EV065E26DEA75889D6 , bdr:EV40E5EFE811261848 , bdr:EVC446561C8B1CCE90 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16886AB3BBC2EB64 , bdr:NM3025F7F888EEFED0 , bdr:NM6AEB811058F598BF , bdr:NMB48B9CC116F3E828 , bdr:NMEFC57123CF19EBED ;
+        :personStudentOf    bdr:P554 , bdr:P557 .
+}

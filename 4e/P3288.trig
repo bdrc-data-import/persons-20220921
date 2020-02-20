@@ -1,0 +1,47 @@
+@base          <bdg:P3288> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3288 {
+    bda:P3288  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3288 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "4e/P3288.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3288 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4AC0BEB96EB62EED
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM35185B5952C6784A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal ba ye shes/"@bo-x-ewts .
+    
+    bdr:NT7EC1B13C8EB7E42B
+        a                   :Note ;
+        :noteText           "indian pandita"@en .
+    
+    bdr:P3288  a            :Person ;
+        skos:prefLabel      "rgyal ba ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7EC1B13C8EB7E42B ;
+        :personEvent        bdr:EV4AC0BEB96EB62EED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35185B5952C6784A ;
+        :personStudentOf    bdr:P3289 ;
+        :personTeacherOf    bdr:P3287 .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P3455> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3455 {
+    bda:LG7E080992A2B871A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-23T15:12:26.944Z"^^xsd:dateTime ;
+        adm:logMessage      "added other and sanskrit name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3455  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3455 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ec/P3455.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3455 ;
+        adm:logEntry        bda:LG7E080992A2B871A5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV358AE415A9E333AF
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM709B75FFA35DCE23
+        a                   :PersonOtherName ;
+        rdfs:label          "bhavavajra"@sa-x-ndia .
+    
+    bdr:NM710CB44C336D4E01
+        a                   :PersonOtherName ;
+        rdfs:label          "b+h ba badz+ra/"@bo-x-ewts .
+    
+    bdr:NMEF2AC0AE3711F39D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpa' bo rdo rje/"@bo-x-ewts .
+    
+    bdr:NT48EA0EA36C066777
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3455  a            :Person ;
+        skos:prefLabel      "dpa' bo rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT48EA0EA36C066777 ;
+        :personEvent        bdr:EV358AE415A9E333AF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM709B75FFA35DCE23 , bdr:NM710CB44C336D4E01 , bdr:NMEF2AC0AE3711F39D ;
+        :personStudentOf    bdr:P3484 ;
+        :personTeacherOf    bdr:P3454 .
+}

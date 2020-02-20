@@ -1,0 +1,93 @@
+@base          <bdg:P6337> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6337 {
+    bda:LG24182E965F63A19E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-27T16:24:42.816Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG5B4FB4C56F0C9C65
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T12:46:48.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added ordination name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG74D26AE966A73D7D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T12:16:40.278Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6337  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6337 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "01/P6337.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6337 ;
+        adm:logEntry        bda:LG24182E965F63A19E , bda:LG5B4FB4C56F0C9C65 , bda:LG74D26AE966A73D7D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24D0F1E894A3EA9E
+        a                   :PersonBirth ;
+        :onYear             "1876"^^xsd:gYear .
+    
+    bdr:EVAAD3FD79015C30FA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVDCC626A3D0B2E7FB
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVDF428AD880558FA5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM0634DE46A267E69B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gdong nge mkhan po 'jigs med dkon mchog"@bo-x-ewts .
+    
+    bdr:NM6C8AB047A36248EF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang mkhan rabs 03"@bo-x-ewts .
+    
+    bdr:NM90ACABA5083FCB65
+        a                   :PersonFinalOrdinationName ;
+        rdfs:label          "thub bstan 'gyur med 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMC8C035EAE9CF96FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med dkon mchog"@bo-x-ewts .
+    
+    bdr:NTB8BE3BA06BC98A7E
+        a                   :Note ;
+        :locationStatement  "p. 278-286" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch\nthe author of a number of works"@en .
+    
+    bdr:P6337  a            :Person ;
+        skos:prefLabel      "'jigs med dkon mchog"@bo-x-ewts ;
+        :hasIncarnation     bdr:P6299 ;
+        :isRoot             true ;
+        :note               bdr:NTB8BE3BA06BC98A7E ;
+        :personEvent        bdr:EV24D0F1E894A3EA9E , bdr:EVAAD3FD79015C30FA , bdr:EVDCC626A3D0B2E7FB , bdr:EVDF428AD880558FA5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0634DE46A267E69B , bdr:NM6C8AB047A36248EF , bdr:NM90ACABA5083FCB65 , bdr:NMC8C035EAE9CF96FD ;
+        :personStudentOf    bdr:P6175 , bdr:P6313 ;
+        :personTeacherOf    bdr:P6334 , bdr:P6341 , bdr:P6360 , bdr:P6363 , bdr:P6370 , bdr:P6372 , bdr:P6373 , bdr:P6375 , bdr:P6390 , bdr:P6392 , bdr:P6394 , bdr:P8281 , bdr:P8282 , bdr:P8283 , bdr:P8284 .
+}

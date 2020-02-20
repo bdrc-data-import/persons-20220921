@@ -1,0 +1,53 @@
+@base          <bdg:P10119> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10119 {
+    bda:P10119  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10119 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "13/P10119.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10119 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F8BE68687B0B68D
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM6D5040313EE2EBAC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rig 'dzin nam mkha' grags pa/"@bo-x-ewts .
+    
+    bdr:NM74633D11091D0180
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' grags pa/"@bo-x-ewts .
+    
+    bdr:NT6F8602F7AD3CC29A
+        a                   :Note ;
+        :locationStatement  "v. 3, p. 252" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in a byang gter transmission lineage"@en .
+    
+    bdr:P10119  a           :Person ;
+        skos:prefLabel      "nam mkha' grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F8602F7AD3CC29A ;
+        :personEvent        bdr:EV0F8BE68687B0B68D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6D5040313EE2EBAC , bdr:NM74633D11091D0180 ;
+        :personStudentOf    bdr:P10118 ;
+        :personTeacherOf    bdr:P10120 .
+}

@@ -1,0 +1,65 @@
+@base          <bdg:P1449> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1449 {
+    bda:LGDE8C835E4EE40BD2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T14:57:16.374Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1449  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1449 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "46/P1449.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1449 ;
+        adm:logEntry        bda:LGDE8C835E4EE40BD2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV248747688586BA06
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EV65BAF72F2E0BEFEA
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM7C321658E340B688
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab/"@bo-x-ewts .
+    
+    bdr:NMBF20E3176218AEE7
+        a                   :PersonTitle ;
+        rdfs:label          "khro phu ba/"@bo-x-ewts .
+    
+    bdr:NMC1268E94C8959990
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khro phu ba shes rab/"@bo-x-ewts .
+    
+    bdr:NT297B000613196EA4
+        a                   :Note ;
+        :noteText           "Bestowed first vows on Karma-pa 3 Rang-byung-rdo-rje."@en .
+    
+    bdr:P1449  a            :Person ;
+        skos:prefLabel      "shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT297B000613196EA4 ;
+        :personEvent        bdr:EV248747688586BA06 , bdr:EV65BAF72F2E0BEFEA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7C321658E340B688 , bdr:NMBF20E3176218AEE7 , bdr:NMC1268E94C8959990 ;
+        :personTeacherOf    bdr:P66 .
+}

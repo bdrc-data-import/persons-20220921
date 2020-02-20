@@ -1,0 +1,63 @@
+@base          <bdg:P3950> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3950 {
+    bda:LGE5720B8C4743D899
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:14.027Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3950  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3950 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8c/P3950.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3950 ;
+        adm:logEntry        bda:LGE5720B8C4743D899 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45B759C2B6BB8C8C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EVC1542EA01BD8C7DB
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM8F772F33EB86C738
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMB289D3FDE723CAC9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 06 mgon po dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT6DCD7966CA9C4406
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3950  a            :Person ;
+        skos:prefLabel      "mgon po dar rgyas/"@bo-x-ewts ;
+        :hasFather          bdr:P3949 ;
+        :hasSon             bdr:P3951 ;
+        :isRoot             true ;
+        :note               bdr:NT6DCD7966CA9C4406 ;
+        :personEvent        bdr:EV45B759C2B6BB8C8C , bdr:EVC1542EA01BD8C7DB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8F772F33EB86C738 , bdr:NMB289D3FDE723CAC9 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Gonpo-Dargye/6341"^^xsd:anyURI .
+}

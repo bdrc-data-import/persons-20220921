@@ -1,0 +1,78 @@
+@base          <bdg:P2JM3> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM3 {
+    bda:LG0AA68C92390DAA68
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-19T10:28:07.878Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG8EAF9D74D020B721
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-27T11:58:22.489Z"^^xsd:dateTime ;
+        adm:logMessage      "added smin gling 'gyur med chos ldan, kdon mchog bstan 'dzin"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG96D84D1D1026E6B8
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-12-05T17:16:19.916Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P1GS105233"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2JM3  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM3 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "57/P2JM3.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM3 ;
+        adm:logEntry        bda:LG0AA68C92390DAA68 , bda:LG8EAF9D74D020B721 , bda:LG96D84D1D1026E6B8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P1GS105233 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV286AA16FC6092632
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVC45AE3CF660A6B86
+        a                   :PersonDeath ;
+        :onYear             "1684"^^xsd:gYear .
+    
+    bdr:EVEE76721A51EA4FEE
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1623"^^xsd:gYear .
+    
+    bdr:NM97F3A36C5FDC6772
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen dkon mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMD370318FB77A128A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTAA991B3A5B953B18
+        a                   :Note ;
+        :locationStatement  "113" ;
+        :noteSource         bdr:MW27401 .
+    
+    bdr:P2JM3  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAA991B3A5B953B18 ;
+        :personEvent        bdr:EV286AA16FC6092632 , bdr:EVC45AE3CF660A6B86 , bdr:EVEE76721A51EA4FEE ;
+        :personName         bdr:NM97F3A36C5FDC6772 , bdr:NMD370318FB77A128A ;
+        :personStudentOf    bdr:P37 , bdr:P5678 , bdr:P7 ;
+        :personTeacherOf    bdr:P667 .
+}

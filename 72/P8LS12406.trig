@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12406> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12406 {
+    bda:LGA48AF212548DE4DE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:28:03.223Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12406  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12406 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "72/P8LS12406.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12406 ;
+        adm:logEntry        bda:LGA48AF212548DE4DE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09A407367166294B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV68537C38F8B3A4C9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM04B17CA0B1EEB244
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA3CFE1C4AE84775B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya don grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME3E23543E737A1B4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 45"@bo-x-ewts .
+    
+    bdr:NT51C3818A0DBE4DBD
+        a                   :Note ;
+        :locationStatement  "p. 292" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12406  a        :Person ;
+        skos:prefLabel      "don grub rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT51C3818A0DBE4DBD ;
+        :personEvent        bdr:EV09A407367166294B , bdr:EV68537C38F8B3A4C9 ;
+        :personName         bdr:NM04B17CA0B1EEB244 , bdr:NMA3CFE1C4AE84775B , bdr:NME3E23543E737A1B4 .
+}

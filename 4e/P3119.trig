@@ -1,0 +1,72 @@
+@base          <bdg:P3119> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3119 {
+    bda:LG3EDD33CDDFFB8EFA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T10:38:19.725Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG54FBF74B7159EEBB
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-30T16:44:04.604Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3119  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3119 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4e/P3119.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3119 ;
+        adm:logEntry        bda:LG3EDD33CDDFFB8EFA , bda:LG54FBF74B7159EEBB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB41AB46FED8074BA
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM2DB6C6373C4AF9F8
+        a                   :PersonTitle ;
+        rdfs:label          "sgog lung pa bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM9C1A38327AA78A60
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMB230C2FDD1C4298F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcang sgog lung pa bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMEC0A187AC68A9FBF
+        a                   :PersonTitle ;
+        rdfs:label          "gro bo lung pa bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT9FD5868BAE706DFE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P3119  a            :Person ;
+        skos:prefLabel      "bkra shis dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9FD5868BAE706DFE ;
+        :personEvent        bdr:EVB41AB46FED8074BA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2DB6C6373C4AF9F8 , bdr:NM9C1A38327AA78A60 , bdr:NMB230C2FDD1C4298F , bdr:NMEC0A187AC68A9FBF ;
+        :personStudentOf    bdr:P3102 , bdr:P3118 ;
+        :personTeacherOf    bdr:P2608 , bdr:P3120 , bdr:P786 .
+}

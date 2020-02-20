@@ -1,0 +1,76 @@
+@base          <bdg:P1KG1481> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1481 {
+    bda:LG50F54799F339CB39
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T16:18:13.586Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG83E5E87BDB2E1443
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-04T10:03:56.202Z"^^xsd:dateTime ;
+        adm:logMessage      "added death time"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG846E9E768FFCF22D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T12:27:38.036Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1KG1481  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1481 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "9c/P1KG1481.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1481 ;
+        adm:logEntry        bda:LG50F54799F339CB39 , bda:LG83E5E87BDB2E1443 , bda:LG846E9E768FFCF22D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC050C8F4C6CF28B4
+        a                   :PersonDeath ;
+        :onYear             "1987"^^xsd:gYear .
+    
+    bdr:EVD2E7A071248AF048
+        a                   :PersonBirth ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:NM15DDEA1847869A48
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lobsang wangchuk"@en .
+    
+    bdr:NM486D2592C0934F65
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dbang phyug"@bo-x-ewts .
+    
+    bdr:NM59DFDF8216116918
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' 'gyur bla ma blo bzang dbang phyug"@bo-x-ewts .
+    
+    bdr:NT998D04E51A4F76CF
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1480 ;
+        :noteText           "Modern Tibetan scholar and activist"@en .
+    
+    bdr:P1KG1481  a         :Person ;
+        skos:prefLabel      "blo bzang dbang phyug"@bo-x-ewts , "lobsang wangchuk"@en ;
+        :isRoot             true ;
+        :note               bdr:NT998D04E51A4F76CF ;
+        :personEvent        bdr:EVC050C8F4C6CF28B4 , bdr:EVD2E7A071248AF048 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15DDEA1847869A48 , bdr:NM486D2592C0934F65 , bdr:NM59DFDF8216116918 .
+}

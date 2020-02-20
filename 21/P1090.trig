@@ -1,0 +1,102 @@
+@base          <bdg:P1090> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1090 {
+    bda:LG344F2F033988ED18
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-10-08T15:15:39.35Z"^^xsd:dateTime ;
+        adm:logMessage      "link to g1ag63"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG389A6AEA9D395391
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-10-08T15:17:06.076Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA90EFC7C2CAF91D4
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-17T11:42:28.369Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student and seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1090  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1090 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "21/P1090.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1090 ;
+        adm:logEntry        bda:LG344F2F033988ED18 , bda:LG389A6AEA9D395391 , bda:LGA90EFC7C2CAF91D4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10E4C197BAD26547
+        a                   :PersonBirth ;
+        :onYear             "1526"^^xsd:gYear .
+    
+    bdr:EV523935FDDDF5E356
+        a                   :PersonDeath ;
+        :onYear             "1577"^^xsd:gYear .
+    
+    bdr:EVA7A8887E096C05A1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G244 .
+    
+    bdr:EVCEC0ED94F630DEA8
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G245 .
+    
+    bdr:EVCF632B3ECD60F727
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G244 ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM3242B325F1BCEE05
+        a                   :PersonTitle ;
+        rdfs:label          "bo dong mkhan chen bslab gsum rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM73F20CC61FABEDFE
+        a                   :PersonTitle ;
+        rdfs:label          "lding ma ba bslab gsum rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD1CF4C57CD5760FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bslab gsum rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME0382074F4C7DC3D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sding ma ba bslab gsum rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD0D2EA14EB3F63BA
+        a                   :Note ;
+        :locationStatement  "p. 292" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:NTF9919227FE510054
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Slob-bshad transmissions"@en .
+    
+    bdr:P1090  a            :Person ;
+        skos:prefLabel      "bslab gsum rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD0D2EA14EB3F63BA , bdr:NTF9919227FE510054 ;
+        :personEvent        bdr:EV10E4C197BAD26547 , bdr:EV523935FDDDF5E356 , bdr:EVA7A8887E096C05A1 , bdr:EVCEC0ED94F630DEA8 , bdr:EVCF632B3ECD60F727 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3242B325F1BCEE05 , bdr:NM73F20CC61FABEDFE , bdr:NMD1CF4C57CD5760FF , bdr:NME0382074F4C7DC3D ;
+        :personStudentOf    bdr:P0RK1043 , bdr:P0RK1156 , bdr:P1089 , bdr:P2387 , bdr:P2510 , bdr:P3120 , bdr:P494 , bdr:P783 , bdr:P785 , bdr:P786 ;
+        :personTeacherOf    bdr:P3509 , bdr:P792 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Labsum-Gyeltsen/2340"^^xsd:anyURI .
+}

@@ -1,0 +1,96 @@
+@base          <bdg:P5546> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5546 {
+    bda:LG72AC78982517261C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-07T14:36:26.609Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG7CCE1A4A77089981
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-10T14:17:04.793Z"^^xsd:dateTime ;
+        adm:logMessage      "date of taking office"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF1EDA5F729CED153
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T10:11:04.122Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5546  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5546 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "2f/P5546.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5546 ;
+        adm:logEntry        bda:LG72AC78982517261C , bda:LG7CCE1A4A77089981 , bda:LGF1EDA5F729CED153 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0339E1147D8DCE0E
+        a                   :PersonDeath ;
+        :onYear             "1514"^^xsd:gYear .
+    
+    bdr:EV1E2B63E99294170A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :onYear             "1481"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV304750CE061253E3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVDE9AA85B58C04542
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G154 .
+    
+    bdr:NM95276883B5F806A7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang thos dpal ldan blo gros/"@bo-x-ewts .
+    
+    bdr:NMA5E07D7B03CA132D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 03"@bo-x-ewts .
+    
+    bdr:NMC14A2085FBF38569
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan blo gros/"@bo-x-ewts .
+    
+    bdr:NT02B02C98D5FED2B6
+        a                   :Note ;
+        :locationStatement  "p. 55" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:NTD444A8929020E545
+        a                   :Note ;
+        :locationStatement  "p. 278-281" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:NTE60BCF908EDE9946
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5546  a            :Person ;
+        skos:prefLabel      "dpal ldan blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT02B02C98D5FED2B6 , bdr:NTD444A8929020E545 , bdr:NTE60BCF908EDE9946 ;
+        :personEvent        bdr:EV0339E1147D8DCE0E , bdr:EV1E2B63E99294170A , bdr:EV304750CE061253E3 , bdr:EVDE9AA85B58C04542 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM95276883B5F806A7 , bdr:NMA5E07D7B03CA132D , bdr:NMC14A2085FBF38569 ;
+        :personStudentOf    bdr:P4762 .
+}

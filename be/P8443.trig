@@ -1,0 +1,66 @@
+@base          <bdg:P8443> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8443 {
+    bda:LG8FD069CCAA04F4D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T09:12:44.943Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8443  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8443 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "be/P8443.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8443 ;
+        adm:logEntry        bda:LG8FD069CCAA04F4D0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV509E6B5E25DD0A64
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G233 .
+    
+    bdr:EVC688201D93D6B0AF
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM070E218BA974EDED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhyen brtse rab brtan/"@bo-x-ewts .
+    
+    bdr:NM690657C8A56BC3E5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bco brgyad khri chen 10 ngag dbang mkhyen brtse rab brtan/"@bo-x-ewts .
+    
+    bdr:NM7723FB5A279DAA3D
+        a                   :PersonTitle ;
+        rdfs:label          "sku zhang ngag dbang mkhyen brtse rab brtan/"@bo-x-ewts .
+    
+    bdr:NTF75CF6316FCA2546
+        a                   :Note ;
+        :noteSource         bdr:MW27309 ;
+        :noteText           "noted as the teacher of ngag dbang kun dga' bsod nams rin chen"@en .
+    
+    bdr:P8443  a            :Person ;
+        skos:prefLabel      "ngag dbang mkhyen brtse rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF75CF6316FCA2546 ;
+        :personEvent        bdr:EV509E6B5E25DD0A64 , bdr:EVC688201D93D6B0AF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM070E218BA974EDED , bdr:NM690657C8A56BC3E5 , bdr:NM7723FB5A279DAA3D ;
+        :personTeacherOf    bdr:P806 .
+}

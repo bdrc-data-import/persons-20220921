@@ -1,0 +1,82 @@
+@base          <bdg:P8LS12430> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12430 {
+    bda:LG3B8E2E6C4607F410
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-09T11:49:50.885Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG76531EA3336D3E9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-02T15:43:06.487Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G1228 to G842"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8LS12430  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12430 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8d/P8LS12430.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12430 ;
+        adm:logEntry        bda:LG3B8E2E6C4607F410 , bda:LG76531EA3336D3E9E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV43658977D292CA67
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV87DB90E943761FAC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :onYear             "1975"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA1A1C772368C2C87
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G842 ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:NM7544EB3D101D9016
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ldan ma ngag dbang legs ldan/"@bo-x-ewts .
+    
+    bdr:NMD976A685CA02F43B
+        a                   :PersonTitle ;
+        rdfs:label          "mkhan zur legs ldan/"@bo-x-ewts .
+    
+    bdr:NME18D1BF3929DC610
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 69"@bo-x-ewts .
+    
+    bdr:NMEF019AF6091C98AD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang legs ldan/"@bo-x-ewts .
+    
+    bdr:NT170E5936EDC421A1
+        a                   :Note ;
+        :locationStatement  "p. 296, 428-436" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "1956 obtained geshe lharam degree"@en .
+    
+    bdr:P8LS12430  a        :Person ;
+        skos:prefLabel      "ngag dbang legs ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT170E5936EDC421A1 ;
+        :personEvent        bdr:EV43658977D292CA67 , bdr:EV87DB90E943761FAC , bdr:EVA1A1C772368C2C87 ;
+        :personName         bdr:NM7544EB3D101D9016 , bdr:NMD976A685CA02F43B , bdr:NME18D1BF3929DC610 , bdr:NMEF019AF6091C98AD ;
+        :personStudentOf    bdr:P230 , bdr:P2596 , bdr:P4559 , bdr:P4605 .
+}

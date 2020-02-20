@@ -1,0 +1,63 @@
+@base          <bdg:P1AG10> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG10 {
+    bda:LGCB1CD07F7839E823
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-02T16:26:45.541Z"^^xsd:dateTime ;
+        adm:logMessage      "added Treasury of Lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG10  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG10 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f5/P1AG10.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG10 ;
+        adm:logEntry        bda:LGCB1CD07F7839E823 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68B6F631870179DA
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVB868C141E21CEA10
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NM112596BB6994DF58
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bla ma btsan 'phrang ba/"@bo-x-ewts .
+    
+    bdr:NMF291C1118EFC013C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Lama Tsentrangwa"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTF0C194BAB4C9F68A
+        a                   :Note ;
+        :locationStatement  "pp. 350-351" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG10  a           :Person ;
+        skos:prefLabel      "bla ma btsan 'phrang ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF0C194BAB4C9F68A ;
+        :personEvent        bdr:EV68B6F631870179DA , bdr:EVB868C141E21CEA10 ;
+        :personName         bdr:NM112596BB6994DF58 , bdr:NMF291C1118EFC013C ;
+        :personStudentOf    bdr:P2221 , bdr:P4007 , bdr:P4587 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lama-Tsentrangwa/13438"^^xsd:anyURI .
+}

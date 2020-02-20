@@ -1,0 +1,61 @@
+@base          <bdg:P1946> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1946 {
+    bda:LGDCC91DCEF34BB7D3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T12:05:37.359Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1946  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1946 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ae/P1946.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1946 ;
+        adm:logEntry        bda:LGDCC91DCEF34BB7D3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV155372F472F59E1F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G321 .
+    
+    bdr:EV5398089D2A3B38DA
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM44D78D5A4ECD110E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos bzang /"@bo-x-ewts .
+    
+    bdr:NME9014CA35D66A131
+        a                   :PersonPersonalName ;
+        rdfs:label          "dol phrug chos bzang /"@bo-x-ewts .
+    
+    bdr:NT4670DB22A865C001
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1946  a            :Person ;
+        skos:prefLabel      "chos bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4670DB22A865C001 ;
+        :personEvent        bdr:EV155372F472F59E1F , bdr:EV5398089D2A3B38DA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM44D78D5A4ECD110E , bdr:NME9014CA35D66A131 ;
+        :personTeacherOf    bdr:P489 .
+}

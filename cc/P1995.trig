@@ -1,0 +1,103 @@
+@base          <bdg:P1995> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1995 {
+    bda:LG08E61FF1A6FF147B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T12:58:36.787Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG3644E9508E08852B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:16:27.198Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG5313DA1FE67D5A75
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T16:51:39.847Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG73459101563EFFCA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-27T09:31:50.841Z"^^xsd:dateTime ;
+        adm:logMessage      "spelling corrected"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF4904FA67966D16F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T16:11:40.725Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1995  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1995 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "cc/P1995.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1995 ;
+        adm:logEntry        bda:LG08E61FF1A6FF147B , bda:LG3644E9508E08852B , bda:LG5313DA1FE67D5A75 , bda:LG73459101563EFFCA , bda:LGF4904FA67966D16F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39D4D08D8F6E9333
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV732AD27DEB26E4A1
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1037 ;
+        :onYear             "1744"^^xsd:gYear .
+    
+    bdr:EVDCFEABC1BA1F269D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1716 ;
+        :onYear             "1798"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM691FAD479104F189
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang sman pa khri 03"@bo-x-ewts .
+    
+    bdr:NMBB6F8FDCE22C481F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCAC2771A69427278
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman lung pa blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8F1E2F0200FA8F67
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT9F7DB91149193722
+        a                   :Note ;
+        :noteText           "Entered Bla-brang for studies.\nGot the title of Rdo-rams-pa.\nEntered the Bla-brang Rgyud-pa Grwa-tshang.\nServed 5 years as the dbu-bla of the Thor-rgod Dza-sag.1798. Became the 3rd Khri of the Sman-pa Grwa-tshang."@en .
+    
+    bdr:NT9FDFD79101AAD783
+        a                   :Note ;
+        :noteText           "see corporation: C2CN11030"@en .
+    
+    bdr:P1995  a            :Person ;
+        skos:prefLabel      "blo bzang rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8F1E2F0200FA8F67 , bdr:NT9F7DB91149193722 , bdr:NT9FDFD79101AAD783 ;
+        :personEvent        bdr:EV39D4D08D8F6E9333 , bdr:EV732AD27DEB26E4A1 , bdr:EVDCFEABC1BA1F269D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM691FAD479104F189 , bdr:NMBB6F8FDCE22C481F , bdr:NMCAC2771A69427278 ;
+        :personStudentOf    bdr:P169 .
+}

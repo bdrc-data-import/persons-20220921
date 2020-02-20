@@ -1,0 +1,70 @@
+@base          <bdg:P4201> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4201 {
+    bda:P4201  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4201 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b0/P4201.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4201 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4255C665F871CFD1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G30 .
+    
+    bdr:EV61A01059F8347C31
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:EV6B481C2A99B358AB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G30 ;
+        :onYear             "1208"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM181EBFA994C5F704
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshal gung thang khri rabs 3 byang chub ye shes/"@bo-x-ewts .
+    
+    bdr:NME1A9B6E938D95E99
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub ye shes/"@bo-x-ewts .
+    
+    bdr:NT0B62EDF3D819F0C5
+        a                   :Note ;
+        :locationStatement  "p. 1802" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT18525369F5CDFAF4
+        a                   :Note ;
+        :noteText           "1208. Ascended throne of Tshal Gung-thang."@en .
+    
+    bdr:NT32C489E7402C49D7
+        a                   :Note ;
+        :locationStatement  "p. 2284" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1208. slob dpon byang chub ye shes tshal gung thang gi khrir phebs"@en .
+    
+    bdr:P4201  a            :Person ;
+        skos:prefLabel      "byang chub ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0B62EDF3D819F0C5 , bdr:NT18525369F5CDFAF4 , bdr:NT32C489E7402C49D7 ;
+        :personEvent        bdr:EV4255C665F871CFD1 , bdr:EV61A01059F8347C31 , bdr:EV6B481C2A99B358AB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM181EBFA994C5F704 , bdr:NME1A9B6E938D95E99 .
+}

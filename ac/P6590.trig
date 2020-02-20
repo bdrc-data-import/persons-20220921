@@ -1,0 +1,51 @@
+@base          <bdg:P6590> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6590 {
+    bda:P6590  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6590 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ac/P6590.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6590 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F81FA4BDA5535B7
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1700 ;
+        :onYear             "1954"^^xsd:gYear .
+    
+    bdr:NM0CD8A18B01C589C1
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad ma rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM6786912317B34586
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgo log rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTC7D82FBB8F755AB0
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW20190 ;
+        :noteText           "biography of translator"@en .
+    
+    bdr:P6590  a            :Person ;
+        skos:prefLabel      "mgo log rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC7D82FBB8F755AB0 ;
+        :personEvent        bdr:EV7F81FA4BDA5535B7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CD8A18B01C589C1 , bdr:NM6786912317B34586 .
+}

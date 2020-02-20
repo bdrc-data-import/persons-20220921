@@ -1,0 +1,57 @@
+@base          <bdg:P1848> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1848 {
+    bda:LG01665290337DFBF7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T14:57:24.333Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1848  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1848 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "12/P1848.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1848 ;
+        adm:logEntry        bda:LG01665290337DFBF7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC23EA334C60FDF08
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM0E13EC347DFE35C4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo bzang mkhas btsun/"@bo-x-ewts .
+    
+    bdr:NM5682CCA9A543C602
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen ngag dbang blo bzang mkhas btsun/"@bo-x-ewts .
+    
+    bdr:NT4645C31C961AF0D2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1848  a            :Person ;
+        skos:prefLabel      "ngag dbang blo bzang mkhas btsun/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4645C31C961AF0D2 ;
+        :personEvent        bdr:EVC23EA334C60FDF08 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E13EC347DFE35C4 , bdr:NM5682CCA9A543C602 ;
+        :personTeacherOf    bdr:P1847 .
+}

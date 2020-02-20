@@ -1,0 +1,105 @@
+@base          <bdg:P4782> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4782 {
+    bda:LGAB135E5A22A6108A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-26T10:10:28.262Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, seat, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBE824CFC0E570B51
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:06:22.59Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGDD3A7712278A3116
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P4782  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4782 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "bc/P4782.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4782 ;
+        adm:logEntry        bda:LGAB135E5A22A6108A , bda:LGBE824CFC0E570B51 , bda:LGDD3A7712278A3116 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45DAA748A0FA288C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1353 ;
+        :onYear             "1886"^^xsd:gYear .
+    
+    bdr:EV91BA040F6A30F201
+        a                   :PersonDeath ;
+        :onYear             "1952"^^xsd:gYear .
+    
+    bdr:EVC381B5A3AFEB9969
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G518 .
+    
+    bdr:EVDCB1E05CD8C97639
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM08031EF860216505
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Katok Getse 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM22FBA576E3C46CCC
+        a                   :PersonPersonalName ;
+        rdfs:label          "'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM2640A5863B80A854
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med bstan pa rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMD8272529636A36E5
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "kaH thog dge rtse 03"@bo-x-ewts .
+    
+    bdr:NME7D47CC89C13B093
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge rtse 03 'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT0D9C1BF512464BE7
+        a                   :Note ;
+        :noteText           "Ascended the throne of KaH-thog.\nBrought together the KaH-thog snyan brgyud Khrid chen bcu gsum into the Gdams khrid nor bu'i me long and numerous works on grammar, medicine,and astrology.\nStudent (not recorded): A-'dzom 'Brug-pa Mchog-sprul"@en .
+    
+    bdr:NT91A2E1461335F4C4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:NT9502DE0289CC70C0
+        a                   :Note ;
+        :locationStatement  "p. 111-112" ;
+        :noteSource         bdr:MW20396 .
+    
+    bdr:P4782  a            :Person ;
+        skos:prefLabel      "'gyur med bstan pa rnam rgyal/"@bo-x-ewts ;
+        :hasNephew          bdr:P6052 ;
+        :incarnationGeneral  bdr:P6019 ;
+        :isRoot             true ;
+        :note               bdr:NT0D9C1BF512464BE7 , bdr:NT91A2E1461335F4C4 , bdr:NT9502DE0289CC70C0 ;
+        :personEvent        bdr:EV45DAA748A0FA288C , bdr:EV91BA040F6A30F201 , bdr:EVC381B5A3AFEB9969 , bdr:EVDCB1E05CD8C97639 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08031EF860216505 , bdr:NM22FBA576E3C46CCC , bdr:NM2640A5863B80A854 , bdr:NMD8272529636A36E5 , bdr:NME7D47CC89C13B093 ;
+        :personStudentOf    bdr:P5114 , bdr:P5995 , bdr:P5996 , bdr:P6002 , bdr:P6042 , bdr:P706 ;
+        :personTeacherOf    bdr:P3JM46 , bdr:P4779 , bdr:P4783 , bdr:P6020 , bdr:P6021 , bdr:P6022 , bdr:P6023 , bdr:P6024 , bdr:P8099 .
+}

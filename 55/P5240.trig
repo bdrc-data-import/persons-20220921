@@ -1,0 +1,72 @@
+@base          <bdg:P5240> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5240 {
+    bda:LG266FFB52BFD788C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:06:50.256Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGDA41E8FC29E1B1E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T14:29:36.186Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5240  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5240 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "55/P5240.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5240 ;
+        adm:logEntry        bda:LG266FFB52BFD788C1 , bda:LGDA41E8FC29E1B1E7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD685E55501F6408E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1338 ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM1966988FED9FA1CC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gung thang btsun pa rgyal ba dpal/"@bo-x-ewts .
+    
+    bdr:NM62A4D32A88F18672
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal ba dpal/"@bo-x-ewts .
+    
+    bdr:NM7539C27C63323B18
+        a                   :PersonTitle ;
+        rdfs:label          "zhang rgyal ba dpal/"@bo-x-ewts .
+    
+    bdr:NT891C37CE0F3DF982
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NT8F6D36736A341248
+        a                   :Note ;
+        :noteText           "Connected with U-rgyan Dgon-pa."@en .
+    
+    bdr:P5240  a            :Person ;
+        skos:prefLabel      "rgyal ba dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT891C37CE0F3DF982 , bdr:NT8F6D36736A341248 ;
+        :personEvent        bdr:EVD685E55501F6408E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1966988FED9FA1CC , bdr:NM62A4D32A88F18672 , bdr:NM7539C27C63323B18 ;
+        :personStudentOf    bdr:P1056 .
+}

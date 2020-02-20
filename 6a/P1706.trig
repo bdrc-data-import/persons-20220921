@@ -1,0 +1,48 @@
+@base          <bdg:P1706> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1706 {
+    bda:P1706  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1706 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "6a/P1706.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1706 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20B1F61F555E6021
+        a                   :PersonBirth ;
+        :onYear             "1497"^^xsd:gYear .
+    
+    bdr:EV80EA5E0A6B3E76A1
+        a                   :PersonDeath ;
+        :onYear             "1544"^^xsd:gYear .
+    
+    bdr:NM327686F8E00F2FFB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' legs pa'i blo gros/"@bo-x-ewts .
+    
+    bdr:NTEDD4DAB572522B9B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P1706  a            :Person ;
+        skos:prefLabel      "kun dga' legs pa'i blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEDD4DAB572522B9B ;
+        :personEvent        bdr:EV20B1F61F555E6021 , bdr:EV80EA5E0A6B3E76A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM327686F8E00F2FFB .
+}

@@ -1,0 +1,96 @@
+@base          <bdg:P7768> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7768 {
+    bda:LG54E87B858A1120E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T14:24:42.824Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCE2F5095EBE81410
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T16:08:06.055Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7768  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7768 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "2b/P7768.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7768 ;
+        adm:logEntry        bda:LG54E87B858A1120E3 , bda:LGCE2F5095EBE81410 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07D27CB617ACAB4F
+        a                   :PersonDeath ;
+        :onYear             "1901"^^xsd:gYear .
+    
+    bdr:EV913486D59888A70C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVB693E6C427A472E7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVED86F32C43D2FB5C
+        a                   :PersonBirth ;
+        :onYear             "1837"^^xsd:gYear .
+    
+    bdr:NM2976D3DAE43D3089
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rin chen rdo rje/"@bo-x-ewts .
+    
+    bdr:NM69D80C60C2509F0D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 58 'jam dbyangs rin chen rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC75B6049B85988A7
+        a                   :PersonTitle ;
+        rdfs:label          "thar rtse 'jam dbyangs rin chen rdo rje/"@bo-x-ewts .
+    
+    bdr:NMCCA6A4C2CE8A4123
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 58"@bo-x-ewts .
+    
+    bdr:NT22C7133CD4228D65
+        a                   :Note ;
+        :locationStatement  "p. 224" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT9392AAB1862D146C
+        a                   :Note ;
+        :locationStatement  "p. 116" ;
+        :noteSource         bdr:MW23441 ;
+        :noteText           "born in gtsang at bsam 'grub rtse in the brang ti lineage\ninstalled in the thar rtse bla brang at ngor"@en .
+    
+    bdr:NTC0B59B5FA9BD6E7A
+        a                   :Note ;
+        :locationStatement  "p. 116" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P7768  a            :Person ;
+        skos:prefLabel      "'jam dbyangs rin chen rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22C7133CD4228D65 , bdr:NT9392AAB1862D146C , bdr:NTC0B59B5FA9BD6E7A ;
+        :personEvent        bdr:EV07D27CB617ACAB4F , bdr:EV913486D59888A70C , bdr:EVB693E6C427A472E7 , bdr:EVED86F32C43D2FB5C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2976D3DAE43D3089 , bdr:NM69D80C60C2509F0D , bdr:NMC75B6049B85988A7 , bdr:NMCCA6A4C2CE8A4123 ;
+        :personStudentOf    bdr:P962 ;
+        :personTeacherOf    bdr:P5940 , bdr:P7534 , bdr:P7535 , bdr:P8LS13097 .
+}

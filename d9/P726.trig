@@ -1,0 +1,72 @@
+@base          <bdg:P726> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P726 {
+    bda:LG6947D55E7086C964
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-27T16:19:22.801Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P726  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P726 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d9/P726.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P726 ;
+        adm:logEntry        bda:LG6947D55E7086C964 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12186D4DEA4F66DF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G187 .
+    
+    bdr:EV208B08109532C77E
+        a                   :PersonBirth ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:EV69D7A90DBCBBAF10
+        a                   :PersonDeath ;
+        :onYear             "1945"^^xsd:gYear .
+    
+    bdr:NM5079C21B2D46407E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gling tshang mkhan chen/"@bo-x-ewts .
+    
+    bdr:NMA3585B1210524B89
+        a                   :PersonPersonalName ;
+        rdfs:label          "gling tshang mkhan chen 'gyur med thub bstan 'jam dbyangs grags pa/"@bo-x-ewts .
+    
+    bdr:NMF1B1CA54D13B55D9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med thub bstan 'jam dbyangs grags pa/"@bo-x-ewts .
+    
+    bdr:NT1E0FD7542A7305F8
+        a                   :Note ;
+        :noteText           "Dates are questionable: add 1883?-1945?"@en .
+    
+    bdr:NTAAF51ED31E1DF269
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P726  a             :Person ;
+        skos:prefLabel      "'gyur med thub bstan 'jam dbyangs grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E0FD7542A7305F8 , bdr:NTAAF51ED31E1DF269 ;
+        :personEvent        bdr:EV12186D4DEA4F66DF , bdr:EV208B08109532C77E , bdr:EV69D7A90DBCBBAF10 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5079C21B2D46407E , bdr:NMA3585B1210524B89 , bdr:NMF1B1CA54D13B55D9 ;
+        :personTeacherOf    bdr:P6002 .
+}

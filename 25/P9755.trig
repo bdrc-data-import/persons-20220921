@@ -1,0 +1,51 @@
+@base          <bdg:P9755> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9755 {
+    bda:P9755  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9755 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "25/P9755.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9755 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVECA71361F21713F1
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3024858D62D4E376
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gnyan/"@bo-x-ewts .
+    
+    bdr:NMD4E5186C0934F498
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jang rtse don kho/"@bo-x-ewts .
+    
+    bdr:NT2EF17113E5C0B378
+        a                   :Note ;
+        :locationStatement  "french flap" ;
+        :noteSource         bdr:MW29489 ;
+        :noteText           "biography of gnyan; born in rnga ba tshang"@en .
+    
+    bdr:P9755  a            :Person ;
+        skos:prefLabel      "gnyan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2EF17113E5C0B378 ;
+        :personEvent        bdr:EVECA71361F21713F1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3024858D62D4E376 , bdr:NMD4E5186C0934F498 .
+}

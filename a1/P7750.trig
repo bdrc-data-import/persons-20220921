@@ -1,0 +1,56 @@
+@base          <bdg:P7750> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7750 {
+    bda:P7750  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7750 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a1/P7750.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7750 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E565654EEB47AD9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3470 .
+    
+    bdr:EV74A0DECD093A58E6
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM127570AB3BE1835E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen chos skyabs dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NM97D787BDC7BE3D36
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos skyabs dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NT7FC108A963C9F37E
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 549" ;
+        :noteSource         bdr:MW22378 ;
+        :noteText           "teacher of tsong kha pa blo bzang grags pa\ntaught tsong kha pa bka' gdams pa teachings and the vinaya\nconnected with the gnyal area"@en .
+    
+    bdr:P7750  a            :Person ;
+        skos:prefLabel      "chos skyabs dpal bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7FC108A963C9F37E ;
+        :personEvent        bdr:EV3E565654EEB47AD9 , bdr:EV74A0DECD093A58E6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM127570AB3BE1835E , bdr:NM97D787BDC7BE3D36 ;
+        :personTeacherOf    bdr:P64 .
+}

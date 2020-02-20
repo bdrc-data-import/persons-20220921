@@ -1,0 +1,58 @@
+@base          <bdg:P5885> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5885 {
+    bda:LG8CDC7EF4067026A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T10:34:24.838Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5885  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5885 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ea/P5885.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5885 ;
+        adm:logEntry        bda:LG8CDC7EF4067026A5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A4B396703F79405
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM78CA1861A86D8FE7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sngo nyal ma/"@bo-x-ewts .
+    
+    bdr:NM7E0F23D214299E1B
+        a                   :PersonPersonalName ;
+        rdfs:label          "dam pa sngo nyal ma/"@bo-x-ewts .
+    
+    bdr:NT52C351F00A05BAE9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P5885  a            :Person ;
+        skos:prefLabel      "sngo nyal ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT52C351F00A05BAE9 ;
+        :personEvent        bdr:EV1A4B396703F79405 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM78CA1861A86D8FE7 , bdr:NM7E0F23D214299E1B ;
+        :personStudentOf    bdr:P1718 ;
+        :personTeacherOf    bdr:P5886 .
+}

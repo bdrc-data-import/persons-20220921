@@ -1,0 +1,62 @@
+@base          <bdg:P1KG1425> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1425 {
+    bda:LG8AA6010B142ECCF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T16:16:35.386Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGFA298DC147841B80
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-09T16:24:04.641Z"^^xsd:dateTime ;
+        adm:logMessage      "added date"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1425  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1425 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "71/P1KG1425.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1425 ;
+        adm:logEntry        bda:LG8AA6010B142ECCF2 , bda:LGFA298DC147841B80 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88C9B3CD5C2FB879
+        a                   :PersonBirth ;
+        :onYear             "1966"^^xsd:gYear .
+    
+    bdr:NM8ABB4EC4EC7D8987
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lobzang tenzin"@en .
+    
+    bdr:NMD56C58D963881F59
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT2B33C144AFDA56BE
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1424 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1425  a         :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin/"@bo-x-ewts , "lobzang tenzin"@en ;
+        :isRoot             true ;
+        :note               bdr:NT2B33C144AFDA56BE ;
+        :personEvent        bdr:EV88C9B3CD5C2FB879 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8ABB4EC4EC7D8987 , bdr:NMD56C58D963881F59 .
+}

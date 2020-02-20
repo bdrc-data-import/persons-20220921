@@ -1,0 +1,52 @@
+@base          <bdg:P589> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P589 {
+    bda:P589  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P589 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "82/P589.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P589 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8658D191BD748879
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1F6E0CBE66C50550
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar bla ma bstan 'dzin don grub/"@bo-x-ewts .
+    
+    bdr:NME5D6D61EF9BE4982
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin don grub/"@bo-x-ewts .
+    
+    bdr:NTCFF74BA71B856732
+        a                   :Note ;
+        :locationStatement  "p. 159" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P589  a             :Person ;
+        skos:prefLabel      "bstan 'dzin don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCFF74BA71B856732 ;
+        :personEvent        bdr:EV8658D191BD748879 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1F6E0CBE66C50550 , bdr:NME5D6D61EF9BE4982 ;
+        :personStudentOf    bdr:P587 .
+}

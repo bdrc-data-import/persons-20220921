@@ -1,0 +1,80 @@
+@base          <bdg:P8898> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8898 {
+    bda:LG8E34EEBF127D61D8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T14:52:40.845Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation & tulku title"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8898  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8898 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "82/P8898.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8898 ;
+        adm:logEntry        bda:LG8E34EEBF127D61D8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68AB6173E1291C9B
+        a                   :PersonBirth ;
+        :onYear             "1509"^^xsd:gYear .
+    
+    bdr:EVC0AEA84AB29461D0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:EVCC510D435FDA0E69
+        a                   :PersonDeath ;
+        :onYear             "1580"^^xsd:gYear .
+    
+    bdr:NM7EE277C513DF25D7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal ba seng+ge"@bo-x-ewts .
+    
+    bdr:NMA58A6E9BBAF8CC40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 02 rgyal ba seng+ge"@bo-x-ewts .
+    
+    bdr:NMBBF301C25CC82EF9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang chos rje sku phreng 02"@bo-x-ewts .
+    
+    bdr:NMC12E337635BE5384
+        a                   :PersonPersonalName ;
+        rdfs:label          "rgyal ba seng+ge dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NME2242C808D53BDE3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Choje Kutreng 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT21751F7AB301A0DE
+        a                   :Note ;
+        :locationStatement  "pp. 118-132" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "jo nang master from 'dzam thang\n\nbiography\nparents (not recorded):\nfather: skya pi le'am dkon rgyal ba 'od zer\nmother:dpal skyid sgrol ma"@en .
+    
+    bdr:P8898  a            :Person ;
+        skos:prefLabel      "rgyal ba seng+ge"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8877 ;
+        :isRoot             true ;
+        :note               bdr:NT21751F7AB301A0DE ;
+        :personEvent        bdr:EV68AB6173E1291C9B , bdr:EVC0AEA84AB29461D0 , bdr:EVCC510D435FDA0E69 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7EE277C513DF25D7 , bdr:NMA58A6E9BBAF8CC40 , bdr:NMBBF301C25CC82EF9 , bdr:NMC12E337635BE5384 , bdr:NME2242C808D53BDE3 ;
+        :personStudentOf    bdr:P8879 , bdr:P8941 , bdr:P8942 ;
+        :personTeacherOf    bdr:P1426 , bdr:P889 , bdr:P8899 , bdr:P8900 , bdr:P8901 , bdr:P8918 , bdr:P8923 .
+}

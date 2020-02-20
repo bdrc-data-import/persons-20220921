@@ -1,0 +1,82 @@
+@base          <bdg:P8LS13181> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13181 {
+    bda:LG1A3EEBA5A7EA8183
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG44FAE1E8A475B0FC
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-04T15:20:55.653Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG59786899E572E328
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-01T12:01:41.991Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE0A9979FAA33BF75
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-04T16:23:35.935Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13181  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13181 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "70/P8LS13181.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13181 ;
+        adm:logEntry        bda:LG1A3EEBA5A7EA8183 , bda:LG44FAE1E8A475B0FC , bda:LG59786899E572E328 , bda:LGE0A9979FAA33BF75 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB030DCB0FA4491F9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G20 .
+    
+    bdr:EVD7DAB5A28AD27ACA
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13184 .
+    
+    bdr:NM4C59AF60D1236521
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zhe chen rgyal tshab 01"@bo-x-ewts .
+    
+    bdr:NM5221C20F668D4598
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhe chen rgyal tshab sku phreng dang po/"@bo-x-ewts .
+    
+    bdr:NMB4AA51E042E81F44
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Shechen Gyeltsab 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTD7AE402CCEFC7CCB
+        a                   :Note ;
+        :noteText           "the name and detail information is not available"@en .
+    
+    bdr:P8LS13181  a        :Person ;
+        skos:prefLabel      "zhe chen rgyal tshab sku phreng dang po/"@bo-x-ewts ;
+        :hasNibling         bdr:P3CN713 ;
+        :isRoot             true ;
+        :note               bdr:NTD7AE402CCEFC7CCB ;
+        :personEvent        bdr:EVB030DCB0FA4491F9 , bdr:EVD7DAB5A28AD27ACA ;
+        :personName         bdr:NM4C59AF60D1236521 , bdr:NM5221C20F668D4598 , bdr:NMB4AA51E042E81F44 ;
+        :personTeacherOf    bdr:P11MS245 .
+}

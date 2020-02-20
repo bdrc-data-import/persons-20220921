@@ -1,0 +1,95 @@
+@base          <bdg:P528> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P528 {
+    bda:LGBD50CF92BCA5A73D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T16:17:32.98Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P528  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P528 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "b1/P528.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P528 ;
+        adm:logEntry        bda:LGBD50CF92BCA5A73D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04B7C60D4E37302A
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1744"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV1386556CF987DF56
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3182 ;
+        :onYear             "1689"^^xsd:gYear .
+    
+    bdr:EV6A7402C1CD10E215
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1738"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV6CA19116A864B677
+        a                   :PersonDeath ;
+        :onYear             "1744"^^xsd:gYear .
+    
+    bdr:EVDB872515CA0F04CE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM1ED5355BFAA78E96
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 08"@bo-x-ewts .
+    
+    bdr:NM2F28C540F4327100
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NM7EF5EE0C97B815BC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 08 bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NT10045AE43393F477
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1738-1744.\nServed as Rin-spungs Spyi-bla."@en .
+    
+    bdr:NT21438EFDD7293808
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NT221B3B75733A9C01
+        a                   :Note ;
+        :locationStatement  "p. 144" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NT9A2E2FFCDE7F90C6
+        a                   :Note ;
+        :noteText           "into the royal lineage la dwags"@en .
+    
+    bdr:P528  a             :Person ;
+        skos:prefLabel      "bstan 'dzin nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT10045AE43393F477 , bdr:NT21438EFDD7293808 , bdr:NT221B3B75733A9C01 , bdr:NT9A2E2FFCDE7F90C6 ;
+        :personEvent        bdr:EV04B7C60D4E37302A , bdr:EV1386556CF987DF56 , bdr:EV6A7402C1CD10E215 , bdr:EV6CA19116A864B677 , bdr:EVDB872515CA0F04CE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1ED5355BFAA78E96 , bdr:NM2F28C540F4327100 , bdr:NM7EF5EE0C97B815BC ;
+        :personStudentOf    bdr:P521 , bdr:P522 , bdr:P529 ;
+        :personTeacherOf    bdr:P534 , bdr:P539 , bdr:P541 , bdr:P547 .
+}

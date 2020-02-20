@@ -1,0 +1,73 @@
+@base          <bdg:P3006> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3006 {
+    bda:LG2DB98309449C05C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-15T13:55:00.838Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3006  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3006 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "80/P3006.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3006 ;
+        adm:logEntry        bda:LG2DB98309449C05C1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31698DF8CFAE182F
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM1AEF5AC34D52DC3F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes gzungs/"@bo-x-ewts .
+    
+    bdr:NM517569CE8812B896
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sum ston ye shes gzungs/"@bo-x-ewts .
+    
+    bdr:NT09A0E730DBCE534D
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in the transmission lineage of the four medical tantras (rgyud bzhi0"@en .
+    
+    bdr:NT5B83F628A1CB536F
+        a                   :Note ;
+        :locationStatement  "p. 269" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:NTC70DACECAA8DCC87
+        a                   :Note ;
+        :locationStatement  "p. 1761" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:P3006  a            :Person ;
+        skos:prefLabel      "ye shes gzungs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT09A0E730DBCE534D , bdr:NT5B83F628A1CB536F , bdr:NTC70DACECAA8DCC87 ;
+        :personEvent        bdr:EV31698DF8CFAE182F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AEF5AC34D52DC3F , bdr:NM517569CE8812B896 ;
+        :personStudentOf    bdr:P3005 ;
+        :personTeacherOf    bdr:P3007 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sumton-Yeshe-Zung/5313"^^xsd:anyURI .
+}

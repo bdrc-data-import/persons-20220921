@@ -1,0 +1,56 @@
+@base          <bdg:P6267> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6267 {
+    bda:LG1615EED389BD61E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T13:32:28.988Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGA0306CDE33333C61
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-03T15:25:12.068Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6267  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6267 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "65/P6267.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6267 ;
+        adm:logEntry        bda:LG1615EED389BD61E4 , bda:LGA0306CDE33333C61 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46075D87C9BA5293
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1405 ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM3EBAB33D0F7EB297
+        a                   :PersonPersonalName ;
+        rdfs:label          "hor gtsang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NM4557E5C40A39D2A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med/"@bo-x-ewts .
+    
+    bdr:P6267  a            :Person ;
+        skos:prefLabel      "'jigs med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV46075D87C9BA5293 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3EBAB33D0F7EB297 , bdr:NM4557E5C40A39D2A9 .
+}

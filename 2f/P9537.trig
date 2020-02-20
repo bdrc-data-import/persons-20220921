@@ -1,0 +1,61 @@
+@base          <bdg:P9537> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9537 {
+    bda:LG6159F10809004FC9
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-19T14:24:09.429Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGE493062899F8AC11
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-01T17:17:06.165Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P9537  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9537 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2f/P9537.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9537 ;
+        adm:logEntry        bda:LG6159F10809004FC9 , bda:LGE493062899F8AC11 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8572E05BCCDE6B24
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMA38CB028A265D361
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdo rje bkra shis/"@bo-x-ewts .
+    
+    bdr:NT98ABA418DCAE6D8F
+        a                   :Note ;
+        :locationStatement  "375" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "Considered the reincarnation of mkhan chen pad_ma tshe dbang."@en .
+    
+    bdr:P9537  a            :Person ;
+        skos:prefLabel      "rdo rje bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT98ABA418DCAE6D8F ;
+        :personEvent        bdr:EV8572E05BCCDE6B24 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA38CB028A265D361 ;
+        :personStudentOf    bdr:P6599 , bdr:P8696 .
+}

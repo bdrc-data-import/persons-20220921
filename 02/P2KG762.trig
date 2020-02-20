@@ -1,0 +1,61 @@
+@base          <bdg:P2KG762> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG762 {
+    bda:LG1C9CAFA6BF5B3B4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-03T12:35:49.118Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG762  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG762 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "02/P2KG762.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG762 ;
+        adm:logEntry        bda:LG1C9CAFA6BF5B3B4C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F939503E29CFFF9
+        a                   :PersonBirth ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:EVD51E43955DD6C118
+        a                   :PersonDeath ;
+        :onYear             "2014"^^xsd:gYear .
+    
+    bdr:NM26ED55A93D568DAE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnya' bstan 'dzin lhun grub/"@bo-x-ewts .
+    
+    bdr:NM4801FF052D4B730E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes gnya' bstan 'dzin lhun grub/"@bo-x-ewts .
+    
+    bdr:NM620ADE430FF0AFC3
+        a                   :PersonPersonalName ;
+        rdfs:label          "spyi 'dul skyabs/"@bo-x-ewts .
+    
+    bdr:NMEC62FBD3B34FEDEF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin lhun grub/"@bo-x-ewts .
+    
+    bdr:P2KG762  a          :Person ;
+        skos:prefLabel      "gnya' bstan 'dzin lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1F939503E29CFFF9 , bdr:EVD51E43955DD6C118 ;
+        :personName         bdr:NM26ED55A93D568DAE , bdr:NM4801FF052D4B730E , bdr:NM620ADE430FF0AFC3 , bdr:NMEC62FBD3B34FEDEF .
+}

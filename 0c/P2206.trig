@@ -1,0 +1,95 @@
+@base          <bdg:P2206> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2206 {
+    bda:LGADD4E2F3789AA12F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-05T11:25:02.176Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCE736A7C00243A50
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-02T16:37:03.667Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G1078 to G2369"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2206  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2206 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "0c/P2206.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2206 ;
+        adm:logEntry        bda:LGADD4E2F3789AA12F , bda:LGCE736A7C00243A50 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV53443CF3DA872380
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EV7A41EF4E3548E43E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1880"^^xsd:gYear .
+    
+    bdr:EVB4472BD30462F9A4
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVF4E07E2078A22FBF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1921"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM4B4A2A9648268CF9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 70"@bo-x-ewts .
+    
+    bdr:NM5C9BC16D5BD1EC6E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang lung rtogs chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF7D06169E977E7B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal chos mkhan chen 06 blo bzang lung rtogs chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT710A27763ED02BB4
+        a                   :Note ;
+        :locationStatement  "p. 339-342" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NTBC07612B9D10A669
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTCDBD478EFDA4D162
+        a                   :Note ;
+        :noteText           "Entered Lding-tsha Bkra-shis-chos-sdings Chow-grwa.\n1906: To Dbus.\n1921. Becomes the 70th Khri of Rong-po Thos-bsam-rnam-rgyal-gling.\nTaught at Dar-zhing So-nag Sgar and Gnyan-thog Dgon.\n1938. Again comes to the throne of Rong-po for three years."@en .
+    
+    bdr:NTDAD3BDC5B044B26C
+        a                   :Note ;
+        :locationStatement  "p. 1004" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P2206  a            :Person ;
+        skos:prefLabel      "blo bzang lung rtogs chos kyi rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT710A27763ED02BB4 , bdr:NTBC07612B9D10A669 , bdr:NTCDBD478EFDA4D162 , bdr:NTDAD3BDC5B044B26C ;
+        :personEvent        bdr:EV53443CF3DA872380 , bdr:EV7A41EF4E3548E43E , bdr:EVB4472BD30462F9A4 , bdr:EVF4E07E2078A22FBF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B4A2A9648268CF9 , bdr:NM5C9BC16D5BD1EC6E , bdr:NMF7D06169E977E7B2 ;
+        :personStudentOf    bdr:P2211 , bdr:P3170 .
+}

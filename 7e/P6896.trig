@@ -1,0 +1,75 @@
+@base          <bdg:P6896> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6896 {
+    bda:LG248B1AF2B41DFF16
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-08T09:23:21.829Z"^^xsd:dateTime ;
+        adm:logMessage      "spelling corrected"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG31F3A969A6377B1F
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-20T08:09:27.39Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6896  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6896 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7e/P6896.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6896 ;
+        adm:logEntry        bda:LG248B1AF2B41DFF16 , bda:LG31F3A969A6377B1F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DF24392C7647AC5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G326 .
+    
+    bdr:EV49026E2A666F6487
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0AD5159560AEF3FC
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma tshogs gnyis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM81A3EFD22D267E67
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zur mang mkhan po tshogs gnyis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM92D1F7E4F506DE03
+        a                   :PersonGrammatical ;
+        rdfs:label          "mtsho byung dgyes pa'i blo gros sgra dbyangs rgya mtsho'i zla ba/"@bo-x-ewts .
+    
+    bdr:NM97600D65AAF1C57A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshogs gnyis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9055DAFA4CA5FFB1
+        a                   :Note ;
+        :noteText           "religious teacher connected with the zur mang monastery and a student of the nang chen mkhyen brtse kun bzang 'gro 'dul"@en .
+    
+    bdr:P6896  a            :Person ;
+        skos:prefLabel      "tshogs gnyis rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9055DAFA4CA5FFB1 ;
+        :personEvent        bdr:EV2DF24392C7647AC5 , bdr:EV49026E2A666F6487 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0AD5159560AEF3FC , bdr:NM81A3EFD22D267E67 , bdr:NM92D1F7E4F506DE03 , bdr:NM97600D65AAF1C57A ;
+        :personStudentOf    bdr:P6897 .
+}

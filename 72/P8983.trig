@@ -1,0 +1,77 @@
+@base          <bdg:P8983> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8983 {
+    bda:LGCE91E97B4CC3EC67
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-19T14:31:18.335Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8983  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8983 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "72/P8983.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8983 ;
+        adm:logEntry        bda:LGCE91E97B4CC3EC67 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7ECCEB1FE9A0CD62
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVA653A47BDA9EF595
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVC6FEEAF13E475D42
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :onYear             "1918"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFF9FB212930D50F0
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4323 ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:NM6FCF763AB2904975
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgang ba rgya nag mkhan chen skal bzang bstan pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD407351EC7B1DE62
+        a                   :PersonPersonalName ;
+        rdfs:label          "skal bzang bstan pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF558E01C963251BA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 28"@bo-x-ewts .
+    
+    bdr:NTBE070554C8A32B04
+        a                   :Note ;
+        :locationStatement  "pp. 123-131" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "biography\nbirthplace: mgo log yo stag \nfather: a 'bum\nmother: sman mo mtsho\noccupied the throne of rnga ba sgo mang dgon; went to tibet and studied at dga' ldan\nteachers (not yet identified):\na mchog rin po che 'jam dbyangs mkhyen rab rgya mtsho \nsgang ba chos mdzad tshang \nyongs 'dzin tshul khrims tshang \nmtshe lha bzo bstan 'phel \nrnga ba zla grags tshang \nauthored two volumes including a 'jigs byed bskyed rdzogs"@en .
+    
+    bdr:P8983  a            :Person ;
+        skos:prefLabel      "skal bzang bstan pa rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBE070554C8A32B04 ;
+        :personEvent        bdr:EV7ECCEB1FE9A0CD62 , bdr:EVA653A47BDA9EF595 , bdr:EVC6FEEAF13E475D42 , bdr:EVFF9FB212930D50F0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6FCF763AB2904975 , bdr:NMD407351EC7B1DE62 , bdr:NMF558E01C963251BA ;
+        :personTeacherOf    bdr:P8978 , bdr:P8LS12171 .
+}

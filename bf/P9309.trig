@@ -1,0 +1,50 @@
+@base          <bdg:P9309> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9309 {
+    bda:P9309  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9309 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "bf/P9309.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9309 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV876381911D920770
+        a                   :PersonBirth ;
+        :onYear             "1877"^^xsd:gYear .
+    
+    bdr:NM1268E1576096F748
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM59A7F3B110D1ACA7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skam zhig nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT05EA0E1324B08100
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon po teacher\nborn 1877"@en .
+    
+    bdr:P9309  a            :Person ;
+        skos:prefLabel      "nyi ma rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT05EA0E1324B08100 ;
+        :personEvent        bdr:EV876381911D920770 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1268E1576096F748 , bdr:NM59A7F3B110D1ACA7 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P6360> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6360 {
+    bda:P6360  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6360 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "de/P6360.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6360 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6ABEC81BFFA36D0F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EVDBA22D94965C7B90
+        a                   :PersonDeath ;
+        :onYear             "1971"^^xsd:gYear .
+    
+    bdr:NMA8DF1CF12F5C0365
+        a                   :PersonTitle ;
+        rdfs:label          "dge rtse dbang chen/"@bo-x-ewts .
+    
+    bdr:NME7278425D7A010C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang chen/"@bo-x-ewts .
+    
+    bdr:NME875F23EFDD044E7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdo shul bla ma dbang chen/"@bo-x-ewts .
+    
+    bdr:NT3D4DC281F31C0715
+        a                   :Note ;
+        :locationStatement  "p. 413" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch"@en .
+    
+    bdr:P6360  a            :Person ;
+        skos:prefLabel      "dbang chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3D4DC281F31C0715 ;
+        :personEvent        bdr:EV6ABEC81BFFA36D0F , bdr:EVDBA22D94965C7B90 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA8DF1CF12F5C0365 , bdr:NME7278425D7A010C5 , bdr:NME875F23EFDD044E7 ;
+        :personStudentOf    bdr:P6337 .
+}

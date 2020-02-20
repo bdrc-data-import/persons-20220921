@@ -1,0 +1,51 @@
+@base          <bdg:P8830> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8830 {
+    bda:P8830  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8830 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c8/P8830.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8830 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6F3BD13A94FB5F2D
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM0B7484694F84CE07
+        a                   :PersonPersonalName ;
+        rdfs:label          "ju nang rgyal po/"@bo-x-ewts .
+    
+    bdr:NM8DA33BCEDA21751C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sog po ju nang rgyal po/"@bo-x-ewts .
+    
+    bdr:NTC6FBF128DFC224CE
+        a                   :Note ;
+        :locationStatement  "p. 2327" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1585. sog po ju nang rgyal pos tA la'i bla ma bsod nams rgya mtsho gdan drangs"@en .
+    
+    bdr:P8830  a            :Person ;
+        skos:prefLabel      "ju nang rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC6FBF128DFC224CE ;
+        :personEvent        bdr:EV6F3BD13A94FB5F2D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B7484694F84CE07 , bdr:NM8DA33BCEDA21751C .
+}

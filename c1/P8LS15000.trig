@@ -1,0 +1,51 @@
+@base          <bdg:P8LS15000> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15000 {
+    bda:LG58F54FC33046C2B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-17T15:06:00.238Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15000  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15000 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c1/P8LS15000.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15000 ;
+        adm:logEntry        bda:LG58F54FC33046C2B5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM054BC137C9F339ED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub legs pa/"@bo-x-ewts .
+    
+    bdr:NMB36CA920C2F0D8D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sras don grub legs pa/"@bo-x-ewts .
+    
+    bdr:NTDED70731E6CB41D9
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 16a3" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "master in the transmission lineage of medicine"@en .
+    
+    bdr:P8LS15000  a        :Person ;
+        skos:prefLabel      "don grub legs pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDED70731E6CB41D9 ;
+        :personName         bdr:NM054BC137C9F339ED , bdr:NMB36CA920C2F0D8D3 .
+}

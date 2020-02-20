@@ -1,0 +1,45 @@
+@base          <bdg:P500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P500 {
+    bda:P500  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P500 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "f9/P500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P500 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM76EE11980B4D97AD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byar po paN chen/"@bo-x-ewts .
+    
+    bdr:NTA95B7A0CBCA972A8
+        a                   :Note ;
+        :noteText           "Born during the 8th cycle (1447-1506).\nGiven epithet Byar-po PaN-chen by Karma-pa 7 Chos-grags-rgya-mtsho.\nFamed for his knowledge of medicine and the secular sciences."@en .
+    
+    bdr:NTFA4FBD503A1843F4
+        a                   :Note ;
+        :locationStatement  "p. 559" ;
+        :noteSource         bdr:MW19803 .
+    
+    bdr:P500  a             :Person ;
+        skos:prefLabel      "byar po paN chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA95B7A0CBCA972A8 , bdr:NTFA4FBD503A1843F4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76EE11980B4D97AD ;
+        :personTeacherOf    bdr:P501 .
+}

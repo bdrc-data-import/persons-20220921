@@ -1,0 +1,80 @@
+@base          <bdg:P8LS12053> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12053 {
+    bda:LG8D16B472F5B7D36B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-12T16:19:00.707Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12053  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12053 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a8/P8LS12053.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12053 ;
+        adm:logEntry        bda:LG8D16B472F5B7D36B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV120636032D8F1C23
+        a                   :PersonDeath ;
+        :onYear             "1950"^^xsd:gYear .
+    
+    bdr:EV5EA971D6D47B1215
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVAA5F291C02D01641
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G2141 ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:EVAA62BEA739369F0F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1942"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE4B20DD74B29A7BB
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1948"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM0E020EBEA3633608
+        a                   :PersonTitle ;
+        rdfs:label          "har gdong bstan pa chos grags/"@bo-x-ewts .
+    
+    bdr:NM1792BB40B6E7818C
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 67"@bo-x-ewts .
+    
+    bdr:NMBE6AFF805C508B08
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa chos grags/"@bo-x-ewts .
+    
+    bdr:NT6552BEE74FB7E89D
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 171" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12053  a        :Person ;
+        skos:prefLabel      "bstan pa chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6552BEE74FB7E89D ;
+        :personEvent        bdr:EV120636032D8F1C23 , bdr:EV5EA971D6D47B1215 , bdr:EVAA5F291C02D01641 , bdr:EVAA62BEA739369F0F , bdr:EVE4B20DD74B29A7BB ;
+        :personName         bdr:NM0E020EBEA3633608 , bdr:NM1792BB40B6E7818C , bdr:NMBE6AFF805C508B08 .
+}

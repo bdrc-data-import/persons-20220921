@@ -1,0 +1,73 @@
+@base          <bdg:P1758> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1758 {
+    bda:LG65B499E887CB1C46
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:12.663Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG91BC6B5E6015651E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:48:19.235Z"^^xsd:dateTime ;
+        adm:logMessage      "added P1KT6 as his wife"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1758  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1758 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "48/P1758.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1758 ;
+        adm:logEntry        bda:LG65B499E887CB1C46 , bda:LG91BC6B5E6015651E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV84D815BE0E30C179
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EVE3DF81FB6DE883D1
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM5A9EA2CC0D917ACD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs nor bu/"@bo-x-ewts .
+    
+    bdr:NM7475CD3531C305D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 12 'jam dbyangs nor bu/"@bo-x-ewts .
+    
+    bdr:NT460481B35F719421
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P1758  a            :Person ;
+        skos:prefLabel      "'jam dbyangs nor bu/"@bo-x-ewts ;
+        :hasFather          bdr:P3955 ;
+        :hasParentSibling   bdr:P1KT12 ;
+        :hasSon             bdr:P3956 ;
+        :hasWife            bdr:P1KT6 ;
+        :hasYoungerBrother  bdr:P1759 ;
+        :isRoot             true ;
+        :note               bdr:NT460481B35F719421 ;
+        :personEvent        bdr:EV84D815BE0E30C179 , bdr:EVE3DF81FB6DE883D1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5A9EA2CC0D917ACD , bdr:NM7475CD3531C305D6 ;
+        :personStudentOf    bdr:P1753 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jamyang-Norbu/3072"^^xsd:anyURI .
+}

@@ -1,0 +1,67 @@
+@base          <bdg:P9282> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9282 {
+    bda:LGDC2991B1FB48AA7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T12:29:24.755Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P9282  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9282 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "3c/P9282.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9282 ;
+        adm:logEntry        bda:LGDC2991B1FB48AA7F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03FAD5D10F69D527
+        a                   :PersonDeath ;
+        :onYear             "1848"^^xsd:gYear .
+    
+    bdr:EV0A8F54474FBD5737
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4 .
+    
+    bdr:EVCB914DABEC920D73
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1836"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM41E588FF13A78361
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM47F61930B1547297
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po shes rab dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NTB2676AEB10512051
+        a                   :Note ;
+        :locationStatement  "p. 298" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "1836. shes rab dbang rgyal sman ri'i gdan sar phebs\n1848. shes rab dbang rgyal dgongs pa bde bar gshegs"@en .
+    
+    bdr:P9282  a            :Person ;
+        skos:prefLabel      "shes rab dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2676AEB10512051 ;
+        :personEvent        bdr:EV03FAD5D10F69D527 , bdr:EV0A8F54474FBD5737 , bdr:EVCB914DABEC920D73 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM41E588FF13A78361 , bdr:NM47F61930B1547297 .
+}

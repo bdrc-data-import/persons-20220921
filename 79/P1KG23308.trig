@@ -1,0 +1,60 @@
+@base          <bdg:P1KG23308> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG23308 {
+    bda:LG642065A1164FFD88
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-11T14:19:37.201Z"^^xsd:dateTime ;
+        adm:logMessage      "new record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC63B62973EDE0AE4
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-11T16:18:19.55Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG23308  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG23308 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "79/P1KG23308.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG23308 ;
+        adm:logEntry        bda:LG642065A1164FFD88 , bda:LGC63B62973EDE0AE4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBC5C834931DC4F63
+        a                   :PersonBirth ;
+        :onYear             "1238"^^xsd:gYear .
+    
+    bdr:NM2F15B71358C38A68
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sga ston tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMABED71C5F020A498
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTA717F7DD7E743691
+        a                   :Note ;
+        :noteSource         bdr:MW1KG23265 .
+    
+    bdr:P1KG23308  a        :Person ;
+        skos:prefLabel      "tshul khrims rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA717F7DD7E743691 ;
+        :personEvent        bdr:EVBC5C834931DC4F63 ;
+        :personName         bdr:NM2F15B71358C38A68 , bdr:NMABED71C5F020A498 .
+}

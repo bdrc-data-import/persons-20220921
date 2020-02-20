@@ -1,0 +1,58 @@
+@base          <bdg:P1966> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1966 {
+    bda:LG35672DDE7982546F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-15T14:03:07.991Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1966  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1966 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c3/P1966.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1966 ;
+        adm:logEntry        bda:LG35672DDE7982546F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB301AFB75F74C276
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM4EF2B32E7A54EA12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM64AE60736494D949
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN chen rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT9D4F33AAB06A9813
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Bri-gung Bka'-brgyud"@en .
+    
+    bdr:P1966  a            :Person ;
+        skos:prefLabel      "rdo rje rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D4F33AAB06A9813 ;
+        :personEvent        bdr:EVB301AFB75F74C276 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4EF2B32E7A54EA12 , bdr:NM64AE60736494D949 ;
+        :personStudentOf    bdr:P466 ;
+        :personTeacherOf    bdr:P2MS4764 .
+}

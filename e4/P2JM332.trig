@@ -1,0 +1,88 @@
+@base          <bdg:P2JM332> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM332 {
+    bda:LG22357FEB17C55842
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-17T13:32:55.512Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGB1C9C10D6C866FEA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T15:01:57.789Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB65EA302C737263E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T15:00:37.098Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB74AC6EC62BF854A
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-08T17:00:14.193Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM332  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM332 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e4/P2JM332.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM332 ;
+        adm:logEntry        bda:LG22357FEB17C55842 , bda:LGB1C9C10D6C866FEA , bda:LGB65EA302C737263E , bda:LGB74AC6EC62BF854A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3BFB032FC1CAE9BF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EV48079747323CB42A
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EV7A4881CD65D014B6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2D06222595C05E4F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a gro'i mkhan po ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM826AB7163680C9A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM93F5B1192AA44D94
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 22"@bo-x-ewts .
+    
+    bdr:NT33C68912E86782F6
+        a                   :Note ;
+        :locationStatement  "p. 457-458" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n\n- Said to be an emanation of rong zom chos kyi bzang po\n\n- Assumed the teaching throne of rdzogs chen chos grwa at the age of 22 at the request of the Fifth rdzogs chen pa and mkhan po gzhan dga'"@en .
+    
+    bdr:P2JM332  a          :Person ;
+        skos:prefLabel      "ye shes rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT33C68912E86782F6 ;
+        :personEvent        bdr:EV3BFB032FC1CAE9BF , bdr:EV48079747323CB42A , bdr:EV7A4881CD65D014B6 ;
+        :personName         bdr:NM2D06222595C05E4F , bdr:NM826AB7163680C9A4 , bdr:NM93F5B1192AA44D94 ;
+        :personStudentOf    bdr:P252 , bdr:P4112 , bdr:P6744 , bdr:P6961 , bdr:P699 , bdr:P701 , bdr:P8702 ;
+        :personTeacherOf    bdr:P2JM359 , bdr:P2JM365 .
+}

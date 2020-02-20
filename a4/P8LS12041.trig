@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12041> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12041 {
+    bda:LG88FFB81E4D21C202
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T14:41:04.692Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12041  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12041 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a4/P8LS12041.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12041 ;
+        adm:logEntry        bda:LG88FFB81E4D21C202 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4AB02E7BAC75A065
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV800A91C7B64BF4AA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr: ;
+        :onYear             "1850"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE084EEC6EE181740
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr: .
+    
+    bdr:NM25E1C0A5AD86A925
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 54"@bo-x-ewts .
+    
+    bdr:NM307096750B8F8622
+        a                   :PersonTitle ;
+        rdfs:label          "dpon slob bstan pa bzod pa/"@bo-x-ewts .
+    
+    bdr:NMA2582C79E0D67A08
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa bzod pa/"@bo-x-ewts .
+    
+    bdr:NTCB5B6A556420932E
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 122" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "in 1847 he was 'dul ba mkhan po and editor of gold written bka' 'gyur manuscript"@en .
+    
+    bdr:P8LS12041  a        :Person ;
+        skos:prefLabel      "bstan pa bzod pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCB5B6A556420932E ;
+        :personEvent        bdr:EV4AB02E7BAC75A065 , bdr:EV800A91C7B64BF4AA , bdr:EVE084EEC6EE181740 ;
+        :personName         bdr:NM25E1C0A5AD86A925 , bdr:NM307096750B8F8622 , bdr:NMA2582C79E0D67A08 ;
+        :personStudentOf    bdr:P8LS12030 .
+}

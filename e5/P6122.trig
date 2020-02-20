@@ -1,0 +1,77 @@
+@base          <bdg:P6122> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6122 {
+    bda:P6122  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6122 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e5/P6122.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6122 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04CF6E58BAA5063B
+        a                   :PersonLeavesOffice ;
+        :onYear             "1903"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV2BDBD7B5CE9BFC5A
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVA627ABDE600A42DF
+        a                   :PersonAssumesOffice ;
+        :onYear             "1900"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVD43D50166E6D2C19
+        a                   :PersonDeath ;
+        :onYear             "1926"^^xsd:gYear .
+    
+    bdr:NM9B4A4C71D962E008
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhol khang don grub phun tshogs/"@bo-x-ewts .
+    
+    bdr:NMD0491728DB24601F
+        a                   :PersonPersonalName ;
+        rdfs:label          "don grub phun tshogs, zhol khang /"@bo-x-ewts .
+    
+    bdr:NT6D09F5F28ECB9F74
+        a                   :Note ;
+        :locationStatement  "colophon" ;
+        :noteSource         bdr:MW3720 ;
+        :noteText           "it was at the behest of zhol khang bka' blon don grub phun tshogs that pha bong kha pa wrote his dga' ldan lha brgya ma'i 'pho khrid."@en .
+    
+    bdr:NT7E81D1DAA94080BD
+        a                   :Note ;
+        :locationStatement  "p. 432" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "d. 1926"@en .
+    
+    bdr:NTA5CFAD7C13B5E339
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, (1900)-1903"@en .
+    
+    bdr:P6122  a            :Person ;
+        skos:prefLabel      "zhol khang don grub phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D09F5F28ECB9F74 , bdr:NT7E81D1DAA94080BD , bdr:NTA5CFAD7C13B5E339 ;
+        :personEvent        bdr:EV04CF6E58BAA5063B , bdr:EV2BDBD7B5CE9BFC5A , bdr:EVA627ABDE600A42DF , bdr:EVD43D50166E6D2C19 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9B4A4C71D962E008 , bdr:NMD0491728DB24601F .
+}

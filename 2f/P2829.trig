@@ -1,0 +1,53 @@
+@base          <bdg:P2829> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2829 {
+    bda:LGADA23DD8FAF0654D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:45:51.834Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2829  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2829 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2f/P2829.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2829 ;
+        adm:logEntry        bda:LGADA23DD8FAF0654D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6F6581B18F332E99
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM8426DB3345E044AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma gar dbang /"@bo-x-ewts .
+    
+    bdr:NMA4908401A480ECA3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN chen pad+ma gar dbang /"@bo-x-ewts .
+    
+    bdr:P2829  a            :Person ;
+        skos:prefLabel      "pad+ma gar dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV6F6581B18F332E99 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8426DB3345E044AF , bdr:NMA4908401A480ECA3 ;
+        :personStudentOf    bdr:P2828 ;
+        :personTeacherOf    bdr:P2830 , bdr:P2831 .
+}

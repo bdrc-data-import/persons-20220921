@@ -1,0 +1,72 @@
+@base          <bdg:P5388> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5388 {
+    bda:P5388  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5388 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5e/P5388.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5388 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3031C30A0B9E63C3
+        a                   :PersonLeavesOffice ;
+        :onYear             "1922"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVAA34A1A73885089F
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVAD350154A9662458
+        a                   :PersonDeath ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:EVB78D09158C636847
+        a                   :PersonAssumesOffice ;
+        :onYear             "1912"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:NM47F8061F7CDD5A98
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa bstan dar/"@bo-x-ewts .
+    
+    bdr:NM9E3EC1C8219D475A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' blon bla ma byams pa bstan dar/"@bo-x-ewts .
+    
+    bdr:NT9AAED8BC78794FC7
+        a                   :Note ;
+        :locationStatement  "p. 430" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1921. bka' blon bla ma byams pa bstan dar bkrongs"@en .
+    
+    bdr:NTE8BCF87205E2AF36
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "served as bka' blon bla ma, 1912-1922"@en .
+    
+    bdr:P5388  a            :Person ;
+        skos:prefLabel      "byams pa bstan dar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9AAED8BC78794FC7 , bdr:NTE8BCF87205E2AF36 ;
+        :personEvent        bdr:EV3031C30A0B9E63C3 , bdr:EVAA34A1A73885089F , bdr:EVAD350154A9662458 , bdr:EVB78D09158C636847 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM47F8061F7CDD5A98 , bdr:NM9E3EC1C8219D475A ;
+        :personTeacherOf    bdr:P5387 .
+}

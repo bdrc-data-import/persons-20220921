@@ -1,0 +1,99 @@
+@base          <bdg:P614> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P614 {
+    bda:LG3C4BB5D6B125C2B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T15:09:25.601Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG69668D046EA59F1A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T12:38:15.363Z"^^xsd:dateTime ;
+        adm:logMessage      "added office, event and seat"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P614  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P614 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "95/P614.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P614 ;
+        adm:logEntry        bda:LG3C4BB5D6B125C2B0 , bda:LG69668D046EA59F1A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18554134D49E415F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1922"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV1BFBC27ACE0C4203
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3JT12435 .
+    
+    bdr:EV27FD2D66DCCEB1B2
+        a                   :PersonDeath ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:EV29C9218292DFBA98
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1927"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVCA90CFED1F8D022E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EVDBAE530E0BF6CC16
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G788 ;
+        :onYear             "1865"^^xsd:gYear .
+    
+    bdr:NM720420C4A70DA7BB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCBDCD3A9DE774DFD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 57 ngag dbang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD8344485671CC0E4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 57"@bo-x-ewts .
+    
+    bdr:NT436DD761B87758C3
+        a                   :Note ;
+        :locationStatement  "p. 165" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NT48250EF281E88C8E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT98AF8690811AD36F
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po fo Bhutan: 1922-1927.\nServed previously as Mtshan-nyid Slob-dpon.\nServed as the dbu-bla of Spa-ro Dpon-slob Tshe-rin-dpal-'byor and stayed at his palace of Spa-gro Kun-dga'-chos-gling."@en .
+    
+    bdr:P614  a             :Person ;
+        skos:prefLabel      "ngag dbang rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT436DD761B87758C3 , bdr:NT48250EF281E88C8E , bdr:NT98AF8690811AD36F ;
+        :personEvent        bdr:EV18554134D49E415F , bdr:EV1BFBC27ACE0C4203 , bdr:EV27FD2D66DCCEB1B2 , bdr:EV29C9218292DFBA98 , bdr:EVCA90CFED1F8D022E , bdr:EVDBAE530E0BF6CC16 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM720420C4A70DA7BB , bdr:NMCBDCD3A9DE774DFD , bdr:NMD8344485671CC0E4 ;
+        :personStudentOf    bdr:P594 , bdr:P596 , bdr:P613 .
+}

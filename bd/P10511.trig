@@ -1,0 +1,56 @@
+@base          <bdg:P10511> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10511 {
+    bda:LGA08EC3E5328F7C17
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T15:07:45.46Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P10511  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10511 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "bd/P10511.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10511 ;
+        adm:logEntry        bda:LGA08EC3E5328F7C17 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV809CBA4631832520
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM7AE86F97C6A0A6FC
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NT0D43FB366B1A884E
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 303v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "rnying ma teacher who transmitted the revelations of gu ru jo tshe\n\ngter bdag gling pa\ntshe dbang mi 'gyur rdo rje\nye shes lhun grub\npad+ma tshe dbang\nsgrol ston 'jam dbyangs chos rgyan"@en .
+    
+    bdr:P10511  a           :Person ;
+        skos:prefLabel      "pad+ma tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D43FB366B1A884E ;
+        :personEvent        bdr:EV809CBA4631832520 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7AE86F97C6A0A6FC ;
+        :personStudentOf    bdr:P10514 ;
+        :personTeacherOf    bdr:P10512 .
+}

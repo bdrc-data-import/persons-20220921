@@ -1,0 +1,53 @@
+@base          <bdg:P958> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P958 {
+    bda:P958  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P958 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "6b/P958.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P958 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4DE46E4A1D205A03
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVB0B869A3536207CE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G197 .
+    
+    bdr:NMBCD1D57DF68DB2A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang nges don dbang po/"@bo-x-ewts .
+    
+    bdr:NMD02F8E3862C6F735
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgam po pa kun bzang nges don dbang po/"@bo-x-ewts .
+    
+    bdr:NT8583D8A264632A5A
+        a                   :Note ;
+        :noteText           "mar pa bka' brgyud teacher of the dwags lha sgam po tradition; died before 1757?"@en .
+    
+    bdr:P958  a             :Person ;
+        skos:prefLabel      "kun bzang nges don dbang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8583D8A264632A5A ;
+        :personEvent        bdr:EV4DE46E4A1D205A03 , bdr:EVB0B869A3536207CE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBCD1D57DF68DB2A8 , bdr:NMD02F8E3862C6F735 .
+}

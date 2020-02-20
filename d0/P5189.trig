@@ -1,0 +1,86 @@
+@base          <bdg:P5189> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5189 {
+    bda:LG26FE27574D353BC6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-19T09:07:59.104Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5189  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5189 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d0/P5189.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5189 ;
+        adm:logEntry        bda:LG26FE27574D353BC6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01B5D71C87457A67
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G460 .
+    
+    bdr:EV2E21CE933243E446
+        a                   :PersonBirth ;
+        :onYear             "1657"^^xsd:gYear .
+    
+    bdr:EV73DB305B6588185B
+        a                   :PersonDeath ;
+        :onYear             "1661"^^xsd:gYear .
+    
+    bdr:NM502A0A038B195632
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NM726EC76081F64B23
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drakyab Chungtsang 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMBE0E028834E4D0BC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "brag g.yab chung tshang 02"@bo-x-ewts .
+    
+    bdr:NME6C2EAE586614159
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag g.yab chung tshang 02 grags pa chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NT2FDD3D63D5E457FE
+        a                   :Note ;
+        :locationStatement  "p. 296" ;
+        :noteSource         bdr:MW2GS1123 ;
+        :noteText           "1) rje bla ma sangs rgyas bkra shis ('khrungs yul brag g.yab) ('tsho bzhugs dgung grangs 64); \n2) grags pa chos 'dzin ('khrungs yul brag g.yab) ('tsho bzhugs dgung grangs 26); "@en .
+    
+    bdr:NT68EA78521414C296
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW19851 ;
+        :noteText           "brag g.yab che tshang gives the dates for this teacher as: 1657-1661"@en .
+    
+    bdr:NTB2FD54796239D498
+        a                   :Note ;
+        :locationStatement  "p. 365" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "according to this source he lived for 26 years\nbrag g.yab sprul sku chung tshang gi skye phreng\n...\n2) de'i skye ba grags pa chos 'dzin/ brag g.yab tu 'khrungs/ dgung lo nyi shu rtsa drug la gshegs/"@en .
+    
+    bdr:P5189  a            :Person ;
+        skos:prefLabel      "grags pa chos 'dzin/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5187 ;
+        :isRoot             true ;
+        :note               bdr:NT2FDD3D63D5E457FE , bdr:NT68EA78521414C296 , bdr:NTB2FD54796239D498 ;
+        :personEvent        bdr:EV01B5D71C87457A67 , bdr:EV2E21CE933243E446 , bdr:EV73DB305B6588185B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM502A0A038B195632 , bdr:NM726EC76081F64B23 , bdr:NMBE0E028834E4D0BC , bdr:NME6C2EAE586614159 .
+}

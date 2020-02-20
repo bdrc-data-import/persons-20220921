@@ -1,0 +1,81 @@
+@base          <bdg:P6923> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6923 {
+    bda:LG9E0C01ECF54C4EB5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-25T16:39:03.658Z"^^xsd:dateTime ;
+        adm:logMessage      "changed G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE786A5FAD9E29CEA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-25T14:48:24.891Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6923  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6923 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "80/P6923.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6923 ;
+        adm:logEntry        bda:LG9E0C01ECF54C4EB5 , bda:LGE786A5FAD9E29CEA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08665E12E766E291
+        a                   :PersonAssumesOffice ;
+        :onYear             "1734"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV18FF76B3CF745FEA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3574 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV2DCA7C0EB22EFB52
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G2170 ;
+        :onYear             "1722"^^xsd:gYear ;
+        :personEventRole    bdr:R29 .
+    
+    bdr:EV5BB85B9C6978C30A
+        a                   :PersonLeavesOffice ;
+        :onYear             "1750"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM5998C265F18A46F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong rtse dbang phyug rab brtan/"@bo-x-ewts .
+    
+    bdr:NM9A61321EE83D84B1
+        a                   :PersonPersonalName ;
+        rdfs:label          "dbang phyug rab brtan/"@bo-x-ewts .
+    
+    bdr:NT081A78114DAEF5AC
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "1722, 1723. mentioned as rdzong dpon of gzhis ka rtse\n1733. simple called sde pa\n1734. called bka' blon\nreceived title of jasak 1st glass taiji\n1750 dismissed by 'gyur med rnam rgyal"@en .
+    
+    bdr:P6923  a            :Person ;
+        skos:prefLabel      "'brong rtse dbang phyug rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT081A78114DAEF5AC ;
+        :personEvent        bdr:EV08665E12E766E291 , bdr:EV18FF76B3CF745FEA , bdr:EV2DCA7C0EB22EFB52 , bdr:EV5BB85B9C6978C30A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5998C265F18A46F2 , bdr:NM9A61321EE83D84B1 .
+}

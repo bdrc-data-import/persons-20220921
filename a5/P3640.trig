@@ -1,0 +1,73 @@
+@base          <bdg:P3640> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3640 {
+    bda:LG2B7CBACC30934CE2
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-09T16:54:57.754Z"^^xsd:dateTime ;
+        adm:logMessage      "added G210"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P3640  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3640 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a5/P3640.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3640 ;
+        adm:logEntry        bda:LG2B7CBACC30934CE2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72B765AE5ADA8D04
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G210 .
+    
+    bdr:EVE08179802BE7F12B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1150"^^xsd:gYear .
+    
+    bdr:EVF11B6D3710A39B32
+        a                   :PersonDeath ;
+        :onYear             "1203"^^xsd:gYear .
+    
+    bdr:NM1312C322FD74951C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal chen 'od po/"@bo-x-ewts .
+    
+    bdr:NT215124E28B8EC9C7
+        a                   :Note ;
+        :locationStatement  "p. 85" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "scion of the 'khon lineage of sa skya; he was the father of the famed sa skya paNDi ta and the brother of slob dpon bsod nams rtse mo and rje btsun grags pa rgyal mtshan"@en .
+    
+    bdr:NT2C0F96C1A168F272
+        a                   :Note ;
+        :locationStatement  "p. 1004" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P3640  a            :Person ;
+        skos:prefLabel      "dpal chen 'od po/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P1614 , bdr:P1618 ;
+        :hasSon             bdr:P1056 ;
+        :hasWife            bdr:P10613 ;
+        :isRoot             true ;
+        :note               bdr:NT215124E28B8EC9C7 , bdr:NT2C0F96C1A168F272 ;
+        :personEvent        bdr:EV72B765AE5ADA8D04 , bdr:EVE08179802BE7F12B , bdr:EVF11B6D3710A39B32 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1312C322FD74951C ;
+        :personStudentOf    bdr:P0RK373 ;
+        :personTeacherOf    bdr:P0RK375 .
+}

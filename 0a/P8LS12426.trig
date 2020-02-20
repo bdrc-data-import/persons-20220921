@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12426> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12426 {
+    bda:LGF035FE1A629D78E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T12:33:50.93Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12426  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12426 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0a/P8LS12426.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12426 ;
+        adm:logEntry        bda:LGF035FE1A629D78E0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV346A7D311648AC28
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV6A3D79C2EE0CFC46
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM5BD99E6598FEE362
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 65"@bo-x-ewts .
+    
+    bdr:NMD27F42633EB6053F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang mkhan zur lhun grub thabs mkhas/"@bo-x-ewts .
+    
+    bdr:NME6BA4AEE72BAA225
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lhun grub thabs mkhas/"@bo-x-ewts .
+    
+    bdr:NT6E10B7C05A6E710D
+        a                   :Note ;
+        :locationStatement  "p. 295" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12426  a        :Person ;
+        skos:prefLabel      "lhun grub thabs mkhas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E10B7C05A6E710D ;
+        :personEvent        bdr:EV346A7D311648AC28 , bdr:EV6A3D79C2EE0CFC46 ;
+        :personName         bdr:NM5BD99E6598FEE362 , bdr:NMD27F42633EB6053F , bdr:NME6BA4AEE72BAA225 ;
+        :personTeacherOf    bdr:P8LS12432 .
+}

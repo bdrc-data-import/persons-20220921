@@ -1,0 +1,76 @@
+@base          <bdg:P8LS12568> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12568 {
+    bda:LG3CE6A819DAF3A758
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-29T09:17:39.513Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6FC7765B3B68A8DB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGB8B20C2A8ABBC60F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T10:22:24.695Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12568  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12568 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d3/P8LS12568.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12568 ;
+        adm:logEntry        bda:LG3CE6A819DAF3A758 , bda:LG6FC7765B3B68A8DB , bda:LGB8B20C2A8ABBC60F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV047B1DF5F3DF4F37
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12818 .
+    
+    bdr:EV9D47E89210BA43FC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4684 .
+    
+    bdr:NM58561565A0C9CF35
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "skye lung sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM8017E1F5E51CE024
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Kyelung Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB8CD9BC6EB8650BB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NTAE3EB11F1965EFC3
+        a                   :Note ;
+        :locationStatement  "p. 358" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "an incarnation lineage in the rgyal rtse area of gtsang, probably belonging to the rnying ma tradition\nrgya'i tang tser 'khod kyang gser snyan du mi 'gro gras\n1) dang po ni/ rig 'dzin dpal 'byor/ shangs bde 'byams par 'khrungs/ dgung lo re bdun par gshegs/"@en .
+    
+    bdr:P8LS12568  a        :Person ;
+        skos:prefLabel      "rig 'dzin dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE3EB11F1965EFC3 ;
+        :personEvent        bdr:EV047B1DF5F3DF4F37 , bdr:EV9D47E89210BA43FC ;
+        :personName         bdr:NM58561565A0C9CF35 , bdr:NM8017E1F5E51CE024 , bdr:NMB8CD9BC6EB8650BB .
+}

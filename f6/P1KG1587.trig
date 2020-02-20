@@ -1,0 +1,55 @@
+@base          <bdg:P1KG1587> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1587 {
+    bda:LG01A624BCFD1F7E32
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-28T14:06:46.72Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1587  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1587 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f6/P1KG1587.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1587 ;
+        adm:logEntry        bda:LG01A624BCFD1F7E32 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC0E75E95A9AB4375
+        a                   :PersonBirth ;
+        :onYear             "1920"^^xsd:gYear .
+    
+    bdr:EVD88EBA0413C8ADCB
+        a                   :PersonDeath ;
+        :onYear             "1956"^^xsd:gYear .
+    
+    bdr:NM26094A66BA1ACC34
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bde chen dga' ba'i ye shes phrin las kun khyab/"@bo-x-ewts .
+    
+    bdr:NM46CCD9CCBBC81EA0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bde chen/"@bo-x-ewts .
+    
+    bdr:P1KG1587  a         :Person ;
+        skos:prefLabel      "karma bde chen dga' ba'i ye shes phrin las kun khyab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC0E75E95A9AB4375 , bdr:EVD88EBA0413C8ADCB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM26094A66BA1ACC34 , bdr:NM46CCD9CCBBC81EA0 ;
+        :personTeacherOf    bdr:P1KG1586 .
+}

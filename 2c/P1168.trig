@@ -1,0 +1,99 @@
+@base          <bdg:P1168> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1168 {
+    bda:LGAC16B21942B2B45E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T09:09:50.24Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1168  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1168 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "2c/P1168.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1168 ;
+        adm:logEntry        bda:LGAC16B21942B2B45E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A7FE41DFB1EFBD8
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1859"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV38B965276A7231BB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G892 ;
+        :onYear             "1781"^^xsd:gYear .
+    
+    bdr:EV5F5200571903435A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV993982C09C4FDFDA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1850"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB87F5BDE93CDC165
+        a                   :PersonDeath ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:NM1CE191BB77871C00
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 66"@bo-x-ewts .
+    
+    bdr:NM305DECE7041EDD20
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tsha phug skal bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NMA5ABBE05554FB9D9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NMBFD41FAC3E05C333
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 66 skal bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NT5A26F9985A479B8F
+        a                   :Note ;
+        :locationStatement  "p. 1374" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT747BA849B94ED89C
+        a                   :Note ;
+        :noteText           "1850. Ascended as the 66th Khri of Bya-khyung. Served for 10 years (lo-ngo bcu). Died while still on the throne."@en .
+    
+    bdr:NTB8CFACF73853C4FB
+        a                   :Note ;
+        :locationStatement  "p. 193" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NTEBC5630C5A16974F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1168  a            :Person ;
+        skos:prefLabel      "skal bzang nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A26F9985A479B8F , bdr:NT747BA849B94ED89C , bdr:NTB8CFACF73853C4FB , bdr:NTEBC5630C5A16974F ;
+        :personEvent        bdr:EV1A7FE41DFB1EFBD8 , bdr:EV38B965276A7231BB , bdr:EV5F5200571903435A , bdr:EV993982C09C4FDFDA , bdr:EVB87F5BDE93CDC165 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1CE191BB77871C00 , bdr:NM305DECE7041EDD20 , bdr:NMA5ABBE05554FB9D9 , bdr:NMBFD41FAC3E05C333 ;
+        :personStudentOf    bdr:P4521 .
+}

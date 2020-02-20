@@ -1,0 +1,55 @@
+@base          <bdg:P1KG14549> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14549 {
+    bda:LG32E3404B52E9C05C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-24T14:15:55.644Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6BFB705921B42105
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-07T10:16:10.853Z"^^xsd:dateTime ;
+        adm:logMessage      "added pen name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14549  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14549 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2f/P1KG14549.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14549 ;
+        adm:logEntry        bda:LG32E3404B52E9C05C , bda:LG6BFB705921B42105 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFA6A57F5C83A6501
+        a                   :PersonBirth ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:NM67836B8159EDDD11
+        a                   :PersonPenName ;
+        rdfs:label          "rdo rang skyed/"@bo-x-ewts .
+    
+    bdr:NMDFED80F81AC95BE5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rma chu'i bsam gtan/"@bo-x-ewts .
+    
+    bdr:P1KG14549  a        :Person ;
+        skos:prefLabel      "rma chu'i bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVFA6A57F5C83A6501 ;
+        :personName         bdr:NM67836B8159EDDD11 , bdr:NMDFED80F81AC95BE5 .
+}

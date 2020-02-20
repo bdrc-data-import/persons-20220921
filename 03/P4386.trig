@@ -1,0 +1,57 @@
+@base          <bdg:P4386> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4386 {
+    bda:LG1F47CC01FDDFF562
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T09:54:14.901Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4386  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4386 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "03/P4386.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4386 ;
+        adm:logEntry        bda:LG1F47CC01FDDFF562 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA2692CE9873946A5
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM0902218B6FDCADD6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog"@bo-x-ewts .
+    
+    bdr:NM2FCBD6AA72445732
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdo rams pa dkon mchog"@bo-x-ewts .
+    
+    bdr:NT99B592EC0DEE51FA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4386  a            :Person ;
+        skos:prefLabel      "dkon mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT99B592EC0DEE51FA ;
+        :personEvent        bdr:EVA2692CE9873946A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0902218B6FDCADD6 , bdr:NM2FCBD6AA72445732 ;
+        :personTeacherOf    bdr:P4385 .
+}

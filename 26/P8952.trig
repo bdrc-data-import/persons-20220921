@@ -1,0 +1,59 @@
+@base          <bdg:P8952> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8952 {
+    bda:P8952  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8952 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "26/P8952.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8952 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV36F20F866065F59A
+        a                   :PersonDeath ;
+        :onYear             "1950"^^xsd:gYear .
+    
+    bdr:EV68ED0EC80D175C1D
+        a                   :PersonBirth ;
+        :onYear             "1875"^^xsd:gYear .
+    
+    bdr:EVB121BFC174A7B9AD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4329 .
+    
+    bdr:NM0C35FB69B5F78445
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya yur dgon gdan sa pa ngag dbang bstan pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMBA83956E8685020A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NT0505FA4B3288301B
+        a                   :Note ;
+        :locationStatement  "pp. 447-449" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: bya yur ('dzi nyin) \nfather: wa shul 'brug skyabs  \nmother: kya za po kya"@en .
+    
+    bdr:P8952  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan pa rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0505FA4B3288301B ;
+        :personEvent        bdr:EV36F20F866065F59A , bdr:EV68ED0EC80D175C1D , bdr:EVB121BFC174A7B9AD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C35FB69B5F78445 , bdr:NMBA83956E8685020A ;
+        :personStudentOf    bdr:P4799 , bdr:P8951 .
+}

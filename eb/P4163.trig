@@ -1,0 +1,112 @@
+@base          <bdg:P4163> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4163 {
+    bda:LG1ED3629A4CA286EF
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T11:45:20.628Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG391FE383CDF2929B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T09:52:35.434Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9C8AC95C0CC2DB3A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T10:15:16.655Z"^^xsd:dateTime ;
+        adm:logMessage      "changed office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4163  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4163 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "eb/P4163.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4163 ;
+        adm:logEntry        bda:LG1ED3629A4CA286EF , bda:LG391FE383CDF2929B , bda:LG9C8AC95C0CC2DB3A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV364492FA8F543627
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G226 .
+    
+    bdr:EVB089FA5642E77A74
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVE6F613CD13B532B5
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1619"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF1B5E2E6AF75AECC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1179 ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVF3D761311463BD2A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1583"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM16D6428F30CF9AC3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser khang blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM88408DC566E2A06C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBCF9C5319356CAA3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 08"@bo-x-ewts .
+    
+    bdr:NMD031BD72036F6050
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 08 blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD9455EA364B9724A
+        a                   :PersonTitle ;
+        rdfs:label          "lho brag blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3609D23312E490F9
+        a                   :Note ;
+        :locationStatement  "pp. 112-113" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT555119487F89E394
+        a                   :Note ;
+        :locationStatement  "p. 1810" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT934B1E9A962E3CD4
+        a                   :Note ;
+        :noteText           "dge lugs scholar connected with the bya khyung monastery in a mdo\nhe was on the see of bya khyung from 1583-1619"@en .
+    
+    bdr:P4163  a            :Person ;
+        skos:prefLabel      "blo gros rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3609D23312E490F9 , bdr:NT555119487F89E394 , bdr:NT934B1E9A962E3CD4 ;
+        :personEvent        bdr:EV364492FA8F543627 , bdr:EVB089FA5642E77A74 , bdr:EVE6F613CD13B532B5 , bdr:EVF1B5E2E6AF75AECC , bdr:EVF3D761311463BD2A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16D6428F30CF9AC3 , bdr:NM88408DC566E2A06C , bdr:NMBCF9C5319356CAA3 , bdr:NMD031BD72036F6050 , bdr:NMD9455EA364B9724A .
+}

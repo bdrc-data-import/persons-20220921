@@ -1,0 +1,86 @@
+@base          <bdg:P6798> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6798 {
+    bda:LG10C537734A8CC898
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T15:57:04.385Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnate relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG74150F5EB73A5C31
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGAF6B9FA0FB295823
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T10:38:17.35Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6798  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6798 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "4a/P6798.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6798 ;
+        adm:logEntry        bda:LG10C537734A8CC898 , bda:LG74150F5EB73A5C31 , bda:LGAF6B9FA0FB295823 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6262762DC7C670C7
+        a                   :PersonBirth ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:EVF251C584F1B71316
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2521 .
+    
+    bdr:EVF3617DA947B759E3
+        a                   :PersonDeath ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:NM0489B0E0E48F4067
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsayu 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM3D4FE943AD990759
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tsa yus 04 blo bzang bstan pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6CB83C9D08160A7A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAC7F0C08D527C6B6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tsa yus 04"@bo-x-ewts .
+    
+    bdr:NT8DF2053FB9D81EEB
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 9" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "biography\nb. 1862 at tsa yus rgya sgar thang into the family of be hu khyim bgos the bo tshang\nstudied with dge bshes 'jigs med blo gros\nvery learned but regarded as very difficult and so few if any students\nd. at the age of 53"@en .
+    
+    bdr:P6798  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3560 ;
+        :isRoot             true ;
+        :note               bdr:NT8DF2053FB9D81EEB ;
+        :personEvent        bdr:EV6262762DC7C670C7 , bdr:EVF251C584F1B71316 , bdr:EVF3617DA947B759E3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0489B0E0E48F4067 , bdr:NM3D4FE943AD990759 , bdr:NM6CB83C9D08160A7A , bdr:NMAC7F0C08D527C6B6 .
+}

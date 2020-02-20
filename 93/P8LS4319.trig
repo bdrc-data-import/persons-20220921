@@ -1,0 +1,111 @@
+@base          <bdg:P8LS4319> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS4319 {
+    bda:LG17ECAD22E5735196
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-24T10:24:31.643Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG377A3C129FBCEF41
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-24T10:21:49.804Z"^^xsd:dateTime ;
+        adm:logMessage      "added leavesoffice date"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5DA6635872A958D8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-09T09:40:45.332Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8C1F2FB1A3943C0C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-20T09:50:48.883Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA26DA474FA1245E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-26T09:41:06.012Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS4319  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS4319 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "93/P8LS4319.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS4319 ;
+        adm:logEntry        bda:LG17ECAD22E5735196 , bda:LG377A3C129FBCEF41 , bda:LG5DA6635872A958D8 , bda:LG8C1F2FB1A3943C0C , bda:LGA26DA474FA1245E7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06FAEFEDD1B1C6ED
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr: ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EV0DB480C3CB4F810A
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1471"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVA452A51A4F9FE51F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:EVAFA132E98603941F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1463"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM78CA0A96884571E9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "chab mdo byams pa gling gdan rabs 03"@bo-x-ewts .
+    
+    bdr:NM7C1DD9CAB3BBF7C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' dpal/"@bo-x-ewts .
+    
+    bdr:NMF379C3E99F1E6897
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshur ston nam mkha' dpal/"@bo-x-ewts .
+    
+    bdr:NT2B43129F24017AA5
+        a                   :Note ;
+        :locationStatement  "p. 249" ;
+        :noteSource         bdr:MW1PD96945 .
+    
+    bdr:NT3AD01FF696ADEF58
+        a                   :Note ;
+        :locationStatement  "p. 78-79" ;
+        :noteSource         bdr:MW1KG3372 ;
+        :noteText           "according to this source he served 8 years as the throne holder of chab mdo monastery"@en .
+    
+    bdr:NT981793B6CB0AD4EA
+        a                   :Note ;
+        :locationStatement  "p. 291" ;
+        :noteSource         bdr:MW00KG01519 .
+    
+    bdr:P8LS4319  a         :Person ;
+        skos:prefLabel      "nam mkha' dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B43129F24017AA5 , bdr:NT3AD01FF696ADEF58 , bdr:NT981793B6CB0AD4EA ;
+        :personEvent        bdr:EV06FAEFEDD1B1C6ED , bdr:EV0DB480C3CB4F810A , bdr:EVA452A51A4F9FE51F , bdr:EVAFA132E98603941F ;
+        :personName         bdr:NM78CA0A96884571E9 , bdr:NM7C1DD9CAB3BBF7C7 , bdr:NMF379C3E99F1E6897 ;
+        :personTeacherOf    bdr:P5552 .
+}

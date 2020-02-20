@@ -1,0 +1,60 @@
+@base          <bdg:P8691> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8691 {
+    bda:LG3854469B9C5E8F28
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-23T16:14:24.241Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8691  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8691 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "df/P8691.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8691 ;
+        adm:logEntry        bda:LG3854469B9C5E8F28 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF9C3176E37A31397
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM94F398BCECF00C78
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal sbyin/"@bo-x-ewts .
+    
+    bdr:NM94FF0D7EFA486196
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yag ze bla ma dpal byin/"@bo-x-ewts .
+    
+    bdr:NTF0116A01BAFDD3A7
+        a                   :Note ;
+        :locationStatement  "p. 689" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "mentioned as the disciple of mkhan po padma badzra and the teacher of g.yag ze gter rgan"@en .
+    
+    bdr:P8691  a            :Person ;
+        skos:prefLabel      "dpal sbyin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF0116A01BAFDD3A7 ;
+        :personEvent        bdr:EVF9C3176E37A31397 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM94F398BCECF00C78 , bdr:NM94FF0D7EFA486196 ;
+        :personStudentOf    bdr:P1710 , bdr:P6744 ;
+        :personTeacherOf    bdr:P8690 .
+}

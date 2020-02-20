@@ -1,0 +1,68 @@
+@base          <bdg:P9314> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9314 {
+    bda:LG92D51F4253F2F435
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-24T10:37:00.13Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9314  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9314 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "67/P9314.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9314 ;
+        adm:logEntry        bda:LG92D51F4253F2F435 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV550211F5437F3F3C
+        a                   :PersonBirth ;
+        :onYear             "1893"^^xsd:gYear .
+    
+    bdr:NM65E7DA116CC677C7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas grub tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM77B6B4388204F848
+        a                   :PersonTitle ;
+        rdfs:label          "'gro mgon tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMBDAFC4C2BA38DF2C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT612A477A3E7704A7
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon po lama \nb. 1893"@en .
+    
+    bdr:NT796CE1BDEB025463
+        a                   :Note ;
+        :locationStatement  "pp. 26-29" ;
+        :noteSource         bdr:MW29327 ;
+        :noteText           "mentioned as a teacher of g.yung drung dga' ba"@en .
+    
+    bdr:P9314  a            :Person ;
+        skos:prefLabel      "tshul khrims rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT612A477A3E7704A7 , bdr:NT796CE1BDEB025463 ;
+        :personEvent        bdr:EV550211F5437F3F3C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM65E7DA116CC677C7 , bdr:NM77B6B4388204F848 , bdr:NMBDAFC4C2BA38DF2C ;
+        :personTeacherOf    bdr:P9687 .
+}

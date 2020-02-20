@@ -1,0 +1,50 @@
+@base          <bdg:P9374> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9374 {
+    bda:P9374  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9374 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2e/P9374.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9374 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAEA5405B1334C41D
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM4108D4A0BF43C790
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nag tshang dge rgan dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMB834113CAA6732F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT8885F4458408F9AF
+        a                   :Note ;
+        :noteText           "19th century dge lugs master from the nag tshang area of khams"@en .
+    
+    bdr:P9374  a            :Person ;
+        skos:prefLabel      "dge 'dun bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8885F4458408F9AF ;
+        :personEvent        bdr:EVAEA5405B1334C41D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4108D4A0BF43C790 , bdr:NMB834113CAA6732F2 ;
+        :personTeacherOf    bdr:P9372 .
+}

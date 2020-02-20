@@ -1,0 +1,50 @@
+@base          <bdg:P2LS200> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2LS200 {
+    bda:LG8302B5D8EAC2AFD2
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-16T15:15:03.965Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8E5A20EAAEAD5D92
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-25T14:18:51.818Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2LS200  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2LS200 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "27/P2LS200.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2LS200 ;
+        adm:logEntry        bda:LG8302B5D8EAC2AFD2 , bda:LG8E5A20EAAEAD5D92 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE7274C2B9395D98B
+        a                   :PersonOccupiesSeat ;
+        :onOrAbout          "thon" .
+    
+    bdr:NM1A0EEB21816E785F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thon pa mda' dpon rnam rgyal don grub/"@bo-x-ewts .
+    
+    bdr:P2LS200  a          :Person ;
+        skos:prefLabel      "thon pa mda' dpon rnam rgyal don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVE7274C2B9395D98B ;
+        :personName         bdr:NM1A0EEB21816E785F .
+}

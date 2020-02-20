@@ -1,0 +1,62 @@
+@base          <bdg:P2609> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2609 {
+    bda:LG9901C6C5FEF7FAB2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T11:27:02.999Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2609  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2609 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "85/P2609.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2609 ;
+        adm:logEntry        bda:LG9901C6C5FEF7FAB2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDC6AEF03C9C23242
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM0180095FB689033E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab zla ba/"@bo-x-ewts .
+    
+    bdr:NM4F0E24195B230ACF
+        a                   :PersonTitle ;
+        rdfs:label          "gra thang pa/"@bo-x-ewts .
+    
+    bdr:NM8B949FE667F66B34
+        a                   :PersonReversal ;
+        rdfs:label          "gra thang pa shes rab zla ba/"@bo-x-ewts .
+    
+    bdr:NT7B0F50BA082ED472
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:P2609  a            :Person ;
+        skos:prefLabel      "shes rab zla ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B0F50BA082ED472 ;
+        :personEvent        bdr:EVDC6AEF03C9C23242 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0180095FB689033E , bdr:NM4F0E24195B230ACF , bdr:NM8B949FE667F66B34 ;
+        :personStudentOf    bdr:P2610 ;
+        :personTeacherOf    bdr:P2608 .
+}

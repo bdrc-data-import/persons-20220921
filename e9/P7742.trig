@@ -1,0 +1,67 @@
+@base          <bdg:P7742> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7742 {
+    bda:LG77120D227AFD0296
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-11T15:03:22.533Z"^^xsd:dateTime ;
+        adm:logMessage      "Added treasury of lives link"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:LG8C77020ACF00BF5B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T14:00:02.495Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P7742  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7742 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e9/P7742.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7742 ;
+        adm:logEntry        bda:LG77120D227AFD0296 , bda:LG8C77020ACF00BF5B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1529907A35085A6A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3465 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM07903C2E904EC411
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter ston khyung brag rdo rje/"@bo-x-ewts .
+    
+    bdr:NM6C31071FA1AAE582
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khyung brag rdo rje/"@bo-x-ewts .
+    
+    bdr:NTA661D58072B50EDE
+        a                   :Note ;
+        :locationStatement  "p. 95" ;
+        :noteSource         bdr:MW20396 ;
+        :noteText           "rebirth of g'yu sgra snying po"@en .
+    
+    bdr:P7742  a            :Person ;
+        skos:prefLabel      "khyung brag rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA661D58072B50EDE ;
+        :personEvent        bdr:EV1529907A35085A6A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07903C2E904EC411 , bdr:NM6C31071FA1AAE582 ;
+        :personStudentOf    bdr:P1686 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Khyungdrak-Dorje/10422"^^xsd:anyURI .
+}

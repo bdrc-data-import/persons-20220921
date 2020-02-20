@@ -1,0 +1,49 @@
+@base          <bdg:P10200> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10200 {
+    bda:P10200  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10200 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "76/P10200.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10200 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF4E5D6F1B0D4B225
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM37504B34070F4BF1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gu ru 'phel/"@bo-x-ewts .
+    
+    bdr:NMD77491EAB33D7FD6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge drung yig gu ru 'phel/"@bo-x-ewts .
+    
+    bdr:NTFA1C7F33913F3898
+        a                   :Note ;
+        :noteText           "physician and secretary to the sde dge court; had some connection with the famed si tu paN chen chos kyi 'byung gnas"@en .
+    
+    bdr:P10200  a           :Person ;
+        skos:prefLabel      "gu ru 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFA1C7F33913F3898 ;
+        :personEvent        bdr:EVF4E5D6F1B0D4B225 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37504B34070F4BF1 , bdr:NMD77491EAB33D7FD6 .
+}

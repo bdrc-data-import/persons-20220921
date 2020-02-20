@@ -1,0 +1,86 @@
+@base          <bdg:P10141> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10141 {
+    bda:LGCE065BFEBEC2099D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T12:23:38.636Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFC641F6ECE4F8B78
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:47:13.855Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P10141  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10141 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5f/P10141.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10141 ;
+        adm:logEntry        bda:LGCE065BFEBEC2099D , bda:LGFC641F6ECE4F8B78 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV064D2C2D02B23CEB
+        a                   :PersonBirth ;
+        :onYear             "1868"^^xsd:gYear .
+    
+    bdr:EV0A2F3B75934D28E7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV33530C0B8D6E112F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EV99906A841FDD745E
+        a                   :PersonDeath ;
+        :onYear             "1918"^^xsd:gYear .
+    
+    bdr:NM77151EF7EE1976D4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyang tshang sprul sku blo bzang thub bstan 'jigs med 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM91E1005B48ED47A2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang thub bstan 'jigs med 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMA308C3579735DCBA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 31"@bo-x-ewts .
+    
+    bdr:NT4A026DE514027D37
+        a                   :Note ;
+        :locationStatement  "p. 428" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "b. in shis tshang bla ri mgul mdo ba as the son of lha mo 'tsho. becomes abbot of shis tshang. next ascends as khri of bkra shis 'khyil kyai rdor grwa tshang. lives to age of 51. sku rabs bcu drug pa yin par bshad.\nsprul sku lived to the age of 13 (1919? 1931?)\nsprul sku skal bzang kun dga' bstan 'dzin rgya mtsho (alive at time of  writing)"@en .
+    
+    bdr:NT96C98311A720C3AA
+        a                   :Note ;
+        :locationStatement  "p. 428" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "He also served khri of kyaidor grwa tshang of bkra shis 'khyil"@en .
+    
+    bdr:P10141  a           :Person ;
+        skos:prefLabel      "blo bzang thub bstan 'jigs med 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A026DE514027D37 , bdr:NT96C98311A720C3AA ;
+        :personEvent        bdr:EV064D2C2D02B23CEB , bdr:EV0A2F3B75934D28E7 , bdr:EV33530C0B8D6E112F , bdr:EV99906A841FDD745E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM77151EF7EE1976D4 , bdr:NM91E1005B48ED47A2 , bdr:NMA308C3579735DCBA .
+}

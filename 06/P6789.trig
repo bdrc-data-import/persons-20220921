@@ -1,0 +1,76 @@
+@base          <bdg:P6789> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6789 {
+    bda:LG24688DC187FB9ADA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG3D02A5DBE19E2350
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-05T11:14:34.593Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG64C0757E8B3BA5C8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T09:02:02.442Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6789  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6789 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "06/P6789.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6789 ;
+        adm:logEntry        bda:LG24688DC187FB9ADA , bda:LG3D02A5DBE19E2350 , bda:LG64C0757E8B3BA5C8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C159CDB01CAA262
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2740 ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:EVCC9F409C5F992807
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G612 .
+    
+    bdr:NM068033CABE1F27C4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma dkar po 05 'jigs med bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM196516BC516B65B1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bla ma dkar po 05"@bo-x-ewts .
+    
+    bdr:NM196CE43BA4CAB913
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lama Karpo 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM4587E7D96D2ACDD3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P6789  a            :Person ;
+        skos:prefLabel      "'jigs med bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6788 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV4C159CDB01CAA262 , bdr:EVCC9F409C5F992807 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM068033CABE1F27C4 , bdr:NM196516BC516B65B1 , bdr:NM196CE43BA4CAB913 , bdr:NM4587E7D96D2ACDD3 .
+}

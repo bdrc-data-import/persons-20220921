@@ -1,0 +1,65 @@
+@base          <bdg:P1918> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1918 {
+    bda:LGE6F2CFE4C0DAD26C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T11:16:53.696Z"^^xsd:dateTime ;
+        adm:logMessage      "adde name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1918  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1918 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b3/P1918.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1918 ;
+        adm:logEntry        bda:LGE6F2CFE4C0DAD26C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV684955140DB5D6CD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G385 .
+    
+    bdr:EVEB2B4486AE2B2E14
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM24AFFBEC8806A7EE
+        a                   :PersonPersonalName ;
+        rdfs:label          "gur phu ba nor bu bde chen/"@bo-x-ewts .
+    
+    bdr:NM693B7F1213C17A3B
+        a                   :PersonPersonalName ;
+        rdfs:label          "mdo chen pa nor bu bde chen/"@bo-x-ewts .
+    
+    bdr:NM9F8FE12A3ABA060B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu bde chen/"@bo-x-ewts .
+    
+    bdr:NTE2C734EC95F426BC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Mnga'-ris Gter-ston revelations"@en .
+    
+    bdr:P1918  a            :Person ;
+        skos:prefLabel      "nor bu bde chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2C734EC95F426BC ;
+        :personEvent        bdr:EV684955140DB5D6CD , bdr:EVEB2B4486AE2B2E14 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM24AFFBEC8806A7EE , bdr:NM693B7F1213C17A3B , bdr:NM9F8FE12A3ABA060B ;
+        :personStudentOf    bdr:P1690 , bdr:P1912 , bdr:P2730 , bdr:P2731 , bdr:P2740 , bdr:P4507 , bdr:P656 .
+}

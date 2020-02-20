@@ -1,0 +1,71 @@
+@base          <bdg:P906> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P906 {
+    bda:LGA891375B5EE56036
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-07T09:58:41.811Z"^^xsd:dateTime ;
+        adm:logMessage      "created incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P906  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P906 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "42/P906.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P906 ;
+        adm:logEntry        bda:LGA891375B5EE56036 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FA5009FD2EBC947
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:EV8EA040B8A33E1244
+        a                   :PersonBirth ;
+        :onYear             "1672"^^xsd:gYear .
+    
+    bdr:EVC75A1236C134B3BA
+        a                   :PersonDeath ;
+        :onYear             "1719"^^xsd:gYear .
+    
+    bdr:EVCEC00E0B7733CC1F
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG104 .
+    
+    bdr:NM370AA9F077D570F9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzi sgar 02 dge legs mchog grub bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM5C1E754D0B7C5DC9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge legs mchog grub bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT0F4E189C38898DC2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P906  a             :Person ;
+        skos:prefLabel      "dge legs mchog grub bstan 'dzin/"@bo-x-ewts ;
+        :hasFather          bdr:P907 ;
+        :hasMother          bdr:P908 ;
+        :incarnationGeneral  bdr:P891 ;
+        :isRoot             true ;
+        :note               bdr:NT0F4E189C38898DC2 ;
+        :personEvent        bdr:EV0FA5009FD2EBC947 , bdr:EV8EA040B8A33E1244 , bdr:EVC75A1236C134B3BA , bdr:EVCEC00E0B7733CC1F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM370AA9F077D570F9 , bdr:NM5C1E754D0B7C5DC9 ;
+        :personStudentOf    bdr:P902 .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P8644> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8644 {
+    bda:LGC204FE9FF6363D22
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T15:09:30.811Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8644  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8644 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7b/P8644.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8644 ;
+        adm:logEntry        bda:LGC204FE9FF6363D22 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0CD97A40DC0D1B96
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Wartang 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMDA8C567F4FAD3BA1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "war thang 07 bstan 'dzin 'gro 'dul/"@bo-x-ewts .
+    
+    bdr:NME9D3A9B76F1842BC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "war thang 07"@bo-x-ewts .
+    
+    bdr:NMEA89D1D33FC53207
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin 'gro 'dul/"@bo-x-ewts .
+    
+    bdr:NTC8E53B6998ABCDB2
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8644  a            :Person ;
+        skos:prefLabel      "bstan 'dzin 'gro 'dul/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8643 ;
+        :isRoot             true ;
+        :note               bdr:NTC8E53B6998ABCDB2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CD97A40DC0D1B96 , bdr:NMDA8C567F4FAD3BA1 , bdr:NME9D3A9B76F1842BC , bdr:NMEA89D1D33FC53207 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P3101> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3101 {
+    bda:LG361DDEC30744A784
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-03T07:53:12.361Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P3101  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3101 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f1/P3101.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3101 ;
+        adm:logEntry        bda:LG361DDEC30744A784 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38BA31A4CAEE3B54
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NMD0826F272BE56C87
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' bzhi pa rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME256CBE7C68F41A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8E8BE1A03A999D34
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 15v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "figure in the zhwa lu tradition of transmission; mentioned here as a master in the transmission of the yogasataka, madical text by nagarjuna"@en .
+    
+    bdr:P3101  a            :Person ;
+        skos:prefLabel      "rin chen rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8E8BE1A03A999D34 ;
+        :personEvent        bdr:EV38BA31A4CAEE3B54 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD0826F272BE56C87 , bdr:NME256CBE7C68F41A8 ;
+        :personStudentOf    bdr:P3100 , bdr:P3424 ;
+        :personTeacherOf    bdr:P0RK1655 , bdr:P0RK1656 , bdr:P3102 .
+}

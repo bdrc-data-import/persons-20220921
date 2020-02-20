@@ -1,0 +1,61 @@
+@base          <bdg:P1KG1463> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1463 {
+    bda:LGE909C03B67481B6E
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T16:17:30.244Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1463  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1463 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8b/P1KG1463.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1463 ;
+        adm:logEntry        bda:LGE909C03B67481B6E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV862DBEFC106AB3A7
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM8932E1CFAF051E58
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang yon tan/"@bo-x-ewts .
+    
+    bdr:NM908452FA8D57BE7B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lobzang yonten"@en .
+    
+    bdr:NMCCEDE246A6A1AAAD
+        a                   :PersonPersonalName ;
+        rdfs:label          "spel gong blo bzang yon tan/"@bo-x-ewts .
+    
+    bdr:NT24574CF34A9CBE39
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1462 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1463  a         :Person ;
+        skos:prefLabel      "blo bzang yon tan/"@bo-x-ewts , "lobzang yonten"@en ;
+        :isRoot             true ;
+        :note               bdr:NT24574CF34A9CBE39 ;
+        :personEvent        bdr:EV862DBEFC106AB3A7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8932E1CFAF051E58 , bdr:NM908452FA8D57BE7B , bdr:NMCCEDE246A6A1AAAD .
+}

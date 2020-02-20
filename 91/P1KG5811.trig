@@ -1,0 +1,70 @@
+@base          <bdg:P1KG5811> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5811 {
+    bda:LG6BB7597E95DEE2AC
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-24T12:36:04.963Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6D5927F287B08D86
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-15T15:25:22.278Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG5811  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5811 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "91/P1KG5811.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5811 ;
+        adm:logEntry        bda:LG6BB7597E95DEE2AC , bda:LG6D5927F287B08D86 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13BBA5995827023F
+        a                   :PersonDeath ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:EV752301FDF432CC28
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:NM106399FA80F7F99A
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas rdo rje dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NMD92F492D5D8D32D3
+        a                   :PersonPersonalName ;
+        rdfs:label          "bya btang ba sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NMDE4979C2729C87DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NTBDD3CE9488BCA6B4
+        a                   :Note ;
+        :noteText           "Jonang master"@en .
+    
+    bdr:P1KG5811  a         :Person ;
+        skos:prefLabel      "sangs rgyas rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBDD3CE9488BCA6B4 ;
+        :personEvent        bdr:EV13BBA5995827023F , bdr:EV752301FDF432CC28 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM106399FA80F7F99A , bdr:NMD92F492D5D8D32D3 , bdr:NMDE4979C2729C87DE ;
+        :personTeacherOf    bdr:P1KG5810 .
+}

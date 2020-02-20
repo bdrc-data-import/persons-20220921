@@ -1,0 +1,52 @@
+@base          <bdg:P1KG981> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG981 {
+    bda:LG2344E56F6F95E13F
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-14T14:00:59.905Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG981  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG981 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f7/P1KG981.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG981 ;
+        adm:logEntry        bda:LG2344E56F6F95E13F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6AF5B46BBE72FAAA
+        a                   :PersonBirth ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:NMAD495F686CDB70C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mog chung phur kho/"@bo-x-ewts .
+    
+    bdr:NT1D515900724DC96C
+        a                   :Note ;
+        :noteSource         bdr:MW1KG980 ;
+        :noteText           "a short biograph on french flap of the text"@en .
+    
+    bdr:P1KG981  a          :Person ;
+        skos:prefLabel      "mog chung phur kho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1D515900724DC96C ;
+        :personEvent        bdr:EV6AF5B46BBE72FAAA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAD495F686CDB70C3 .
+}

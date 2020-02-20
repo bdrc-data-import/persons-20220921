@@ -1,0 +1,61 @@
+@base          <bdg:P2435> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2435 {
+    bda:LGD83FB638D9430D17
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-25T20:24:08.591Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G365 to G3998"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2435  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2435 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "19/P2435.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2435 ;
+        adm:logEntry        bda:LGD83FB638D9430D17 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C5A180A9D398E90
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3998 .
+    
+    bdr:EVA08885CF1FF9BEDB
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM088DF5E9A23E52DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM3F0E6C984EA235D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam 'phel gling bla ma dkon mchog chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT0D79D8E838435DC8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2435  a            :Person ;
+        skos:prefLabel      "dkon mchog chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D79D8E838435DC8 ;
+        :personEvent        bdr:EV4C5A180A9D398E90 , bdr:EVA08885CF1FF9BEDB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM088DF5E9A23E52DC , bdr:NM3F0E6C984EA235D6 ;
+        :personTeacherOf    bdr:P306 .
+}

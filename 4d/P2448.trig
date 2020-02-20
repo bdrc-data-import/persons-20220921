@@ -1,0 +1,81 @@
+@base          <bdg:P2448> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2448 {
+    bda:LG326B223118E53B1E
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:10:10.959Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG9DECB0848D2B15A1
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T11:34:12.11Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEF7F47E1CE554823
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-05T15:39:40.629Z"^^xsd:dateTime ;
+        adm:logMessage      "updated"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2448  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2448 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4d/P2448.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2448 ;
+        adm:logEntry        bda:LG326B223118E53B1E , bda:LG9DECB0848D2B15A1 , bda:LGEF7F47E1CE554823 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDBA00FE7C84DB762
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM93BD44A04CB2CB61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rin chen rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAAEDAD73C7C5A26D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal tshab rin chen rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEA2FD859CFFAF425
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen rgya mtsho, kun dga'"@bo-x-ewts .
+    
+    bdr:NT06F720A76460E3EA
+        a                   :Note ;
+        :locationStatement  "p.521-523" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "jo nang master; teacher of 'brog dge kun dga' dpal bzang"@en .
+    
+    bdr:NT3B8AF8B3A5F0814B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:P2448  a            :Person ;
+        skos:prefLabel      "kun dga' rin chen rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT06F720A76460E3EA , bdr:NT3B8AF8B3A5F0814B ;
+        :personEvent        bdr:EVDBA00FE7C84DB762 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93BD44A04CB2CB61 , bdr:NMAAEDAD73C7C5A26D , bdr:NMEA2FD859CFFAF425 ;
+        :personStudentOf    bdr:P1428 ;
+        :personTeacherOf    bdr:P10313 , bdr:P2790 , bdr:P8963 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Kunga-Rinchen-Gyatso/4150"^^xsd:anyURI .
+}

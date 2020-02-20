@@ -1,0 +1,61 @@
+@base          <bdg:P6709> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6709 {
+    bda:P6709  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6709 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d1/P6709.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6709 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66FCF4CC0E2B0129
+        a                   :PersonLeavesOffice ;
+        :onYear             "1939"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EV9282A7AAEA9C7F7B
+        a                   :PersonAssumesOffice ;
+        :onYear             "1934"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVE92DA83DF06AEA1A
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM60E114AA6B613619
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan shAkya, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NMEE0AC1773FDE68D9
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon bla ma thub bstan shAkya/"@bo-x-ewts .
+    
+    bdr:NT8A7D183354B79679
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "served as bka' blon bla ma, 1934-1939"@en .
+    
+    bdr:P6709  a            :Person ;
+        skos:prefLabel      "thub bstan shAkya, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8A7D183354B79679 ;
+        :personEvent        bdr:EV66FCF4CC0E2B0129 , bdr:EV9282A7AAEA9C7F7B , bdr:EVE92DA83DF06AEA1A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM60E114AA6B613619 , bdr:NMEE0AC1773FDE68D9 .
+}

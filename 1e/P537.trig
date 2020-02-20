@@ -1,0 +1,93 @@
+@base          <bdg:P537> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P537 {
+    bda:LG32F81279FE9F16A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG5AD4058945E256F0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:03:35.687Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG84FBE25D19010F36
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-02T09:21:53.136Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P537  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P537 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "1e/P537.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P537 ;
+        adm:logEntry        bda:LG32F81279FE9F16A5 , bda:LG5AD4058945E256F0 , bda:LG84FBE25D19010F36 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7245F2D89F4548A7
+        a                   :PersonDeath ;
+        :onYear             "1789"^^xsd:gYear .
+    
+    bdr:EVDBDD12CADE9D18E8
+        a                   :PersonBirth ;
+        :onYear             "1742"^^xsd:gYear .
+    
+    bdr:NM0BAA6D32C26CEA92
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug bla ma khri pa 03 'jigs med seng+ge"@bo-x-ewts .
+    
+    bdr:NM8864F72666601566
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Lama Tripa 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC5C600D6651FE9EE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug bla ma khri pa 03"@bo-x-ewts .
+    
+    bdr:NMDA44C9F6D3DE2D33
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med seng+ge"@bo-x-ewts .
+    
+    bdr:NME548E729EB7BBA7E
+        a                   :PersonTitle ;
+        rdfs:label          "khri sprul 'jigs med seng+ge"@bo-x-ewts .
+    
+    bdr:NT4143D18C79345D15
+        a                   :Note ;
+        :locationStatement  "p. 108" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "according to this source he is the third in the line of bla ma khri pa"@en .
+    
+    bdr:NT5DE76E90A1E1BEDE
+        a                   :Note ;
+        :locationStatement  "p. 262-264" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "according to this source he is the second in the line bla ma khri pa"@en .
+    
+    bdr:P537  a             :Person ;
+        skos:prefLabel      "'jigs med seng+ge"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P531 ;
+        :isRoot             true ;
+        :note               bdr:NT4143D18C79345D15 , bdr:NT5DE76E90A1E1BEDE ;
+        :personEvent        bdr:EV7245F2D89F4548A7 , bdr:EVDBDD12CADE9D18E8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0BAA6D32C26CEA92 , bdr:NM8864F72666601566 , bdr:NMC5C600D6651FE9EE , bdr:NMDA44C9F6D3DE2D33 , bdr:NME548E729EB7BBA7E ;
+        :personStudentOf    bdr:P530 .
+}

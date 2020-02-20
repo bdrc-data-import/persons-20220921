@@ -1,0 +1,97 @@
+@base          <bdg:P9708> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9708 {
+    bda:LG4106C8A33116B687
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-20T09:24:58.976Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relations"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG48C3C068E968CC81
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T09:52:58.577Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG781A5494BF3CA29D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGC85CCDC68F7A8AD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-01T11:37:45.743Z"^^xsd:dateTime ;
+        adm:logMessage      "added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P9708  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9708 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "d7/P9708.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9708 ;
+        adm:logEntry        bda:LG4106C8A33116B687 , bda:LG48C3C068E968CC81 , bda:LG781A5494BF3CA29D , bda:LGC85CCDC68F7A8AD6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45D9D596F51EE505
+        a                   :PersonBirth ;
+        :onYear             "1879"^^xsd:gYear .
+    
+    bdr:EVC546A001A6E1AF76
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G326 .
+    
+    bdr:EVEDD9AE731B3096EE
+        a                   :PersonDeath ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:NM4CD8C50396002042
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zur mang drung pa 10"@bo-x-ewts .
+    
+    bdr:NM666EF0594CD256BD
+        a                   :PersonFinalOrdinationName ;
+        rdfs:label          "sgrub brgyud bstan 'dzin chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM6D7D3742795F104C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zur mang drung pa 10 karma chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NMB9002F490BE83566
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zurmang Trungpa 10"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME669A86F2F949BCA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NT500973B9A79115FE
+        a                   :Note ;
+        :noteSource         bdr:MW29319 ;
+        :noteText           "brief biography\nborn into the lha thog dpon nag tshang;\nborn as a ma 'das sprul sku before the death of the 9th zur mang drung pa; recognized by 'jam mgon kong sprul blo gros mtha' yas\nteachers (not entered): karma mkhan rgan rin chen rnam rgyal (conferred final ordination)\nstudents (not entered: zhe chen rab 'byams pa'i yang srid\nzhe chen rgyal tshab kyi yang srid\n'bru 'jam dbyangs grags pa'i yang srid"@en .
+    
+    bdr:P9708  a            :Person ;
+        skos:prefLabel      "karma chos kyi nyin byed/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9707 ;
+        :isRoot             true ;
+        :note               bdr:NT500973B9A79115FE ;
+        :personEvent        bdr:EV45D9D596F51EE505 , bdr:EVC546A001A6E1AF76 , bdr:EVEDD9AE731B3096EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4CD8C50396002042 , bdr:NM666EF0594CD256BD , bdr:NM6D7D3742795F104C , bdr:NMB9002F490BE83566 , bdr:NME669A86F2F949BCA ;
+        :personStudentOf    bdr:P235 , bdr:P264 , bdr:P723 , bdr:P9709 ;
+        :personTeacherOf    bdr:P625 , bdr:P744 .
+}

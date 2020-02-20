@@ -1,0 +1,83 @@
+@base          <bdg:P6145> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6145 {
+    bda:LG0BFA178EA80CCFB2
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-21T10:27:06.273Z"^^xsd:dateTime ;
+        adm:logMessage      "added place of birth"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC4813B22CCC42BFF
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-21T10:06:03.782Z"^^xsd:dateTime ;
+        adm:logMessage      "added name, birth date, teacher and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC8EC007B0C881C3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T03:25:47.156Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6145  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6145 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "23/P6145.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6145 ;
+        adm:logEntry        bda:LG0BFA178EA80CCFB2 , bda:LGC4813B22CCC42BFF , bda:LGC8EC007B0C881C3D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV355A4FB9EAF88BE4
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G928 ;
+        :onYear             "1271"^^xsd:gYear .
+    
+    bdr:NM12C14EB2429D5A9F
+        a                   :PersonOtherName ;
+        rdfs:label          "'brom ku ma ra ti/"@bo-x-ewts .
+    
+    bdr:NM4753093CCD296534
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brom gzhon nu blo gros/"@bo-x-ewts .
+    
+    bdr:NM925F2C055E3246EA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu blo gros/"@bo-x-ewts .
+    
+    bdr:NT66BF1C96A11DA087
+        a                   :Note ;
+        :noteText           "early master of the bka' gdams tradition"@en .
+    
+    bdr:NT818A84785689D562
+        a                   :Note ;
+        :locationStatement  "p. 62-64" ;
+        :noteSource         bdr:MW1KG10687 .
+    
+    bdr:NTC4BA13EBB6A286F2
+        a                   :Note ;
+        :noteText           "Mentioned in the colophon to 'Jam-dbyangs-bde-ba'i-rdo-rje's Thig le bcu drug gi sgrub rgyal as the author of the work on which his is based."@en .
+    
+    bdr:P6145  a            :Person ;
+        skos:prefLabel      "gzhon nu blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT66BF1C96A11DA087 , bdr:NT818A84785689D562 , bdr:NTC4BA13EBB6A286F2 ;
+        :personEvent        bdr:EV355A4FB9EAF88BE4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12C14EB2429D5A9F , bdr:NM4753093CCD296534 , bdr:NM925F2C055E3246EA ;
+        :personStudentOf    bdr:P0RK766 ;
+        :personTeacherOf    bdr:P2CZ7866 , bdr:P5298 .
+}

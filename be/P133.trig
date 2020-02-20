@@ -1,0 +1,76 @@
+@base          <bdg:P133> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P133 {
+    bda:LG2C2218EA9A960F38
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-02T06:38:06.859Z"^^xsd:dateTime ;
+        adm:logMessage      "annotation revised"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG439A23FEFF7263D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-25T11:06:52.016Z"^^xsd:dateTime ;
+        adm:logMessage      "added date from loc"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB9355598FAD6B50F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T12:13:46.091Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P133  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P133 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "be/P133.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P133 ;
+        adm:logEntry        bda:LG2C2218EA9A960F38 , bda:LG439A23FEFF7263D5 , bda:LGB9355598FAD6B50F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F9EDCB44E053418
+        a                   :PersonDeath ;
+        :onYear             "1166"^^xsd:gYear .
+    
+    bdr:EVDAEA6F235A597FA9
+        a                   :PersonBirth ;
+        :onYear             "1090"^^xsd:gYear .
+    
+    bdr:NM4771A14A59839F67
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngo rje ras pa/"@bo-x-ewts .
+    
+    bdr:NM51A7E2EF9D903B5B
+        a                   :PersonPersonalName ;
+        rdfs:label          "zhe sdang rdo rje/"@bo-x-ewts .
+    
+    bdr:NM680445B5F0F10C2B
+        a                   :PersonPersonalName ;
+        rdfs:label          "bal bu gongs pa/"@bo-x-ewts .
+    
+    bdr:NT440CB6F3A594654F
+        a                   :Note ;
+        :noteText           "important philosopher of the 'bri gung bka' brgyud tradition"@en .
+    
+    bdr:P133  a             :Person ;
+        skos:prefLabel      "ngo rje ras pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT440CB6F3A594654F ;
+        :personEvent        bdr:EV9F9EDCB44E053418 , bdr:EVDAEA6F235A597FA9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4771A14A59839F67 , bdr:NM51A7E2EF9D903B5B , bdr:NM680445B5F0F10C2B ;
+        :personStudentOf    bdr:P1518 , bdr:P16 , bdr:P2210 , bdr:P3469 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P1KG663> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG663 {
+    bda:LG572BD955CA2007A0
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-02T11:24:34.694Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF766F2B35A8CC6C9
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-02T11:33:26.064Z"^^xsd:dateTime ;
+        adm:logMessage      "refreshed"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG663  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG663 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6c/P1KG663.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG663 ;
+        adm:logEntry        bda:LG572BD955CA2007A0 , bda:LGF766F2B35A8CC6C9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C4B143C5891F2E4
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0B930553AC0847FE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyima"@en .
+    
+    bdr:NM8973ACC71490FAC3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma/"@bo-x-ewts .
+    
+    bdr:NMFB2AB7DE7A574F10
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ni ma"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NTB7D0C14C3A1C11D3
+        a                   :Note ;
+        :noteSource         bdr:MW1KG662 ;
+        :noteText           "co-author of tibetan english chinese dialogue in the hospital"@en .
+    
+    bdr:P1KG663  a          :Person ;
+        skos:prefLabel      "nyi ma/"@bo-x-ewts , "nyima"@en , "ni ma"@zh-latn-pinyin-x-ndia ;
+        :isRoot             true ;
+        :note               bdr:NTB7D0C14C3A1C11D3 ;
+        :personEvent        bdr:EV9C4B143C5891F2E4 ;
+        :personName         bdr:NM0B930553AC0847FE , bdr:NM8973ACC71490FAC3 , bdr:NMFB2AB7DE7A574F10 .
+}

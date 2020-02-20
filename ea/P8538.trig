@@ -1,0 +1,83 @@
+@base          <bdg:P8538> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8538 {
+    bda:LG823284B168076090
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T16:08:29.466Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA50C77CB22788ACE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T10:16:27.796Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8538  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8538 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ea/P8538.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8538 ;
+        adm:logEntry        bda:LG823284B168076090 , bda:LGA50C77CB22788ACE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F07A9BA5EC46F85
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV599D091FE2F88DCF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV98601356DDDE5DFF
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3E76627FFA1A0259
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 08"@bo-x-ewts .
+    
+    bdr:NM4536FDF16BFFF422
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 10"@bo-x-ewts .
+    
+    bdr:NMBEAE556F0BAACE06
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros/"@bo-x-ewts .
+    
+    bdr:NMF082BC7151E026C4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po blo gros/"@bo-x-ewts .
+    
+    bdr:NT503DAC85F5FC5BE2
+        a                   :Note ;
+        :locationStatement  "p. 335, 336-337" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographical sketch"@en .
+    
+    bdr:P8538  a            :Person ;
+        skos:prefLabel      "blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT503DAC85F5FC5BE2 ;
+        :personEvent        bdr:EV1F07A9BA5EC46F85 , bdr:EV599D091FE2F88DCF , bdr:EV98601356DDDE5DFF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3E76627FFA1A0259 , bdr:NM4536FDF16BFFF422 , bdr:NMBEAE556F0BAACE06 , bdr:NMF082BC7151E026C4 ;
+        :personStudentOf    bdr:P724 ;
+        :personTeacherOf    bdr:P8297 , bdr:P8541 , bdr:P8542 .
+}

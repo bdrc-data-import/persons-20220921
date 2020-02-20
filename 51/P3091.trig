@@ -1,0 +1,54 @@
+@base          <bdg:P3091> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3091 {
+    bda:LG9316C5DDAF421736
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-12-05T13:03:05.161Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P3091  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3091 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "51/P3091.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3091 ;
+        adm:logEntry        bda:LG9316C5DDAF421736 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV533ADABB0CF799D9
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM2AE685437C09FB07
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan seng+ge"@bo-x-ewts .
+    
+    bdr:NT3E5FC2FECF00784E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Esoteric lineages\n\n-- Rwa transmissions"@en .
+    
+    bdr:P3091  a            :Person ;
+        skos:prefLabel      "dpal ldan seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3E5FC2FECF00784E ;
+        :personEvent        bdr:EV533ADABB0CF799D9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2AE685437C09FB07 ;
+        :personStudentOf    bdr:P0RK431 , bdr:P1053 , bdr:P2139 ;
+        :personTeacherOf    bdr:P1226 , bdr:P155 , bdr:P3630 .
+}

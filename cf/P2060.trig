@@ -1,0 +1,57 @@
+@base          <bdg:P2060> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2060 {
+    bda:LG1EB887BEB633B119
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:09:32.749Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2060  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2060 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "cf/P2060.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2060 ;
+        adm:logEntry        bda:LG1EB887BEB633B119 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV95EF281EBD2F4E47
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM0520B18DC398DD61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dge legs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME9CEC0A270D5B922
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku ngag dbang dge legs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE91C2CC7656008F4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2060  a            :Person ;
+        skos:prefLabel      "ngag dbang dge legs rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE91C2CC7656008F4 ;
+        :personEvent        bdr:EV95EF281EBD2F4E47 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0520B18DC398DD61 , bdr:NME9CEC0A270D5B922 ;
+        :personTeacherOf    bdr:P1468 .
+}

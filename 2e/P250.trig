@@ -1,0 +1,99 @@
+@base          <bdg:P250> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P250 {
+    bda:LG48284F9DF9120040
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-07-27T12:36:33.401Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and birth record"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P250  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P250 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "2e/P250.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P250 ;
+        adm:logEntry        bda:LG48284F9DF9120040 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C3902C5BD480260
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G621 ;
+        :onOrAbout          "1838?1848" .
+    
+    bdr:EV783F451633D0F4B9
+        a                   :PersonDeath ;
+        :onYear             "1897"^^xsd:gYear .
+    
+    bdr:EVFBE6BE17636C5055
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G500 .
+    
+    bdr:NM7FDB8862ACF2BE96
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tre hor khang gsar blo bzang tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM87C2062356233B44
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM883D001E01679C01
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khang gsar blo bzang tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB17773FD96C0FCCD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tre bo khang gsar blo bznag tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT193433AC8A5F7BCD
+        a                   :Note ;
+        :noteText           "Traveled to Dbus in his youth.\nStudied at 'Bras-spungs Blo-gsal-gling Tre-bo Khang-tshan.\nTeacher (not recorded): Blo-bzang-chos-'phel-mthu-stobs-rgya-mtsho.\nBecame Rgyud-smad Mkhan-po during the time of the 13th Dalai Lama.\nGsung 'bum in 3 printed volumes.\nBiography gives date of birth as sa khyi (1838), p. 21,  not 1848 as found in the Ming mdzod and Mi sna."@en .
+    
+    bdr:NT1E507C0B9D08B27C
+        a                   :Note ;
+        :locationStatement  "p. 938" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a brief biography\ndates given: b. 1848"@en .
+    
+    bdr:NT399F958E0624A0E6
+        a                   :Note ;
+        :locationStatement  "p. 139" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT525D0215D6AF6DAC
+        a                   :Note ;
+        :locationStatement  "p. 795" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:NT6EA0F339A838B66E
+        a                   :Note ;
+        :locationStatement  "p. 714" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTA854465C326DBF05
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P250  a             :Person ;
+        skos:prefLabel      "blo bzang tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT193433AC8A5F7BCD , bdr:NT1E507C0B9D08B27C , bdr:NT399F958E0624A0E6 , bdr:NT525D0215D6AF6DAC , bdr:NT6EA0F339A838B66E , bdr:NTA854465C326DBF05 ;
+        :personEvent        bdr:EV3C3902C5BD480260 , bdr:EV783F451633D0F4B9 , bdr:EVFBE6BE17636C5055 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7FDB8862ACF2BE96 , bdr:NM87C2062356233B44 , bdr:NM883D001E01679C01 , bdr:NMB17773FD96C0FCCD ;
+        :personStudentOf    bdr:P6865 ;
+        :personTeacherOf    bdr:P3795 , bdr:P5355 .
+}

@@ -1,0 +1,69 @@
+@base          <bdg:P2887> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2887 {
+    bda:LG689EF06CC67AA849
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-29T11:55:54.679Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGAFC4993ED6C47C29
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-30T15:35:04.279Z"^^xsd:dateTime ;
+        adm:logMessage      "added multiple records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2887  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2887 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c5/P2887.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2887 ;
+        adm:logEntry        bda:LG689EF06CC67AA849 , bda:LGAFC4993ED6C47C29 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2AD38C3B0C8874D6
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:NM3A32463C835E8FAF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyang shes rab mchog"@bo-x-ewts .
+    
+    bdr:NM6F6CD6612D8B8D31
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab mchog"@bo-x-ewts .
+    
+    bdr:NT2923A53B107AEC1B
+        a                   :Note ;
+        :locationStatement  "153" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:NTCE2A236D3A3AA4C9
+        a                   :Note ;
+        :noteText           "Master in the transmission lineage of the bka' ma"@en .
+    
+    bdr:P2887  a            :Person ;
+        skos:prefLabel      "shes rab mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2923A53B107AEC1B , bdr:NTCE2A236D3A3AA4C9 ;
+        :personEvent        bdr:EV2AD38C3B0C8874D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3A32463C835E8FAF , bdr:NM6F6CD6612D8B8D31 ;
+        :personStudentOf    bdr:P2886 , bdr:P2JM21 , bdr:P2JM28 ;
+        :personTeacherOf    bdr:P2888 .
+}

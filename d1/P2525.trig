@@ -1,0 +1,99 @@
+@base          <bdg:P2525> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2525 {
+    bda:LG02DFED3D06A00B17
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T10:45:27.612Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2525  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2525 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "d1/P2525.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2525 ;
+        adm:logEntry        bda:LG02DFED3D06A00B17 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV057612A873480852
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1797"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV46E470F0029C51CA
+        a                   :PersonDeath ;
+        :onYear             "1804"^^xsd:gYear .
+    
+    bdr:EV94814EE2B93CF0B2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3502 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVB3C7B6363034AB2B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVEA655654488F972C
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1804"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM70C23BAE2B25E890
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dam chos/"@bo-x-ewts .
+    
+    bdr:NM9028C500CD5746C6
+        a                   :PersonTitle ;
+        rdfs:label          "khams pa ngag dbang dam chos/"@bo-x-ewts .
+    
+    bdr:NMEAD312C2A763EDA1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 45"@bo-x-ewts .
+    
+    bdr:NMF3B6396C7C007043
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 45 ngag dbang dam chos/"@bo-x-ewts .
+    
+    bdr:NT5F1C6ADB5110DBFE
+        a                   :Note ;
+        :locationStatement  "p. 107" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NT7156BF44F88DAE24
+        a                   :Note ;
+        :locationStatement  "p. 107" ;
+        :noteSource         bdr:MW23441 ;
+        :noteText           "biography\nborn at rong yul pho sgang steng\nteachers included mkhan chen sangs rgyas grags pa\ncame to the throne of ngor in 1797\ndied in 1804"@en .
+    
+    bdr:NT9E53B619D13497B7
+        a                   :Note ;
+        :locationStatement  "p. 192" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography"@en .
+    
+    bdr:P2525  a            :Person ;
+        skos:prefLabel      "ngag dbang dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F1C6ADB5110DBFE , bdr:NT7156BF44F88DAE24 , bdr:NT9E53B619D13497B7 ;
+        :personEvent        bdr:EV057612A873480852 , bdr:EV46E470F0029C51CA , bdr:EV94814EE2B93CF0B2 , bdr:EVB3C7B6363034AB2B , bdr:EVEA655654488F972C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM70C23BAE2B25E890 , bdr:NM9028C500CD5746C6 , bdr:NMEAD312C2A763EDA1 , bdr:NMF3B6396C7C007043 ;
+        :personStudentOf    bdr:P2529 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P1KG534> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG534 {
+    bda:LG0D8E0A6CF9519B1F
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-09T10:47:23.382Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG76B0FD93BC77D18C
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-02-28T09:36:24.38Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGCF1BFEF017CAAF38
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-09T10:04:43.281Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG534  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG534 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "61/P1KG534.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG534 ;
+        adm:logEntry        bda:LG0D8E0A6CF9519B1F , bda:LG76B0FD93BC77D18C , bda:LGCF1BFEF017CAAF38 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C39CBD58CBCDF76
+        a                   :PersonBirth ;
+        :onYear             "1962"^^xsd:gYear .
+    
+    bdr:NM1CE34CE6EC398674
+        a                   :PersonPersonalName ;
+        rdfs:label          "gcan tsha bkra b+ho/"@bo-x-ewts .
+    
+    bdr:NM7EDAD2913563BBE6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra b+ho/"@bo-x-ewts .
+    
+    bdr:NMD5B09BF4DE0E17BF
+        a                   :PersonPenName ;
+        rdfs:label          "gcan nyi gzhon/"@bo-x-ewts .
+    
+    bdr:NTAF31D66D39735FBD
+        a                   :Note ;
+        :noteSource         bdr:MW1KG533 ;
+        :noteText           "short introduction of author at the beginning of the text."@en .
+    
+    bdr:P1KG534  a          :Person ;
+        skos:prefLabel      "bkra b+ho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAF31D66D39735FBD ;
+        :personEvent        bdr:EV4C39CBD58CBCDF76 ;
+        :personName         bdr:NM1CE34CE6EC398674 , bdr:NM7EDAD2913563BBE6 , bdr:NMD5B09BF4DE0E17BF .
+}

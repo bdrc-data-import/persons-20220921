@@ -1,0 +1,51 @@
+@base          <bdg:P2899> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2899 {
+    bda:P2899  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2899 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "16/P2899.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2899 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCAE94E2E6F957001
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM8754F42129DD64FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhas pa chen po/"@bo-x-ewts .
+    
+    bdr:NMA3B7805C9122DD71
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drin can mkhas pa chen po/"@bo-x-ewts .
+    
+    bdr:NTCF006136E36230D1
+        a                   :Note ;
+        :noteText           "rnying ma master appearing in several gsan yig; real name as yet undetermined"@en .
+    
+    bdr:P2899  a            :Person ;
+        skos:prefLabel      "mkhas pa chen po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCF006136E36230D1 ;
+        :personEvent        bdr:EVCAE94E2E6F957001 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8754F42129DD64FF , bdr:NMA3B7805C9122DD71 ;
+        :personStudentOf    bdr:P2898 ;
+        :personTeacherOf    bdr:P2900 .
+}

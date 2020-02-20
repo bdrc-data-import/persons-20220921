@@ -1,0 +1,54 @@
+@base          <bdg:P8LS12293> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12293 {
+    bda:LG01CF58FEE3D78E77
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T14:36:39.507Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12293  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12293 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a1/P8LS12293.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12293 ;
+        adm:logEntry        bda:LG01CF58FEE3D78E77 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF39DF4940A02FFCF
+        a                   :PersonBirth ;
+        :onYear             "1880"^^xsd:gYear .
+    
+    bdr:NM3B5AAF9837BCD89B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bar tso ba 01"@bo-x-ewts .
+    
+    bdr:NMD21533B29DE62618
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTE5BF8F4F55732A62
+        a                   :Note ;
+        :noteText           "Entered government service in 1916. Wa a tsi pa (assistant accounting) up to 1936 when he was appointed dak chi (postmaster general). Was appointed dzong pon of shekar dzong near mount everest in 1943. See Who's Who in Tibet, p. 9"@en .
+    
+    bdr:P8LS12293  a        :Person ;
+        skos:prefLabel      "'jigs med bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE5BF8F4F55732A62 ;
+        :personEvent        bdr:EVF39DF4940A02FFCF ;
+        :personName         bdr:NM3B5AAF9837BCD89B , bdr:NMD21533B29DE62618 .
+}

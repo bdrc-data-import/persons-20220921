@@ -1,0 +1,59 @@
+@base          <bdg:P9604> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9604 {
+    bda:LG671A021034B775CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-01-26T16:24:51.67Z"^^xsd:dateTime ;
+        adm:logMessage      "added year of birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P9604  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9604 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5f/P9604.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9604 ;
+        adm:logEntry        bda:LG671A021034B775CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2C18903A35ECEB66
+        a                   :PersonBirth ;
+        :onYear             "1962"^^xsd:gYear .
+    
+    bdr:NM80AAD60F71F7A175
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra rgyal/"@bo-x-ewts .
+    
+    bdr:NMD745A929DE327F61
+        a                   :PersonPenName ;
+        rdfs:label          "zhogs dung /"@bo-x-ewts .
+    
+    bdr:NME901376E9FCA9875
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon tshang bkra rgyal/"@bo-x-ewts .
+    
+    bdr:NT13CB9A4A68CBE455
+        a                   :Note ;
+        :noteSource         bdr:MW1KG21087 .
+    
+    bdr:P9604  a            :Person ;
+        skos:prefLabel      "bkra rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT13CB9A4A68CBE455 ;
+        :personEvent        bdr:EV2C18903A35ECEB66 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM80AAD60F71F7A175 , bdr:NMD745A929DE327F61 , bdr:NME901376E9FCA9875 .
+}

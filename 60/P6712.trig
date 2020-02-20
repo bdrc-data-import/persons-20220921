@@ -1,0 +1,61 @@
+@base          <bdg:P6712> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6712 {
+    bda:P6712  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6712 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "60/P6712.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6712 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3AFBDA0E10378DBB
+        a                   :PersonAssumesOffice ;
+        :onYear             "1939"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EV9CF60A07B6F1A78A
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVA2254672B70B896B
+        a                   :PersonLeavesOffice ;
+        :onYear             "1944"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:NMAEF9696117DC25F3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa 'jam dbyangs, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NMCE3A9F200703B72F
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon bla ma bstan pa 'jam dbyangs/"@bo-x-ewts .
+    
+    bdr:NT2FD8243A74E9BF6F
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "served as bka' blon bla ma, 1939-1944"@en .
+    
+    bdr:P6712  a            :Person ;
+        skos:prefLabel      "bstan pa 'jam dbyangs, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2FD8243A74E9BF6F ;
+        :personEvent        bdr:EV3AFBDA0E10378DBB , bdr:EV9CF60A07B6F1A78A , bdr:EVA2254672B70B896B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAEF9696117DC25F3 , bdr:NMCE3A9F200703B72F .
+}

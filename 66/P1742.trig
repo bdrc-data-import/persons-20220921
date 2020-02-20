@@ -1,0 +1,50 @@
+@base          <bdg:P1742> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1742 {
+    bda:P1742  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1742 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "66/P1742.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1742 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV37E8E5CC71669917
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NME1E0E94BD5045FBF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dul 'dzin chos 'byor/"@bo-x-ewts .
+    
+    bdr:NME85B1A6746CFD935
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'byor/"@bo-x-ewts .
+    
+    bdr:NTED2F088E755311BC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1742  a            :Person ;
+        skos:prefLabel      "chos 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTED2F088E755311BC ;
+        :personEvent        bdr:EV37E8E5CC71669917 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME1E0E94BD5045FBF , bdr:NME85B1A6746CFD935 ;
+        :personTeacherOf    bdr:P199 .
+}

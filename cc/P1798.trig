@@ -1,0 +1,61 @@
+@base          <bdg:P1798> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1798 {
+    bda:LG4B168FF95AFEFBD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:22:53.784Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1798  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1798 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "cc/P1798.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1798 ;
+        adm:logEntry        bda:LG4B168FF95AFEFBD6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2CC97FB2E38BD732
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM5AEA61149F695DBF
+        a                   :PersonPersonalName ;
+        rdfs:label          "ding ri chos grags/"@bo-x-ewts .
+    
+    bdr:NM8EF16283DC23001D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos grags/"@bo-x-ewts .
+    
+    bdr:NT350180327FC1277F
+        a                   :Note ;
+        :locationStatement  "p. 822" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT99F106DC438B9EF8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Early Translators"@en .
+    
+    bdr:P1798  a            :Person ;
+        skos:prefLabel      "chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT350180327FC1277F , bdr:NT99F106DC438B9EF8 ;
+        :personEvent        bdr:EV2CC97FB2E38BD732 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5AEA61149F695DBF , bdr:NM8EF16283DC23001D .
+}

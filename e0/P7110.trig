@@ -1,0 +1,50 @@
+@base          <bdg:P7110> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7110 {
+    bda:P7110  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7110 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e0/P7110.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7110 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD90EE3ED00913209
+        a                   :PersonDeath ;
+        :onYear             "1636"^^xsd:gYear .
+    
+    bdr:NM8492CBC176B256D1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgam po bkra shis grags rgyan/"@bo-x-ewts .
+    
+    bdr:NM9AA03A8669BCDA33
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis grags rgyan/"@bo-x-ewts .
+    
+    bdr:NT369C52E010C65470
+        a                   :Note ;
+        :locationStatement  "p. 349" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1636. year of death confirmed"@en .
+    
+    bdr:P7110  a            :Person ;
+        skos:prefLabel      "bkra shis grags rgyan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT369C52E010C65470 ;
+        :personEvent        bdr:EVD90EE3ED00913209 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8492CBC176B256D1 , bdr:NM9AA03A8669BCDA33 .
+}

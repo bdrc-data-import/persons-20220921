@@ -1,0 +1,60 @@
+@base          <bdg:P666> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P666 {
+    bda:P666  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P666 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "55/P666.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P666 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB1ABAF98846516CF
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVE3A3969C39498E20
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2405 ;
+        :onOrAbout          "17thcent." .
+    
+    bdr:NM0438CC0DEE16972D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "stobs ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NM90E9ED39B1499FD4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rwa ston gter ston stobs ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NT45DDDC0D0355FA79
+        a                   :Note ;
+        :noteText           "Dates: 17th-18th century"@en .
+    
+    bdr:NTBC6370C58172FB0F
+        a                   :Note ;
+        :locationStatement  "p. 31" ;
+        :noteSource         bdr:MW20234 ;
+        :noteText           "founder of the g.ya' sngon monastery (now nunnery) in chu shur rdzong, lha sa prefecture\nthis source says that he founded the monastery in the 13th cent., clearly an error\nfounder of the ri sna dgon, in lcang can grong tsho, tsha rag shang, chu shur rdzong, lha sa prefecture\nalso notes that this monastery was founded in the 13th cent., clearly in error"@en .
+    
+    bdr:P666  a             :Person ;
+        skos:prefLabel      "stobs ldan rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT45DDDC0D0355FA79 , bdr:NTBC6370C58172FB0F ;
+        :personEvent        bdr:EVB1ABAF98846516CF , bdr:EVE3A3969C39498E20 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0438CC0DEE16972D , bdr:NM90E9ED39B1499FD4 .
+}

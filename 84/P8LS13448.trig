@@ -1,0 +1,50 @@
+@base          <bdg:P8LS13448> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13448 {
+    bda:LG068E866799761351
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-10T10:38:54.171Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13448  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13448 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "84/P8LS13448.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13448 ;
+        adm:logEntry        bda:LG068E866799761351 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NMAB74CE4AA68F6D2D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME6B9444D263FE931
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri lding slob dpon dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD20AB6046CEBD24A
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 15" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13448  a        :Person ;
+        skos:prefLabel      "dkon mchog rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD20AB6046CEBD24A ;
+        :personName         bdr:NMAB74CE4AA68F6D2D , bdr:NME6B9444D263FE931 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P1531> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1531 {
+    bda:P1531  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1531 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "fe/P1531.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1531 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE0980EF9CC8D2A79
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM64DB14F82C97D7ED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NM7F74E859C6F302B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dul 'dzin dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NT5AA4764BC62A6D2B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1531  a            :Person ;
+        skos:prefLabel      "dpal 'byor bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5AA4764BC62A6D2B ;
+        :personEvent        bdr:EVE0980EF9CC8D2A79 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM64DB14F82C97D7ED , bdr:NM7F74E859C6F302B4 ;
+        :personTeacherOf    bdr:P1526 .
+}

@@ -1,0 +1,54 @@
+@base          <bdg:P836> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P836 {
+    bda:P836  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P836 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "55/P836.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P836 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1E6E23026A7C3B8F
+        a                   :PersonBirth ;
+        :onYear             "1722"^^xsd:gYear .
+    
+    bdr:EV8FCEA57FE92AEF41
+        a                   :PersonDeath ;
+        :onYear             "1768"^^xsd:gYear .
+    
+    bdr:NM0ACF5AF23CF12996
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD9EA64AA4645565C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8B25C98686173C98
+        a                   :Note ;
+        :noteText           "lama of the 'ba' ra bka' brgyud pa tradition;\nmajor figure in the transmission of the ri chos snying po ma drug of yang dgon pa\n\naccording to the brgyud yig to the gdams ngag mdzod, a major figure in the transmission lineage of the 'ba' ra ba phyag rgya chen po"@en .
+    
+    bdr:P836  a             :Person ;
+        skos:prefLabel      "ngag dbang chos grags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8B25C98686173C98 ;
+        :personEvent        bdr:EV1E6E23026A7C3B8F , bdr:EV8FCEA57FE92AEF41 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0ACF5AF23CF12996 , bdr:NMD9EA64AA4645565C ;
+        :personStudentOf    bdr:P5879 ;
+        :personTeacherOf    bdr:P9792 , bdr:P9799 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P544> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P544 {
+    bda:P544  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P544 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cd/P544.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P544 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A34B968383DE573
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3628 .
+    
+    bdr:EVA8FB48953F938473
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM757811C95B092DF6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gsang sngags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7CAA242998932A0F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtha' brag sprul sku gsang sngags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P544  a             :Person ;
+        skos:prefLabel      "gsang sngags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV3A34B968383DE573 , bdr:EVA8FB48953F938473 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM757811C95B092DF6 , bdr:NM7CAA242998932A0F ;
+        :personStudentOf    bdr:P520 ;
+        :personTeacherOf    bdr:P538 .
+}

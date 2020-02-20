@@ -1,0 +1,48 @@
+@base          <bdg:P8500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8500 {
+    bda:P8500  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8500 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b8/P8500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8500 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38B7E61F1D908728
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM7DEAB608F27A1C88
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun 'od zer/"@bo-x-ewts .
+    
+    bdr:NM9021AFF52E442F5C
+        a                   :PersonTitle ;
+        rdfs:label          "bka' bcu pa dge 'dun 'od zer/"@bo-x-ewts .
+    
+    bdr:NMFCD91315CE0A7F2D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rab 'byams smra ba dge 'dun 'od zer/"@bo-x-ewts .
+    
+    bdr:P8500  a            :Person ;
+        skos:prefLabel      "dge 'dun 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV38B7E61F1D908728 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7DEAB608F27A1C88 , bdr:NM9021AFF52E442F5C , bdr:NMFCD91315CE0A7F2D .
+}

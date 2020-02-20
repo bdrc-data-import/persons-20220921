@@ -1,0 +1,61 @@
+@base          <bdg:P1KG15492> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15492 {
+    bda:LG531C1B5CE60E46E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-10-04T15:32:32.065Z"^^xsd:dateTime ;
+        adm:logMessage      "added year of birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG5F581B7F8CC02D6B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-11T14:51:50.103Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15492  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15492 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ed/P1KG15492.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15492 ;
+        adm:logEntry        bda:LG531C1B5CE60E46E0 , bda:LG5F581B7F8CC02D6B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA290BDE023F44644
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:NMEEA84676339533C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring lha mo/"@bo-x-ewts .
+    
+    bdr:NMFA1A3290FB325047
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsam gling tshe ring lha mo/"@bo-x-ewts .
+    
+    bdr:NTD1D8CAF2DCA9F450
+        a                   :Note ;
+        :noteText           "teacher at central school for tibetan, happy valley mussoorie, dehredun, uttarkhand, india"@en .
+    
+    bdr:P1KG15492  a        :Person ;
+        skos:prefLabel      "tshe ring lha mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD1D8CAF2DCA9F450 ;
+        :personEvent        bdr:EVA290BDE023F44644 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NMEEA84676339533C0 , bdr:NMFA1A3290FB325047 .
+}

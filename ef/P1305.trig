@@ -1,0 +1,79 @@
+@base          <bdg:P1305> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1305 {
+    bda:LG1F1967FF5E62DE48
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-15T14:25:21.15Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1305  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1305 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ef/P1305.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1305 ;
+        adm:logEntry        bda:LG1F1967FF5E62DE48 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV33986714CBE1C3EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:EV977A026172C1AADB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1486"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC2E47A917A9485B5
+        a                   :PersonEventNotSpecified .
+    
+    bdr:EVDEAD7E74651C7878
+        a                   :PersonBirth ;
+        :onYear             "1424"^^xsd:gYear .
+    
+    bdr:NM0C2C1FE7276A5A3D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NM6FA7B26A4B44B5C2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 20"@bo-x-ewts .
+    
+    bdr:NMCB38D6A0AD6A75E0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NT1C6B62CFCA6AAD78
+        a                   :Note ;
+        :locationStatement  "p. 44-45" ;
+        :noteSource         bdr:MW1CZ2413 ;
+        :noteText           "after this abbot a gap of around 160 years abbatial lineage source is not available. In 17th century, during the period of panchen blo bzang chos kyi rgyal mtshan, snar thang monastery became a branch of bkra shis lhun po monastery. The study programme of monastery was restored during the time of panchen blo bzang ye shes. From this time onwards, abbot of this monastery was appointed by bkra shis lhun po monastery"@en .
+    
+    bdr:NTC635362A611C83E7
+        a                   :Note ;
+        :noteText           "1486. came to the see of snar thang\nborn into the gnyal clan"@en .
+    
+    bdr:P1305  a            :Person ;
+        skos:prefLabel      "grags pa shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C6B62CFCA6AAD78 , bdr:NTC635362A611C83E7 ;
+        :personEvent        bdr:EV33986714CBE1C3EC , bdr:EV977A026172C1AADB , bdr:EVC2E47A917A9485B5 , bdr:EVDEAD7E74651C7878 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C2C1FE7276A5A3D , bdr:NM6FA7B26A4B44B5C2 , bdr:NMCB38D6A0AD6A75E0 ;
+        :personStudentOf    bdr:P1301 , bdr:P1306 , bdr:P451 , bdr:P80 .
+}

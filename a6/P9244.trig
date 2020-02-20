@@ -1,0 +1,71 @@
+@base          <bdg:P9244> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9244 {
+    bda:LGA1A0A36BE619B90E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T10:13:43.084Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9244  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9244 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a6/P9244.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9244 ;
+        adm:logEntry        bda:LGA1A0A36BE619B90E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC5A5570849904AF7
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE4D8AE9CF8DF6890
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4485 .
+    
+    bdr:NM201BDCE738C74B5B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a mgron 03 ngag dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAC65B707AB4BA4EC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Adron 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMCAA182AB68E9386F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a mgron 03"@bo-x-ewts .
+    
+    bdr:NMDB5A753F1120B3CF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8DA73541528D578A
+        a                   :Note ;
+        :locationStatement  "p. 65" ;
+        :noteSource         bdr:MW28803 ;
+        :noteText           "biography\ndates are confused: da ni lo tshigs 'ga'i dogs gzhi bshad pa la/ skyabs mgon zhabs dkar khong nyid spyi lo 1781 lo la 'khrungs/ rang rnam du gsal ba ltar rtsis na lha ri sku phreng gsum pa lcags 'brug spyi lo 1760 la 'khrungs pa nor ba yin nam snyam/ rgyu mtshan khong nyid dbus gtsang dag pa'i zhing nas phyir phebs te dgung grangs 56 man gyi chos 'khor bskor ba'i lo rgyus nang du lha ri sprul sku gnyis byung bas dgon pa'i dge 'dun pa dang a 'byung gi bkra shis don 'grub rnams ma 'grigs pa'i bar la/ nga'i sku tshab tu blo ldan stag yan btang nas chos gzu byas/ zhes 'byung zhing/ de dus kho 56 yin pa'i dbang du btang na yang lha ri sku phreng gsum pa mtha' yang dgung lo 70 lhag la son yod pa red dam"@en .
+    
+    bdr:P9244  a            :Person ;
+        skos:prefLabel      "ngag dbang rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9243 ;
+        :isRoot             true ;
+        :note               bdr:NT8DA73541528D578A ;
+        :personEvent        bdr:EVC5A5570849904AF7 , bdr:EVE4D8AE9CF8DF6890 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM201BDCE738C74B5B , bdr:NMAC65B707AB4BA4EC , bdr:NMCAA182AB68E9386F , bdr:NMDB5A753F1120B3CF .
+}

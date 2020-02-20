@@ -1,0 +1,57 @@
+@base          <bdg:P7917> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7917 {
+    bda:P7917  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7917 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a6/P7917.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7917 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV84DB82E553BA72B2
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVCECF5416F9464DD9
+        a                   :PersonBirth ;
+        :onYear             "1912"^^xsd:gYear .
+    
+    bdr:NM8E6C30B037F11611
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jigs med ye shes snying po/"@bo-x-ewts .
+    
+    bdr:NTBE673679179F88D2
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given and association with hor gterston chos sgar"@en .
+    
+    bdr:NTFCF3CFF1DACF1506
+        a                   :Note ;
+        :locationStatement  "p. 3 (1st group)" ;
+        :noteSource         bdr:MW24630 ;
+        :noteText           "listed as an important student of the gter ston"@en .
+    
+    bdr:P7917  a            :Person ;
+        skos:prefLabel      "'jigs med ye shes snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBE673679179F88D2 , bdr:NTFCF3CFF1DACF1506 ;
+        :personEvent        bdr:EV84DB82E553BA72B2 , bdr:EVCECF5416F9464DD9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8E6C30B037F11611 ;
+        :personStudentOf    bdr:P7914 .
+}

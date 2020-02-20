@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12165> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12165 {
+    bda:LG4798FB6C8338A56B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:20:21.06Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGB6B175C5A43C0B5D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-19T12:15:03.534Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12165  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12165 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "07/P8LS12165.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12165 ;
+        adm:logEntry        bda:LG4798FB6C8338A56B , bda:LGB6B175C5A43C0B5D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3739EF385AEA756F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4353 .
+    
+    bdr:EV9A4268A1DDF495AB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB798187594987D5F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NM17320F07D694C416
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dmu dge'i bar zhing tshang /"@bo-x-ewts .
+    
+    bdr:NM61B5BAAE95CE9431
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dmu dge'i bar zhing tshang /"@bo-x-ewts .
+    
+    bdr:NMF6C8D137010000C6
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 25"@bo-x-ewts .
+    
+    bdr:NT614D52F8BCD27D9E
+        a                   :Note ;
+        :locationStatement  "p. 122" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "no detail information is available to the author of this source"@en .
+    
+    bdr:P8LS12165  a        :Person ;
+        skos:prefLabel      "dmu dge'i bar zhing tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT614D52F8BCD27D9E ;
+        :personEvent        bdr:EV3739EF385AEA756F , bdr:EV9A4268A1DDF495AB , bdr:EVB798187594987D5F ;
+        :personName         bdr:NM17320F07D694C416 , bdr:NM61B5BAAE95CE9431 , bdr:NMF6C8D137010000C6 .
+}

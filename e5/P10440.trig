@@ -1,0 +1,52 @@
+@base          <bdg:P10440> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10440 {
+    bda:P10440  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10440 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e5/P10440.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10440 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B230FFF34C3AFD7
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM373BB19F70407CEF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar pa ye shes dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM903882C4D5E866A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes dpal bzang /"@bo-x-ewts .
+    
+    bdr:NTF8C4E54ABCDAF56D
+        a                   :Note ;
+        :locationStatement  "f. 159v" ;
+        :noteSource         bdr:MW30161 ;
+        :noteText           "teacher of the karma kaM tshang tradition"@en .
+    
+    bdr:P10440  a           :Person ;
+        skos:prefLabel      "ye shes dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF8C4E54ABCDAF56D ;
+        :personEvent        bdr:EV8B230FFF34C3AFD7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM373BB19F70407CEF , bdr:NM903882C4D5E866A4 ;
+        :personStudentOf    bdr:P385 .
+}

@@ -1,0 +1,84 @@
+@base          <bdg:P6577> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6577 {
+    bda:LG68BDC7C8A5E44C53
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T14:56:24.545Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBD2D5FC92FDD8D7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGD85F1DD019899FAC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T12:40:54.143Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6577  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6577 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c3/P6577.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6577 ;
+        adm:logEntry        bda:LG68BDC7C8A5E44C53 , bda:LGBD2D5FC92FDD8D7F , bda:LGD85F1DD019899FAC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBE93031CA9913E42
+        a                   :PersonBirth ;
+        :onYear             "1935"^^xsd:gYear .
+    
+    bdr:NM1DBB18E5CF037DE1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Chesho 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM31A920581231E89F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dpal ldan lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8E8AEA8C85A0129F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "che shos 04"@bo-x-ewts .
+    
+    bdr:NMD256FC72EFEA4FEC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "che shos 04 blo bzang dpal ldan lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTA2B2B0585A97DDF3
+        a                   :Note ;
+        :locationStatement  "p. 166" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "b. 1935 according to source"@en .
+    
+    bdr:NTF8D97AB166D2E68B
+        a                   :Note ;
+        :locationStatement  "p. 443" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "b. 1935\nname given: che shos blo bzang dpal ldan lung rtogs rgya mtsho"@en .
+    
+    bdr:P6577  a            :Person ;
+        skos:prefLabel      "blo bzang dpal ldan lung rigs rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P238 ;
+        :isRoot             true ;
+        :note               bdr:NTA2B2B0585A97DDF3 , bdr:NTF8D97AB166D2E68B ;
+        :personEvent        bdr:EVBE93031CA9913E42 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DBB18E5CF037DE1 , bdr:NM31A920581231E89F , bdr:NM8E8AEA8C85A0129F , bdr:NMD256FC72EFEA4FEC .
+}

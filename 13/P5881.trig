@@ -1,0 +1,59 @@
+@base          <bdg:P5881> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5881 {
+    bda:P5881  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5881 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "13/P5881.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5881 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7553B232C36EC3D2
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV8AC7030B45DFB409
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G206 .
+    
+    bdr:NM0507B331687C2D9F
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC977868486F60E43
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sdings po che cog grwa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD15050F4627E0F96
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT238A14EBB8B053E0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P5881  a            :Person ;
+        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT238A14EBB8B053E0 ;
+        :personEvent        bdr:EV7553B232C36EC3D2 , bdr:EV8AC7030B45DFB409 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0507B331687C2D9F , bdr:NMC977868486F60E43 , bdr:NMD15050F4627E0F96 ;
+        :personStudentOf    bdr:P1375 ;
+        :personTeacherOf    bdr:P5146 .
+}

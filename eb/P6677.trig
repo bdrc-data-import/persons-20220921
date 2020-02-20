@@ -1,0 +1,65 @@
+@base          <bdg:P6677> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6677 {
+    bda:LG33EB79721B03533B
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-11T11:56:14.359Z"^^xsd:dateTime ;
+        adm:logMessage      "date of birth added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG61DEA29601387D64
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-11T11:31:14.959Z"^^xsd:dateTime ;
+        adm:logMessage      "added date"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6677  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6677 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "eb/P6677.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6677 ;
+        adm:logEntry        bda:LG33EB79721B03533B , bda:LG61DEA29601387D64 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV563BFE6883283165
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G233 .
+    
+    bdr:EVBB6E9AE02A3B6771
+        a                   :PersonDeath ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:EVC4A19F6C48146DF8
+        a                   :PersonBirth ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM8D4C65A30AE43F02
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMEE67FA1F72ADB143
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "na len+dra 'i mkhan po tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P6677  a            :Person ;
+        skos:prefLabel      "tshul khrims rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV563BFE6883283165 , bdr:EVBB6E9AE02A3B6771 , bdr:EVC4A19F6C48146DF8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8D4C65A30AE43F02 , bdr:NMEE67FA1F72ADB143 ;
+        :personTeacherOf    bdr:P6676 .
+}

@@ -1,0 +1,54 @@
+@base          <bdg:P1KG1433> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1433 {
+    bda:LG8DAEDABD015AFB22
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-15T12:42:13.063Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1433  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1433 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "fd/P1KG1433.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1433 ;
+        adm:logEntry        bda:LG8DAEDABD015AFB22 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE3C9950DD105D89D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM80A170EB7E786299
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mtha' grol rdo rje/"@bo-x-ewts .
+    
+    bdr:NT041AB9F96CC62B3A
+        a                   :Note ;
+        :noteSource         bdr:MW2CZ6602 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1433  a         :Person ;
+        skos:prefLabel      "mtha' grol rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT041AB9F96CC62B3A ;
+        :personEvent        bdr:EVE3C9950DD105D89D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM80A170EB7E786299 ;
+        :personStudentOf    bdr:P746 .
+}

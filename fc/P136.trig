@@ -1,0 +1,88 @@
+@base          <bdg:P136> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P136 {
+    bda:LG83BAFB3F83E4D51A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-09T11:48:36.149Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place from \"gtsang phyogs\" G569 to \"dbus gtsang\" G3186"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA8677BF66A11F2D2
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-11T11:15:25.616Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P136  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P136 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "fc/P136.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P136 ;
+        adm:logEntry        bda:LG83BAFB3F83E4D51A , bda:LGA8677BF66A11F2D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0D0CF62CAFAD6100
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G439 .
+    
+    bdr:EVE7D4144C58C28361
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3186 ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM0C16318F51CA2007
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thag ma ba/"@bo-x-ewts .
+    
+    bdr:NM0CA5ED092A94A2C9
+        a                   :PersonReversal ;
+        rdfs:label          "dar seng, ka ba"@en .
+    
+    bdr:NM59613539B1ECA194
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dul 'dzin thag ma ba/"@bo-x-ewts .
+    
+    bdr:NM804386652C459153
+        a                   :PersonCommonName ;
+        rdfs:label          "ka ba dar seng /"@bo-x-ewts .
+    
+    bdr:NMDB6981CE6E63C6E4
+        a                   :PersonPersonalName ;
+        rdfs:label          "dar ma seng+ge"@bo-x-ewts .
+    
+    bdr:NT0DA93DD77042ED5B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- the Vinaya transmissions of the Smad-'dul"@en .
+    
+    bdr:NTF3237742CC9AB2C2
+        a                   :Note ;
+        :locationStatement  "p. 889" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P136  a             :Person ;
+        skos:prefLabel      "thag ma ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0DA93DD77042ED5B , bdr:NTF3237742CC9AB2C2 ;
+        :personEvent        bdr:EV0D0CF62CAFAD6100 , bdr:EVE7D4144C58C28361 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C16318F51CA2007 , bdr:NM0CA5ED092A94A2C9 , bdr:NM59613539B1ECA194 , bdr:NM804386652C459153 , bdr:NMDB6981CE6E63C6E4 ;
+        :personStudentOf    bdr:P1315 , bdr:P1316 ;
+        :personTeacherOf    bdr:P1318 , bdr:P1319 , bdr:P1320 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Duldzinpa-Takmapa-Kawa-Darseng/2638"^^xsd:anyURI .
+}

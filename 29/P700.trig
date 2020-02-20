@@ -1,0 +1,64 @@
+@base          <bdg:P700> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P700 {
+    bda:P700  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P700 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "29/P700.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P700 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV49924D2EA178A96B
+        a                   :PersonDeath ;
+        :onYear             "1936"^^xsd:gYear .
+    
+    bdr:EVB4C390B4A766500F
+        a                   :PersonBirth ;
+        :onYear             "1871"^^xsd:gYear .
+    
+    bdr:NMA25AD51824CFF499
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bdud 'joms drag sngags gling pa/"@bo-x-ewts .
+    
+    bdr:NMB103D1E791F25D4D
+        a                   :PersonSecretInitiatoryName ;
+        rdfs:label          "rdo rje rol pa rtsal/"@bo-x-ewts .
+    
+    bdr:NMB9B7DA4C329BC105
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rig 'dzin rnam rgyal bdud 'dul rol pa rtsal/"@bo-x-ewts .
+    
+    bdr:NMC8B98FA3C8E112A8
+        a                   :PersonSecretInitiatoryName ;
+        rdfs:label          "rdo rje sku mchog rtsal/"@bo-x-ewts .
+    
+    bdr:NMF02DE1532AD785B5
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma bdud 'dul rol pa rtsal/"@bo-x-ewts .
+    
+    bdr:NTF14B32079F2E8B45
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma"@en .
+    
+    bdr:P700  a             :Person ;
+        skos:prefLabel      "bdud 'joms drag sngags gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF14B32079F2E8B45 ;
+        :personEvent        bdr:EV49924D2EA178A96B , bdr:EVB4C390B4A766500F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA25AD51824CFF499 , bdr:NMB103D1E791F25D4D , bdr:NMB9B7DA4C329BC105 , bdr:NMC8B98FA3C8E112A8 , bdr:NMF02DE1532AD785B5 .
+}

@@ -1,0 +1,49 @@
+@base          <bdg:P7445> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7445 {
+    bda:LGF3EF6D35A860F8AC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-14T10:00:15.332Z"^^xsd:dateTime ;
+        adm:logMessage      "added kinship"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P7445  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7445 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "3e/P7445.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7445 ;
+        adm:logEntry        bda:LGF3EF6D35A860F8AC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A435ADB0B49B2AC
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM42D4F7FCCB1C0D11
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos skyong bkra shis/"@bo-x-ewts .
+    
+    bdr:P7445  a            :Person ;
+        skos:prefLabel      "chos skyong bkra shis/"@bo-x-ewts ;
+        :hasSon             bdr:P7444 ;
+        :hasUnknownKinship  bdr:P7444 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV6A435ADB0B49B2AC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM42D4F7FCCB1C0D11 .
+}

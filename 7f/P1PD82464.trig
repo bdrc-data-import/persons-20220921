@@ -1,0 +1,75 @@
+@base          <bdg:P1PD82464> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1PD82464 {
+    bda:LG6ED7A1F35714493F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-02-19T12:08:13.407Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGFD57EB1C4B8DEBC4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T16:13:02.977Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1PD82464  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1PD82464 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7f/P1PD82464.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1PD82464 ;
+        adm:logEntry        bda:LG6ED7A1F35714493F , bda:LGFD57EB1C4B8DEBC4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6C2D8AF806B1F3BF
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EVBE018D8AE6AF0B2E
+        a                   :PersonDeath ;
+        :onYear             "1989"^^xsd:gYear .
+    
+    bdr:EVF161A7B2086498D0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G36 .
+    
+    bdr:NM1DBF35DF783BBBD0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM65D3B4A3EE80F1C4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma blo gros 'od zer/"@bo-x-ewts .
+    
+    bdr:NMF8E5A4EEDFD8A57A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thang bla tshe dbang /"@bo-x-ewts .
+    
+    bdr:NTA755B753E8E8C297
+        a                   :Note ;
+        :locationStatement  "p. 2" ;
+        :noteSource         bdr:MW1PD82465 .
+    
+    bdr:P1PD82464  a        :Person ;
+        skos:prefLabel      "thang bla tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA755B753E8E8C297 ;
+        :personEvent        bdr:EV6C2D8AF806B1F3BF , bdr:EVBE018D8AE6AF0B2E , bdr:EVF161A7B2086498D0 ;
+        :personName         bdr:NM1DBF35DF783BBBD0 , bdr:NM65D3B4A3EE80F1C4 , bdr:NMF8E5A4EEDFD8A57A ;
+        :personStudentOf    bdr:P937 ;
+        :personTeacherOf    bdr:P6265 .
+}

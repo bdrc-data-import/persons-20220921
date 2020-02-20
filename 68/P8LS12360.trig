@@ -1,0 +1,61 @@
+@base          <bdg:P8LS12360> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12360 {
+    bda:LGA211BC373A8E0554
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T09:17:44.108Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12360  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12360 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "68/P8LS12360.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12360 ;
+        adm:logEntry        bda:LGA211BC373A8E0554 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV61DB82A49039A05F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EV8AF0EED329CC6FE0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1907"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM592BE142B3571479
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nag ris brtsi gzhag tshang /"@bo-x-ewts .
+    
+    bdr:NM9D60AAD2FF565ED1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 21"@bo-x-ewts .
+    
+    bdr:NT2F684BECF96FE767
+        a                   :Note ;
+        :locationStatement  "p. 180" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12360  a        :Person ;
+        skos:prefLabel      "nag ris brtsi gzhag tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2F684BECF96FE767 ;
+        :personEvent        bdr:EV61DB82A49039A05F , bdr:EV8AF0EED329CC6FE0 ;
+        :personName         bdr:NM592BE142B3571479 , bdr:NM9D60AAD2FF565ED1 .
+}

@@ -1,0 +1,56 @@
+@base          <bdg:P2398> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2398 {
+    bda:P2398  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2398 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b0/P2398.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2398 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV344C1D43A76D9C3B
+        a                   :PersonDeath ;
+        :onYear             "1828"^^xsd:gYear .
+    
+    bdr:EVD799005F9F9B4EC4
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2738 ;
+        :onYear             "1769"^^xsd:gYear .
+    
+    bdr:NM628D68B973D4A281
+        a                   :PersonPersonalName ;
+        rdfs:label          "rtse dbus pa 'jam dbyangs bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NME7D708B38498BE65
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NT5F410250FCE42C85
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 286-288" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography"@en .
+    
+    bdr:P2398  a            :Person ;
+        skos:prefLabel      "'jam dbyangs bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F410250FCE42C85 ;
+        :personEvent        bdr:EV344C1D43A76D9C3B , bdr:EVD799005F9F9B4EC4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM628D68B973D4A281 , bdr:NME7D708B38498BE65 ;
+        :personTeacherOf    bdr:P2397 .
+}

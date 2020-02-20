@@ -1,0 +1,66 @@
+@base          <bdg:P694> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P694 {
+    bda:LGDB34C68FE84C4C7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-01-12T17:49:44.377Z"^^xsd:dateTime ;
+        adm:logMessage      "created P1AG112"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P694  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P694 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e1/P694.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P694 ;
+        adm:logEntry        bda:LGDB34C68FE84C4C7F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB4208EEC8CF2F3D9
+        a                   :PersonDeath ;
+        :notAfter           "1797"^^xsd:gYear ;
+        :notBefore          "1796"^^xsd:gYear .
+    
+    bdr:EVD493B6DDE37D8877
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G805 ;
+        :onYear             "1746"^^xsd:gYear .
+    
+    bdr:NM51F6F391852F2D84
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag gsum gter ston rdo rje thogs med/"@bo-x-ewts .
+    
+    bdr:NMCB67E00EDD7007FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje thogs med/"@bo-x-ewts .
+    
+    bdr:NTA9F5BE2E834DB71E
+        a                   :Note ;
+        :locationStatement  "p. 177v" .
+    
+    bdr:NTFDE9E64228536EAA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma"@en .
+    
+    bdr:P694  a             :Person ;
+        skos:prefLabel      "rdo rje thogs med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA9F5BE2E834DB71E , bdr:NTFDE9E64228536EAA ;
+        :personEvent        bdr:EVB4208EEC8CF2F3D9 , bdr:EVD493B6DDE37D8877 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM51F6F391852F2D84 , bdr:NMCB67E00EDD7007FF ;
+        :personTeacherOf    bdr:P1AG112 .
+}

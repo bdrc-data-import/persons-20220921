@@ -1,0 +1,91 @@
+@base          <bdg:P5439> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5439 {
+    bda:LG1D4310563A5EB5C8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-14T14:26:55.961Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG3B51B43F3CE94112
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-30T12:32:11.068Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5439  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5439 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "fd/P5439.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5439 ;
+        adm:logEntry        bda:LG1D4310563A5EB5C8 , bda:LG3B51B43F3CE94112 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV162CD7CFE55CF0C5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1425 ;
+        :onYear             "1793"^^xsd:gYear .
+    
+    bdr:EV234DF80F5E1FB1A9
+        a                   :PersonDeath ;
+        :onYear             "1810"^^xsd:gYear .
+    
+    bdr:EV79DF3BE32698921B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4206 .
+    
+    bdr:EVB0479E5B25B8BD3C
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12898 .
+    
+    bdr:NM300E28C6979A11E4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyi lde rje dbon sprul sku 05 lha dbang bsam grub/"@bo-x-ewts .
+    
+    bdr:NM3E070DEDC777573E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha dbang bsam grub/"@bo-x-ewts .
+    
+    bdr:NM5A7FFA0CF3F0DC6E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nyilde Jewon Tulku 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM74B4A5C46E4B4CEE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "nyi lde rje dbon sprul sku 05"@bo-x-ewts .
+    
+    bdr:NT0E04051AF31A45AD
+        a                   :Note ;
+        :locationStatement  "p. 329" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "rnying ma incarnation of the padma gling pa tradition; according to this source died at the age of 18"@en .
+    
+    bdr:NT3B7E898736B465A5
+        a                   :Note ;
+        :locationStatement  "p. 329" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ rnam rgyal bkra shis/ lho mon gyi char 'khrungs/ dgung lo lnga bcu par gshegs/\n2) de'i skye ba dkon mchog ngag dbang rgya mtsho/ lho mon rnga long du 'khrungs/ dgung lo nga gcig par gshegs/\n3) de'i skye ba dkon mchog skal bzang phun tshogs/ gtsang nyang stod kha reg tu 'khrungs/ dgung lo nga dgu par gshegs/\n4) de'i skye ba skal bzang chos dbyings dbang phyug/ gtsang lung nag thang sper 'khrungs/ dgung lo zhe dgu par gshegs/\n5) de'i skye ba lha dbang bsam grub/ lho brag nyi lde'i mda' la 'khrungs/ lcags rta dgung lo bco brgyad la gshegs/ [1793-1810]"@bo-x-ewts .
+    
+    bdr:P5439  a            :Person ;
+        skos:prefLabel      "lha dbang bsam grub/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5438 ;
+        :isRoot             true ;
+        :note               bdr:NT0E04051AF31A45AD , bdr:NT3B7E898736B465A5 ;
+        :personEvent        bdr:EV162CD7CFE55CF0C5 , bdr:EV234DF80F5E1FB1A9 , bdr:EV79DF3BE32698921B , bdr:EVB0479E5B25B8BD3C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM300E28C6979A11E4 , bdr:NM3E070DEDC777573E , bdr:NM5A7FFA0CF3F0DC6E , bdr:NM74B4A5C46E4B4CEE .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P8LS15363> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15363 {
+    bda:LG668B0C5205A403AB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-18T12:27:39.934Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15363  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15363 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "8a/P8LS15363.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15363 ;
+        adm:logEntry        bda:LG668B0C5205A403AB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07AE613831BD9A77
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM216415A0726FE668
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA41F82A755D38858
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsang mda' ba chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT992E32087115CB97
+        a                   :Note ;
+        :locationStatement  "vol. 29, p. 136" ;
+        :noteSource         bdr:MW1PD89051 ;
+        :noteText           "an author of mahamudra,\nhe was drung chen of gsang phu sgros rnying, \nlater on became chos mdzad of gsang phu gling smad \nand also 18th gdan rabs of gsang phu gling smad"@en .
+    
+    bdr:P8LS15363  a        :Person ;
+        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT992E32087115CB97 ;
+        :personEvent        bdr:EV07AE613831BD9A77 ;
+        :personName         bdr:NM216415A0726FE668 , bdr:NMA41F82A755D38858 .
+}

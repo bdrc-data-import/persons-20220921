@@ -1,0 +1,71 @@
+@base          <bdg:P4302> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4302 {
+    bda:LG2E175BE8E8D334A7
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T06:46:30.062Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4302  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4302 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3e/P4302.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4302 ;
+        adm:logEntry        bda:LG2E175BE8E8D334A7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA065621EE916AE8E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1304 ;
+        :onYear             "1665"^^xsd:gYear .
+    
+    bdr:EVD160CE28A1125D4F
+        a                   :PersonDeath ;
+        :onYear             "1732"^^xsd:gYear .
+    
+    bdr:NM4BDF83F187BFAC23
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong khams zhabs drung chos rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM748E3A4C2184DE1D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT519680E5128E65A3
+        a                   :Note ;
+        :locationStatement  "p. 131" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates: 1665-1732"@en .
+    
+    bdr:NT761D9D8AFEA51506
+        a                   :Note ;
+        :noteText           "important gelug teacher"@en .
+    
+    bdr:NTA21D2DDF9865CA7C
+        a                   :Note ;
+        :locationStatement  "p. 1627" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:P4302  a            :Person ;
+        skos:prefLabel      "chos rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT519680E5128E65A3 , bdr:NT761D9D8AFEA51506 , bdr:NTA21D2DDF9865CA7C ;
+        :personEvent        bdr:EVA065621EE916AE8E , bdr:EVD160CE28A1125D4F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4BDF83F187BFAC23 , bdr:NM748E3A4C2184DE1D .
+}

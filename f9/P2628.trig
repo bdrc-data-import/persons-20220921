@@ -1,0 +1,75 @@
+@base          <bdg:P2628> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2628 {
+    bda:LG1B5B1D6019047068
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:41:06.716Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2628  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2628 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f9/P2628.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2628 ;
+        adm:logEntry        bda:LG1B5B1D6019047068 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10632541467A2E4F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EV3536B24A935EDAB2
+        a                   :PersonDeath ;
+        :onYear             "1619"^^xsd:gYear .
+    
+    bdr:EV5040E8AD288B7BC0
+        a                   :PersonBirth ;
+        :onYear             "1567"^^xsd:gYear .
+    
+    bdr:NM35DECB80C5C6A5FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa yab chen bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM4833364EE3EAFBA8
+        a                   :PersonPersonalName ;
+        rdfs:label          "mi pham bstan pa'i nyi ma, 'brug chen/"@bo-x-ewts .
+    
+    bdr:NM56C8C020D9EF0CB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMAFA1D5894502707B
+        a                   :PersonPersonalName ;
+        rdfs:label          "'brug chen mi pham bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT1497C2365C7E3691
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P2628  a            :Person ;
+        skos:prefLabel      "bstan pa'i nyi ma/"@bo-x-ewts ;
+        :hasFather          bdr:P2629 ;
+        :hasSon             bdr:P509 ;
+        :isRoot             true ;
+        :note               bdr:NT1497C2365C7E3691 ;
+        :personEvent        bdr:EV10632541467A2E4F , bdr:EV3536B24A935EDAB2 , bdr:EV5040E8AD288B7BC0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35DECB80C5C6A5FA , bdr:NM4833364EE3EAFBA8 , bdr:NM56C8C020D9EF0CB5 , bdr:NMAFA1D5894502707B ;
+        :personStudentOf    bdr:P2511 , bdr:P2629 , bdr:P825 ;
+        :personTeacherOf    bdr:P508 , bdr:P509 .
+}

@@ -1,0 +1,51 @@
+@base          <bdg:P3002> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3002 {
+    bda:P3002  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3002 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "06/P3002.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3002 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4A71B38CEEC9765
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1DBA9F7382275FF5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NM3DB60E961B0524AC
+        a                   :PersonPersonalName ;
+        rdfs:label          "bya bral blo bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NT047296FC567FF719
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:P3002  a            :Person ;
+        skos:prefLabel      "blo bzang rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT047296FC567FF719 ;
+        :personEvent        bdr:EVA4A71B38CEEC9765 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DBA9F7382275FF5 , bdr:NM3DB60E961B0524AC ;
+        :personStudentOf    bdr:P3001 ;
+        :personTeacherOf    bdr:P3003 .
+}

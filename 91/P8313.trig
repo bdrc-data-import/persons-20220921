@@ -1,0 +1,60 @@
+@base          <bdg:P8313> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8313 {
+    bda:LG3993BE059CA039A4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-25T10:09:51.064Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8313  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8313 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "91/P8313.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8313 ;
+        adm:logEntry        bda:LG3993BE059CA039A4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV56E5D9DADC92FD38
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3522 ;
+        :onYear             "1957"^^xsd:gYear .
+    
+    bdr:NM6F604EAF534782DF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhas grub/"@bo-x-ewts .
+    
+    bdr:NT0D872FDF50A81B72
+        a                   :Note ;
+        :locationStatement  "p. 28" ;
+        :noteSource         bdr:MW30454 ;
+        :noteText           "modern tibetan poet born in 1957 in grwa nang rdzong dga' tshal sbug dgon"@en .
+    
+    bdr:NT6440957E0B91CD55
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW28981 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8313  a            :Person ;
+        skos:prefLabel      "mkhas grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D872FDF50A81B72 , bdr:NT6440957E0B91CD55 ;
+        :personEvent        bdr:EV56E5D9DADC92FD38 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6F604EAF534782DF .
+}

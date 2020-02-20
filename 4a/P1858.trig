@@ -1,0 +1,75 @@
+@base          <bdg:P1858> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1858 {
+    bda:LGA8BC85DE908EC7B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-03T16:38:25.145Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrew G1015 in favor of G571"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1858  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1858 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4a/P1858.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1858 ;
+        adm:logEntry        bda:LGA8BC85DE908EC7B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C58489BCEB29DE2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G571 ;
+        :onYear             "1567"^^xsd:gYear .
+    
+    bdr:EV8B8B8F6167493CB4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G310 .
+    
+    bdr:EVC09B8A5790B446BB
+        a                   :PersonDeath ;
+        :onYear             "1650"^^xsd:gYear .
+    
+    bdr:NM5A49C26025870746
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung pa brtson 'grus rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD1AAE2A5DB4B523F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brtson 'grus rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT4A657BD8F3C14CF1
+        a                   :Note ;
+        :noteText           "dge lugs pa master"@en .
+    
+    bdr:NT6D35FF85D7BC5D07
+        a                   :Note ;
+        :locationStatement  "p. 848" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT8BFF409CA703B81A
+        a                   :Note ;
+        :noteText           "Lam rim bla rgyud kyi bla rabs 45\nHis father's throne and territories were conquered by the ruler of La-dwags.\nBrtson-'grus-rgyal-mtshan fled to Central Tibet but was intercepted by the forces of the ruler of La-dwags; his life was spared\n1590. Again went to Central Tibet and took ordination from the 1st PaN-chen Blo-bzang-chos-kyi-rgyal-mtshan.\nEntered Se-ra Byes for studies.\nDid his Dka'-bzhi degree at Dwags-po Grwa-tshang.\nEntered Rgyud-stod for tantric studies.\nTook further teachings with the 1st PaN-chen.\nNamed by the PaN-chen Blo-bzang-chos-kyi-rgyal-mtshan to head the sgrub-grwa called Shangs Mdo Rgod-tshang.\nToward the end of his life spent his time in meditation at Rgod-tshang and Lha-lng-brag."@en .
+    
+    bdr:P1858  a            :Person ;
+        skos:prefLabel      "brtson 'grus rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A657BD8F3C14CF1 , bdr:NT6D35FF85D7BC5D07 , bdr:NT8BFF409CA703B81A ;
+        :personEvent        bdr:EV4C58489BCEB29DE2 , bdr:EV8B8B8F6167493CB4 , bdr:EVC09B8A5790B446BB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5A49C26025870746 , bdr:NMD1AAE2A5DB4B523F ;
+        :personStudentOf    bdr:P647 , bdr:P719 ;
+        :personTeacherOf    bdr:P1005 , bdr:P1083 , bdr:P3862 .
+}

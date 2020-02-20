@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12186> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12186 {
+    bda:LG5F73F718E4E571A2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-26T11:39:43.048Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12186  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12186 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0e/P8LS12186.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12186 ;
+        adm:logEntry        bda:LG5F73F718E4E571A2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B111660146674F0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVA64CCDA862D140AF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1737"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD9E364C051A29F53
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1759"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM32C3975A4D94862A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 28"@bo-x-ewts .
+    
+    bdr:NM37233258945050D5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang yon tan 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMD143B99D1BC7A66F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhwa lu mkhan po ngag dbang yon tan 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NT015780BA24BBFAAA
+        a                   :Note ;
+        :locationStatement  "p. 409-410" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P8LS12186  a        :Person ;
+        skos:prefLabel      "ngag dbang yon tan 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT015780BA24BBFAAA ;
+        :personEvent        bdr:EV4B111660146674F0 , bdr:EVA64CCDA862D140AF , bdr:EVD9E364C051A29F53 ;
+        :personName         bdr:NM32C3975A4D94862A , bdr:NM37233258945050D5 , bdr:NMD143B99D1BC7A66F .
+}

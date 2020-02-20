@@ -1,0 +1,69 @@
+@base          <bdg:P1KG1363> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1363 {
+    bda:LG039BFDF5983DBF26
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-09T11:00:12.884Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB2E74B73147D2B11
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-09T15:15:16.026Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1363  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1363 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "25/P1KG1363.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1363 ;
+        adm:logEntry        bda:LG039BFDF5983DBF26 , bda:LGB2E74B73147D2B11 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81DA66BF0F5F99DB
+        a                   :PersonBirth ;
+        :onYear             "1926"^^xsd:gYear .
+    
+    bdr:NM31479E03763FD383
+        a                   :PersonPersonalName ;
+        rdfs:label          "g.yu lo zla ba tshe ring /"@bo-x-ewts .
+    
+    bdr:NMD2C3A5333FB7D82C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba tshe ring /"@bo-x-ewts .
+    
+    bdr:NME4DAE1BCFE25A53F
+        a                   :PersonPersonalName ;
+        rdfs:label          "thub bstan stobs ldan/"@bo-x-ewts .
+    
+    bdr:NME85F67D14F748BED
+        a                   :PersonPersonalName ;
+        rdfs:label          "zla ba tshe ring, g.yu lo/"@bo-x-ewts .
+    
+    bdr:NT649E282F99E536E0
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1362 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1363  a         :Person ;
+        skos:prefLabel      "zla ba tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT649E282F99E536E0 ;
+        :personEvent        bdr:EV81DA66BF0F5F99DB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM31479E03763FD383 , bdr:NMD2C3A5333FB7D82C , bdr:NME4DAE1BCFE25A53F , bdr:NME85F67D14F748BED .
+}

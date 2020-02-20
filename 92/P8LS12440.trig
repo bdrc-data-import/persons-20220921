@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12440> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12440 {
+    bda:LG8B32591920470BA3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-20T11:48:38.935Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG92E1EAA67C38853A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGE0BBA5EE395CA787
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-15T16:39:55.303Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12440  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12440 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "92/P8LS12440.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12440 ;
+        adm:logEntry        bda:LG8B32591920470BA3 , bda:LG92E1EAA67C38853A , bda:LGE0BBA5EE395CA787 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV798D0BB8323CDFE7
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12780 .
+    
+    bdr:NM09348AB50837BCB6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamar Serche Lama 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM178A228F9FB7F7FC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NME7132A7B79C68225
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rdza mar gser phye bla ma 01"@bo-x-ewts .
+    
+    bdr:NT0DCAA3986E181895
+        a                   :Note ;
+        :locationStatement  "p. 316" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "rdza mar gser phye bla ma'i skye phreng\n1) dang po ni/ bstan pa'i nyi ma/ gnyal rdo khang du 'khrungs/ dgung lo so bdun par gshegs/"@bo-x-ewts .
+    
+    bdr:P8LS12440  a        :Person ;
+        skos:prefLabel      "bstan pa'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0DCAA3986E181895 ;
+        :personEvent        bdr:EV798D0BB8323CDFE7 ;
+        :personName         bdr:NM09348AB50837BCB6 , bdr:NM178A228F9FB7F7FC , bdr:NME7132A7B79C68225 .
+}

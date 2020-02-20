@@ -1,0 +1,77 @@
+@base          <bdg:P7475> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7475 {
+    bda:LG6C3E01AF28E40321
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-04-03T17:23:59.022Z"^^xsd:dateTime ;
+        adm:logMessage      "added residence"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE5A97ED6DB32CE36
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T10:30:44.227Z"^^xsd:dateTime ;
+        adm:logMessage      "non actors"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGF8D7EB1A9641216D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-29T12:58:03.422Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P7475  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7475 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "31/P7475.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7475 ;
+        adm:logEntry        bda:LG6C3E01AF28E40321 , bda:LGE5A97ED6DB32CE36 , bda:LGF8D7EB1A9641216D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV16918991543380D7
+        a                   :PersonDeath ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:EV235B57CA96645351
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EV986063E88DA19F3E
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G1TD39 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3916CA1B88115A89
+        a                   :PersonPersonalName ;
+        rdfs:label          "roerich, george"@bo-x-ewts .
+    
+    bdr:NM5C802C7761714B33
+        a                   :PersonPersonalName ;
+        rdfs:label          "yuri nikolaievich roerich"@en .
+    
+    bdr:NTCD0117969C9AA5F7
+        a                   :Note ;
+        :noteText           "brief biography exist in website www.roerichtrust.org"@en .
+    
+    bdr:P7475  a            :Person ;
+        skos:prefLabel      "roerich, george"@bo-x-ewts , "yuri nikolaievich roerich"@en ;
+        :isRoot             true ;
+        :note               bdr:NTCD0117969C9AA5F7 ;
+        :personEvent        bdr:EV16918991543380D7 , bdr:EV235B57CA96645351 , bdr:EV986063E88DA19F3E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3916CA1B88115A89 , bdr:NM5C802C7761714B33 .
+}

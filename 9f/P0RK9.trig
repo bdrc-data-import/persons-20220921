@@ -1,0 +1,75 @@
+@base          <bdg:P0RK9> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK9 {
+    bda:LG8A36DF4DD9E7300C
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:LGBE8756ADE927170E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-23T10:19:43.308Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name, sanskrit name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDB1BEF1C2641EA93
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T15:55:51.329Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGE22EF3479EBFB885
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-26T16:23:53.933Z"^^xsd:dateTime ;
+        adm:logMessage      "name normalized"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P0RK9  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK9 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9f/P0RK9.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK9 ;
+        adm:logEntry        bda:LG8A36DF4DD9E7300C , bda:LGBE8756ADE927170E , bda:LGDB1BEF1C2641EA93 , bda:LGE22EF3479EBFB885 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0893240F54A29BFD
+        a                   :PersonOtherName ;
+        rdfs:label          "gu Na sA gar/"@bo-x-ewts .
+    
+    bdr:NM6238C7FCE0D52455
+        a                   :PersonOtherName ;
+        rdfs:label          "gunasagar"@sa-x-ndia .
+    
+    bdr:NMDE3A19B39689D085
+        a                   :PersonOtherName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9DD0BAE913A2F521
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 23a2" ;
+        :noteSource         bdr:MW29706 .
+    
+    bdr:P0RK9  a            :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9DD0BAE913A2F521 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0893240F54A29BFD , bdr:NM6238C7FCE0D52455 , bdr:NMDE3A19B39689D085 ;
+        :personStudentOf    bdr:P0RK8 ;
+        :personTeacherOf    bdr:P0RK10 .
+}

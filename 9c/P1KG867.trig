@@ -1,0 +1,51 @@
+@base          <bdg:P1KG867> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG867 {
+    bda:LG77C9D14E12F22CC0
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T17:15:32.585Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG867  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG867 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9c/P1KG867.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG867 ;
+        adm:logEntry        bda:LG77C9D14E12F22CC0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14183DD0DB827BEB
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0891839077C3A759
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu dbang ldan/"@bo-x-ewts .
+    
+    bdr:NMA144F71F97E9EC76
+        a                   :PersonPrimaryName ;
+        rdfs:label          "luo bu wang dan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:P1KG867  a          :Person ;
+        skos:prefLabel      "nor bu dbang ldan/"@bo-x-ewts , "luo bu wang dan"@zh-latn-pinyin-x-ndia ;
+        :isRoot             true ;
+        :personEvent        bdr:EV14183DD0DB827BEB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0891839077C3A759 , bdr:NMA144F71F97E9EC76 .
+}

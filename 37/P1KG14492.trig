@@ -1,0 +1,59 @@
+@base          <bdg:P1KG14492> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14492 {
+    bda:LG52800E23E69530F9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-15T16:27:13.409Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14492  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14492 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "37/P1KG14492.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14492 ;
+        adm:logEntry        bda:LG52800E23E69530F9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5F2B2C9F38F2652C
+        a                   :PersonBirth ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:EV8C133D845ABD6A73
+        a                   :PersonDeath ;
+        :onYear             "1957"^^xsd:gYear .
+    
+    bdr:NMB8087B6FF0D4DBD7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bskal bzang lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFA48CC1C87B5C62C
+        a                   :PersonPersonalName ;
+        rdfs:label          "skyang sprul bskal bzang lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT4F0DFA8D49EFA050
+        a                   :Note ;
+        :noteText           "bon master"@en .
+    
+    bdr:P1KG14492  a        :Person ;
+        skos:prefLabel      "bskal bzang lung rtogs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F0DFA8D49EFA050 ;
+        :personEvent        bdr:EV5F2B2C9F38F2652C , bdr:EV8C133D845ABD6A73 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB8087B6FF0D4DBD7 , bdr:NMFA48CC1C87B5C62C .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P222> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P222 {
+    bda:P222  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P222 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "71/P222.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P222 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18AD546E4D89C2F1
+        a                   :PersonDeath ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:EV7A6A23D47D7885E0
+        a                   :PersonBirth ;
+        :onYear             "1897"^^xsd:gYear .
+    
+    bdr:EV920255F0A907EC5A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1713 .
+    
+    bdr:NM19BDDD00235E3F15
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsod nams bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM3312948A709FFCDD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "g.yung drung rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT439E5CC2D30663AC
+        a                   :Note ;
+        :locationStatement  "p. 1006" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source includes brief biography;\ndates: 1897-1955."@en .
+    
+    bdr:NT891DABD5EF0AF5E3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bon"@en .
+    
+    bdr:P222  a             :Person ;
+        skos:prefLabel      "g.yung drung rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT439E5CC2D30663AC , bdr:NT891DABD5EF0AF5E3 ;
+        :personEvent        bdr:EV18AD546E4D89C2F1 , bdr:EV7A6A23D47D7885E0 , bdr:EV920255F0A907EC5A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19BDDD00235E3F15 , bdr:NM3312948A709FFCDD .
+}

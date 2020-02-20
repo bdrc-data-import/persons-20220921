@@ -1,0 +1,57 @@
+@base          <bdg:P2702> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2702 {
+    bda:LGF1F072A797A415E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T14:57:36.557Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2702  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2702 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "80/P2702.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2702 ;
+        adm:logEntry        bda:LGF1F072A797A415E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB7D5B2CF4FBFC757
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM27B4D1735C601161
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMD14D9D1EC15F98D0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen bstan 'dzin chos 'phel/"@bo-x-ewts .
+    
+    bdr:NTA595AA018F8BB06C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P2702  a            :Person ;
+        skos:prefLabel      "bstan 'dzin chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA595AA018F8BB06C ;
+        :personEvent        bdr:EVB7D5B2CF4FBFC757 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27B4D1735C601161 , bdr:NMD14D9D1EC15F98D0 ;
+        :personTeacherOf    bdr:P2697 .
+}

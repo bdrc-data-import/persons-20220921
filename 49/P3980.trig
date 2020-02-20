@@ -1,0 +1,80 @@
+@base          <bdg:P3980> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3980 {
+    bda:LG2357EFB93523D604
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-19T11:17:42.29Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and date"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG82A49BA7F1DC1534
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-30T19:49:40.265Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGA47471C754BD8592
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T02:25:30.156Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P3980  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3980 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "49/P3980.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3980 ;
+        adm:logEntry        bda:LG2357EFB93523D604 , bda:LG82A49BA7F1DC1534 , bda:LGA47471C754BD8592 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB099A16F3F55A3DC
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM027E830FE3A14BCA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shud ge lo tsA ba grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM0FB941DD3304DB67
+        a                   :PersonTitle ;
+        rdfs:label          "shud ke lo tsA ba grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6ACA1AEA490B0A0F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT96BD4F95E5220DB4
+        a                   :Note ;
+        :locationStatement  "p. 1710" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTE48171CD259549AC
+        a                   :Note ;
+        :noteText           "translator"@en .
+    
+    bdr:P3980  a            :Person ;
+        skos:prefLabel      "grags pa rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT96BD4F95E5220DB4 , bdr:NTE48171CD259549AC ;
+        :personEvent        bdr:EVB099A16F3F55A3DC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM027E830FE3A14BCA , bdr:NM0FB941DD3304DB67 , bdr:NM6ACA1AEA490B0A0F ;
+        :personStudentOf    bdr:P3981 , bdr:P4CZ15085 ;
+        :personTeacherOf    bdr:P3983 .
+}

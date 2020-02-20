@@ -1,0 +1,78 @@
+@base          <bdg:P8711> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8711 {
+    bda:LG4AC79B9609BD1BFA
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-01-31T04:30:09.515Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG8E2F948DC963ABCB
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T13:33:32.635Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8711  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8711 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e8/P8711.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8711 ;
+        adm:logEntry        bda:LG4AC79B9609BD1BFA , bda:LG8E2F948DC963ABCB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA2249CBAC328FFC0
+        a                   :PersonBirth ;
+        :onYear             "1147"^^xsd:gYear .
+    
+    bdr:EVA495369D89647927
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G30 .
+    
+    bdr:EVE9E0FE3A6E8145B5
+        a                   :PersonDeath ;
+        :onYear             "1207"^^xsd:gYear .
+    
+    bdr:NM2951DA3AF52B8BBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NMB149D3A496315760
+        a                   :PersonTitle ;
+        rdfs:label          "mnyam med shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NT2C1A3C46F90AB746
+        a                   :Note ;
+        :locationStatement  "p. 2284" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1207.. year of death"@en .
+    
+    bdr:NT68B47717A102415D
+        a                   :Note ;
+        :locationStatement  "p. 56" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "this source gives dates as 1147-1207"@en .
+    
+    bdr:P8711  a            :Person ;
+        skos:prefLabel      "shAkya ye shes/"@bo-x-ewts ;
+        :hasBrother         bdr:P8712 ;
+        :isRoot             true ;
+        :note               bdr:NT2C1A3C46F90AB746 , bdr:NT68B47717A102415D ;
+        :personEvent        bdr:EVA2249CBAC328FFC0 , bdr:EVA495369D89647927 , bdr:EVE9E0FE3A6E8145B5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2951DA3AF52B8BBD , bdr:NMB149D3A496315760 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Nyamme-Shakya-Yeshe/11453"^^xsd:anyURI .
+}

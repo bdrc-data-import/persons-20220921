@@ -1,0 +1,72 @@
+@base          <bdg:P9395> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9395 {
+    bda:LG089D648525B7B80A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T09:50:04.385Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9395  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9395 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7b/P9395.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9395 ;
+        adm:logEntry        bda:LG089D648525B7B80A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A77131A4B57CD3C
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV3A4C9456B3509B41
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1850 .
+    
+    bdr:NM0B8D3834AE987DD7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM3F89B27C881A9102
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rong zhis 02"@bo-x-ewts .
+    
+    bdr:NM49FF3E78A5443724
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rongzhi 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM684BF9D30AEBBC03
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong zhis 02 grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTC0931E9B1821A782
+        a                   :Note ;
+        :locationStatement  "pp. 299-300" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "a dar chos 'phel gling ngam rong zhis grwa tshang \n'di ni gru'u a lags kyis btab/ rong bo nas byon pa'i bla ma rong zhis kyis bzung bas rong zhis grwa tshang du grags/ de nas sprul sku grags pa rgyal mtshan gyis gnas bcu'i gser thang bzhengs te mchod chog btsugs/ de'i sprul sku bstan 'dzin grags pa rgya mtshos sgrub sde skyong bzhin yod/ dgon 'di'i gzhi gsum gyi phyag len ngos gtsang zhing/ 'grig khrims shin tu dam/ rgyal ba sku 'phreng zhig gi gdung rus steng du a yig gsal ba dbyibs dong tse lta bu zhig dang/ gzhung gis gnang pa'i bka' 'gyur/ tsong kha brgyad cu'i zhal thang sogs bzhugs/ bde chen gyi dgon lag red\n\nrong zhis sprul sku grags pa rgyal mtshan \nnyid ni a rin rong bo tshang nas 'khrungs/ bde chen gyi dge bshes/ de ka'i khrir bzhugs/ tshul khrims dag cing dge sbyor la gzhol/ khri chen sprul sku'i yongs 'dzin mdzad/ bkra shis 'khyil du gung thang 'jam pa'i dbyangs kyi drung du phebs/ rgyu mtshan zhus par/ yongs 'dzin gsung gnas bcu'i phyag mchod kyi dpe gnang/ phyir phebs bstun gnas bcu'i gser thang bzhengs te mchod chog btsugs/ de'i sprul sku bstan 'dzin grags pa rgya mtsho ba red"@en .
+    
+    bdr:P9395  a            :Person ;
+        skos:prefLabel      "grags pa rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9396 ;
+        :isRoot             true ;
+        :note               bdr:NTC0931E9B1821A782 ;
+        :personEvent        bdr:EV2A77131A4B57CD3C , bdr:EV3A4C9456B3509B41 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B8D3834AE987DD7 , bdr:NM3F89B27C881A9102 , bdr:NM49FF3E78A5443724 , bdr:NM684BF9D30AEBBC03 ;
+        :personStudentOf    bdr:P298 .
+}

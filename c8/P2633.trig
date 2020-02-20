@@ -1,0 +1,78 @@
+@base          <bdg:P2633> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2633 {
+    bda:LG6C886355060B5221
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:51:36.643Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE11930482EF25C8A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:50:08.354Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat from G44 to G3582"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2633  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2633 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c8/P2633.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2633 ;
+        adm:logEntry        bda:LG6C886355060B5221 , bda:LGE11930482EF25C8A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07C209FD84787353
+        a                   :PersonBirth ;
+        :onYear             "1371"^^xsd:gYear .
+    
+    bdr:EVAF0226409ED97A9D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EVCB907DB9A14A73C9
+        a                   :PersonDeath ;
+        :onYear             "1392"^^xsd:gYear .
+    
+    bdr:NMCCA764FCDB733D5D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NMDF3F59C1E86E0BD5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug chen shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NT118D81068774555E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NTB5FD44A4AA82B879
+        a                   :Note ;
+        :locationStatement  "p. 1716" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P2633  a            :Person ;
+        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        :hasFather          bdr:P1718 ;
+        :hasOlderBrother    bdr:P2632 ;
+        :isRoot             true ;
+        :note               bdr:NT118D81068774555E , bdr:NTB5FD44A4AA82B879 ;
+        :personEvent        bdr:EV07C209FD84787353 , bdr:EVAF0226409ED97A9D , bdr:EVCB907DB9A14A73C9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCCA764FCDB733D5D , bdr:NMDF3F59C1E86E0BD5 ;
+        :personStudentOf    bdr:P1718 ;
+        :personTeacherOf    bdr:P2631 , bdr:P2632 .
+}

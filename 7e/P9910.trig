@@ -1,0 +1,78 @@
+@base          <bdg:P9910> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9910 {
+    bda:LG5E899D14DAA97832
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T09:22:20.499Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9910  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9910 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7e/P9910.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9910 ;
+        adm:logEntry        bda:LG5E899D14DAA97832 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6AED8BC50E66B0BB
+        a                   :PersonDeath ;
+        :onYear             "1735"^^xsd:gYear .
+    
+    bdr:EV7E805CC61FB566D6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4712 ;
+        :onYear             "1717"^^xsd:gYear .
+    
+    bdr:NM1DE9EC8F7C68EF62
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 03 'jigs med nor bu/"@bo-x-ewts .
+    
+    bdr:NM2C0469BBE54C3C40
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 03"@bo-x-ewts .
+    
+    bdr:NM4F0DE190B568CBE5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med nor bu/"@bo-x-ewts .
+    
+    bdr:NMEACF58E09FE31152
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Gyelse Tulku 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT65CAD4CC11440342
+        a                   :Note ;
+        :locationStatement  "p. 105-106" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "accroding to this source he is the third in the line of 'brug rgyal sras"@en .
+    
+    bdr:NTF73C0A4A1FE2ADC2
+        a                   :Note ;
+        :locationStatement  "ff. 129r-129v" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "this bhutanese lama was born as the second embodiment of the 'brug rgyal sras into the lineage of khri srong lde btsan or lha dar at bon sbis in krong sa\nhe was enthroned at the age of 13 and died in 1735"@en .
+    
+    bdr:P9910  a            :Person ;
+        skos:prefLabel      "'jigs med nor bu/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P521 ;
+        :isRoot             true ;
+        :note               bdr:NT65CAD4CC11440342 , bdr:NTF73C0A4A1FE2ADC2 ;
+        :personEvent        bdr:EV6AED8BC50E66B0BB , bdr:EV7E805CC61FB566D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DE9EC8F7C68EF62 , bdr:NM2C0469BBE54C3C40 , bdr:NM4F0DE190B568CBE5 , bdr:NMEACF58E09FE31152 ;
+        :personStudentOf    bdr:P514 , bdr:P522 , bdr:P527 , bdr:P529 .
+}

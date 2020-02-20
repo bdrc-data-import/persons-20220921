@@ -1,0 +1,68 @@
+@base          <bdg:P8LS12214> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12214 {
+    bda:LGB35681B3DABBFA8C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T14:23:59.64Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12214  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12214 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d9/P8LS12214.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12214 ;
+        adm:logEntry        bda:LGB35681B3DABBFA8C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV190E60EC134C5A6F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV295F6C4511553EBD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV96786B0233CA89C7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM21AAFC1A754D9A77
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag phyug 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM4151CAF96270286C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME51C2AB7AF580AC8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 18"@bo-x-ewts .
+    
+    bdr:NT245E97A29A206F20
+        a                   :Note ;
+        :locationStatement  "p. 126" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12214  a        :Person ;
+        skos:prefLabel      "'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT245E97A29A206F20 ;
+        :personEvent        bdr:EV190E60EC134C5A6F , bdr:EV295F6C4511553EBD , bdr:EV96786B0233CA89C7 ;
+        :personName         bdr:NM21AAFC1A754D9A77 , bdr:NM4151CAF96270286C , bdr:NME51C2AB7AF580AC8 .
+}

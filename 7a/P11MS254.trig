@@ -1,0 +1,84 @@
+@base          <bdg:P11MS254> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS254 {
+    bda:LG1817F37CCB27D067
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T10:07:27.535Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG3A37839D81FCA486
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T13:12:39.436Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG806FC79A0AADCE9B
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-02T15:14:43.857Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P11MS254  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS254 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "7a/P11MS254.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS254 ;
+        adm:logEntry        bda:LG1817F37CCB27D067 , bda:LG3A37839D81FCA486 , bda:LG806FC79A0AADCE9B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FB6A280856A7C10
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1292"^^xsd:gYear .
+    
+    bdr:EVBC683FB44C33666F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1KR1884 ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE5A2BB4697CB7E28
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1222"^^xsd:gYear .
+    
+    bdr:EVF85C8E46BC60625D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR1884 .
+    
+    bdr:NM413EEC1364CDC320
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pha rin po che/"@bo-x-ewts .
+    
+    bdr:NMCC70788C8DBC9666
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Pa Rinpoche"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT52A0A465F379052C
+        a                   :Note ;
+        :locationStatement  "p. 325" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P11MS254  a         :Person ;
+        skos:prefLabel      "pha rin po che/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT52A0A465F379052C ;
+        :personEvent        bdr:EV0FB6A280856A7C10 , bdr:EVBC683FB44C33666F , bdr:EVE5A2BB4697CB7E28 , bdr:EVF85C8E46BC60625D ;
+        :personName         bdr:NM413EEC1364CDC320 , bdr:NMCC70788C8DBC9666 ;
+        :personStudentOf    bdr:P813 ;
+        :personTeacherOf    bdr:P11MS253 .
+}

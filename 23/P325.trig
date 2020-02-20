@@ -1,0 +1,53 @@
+@base          <bdg:P325> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P325 {
+    bda:P325  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P325 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "23/P325.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P325 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9511B25BFD4AC123
+        a                   :PersonBirth ;
+        :onYear             "1822"^^xsd:gYear .
+    
+    bdr:NM244EBA05C92A8FB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mchog grub nyi ma/"@bo-x-ewts .
+    
+    bdr:NT11C58797CA601B0C
+        a                   :Note ;
+        :noteText           "Cf. BRKB which also lists a lama of the same name and primary title who was born in 1702."@en .
+    
+    bdr:NT419CCF91101FAFC3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT92E83E3E624160C8
+        a                   :Note ;
+        :locationStatement  "p. 274" ;
+        :noteSource         bdr:MW19804 .
+    
+    bdr:P325  a             :Person ;
+        skos:prefLabel      "blo bzang mchog grub nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT11C58797CA601B0C , bdr:NT419CCF91101FAFC3 , bdr:NT92E83E3E624160C8 ;
+        :personEvent        bdr:EV9511B25BFD4AC123 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM244EBA05C92A8FB5 .
+}

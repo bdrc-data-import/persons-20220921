@@ -1,0 +1,74 @@
+@base          <bdg:P9251> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9251 {
+    bda:LGCBC40A1803492608
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-01T10:38:40.613Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9251  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9251 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a6/P9251.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9251 ;
+        adm:logEntry        bda:LGCBC40A1803492608 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV497C9E5A80C6476C
+        a                   :PersonBirth ;
+        :onYear             "1909"^^xsd:gYear .
+    
+    bdr:EV8C09BE78A44A6399
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3705 .
+    
+    bdr:EVA0403390F5EB9AE4
+        a                   :PersonDeath ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM0C2BA6C4C7C94442
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a lags rgyal po 05"@bo-x-ewts .
+    
+    bdr:NM5FCD32D59D24381E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a lags rgyal po 05 dri med blo gros/"@bo-x-ewts .
+    
+    bdr:NM92D5FF0698D2F43D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Alak Gyelpo 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMDBA2C8B5F626F0C6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dri med blo gros/"@bo-x-ewts .
+    
+    bdr:NT6C8E59512B19D185
+        a                   :Note ;
+        :locationStatement  "p. 34" ;
+        :noteSource         bdr:MW28803 ;
+        :noteText           "brief biography\nborn as the son of the dgu rong 'jigs bral chos dbyings rdo rje\n\nde ni snga 'gyur bstan pa'i khyab bdag chen po dgu rong 'jigs bral chos dbyings rdo rje dang dkar brjid stong dpon gyi sras mo 'dzoms skyid gnyis kyi sras su bod rab byung bco lgna ba'i sa bya ste 1909 lo'i zla 12 pa'i tshes 25 la sku 'khrungs/ chung ba'i dus su reb kong sngags mang dang rgyal po dpon po sogs kyis 'os tho bsgrigs pa ltar rdzogs chen thub bstan chos kyi rdo rje nas bla ma rig 'dzin dpal ldan bkra shis kyi yang sprul du thag bcad pa bzhin rig 'dzin rab 'phel gling du khri ston rgya cher byas/ dgung lo bcu drug par yab dgu rong tshang nas a rol lung rigs rgya mtsho'i mdun du bskyal nas slob gnyer gnang du bcug snga phyir rkang tsha nya nag jo skor dgon dang them chen rdzong bkra shis 'byung gnas sogs su bstan 'gror phan pa'i las sgrub mur dgung lo nyer lnga ba spyi lo 1933 lor zhi bar gzhol/"@en .
+    
+    bdr:P9251  a            :Person ;
+        skos:prefLabel      "dri med blo gros/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P7954 ;
+        :isRoot             true ;
+        :note               bdr:NT6C8E59512B19D185 ;
+        :personEvent        bdr:EV497C9E5A80C6476C , bdr:EV8C09BE78A44A6399 , bdr:EVA0403390F5EB9AE4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C2BA6C4C7C94442 , bdr:NM5FCD32D59D24381E , bdr:NM92D5FF0698D2F43D , bdr:NMDBA2C8B5F626F0C6 .
+}

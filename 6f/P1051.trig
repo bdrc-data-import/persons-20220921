@@ -1,0 +1,65 @@
+@base          <bdg:P1051> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1051 {
+    bda:LG524B1F7EAF777A97
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-23T16:44:49.514Z"^^xsd:dateTime ;
+        adm:logMessage      "added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P1051  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1051 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6f/P1051.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1051 ;
+        adm:logEntry        bda:LG524B1F7EAF777A97 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA223DE61FB7C8943
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM2611E7AC1E40DABF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lak+Shi mi ka ra/"@bo-x-ewts .
+    
+    bdr:NM4B0F025E3975EAAE
+        a                   :PersonOtherName ;
+        rdfs:label          "phun tshogs byed pa/"@bo-x-ewts .
+    
+    bdr:NM79BC8117FD56DA97
+        a                   :PersonPersonalName ;
+        rdfs:label          "laksmikara"@sa-x-ewts .
+    
+    bdr:NMB02CA30A1AB8923C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mahA paN+Di ta lak+Shi mi ka ra/"@bo-x-ewts .
+    
+    bdr:NT4AAAD30E92278D06
+        a                   :Note ;
+        :noteText           "Indian Panditas"@en .
+    
+    bdr:P1051  a            :Person ;
+        skos:prefLabel      "lak+Shi mi ka ra/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4AAAD30E92278D06 ;
+        :personEvent        bdr:EVA223DE61FB7C8943 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2611E7AC1E40DABF , bdr:NM4B0F025E3975EAAE , bdr:NM79BC8117FD56DA97 , bdr:NMB02CA30A1AB8923C ;
+        :personTeacherOf    bdr:P1046 .
+}

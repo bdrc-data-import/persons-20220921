@@ -1,0 +1,53 @@
+@base          <bdg:P7741> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7741 {
+    bda:LG85D1D96A27D620F3
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-20T15:00:15.715Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P7741  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7741 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "95/P7741.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7741 ;
+        adm:logEntry        bda:LG85D1D96A27D620F3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81BE2D20E8AE0488
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM00638458951BCF12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma nor bu/"@bo-x-ewts .
+    
+    bdr:NM7351BEE03087663B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag bla pad+ma nor bu/"@bo-x-ewts .
+    
+    bdr:P7741  a            :Person ;
+        skos:prefLabel      "pad+ma nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV81BE2D20E8AE0488 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00638458951BCF12 , bdr:NM7351BEE03087663B ;
+        :personStudentOf    bdr:P669 ;
+        :personTeacherOf    bdr:P669 .
+}

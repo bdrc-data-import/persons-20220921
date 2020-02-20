@@ -1,0 +1,53 @@
+@base          <bdg:P7483> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7483 {
+    bda:LGCC105EDC75903B43
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T11:16:06.276Z"^^xsd:dateTime ;
+        adm:logMessage      "checked data against PP8683"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P7483  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7483 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a9/P7483.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7483 ;
+        adm:logEntry        bda:LGCC105EDC75903B43 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA79B0515D165CAFB
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1F97510348810115
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:NT49F677D77DE9DEA6
+        a                   :Note ;
+        :noteText           "sa skya pa scholar, hitherto unknown"@en .
+    
+    bdr:P7483  a            :Person ;
+        skos:prefLabel      "kun dga' blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT49F677D77DE9DEA6 ;
+        :personEvent        bdr:EVA79B0515D165CAFB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1F97510348810115 ;
+        :personStudentOf    bdr:P791 .
+}

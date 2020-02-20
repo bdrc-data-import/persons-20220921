@@ -1,0 +1,86 @@
+@base          <bdg:P815> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P815 {
+    bda:LGE8A8898D6C517EFE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-26T12:05:21.086Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGEB4D58506A779D60
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-02T09:45:37.787Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P815  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P815 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "20/P815.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P815 ;
+        adm:logEntry        bda:LGE8A8898D6C517EFE , bda:LGEB4D58506A779D60 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7E58D8CC7F23B03F
+        a                   :PersonBirth ;
+        :onYear             "1456"^^xsd:gYear .
+    
+    bdr:EVA72FD605E6D295CB
+        a                   :PersonDeath ;
+        :onYear             "1539"^^xsd:gYear .
+    
+    bdr:NM166E407A3F15ACB1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMB256CA4C43D5B7C1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma 'phrin las pa/"@bo-x-ewts .
+    
+    bdr:NMF2B69A1C3CD324E4
+        a                   :PersonPersonalName ;
+        rdfs:label          "phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT3226D043100E9F1C
+        a                   :Note ;
+        :locationStatement  "p. 57" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:NT5DBCEC2867ECF0D8
+        a                   :Note ;
+        :noteText           "A-kyu-ching gsan yig, p. 52 gives Karma-'phrin-las-pa dwags po phyogs las rnam rgyal suggesting two individuals."@en .
+    
+    bdr:NT796C05B038FF9F83
+        a                   :Note ;
+        :noteText           "late 15th and early 16th century master of the dwags po bka' brgyud tradition"@en .
+    
+    bdr:NTD3A69E11F4F4005E
+        a                   :Note ;
+        :locationStatement  "p. 324" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "death year of 1539 confirmed"@en .
+    
+    bdr:P815  a             :Person ;
+        skos:prefLabel      "karma 'phrin las pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3226D043100E9F1C , bdr:NT5DBCEC2867ECF0D8 , bdr:NT796C05B038FF9F83 , bdr:NTD3A69E11F4F4005E ;
+        :personEvent        bdr:EV7E58D8CC7F23B03F , bdr:EVA72FD605E6D295CB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM166E407A3F15ACB1 , bdr:NMB256CA4C43D5B7C1 , bdr:NMF2B69A1C3CD324E4 ;
+        :personStudentOf    bdr:P1027 , bdr:P821 ;
+        :personTeacherOf    bdr:P10614 , bdr:P319 , bdr:P385 , bdr:P5742 , bdr:P822 .
+}

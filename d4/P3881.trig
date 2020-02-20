@@ -1,0 +1,58 @@
+@base          <bdg:P3881> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3881 {
+    bda:LGE027ACB0D4C94B8B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:58:37.444Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3881  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3881 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d4/P3881.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3881 ;
+        adm:logEntry        bda:LGE027ACB0D4C94B8B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC6EF19D731CA7C15
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM8837DB1687693081
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa rin chen/"@bo-x-ewts .
+    
+    bdr:NM8E6111E06E22F468
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon byams pa rin chen/"@bo-x-ewts .
+    
+    bdr:NT4CC852463FB4B362
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3881  a            :Person ;
+        skos:prefLabel      "byams pa rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4CC852463FB4B362 ;
+        :personEvent        bdr:EVC6EF19D731CA7C15 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8837DB1687693081 , bdr:NM8E6111E06E22F468 ;
+        :personStudentOf    bdr:P37 ;
+        :personTeacherOf    bdr:P2156 .
+}

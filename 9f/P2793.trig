@@ -1,0 +1,58 @@
+@base          <bdg:P2793> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2793 {
+    bda:LG63C104EDCE9B062B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T14:27:59.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2793  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2793 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9f/P2793.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2793 ;
+        adm:logEntry        bda:LG63C104EDCE9B062B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB61D63FC4BFBD301
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1E3B0E18FA311D7D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po grags pa/"@bo-x-ewts .
+    
+    bdr:NMA2AFCB83DB7E91BD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub mchog mgon po grags pa/"@bo-x-ewts .
+    
+    bdr:NTCED95D55E2D10284
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:P2793  a            :Person ;
+        skos:prefLabel      "mgon po grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCED95D55E2D10284 ;
+        :personEvent        bdr:EVB61D63FC4BFBD301 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E3B0E18FA311D7D , bdr:NMA2AFCB83DB7E91BD ;
+        :personStudentOf    bdr:P2792 ;
+        :personTeacherOf    bdr:P2794 .
+}

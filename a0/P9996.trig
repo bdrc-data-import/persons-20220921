@@ -1,0 +1,59 @@
+@base          <bdg:P9996> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9996 {
+    bda:LG624823F07CE3F981
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-09T16:23:41.03Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9996  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9996 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a0/P9996.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9996 ;
+        adm:logEntry        bda:LG624823F07CE3F981 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68439D5414D7DCD8
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM8C0651898691C99D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'bar/"@bo-x-ewts .
+    
+    bdr:NM8FC3545A70D9AAB2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "la stod pa dkon mchog 'bar/"@bo-x-ewts .
+    
+    bdr:NTD571C00572137C60
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 33r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in a prajnaparamita transmission lineages, stemming from atisa"@en .
+    
+    bdr:P9996  a            :Person ;
+        skos:prefLabel      "dkon mchog 'bar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD571C00572137C60 ;
+        :personEvent        bdr:EV68439D5414D7DCD8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8C0651898691C99D , bdr:NM8FC3545A70D9AAB2 ;
+        :personStudentOf    bdr:P9995 ;
+        :personTeacherOf    bdr:P9985 .
+}

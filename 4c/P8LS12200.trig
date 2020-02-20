@@ -1,0 +1,96 @@
+@base          <bdg:P8LS12200> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12200 {
+    bda:LG4FB896342E5A5F4A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-22T15:14:56.401Z"^^xsd:dateTime ;
+        adm:logMessage      "added leave office date"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG61F9D92CCAA9C04F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-09-28T09:13:39.204Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn infavour of P8845"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEDD098AA6ABD4A69
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-10T09:29:02.591Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12200  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12200 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "4c/P8LS12200.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12200 ;
+        adm:logEntry        bda:LG4FB896342E5A5F4A , bda:LG61F9D92CCAA9C04F , bda:LGEDD098AA6ABD4A69 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV0439E9AEFE1EE1CB
+        a                   :PersonLeavesOffice ;
+        :onYear             "1569"^^xsd:gYear .
+    
+    bdr:EV64F9596A9E3A8BC2
+        a                   :PersonDeath ;
+        :onYear             "1570"^^xsd:gYear .
+    
+    bdr:EV7E707FF7D1239F7F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4144 ;
+        :onYear             "1502"^^xsd:gYear .
+    
+    bdr:EVB3BB2884E9397EA5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:EVC4D0007B42903936
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1566"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM284109D6C7636333
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NM641F9B7D5D83C353
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje drung 'jam dpal bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NM6D89BD23FF4751FA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "chab mdo byams pa gling gdan rabs 11"@bo-x-ewts .
+    
+    bdr:NT3327CAA2EF3C7EF8
+        a                   :Note ;
+        :locationStatement  "p. 96-97" ;
+        :noteSource         bdr:MW1KG3372 ;
+        :noteText           "studied 8 years at sa sgang\nserved chos rje of ka mda' for 4 years\n7 year dpon slob of chab mdo monastery\nfounded ru zo monastery in earth-dragon year"@en .
+    
+    bdr:NT7A4CF7CD823DFE2D
+        a                   :Note ;
+        :locationStatement  "p. 291-292" ;
+        :noteSource         bdr:MW00KG01519 .
+    
+    bdr:P8LS12200  a        :Person ;
+        skos:prefLabel      "'jam dpal bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3327CAA2EF3C7EF8 , bdr:NT7A4CF7CD823DFE2D ;
+        :personEvent        bdr:EV0439E9AEFE1EE1CB , bdr:EV64F9596A9E3A8BC2 , bdr:EV7E707FF7D1239F7F , bdr:EVB3BB2884E9397EA5 , bdr:EVC4D0007B42903936 ;
+        :personName         bdr:NM284109D6C7636333 , bdr:NM641F9B7D5D83C353 , bdr:NM6D89BD23FF4751FA .
+}

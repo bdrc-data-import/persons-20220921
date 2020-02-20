@@ -1,0 +1,62 @@
+@base          <bdg:P163> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P163 {
+    bda:LG0EAF1211063B8B32
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-29T12:30:31.096Z"^^xsd:dateTime ;
+        adm:logMessage      "added information"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P163  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P163 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "cb/P163.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P163 ;
+        adm:logEntry        bda:LG0EAF1211063B8B32 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D16D5FB77C89004
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G394 .
+    
+    bdr:EVE238AEDD3C56D906
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM22B2CB4A21B2ECC0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyud smad mkhan po ngag dbang mchog ldan/"@bo-x-ewts .
+    
+    bdr:NMF1AC48E94214E344
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mchog ldan/"@bo-x-ewts .
+    
+    bdr:NT5FDA342483D6FB70
+        a                   :Note ;
+        :noteText           "dge lugs teacher"@en .
+    
+    bdr:P163  a             :Person ;
+        skos:prefLabel      "ngag dbang mchog ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5FDA342483D6FB70 ;
+        :personEvent        bdr:EV9D16D5FB77C89004 , bdr:EVE238AEDD3C56D906 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM22B2CB4A21B2ECC0 , bdr:NMF1AC48E94214E344 ;
+        :personStudentOf    bdr:P1005 ;
+        :personTeacherOf    bdr:P2121 , bdr:P336 .
+}

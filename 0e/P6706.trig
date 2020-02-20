@@ -1,0 +1,63 @@
+@base          <bdg:P6706> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6706 {
+    bda:P6706  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6706 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "0e/P6706.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6706 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B6F6DF534F417A6
+        a                   :PersonLeavesOffice ;
+        :onYear             "1931"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVA3DD75411393F409
+        a                   :PersonAssumesOffice ;
+        :onYear             "1929"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVBAC767B66BF8337F
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM52E9D38A365CD7A3
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdo rje rnam rgyal, sman stod/"@bo-x-ewts .
+    
+    bdr:NMB72444DCE6E1B506
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sman stod rdo rje rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTE5B0441FA3E426DD
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1929-1931"@en .
+    
+    bdr:P6706  a            :Person ;
+        skos:prefLabel      "sman stod rdo rje rnam rgyal/"@bo-x-ewts ;
+        :hasFather          bdr:P6925 ;
+        :hasSon             bdr:P6924 , bdr:P6925 ;
+        :isRoot             true ;
+        :note               bdr:NTE5B0441FA3E426DD ;
+        :personEvent        bdr:EV4B6F6DF534F417A6 , bdr:EVA3DD75411393F409 , bdr:EVBAC767B66BF8337F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM52E9D38A365CD7A3 , bdr:NMB72444DCE6E1B506 .
+}

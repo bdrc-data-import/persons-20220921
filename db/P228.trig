@@ -1,0 +1,69 @@
+@base          <bdg:P228> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P228 {
+    bda:LGFDF8C70E2EED169D
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-03-29T11:28:18.634Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P228  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P228 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "db/P228.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P228 ;
+        adm:logEntry        bda:LGFDF8C70E2EED169D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66F703D38D09F977
+        a                   :PersonBirth ;
+        :onYear             "1882"^^xsd:gYear .
+    
+    bdr:EV9BD16B81BC719E45
+        a                   :PersonDeath ;
+        :onYear             "1954"^^xsd:gYear .
+    
+    bdr:NM604D822D643EC91E
+        a                   :PersonTitle ;
+        rdfs:label          "nom chi mkhan po ngag dbang phun tshogs/"@bo-x-ewts .
+    
+    bdr:NM67E1543F99C38DA5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yer gshong mkhan chen no mon han ngag dbang blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF8AD18C99F7A0E97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1AA2C64289D6E8B8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTEAF2137284D796DF
+        a                   :Note ;
+        :locationStatement  "p. 992" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source contains brief biography; dated: 1882-1954"@en .
+    
+    bdr:P228  a             :Person ;
+        skos:prefLabel      "ngag dbang blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1AA2C64289D6E8B8 , bdr:NTEAF2137284D796DF ;
+        :personEvent        bdr:EV66F703D38D09F977 , bdr:EV9BD16B81BC719E45 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM604D822D643EC91E , bdr:NM67E1543F99C38DA5 , bdr:NMF8AD18C99F7A0E97 .
+}

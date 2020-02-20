@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12150> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12150 {
+    bda:LGB3D121EB4B2937DB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-17T14:41:23.982Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12150  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12150 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ba/P8LS12150.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12150 ;
+        adm:logEntry        bda:LGB3D121EB4B2937DB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03B3EB88F051E9AB
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1202 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV133D7B3A46901E52
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVE4BEACF5D0784D18
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1884"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM1338FEB4DFE38D03
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMB32364495F4C7D41
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 30"@bo-x-ewts .
+    
+    bdr:NME72704AD6E4EE6F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phyag rdo thang gro mo khrong dge bshes ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTCFC19D5701BDE871
+        a                   :Note ;
+        :locationStatement  "p. 358" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12150  a        :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCFC19D5701BDE871 ;
+        :personEvent        bdr:EV03B3EB88F051E9AB , bdr:EV133D7B3A46901E52 , bdr:EVE4BEACF5D0784D18 ;
+        :personName         bdr:NM1338FEB4DFE38D03 , bdr:NMB32364495F4C7D41 , bdr:NME72704AD6E4EE6F8 .
+}

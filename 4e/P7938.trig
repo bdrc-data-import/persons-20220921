@@ -1,0 +1,72 @@
+@base          <bdg:P7938> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7938 {
+    bda:LG3D957784F68150A0
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:09:36.437Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P7938  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7938 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4e/P7938.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7938 ;
+        adm:logEntry        bda:LG3D957784F68150A0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV59394863A4AFF876
+        a                   :PersonBirth ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:EV64D3AF6850639B20
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G339 .
+    
+    bdr:EV8A86B2EDEFF65B45
+        a                   :PersonDeath ;
+        :onYear             "1911"^^xsd:gYear .
+    
+    bdr:NMF5867CF18781846A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spyang lung sprul sku 03 kun bzang 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFE757C41A287E46F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT5F0A64481CC6423C
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given; connection with khyung dgon noted"@en .
+    
+    bdr:NTD729A8F4DA9A2B72
+        a                   :Note ;
+        :locationStatement  "pp. 52-53" ;
+        :noteSource         bdr:MW28803 ;
+        :noteText           "biography"@en .
+    
+    bdr:P7938  a            :Person ;
+        skos:prefLabel      "kun bzang 'jigs med rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F0A64481CC6423C , bdr:NTD729A8F4DA9A2B72 ;
+        :personEvent        bdr:EV59394863A4AFF876 , bdr:EV64D3AF6850639B20 , bdr:EV8A86B2EDEFF65B45 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMF5867CF18781846A , bdr:NMFE757C41A287E46F ;
+        :personTeacherOf    bdr:P6067 .
+}

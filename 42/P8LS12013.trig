@@ -1,0 +1,74 @@
+@base          <bdg:P8LS12013> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12013 {
+    bda:LG0912CEDA6A9BFFD7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:28:56.731Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12013  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12013 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "42/P8LS12013.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12013 ;
+        adm:logEntry        bda:LG0912CEDA6A9BFFD7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV26ABB0CE9971D77F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV82F98A2B79091D9B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4030 .
+    
+    bdr:EVDFB39C4BFEEAA2AE
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2F0138FE1553CDFE
+        a                   :PersonTitle ;
+        rdfs:label          "gung ru dka' bcu pa rin chen byang chub/"@bo-x-ewts .
+    
+    bdr:NM5C2A048B4C60BC21
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 13"@bo-x-ewts .
+    
+    bdr:NMA66F97E4F099F54D
+        a                   :PersonTitle ;
+        rdfs:label          "slob chung rin chen/"@bo-x-ewts .
+    
+    bdr:NMFC92EBB66F5A7866
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen byang chub/"@bo-x-ewts .
+    
+    bdr:NT6E2BB4E2ED80B37E
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 31" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12013  a        :Person ;
+        skos:prefLabel      "rin chen byang chub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E2BB4E2ED80B37E ;
+        :personEvent        bdr:EV26ABB0CE9971D77F , bdr:EV82F98A2B79091D9B , bdr:EVDFB39C4BFEEAA2AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F0138FE1553CDFE , bdr:NM5C2A048B4C60BC21 , bdr:NMA66F97E4F099F54D , bdr:NMFC92EBB66F5A7866 ;
+        :personStudentOf    bdr:P84 .
+}

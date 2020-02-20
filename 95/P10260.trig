@@ -1,0 +1,59 @@
+@base          <bdg:P10260> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10260 {
+    bda:LG483D03CFDBD2A75B
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-07T14:53:49.34Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10260  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10260 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "95/P10260.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10260 ;
+        adm:logEntry        bda:LG483D03CFDBD2A75B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA50E863C80A9BDD8
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM606543F4DB8F0248
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NMF54565D683DEB780
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'tshal min chos rje ngag dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NTB12B1622B536C9A6
+        a                   :Note ;
+        :locationStatement  "p. 348" ;
+        :noteSource         bdr:MW30192 ;
+        :noteText           "one of the teachers of gong dkar rdo rje gdan pa kun dga' rnam rgyal"@en .
+    
+    bdr:P10260  a           :Person ;
+        skos:prefLabel      "ngag dbang bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB12B1622B536C9A6 ;
+        :personEvent        bdr:EVA50E863C80A9BDD8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM606543F4DB8F0248 , bdr:NMF54565D683DEB780 ;
+        :personTeacherOf    bdr:P3183 .
+}

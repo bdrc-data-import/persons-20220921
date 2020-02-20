@@ -1,0 +1,53 @@
+@base          <bdg:P8953> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8953 {
+    bda:P8953  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8953 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "04/P8953.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8953 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDC4DE8B1E6DFB4ED
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM7953D861443C6660
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sog po bla ma kun grol/"@bo-x-ewts .
+    
+    bdr:NM84351E812A37F008
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun grol/"@bo-x-ewts .
+    
+    bdr:NTA691F920F274660D
+        a                   :Note ;
+        :locationStatement  "p. 465" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nborn in sog po"@en .
+    
+    bdr:P8953  a            :Person ;
+        skos:prefLabel      "kun grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA691F920F274660D ;
+        :personEvent        bdr:EVDC4DE8B1E6DFB4ED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7953D861443C6660 , bdr:NM84351E812A37F008 ;
+        :personStudentOf    bdr:P8807 , bdr:P8954 ;
+        :personTeacherOf    bdr:P8955 .
+}

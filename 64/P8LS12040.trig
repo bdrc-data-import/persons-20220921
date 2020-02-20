@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12040> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12040 {
+    bda:LGEBE8AEC4AEE31284
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T14:39:49.394Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12040  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12040 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "64/P8LS12040.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12040 ;
+        adm:logEntry        bda:LGEBE8AEC4AEE31284 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F33924D78F41264
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVBDE959E5A5D702E0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMB97DD62D583EFB63
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NMCFE988BF93CF5CEF
+        a                   :PersonTitle ;
+        rdfs:label          "dpon slob blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NMD48F8DAC8C1ECD5D
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 52"@bo-x-ewts .
+    
+    bdr:NT9F5DDE6F06BFA94E
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 121" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12040  a        :Person ;
+        skos:prefLabel      "blo gros bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9F5DDE6F06BFA94E ;
+        :personEvent        bdr:EV3F33924D78F41264 , bdr:EVBDE959E5A5D702E0 ;
+        :personName         bdr:NMB97DD62D583EFB63 , bdr:NMCFE988BF93CF5CEF , bdr:NMD48F8DAC8C1ECD5D .
+}

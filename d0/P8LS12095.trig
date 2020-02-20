@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12095> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12095 {
+    bda:LGBAA75886182E6E71
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-05T16:20:01.083Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12095  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12095 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d0/P8LS12095.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12095 ;
+        adm:logEntry        bda:LGBAA75886182E6E71 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B40F0A678FABFE8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC1E3EB4EBCF80F88
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM0E4A8D0650A749F3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB3108276437F3CAB
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 15"@bo-x-ewts .
+    
+    bdr:NMFE8D349644CCF53A
+        a                   :PersonTitle ;
+        rdfs:label          "ra kho zhabs drung ngag dbang chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT47FF14475384D0B1
+        a                   :Note ;
+        :locationStatement  "p. 254" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "not long after becomming the abbot of rgyud pa grwa tshang of sku 'bum, on the order of seventh dalai lama left to palace of chinese emporor"@en .
+    
+    bdr:P8LS12095  a        :Person ;
+        skos:prefLabel      "ngag dbang chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT47FF14475384D0B1 ;
+        :personEvent        bdr:EV4B40F0A678FABFE8 , bdr:EVC1E3EB4EBCF80F88 ;
+        :personName         bdr:NM0E4A8D0650A749F3 , bdr:NMB3108276437F3CAB , bdr:NMFE8D349644CCF53A .
+}

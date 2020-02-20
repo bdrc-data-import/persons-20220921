@@ -1,0 +1,90 @@
+@base          <bdg:P2197> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2197 {
+    bda:LG2276711CA035C0EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T15:57:48.159Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2197  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2197 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "51/P2197.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2197 ;
+        adm:logEntry        bda:LG2276711CA035C0EC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7998722A575423FC
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD62F35D5F32E6A2B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVE49EB87760031CEC
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1834"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM39B6D34A0DF9AC37
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'phel don grub/"@bo-x-ewts .
+    
+    bdr:NMBAEDE67B4984FE63
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha mang chos 'phel don grub/"@bo-x-ewts .
+    
+    bdr:NMEBD930E5752EADB1
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 61 chos 'phel don grub/"@bo-x-ewts .
+    
+    bdr:NMF8D4EC3C53EE7CFE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 61"@bo-x-ewts .
+    
+    bdr:NT8BE4CBCA04884E80
+        a                   :Note ;
+        :locationStatement  "p. 135" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTA48B29ED1345FC3C
+        a                   :Note ;
+        :locationStatement  "p. 190" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NTD59B1C231C327754
+        a                   :Note ;
+        :noteText           "1834. Ascends the abbatial throne of Bya-khyung as the 61st Mkhan-rabs."@en .
+    
+    bdr:NTF5FD69C2E37F296E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2197  a            :Person ;
+        skos:prefLabel      "chos 'phel don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8BE4CBCA04884E80 , bdr:NTA48B29ED1345FC3C , bdr:NTD59B1C231C327754 , bdr:NTF5FD69C2E37F296E ;
+        :personEvent        bdr:EV7998722A575423FC , bdr:EVD62F35D5F32E6A2B , bdr:EVE49EB87760031CEC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39B6D34A0DF9AC37 , bdr:NMBAEDE67B4984FE63 , bdr:NMEBD930E5752EADB1 , bdr:NMF8D4EC3C53EE7CFE ;
+        :personStudentOf    bdr:P169 , bdr:P170 ;
+        :personTeacherOf    bdr:P284 .
+}

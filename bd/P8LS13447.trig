@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13447> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13447 {
+    bda:LGA005860697C134BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-10T10:24:03.925Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB835B1EC51A252C2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-10T10:22:16.696Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13447  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13447 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bd/P8LS13447.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13447 ;
+        adm:logEntry        bda:LGA005860697C134BA , bda:LGB835B1EC51A252C2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM9715E31FF6703935
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bkra shis/"@bo-x-ewts .
+    
+    bdr:NMBB2146F2F5BD4551
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung pa kun dga' bkra shis/"@bo-x-ewts .
+    
+    bdr:NT2B6053DBC016B7A7
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 15" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13447  a        :Person ;
+        skos:prefLabel      "kun dga' bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B6053DBC016B7A7 ;
+        :personName         bdr:NM9715E31FF6703935 , bdr:NMBB2146F2F5BD4551 .
+}

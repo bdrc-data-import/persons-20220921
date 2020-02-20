@@ -1,0 +1,92 @@
+@base          <bdg:P8LS12334> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12334 {
+    bda:LG533A919DEEFE0F38
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:38:40.065Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG63509FC851611946
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGE4ED1EE9C8221816
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-15T16:26:14.818Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12334  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12334 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "53/P8LS12334.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12334 ;
+        adm:logEntry        bda:LG533A919DEEFE0F38 , bda:LG63509FC851611946 , bda:LGE4ED1EE9C8221816 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CD1B87F704EAD42
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV761EA12DE5823342
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:NM10A7C7E436F0B16B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "be ri sprul sku 03"@bo-x-ewts .
+    
+    bdr:NM2EE021E3366DC05D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Beri Tulku 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM6B378D95FAC8A1DA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 18"@bo-x-ewts .
+    
+    bdr:NM6BB0E008803CCAD1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "be ri sprul sku blo bzang tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF4D77E6A436FC842
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT5B69B2D2E28517FB
+        a                   :Note ;
+        :locationStatement  "p. 382" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "1) be ri dpon slob mthu stobs rgya mtsho (1695 1774)\n2) 'jam dbyangs bshes gnyen alias 'jam dbyangs dga' ba'i bshes gnyen (1778 1846)\n3) blo bzang tshul khrims rgya mtsho"@en .
+    
+    bdr:NTE77AF78A5704E943
+        a                   :Note ;
+        :locationStatement  "p. 380-382" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "The first incarnate lama of be ri sprul sku mthu stobs rgya mtsho (1695-1774), studied at bkra shis 'khyil and upper tantric college.\nThe second incarnate lama 'jam dbyangs bshes gnyen or 'jam dbyangs dga' ba'i bshes gnyen (1778-1846), he also studied at bkra shis 'khyil. The present one seems to be the third be ri sprul sku"@en .
+    
+    bdr:P8LS12334  a        :Person ;
+        skos:prefLabel      "blo bzang tshul khrims rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12439 ;
+        :isRoot             true ;
+        :note               bdr:NT5B69B2D2E28517FB , bdr:NTE77AF78A5704E943 ;
+        :personEvent        bdr:EV5CD1B87F704EAD42 , bdr:EV761EA12DE5823342 ;
+        :personName         bdr:NM10A7C7E436F0B16B , bdr:NM2EE021E3366DC05D , bdr:NM6B378D95FAC8A1DA , bdr:NM6BB0E008803CCAD1 , bdr:NMF4D77E6A436FC842 .
+}

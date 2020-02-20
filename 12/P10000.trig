@@ -1,0 +1,70 @@
+@base          <bdg:P10000> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10000 {
+    bda:LGAACB1F3DD6675CCE
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T15:20:15.69Z"^^xsd:dateTime ;
+        adm:logMessage      "added info from P0RK1274 (dup. & withdrawn)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGBB13416784A58A1D
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T14:46:01.373Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P10000  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10000 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "12/P10000.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10000 ;
+        adm:logEntry        bda:LGAACB1F3DD6675CCE , bda:LGBB13416784A58A1D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD94B810B12E4CAC6
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM85DDC360CE5265E0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "klu dbang gling pa kun dga' rgyal po/"@bo-x-ewts .
+    
+    bdr:NMD412A49076E4D7E0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgyal po/"@bo-x-ewts .
+    
+    bdr:NME5131A2AB9E72407
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thugs sras kun dga' rgyal po/"@bo-x-ewts .
+    
+    bdr:NT4059F75B32023E04
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 34r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in a prajaparamita transmission lineage"@en .
+    
+    bdr:P10000  a           :Person ;
+        skos:prefLabel      "kun dga' rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4059F75B32023E04 ;
+        :personEvent        bdr:EVD94B810B12E4CAC6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM85DDC360CE5265E0 , bdr:NMD412A49076E4D7E0 , bdr:NME5131A2AB9E72407 ;
+        :personStudentOf    bdr:P0RK1609 , bdr:P0RK1672 , bdr:P3183 ;
+        :personTeacherOf    bdr:P2607 .
+}

@@ -1,0 +1,49 @@
+@base          <bdg:P1KG26417> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG26417 {
+    bda:LG97A0369AFD536204
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-23T12:17:07.341Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG26417  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG26417 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "34/P1KG26417.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG26417 ;
+        adm:logEntry        bda:LG97A0369AFD536204 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC7DD42BD99DAD813
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR2449 .
+    
+    bdr:EVE75E04F146EE34B4
+        a                   :PersonBirth ;
+        :onYear             "1931"^^xsd:gYear .
+    
+    bdr:NM3E3CC8CAD002C0C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dam chos/"@bo-x-ewts .
+    
+    bdr:P1KG26417  a        :Person ;
+        skos:prefLabel      "'jam dbyangs dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC7DD42BD99DAD813 , bdr:EVE75E04F146EE34B4 ;
+        :personName         bdr:NM3E3CC8CAD002C0C5 .
+}

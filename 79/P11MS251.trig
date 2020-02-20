@@ -1,0 +1,62 @@
+@base          <bdg:P11MS251> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS251 {
+    bda:LGE86C05255AD5ED9F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T13:01:30.889Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS251  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS251 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "79/P11MS251.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS251 ;
+        adm:logEntry        bda:LGE86C05255AD5ED9F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8071E037ADD018E5
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G00JR3006 .
+    
+    bdr:EVEF0E1837C488B0CF
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM58CB12C37EA0A371
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge sbyong bkra shis 'bum/"@bo-x-ewts .
+    
+    bdr:NMDBF21AE712BDB33C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Gejong Tashi Bum"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT15790403A65613B1
+        a                   :Note ;
+        :locationStatement  "326" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P11MS251  a         :Person ;
+        skos:prefLabel      "dge sbyong bkra shis 'bum/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT15790403A65613B1 ;
+        :personEvent        bdr:EV8071E037ADD018E5 , bdr:EVEF0E1837C488B0CF ;
+        :personName         bdr:NM58CB12C37EA0A371 , bdr:NMDBF21AE712BDB33C ;
+        :personStudentOf    bdr:P16 .
+}

@@ -1,0 +1,71 @@
+@base          <bdg:P4104> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4104 {
+    bda:LGB59758DFC02FF5FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T12:54:14.911Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC0822C5694073343
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-27T17:02:30.984Z"^^xsd:dateTime ;
+        adm:logMessage      "new and added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P4104  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4104 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "2d/P4104.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4104 ;
+        adm:logEntry        bda:LGB59758DFC02FF5FE , bda:LGC0822C5694073343 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE4378293E0985E9A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4137 ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM0E2981A96212D175
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya lo tsA ba brtson 'grus seng+ge"@bo-x-ewts .
+    
+    bdr:NM2423BDF2211D9455
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgya brtson 'grus seng+ge"@bo-x-ewts .
+    
+    bdr:NT0A4933B0F123D61A
+        a                   :Note ;
+        :locationStatement  "p. 127" ;
+        :noteSource         bdr:MW26009 ;
+        :noteText           "འདི་ནི་ཇོ་བོ་རྗེ་བོད་དུ་སྤྱན་འདྲེན་པའི་གཉེར་ཆེ་ཤོས་ཡིན་ཏེ། ཚུར་ལམ་བལ་པོ་སྐུ་གཤེགས་པས་ཇོ་བོས་ངའི་ལྕེ་ཆད་ཅེས་ཀྱང་གསུང་ཚུལ་གསལ།"@bo .
+    
+    bdr:NTA957BC599CCA0104
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- the Vinaya transmissions of the Smad-'dul"@en .
+    
+    bdr:P4104  a            :Person ;
+        skos:prefLabel      "rgya brtson 'grus seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A4933B0F123D61A , bdr:NTA957BC599CCA0104 ;
+        :personEvent        bdr:EVE4378293E0985E9A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E2981A96212D175 , bdr:NM2423BDF2211D9455 ;
+        :personStudentOf    bdr:P3379 , bdr:P4CZ15108 , bdr:P4CZ15449 ;
+        :personTeacherOf    bdr:P0RK1265 , bdr:P3456 , bdr:P3459 , bdr:P4CZ15123 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P1560> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1560 {
+    bda:LG37ED987ED95FD583
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-18T10:16:09.904Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1560  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1560 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "01/P1560.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1560 ;
+        adm:logEntry        bda:LG37ED987ED95FD583 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM201B41AA935BCD84
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas pa shes rab dpal/"@bo-x-ewts .
+    
+    bdr:NM34DBC83D73A5CED6
+        a                   :PersonOtherName ;
+        rdfs:label          "shes rab dpal/"@bo-x-ewts .
+    
+    bdr:NM9ED403031729D590
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab dpal ba/"@bo-x-ewts .
+    
+    bdr:NMB770862A755954D3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kre bo lo tsA ba shes rab dpal ba/"@bo-x-ewts .
+    
+    bdr:NT0B4BD84A24C5C3C6
+        a                   :Note ;
+        :locationStatement  "p. 67" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT33B3F9B420C7DB89
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 19" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P1560  a            :Person ;
+        skos:prefLabel      "shes rab dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0B4BD84A24C5C3C6 , bdr:NT33B3F9B420C7DB89 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM201B41AA935BCD84 , bdr:NM34DBC83D73A5CED6 , bdr:NM9ED403031729D590 , bdr:NMB770862A755954D3 ;
+        :personStudentOf    bdr:P2921 ;
+        :personTeacherOf    bdr:P2922 .
+}

@@ -1,0 +1,75 @@
+@base          <bdg:P4072> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4072 {
+    bda:LG20B200285524BE7C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T15:22:46.588Z"^^xsd:dateTime ;
+        adm:logMessage      "mtsan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG859DCE8B451E6DBF
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-12-03T07:31:53.138Z"^^xsd:dateTime ;
+        adm:logMessage      "corrections made to record"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4072  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4072 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "96/P4072.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4072 ;
+        adm:logEntry        bda:LG20B200285524BE7C , bda:LG859DCE8B451E6DBF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF095083B00DF2E87
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:EVFAEC0B0C56943E97
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM05176E0AAE17C125
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rat+na/"@bo-x-ewts .
+    
+    bdr:NM306A214DEDBFA41A
+        a                   :PersonTitle ;
+        rdfs:label          "bde chos sman pa rat+na/"@bo-x-ewts .
+    
+    bdr:NMF2A8BCB688085763
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde chen chos 'khor sman pa rat+na/"@bo-x-ewts .
+    
+    bdr:NTB09AF10953E96479
+        a                   :Note ;
+        :noteText           "famous medical doctor connected with the 'brug pa dkar brgyud pa tradition and bde chen chos 'khor monastery"@en .
+    
+    bdr:NTD012CC32DB072BE5
+        a                   :Note ;
+        :locationStatement  "p. 866" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4072  a            :Person ;
+        skos:prefLabel      "rat+na/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB09AF10953E96479 , bdr:NTD012CC32DB072BE5 ;
+        :personEvent        bdr:EVF095083B00DF2E87 , bdr:EVFAEC0B0C56943E97 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05176E0AAE17C125 , bdr:NM306A214DEDBFA41A , bdr:NMF2A8BCB688085763 .
+}

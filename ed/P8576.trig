@@ -1,0 +1,90 @@
+@base          <bdg:P8576> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8576 {
+    bda:LG720F9A2AC12B0191
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-19T12:10:23.242Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation & tulku title & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG78A47512F917CAC9
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-17T09:06:53.188Z"^^xsd:dateTime ;
+        adm:logMessage      "student-teaching relationship established"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGC78996B7CDF3DFD2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8576  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8576 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ed/P8576.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8576 ;
+        adm:logEntry        bda:LG720F9A2AC12B0191 , bda:LG78A47512F917CAC9 , bda:LGC78996B7CDF3DFD2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20000A46A41771DE
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1578"^^xsd:gYear .
+    
+    bdr:NM06A941C33A0272D7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgar chen 02"@bo-x-ewts .
+    
+    bdr:NM4712C142EC46383E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgar chen 02 dkon mchog bstan 'dzin phun tshogs/"@bo-x-ewts .
+    
+    bdr:NMCC9A0D3DA406AFE6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin phun tshogs/"@bo-x-ewts .
+    
+    bdr:NMD581D84105FA950D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Garchen 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT1080A1BCD85DFFB9
+        a                   :Note ;
+        :noteText           "a son of the king of Nangchen."@en .
+    
+    bdr:NT2532120F63563D12
+        a                   :Note ;
+        :locationStatement  "p. 464" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "born in mdo smad yul shul; remembered his past life and was recognized as the reembodiment of mgar gtsang pa ngag dbang don grub; studied with chos rgyal phun tshogs bkra shis; taught 'bri gung bka' brgyud teachings in nang chen; travelled to 'bri gung where he became a teacher of rig 'dzin chos kyi grags pa; after his return to nang chen he became the dbu bla chen po of the nang chen rgyal po; he invited dkon mchog rin chen (1590-1654) to visit nang chen"@en .
+    
+    bdr:NTC79BDC1BCFFCFA7E
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud master"@en .
+    
+    bdr:P8576  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin phun tshogs/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8575 ;
+        :isRoot             true ;
+        :note               bdr:NT1080A1BCD85DFFB9 , bdr:NT2532120F63563D12 , bdr:NTC79BDC1BCFFCFA7E ;
+        :personEvent        bdr:EV20000A46A41771DE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06A941C33A0272D7 , bdr:NM4712C142EC46383E , bdr:NMCC9A0D3DA406AFE6 , bdr:NMD581D84105FA950D ;
+        :personStudentOf    bdr:P4580 ;
+        :personTeacherOf    bdr:P2666 .
+}

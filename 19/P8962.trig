@@ -1,0 +1,53 @@
+@base          <bdg:P8962> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8962 {
+    bda:P8962  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8962 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "19/P8962.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8962 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F88BBC3B69DB36B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4334 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM06E1424D64EB7762
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gsang sngags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF1DD2A3C89D199F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas chen gsang sngags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9456B1D391824E2A
+        a                   :Note ;
+        :locationStatement  "pp. 513-516" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "jo nang teacher born in lam ko in mgo log\nhis teachers included ngag dbang dpal ldan, 'dzam ngos bla ma kun dga' ngag gi dbang po, and ngag dbang tshogs gnyis rgya mtsho"@en .
+    
+    bdr:P8962  a            :Person ;
+        skos:prefLabel      "gsang sngags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9456B1D391824E2A ;
+        :personEvent        bdr:EV0F88BBC3B69DB36B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06E1424D64EB7762 , bdr:NMF1DD2A3C89D199F2 ;
+        :personStudentOf    bdr:P7843 , bdr:P8955 .
+}

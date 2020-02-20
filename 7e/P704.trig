@@ -1,0 +1,64 @@
+@base          <bdg:P704> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P704 {
+    bda:LG66B6A07326D817E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-18T07:22:47.701Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected name variants"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P704  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P704 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7e/P704.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P704 ;
+        adm:logEntry        bda:LG66B6A07326D817E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV23FD1D58E77BE193
+        a                   :PersonBirth ;
+        :onYear             "1873"^^xsd:gYear .
+    
+    bdr:EVF722B026818DEF04
+        a                   :PersonDeath ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM41EC3A3E11C6FF3A
+        a                   :PersonPersonalName ;
+        rdfs:label          "bde ba'i rgyal po/"@bo-x-ewts .
+    
+    bdr:NM5DAF1EF123E009A6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma bde ba'i rgyal po/"@bo-x-ewts .
+    
+    bdr:NME45DAE747D2628CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "e ta rA dza/"@bo-x-ewts .
+    
+    bdr:NT2BEDE4BA6724F223
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'joms revelations"@en .
+    
+    bdr:P704  a             :Person ;
+        skos:prefLabel      "e ta rA dza/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2BEDE4BA6724F223 ;
+        :personEvent        bdr:EV23FD1D58E77BE193 , bdr:EVF722B026818DEF04 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM41EC3A3E11C6FF3A , bdr:NM5DAF1EF123E009A6 , bdr:NME45DAE747D2628CD ;
+        :personStudentOf    bdr:P705 .
+}

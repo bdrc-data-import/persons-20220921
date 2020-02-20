@@ -1,0 +1,78 @@
+@base          <bdg:P2782> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2782 {
+    bda:LG0EE3D7835C165D66
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-27T12:15:02.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of and teacher of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG66FD0CAC31CA5B39
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:04:58.609Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and title"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGF8F4B726DF21A10B
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:51:28.515Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2782  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2782 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7b/P2782.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2782 ;
+        adm:logEntry        bda:LG0EE3D7835C165D66 , bda:LG66FD0CAC31CA5B39 , bda:LGF8F4B726DF21A10B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5642518E580285C2
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM1943C1BDD9E0E737
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul pa'i sku tshul khrims mgon po/"@bo-x-ewts .
+    
+    bdr:NM2EF4BC857B7040BC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khyung po tshul khrims mgon po/"@bo-x-ewts .
+    
+    bdr:NM7F989DC86BD978F8
+        a                   :PersonTitle ;
+        rdfs:label          "khyung po gsum pa/"@bo-x-ewts .
+    
+    bdr:NMBE026F73D7B103CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims mgon po/"@bo-x-ewts .
+    
+    bdr:NT32C5D5D8F0E68AB3
+        a                   :Note ;
+        :noteText           "master of a shangs pa bka' brgyud transmission lineage"@en .
+    
+    bdr:P2782  a            :Person ;
+        skos:prefLabel      "tshul khrims mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT32C5D5D8F0E68AB3 ;
+        :personEvent        bdr:EV5642518E580285C2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1943C1BDD9E0E737 , bdr:NM2EF4BC857B7040BC , bdr:NM7F989DC86BD978F8 , bdr:NMBE026F73D7B103CE ;
+        :personStudentOf    bdr:P88 , bdr:P89 ;
+        :personTeacherOf    bdr:P0RK695 , bdr:P2783 .
+}

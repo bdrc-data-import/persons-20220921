@@ -1,0 +1,69 @@
+@base          <bdg:P8LS13017> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13017 {
+    bda:LG82E5C6E418B38E11
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T11:18:49.458Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG890CA82AC3F71963
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-08T14:05:36.805Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13017  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13017 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9a/P8LS13017.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13017 ;
+        adm:logEntry        bda:LG82E5C6E418B38E11 , bda:LG890CA82AC3F71963 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBE94F5D15D2F0EC3
+        a                   :PersonBirth ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVDB4B4F1BDAB7A417
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G157 .
+    
+    bdr:NM05D4BDE4E4BFE99F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsechok Ling Yongzin Tulku 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM3E2534FB2705FE0B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin dge legs/"@bo-x-ewts .
+    
+    bdr:NM9C78203BA52BBED8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mchog gling yongs 'dzin sprul sku 06"@bo-x-ewts .
+    
+    bdr:NTD94CD46A48F0B5FC
+        a                   :Note ;
+        :noteText           "Among Tibetan Texts, p. 312\nson of bsod nams rdo rje, a sikkimese doctor, and rnam rgyal sgrol ma"@en .
+    
+    bdr:P8LS13017  a        :Person ;
+        skos:prefLabel      "bstan 'dzin dge legs/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5619 ;
+        :isRoot             true ;
+        :note               bdr:NTD94CD46A48F0B5FC ;
+        :personEvent        bdr:EVBE94F5D15D2F0EC3 , bdr:EVDB4B4F1BDAB7A417 ;
+        :personName         bdr:NM05D4BDE4E4BFE99F , bdr:NM3E2534FB2705FE0B , bdr:NM9C78203BA52BBED8 .
+}

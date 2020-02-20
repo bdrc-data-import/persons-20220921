@@ -1,0 +1,85 @@
+@base          <bdg:P1AG13> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG13 {
+    bda:LG2EBAD4750A876B68
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T11:46:01.422Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed dates of P1AG13"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB4712D8485C75A66
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T11:20:52.146Z"^^xsd:dateTime ;
+        adm:logMessage      "added note and Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGC6EE4DE3ADAFEA21
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T11:51:08.763Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF3F1280B7B8F8618
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-05T12:55:56.365Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favore of P1KG4203"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P1AG13  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG13 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "1a/P1AG13.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG13 ;
+        adm:logEntry        bda:LG2EBAD4750A876B68 , bda:LGB4712D8485C75A66 , bda:LGC6EE4DE3ADAFEA21 , bda:LGF3F1280B7B8F8618 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P1KG4203 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV264EAB304695C2EB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1AG12 .
+    
+    bdr:EV9A1BC864B96F9059
+        a                   :PersonBirth ;
+        :notAfter           "1121"^^xsd:gYear ;
+        :notBefore          "1120"^^xsd:gYear .
+    
+    bdr:NM037DAC9F66498EB9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyag ras se bo/"@bo-x-ewts .
+    
+    bdr:NM28320A0A4FD920B9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub thob nyag ras se bo/"@bo-x-ewts .
+    
+    bdr:NM8F1B1FE20FDB2BC2
+        a                   :PersonTitle ;
+        rdfs:label          "bsam grub ras pa/"@bo-x-ewts .
+    
+    bdr:NT15E40A5F3C549441
+        a                   :Note ;
+        :locationStatement  "pp. 337-338" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG13  a           :Person ;
+        skos:prefLabel      "nyag ras se bo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT15E40A5F3C549441 ;
+        :personEvent        bdr:EV264EAB304695C2EB , bdr:EV9A1BC864B96F9059 ;
+        :personName         bdr:NM037DAC9F66498EB9 , bdr:NM28320A0A4FD920B9 , bdr:NM8F1B1FE20FDB2BC2 ;
+        :personStudentOf    bdr:P127 , bdr:P16 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drubtob-Nyakre-Sewo/13440"^^xsd:anyURI .
+}

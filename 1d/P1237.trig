@@ -1,0 +1,99 @@
+@base          <bdg:P1237> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1237 {
+    bda:LG6F44125043EAAD97
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T15:42:50.07Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA196537C7B461A9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T16:20:46.744Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD9DF550164F866E5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T09:01:24.783Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1237  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1237 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "1d/P1237.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1237 ;
+        adm:logEntry        bda:LG6F44125043EAAD97 , bda:LGA196537C7B461A9E , bda:LGD9DF550164F866E5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7041923B191B243F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G961 ;
+        :onYear             "1732"^^xsd:gYear .
+    
+    bdr:EV8D18D317E8BDA2FF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVB9CB05F46CEFC675
+        a                   :PersonDeath ;
+        :onYear             "1801"^^xsd:gYear .
+    
+    bdr:EVC18FA507C006F01F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12072 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1006B3FCFA5565E6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ma kha ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NM1335D323E0C1B43D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NMF2C634A066E3A678
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang dus 'khor khri 08"@bo-x-ewts .
+    
+    bdr:NT2AD55D84E3D54A03
+        a                   :Note ;
+        :locationStatement  "p. 1265" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT8A4D1965BB2D74D1
+        a                   :Note ;
+        :noteText           "Became Rdo-bcal Rab-'byams-pa at Bkra-shis-'khyil.\nBecame dge-bskos of Thos-bsam-gling.\nEnters Rgyud-pa Grwa-tshang.\nSent by Dkon-mchog-'jigs-med-dbang-po as bla-ma to the Thor-rgod Dkon-mchog Dza-sag.\nLater became 8th Khri of the Bla-brang Bkra-shis-'khyil Dus-'khor Grwa-tshang and served for 7 years.\nDied when he was nearing 70."@en .
+    
+    bdr:NTB994598D9AA563F6
+        a                   :Note ;
+        :noteText           "see corporation C2CN11020"@en .
+    
+    bdr:NTF1CB96DB2132C792
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1237  a            :Person ;
+        skos:prefLabel      "ngag dbang don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2AD55D84E3D54A03 , bdr:NT8A4D1965BB2D74D1 , bdr:NTB994598D9AA563F6 , bdr:NTF1CB96DB2132C792 ;
+        :personEvent        bdr:EV7041923B191B243F , bdr:EV8D18D317E8BDA2FF , bdr:EVB9CB05F46CEFC675 , bdr:EVC18FA507C006F01F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1006B3FCFA5565E6 , bdr:NM1335D323E0C1B43D , bdr:NMF2C634A066E3A678 ;
+        :personStudentOf    bdr:P169 , bdr:P3537 .
+}

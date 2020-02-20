@@ -1,0 +1,56 @@
+@base          <bdg:P767> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P767 {
+    bda:LGB04D6985F9A166DC
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-02-25T16:39:42.187Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P767  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P767 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "25/P767.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P767 ;
+        adm:logEntry        bda:LGB04D6985F9A166DC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1ECAB1E9A49DF783
+        a                   :PersonBirth ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:EVBEED2221BFE14246
+        a                   :PersonDeath ;
+        :onYear             "1941"^^xsd:gYear .
+    
+    bdr:NMDAFA28DD55A58FEF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sprul sku nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NME6EF344C1D8D97BE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bU li sprul sku/"@bo-x-ewts .
+    
+    bdr:P767  a             :Person ;
+        skos:prefLabel      "bU li sprul sku/"@bo-x-ewts ;
+        :hasChild           bdr:P2AG27 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1ECAB1E9A49DF783 , bdr:EVBEED2221BFE14246 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDAFA28DD55A58FEF , bdr:NME6EF344C1D8D97BE ;
+        :personTeacherOf    bdr:P2AG27 , bdr:P766 .
+}

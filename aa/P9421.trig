@@ -1,0 +1,78 @@
+@base          <bdg:P9421> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9421 {
+    bda:LGB1ED070630CB5C3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-29T10:19:54.263Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9421  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9421 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "aa/P9421.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9421 ;
+        adm:logEntry        bda:LGB1ED070630CB5C3D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46AD92FBB0A50A70
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1808"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFB3611A7C9C3653C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVFDB0A46DD34073E7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1807"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM876B2658A4FF9D85
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMBC5D28CFA999B3AE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dkar sngags rams pa sprul sku 02 blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD93D1738F7C80634
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rong po dgon chen gdan rabs 23"@bo-x-ewts .
+    
+    bdr:NT2FBFF2C124828D48
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NT7AF03F58ACDA9800
+        a                   :Note ;
+        :locationStatement  "p. 320" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "brag dkar sprul sku blo bzang bstan pa'i rgyal mtshan ... yang brag dkar du 'khrungs/ rong bo dgon chen du thugs gnyer dang/ shar sprul sogs dam pa du ma la chos gsan/ me yos lor khrir bzhugs/ de'i sprul sku don yod bstan pa'i rgyal mtshan khri ka'i stod rkang tsha'i phyogs su 'khrungs pa bzhi bcu'i nang gshegs/"@bo-x-ewts .
+    
+    bdr:P9421  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2FBFF2C124828D48 , bdr:NT7AF03F58ACDA9800 ;
+        :personEvent        bdr:EV46AD92FBB0A50A70 , bdr:EVFB3611A7C9C3653C , bdr:EVFDB0A46DD34073E7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM876B2658A4FF9D85 , bdr:NMBC5D28CFA999B3AE , bdr:NMD93D1738F7C80634 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P1890> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1890 {
+    bda:P1890  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1890 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "13/P1890.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1890 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC028EFD7EC3651AE
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM5C69A9E77416F4C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMDE4F66EA5FC76383
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTCA36617DB16F8F7F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1890  a            :Person ;
+        skos:prefLabel      "ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCA36617DB16F8F7F ;
+        :personEvent        bdr:EVC028EFD7EC3651AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5C69A9E77416F4C5 , bdr:NMDE4F66EA5FC76383 ;
+        :personStudentOf    bdr:P350 .
+}

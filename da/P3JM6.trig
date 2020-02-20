@@ -1,0 +1,57 @@
+@base          <bdg:P3JM6> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JM6 {
+    bda:LG804EEC88D182F9FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-27T16:19:29.56Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGEBC8281C49D05E57
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T14:22:30.756Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3JM6  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JM6 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "da/P3JM6.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JM6 ;
+        adm:logEntry        bda:LG804EEC88D182F9FD , bda:LGEBC8281C49D05E57 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4BD50318ED3F9A10
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM06849540DA2BB02C
+        a                   :PersonPersonalName ;
+        rdfs:label          "'bras ljongs pa thub bstan chos nyid/"@bo-x-ewts .
+    
+    bdr:NMA0DF7955D18A189D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan chos nyid/"@bo-x-ewts .
+    
+    bdr:P3JM6  a            :Person ;
+        skos:prefLabel      "thub bstan chos nyid/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV4BD50318ED3F9A10 ;
+        :personName         bdr:NM06849540DA2BB02C , bdr:NMA0DF7955D18A189D ;
+        :personStudentOf    bdr:P6002 .
+}

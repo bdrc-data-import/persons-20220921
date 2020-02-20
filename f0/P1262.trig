@@ -1,0 +1,84 @@
+@base          <bdg:P1262> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1262 {
+    bda:LGD49FB0FA89FF4DCC
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T09:50:14.634Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1262  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1262 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f0/P1262.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1262 ;
+        adm:logEntry        bda:LGD49FB0FA89FF4DCC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV440E376235F65808
+        a                   :PersonBirth ;
+        :onYear             "1802"^^xsd:gYear .
+    
+    bdr:EVFB3220B7688003C7
+        a                   :PersonDeath ;
+        :onYear             "1849"^^xsd:gYear .
+    
+    bdr:NM0054F7FD06CF2C47
+        a                   :PersonTitle ;
+        rdfs:label          "rnye blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6A657E2466258758
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nye Drubchen 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM74FC6467C599087C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM803337804EE206F2
+        a                   :PersonPersonalName ;
+        rdfs:label          "bstan pa'i rgyal mtshan, rnye/"@bo-x-ewts .
+    
+    bdr:NMB4D18925680462EA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnye grub chen 03 blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDCCEBA212A98E373
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rnye grub chen 03"@bo-x-ewts .
+    
+    bdr:NT9602ED4B40EC855F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTB06D64FA3E7578CB
+        a                   :Note ;
+        :locationStatement  "p. 207" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source gives date of death as 1849"@en .
+    
+    bdr:P1262  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3790 ;
+        :isRoot             true ;
+        :note               bdr:NT9602ED4B40EC855F , bdr:NTB06D64FA3E7578CB ;
+        :personEvent        bdr:EV440E376235F65808 , bdr:EVFB3220B7688003C7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0054F7FD06CF2C47 , bdr:NM6A657E2466258758 , bdr:NM74FC6467C599087C , bdr:NM803337804EE206F2 , bdr:NMB4D18925680462EA , bdr:NMDCCEBA212A98E373 ;
+        :personStudentOf    bdr:P3243 , bdr:P373 ;
+        :personTeacherOf    bdr:P1259 , bdr:P3440 .
+}

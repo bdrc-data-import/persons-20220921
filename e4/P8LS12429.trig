@@ -1,0 +1,86 @@
+@base          <bdg:P8LS12429> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12429 {
+    bda:LG1687BDDB481A5C36
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-09T10:18:55.942Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG3E493EC1CE76E8DA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:57:48.189Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12429  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12429 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e4/P8LS12429.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12429 ;
+        adm:logEntry        bda:LG1687BDDB481A5C36 , bda:LG3E493EC1CE76E8DA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5AF9925237E00A11
+        a                   :PersonDeath ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:EV92504624F80A68F0
+        a                   :PersonBirth ;
+        :onYear             "1912"^^xsd:gYear .
+    
+    bdr:EVA2FC51CFAB2D7AE4
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G155 ;
+        :onYear             "1974"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE7A2C3CD5630A6DD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVF13F71488C6BF35D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :onYear             "1965"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM4911B72BE3921C8B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 68"@bo-x-ewts .
+    
+    bdr:NM7357EED443EA20A9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "tre mkhan zur don grub stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NM9A4D100B29225E2C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NT61C9D40B827F657F
+        a                   :Note ;
+        :locationStatement  "p. 296, 416-428" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "1924 entered rdza bsam grub monastery\n1929 left to central tibet"@en .
+    
+    bdr:P8LS12429  a        :Person ;
+        skos:prefLabel      "don grub stobs rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT61C9D40B827F657F ;
+        :personEvent        bdr:EV5AF9925237E00A11 , bdr:EV92504624F80A68F0 , bdr:EVA2FC51CFAB2D7AE4 , bdr:EVE7A2C3CD5630A6DD , bdr:EVF13F71488C6BF35D ;
+        :personName         bdr:NM4911B72BE3921C8B , bdr:NM7357EED443EA20A9 , bdr:NM9A4D100B29225E2C ;
+        :personStudentOf    bdr:P230 , bdr:P2596 , bdr:P4559 .
+}

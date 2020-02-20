@@ -1,0 +1,53 @@
+@base          <bdg:P1KG14968> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14968 {
+    bda:LG85506571EC3708D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-28T12:26:13.863Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14968  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14968 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "20/P1KG14968.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14968 ;
+        adm:logEntry        bda:LG85506571EC3708D5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A24B43A252AE4BA
+        a                   :PersonDeath ;
+        :onYear             "1521"^^xsd:gYear .
+    
+    bdr:EV80022261B923C2AD
+        a                   :PersonBirth ;
+        :onYear             "1437"^^xsd:gYear .
+    
+    bdr:NM221B03FD6EFDF1B1
+        a                   :PersonPersonalName ;
+        rdfs:label          "btsun pa gtso sgom chos legs/"@bo-x-ewts .
+    
+    bdr:NM900883F300C45D9E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "btsun pa chos legs/"@bo-x-ewts .
+    
+    bdr:P1KG14968  a        :Person ;
+        skos:prefLabel      "btsun pa chos legs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV2A24B43A252AE4BA , bdr:EV80022261B923C2AD ;
+        :personName         bdr:NM221B03FD6EFDF1B1 , bdr:NM900883F300C45D9E .
+}

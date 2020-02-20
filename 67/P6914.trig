@@ -1,0 +1,59 @@
+@base          <bdg:P6914> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6914 {
+    bda:LG9DD0E5A5458186EE
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-06T08:49:19.428Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6914  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6914 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "67/P6914.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6914 ;
+        adm:logEntry        bda:LG9DD0E5A5458186EE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D55C4FA0ED3C6D6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2956 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM1511D48BE0C31CE7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rba kha 05 pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NMEBE9F63275B8EABB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NT4282D14AA088CDCD
+        a                   :Note ;
+        :locationStatement  "p. 105" ;
+        :noteSource         bdr:MW20520 ;
+        :noteText           "རྦ་ཁ ༠༥ པདྨ་རང་གྲོལ་གྱི་འཁྲུངས་ཡུལ་སོགས་གསལ།"@bo .
+    
+    bdr:P6914  a            :Person ;
+        skos:prefLabel      "pad+ma rang grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4282D14AA088CDCD ;
+        :personEvent        bdr:EV2D55C4FA0ED3C6D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1511D48BE0C31CE7 , bdr:NMEBE9F63275B8EABB .
+}

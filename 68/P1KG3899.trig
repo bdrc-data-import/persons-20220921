@@ -1,0 +1,56 @@
+@base          <bdg:P1KG3899> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3899 {
+    bda:LGE49D00B700BAF86C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-11-05T13:22:27.506Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3899  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3899 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "68/P1KG3899.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3899 ;
+        adm:logEntry        bda:LGE49D00B700BAF86C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV23FAF21AA1EDAFA6
+        a                   :PersonDeath ;
+        :onYear             "1990"^^xsd:gYear .
+    
+    bdr:EV2634C407CA39BFEA
+        a                   :PersonBirth ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:EVD2B5ABDC3DDAD491
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:NMF7650BA03BDCA25F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa 'phrin las/"@bo-x-ewts .
+    
+    bdr:P1KG3899  a         :Person ;
+        skos:prefLabel      "byams pa 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV23FAF21AA1EDAFA6 , bdr:EV2634C407CA39BFEA , bdr:EVD2B5ABDC3DDAD491 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMF7650BA03BDCA25F ;
+        :personStudentOf    bdr:P5077 , bdr:P7549 ;
+        :personTeacherOf    bdr:P1GS58822 .
+}

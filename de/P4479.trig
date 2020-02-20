@@ -1,0 +1,93 @@
+@base          <bdg:P4479> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4479 {
+    bda:LG0A20914C944B7EA4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-29T15:36:14.636Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of death, tulku title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG819191F398F58427
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T10:51:44.911Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE73B2219F59F3729
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P4479  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4479 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "de/P4479.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4479 ;
+        adm:logEntry        bda:LG0A20914C944B7EA4 , bda:LG819191F398F58427 , bda:LGE73B2219F59F3729 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV93948EEBC81CF34C
+        a                   :PersonBirth ;
+        :onYear             "1631"^^xsd:gYear .
+    
+    bdr:EV9CC9B4C75A9EF153
+        a                   :PersonDeath ;
+        :onYear             "1681"^^xsd:gYear .
+    
+    bdr:EVA6F8B680B88F4E00
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13410 .
+    
+    bdr:EVB28A12C36CD0A6D6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM45C63FE96603301F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM6C89D47BF8A6AC60
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NM85CC4CC078F9BE40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rgyal sras 'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA5354FFCBA50D67B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Gyelse Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT181BC0FFBBBA6089
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NTA676DCDE06B47AB3
+        a                   :Note ;
+        :locationStatement  "p. 104" ;
+        :noteSource         bdr:MW1KG1680 .
+    
+    bdr:P4479  a            :Person ;
+        skos:prefLabel      "'jam dpal rdo rje/"@bo-x-ewts ;
+        :hasFather          bdr:P509 ;
+        :isRoot             true ;
+        :note               bdr:NT181BC0FFBBBA6089 , bdr:NTA676DCDE06B47AB3 ;
+        :personEvent        bdr:EV93948EEBC81CF34C , bdr:EV9CC9B4C75A9EF153 , bdr:EVA6F8B680B88F4E00 , bdr:EVB28A12C36CD0A6D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45C63FE96603301F , bdr:NM6C89D47BF8A6AC60 , bdr:NM85CC4CC078F9BE40 , bdr:NMA5354FFCBA50D67B .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P140> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P140 {
+    bda:LG2E44BA1AD889734E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-04T16:07:38.704Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and students"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG93C90ECA46BBDAE0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T10:28:59.292Z"^^xsd:dateTime ;
+        adm:logMessage      "P6131"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P140  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P140 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5f/P140.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P140 ;
+        adm:logEntry        bda:LG2E44BA1AD889734E , bda:LG93C90ECA46BBDAE0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6CAD0B74BF3D06D4
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM512D754F05868944
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims snying po/"@bo-x-ewts .
+    
+    bdr:NM9A532BD5BE28B8EE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po tshul khrims snying po/"@bo-x-ewts .
+    
+    bdr:NTC89AB6F21E5AFD68
+        a                   :Note ;
+        :noteText           "1304. Ordains dol-po-pa at skyi-stengs dgon."@en .
+    
+    bdr:P140  a             :Person ;
+        skos:prefLabel      "tshul khrims snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC89AB6F21E5AFD68 ;
+        :personEvent        bdr:EV6CAD0B74BF3D06D4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM512D754F05868944 , bdr:NM9A532BD5BE28B8EE ;
+        :personStudentOf    bdr:P0RK595 ;
+        :personTeacherOf    bdr:P0RK597 , bdr:P139 .
+}

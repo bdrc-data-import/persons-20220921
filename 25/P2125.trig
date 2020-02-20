@@ -1,0 +1,76 @@
+@base          <bdg:P2125> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2125 {
+    bda:LG8CF2727C2BFF5642
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-16T14:02:32.262Z"^^xsd:dateTime ;
+        adm:logMessage      "added Incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGCC7FFB2A3048139E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-08T10:33:11.499Z"^^xsd:dateTime ;
+        adm:logMessage      "P434 changed to P2AG2"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2125  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2125 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "25/P2125.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2125 ;
+        adm:logEntry        bda:LG8CF2727C2BFF5642 , bda:LGCC7FFB2A3048139E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6E524D5ED12779EC
+        a                   :PersonDeath ;
+        :onYear             "1711"^^xsd:gYear .
+    
+    bdr:EV7CB18597A268DDCB
+        a                   :PersonBirth ;
+        :onYear             "1645"^^xsd:gYear .
+    
+    bdr:EVB0425FCA03C87929
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:NM79C1EF29CED29763
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag gi dbang po/"@bo-x-ewts .
+    
+    bdr:NMDFAE713CFFE9973C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcags rwa 02 ngag gi dbang po/"@bo-x-ewts .
+    
+    bdr:NT20426557008921AE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTBA59A2B55A4AD855
+        a                   :Note ;
+        :locationStatement  "Vol. 9 (18), p. 200" ;
+        :noteSource         bdr:MW19813 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2125  a            :Person ;
+        skos:prefLabel      "ngag gi dbang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2AG2 ;
+        :isRoot             true ;
+        :note               bdr:NT20426557008921AE , bdr:NTBA59A2B55A4AD855 ;
+        :personEvent        bdr:EV6E524D5ED12779EC , bdr:EV7CB18597A268DDCB , bdr:EVB0425FCA03C87929 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79C1EF29CED29763 , bdr:NMDFAE713CFFE9973C .
+}

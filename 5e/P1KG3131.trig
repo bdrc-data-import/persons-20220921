@@ -1,0 +1,53 @@
+@base          <bdg:P1KG3131> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3131 {
+    bda:LG0745073D61ABBF27
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-04T13:25:19.361Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3131  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3131 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5e/P1KG3131.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3131 ;
+        adm:logEntry        bda:LG0745073D61ABBF27 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV885E61038DE6FB0D
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM79CA466F48F05BC1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dar ma dkon mchog"@bo-x-ewts .
+    
+    bdr:NT441799165456D783
+        a                   :Note ;
+        :noteSource         bdr:MW00KG03840 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG3131  a         :Person ;
+        skos:prefLabel      "dar ma dkon mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT441799165456D783 ;
+        :personEvent        bdr:EV885E61038DE6FB0D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79CA466F48F05BC1 .
+}

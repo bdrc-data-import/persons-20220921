@@ -1,0 +1,49 @@
+@base          <bdg:P2420> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2420 {
+    bda:P2420  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2420 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "be/P2420.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2420 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF54508DED43E953
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NME6C55205A28A4E38
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rdo rje/"@bo-x-ewts .
+    
+    bdr:NMFB45FA36F2E781E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha btsun chos kyi rdo rje/"@bo-x-ewts .
+    
+    bdr:NTF159675CB50CE277
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P2420  a            :Person ;
+        skos:prefLabel      "chos kyi rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF159675CB50CE277 ;
+        :personEvent        bdr:EVCF54508DED43E953 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME6C55205A28A4E38 , bdr:NMFB45FA36F2E781E3 .
+}

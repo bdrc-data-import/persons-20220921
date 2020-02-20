@@ -1,0 +1,59 @@
+@base          <bdg:P6324> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6324 {
+    bda:LG6A81FF96B9696BDD
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-10T16:36:41.75Z"^^xsd:dateTime ;
+        adm:logMessage      "add date and mor info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P6324  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6324 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "3a/P6324.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6324 ;
+        adm:logEntry        bda:LG6A81FF96B9696BDD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D8CB4D2DB04765D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2129 ;
+        :onYear             "1930"^^xsd:gYear .
+    
+    bdr:EV74C230F5F427A2E2
+        a                   :PersonDeath ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:NME612F91D5187ABD0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT5F2B7AFC88F34EC5
+        a                   :Note ;
+        :locationStatement  "pp. 29-33" ;
+        :noteSource         bdr:MW29325 ;
+        :noteText           "biographical data"@en .
+    
+    bdr:P6324  a            :Person ;
+        skos:prefLabel      "karma chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F2B7AFC88F34EC5 ;
+        :personEvent        bdr:EV5D8CB4D2DB04765D , bdr:EV74C230F5F427A2E2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME612F91D5187ABD0 ;
+        :personStudentOf    bdr:P227 , bdr:P9684 .
+}

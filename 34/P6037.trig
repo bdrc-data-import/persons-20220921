@@ -1,0 +1,76 @@
+@base          <bdg:P6037> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6037 {
+    bda:LGA0ED271D89842F93
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-05T19:49:06.888Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGF100C369F303F0B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T11:42:27.462Z"^^xsd:dateTime ;
+        adm:logMessage      "adde name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6037  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6037 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "34/P6037.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6037 ;
+        adm:logEntry        bda:LGA0ED271D89842F93 , bda:LGF100C369F303F0B0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV564666B9B84B296A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G304 .
+    
+    bdr:EV5760D96FEE91B95A
+        a                   :PersonDeath ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:EVE76C0E4A6796CD2C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1499 ;
+        :onYear             "1904"^^xsd:gYear .
+    
+    bdr:NM854FB61E32D50058
+        a                   :PersonPersonalName ;
+        rdfs:label          "zong blo bzang brtson 'grus thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF66C8EC677D667E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang brtson 'grus thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT756BCCE3FDA917CD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT791C343D4631DE02
+        a                   :Note ;
+        :noteText           "1915. Entered Dga'-ldan Shar-rtse."@en .
+    
+    bdr:P6037  a            :Person ;
+        skos:prefLabel      "blo bzang brtson 'grus thub bstan rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT756BCCE3FDA917CD , bdr:NT791C343D4631DE02 ;
+        :personEvent        bdr:EV564666B9B84B296A , bdr:EV5760D96FEE91B95A , bdr:EVE76C0E4A6796CD2C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM854FB61E32D50058 , bdr:NMF66C8EC677D667E3 ;
+        :personStudentOf    bdr:P230 , bdr:P2596 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Zong-Lobzang-Tsondru-Tubten-Gyeltsen/8612"^^xsd:anyURI .
+}

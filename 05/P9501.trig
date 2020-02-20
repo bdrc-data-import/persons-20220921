@@ -1,0 +1,56 @@
+@base          <bdg:P9501> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9501 {
+    bda:P9501  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9501 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "05/P9501.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9501 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAC39ABAF5D18BDB8
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM59F43D906AE0A66A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ston pa d+harma dhA tu/"@bo-x-ewts .
+    
+    bdr:NM727EB0B1B9671578
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos kyi dbyings/"@bo-x-ewts .
+    
+    bdr:NMA07D2D06165DE7F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "d+harma dhA tu/"@bo-x-ewts .
+    
+    bdr:NTF9D32948E36F6636
+        a                   :Note ;
+        :locationStatement  "f. 99v" ;
+        :noteSource         bdr:MW9105 ;
+        :noteText           "noted as a teacher of gter bdag gling pa: zab chos sna tshogs gsan cing dag snang sbyangs pa'i bshes gnyen nyi shu rtsa lnga"@en .
+    
+    bdr:P9501  a            :Person ;
+        skos:prefLabel      "d+harma dhA tu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF9D32948E36F6636 ;
+        :personEvent        bdr:EVAC39ABAF5D18BDB8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM59F43D906AE0A66A , bdr:NM727EB0B1B9671578 , bdr:NMA07D2D06165DE7F2 ;
+        :personTeacherOf    bdr:P7 .
+}

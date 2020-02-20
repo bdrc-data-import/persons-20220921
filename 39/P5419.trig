@@ -1,0 +1,81 @@
+@base          <bdg:P5419> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5419 {
+    bda:LG861DA4BF2A2B3528
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T14:07:00.33Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5419  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5419 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "39/P5419.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5419 ;
+        adm:logEntry        bda:LG861DA4BF2A2B3528 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21BA2731B36B948C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EV67430519F30CC145
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV676EB06FCED8BC4F
+        a                   :PersonDeath ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:EVA06435D0B4C3ACBE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVC034DC1204D40883
+        a                   :PersonBirth ;
+        :onYear             "1904"^^xsd:gYear .
+    
+    bdr:NM193FF614E37BC7A1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs bstan 'dzin chos kyi dbang phyug"@bo-x-ewts .
+    
+    bdr:NM401E90D7016A8F97
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgyis dge tshang 'jam dbyangs bstan 'dzin chos kyi dbang phyug"@bo-x-ewts .
+    
+    bdr:NM5A3F79AF20B25631
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 45"@bo-x-ewts .
+    
+    bdr:NT0D5148DEE465848C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTE8BD20876CDC91A6
+        a                   :Note ;
+        :locationStatement  "p. 445-447" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:P5419  a            :Person ;
+        skos:prefLabel      "'jam dbyangs bstan 'dzin chos kyi dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D5148DEE465848C , bdr:NTE8BD20876CDC91A6 ;
+        :personEvent        bdr:EV21BA2731B36B948C , bdr:EV67430519F30CC145 , bdr:EV676EB06FCED8BC4F , bdr:EVA06435D0B4C3ACBE , bdr:EVC034DC1204D40883 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM193FF614E37BC7A1 , bdr:NM401E90D7016A8F97 , bdr:NM5A3F79AF20B25631 .
+}

@@ -1,0 +1,97 @@
+@base          <bdg:P265> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P265 {
+    bda:LG2EE9A960A096CAFC
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-13T14:12:11.377Z"^^xsd:dateTime ;
+        adm:logMessage      "removed test"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG34A072C48A985686
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-11T10:04:35.43Z"^^xsd:dateTime ;
+        adm:logMessage      "test remove three"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG89FEC44A234B442C
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-03-09T12:54:41.163Z"^^xsd:dateTime ;
+        adm:logMessage      "added name nyi ri shel bzhin"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGC4DE594AF7DEE4B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-11T10:02:38.868Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P265  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P265 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "5f/P265.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P265 ;
+        adm:logEntry        bda:LG2EE9A960A096CAFC , bda:LG34A072C48A985686 , bda:LG89FEC44A234B442C , bda:LGC4DE594AF7DEE4B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06E9D9DF893DD25C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4 .
+    
+    bdr:EV3F7FE9BF4804167B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3 .
+    
+    bdr:EV5AD709AA37DA2B46
+        a                   :PersonDeath ;
+        :onYear             "1875"^^xsd:gYear .
+    
+    bdr:EVAE020DC7D3FEC7C2
+        a                   :PersonBirth ;
+        :onYear             "1813"^^xsd:gYear .
+    
+    bdr:NM0388BDA325C74748
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman ri mkhan chen 22 nyi ma bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM2F89A416173B5161
+        a                   :PersonPersonalName ;
+        rdfs:label          "nyi ri shel bzhin/"@bo-x-ewts .
+    
+    bdr:NM68630547E2F7AFD5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT4892871BBAEA2DB8
+        a                   :Note ;
+        :locationStatement  "p. 33" ;
+        :noteSource         bdr:MW23886 ;
+        :noteText           "bonpo scholar\nafter his abbacy at sman ri monastery, he came to g.yung drung gling to teach; he belonged to the sgo lineage"@en .
+    
+    bdr:NTE5B633CA7D78B258
+        a                   :Note ;
+        :locationStatement  "p. 907" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source gives a brief biography; source gives the years as 1813-1848."@en .
+    
+    bdr:P265  a             :Person ;
+        skos:prefLabel      "nyi ma bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4892871BBAEA2DB8 , bdr:NTE5B633CA7D78B258 ;
+        :personEvent        bdr:EV06E9D9DF893DD25C , bdr:EV3F7FE9BF4804167B , bdr:EV5AD709AA37DA2B46 , bdr:EVAE020DC7D3FEC7C2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0388BDA325C74748 , bdr:NM2F89A416173B5161 , bdr:NM68630547E2F7AFD5 .
+}

@@ -1,0 +1,80 @@
+@base          <bdg:P5662> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5662 {
+    bda:LGD4B43AC7C2713750
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-26T10:42:57.89Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5662  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5662 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "78/P5662.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5662 ;
+        adm:logEntry        bda:LGD4B43AC7C2713750 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D5A34EFE0ACDE1E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EV649D9987FFFFAE8D
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVFFFC43C33586F0EE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM15E9E691AF5690B6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnas gsar ba 'jam dbyangs bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM72088F89C7CA1AB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM7A8B54EC538A7DBD
+        a                   :PersonTitle ;
+        rdfs:label          "zhwa lu mkhan po 'jam dbyangs bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMB8E790E4DE086DE1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 24"@bo-x-ewts .
+    
+    bdr:NT6D77BC6E81E2A4D3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:NTA34D7D8199F943A8
+        a                   :Note ;
+        :locationStatement  "p. 402" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P5662  a            :Person ;
+        skos:prefLabel      "'jam dbyangs bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D77BC6E81E2A4D3 , bdr:NTA34D7D8199F943A8 ;
+        :personEvent        bdr:EV1D5A34EFE0ACDE1E , bdr:EV649D9987FFFFAE8D , bdr:EVFFFC43C33586F0EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15E9E691AF5690B6 , bdr:NM72088F89C7CA1AB5 , bdr:NM7A8B54EC538A7DBD , bdr:NMB8E790E4DE086DE1 ;
+        :personStudentOf    bdr:P37 ;
+        :personTeacherOf    bdr:P3023 , bdr:P5738 .
+}

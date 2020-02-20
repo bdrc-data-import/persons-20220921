@@ -1,0 +1,54 @@
+@base          <bdg:P6381> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6381 {
+    bda:P6381  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6381 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "af/P6381.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6381 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B6D3CCB83E7DE55
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV0E643498724290E1
+        a                   :PersonBirth ;
+        :onYear             "1941"^^xsd:gYear .
+    
+    bdr:NM1B7B985CB2B08A14
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "klu sprul pad+ma snang gsal rdo rje/"@bo-x-ewts .
+    
+    bdr:NMFADF0C2D62011801
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma snang gsal rdo rje/"@bo-x-ewts .
+    
+    bdr:NT4366BF4AF96B99CE
+        a                   :Note ;
+        :locationStatement  "p. 520" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "rnying ma master of the dpal yul dar thang tradition\nsource includes biographical sketch"@en .
+    
+    bdr:P6381  a            :Person ;
+        skos:prefLabel      "pad+ma snang gsal rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4366BF4AF96B99CE ;
+        :personEvent        bdr:EV0B6D3CCB83E7DE55 , bdr:EV0E643498724290E1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1B7B985CB2B08A14 , bdr:NMFADF0C2D62011801 .
+}

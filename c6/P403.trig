@@ -1,0 +1,85 @@
+@base          <bdg:P403> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P403 {
+    bda:LG589CAB44E7E0B0B4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:50:12.326Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG7C33F2524F364AFC
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-30T17:01:37.16Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P403  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P403 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c6/P403.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P403 ;
+        adm:logEntry        bda:LG589CAB44E7E0B0B4 , bda:LG7C33F2524F364AFC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04507C8657797B64
+        a                   :PersonDeath ;
+        :onYear             "1327"^^xsd:gYear .
+    
+    bdr:EV403238609F5F1689
+        a                   :PersonBirth ;
+        :onYear             "1277"^^xsd:gYear .
+    
+    bdr:NM36573B6D06037489
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha zur khang pa dbang phyug ye shes/"@bo-x-ewts .
+    
+    bdr:NM3C64D2733F4F1922
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang phyug ye shes/"@bo-x-ewts .
+    
+    bdr:NMA7FE40A020393FD0
+        a                   :PersonTitle ;
+        rdfs:label          "'chad kha gsar ma gdan rabs 05 dbang phyug ye shes/"@bo-x-ewts .
+    
+    bdr:NMCFB8DCA6ADF2E508
+        a                   :PersonPersonalName ;
+        rdfs:label          "zur khang pa dbang phyug ye shes/"@bo-x-ewts .
+    
+    bdr:NT2B969BD3982D3BB7
+        a                   :Note ;
+        :locationStatement  "p. 192" ;
+        :noteSource         bdr:MW19804 .
+    
+    bdr:NTEA9F35E106BD304D
+        a                   :Note ;
+        :locationStatement  "p. 1866" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTED3323B726439092
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P403  a             :Person ;
+        skos:prefLabel      "dbang phyug ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B969BD3982D3BB7 , bdr:NTEA9F35E106BD304D , bdr:NTED3323B726439092 ;
+        :personEvent        bdr:EV04507C8657797B64 , bdr:EV403238609F5F1689 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM36573B6D06037489 , bdr:NM3C64D2733F4F1922 , bdr:NMA7FE40A020393FD0 , bdr:NMCFB8DCA6ADF2E508 ;
+        :personStudentOf    bdr:P4140 ;
+        :personTeacherOf    bdr:P1583 .
+}

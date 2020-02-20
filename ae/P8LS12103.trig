@@ -1,0 +1,61 @@
+@base          <bdg:P8LS12103> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12103 {
+    bda:LGA3084298DF3848CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-06T14:35:50.309Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12103  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12103 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ae/P8LS12103.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12103 ;
+        adm:logEntry        bda:LGA3084298DF3848CA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30AC5763BC03B273
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1780"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM003D5B1201874877
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri ka pa 'jam dbyangs don grub/"@bo-x-ewts .
+    
+    bdr:NM659D075512453C5C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs don grub/"@bo-x-ewts .
+    
+    bdr:NMD7C12D97ECF3B2ED
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 30"@bo-x-ewts .
+    
+    bdr:NTA4FC9D7D60114F72
+        a                   :Note ;
+        :locationStatement  "p. 260" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12103  a        :Person ;
+        skos:prefLabel      "'jam dbyangs don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA4FC9D7D60114F72 ;
+        :personEvent        bdr:EV30AC5763BC03B273 ;
+        :personName         bdr:NM003D5B1201874877 , bdr:NM659D075512453C5C , bdr:NMD7C12D97ECF3B2ED .
+}

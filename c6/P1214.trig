@@ -1,0 +1,50 @@
+@base          <bdg:P1214> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1214 {
+    bda:P1214  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1214 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c6/P1214.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1214 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV483818C397B8EA77
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM477FE535DFC597F3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshungs med/"@bo-x-ewts .
+    
+    bdr:NMD48BE93E53777901
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT546E32C8A4F1ED7A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1214  a            :Person ;
+        skos:prefLabel      "dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT546E32C8A4F1ED7A ;
+        :personEvent        bdr:EV483818C397B8EA77 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM477FE535DFC597F3 , bdr:NMD48BE93E53777901 ;
+        :personTeacherOf    bdr:P484 .
+}

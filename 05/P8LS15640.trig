@@ -1,0 +1,50 @@
+@base          <bdg:P8LS15640> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15640 {
+    bda:LG81E66C470D171E65
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-17T09:44:44.558Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15640  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15640 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "05/P8LS15640.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15640 ;
+        adm:logEntry        bda:LG81E66C470D171E65 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NMD8F0D4247086D017
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos seng /"@bo-x-ewts .
+    
+    bdr:NMFCCC584B903FCB50
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "so chos seng /"@bo-x-ewts .
+    
+    bdr:NT8C4834DB60E23DFE
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 101v2" ;
+        :noteSource         bdr:MW29706 .
+    
+    bdr:P8LS15640  a        :Person ;
+        skos:prefLabel      "chos seng /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8C4834DB60E23DFE ;
+        :personName         bdr:NMD8F0D4247086D017 , bdr:NMFCCC584B903FCB50 .
+}

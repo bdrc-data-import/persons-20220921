@@ -1,0 +1,72 @@
+@base          <bdg:P6066> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6066 {
+    bda:LG2D6D772C6B61217F
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-16T12:03:08.867Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG5BEC7EC2808AF29E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-02T16:53:06.165Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates and teacher"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG9392F23D56D8556F
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T16:06:18.086Z"^^xsd:dateTime ;
+        adm:logMessage      "edited (P705 bdud 'joms gling pa dang tha dad yin/)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6066  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6066 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "01/P6066.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6066 ;
+        adm:logEntry        bda:LG2D6D772C6B61217F , bda:LG5BEC7EC2808AF29E , bda:LG9392F23D56D8556F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVD82A896B8931960D
+        a                   :PersonDeath ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:EVFCBC511ED9400AA8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1857"^^xsd:gYear .
+    
+    bdr:NM67F1DEEF3E52570C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bdud 'joms rdo rje rol pa rtsal/"@bo-x-ewts .
+    
+    bdr:NM80BFB4479545904E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin bdud 'joms rdo rje/"@bo-x-ewts .
+    
+    bdr:NM989AF7C961D99794
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha gya'i gter rgan rig 'dzin bdud 'joms rdo rje/"@bo-x-ewts .
+    
+    bdr:P6066  a            :Person ;
+        skos:prefLabel      "bdud 'joms rdo rje rol pa rtsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD82A896B8931960D , bdr:EVFCBC511ED9400AA8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM67F1DEEF3E52570C , bdr:NM80BFB4479545904E , bdr:NM989AF7C961D99794 ;
+        :personStudentOf    bdr:P382 , bdr:P7959 ;
+        :personTeacherOf    bdr:P6306 .
+}

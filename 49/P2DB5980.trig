@@ -1,0 +1,104 @@
+@base          <bdg:P2DB5980> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2DB5980 {
+    bda:LG315AF52D60D00BAA
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-13T15:00:26.075Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG693D6F2FCCA0D006
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-14T16:41:44.687Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LG98A51D6060EE4B6B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T09:25:09.747Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB0015EA239E983D1
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-14T16:39:55.577Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LGCF662289EDA90A08
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-14T16:19:11.609Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LGE59A53B7F71D7497
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-06-08T10:40:41.322Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P2DB5980  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2DB5980 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "49/P2DB5980.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2DB5980 ;
+        adm:logEntry        bda:LG315AF52D60D00BAA , bda:LG693D6F2FCCA0D006 , bda:LG98A51D6060EE4B6B , bda:LGB0015EA239E983D1 , bda:LGCF662289EDA90A08 , bda:LGE59A53B7F71D7497 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06EC5352D4126F9F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EV306354FABBF53B66
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV7CD3DF6BA94626E5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM1C794E63ECAC50BA
+        a                   :PersonTitle ;
+        rdfs:label          "ngor khang gsar mkhan po ngag dbang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM560755D4DBE596A5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 69"@bo-x-ewts .
+    
+    bdr:NMF3483DEAF186E657
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 69 ngag dbang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFA35F3DE98EABADA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT369AFFAB43B13194
+        a                   :Note ;
+        :locationStatement  "p. 121" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P2DB5980  a         :Person ;
+        skos:prefLabel      "ngag dbang yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT369AFFAB43B13194 ;
+        :personEvent        bdr:EV06EC5352D4126F9F , bdr:EV306354FABBF53B66 , bdr:EV7CD3DF6BA94626E5 ;
+        :personName         bdr:NM1C794E63ECAC50BA , bdr:NM560755D4DBE596A5 , bdr:NMF3483DEAF186E657 , bdr:NMFA35F3DE98EABADA ;
+        :personTeacherOf    bdr:P2DB5979 , bdr:P4CZ75608 , bdr:P7800 .
+}

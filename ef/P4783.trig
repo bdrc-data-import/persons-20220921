@@ -1,0 +1,86 @@
+@base          <bdg:P4783> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4783 {
+    bda:LG5E87182C3F722731
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T15:25:30.121Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation, teacher and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGAC290413817D86C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-14T16:45:55.857Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4783  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4783 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ef/P4783.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4783 ;
+        adm:logEntry        bda:LG5E87182C3F722731 , bda:LGAC290413817D86C1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3FDAC80235CB4336
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EV6A9337781E1A556E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM12AE788ED4CCFFA7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "kaH thog si tu 04"@bo-x-ewts .
+    
+    bdr:NM53035B13224EAAB8
+        a                   :PersonPersonalName ;
+        rdfs:label          "o rgyan byams pa mi 'gyur bshad sgrub chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM61F639AACAB9C7C0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Katok Situ 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM643D3C5F7A60AAC1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog si tu 04 chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NME9381B9A3D26239D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NTCEC52C46530CF00D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:NTFE25AD9CA6E82794
+        a                   :Note ;
+        :locationStatement  "p. 125-126" ;
+        :noteSource         bdr:MW20396 .
+    
+    bdr:P4783  a            :Person ;
+        skos:prefLabel      "chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P706 ;
+        :isRoot             true ;
+        :note               bdr:NTCEC52C46530CF00D , bdr:NTFE25AD9CA6E82794 ;
+        :personEvent        bdr:EV3FDAC80235CB4336 , bdr:EV6A9337781E1A556E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12AE788ED4CCFFA7 , bdr:NM53035B13224EAAB8 , bdr:NM61F639AACAB9C7C0 , bdr:NM643D3C5F7A60AAC1 , bdr:NME9381B9A3D26239D ;
+        :personStudentOf    bdr:P4782 , bdr:P733 , bdr:P736 ;
+        :personTeacherOf    bdr:P4779 .
+}

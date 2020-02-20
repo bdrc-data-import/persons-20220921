@@ -1,0 +1,71 @@
+@base          <bdg:P8028> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8028 {
+    bda:LG860C4433FA477DC0
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-09T13:17:09.35Z"^^xsd:dateTime ;
+        adm:logMessage      "added G1591"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA2D364020A0C12B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-09T11:13:15.484Z"^^xsd:dateTime ;
+        adm:logMessage      "added G10MS19726"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGFD51F3A549E67329
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-19T10:37:34.248Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P8028  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8028 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b7/P8028.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8028 ;
+        adm:logEntry        bda:LG860C4433FA477DC0 , bda:LGA2D364020A0C12B9 , bda:LGFD51F3A549E67329 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA7A4327092867319
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G1591 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVF2D454D73AFE619A
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1BA836C94088DAA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bde ba'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMD65E0A50A956AA3C
+        a                   :PersonPersonalName ;
+        rdfs:label          "'gyur med phan bde'i 'od zer/"@bo-x-ewts .
+    
+    bdr:P8028  a            :Person ;
+        skos:prefLabel      "'jam dpal bde ba'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVA7A4327092867319 , bdr:EVF2D454D73AFE619A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1BA836C94088DAA1 , bdr:NMD65E0A50A956AA3C ;
+        :personStudentOf    bdr:P252 , bdr:P269 , bdr:P4069 , bdr:P6061 ;
+        :personTeacherOf    bdr:P736 , bdr:P8850 .
+}

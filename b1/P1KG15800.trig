@@ -1,0 +1,54 @@
+@base          <bdg:P1KG15800> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15800 {
+    bda:LG680EBA2B431BA5D1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-29T13:23:21.095Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15800  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15800 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b1/P1KG15800.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15800 ;
+        adm:logEntry        bda:LG680EBA2B431BA5D1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV57CDD3957DB69407
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3F8F42D19F8FBE17
+        a                   :PersonPersonalName ;
+        rdfs:label          "rebgong tashi"@en .
+    
+    bdr:NM67E92B2EA26DF6AC
+        a                   :PersonPersonalName ;
+        rdfs:label          "reb gong bkra shis/"@bo-x-ewts .
+    
+    bdr:NMB33FA991C0DFE2D1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis/"@bo-x-ewts .
+    
+    bdr:P1KG15800  a        :Person ;
+        skos:prefLabel      "reb gong bkra shis/"@bo-x-ewts , "rebgong tashi"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV57CDD3957DB69407 ;
+        :personName         bdr:NM3F8F42D19F8FBE17 , bdr:NM67E92B2EA26DF6AC , bdr:NMB33FA991C0DFE2D1 .
+}

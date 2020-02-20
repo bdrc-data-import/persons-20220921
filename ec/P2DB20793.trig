@@ -1,0 +1,51 @@
+@base          <bdg:P2DB20793> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2DB20793 {
+    bda:LG0F0E8A94888C7E52
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-14T14:34:00.883Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:P2DB20793  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2DB20793 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ec/P2DB20793.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2DB20793 ;
+        adm:logEntry        bda:LG0F0E8A94888C7E52 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV128A30F7910CCF65
+        a                   :PersonBirth ;
+        :onYear             "1772"^^xsd:gYear .
+    
+    bdr:EV8912BD04EB605CE9
+        a                   :PersonDeath ;
+        :onYear             "1836"^^xsd:gYear .
+    
+    bdr:NMFB92BC86F799F71F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma chos 'phel/"@bo-x-ewts .
+    
+    bdr:P2DB20793  a        :Person ;
+        skos:prefLabel      "pad+ma chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV128A30F7910CCF65 , bdr:EV8912BD04EB605CE9 ;
+        :personName         bdr:NMFB92BC86F799F71F ;
+        :personStudentOf    bdr:P684 ;
+        :personTeacherOf    bdr:P2DB20788 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P1KG91993> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG91993 {
+    bda:LG3F40B9DF8F805A00
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-06-26T14:46:12.053Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGECD43C4B5B310FC5
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-07-16T16:41:01.559Z"^^xsd:dateTime ;
+        adm:logMessage      "new record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG91993  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG91993 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f9/P1KG91993.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG91993 ;
+        adm:logEntry        bda:LG3F40B9DF8F805A00 , bda:LGECD43C4B5B310FC5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6FCAB54A078043B9
+        a                   :PersonBirth ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:NM32EEC96C7BA3AA23
+        a                   :PersonOtherName ;
+        rdfs:label          "biambaa ragchaagiin"@en .
+    
+    bdr:NMD0F001B6B67D9C0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byambaa ragchaa"@en .
+    
+    bdr:NTF72F77F00676009A
+        a                   :Note ;
+        :noteText           "a mongolian scholar"@en .
+    
+    bdr:P1KG91993  a        :Person ;
+        skos:prefLabel      "byambaa ragchaa"@en ;
+        :isRoot             true ;
+        :note               bdr:NTF72F77F00676009A ;
+        :personEvent        bdr:EV6FCAB54A078043B9 ;
+        :personName         bdr:NM32EEC96C7BA3AA23 , bdr:NMD0F001B6B67D9C0E .
+}

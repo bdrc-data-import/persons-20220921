@@ -1,0 +1,79 @@
+@base          <bdg:P3120> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3120 {
+    bda:LG140C571BB2A137F3
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-10-08T15:37:04.301Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA6BED2DD9D64B0E2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-17T11:42:29.674Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student and seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3120  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3120 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f9/P3120.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3120 ;
+        adm:logEntry        bda:LG140C571BB2A137F3 , bda:LGA6BED2DD9D64B0E2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5ABF91EC774FBC17
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVCD1C74C1DC38C17A
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM4E897F42E176915C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang gling pa rin chen bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC9168906690831B4
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jam dbyangs bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME445FAAE424C64B1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMFFFBA83F36E2A06F
+        a                   :PersonPersonalName ;
+        rdfs:label          "bkra shis rgyal mtshan, byang gling pa/"@bo-x-ewts .
+    
+    bdr:NTBD249198281E71AB
+        a                   :Note ;
+        :locationStatement  "f. 1, f. 15v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "master of the zhwa lu tradition of the kalacakra; mentioned here as a figure in the transmission of the yogasataka of nagarjuna\n\nhis disciple was chos rje kun dga' bkra shis; his disciple was zhal snga ba dkon mchog rgyal mtshan"@en .
+    
+    bdr:P3120  a            :Person ;
+        skos:prefLabel      "rin chen bkra shis rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBD249198281E71AB ;
+        :personEvent        bdr:EV5ABF91EC774FBC17 , bdr:EVCD1C74C1DC38C17A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4E897F42E176915C , bdr:NMC9168906690831B4 , bdr:NME445FAAE424C64B1 , bdr:NMFFFBA83F36E2A06F ;
+        :personStudentOf    bdr:P3102 , bdr:P3119 , bdr:P3267 , bdr:P3268 , bdr:P3283 ;
+        :personTeacherOf    bdr:P1089 , bdr:P1090 , bdr:P3111 , bdr:P3112 , bdr:P7188 , bdr:P9964 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Janglingpa-Tashi-Gyeltsen/5437"^^xsd:anyURI .
+}

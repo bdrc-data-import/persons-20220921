@@ -1,0 +1,92 @@
+@base          <bdg:P1820> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1820 {
+    bda:LG2EB7E166C1491B4A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-23T08:53:27.448Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1820  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1820 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "67/P1820.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1820 ;
+        adm:logEntry        bda:LG2EB7E166C1491B4A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2007F04407AA479B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1925"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV51F59C9A1BF5C19C
+        a                   :PersonDeath ;
+        :onYear             "1927"^^xsd:gYear .
+    
+    bdr:EV53599770E74F8B4F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM3F654C3A5E910ADC
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 104 snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5A1C272D65AC1C9D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 104"@bo-x-ewts .
+    
+    bdr:NMC5A2E0CB6FB77101
+        a                   :PersonTitle ;
+        rdfs:label          "dor shul chos rje rgya nag pa snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCF09802EAB8CFCA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD162E8578A2D0421
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dor shul snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT073C1352769E9510
+        a                   :Note ;
+        :locationStatement  "p. 206-207" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT1AA824769D4F70DB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT43ACEA4118A675E6
+        a                   :Note ;
+        :locationStatement  "p. 834" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT86B7748631563D83
+        a                   :Note ;
+        :noteText           "Twice to Mongolia where he taught extensively.\n1925. Becomes 104 Mkhan-rabs of Bya-khyung.\n1927. Died while on the throne."@en .
+    
+    bdr:P1820  a            :Person ;
+        skos:prefLabel      "snyan grags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT073C1352769E9510 , bdr:NT1AA824769D4F70DB , bdr:NT43ACEA4118A675E6 , bdr:NT86B7748631563D83 ;
+        :personEvent        bdr:EV2007F04407AA479B , bdr:EV51F59C9A1BF5C19C , bdr:EV53599770E74F8B4F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3F654C3A5E910ADC , bdr:NM5A1C272D65AC1C9D , bdr:NMC5A2E0CB6FB77101 , bdr:NMCF09802EAB8CFCA1 , bdr:NMD162E8578A2D0421 ;
+        :personStudentOf    bdr:P1821 .
+}

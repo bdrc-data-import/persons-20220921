@@ -1,0 +1,74 @@
+@base          <bdg:P2213> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2213 {
+    bda:LG032F9369081F12D1
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-11T15:36:56.687Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG91B937E92C12CC8E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-12T14:16:04.247Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G1080 to G2175"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2213  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2213 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5a/P2213.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2213 ;
+        adm:logEntry        bda:LG032F9369081F12D1 , bda:LG91B937E92C12CC8E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB715517F87858819
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2175 ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM8041796F3560170A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal lde/"@bo-x-ewts .
+    
+    bdr:NT486E8EAE33F15D47
+        a                   :Note ;
+        :noteText           "992. Father and brothers split the kingdom, leaving him with the Zam-pa gsum of Gtsang: Lha-rtse nas Zam Sngon-mo, Gling-bu Sha-zam Dmar-po, Mang-yul Gser-zam Ser-po.\nOne of the Smad kyi lde gsum."@en .
+    
+    bdr:NTC4B7568CB2C6DB8A
+        a                   :Note ;
+        :locationStatement  "p. 80" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "tibetan prince who is noted as having been one of the smad kyi lde gsum during the first part of the 10th cent."@en .
+    
+    bdr:NTED4CBA937BF357DB
+        a                   :Note ;
+        :locationStatement  "p. 1007" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:P2213  a            :Person ;
+        skos:prefLabel      "dpal lde/"@bo-x-ewts ;
+        :hasFather          bdr:P2214 , bdr:P2215 ;
+        :hasMother          bdr:P2215 ;
+        :hasSon             bdr:P2217 , bdr:P2218 ;
+        :hasWife            bdr:P2216 ;
+        :isRoot             true ;
+        :note               bdr:NT486E8EAE33F15D47 , bdr:NTC4B7568CB2C6DB8A , bdr:NTED4CBA937BF357DB ;
+        :personEvent        bdr:EVB715517F87858819 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8041796F3560170A .
+}

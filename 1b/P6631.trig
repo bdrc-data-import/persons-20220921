@@ -1,0 +1,50 @@
+@base          <bdg:P6631> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6631 {
+    bda:P6631  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6631 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1b/P6631.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6631 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B0E9CA13E4AB818
+        a                   :PersonBirth ;
+        :onYear             "1953"^^xsd:gYear .
+    
+    bdr:NM05313628CC0A3BA2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla brang sgrol ma skyabs/"@bo-x-ewts .
+    
+    bdr:NMED6255EDC77813CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sgrol ma skyabs/"@bo-x-ewts .
+    
+    bdr:NTAB80DA0542D69D50
+        a                   :Note ;
+        :locationStatement  "p. 59" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P6631  a            :Person ;
+        skos:prefLabel      "sgrol ma skyabs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAB80DA0542D69D50 ;
+        :personEvent        bdr:EV5B0E9CA13E4AB818 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05313628CC0A3BA2 , bdr:NMED6255EDC77813CE .
+}

@@ -1,0 +1,65 @@
+@base          <bdg:P8936> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8936 {
+    bda:LGB82A7BF4D7925F6D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:38:10.597Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8936  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8936 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "af/P8936.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8936 ;
+        adm:logEntry        bda:LGB82A7BF4D7925F6D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C6D9F21E42E8E16
+        a                   :PersonDeath ;
+        :onYear             "1966"^^xsd:gYear .
+    
+    bdr:EVB91F67D81B1515E1
+        a                   :PersonBirth ;
+        :onYear             "1900"^^xsd:gYear .
+    
+    bdr:NM3FB826B6CF7E0649
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dkon mchog bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM41CC18E8E47CD893
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 08 ngag dbang dkon mchog bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM9B725F6F3DCCBCD7
+        a                   :PersonPersonalName ;
+        rdfs:label          "bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTF175CE5001F1B84A
+        a                   :Note ;
+        :locationStatement  "pp. 238-252" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: 'dzi yul smad phyogs shos mda'"@en .
+    
+    bdr:P8936  a            :Person ;
+        skos:prefLabel      "ngag dbang dkon mchog bstan pa dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF175CE5001F1B84A ;
+        :personEvent        bdr:EV3C6D9F21E42E8E16 , bdr:EVB91F67D81B1515E1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3FB826B6CF7E0649 , bdr:NM41CC18E8E47CD893 , bdr:NM9B725F6F3DCCBCD7 .
+}

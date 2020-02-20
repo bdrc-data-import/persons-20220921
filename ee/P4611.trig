@@ -1,0 +1,72 @@
+@base          <bdg:P4611> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4611 {
+    bda:LGB022AEA1C27292A4
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-10T12:21:05.431Z"^^xsd:dateTime ;
+        adm:logMessage      "update birth place's name"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4611  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4611 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ee/P4611.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4611 ;
+        adm:logEntry        bda:LGB022AEA1C27292A4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7564A07E839A0994
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1329 ;
+        :onYear             "1734"^^xsd:gYear .
+    
+    bdr:NM671624EA9435CA4C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM82874D8CD8638102
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang grags pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMEB1085D455B9C40D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "er te ni jo bo bla ma blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT0DAC351C1F89CF46
+        a                   :Note ;
+        :locationStatement  "p. 21 (1st group)" ;
+        :noteSource         bdr:MW27905 ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT5EB46119DD779900
+        a                   :Note ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "dates"@en .
+    
+    bdr:NTE3EE86D359B96ED5
+        a                   :Note ;
+        :noteText           "gsung 'bum is supposed to have filled more than 30 volumes."@en .
+    
+    bdr:P4611  a            :Person ;
+        skos:prefLabel      "blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0DAC351C1F89CF46 , bdr:NT5EB46119DD779900 , bdr:NTE3EE86D359B96ED5 ;
+        :personEvent        bdr:EV7564A07E839A0994 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM671624EA9435CA4C , bdr:NM82874D8CD8638102 , bdr:NMEB1085D455B9C40D ;
+        :personStudentOf    bdr:P411 , bdr:P4612 , bdr:P4613 , bdr:P4614 .
+}

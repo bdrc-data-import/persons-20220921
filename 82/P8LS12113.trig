@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12113> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12113 {
+    bda:LG2FF01F52C5CA93FF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T15:56:55.945Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12113  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12113 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "82/P8LS12113.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12113 ;
+        adm:logEntry        bda:LG2FF01F52C5CA93FF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1097AD83B0DB5A16
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1761"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EV7866DC236B3D4098
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM1FDC81F514F9ADE2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mer gen rje shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM759DA5CC28F5C0C0
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 02"@bo-x-ewts .
+    
+    bdr:NM7815E9CBDA2A8345
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT03D00FAB2B515537
+        a                   :Note ;
+        :locationStatement  "p. 308" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12113  a        :Person ;
+        skos:prefLabel      "shes rab bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT03D00FAB2B515537 ;
+        :personEvent        bdr:EV1097AD83B0DB5A16 , bdr:EV7866DC236B3D4098 ;
+        :personName         bdr:NM1FDC81F514F9ADE2 , bdr:NM759DA5CC28F5C0C0 , bdr:NM7815E9CBDA2A8345 .
+}

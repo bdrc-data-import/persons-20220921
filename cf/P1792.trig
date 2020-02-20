@@ -1,0 +1,50 @@
+@base          <bdg:P1792> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1792 {
+    bda:P1792  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1792 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cf/P1792.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1792 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV634FE436297DF3AD
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM99C71A741ADECE77
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin dar rgyal/"@bo-x-ewts .
+    
+    bdr:NMA13880C75973183D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drang srong bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTC5C2E903760B1C63
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P1792  a            :Person ;
+        skos:prefLabel      "bstan 'dzin dar rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC5C2E903760B1C63 ;
+        :personEvent        bdr:EV634FE436297DF3AD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM99C71A741ADECE77 , bdr:NMA13880C75973183D ;
+        :personTeacherOf    bdr:P1791 .
+}

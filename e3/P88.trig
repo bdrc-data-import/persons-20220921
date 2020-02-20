@@ -1,0 +1,88 @@
+@base          <bdg:P88> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P88 {
+    bda:LG2B674F2EF4D099B7
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T12:31:17.987Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG93768883C04C1E90
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:26:26.968Z"^^xsd:dateTime ;
+        adm:logMessage      "added student info."@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P88  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P88 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e3/P88.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P88 ;
+        adm:logEntry        bda:LG2B674F2EF4D099B7 , bda:LG93768883C04C1E90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE3840965640C8891
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G204 .
+    
+    bdr:EVEEE9F2391C10CD5E
+        a                   :PersonDeath ;
+        :onYear             "1309"^^xsd:gYear .
+    
+    bdr:EVFC9991226700E80C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G557 ;
+        :onYear             "1234"^^xsd:gYear .
+    
+    bdr:NM05CB97777496E525
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gtsang ma shangs ston/"@bo-x-ewts .
+    
+    bdr:NM1A14941395439496
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas grub shangs ston/"@bo-x-ewts .
+    
+    bdr:NM3AB85BC17661398B
+        a                   :PersonPersonalName ;
+        rdfs:label          "shangs ston/"@bo-x-ewts .
+    
+    bdr:NM41872A2E0B471F94
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsam sdings pa mkhas grub chos rje/"@bo-x-ewts .
+    
+    bdr:NTD2CC78AADC31F4ED
+        a                   :Note ;
+        :noteText           "ming mdzod gives personal name as tshul khrims mgon po, surely a confusion with his successor in the lineage khyung po tshul khrims mgon po.\n\n1246: received dge tshul sdom pa from mkhan po nyi thog pa and slob dpon tshul khrims shes rab. studied phar phyin and spyod 'jug with slob dpon shAkya 'bum.\n1241: phar phyin gyi bshad gsar mdzad. studied tshad ma rnam nges, byams chos sde lnga, sa sde, tshad ma sde bdun, dbu ma rigs tshogs drug, bslab btus, and gsang sngags chos tshogs from slob-dpon tshul khrims shes rab (identical with slob dpon tshul khrims shes rab). studied bka' gdams pa doctrines with g.ya' lung mkhan po. went to mdo bo and studied with karma pa. went to yol phu ri gong to meet sangs rgyas ston pa chos kyi shes rab and heard the doctrines of ni gu ma. received the snying thig precepts from a bla ma dkon skyabs. meditated at tsa ri where he achieved great mastery of the shangs pa precepts."@en .
+    
+    bdr:NTDFC965C8DDB62B19
+        a                   :Note ;
+        :locationStatement  "p. 2286" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1234. mkhas grub shangs ston pa 'khrungs"@en .
+    
+    bdr:P88  a              :Person ;
+        skos:prefLabel      "gtsang ma shangs ston/"@bo-x-ewts ;
+        :hasFather          bdr:P2249 ;
+        :hasMother          bdr:P2250 ;
+        :isRoot             true ;
+        :note               bdr:NTD2CC78AADC31F4ED , bdr:NTDFC965C8DDB62B19 ;
+        :personEvent        bdr:EVE3840965640C8891 , bdr:EVEEE9F2391C10CD5E , bdr:EVFC9991226700E80C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05CB97777496E525 , bdr:NM1A14941395439496 , bdr:NM3AB85BC17661398B , bdr:NM41872A2E0B471F94 ;
+        :personStudentOf    bdr:P90 , bdr:P91 , bdr:P92 , bdr:P93 , bdr:P94 , bdr:P95 , bdr:P96 ;
+        :personTeacherOf    bdr:P2781 , bdr:P2782 , bdr:P2839 , bdr:P3350 , bdr:P89 .
+}

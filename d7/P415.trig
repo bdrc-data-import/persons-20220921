@@ -1,0 +1,105 @@
+@base          <bdg:P415> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P415 {
+    bda:LG4CE5C77DE781076B
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T05:04:33.562Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGC7D737B326AB1117
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-17T09:23:25.731Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P415  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P415 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "d7/P415.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P415 ;
+        adm:logEntry        bda:LG4CE5C77DE781076B , bda:LGC7D737B326AB1117 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A1AEA872433E92F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G104 .
+    
+    bdr:EV8FE3E01959C6BD94
+        a                   :PersonDeath ;
+        :onYear             "1708"^^xsd:gYear .
+    
+    bdr:EVDE9DC5573D093836
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1696"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE5A86183A95FF6BB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM03F4A68215CA140F
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 26 blo bzang bsam grub/"@bo-x-ewts .
+    
+    bdr:NM09FAA88B994412BC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rwa lo sprul sku blo bzang bsam grub/"@bo-x-ewts .
+    
+    bdr:NM117513C88433A071
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bsam grub/"@bo-x-ewts .
+    
+    bdr:NM6E5A66A254EF43A4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 26"@bo-x-ewts .
+    
+    bdr:NT2D6924369EA998CC
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a biographical sketch"@en .
+    
+    bdr:NT458F42AFA17EB4F7
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "death year 1708 given in this source"@en .
+    
+    bdr:NT591F140CD740CA62
+        a                   :Note ;
+        :locationStatement  "p. 1547" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NT60DF94A896CA2A05
+        a                   :Note ;
+        :locationStatement  "p. 137-140" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NTBB7644F5AE32A931
+        a                   :Note ;
+        :noteText           "important gelug teacher from amdo"@en .
+    
+    bdr:P415  a             :Person ;
+        skos:prefLabel      "blo bzang bsam grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2D6924369EA998CC , bdr:NT458F42AFA17EB4F7 , bdr:NT591F140CD740CA62 , bdr:NT60DF94A896CA2A05 , bdr:NTBB7644F5AE32A931 ;
+        :personEvent        bdr:EV1A1AEA872433E92F , bdr:EV8FE3E01959C6BD94 , bdr:EVDE9DC5573D093836 , bdr:EVE5A86183A95FF6BB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03F4A68215CA140F , bdr:NM09FAA88B994412BC , bdr:NM117513C88433A071 , bdr:NM6E5A66A254EF43A4 .
+}

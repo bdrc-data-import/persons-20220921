@@ -1,0 +1,59 @@
+@base          <bdg:P7225> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7225 {
+    bda:LG1A6C031F48D0765F
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-20T12:15:12.695Z"^^xsd:dateTime ;
+        adm:logMessage      "Revewed by CN, CZ, KG and LS"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGB2F07B72EF0DC197
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-02-26T13:06:08.733Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P7225  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7225 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "00/P7225.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7225 ;
+        adm:logEntry        bda:LG1A6C031F48D0765F , bda:LGB2F07B72EF0DC197 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV80E25D9DDB04C460
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM23779549194D7E34
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dkar mo/"@bo-x-ewts .
+    
+    bdr:NMC4FC9620DFA1D7CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang mkhar ba blo bzang dkar mo/"@bo-x-ewts .
+    
+    bdr:P7225  a            :Person ;
+        skos:prefLabel      "blo bzang dkar mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV80E25D9DDB04C460 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM23779549194D7E34 , bdr:NMC4FC9620DFA1D7CA ;
+        :personStudentOf    bdr:P3874 , bdr:P7224 ;
+        :personTeacherOf    bdr:P7226 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P8011> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8011 {
+    bda:LG65D94DAD5414D26D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-15T15:02:28.914Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P8011  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8011 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "75/P8011.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8011 ;
+        adm:logEntry        bda:LG65D94DAD5414D26D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV59B2E40395D4D8C3
+        a                   :PersonBirth ;
+        :onYear             "1952"^^xsd:gYear .
+    
+    bdr:NM2D44CD6850CEE4D2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang 'dus tshe ring /"@bo-x-ewts .
+    
+    bdr:NM593C8BD6F2D18DBD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal rtse dbang 'dus tshe ring /"@bo-x-ewts .
+    
+    bdr:NME89EF5DAA0CC4E15
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang 'dud tshe ring /"@bo-x-ewts .
+    
+    bdr:NT16F3CE4AA1309345
+        a                   :Note ;
+        :noteSource         bdr:MW1KG5626 ;
+        :noteText           "brief introduction of author is existed in back cover page of the text"@en .
+    
+    bdr:P8011  a            :Person ;
+        skos:prefLabel      "dbang 'dus tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16F3CE4AA1309345 ;
+        :personEvent        bdr:EV59B2E40395D4D8C3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D44CD6850CEE4D2 , bdr:NM593C8BD6F2D18DBD , bdr:NME89EF5DAA0CC4E15 .
+}

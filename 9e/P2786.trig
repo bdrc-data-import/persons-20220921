@@ -1,0 +1,75 @@
+@base          <bdg:P2786> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2786 {
+    bda:LG4984C4B0A666E9A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:11:30.621Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and primary title"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB10F19D9A46CAF18
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T12:53:08.701Z"^^xsd:dateTime ;
+        adm:logMessage      "མཚན་གནས་མནན་ཡོད་"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGCDBC5B5113057038
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T10:56:21.754Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2786  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2786 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9e/P2786.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2786 ;
+        adm:logEntry        bda:LG4984C4B0A666E9A5 , bda:LGB10F19D9A46CAF18 , bda:LGCDBC5B5113057038 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6F70E5C0E8572A1D
+        a                   :PersonBirth ;
+        :eventWhere         bdr: ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM2A0A478191BFF46C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM473807494411A7B6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtogs ldan nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC3DA627F4A78B05C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1CF29E18DDE1980D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Shangs-pa Bka'-brgyud-pa transmissions"@en .
+    
+    bdr:P2786  a            :Person ;
+        skos:prefLabel      "nam mkha' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1CF29E18DDE1980D ;
+        :personEvent        bdr:EV6F70E5C0E8572A1D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A0A478191BFF46C , bdr:NM473807494411A7B6 , bdr:NMC3DA627F4A78B05C ;
+        :personStudentOf    bdr:P207 , bdr:P2785 ;
+        :personTeacherOf    bdr:P2787 .
+}

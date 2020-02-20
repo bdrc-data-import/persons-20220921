@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12137> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12137 {
+    bda:LG63F5D8147D250F9A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T10:51:52.491Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12137  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12137 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "80/P8LS12137.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12137 ;
+        adm:logEntry        bda:LG63F5D8147D250F9A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8ADD8BED0793F461
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVBC2D11AC08F29DDF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G394 .
+    
+    bdr:EVC57B94A9CF2FFFD9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1892"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM1A3D6D996934DB5B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngo shes lha rams pa don grub chos grags/"@bo-x-ewts .
+    
+    bdr:NM6AB62792751B22A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub chos grags/"@bo-x-ewts .
+    
+    bdr:NM9423E2239674393D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sku 'bum sman pa khri 59"@bo-x-ewts .
+    
+    bdr:NTC66E703D7444CC23
+        a                   :Note ;
+        :locationStatement  "p. 334-335" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "On the same year he built the sman pa ladang"@en .
+    
+    bdr:P8LS12137  a        :Person ;
+        skos:prefLabel      "don grub chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC66E703D7444CC23 ;
+        :personEvent        bdr:EV8ADD8BED0793F461 , bdr:EVBC2D11AC08F29DDF , bdr:EVC57B94A9CF2FFFD9 ;
+        :personName         bdr:NM1A3D6D996934DB5B , bdr:NM6AB62792751B22A9 , bdr:NM9423E2239674393D .
+}

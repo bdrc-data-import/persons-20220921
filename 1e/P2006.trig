@@ -1,0 +1,95 @@
+@base          <bdg:P2006> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2006 {
+    bda:LG8A221924F8816B9B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-17T12:11:24.261Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2006  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2006 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "1e/P2006.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2006 ;
+        adm:logEntry        bda:LG8A221924F8816B9B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV517857FE64376145
+        a                   :PersonDeath ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:EV64DB8A589B0C3EC4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV8C12E99D94FDD312
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1040 ;
+        :onYear             "1822"^^xsd:gYear .
+    
+    bdr:EVA935CF9A03D846EB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1882"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM253AF05F50241733
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 28"@bo-x-ewts .
+    
+    bdr:NM3C83C702FE50DC28
+        a                   :PersonTitle ;
+        rdfs:label          "chu dkar thang smon lam rab 'byams pa blo bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NM4445ECC24FA8EB7B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NM8D310120FF57A1A6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chu dkar thang smon lam rab 'byams pa/"@bo-x-ewts .
+    
+    bdr:NT39744BAEDBD79709
+        a                   :Note ;
+        :locationStatement  "p. 1329" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT715792FF92C67032
+        a                   :Note ;
+        :locationStatement  "p. 357" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:NT8308C6DB2F540240
+        a                   :Note ;
+        :noteText           "Entered Sku-'bum Dpal-ldan Bshad-sgrub-gling for studies.\nTeacher (not recorded): Sku-mched Blo-bzang-bstan-pa-rgya-mtsho.\n1882. Becomes 28th Sku-'bum Dus-'khor Grwa-tshang Khri."@en .
+    
+    bdr:NTD47201EF2EC5951E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2006  a            :Person ;
+        skos:prefLabel      "blo bzang rin chen/"@bo-x-ewts ;
+        :hasFather          bdr:P2007 ;
+        :hasMother          bdr:P2008 ;
+        :isRoot             true ;
+        :note               bdr:NT39744BAEDBD79709 , bdr:NT715792FF92C67032 , bdr:NT8308C6DB2F540240 , bdr:NTD47201EF2EC5951E ;
+        :personEvent        bdr:EV517857FE64376145 , bdr:EV64DB8A589B0C3EC4 , bdr:EV8C12E99D94FDD312 , bdr:EVA935CF9A03D846EB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM253AF05F50241733 , bdr:NM3C83C702FE50DC28 , bdr:NM4445ECC24FA8EB7B , bdr:NM8D310120FF57A1A6 ;
+        :personTeacherOf    bdr:P2543 .
+}

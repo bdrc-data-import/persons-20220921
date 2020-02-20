@@ -1,0 +1,87 @@
+@base          <bdg:P599> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P599 {
+    bda:LGA64024D7A8D6EAF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T09:59:02.99Z"^^xsd:dateTime ;
+        adm:logMessage      "added office and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P599  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P599 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "1e/P599.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P599 ;
+        adm:logEntry        bda:LGA64024D7A8D6EAF2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV316D8ACD6B582147
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV539E9D124A892BCC
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1894"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVC6E9A0BD422FEA26
+        a                   :PersonDeath ;
+        :onYear             "1894"^^xsd:gYear .
+    
+    bdr:EVD4D09758AA965AA4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1891"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVF142E65450C163CD
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G765 ;
+        :onYear             "1844"^^xsd:gYear .
+    
+    bdr:NM34E11F4ED9AAE793
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM79232430B6F706AF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 45"@bo-x-ewts .
+    
+    bdr:NMA6773274BA9AD8BF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 45 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTB7A37EBD59AF8BC9
+        a                   :Note ;
+        :locationStatement  "p. 162" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTC1A6DDDF38B8C8E3
+        a                   :Note ;
+        :noteText           "one of the bhutanese hierarchs; he was on the abbatial throne from 1891-1894"@en .
+    
+    bdr:P599  a             :Person ;
+        skos:prefLabel      "'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB7A37EBD59AF8BC9 , bdr:NTC1A6DDDF38B8C8E3 ;
+        :personEvent        bdr:EV316D8ACD6B582147 , bdr:EV539E9D124A892BCC , bdr:EVC6E9A0BD422FEA26 , bdr:EVD4D09758AA965AA4 , bdr:EVF142E65450C163CD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM34E11F4ED9AAE793 , bdr:NM79232430B6F706AF , bdr:NMA6773274BA9AD8BF ;
+        :personStudentOf    bdr:P575 , bdr:P600 .
+}

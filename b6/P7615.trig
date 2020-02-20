@@ -1,0 +1,70 @@
+@base          <bdg:P7615> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7615 {
+    bda:LG5184D261501E12E2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-12T09:49:39.619Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, event, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7615  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7615 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b6/P7615.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7615 ;
+        adm:logEntry        bda:LG5184D261501E12E2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV459FA43FD50337BF
+        a                   :PersonBirth ;
+        :onYear             "1892"^^xsd:gYear .
+    
+    bdr:EVCF927B6EC313CD03
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:NM092360A01C9E97B0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lcang skya 07"@bo-x-ewts .
+    
+    bdr:NM5E3D4C802C7D0EBC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dpal ldan bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:NM79D45AC3022DCE50
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Changkya 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME3008D34E7955EB6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcang skya 07 blo bzang dpal ldan bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:NT63897CBD32E5EEB4
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 552" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "an expert in tibetan, chinese, mongolia and manchu language\n1952 participated 2nd wolrd buddhist conference in japan\npreceptor of changkishak\npassed away in taiwan"@en .
+    
+    bdr:P7615  a            :Person ;
+        skos:prefLabel      "blo bzang dpal ldan bstan pa'i sgron me/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12697 ;
+        :isRoot             true ;
+        :note               bdr:NT63897CBD32E5EEB4 ;
+        :personEvent        bdr:EV459FA43FD50337BF , bdr:EVCF927B6EC313CD03 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM092360A01C9E97B0 , bdr:NM5E3D4C802C7D0EBC , bdr:NM79D45AC3022DCE50 , bdr:NME3008D34E7955EB6 .
+}

@@ -1,0 +1,68 @@
+@base          <bdg:P8466> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8466 {
+    bda:LG4D73D04EDC2001A3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-31T09:58:48.173Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat, d of birth"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8466  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8466 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ff/P8466.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8466 ;
+        adm:logEntry        bda:LG4D73D04EDC2001A3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5DD3972DC9C09556
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EVB769BC2F28C654B4
+        a                   :PersonBirth ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:EVBD584BF86BA70415
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1996"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM225867D816FD9FEF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med chos grags/"@bo-x-ewts .
+    
+    bdr:NM603526C4A85FF9F0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 70 'jigs med chos grags/"@bo-x-ewts .
+    
+    bdr:NMAE7BD0A3EBDD8F5A
+        a                   :PersonPersonalName ;
+        rdfs:label          "sprul sku pad+ma/"@bo-x-ewts .
+    
+    bdr:NMD547771AE43A704F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 70"@bo-x-ewts .
+    
+    bdr:P8466  a            :Person ;
+        skos:prefLabel      "'jigs med chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV5DD3972DC9C09556 , bdr:EVB769BC2F28C654B4 , bdr:EVBD584BF86BA70415 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM225867D816FD9FEF , bdr:NM603526C4A85FF9F0 , bdr:NMAE7BD0A3EBDD8F5A , bdr:NMD547771AE43A704F .
+}

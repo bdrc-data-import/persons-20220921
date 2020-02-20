@@ -1,0 +1,61 @@
+@base          <bdg:P6708> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6708 {
+    bda:P6708  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6708 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a7/P6708.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6708 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2227A94E4019B188
+        a                   :PersonLeavesOffice ;
+        :onYear             "1943"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV74C87CE1A3937E13
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV7D1EBD1C8D80FFAF
+        a                   :PersonAssumesOffice ;
+        :onYear             "1932"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM3146E7894627D6B4
+        a                   :PersonPersonalName ;
+        rdfs:label          "spen pa don grub, snang byung /"@bo-x-ewts .
+    
+    bdr:NMA8DD8110FAFBC4A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "snang byung ba spen pa don grub/"@bo-x-ewts .
+    
+    bdr:NTCAF0BD8E1BAB4067
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1932-1943"@en .
+    
+    bdr:P6708  a            :Person ;
+        skos:prefLabel      "snang byung ba spen pa don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCAF0BD8E1BAB4067 ;
+        :personEvent        bdr:EV2227A94E4019B188 , bdr:EV74C87CE1A3937E13 , bdr:EV7D1EBD1C8D80FFAF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3146E7894627D6B4 , bdr:NMA8DD8110FAFBC4A4 .
+}

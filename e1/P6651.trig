@@ -1,0 +1,46 @@
+@base          <bdg:P6651> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6651 {
+    bda:P6651  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6651 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "e1/P6651.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6651 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF6152C1B82250557
+        a                   :PersonBirth ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:NM908E06E763ACC925
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu byams/"@bo-x-ewts .
+    
+    bdr:NT57B5F3238B860D6A
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P6651  a            :Person ;
+        skos:prefLabel      "klu byams/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT57B5F3238B860D6A ;
+        :personEvent        bdr:EVF6152C1B82250557 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM908E06E763ACC925 .
+}

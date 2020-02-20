@@ -1,0 +1,50 @@
+@base          <bdg:P8816> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8816 {
+    bda:P8816  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8816 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2c/P8816.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8816 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV92512E4664552225
+        a                   :PersonBirth ;
+        :onYear             "1557"^^xsd:gYear .
+    
+    bdr:NM91C764108D5B03CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nas chi tho yon blo bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM98F9054E043E0798
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT0461DBA21C57826C
+        a                   :Note ;
+        :locationStatement  "p. 2323" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1557. nas chi tho yon blo bzang tshul khrims rnams 'khrungs"@en .
+    
+    bdr:P8816  a            :Person ;
+        skos:prefLabel      "blo bzang tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0461DBA21C57826C ;
+        :personEvent        bdr:EV92512E4664552225 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM91C764108D5B03CA , bdr:NM98F9054E043E0798 .
+}

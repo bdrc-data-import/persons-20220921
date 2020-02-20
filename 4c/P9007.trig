@@ -1,0 +1,44 @@
+@base          <bdg:P9007> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9007 {
+    bda:P9007  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9007 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "4c/P9007.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9007 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6D6185AE51500941
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2CFEE57E4FA2ADAF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang thub bstan/"@bo-x-ewts .
+    
+    bdr:NMDCFDFAE0B8ADBDCA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri dung blo bzang thub bstan/"@bo-x-ewts .
+    
+    bdr:P9007  a            :Person ;
+        skos:prefLabel      "blo bzang thub bstan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV6D6185AE51500941 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2CFEE57E4FA2ADAF , bdr:NMDCFDFAE0B8ADBDCA .
+}

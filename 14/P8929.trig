@@ -1,0 +1,73 @@
+@base          <bdg:P8929> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8929 {
+    bda:LGEA5BCE8D329CE35B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T14:05:27.474Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8929  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8929 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "14/P8929.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8929 ;
+        adm:logEntry        bda:LGEA5BCE8D329CE35B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22DF6777DB11FFA8
+        a                   :PersonDeath ;
+        :onYear             "1942"^^xsd:gYear .
+    
+    bdr:EV5716478D9391747B
+        a                   :PersonBirth ;
+        :onYear             "1874"^^xsd:gYear .
+    
+    bdr:NM135BC0A7B255C4DF
+        a                   :PersonTitle ;
+        rdfs:label          "gtsang pa sku 'bring /"@bo-x-ewts .
+    
+    bdr:NM5A6A822B5D3EE124
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang pa sku phreng 05 'jigs med phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM6A4277D32B9416AF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gtsang pa sku phreng 05"@bo-x-ewts .
+    
+    bdr:NM845E75E88FA4301E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsangpa Kutreng 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMDE40ED0ECC409FB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTFBF56D50AC59E3A7
+        a                   :Note ;
+        :locationStatement  "pp. 252-258" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace (not entered): yul bag kos shog (rgyal rong) \nreligious constructions: gtsang sde'i na mo che'i nye 'dabs su mchod rten bzhengs"@en .
+    
+    bdr:P8929  a            :Person ;
+        skos:prefLabel      "'jigs med phyogs las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFBF56D50AC59E3A7 ;
+        :personEvent        bdr:EV22DF6777DB11FFA8 , bdr:EV5716478D9391747B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM135BC0A7B255C4DF , bdr:NM5A6A822B5D3EE124 , bdr:NM6A4277D32B9416AF , bdr:NM845E75E88FA4301E , bdr:NMDE40ED0ECC409FB5 .
+}

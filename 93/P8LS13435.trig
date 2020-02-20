@@ -1,0 +1,57 @@
+@base          <bdg:P8LS13435> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13435 {
+    bda:LG5C00A56CB29C87AC
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-09T08:53:33.31Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8D94D0669F2A2723
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-18T11:44:36.427Z"^^xsd:dateTime ;
+        adm:logMessage      "added P3JT13451"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8LS13435  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13435 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "93/P8LS13435.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13435 ;
+        adm:logEntry        bda:LG5C00A56CB29C87AC , bda:LG8D94D0669F2A2723 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0F395277928C2B81
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NM9F8777C48C8EB1A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dka' bzhi pa shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NT2997B3F2E3B8E647
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 13" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13435  a        :Person ;
+        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2997B3F2E3B8E647 ;
+        :personName         bdr:NM0F395277928C2B81 , bdr:NM9F8777C48C8EB1A0 ;
+        :personTeacherOf    bdr:P3JT13451 .
+}

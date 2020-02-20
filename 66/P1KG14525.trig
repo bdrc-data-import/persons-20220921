@@ -1,0 +1,50 @@
+@base          <bdg:P1KG14525> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14525 {
+    bda:LG128DF1843C2D911C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-05T12:37:19.363Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14525  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14525 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "66/P1KG14525.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14525 ;
+        adm:logEntry        bda:LG128DF1843C2D911C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5907D595D5016D10
+        a                   :PersonBirth ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:NM35BF759845138C82
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9E4E1F46AE603912
+        a                   :PersonPersonalName ;
+        rdfs:label          "ka gya'i 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P1KG14525  a        :Person ;
+        skos:prefLabel      "'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV5907D595D5016D10 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35BF759845138C82 , bdr:NM9E4E1F46AE603912 .
+}

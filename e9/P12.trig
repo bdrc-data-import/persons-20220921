@@ -1,0 +1,62 @@
+@base          <bdg:P12> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P12 {
+    bda:P12  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P12 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e9/P12.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P12 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C30D9677ED8CF23
+        a                   :PersonBirth ;
+        :onYear             "1880"^^xsd:gYear .
+    
+    bdr:EV3ACDDD4F16EE80D9
+        a                   :PersonAssumesOffice ;
+        :onYear             "1916"^^xsd:gYear .
+    
+    bdr:NM12D8C5E09F0F15BA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bar 'tsho ba 'jigs med bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM1D7726CD446E422F
+        a                   :PersonPersonalName ;
+        rdfs:label          "jigme tenzin"@en .
+    
+    bdr:NM879CA2B88E71B669
+        a                   :PersonPersonalName ;
+        rdfs:label          "bartso-wa I jigme tenzin."@en .
+    
+    bdr:NMF4D714B57BBEDECB
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jigs med bstan 'dzin, 'bar 'tsho ba/"@bo-x-ewts .
+    
+    bdr:NT575054A8484C61A0
+        a                   :Note ;
+        :noteSource         bdr:MW19818 ;
+        :noteText           "who's who in tibet:\nbartso-wa I jigme tenzin.\n1916: entered government service.\nwas a tsi pa (assistant accountant) up to 1936.\n1936: appointed dak chi (postmaster general).\n1943: appointed rdzong dpon of shel dkar rdzong."@en .
+    
+    bdr:P12  a              :Person ;
+        skos:prefLabel      "'bar 'tsho ba 'jigs med bstan 'dzin/"@bo-x-ewts ;
+        :hasSon             bdr:P13 ;
+        :isRoot             true ;
+        :note               bdr:NT575054A8484C61A0 ;
+        :personEvent        bdr:EV1C30D9677ED8CF23 , bdr:EV3ACDDD4F16EE80D9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12D8C5E09F0F15BA , bdr:NM1D7726CD446E422F , bdr:NM879CA2B88E71B669 , bdr:NMF4D714B57BBEDECB .
+}

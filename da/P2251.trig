@@ -1,0 +1,82 @@
+@base          <bdg:P2251> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2251 {
+    bda:LGDF52D90B14FA27DA
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-26T15:30:53.091Z"^^xsd:dateTime ;
+        adm:logMessage      "added names to P2251 and teacher to P505"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2251  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2251 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "da/P2251.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2251 ;
+        adm:logEntry        bda:LGDF52D90B14FA27DA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D5419EBE27BC549
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G343 .
+    
+    bdr:EV45A8290D5BDA2A72
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G44 ;
+        :onYear             "1283"^^xsd:gYear .
+    
+    bdr:EV86826F17A5BB3241
+        a                   :PersonDeath ;
+        :onYear             "1363"^^xsd:gYear .
+    
+    bdr:NM41BD9F92A85041DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos grags dpal/"@bo-x-ewts .
+    
+    bdr:NM4B926CC21E7B10FB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kun spangs chos grags dpal/"@bo-x-ewts .
+    
+    bdr:NM8E51973D8A12712A
+        a                   :PersonTitle ;
+        rdfs:label          "bla ma kun spangs pa/"@bo-x-ewts .
+    
+    bdr:NMCFCB67FD5EE697CF
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos grags dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT2EBE06CA1E3BBB8B
+        a                   :Note ;
+        :locationStatement  "pp. 149-155" ;
+        :noteSource         bdr:MW27321 ;
+        :noteText           "biography\none of the rang 'dra bu chen bcu gsum of dol po pa\nborn in a chu mo lug year at ra lung; studied the making of religious art\nteachers: byang chub 'od zer; mkhas pa chen po don grub dpal in gung thang; 'jam dbyangs chos kyi rgyal mtshan (sa skya); bu ston (zhwa lu); thar pa lo tsA ba nyi ma rgyal mtshan (gsang phu ne'u thog); chos rje yon tan rgya mtsho (jo nang); chos rje 'dzum pa ('dzum chos lung); dol po pa (met at the age of 25); given the monastery of chu bzang by ston pa ye shes dpal; sent to china as a representative of dol po pa; he stayed here 7 months; performed a pu ke'i dmag bzlog in the byang phyogs\nother works mentioned:\nrtsis dpe'i rgyu mtshan phug pa'i chos skor; rnam sras kyi chos skor sogs;\ninvited to stod lung mtshur phu and defeated all opponents in debate\nat the age of 81 invited to dpal steng dgon pa to teach; on the road stabbed by an incarnation of glang dar ma, on byang pa siddhi\nbody taken to chu bzang;\nfuneral rites by sa bzang ma ti pan chen and chos rje phyogs pa"@en .
+    
+    bdr:NT412C0D5446104F1A
+        a                   :Note ;
+        :locationStatement  "p. 32" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "regarded as an embodiment of nam mkha' snying po;\n1305. final vows at jo nang before mkhan po yon tan rgya mtsho;\none of the chief disciples of kun mkhyen dol po pa\ngiven the monastery of chu bzang by ston pa ye dpal;\nhis writings included:\ngzhi lam 'bras gsum gyi rnam bzhag\nrgyud sde'i dbye ba\nrtsis sogs\ntranslated; 'jam dpal lta 'dod sogs\nvisited china as the representative of dol po pa;\nmurdered at the age of 81 by the evil byang pa siddhi (who/)"@en .
+    
+    bdr:P2251  a            :Person ;
+        skos:prefLabel      "chos grags dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2EBE06CA1E3BBB8B , bdr:NT412C0D5446104F1A ;
+        :personEvent        bdr:EV2D5419EBE27BC549 , bdr:EV45A8290D5BDA2A72 , bdr:EV86826F17A5BB3241 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM41BD9F92A85041DC , bdr:NM4B926CC21E7B10FB , bdr:NM8E51973D8A12712A , bdr:NMCFCB67FD5EE697CF ;
+        :personStudentOf    bdr:P139 , bdr:P150 ;
+        :personTeacherOf    bdr:P151 , bdr:P2255 , bdr:P2256 , bdr:P2412 , bdr:P2414 , bdr:P4312 , bdr:P505 .
+}

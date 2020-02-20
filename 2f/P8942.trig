@@ -1,0 +1,52 @@
+@base          <bdg:P8942> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8942 {
+    bda:P8942  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8942 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2f/P8942.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8942 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8D72B59A6B5621A1
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM7522C83CB70C8120
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang lcags mdud/"@bo-x-ewts .
+    
+    bdr:NM82B323164A63280F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lcags mdud/"@bo-x-ewts .
+    
+    bdr:NTB7142C213CF95792
+        a                   :Note ;
+        :locationStatement  "pp. 118-132" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "noted as a teacher of 'dzam thang chos rje 02 rgyal ba sengge"@en .
+    
+    bdr:P8942  a            :Person ;
+        skos:prefLabel      "lcags mdud/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB7142C213CF95792 ;
+        :personEvent        bdr:EV8D72B59A6B5621A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7522C83CB70C8120 , bdr:NM82B323164A63280F ;
+        :personTeacherOf    bdr:P8898 .
+}

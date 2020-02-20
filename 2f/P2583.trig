@@ -1,0 +1,58 @@
+@base          <bdg:P2583> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2583 {
+    bda:LGD7BBCB9839B06F31
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:48:57.423Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2583  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2583 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2f/P2583.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2583 ;
+        adm:logEntry        bda:LGD7BBCB9839B06F31 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBE44C0D2E56CF705
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM9B1B8CD9C1105FDB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde chen chos dpal/"@bo-x-ewts .
+    
+    bdr:NMC3D3F61BCCA22F73
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsung sum bde chen chos dpal/"@bo-x-ewts .
+    
+    bdr:NT8B1AB950A44167B0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P2583  a            :Person ;
+        skos:prefLabel      "bde chen chos dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8B1AB950A44167B0 ;
+        :personEvent        bdr:EVBE44C0D2E56CF705 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9B1B8CD9C1105FDB , bdr:NMC3D3F61BCCA22F73 ;
+        :personStudentOf    bdr:P155 ;
+        :personTeacherOf    bdr:P2582 .
+}

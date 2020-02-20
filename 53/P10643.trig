@@ -1,0 +1,51 @@
+@base          <bdg:P10643> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10643 {
+    bda:P10643  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10643 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "53/P10643.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10643 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D4C8D94F187EB74
+        a                   :PersonBirth ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:NM115F13BFE342C91D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tong blon stag slebs/"@bo-x-ewts .
+    
+    bdr:NM6F8834A643D77C19
+        a                   :PersonPrimaryName ;
+        rdfs:label          "stag slebs/"@bo-x-ewts .
+    
+    bdr:NT943DEE54869A8017
+        a                   :Note ;
+        :locationStatement  "p. 57" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "internal affairs minister of khri lde srong btsan"@en .
+    
+    bdr:P10643  a           :Person ;
+        skos:prefLabel      "stag slebs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT943DEE54869A8017 ;
+        :personEvent        bdr:EV5D4C8D94F187EB74 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM115F13BFE342C91D , bdr:NM6F8834A643D77C19 .
+}

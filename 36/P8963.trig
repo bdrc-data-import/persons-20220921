@@ -1,0 +1,76 @@
+@base          <bdg:P8963> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8963 {
+    bda:LGCC2896C54FBD3D9D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-05T15:41:34.105Z"^^xsd:dateTime ;
+        adm:logMessage      "revised"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGD2B121A95C92AA2C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-02-04T15:49:01.305Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8963  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8963 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "36/P8963.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8963 ;
+        adm:logEntry        bda:LGCC2896C54FBD3D9D , bda:LGD2B121A95C92AA2C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV607137461EF618AA
+        a                   :PersonBirth ;
+        :onYear             "1629"^^xsd:gYear .
+    
+    bdr:EV6C5596290F28A622
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4335 .
+    
+    bdr:EV6DABD7227A1B0D63
+        a                   :PersonDeath ;
+        :onYear             "1686"^^xsd:gYear .
+    
+    bdr:NM79A1528B55778747
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM8517892F1FAE71DC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brog dge kun dga' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT9B020AD2240716FC
+        a                   :Note ;
+        :locationStatement  "pp. 521-523" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "jo nang master who founded 'brog dge\nhis writing includes: rje btsun thams cad mkhyen pa'i gzhan stong dbu ma'i rgyan gyi 'grel bshad \nthis seems still not to have been found"@en .
+    
+    bdr:NTF4B638F7327C8ECE
+        a                   :Note ;
+        :noteText           "major jo nang teacher active in eastern tibet\nthe original tbrc dates given as 1749-1816 have been shown to be incorrect\nmarceau reda has shown that he met rgyal tshab rin chen rgya mtsho in jo nang before 1658 and that the dates 1629-1686 are the only possible dates; this changes the dating of his teachers"@en .
+    
+    bdr:P8963  a            :Person ;
+        skos:prefLabel      "kun dga' dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9B020AD2240716FC , bdr:NTF4B638F7327C8ECE ;
+        :personEvent        bdr:EV607137461EF618AA , bdr:EV6C5596290F28A622 , bdr:EV6DABD7227A1B0D63 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79A1528B55778747 , bdr:NM8517892F1FAE71DC ;
+        :personStudentOf    bdr:P10306 , bdr:P10307 , bdr:P10312 , bdr:P10313 , bdr:P2448 , bdr:P8464 ;
+        :personTeacherOf    bdr:P10308 , bdr:P10309 , bdr:P10310 , bdr:P10311 , bdr:P10314 .
+}

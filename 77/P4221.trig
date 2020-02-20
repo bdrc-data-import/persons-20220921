@@ -1,0 +1,57 @@
+@base          <bdg:P4221> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4221 {
+    bda:LG8A584CC07AE5EF99
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-30T12:02:13.012Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P4221  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4221 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "77/P4221.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4221 ;
+        adm:logEntry        bda:LG8A584CC07AE5EF99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4625A430E77B6ADD
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM004E4F6BCEB89693
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar pa shes rab 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMA1CDCAF21DA5C1B6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NT4608865A01B632CE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P4221  a            :Person ;
+        skos:prefLabel      "shes rab 'byung gnas/"@bo-x-ewts ;
+        :hasSon             bdr:P4220 ;
+        :isRoot             true ;
+        :note               bdr:NT4608865A01B632CE ;
+        :personEvent        bdr:EV4625A430E77B6ADD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM004E4F6BCEB89693 , bdr:NMA1CDCAF21DA5C1B6 .
+}

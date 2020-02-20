@@ -1,0 +1,51 @@
+@base          <bdg:P3275> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3275 {
+    bda:P3275  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3275 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f2/P3275.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3275 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD791A38063DCC65D
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM2AFF00DD011C15FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "go lung pa gzhon nu dpal/"@bo-x-ewts .
+    
+    bdr:NM87A391AB95485EC1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu dpal/"@bo-x-ewts .
+    
+    bdr:NT27D88DBF99B347DC
+        a                   :Note ;
+        :noteText           "master in the transmission of the kalacakra teachings"@en .
+    
+    bdr:P3275  a            :Person ;
+        skos:prefLabel      "gzhon nu dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT27D88DBF99B347DC ;
+        :personEvent        bdr:EVD791A38063DCC65D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2AFF00DD011C15FA , bdr:NM87A391AB95485EC1 ;
+        :personStudentOf    bdr:P1514 , bdr:P3274 ;
+        :personTeacherOf    bdr:P2147 .
+}

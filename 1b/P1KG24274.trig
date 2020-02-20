@@ -1,0 +1,58 @@
+@base          <bdg:P1KG24274> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG24274 {
+    bda:LGA3331E18724A7564
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-08-03T10:36:42.259Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG24274  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG24274 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1b/P1KG24274.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG24274 ;
+        adm:logEntry        bda:LGA3331E18724A7564 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAF2C03D70FC8A730
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:EVBEFC47355819D5A8
+        a                   :PersonDeath ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NMCCE49951E37B28E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med bsod nams stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NMCF0A620C7B9AB099
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shan kha ba 'gyur med bsod nams stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NTDC8FBCBA7409E120
+        a                   :Note ;
+        :noteSource         bdr:MW1KG24248 .
+    
+    bdr:P1KG24274  a        :Person ;
+        skos:prefLabel      "'gyur med bsod nams stobs rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDC8FBCBA7409E120 ;
+        :personEvent        bdr:EVAF2C03D70FC8A730 , bdr:EVBEFC47355819D5A8 ;
+        :personName         bdr:NMCCE49951E37B28E4 , bdr:NMCF0A620C7B9AB099 .
+}

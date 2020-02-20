@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12035> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12035 {
+    bda:LG57AD64049D5B25E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T11:38:51.275Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12035  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12035 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8c/P8LS12035.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12035 ;
+        adm:logEntry        bda:LG57AD64049D5B25E9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F6CE57A597D7D77
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVF05493D0CA7D2AAC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1BF923DD9742EBAE
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 47"@bo-x-ewts .
+    
+    bdr:NM257F1AA4A20D0CC3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NMA71BC49859FC047B
+        a                   :PersonTitle ;
+        rdfs:label          "dpon slob ngag dbang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NT6A70BBB49A14E8ED
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 117" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "in 1813 he offered long life puja to the third 'jam dbyangs bzhad pa when he was returning back to amdo"@en .
+    
+    bdr:P8LS12035  a        :Person ;
+        skos:prefLabel      "ngag dbang mkhas mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6A70BBB49A14E8ED ;
+        :personEvent        bdr:EV7F6CE57A597D7D77 , bdr:EVF05493D0CA7D2AAC ;
+        :personName         bdr:NM1BF923DD9742EBAE , bdr:NM257F1AA4A20D0CC3 , bdr:NMA71BC49859FC047B .
+}

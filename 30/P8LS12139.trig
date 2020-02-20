@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12139> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12139 {
+    bda:LG59BAB5703F41F182
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T12:29:03.456Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD7788B92EFD24727
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-19T10:44:12.372Z"^^xsd:dateTime ;
+        adm:logMessage      "edited name"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8LS12139  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12139 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "30/P8LS12139.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12139 ;
+        adm:logEntry        bda:LG59BAB5703F41F182 , bda:LGD7788B92EFD24727 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE859CBA2502D7D9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1903"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EVFBBD2346CC764353
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM794DA852FFFF92E5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:NM7CA4A9EE500C87A6
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ske kyA mkhan chen blo bzang bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:NMEFAA4F2B1DBD0126
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 64"@bo-x-ewts .
+    
+    bdr:NT6D688F4941954454
+        a                   :Note ;
+        :locationStatement  "p. 338-339" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "It seems that he was the seventh in the line of ske kya incarnate lama. The third was dge elgs dpal ldan and sixth one was bsod nams bstan pa'i nyi ma."@en .
+    
+    bdr:P8LS12139  a        :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i sgron me/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D688F4941954454 ;
+        :personEvent        bdr:EVAE859CBA2502D7D9 , bdr:EVFBBD2346CC764353 ;
+        :personName         bdr:NM794DA852FFFF92E5 , bdr:NM7CA4A9EE500C87A6 , bdr:NMEFAA4F2B1DBD0126 .
+}

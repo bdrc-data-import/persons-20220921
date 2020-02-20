@@ -1,0 +1,89 @@
+@base          <bdg:P4057> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4057 {
+    bda:LG6BDFC25FB35E8BB4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-21T14:21:14.399Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4057  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4057 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "bf/P4057.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4057 ;
+        adm:logEntry        bda:LG6BDFC25FB35E8BB4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV47D4DD38E08926B8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV999A9FB304BA8AD6
+        a                   :PersonBirth ;
+        :onYear             "1782"^^xsd:gYear .
+    
+    bdr:EVABB8DED9513DAD5F
+        a                   :PersonDeath ;
+        :onYear             "1836"^^xsd:gYear .
+    
+    bdr:EVC49B7BDF70C168C6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G162 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM45E6F121701D2478
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang khri 32 blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM4620441F8DF7E8D2
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang gdan rabs 32"@bo-x-ewts .
+    
+    bdr:NM4AF9CD2C789FA0E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMB521D7707297A886
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag lung che ba blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NME927B8341E262F3D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang khri 32"@bo-x-ewts .
+    
+    bdr:NT8FE67A544A8F45A6
+        a                   :Note ;
+        :locationStatement  "p. 456" ;
+        :noteSource         bdr:MW23670 ;
+        :noteText           "32nd khri of bla brang bkra shis 'khyil\nstyled: stag lung chung ba blo bzang bstan pa'i nyi ma"@en .
+    
+    bdr:NTBE3A75FE2FDA721A
+        a                   :Note ;
+        :locationStatement  "p. 759" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "brief bio"@en .
+    
+    bdr:P4057  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8FE67A544A8F45A6 , bdr:NTBE3A75FE2FDA721A ;
+        :personEvent        bdr:EV47D4DD38E08926B8 , bdr:EV999A9FB304BA8AD6 , bdr:EVABB8DED9513DAD5F , bdr:EVC49B7BDF70C168C6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45E6F121701D2478 , bdr:NM4620441F8DF7E8D2 , bdr:NM4AF9CD2C789FA0E4 , bdr:NMB521D7707297A886 , bdr:NME927B8341E262F3D ;
+        :personTeacherOf    bdr:P8988 .
+}

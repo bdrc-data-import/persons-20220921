@@ -1,0 +1,69 @@
+@base          <bdg:P4660> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4660 {
+    bda:LGC5DAF023FA8DECD3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:04:30.9Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4660  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4660 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "04/P4660.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4660 ;
+        adm:logEntry        bda:LGC5DAF023FA8DECD3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6C0821F201FFAB78
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EVAA4C0BB993936FB6
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM2314DA005E24A104
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang rtse chos rje bstan 'dzin rab rgyas/"@bo-x-ewts .
+    
+    bdr:NM4CD58D4EFF1F92E0
+        a                   :PersonTitle ;
+        rdfs:label          "byang rtse chos rje/"@bo-x-ewts .
+    
+    bdr:NM76EA73B6DBCDD83C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMA95CE36FB003E945
+        a                   :PersonPersonalName ;
+        rdfs:label          "byang rtse bstan 'dzin rab rgyas/"@bo-x-ewts .
+    
+    bdr:NT16544B8A5C29163B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4660  a            :Person ;
+        skos:prefLabel      "bstan 'dzin rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16544B8A5C29163B ;
+        :personEvent        bdr:EV6C0821F201FFAB78 , bdr:EVAA4C0BB993936FB6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2314DA005E24A104 , bdr:NM4CD58D4EFF1F92E0 , bdr:NM76EA73B6DBCDD83C , bdr:NMA95CE36FB003E945 ;
+        :personTeacherOf    bdr:P243 .
+}

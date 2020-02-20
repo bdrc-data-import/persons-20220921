@@ -1,0 +1,100 @@
+@base          <bdg:P6454> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6454 {
+    bda:LG09F01DC610BC6B17
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T14:26:23.11Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG3A1C0B1EEF5E1C85
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-18T10:03:53.727Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6454  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6454 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "3d/P6454.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6454 ;
+        adm:logEntry        bda:LG09F01DC610BC6B17 , bda:LG3A1C0B1EEF5E1C85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV304C1BF8D94B4C38
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1897"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV473097EDF8CF03E2
+        a                   :PersonBirth ;
+        :onYear             "1863"^^xsd:gYear .
+    
+    bdr:EV83D06A00673884CE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVCAF7F2FEE000FB98
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1895"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM1E36E62EE4D285CE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 72"@bo-x-ewts .
+    
+    bdr:NM25C87929ABA09618
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paksi zhabs drung blo bzang tshul khrims dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMA09D665E457132C7
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum dus 'khor dpon slob blo bzang tshul khrims dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMCA85B816DF9B7654
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 37"@bo-x-ewts .
+    
+    bdr:NMD01C3809FDC7D7DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshul khrims dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT811950B12EF693E7
+        a                   :Note ;
+        :locationStatement  "p. 301" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:NT83EEAA523DCC7894
+        a                   :Note ;
+        :locationStatement  "p. 360" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:NTA5CAAD2C0B0C2E3A
+        a                   :Note ;
+        :locationStatement  "p. 290" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P6454  a            :Person ;
+        skos:prefLabel      "blo bzang tshul khrims dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT811950B12EF693E7 , bdr:NT83EEAA523DCC7894 , bdr:NTA5CAAD2C0B0C2E3A ;
+        :personEvent        bdr:EV304C1BF8D94B4C38 , bdr:EV473097EDF8CF03E2 , bdr:EV83D06A00673884CE , bdr:EVCAF7F2FEE000FB98 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E36E62EE4D285CE , bdr:NM25C87929ABA09618 , bdr:NMA09D665E457132C7 , bdr:NMCA85B816DF9B7654 , bdr:NMD01C3809FDC7D7DC .
+}

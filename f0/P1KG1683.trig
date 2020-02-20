@@ -1,0 +1,57 @@
+@base          <bdg:P1KG1683> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1683 {
+    bda:LG9351A080F13E9A82
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-04T12:43:11.702Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1683  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1683 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f0/P1KG1683.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1683 ;
+        adm:logEntry        bda:LG9351A080F13E9A82 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE258B800BE5C8CCA
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM5652187A56F30087
+        a                   :PersonPersonalName ;
+        rdfs:label          "dros dmar tshe ring rdo rje/"@bo-x-ewts .
+    
+    bdr:NM5BCA55FA44F16CE5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring rdo rje/"@bo-x-ewts .
+    
+    bdr:NT4DA6AFD00A828526
+        a                   :Note ;
+        :noteSource         bdr:MW1KG862 ;
+        :noteText           "translator of"@en .
+    
+    bdr:P1KG1683  a         :Person ;
+        skos:prefLabel      "tshe ring rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4DA6AFD00A828526 ;
+        :personEvent        bdr:EVE258B800BE5C8CCA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5652187A56F30087 , bdr:NM5BCA55FA44F16CE5 .
+}

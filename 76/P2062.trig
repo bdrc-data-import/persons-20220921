@@ -1,0 +1,63 @@
+@base          <bdg:P2062> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2062 {
+    bda:LG50C99B6817F5F98C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T15:38:54.71Z"^^xsd:dateTime ;
+        adm:logMessage      "seat, teacher of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGC69D17C1E33975D7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T14:56:50.462Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2062  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2062 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "76/P2062.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2062 ;
+        adm:logEntry        bda:LG50C99B6817F5F98C , bda:LGC69D17C1E33975D7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV327BA16C46C34BAC
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM671DD8B97D20F593
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tA dbon ngag dbang blo bzang /"@bo-x-ewts .
+    
+    bdr:NME40435CACD0E3BFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo bzang /"@bo-x-ewts .
+    
+    bdr:NTAFA4DD9B363FBEC2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2062  a            :Person ;
+        skos:prefLabel      "ngag dbang blo bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAFA4DD9B363FBEC2 ;
+        :personEvent        bdr:EV327BA16C46C34BAC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM671DD8B97D20F593 , bdr:NME40435CACD0E3BFD ;
+        :personStudentOf    bdr:P1281 , bdr:P1813 .
+}

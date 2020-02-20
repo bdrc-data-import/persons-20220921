@@ -1,0 +1,64 @@
+@base          <bdg:P7551> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7551 {
+    bda:LGE00145FB8C8C9357
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-13T13:59:34.198Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P7551  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7551 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e3/P7551.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7551 ;
+        adm:logEntry        bda:LGE00145FB8C8C9357 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E2459E71F2E532B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3217 .
+    
+    bdr:EVBF2E24F9BF75CDEA
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM0A2F0DE9480047BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM51389F6CA25B6ACD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhar sprul bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NTB6C5EA235B811735
+        a                   :Note ;
+        :locationStatement  "f. 293v" ;
+        :noteSource         bdr:MW26629 ;
+        :noteText           "regarded as the 'phrin las sprul sku of rdo grub 'jigs med 'phrin las 'od zer\nparents: father rgya rigs shig\nmother: mkhar bza'\none of the three bstan pa'i nyi ma disciples of rgyal sras gzhan phan mtha' yas: 1) kun mkhyen bstan pa'i nyi ma; 2) lung rtogs bstan pa'i nyi ma; 3) mdo sngags bstan pa'i nyi ma\nbecame the dbu bla of the bod spyi khyab during the nyag rong war;\nmonastery mdo chen a ko ri'i dgon pa"@en .
+    
+    bdr:P7551  a            :Person ;
+        skos:prefLabel      "bstan pa'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB6C5EA235B811735 ;
+        :personEvent        bdr:EV0E2459E71F2E532B , bdr:EVBF2E24F9BF75CDEA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A2F0DE9480047BE , bdr:NM51389F6CA25B6ACD ;
+        :personStudentOf    bdr:P270 , bdr:P697 ;
+        :personTeacherOf    bdr:P6306 .
+}

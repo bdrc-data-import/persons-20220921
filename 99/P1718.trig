@@ -1,0 +1,84 @@
+@base          <bdg:P1718> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1718 {
+    bda:LG092D06FB6D9A3FB4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:41:05.898Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG4DC3DFC228A6AC19
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:17:20.018Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1718  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1718 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "99/P1718.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1718 ;
+        adm:logEntry        bda:LG092D06FB6D9A3FB4 , bda:LG4DC3DFC228A6AC19 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A68693CBEF54BBF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EV51EFF1E5ABB9F815
+        a                   :PersonBirth ;
+        :onYear             "1345"^^xsd:gYear .
+    
+    bdr:EVAA16992B868152BA
+        a                   :PersonDeath ;
+        :onYear             "1390"^^xsd:gYear .
+    
+    bdr:NM8085F12275B198C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros seng+ge"@bo-x-ewts .
+    
+    bdr:NM89099F61196B51FD
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jam dbyangs blo gros seng+ge"@bo-x-ewts .
+    
+    bdr:NMCBB5CCBD59779732
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa blo gros seng+ge"@bo-x-ewts .
+    
+    bdr:NTBB5F40400DEB8F38
+        a                   :Note ;
+        :locationStatement  "p. 1160" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTFEFCFC336DD6E241
+        a                   :Note ;
+        :noteText           "hierarch of the rgya lineage of 'brug pa dkar brgyud masters of rwa lung; he was the 8th in the line of masters of the tradition"@en .
+    
+    bdr:P1718  a            :Person ;
+        skos:prefLabel      "blo gros seng+ge"@bo-x-ewts ;
+        :hasFather          bdr:P2635 ;
+        :hasSon             bdr:P2632 , bdr:P2633 ;
+        :isRoot             true ;
+        :note               bdr:NTBB5F40400DEB8F38 , bdr:NTFEFCFC336DD6E241 ;
+        :personEvent        bdr:EV3A68693CBEF54BBF , bdr:EV51EFF1E5ABB9F815 , bdr:EVAA16992B868152BA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8085F12275B198C7 , bdr:NM89099F61196B51FD , bdr:NMCBB5CCBD59779732 ;
+        :personStudentOf    bdr:P2634 , bdr:P5871 ;
+        :personTeacherOf    bdr:P2633 , bdr:P5805 , bdr:P5885 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lodro-Sengge/3028"^^xsd:anyURI .
+}

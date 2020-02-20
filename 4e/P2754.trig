@@ -1,0 +1,50 @@
+@base          <bdg:P2754> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2754 {
+    bda:P2754  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2754 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "4e/P2754.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2754 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV95E449505300E277
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM921C630FE1A26559
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NMA279AE80B70DB989
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gcung ngag dbang chos kyi grags po/"@bo-x-ewts .
+    
+    bdr:NTEEA5F7575C7F8FA5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P2754  a            :Person ;
+        skos:prefLabel      "ngag dbang chos kyi grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEEA5F7575C7F8FA5 ;
+        :personEvent        bdr:EV95E449505300E277 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM921C630FE1A26559 , bdr:NMA279AE80B70DB989 ;
+        :personTeacherOf    bdr:P2749 .
+}

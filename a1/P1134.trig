@@ -1,0 +1,62 @@
+@base          <bdg:P1134> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1134 {
+    bda:LGC64D6FDFAB3D35E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T10:37:46.707Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE557322A29192D02
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-03T14:13:42.433Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1134  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1134 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a1/P1134.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1134 ;
+        adm:logEntry        bda:LGC64D6FDFAB3D35E0 , bda:LGE557322A29192D02 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA1524BA5BD20246F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM604B5D587EEC2586
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NMEF17469ED36CFD65
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gcung gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NT24A029AAAEA97BAE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Tshogs-bshad transmissions"@en .
+    
+    bdr:P1134  a            :Person ;
+        skos:prefLabel      "gzhon nu seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT24A029AAAEA97BAE ;
+        :personEvent        bdr:EVA1524BA5BD20246F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM604B5D587EEC2586 , bdr:NMEF17469ED36CFD65 ;
+        :personTeacherOf    bdr:P1028 , bdr:P1038 .
+}

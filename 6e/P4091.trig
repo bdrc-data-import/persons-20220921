@@ -1,0 +1,95 @@
+@base          <bdg:P4091> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4091 {
+    bda:LG10412C2BCD22038C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T10:26:19.474Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBC205F9056764E2D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T10:19:52.315Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4091  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4091 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "6e/P4091.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4091 ;
+        adm:logEntry        bda:LG10412C2BCD22038C , bda:LGBC205F9056764E2D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21985A870A45BA93
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV9A882929C34E205C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA1E6CA19C73BF0D1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVAD363BB369309B47
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1271 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0EF8D1A224DCD6F4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sdong ngo dge 'dun chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM4CC5ABD5C0560794
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 47"@bo-x-ewts .
+    
+    bdr:NMD6B1C3CC9531CA40
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMEE3F3FD19D246858
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 47 dge 'dun chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT529183243073568F
+        a                   :Note ;
+        :locationStatement  "p. 919" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT5A33EE808534FB7C
+        a                   :Note ;
+        :locationStatement  "p. 177-178" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "he gave oral transmission of the collected works of panchen blo bzang chos rgyan at bya khyung and printed lam rim chen mo with three annotated notes"@en .
+    
+    bdr:NTCA2648463A3D7E7E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4091  a            :Person ;
+        skos:prefLabel      "dge 'dun chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT529183243073568F , bdr:NT5A33EE808534FB7C , bdr:NTCA2648463A3D7E7E ;
+        :personEvent        bdr:EV21985A870A45BA93 , bdr:EV9A882929C34E205C , bdr:EVA1E6CA19C73BF0D1 , bdr:EVAD363BB369309B47 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0EF8D1A224DCD6F4 , bdr:NM4CC5ABD5C0560794 , bdr:NMD6B1C3CC9531CA40 , bdr:NMEE3F3FD19D246858 .
+}

@@ -1,0 +1,51 @@
+@base          <bdg:P1KG14553> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14553 {
+    bda:LGFA810A2037D543F9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T12:09:15.902Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14553  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14553 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3a/P1KG14553.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14553 ;
+        adm:logEntry        bda:LGFA810A2037D543F9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV828229BFF8CB774C
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM95EDB8837FFE2E91
+        a                   :PersonPersonalName ;
+        rdfs:label          "she'u tshang lha mo don grub/"@bo-x-ewts .
+    
+    bdr:NMCDB990F38301A8A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha mo don grub/"@bo-x-ewts .
+    
+    bdr:P1KG14553  a        :Person ;
+        skos:prefLabel      "lha mo don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV828229BFF8CB774C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM95EDB8837FFE2E91 , bdr:NMCDB990F38301A8A9 .
+}

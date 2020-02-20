@@ -1,0 +1,68 @@
+@base          <bdg:P2267> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2267 {
+    bda:LGC860CFDCC22B1B0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T09:40:10.41Z"^^xsd:dateTime ;
+        adm:logMessage      "added 2 biodata notes"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2267  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2267 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a5/P2267.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2267 ;
+        adm:logEntry        bda:LGC860CFDCC22B1B0D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBF7359F67344D931
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1511 ;
+        :onYear             "1932"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC5DD332E84AE04D9
+        a                   :PersonAssumesOffice ;
+        :onYear             "1926"^^xsd:gYear ;
+        :personEventRole    bdr:R10 .
+    
+    bdr:EVCC9007FF4236CFF1
+        a                   :PersonBirth ;
+        :onYear             "1899"^^xsd:gYear .
+    
+    bdr:NM62F80C346C7CC10B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa chos bzang /"@bo-x-ewts .
+    
+    bdr:NT190B6E48C1D7B6E0
+        a                   :Note ;
+        :noteText           "WWT 1945: Held charge of the Tashi Lama's estate at Trakhu Shika near Gyantse and of the Tibetan Government treasury at Shigatse,"@en .
+    
+    bdr:NTDF96ABF965327993
+        a                   :Note ;
+        :locationStatement  "p. 9" ;
+        :noteSource         bdr:MW19818 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2267  a            :Person ;
+        skos:prefLabel      "byams pa chos bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT190B6E48C1D7B6E0 , bdr:NTDF96ABF965327993 ;
+        :personEvent        bdr:EVBF7359F67344D931 , bdr:EVC5DD332E84AE04D9 , bdr:EVCC9007FF4236CFF1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM62F80C346C7CC10B .
+}

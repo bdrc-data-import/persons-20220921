@@ -1,0 +1,79 @@
+@base          <bdg:P8LS12314> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12314 {
+    bda:LG6649C9C6B029310F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T09:11:38.834Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEF969BF43A19141B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T14:23:32.147Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12314  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12314 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cc/P8LS12314.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12314 ;
+        adm:logEntry        bda:LG6649C9C6B029310F , bda:LGEF969BF43A19141B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B26ACA466F1BEA9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5DFB7355E5D363AA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:EV6AC2E7EECC71DFC3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8720310276869AFE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:NM016B08634E987562
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 14"@bo-x-ewts .
+    
+    bdr:NM4E28E8F421B200DB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun mkhas grub/"@bo-x-ewts .
+    
+    bdr:NMB978CB7B06650D78
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 27"@bo-x-ewts .
+    
+    bdr:NTA90141E5E0E236D6
+        a                   :Note ;
+        :locationStatement  "p. 380, 396" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12314  a        :Person ;
+        skos:prefLabel      "dge 'dun mkhas grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA90141E5E0E236D6 ;
+        :personEvent        bdr:EV5B26ACA466F1BEA9 , bdr:EV5DFB7355E5D363AA , bdr:EV6AC2E7EECC71DFC3 , bdr:EV8720310276869AFE ;
+        :personName         bdr:NM016B08634E987562 , bdr:NM4E28E8F421B200DB , bdr:NMB978CB7B06650D78 .
+}

@@ -1,0 +1,88 @@
+@base          <bdg:P2JM359> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM359 {
+    bda:LG69B6B0C39B26BACB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-08T09:00:52.567Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE42CA18E5FC59B24
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-17T13:32:21.898Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGEA368CA6446C5588
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T17:37:05.836Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P2JM359  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM359 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "43/P2JM359.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM359 ;
+        adm:logEntry        bda:LG69B6B0C39B26BACB , bda:LGE42CA18E5FC59B24 , bda:LGEA368CA6446C5588 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0EB9B06FCFC3378A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EVBF18AC5A52F6045A
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVE0BBE1E80DB75890
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF4BDC7E108E9AACD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:NMA098A378C3BF7E1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NMA7ED660812C396F9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag shul mkhan po 'gyur med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NME151EA50EAC20AA5
+        a                   :PersonTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 24"@bo-x-ewts .
+    
+    bdr:NT5F821C66012925F6
+        a                   :Note ;
+        :locationStatement  "p. 463" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "Assumed the teaching throne of rdzogs chen bshad grwa around the age of 30, but \"obstacles\" led to an untimely death."@en .
+    
+    bdr:P2JM359  a          :Person ;
+        skos:prefLabel      "'gyur med 'od gsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F821C66012925F6 ;
+        :personEvent        bdr:EV0EB9B06FCFC3378A , bdr:EVBF18AC5A52F6045A , bdr:EVE0BBE1E80DB75890 , bdr:EVF4BDC7E108E9AACD ;
+        :personName         bdr:NMA098A378C3BF7E1E , bdr:NMA7ED660812C396F9 , bdr:NME151EA50EAC20AA5 ;
+        :personStudentOf    bdr:P2JM314 , bdr:P2JM332 , bdr:P6955 , bdr:P699 , bdr:P701 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Gyurme-Osel/5078"^^xsd:anyURI .
+}

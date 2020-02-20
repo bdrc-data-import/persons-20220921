@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12027> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12027 {
+    bda:LG76989ADD1DF4F405
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:53:12.182Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12027  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12027 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ee/P8LS12027.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12027 ;
+        adm:logEntry        bda:LG76989ADD1DF4F405 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV334E397019C6082E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV8A4A7F750897AA5E
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVF2487FEC3C75D929
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM5B84087B0FBF063A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang nam mkha'"@bo-x-ewts .
+    
+    bdr:NM93722FA1E8CC4535
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 35"@bo-x-ewts .
+    
+    bdr:NMB7A75BA52872D617
+        a                   :PersonTitle ;
+        rdfs:label          "la mo ngag dbang nam mkha'"@bo-x-ewts .
+    
+    bdr:NMCC5B8AC6F9B022DD
+        a                   :PersonTitle ;
+        rdfs:label          "har gdong la mo ngag dbang nam mkha'"@bo-x-ewts .
+    
+    bdr:NTAE9F27FB12F57005
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 89" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "obtained geshe degree in 1718.  In 1729 met 7th Dalai Lama at Lithang"@en .
+    
+    bdr:P8LS12027  a        :Person ;
+        skos:prefLabel      "ngag dbang nam mkha'"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE9F27FB12F57005 ;
+        :personEvent        bdr:EV334E397019C6082E , bdr:EV8A4A7F750897AA5E , bdr:EVF2487FEC3C75D929 ;
+        :personName         bdr:NM5B84087B0FBF063A , bdr:NM93722FA1E8CC4535 , bdr:NMB7A75BA52872D617 , bdr:NMCC5B8AC6F9B022DD ;
+        :personTeacherOf    bdr:P339 .
+}

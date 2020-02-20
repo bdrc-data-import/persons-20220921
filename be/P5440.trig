@@ -1,0 +1,91 @@
+@base          <bdg:P5440> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5440 {
+    bda:LG38092E02E1C25CBD
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-30T12:33:55.029Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF8C05B777C84797E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-14T14:30:10.145Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5440  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5440 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "be/P5440.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5440 ;
+        adm:logEntry        bda:LG38092E02E1C25CBD , bda:LGF8C05B777C84797E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E65257CB812D446
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1426 ;
+        :onYear             "1812"^^xsd:gYear .
+    
+    bdr:EV3B4E95EB6C1B2835
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4206 .
+    
+    bdr:EV75B5144FBFDF810B
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12898 .
+    
+    bdr:EVF93E33C6127E79B2
+        a                   :PersonDeath ;
+        :onYear             "1818"^^xsd:gYear .
+    
+    bdr:NM1B261FDF900C3660
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nyilde Jewon Tulku 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM3FAA4B36A64C411A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyi lde rje dbon sprul sku 06 lung rtogs bstan 'dzin dbang phyug"@bo-x-ewts .
+    
+    bdr:NM667351D1280AEB2B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "nyi lde rje dbon sprul sku 06"@bo-x-ewts .
+    
+    bdr:NM7B1AE1635E918F4F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lung rtogs bstan 'dzin dbang phyug"@bo-x-ewts .
+    
+    bdr:NTAF33AF35C9AC171E
+        a                   :Note ;
+        :locationStatement  "p. 329" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ rnam rgyal bkra shis/ lho mon gyi char 'khrungs/ dgung lo lnga bcu par gshegs/\n2) de'i skye ba dkon mchog ngag dbang rgya mtsho/ lho mon rnga long du 'khrungs/ dgung lo nga gcig par gshegs/\n3) de'i skye ba dkon mchog skal bzang phun tshogs/ gtsang nyang stod kha reg tu 'khrungs/ dgung lo nga dgu par gshegs/\n4) de'i skye ba skal bzang chos dbyings dbang phyug/ gtsang lung nag thang sper 'khrungs/ dgung lo zhe dgu par gshegs/\n5) de'i skye ba lha dbang bsam grub/ lho brag nyi lde'i mda' la 'khrungs/ lcags rta dgung lo bco brgyad la gshegs/ [1793-1810]\n6) de'i skye ba lung rtogs bstan 'dzin dbang phyug/ lho lha khang khul zam mkhar du 'khrungs pa shing khyi [1814] zla 7 tshes 17 nyin gser bum du brtag pa zhus/ dgung lo bdun du phebs pa sa stag zla 6 tshes 11 la gshegs pa'i gnas tshul zla 6 tshes 23 la 'byor/ [1812-1818]"@bo-x-ewts .
+    
+    bdr:NTD488F410755C9D85
+        a                   :Note ;
+        :locationStatement  "p. 329" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "rnying ma incarnation of the padma gling pa lineage; according to this source this child was born in shing khyi zla 7 tshes 17 and died at the age of 7 in 1818 zla 6 tshes 11"@en .
+    
+    bdr:P5440  a            :Person ;
+        skos:prefLabel      "lung rtogs bstan 'dzin dbang phyug"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5439 ;
+        :isRoot             true ;
+        :note               bdr:NTAF33AF35C9AC171E , bdr:NTD488F410755C9D85 ;
+        :personEvent        bdr:EV2E65257CB812D446 , bdr:EV3B4E95EB6C1B2835 , bdr:EV75B5144FBFDF810B , bdr:EVF93E33C6127E79B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1B261FDF900C3660 , bdr:NM3FAA4B36A64C411A , bdr:NM667351D1280AEB2B , bdr:NM7B1AE1635E918F4F .
+}

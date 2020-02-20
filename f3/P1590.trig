@@ -1,0 +1,54 @@
+@base          <bdg:P1590> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1590 {
+    bda:P1590  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1590 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f3/P1590.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1590 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7782D1288C457E46
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G226 .
+    
+    bdr:EVABA614185A3280EC
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM5D260BF032516A08
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ldan ma dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NMC40AB76B6F0C2DD5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NT576ED30FB8AD885E
+        a                   :Note ;
+        :noteText           "dge lugs master connected with gsang phu; he was one of the masters of 'jam dbyangs chos rje"@en .
+    
+    bdr:P1590  a            :Person ;
+        skos:prefLabel      "dkon mchog seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT576ED30FB8AD885E ;
+        :personEvent        bdr:EV7782D1288C457E46 , bdr:EVABA614185A3280EC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D260BF032516A08 , bdr:NMC40AB76B6F0C2DD5 ;
+        :personTeacherOf    bdr:P35 .
+}

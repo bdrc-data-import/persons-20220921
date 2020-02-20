@@ -1,0 +1,69 @@
+@base          <bdg:P8LS4320> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS4320 {
+    bda:LG13A9F0234CE1A1BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-20T09:52:46.617Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG5A939283B8E6984D
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-26T10:13:15.419Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS4320  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS4320 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "aa/P8LS4320.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS4320 ;
+        adm:logEntry        bda:LG13A9F0234CE1A1BE , bda:LG5A939283B8E6984D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5987E6295C146D63
+        a                   :PersonDeath ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV5E7282B6C51633CC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:NM3CDB2070F45C6B05
+        a                   :PersonTitle ;
+        rdfs:label          "chab mdo khri rabs 09 chos rje mi g.yo ba/"@bo-x-ewts .
+    
+    bdr:NM56617612DF37B0E7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje mi g.yo ba/"@bo-x-ewts .
+    
+    bdr:NM82BC649DEF8D6B80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi g.yo ba/"@bo-x-ewts .
+    
+    bdr:NT6F1D2BFDFAA89D42
+        a                   :Note ;
+        :locationStatement  "p. 249" ;
+        :noteSource         bdr:MW1PD96945 .
+    
+    bdr:P8LS4320  a         :Person ;
+        skos:prefLabel      "mi g.yo ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F1D2BFDFAA89D42 ;
+        :personEvent        bdr:EV5987E6295C146D63 , bdr:EV5E7282B6C51633CC ;
+        :personName         bdr:NM3CDB2070F45C6B05 , bdr:NM56617612DF37B0E7 , bdr:NM82BC649DEF8D6B80 .
+}

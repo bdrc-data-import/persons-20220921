@@ -1,0 +1,65 @@
+@base          <bdg:P00KG07867> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG07867 {
+    bda:LG4A678C045F244246
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-04-08T15:11:08.042Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF5A92BB64B73D93F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-21T09:30:51.481Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat to G3954 (dup. G3218)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P00KG07867  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG07867 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f8/P00KG07867.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG07867 ;
+        adm:logEntry        bda:LG4A678C045F244246 , bda:LGF5A92BB64B73D93F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AAD5E1BF8877F0E
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVE4AD11D108F3D6AA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3954 .
+    
+    bdr:NM3558F9E9CE4CF393
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bar chung mchog sprul 'chi med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NM773F7917BEE2CD99
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bar chung 'chi med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NMBF8041E0BD44C052
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med 'od gsal/"@bo-x-ewts .
+    
+    bdr:P00KG07867  a       :Person ;
+        skos:prefLabel      "'chi med 'od gsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0AAD5E1BF8877F0E , bdr:EVE4AD11D108F3D6AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3558F9E9CE4CF393 , bdr:NM773F7917BEE2CD99 , bdr:NMBF8041E0BD44C052 .
+}

@@ -1,0 +1,95 @@
+@base          <bdg:P605> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P605 {
+    bda:LG12AA1BB833F16058
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T10:48:49.698Z"^^xsd:dateTime ;
+        adm:logMessage      "adde office, event and seat"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG5F364C9423B13CDB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-08T20:36:56.111Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G784 to G781"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P605  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P605 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "6e/P605.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P605 ;
+        adm:logEntry        bda:LG12AA1BB833F16058 , bda:LG5F364C9423B13CDB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1267D211476EA907
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G59 .
+    
+    bdr:EV4088AB781DD9399E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV588EB8A43F4DFCCE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1907"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV86EE270FB1116CFC
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1909"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVB7203D2CD00952D6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G781 ;
+        :onYear             "1861"^^xsd:gYear .
+    
+    bdr:EVEC6193FB8AC2D53D
+        a                   :PersonDeath ;
+        :onYear             "1916"^^xsd:gYear .
+    
+    bdr:NM69CFE7ED15D4898F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 50 'jam dpal bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NMB41D3B25FEFAF11B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NMBBDF858BDBEFA6FA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 50"@bo-x-ewts .
+    
+    bdr:NT944E9BCC0CE9A2D0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTEE80D810AA1CAB34
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1907-1909.\nRetires to Nalanda."@en .
+    
+    bdr:P605  a             :Person ;
+        skos:prefLabel      "'jam dpal bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT944E9BCC0CE9A2D0 , bdr:NTEE80D810AA1CAB34 ;
+        :personEvent        bdr:EV1267D211476EA907 , bdr:EV4088AB781DD9399E , bdr:EV588EB8A43F4DFCCE , bdr:EV86EE270FB1116CFC , bdr:EVB7203D2CD00952D6 , bdr:EVEC6193FB8AC2D53D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM69CFE7ED15D4898F , bdr:NMB41D3B25FEFAF11B , bdr:NMBBDF858BDBEFA6FA ;
+        :personStudentOf    bdr:P591 , bdr:P600 .
+}

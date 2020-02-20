@@ -1,0 +1,75 @@
+@base          <bdg:P6695> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6695 {
+    bda:P6695  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6695 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "dc/P6695.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6695 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4073FB9C76286E0B
+        a                   :PersonDeath ;
+        :onYear             "1920"^^xsd:gYear .
+    
+    bdr:EV87C99EF6BE87C707
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV9C9AC7F442C19F0A
+        a                   :PersonLeavesOffice ;
+        :onYear             "1903"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVC9A4B2746B8208CE
+        a                   :PersonAssumesOffice ;
+        :onYear             "1901"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:NM1216977675B68D95
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang mkhyen rab dpal bzang, chang khyim pa/"@bo-x-ewts .
+    
+    bdr:NM19A803B37C542BC2
+        a                   :PersonPersonalName ;
+        rdfs:label          "mkhyen rab byang chub dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMABB4881A83E1BD23
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chang khyim pa ngag dbang mkhyen rab dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT8F3E33B58C26972F
+        a                   :Note ;
+        :locationStatement  "p. 430" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "d. 1920 (bka' blon bshad sgra ba dang chang khyim pa bgrongs)"@en .
+    
+    bdr:NTD3C0BF56984A1997
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon bla ma, 1901-1903"@en .
+    
+    bdr:P6695  a            :Person ;
+        skos:prefLabel      "chang khyim pa ngag dbang mkhyen rab dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8F3E33B58C26972F , bdr:NTD3C0BF56984A1997 ;
+        :personEvent        bdr:EV4073FB9C76286E0B , bdr:EV87C99EF6BE87C707 , bdr:EV9C9AC7F442C19F0A , bdr:EVC9A4B2746B8208CE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1216977675B68D95 , bdr:NM19A803B37C542BC2 , bdr:NMABB4881A83E1BD23 .
+}

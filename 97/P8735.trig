@@ -1,0 +1,61 @@
+@base          <bdg:P8735> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8735 {
+    bda:LG3E18E892AA28B450
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T16:25:36.63Z"^^xsd:dateTime ;
+        adm:logMessage      "edited Seat to be G340"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8735  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8735 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "97/P8735.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8735 ;
+        adm:logEntry        bda:LG3E18E892AA28B450 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D29FBCF07587137
+        a                   :PersonBirth ;
+        :onYear             "1240"^^xsd:gYear .
+    
+    bdr:EVBD0905F89595BB02
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NMB3E4E65F3A604446
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa ye shes/"@bo-x-ewts .
+    
+    bdr:NME5488A44E020E787
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bri gung spyan snga grags pa ye shes/"@bo-x-ewts .
+    
+    bdr:NT78167204A692118A
+        a                   :Note ;
+        :locationStatement  "p. 2287" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1240. 'bri gung spyan snga rin po che grags pa ye shes 'khrungs"@en .
+    
+    bdr:P8735  a            :Person ;
+        skos:prefLabel      "grags pa ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT78167204A692118A ;
+        :personEvent        bdr:EV1D29FBCF07587137 , bdr:EVBD0905F89595BB02 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB3E4E65F3A604446 , bdr:NME5488A44E020E787 .
+}

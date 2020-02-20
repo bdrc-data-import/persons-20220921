@@ -1,0 +1,69 @@
+@base          <bdg:P3944> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3944 {
+    bda:LG0CD7E52179E0CCF7
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-09T11:13:02.773Z"^^xsd:dateTime ;
+        adm:logMessage      "Added kinship relation: brother P3961"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:LG3C27A04AB1643337
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-24T12:25:43.146Z"^^xsd:dateTime ;
+        adm:logMessage      "Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3944  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3944 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "36/P3944.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3944 ;
+        adm:logEntry        bda:LG0CD7E52179E0CCF7 , bda:LG3C27A04AB1643337 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV817CE7D63534CC4B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EV93A619FA3E7816FF
+        a                   :PersonBirth ;
+        :onYear             "1828"^^xsd:gYear .
+    
+    bdr:NM8E56CA902CE94F93
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen bstan 'dzin 'phrin las rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA27DB30422658C36
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 16 rin chen bstan 'dzin rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1B31887D11352833
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3944  a            :Person ;
+        skos:prefLabel      "rin chen bstan 'dzin 'phrin las rdo rje/"@bo-x-ewts ;
+        :hasBrother         bdr:P3961 ;
+        :hasFather          bdr:P3959 ;
+        :hasSon             bdr:P3943 ;
+        :isRoot             true ;
+        :note               bdr:NT1B31887D11352833 ;
+        :personEvent        bdr:EV817CE7D63534CC4B , bdr:EV93A619FA3E7816FF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8E56CA902CE94F93 , bdr:NMA27DB30422658C36 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sixteenth-Chone-Sakyong-Rinchen-Tendzin-Trinle-Dorje/6334"^^xsd:anyURI .
+}

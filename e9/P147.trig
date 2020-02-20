@@ -1,0 +1,61 @@
+@base          <bdg:P147> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P147 {
+    bda:LGA3FC965DDE9E66DB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:26:03.04Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P147  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P147 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e9/P147.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P147 ;
+        adm:logEntry        bda:LGA3FC965DDE9E66DB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F47B23C5089C120
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM96200E03C77810E8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NMDFE2453E65DA3B6C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NT1372DA77107F4FC0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NT3915A713B316C522
+        a                   :Note ;
+        :noteText           "ca. 1310. Taught phar-phyin to dol-po-pa."@en .
+    
+    bdr:P147  a             :Person ;
+        skos:prefLabel      "blo gros bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1372DA77107F4FC0 , bdr:NT3915A713B316C522 ;
+        :personEvent        bdr:EV9F47B23C5089C120 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM96200E03C77810E8 , bdr:NMDFE2453E65DA3B6C ;
+        :personTeacherOf    bdr:P139 .
+}

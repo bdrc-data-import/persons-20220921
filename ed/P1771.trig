@@ -1,0 +1,71 @@
+@base          <bdg:P1771> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1771 {
+    bda:LGAC4477AAEB04B03E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:48:20.755Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1771  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1771 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ed/P1771.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1771 ;
+        adm:logEntry        bda:LGAC4477AAEB04B03E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D602D79F86B3795
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G995 ;
+        :onYear             "1168"^^xsd:gYear .
+    
+    bdr:EVD6577A8AA42BA329
+        a                   :PersonDeath ;
+        :onYear             "1198"^^xsd:gYear .
+    
+    bdr:NM71DDA4ACA27C4D2D
+        a                   :PersonPersonalName ;
+        rdfs:label          "dbus pa jo bsod/"@bo-x-ewts .
+    
+    bdr:NM9B9A3C25B532CA3B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbus pa jo bo bsod nams/"@bo-x-ewts .
+    
+    bdr:NMA4019EE0A5480ABC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "jo bo bsod nams/"@bo-x-ewts .
+    
+    bdr:NT250EE6AF7431EE2C
+        a                   :Note ;
+        :locationStatement  "p. 1189" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTB85D6456C4E41685
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:P1771  a            :Person ;
+        skos:prefLabel      "jo bo bsod nams/"@bo-x-ewts ;
+        :hasFather          bdr:P1772 ;
+        :isRoot             true ;
+        :note               bdr:NT250EE6AF7431EE2C , bdr:NTB85D6456C4E41685 ;
+        :personEvent        bdr:EV3D602D79F86B3795 , bdr:EVD6577A8AA42BA329 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM71DDA4ACA27C4D2D , bdr:NM9B9A3C25B532CA3B , bdr:NMA4019EE0A5480ABC ;
+        :personStudentOf    bdr:P1024 , bdr:P632 .
+}

@@ -1,0 +1,80 @@
+@base          <bdg:P8LS12201> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12201 {
+    bda:LG49361A4DD71E564F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-14T11:49:59.636Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCCC54811C1FCE2CC
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-03T16:07:44.357Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favour of P3998"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12201  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12201 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a5/P8LS12201.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12201 ;
+        adm:logEntry        bda:LG49361A4DD71E564F , bda:LGCCC54811C1FCE2CC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P3998 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV04A4C84D50FD5457
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:EV92ECA090A300A12B
+        a                   :PersonBirth ;
+        :onYear             "1184"^^xsd:gYear .
+    
+    bdr:EVB982EFD9EEA17C46
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC09990F59B9DDE2E
+        a                   :PersonDeath ;
+        :onYear             "1241"^^xsd:gYear .
+    
+    bdr:NM2B2424C0DBE3C762
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NM4B8C07C2D0A68122
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi bla ma/"@bo-x-ewts .
+    
+    bdr:NMA25C64B1A703062E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mnga' bdag chos rje/"@bo-x-ewts .
+    
+    bdr:NT38604B1FF4CF1DF4
+        a                   :Note ;
+        :locationStatement  "p. 29-30" ;
+        :noteSource         bdr:MW1CZ2413 .
+    
+    bdr:P8LS12201  a        :Person ;
+        skos:prefLabel      "chos kyi bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT38604B1FF4CF1DF4 ;
+        :personEvent        bdr:EV04A4C84D50FD5457 , bdr:EV92ECA090A300A12B , bdr:EVB982EFD9EEA17C46 , bdr:EVC09990F59B9DDE2E ;
+        :personName         bdr:NM2B2424C0DBE3C762 , bdr:NM4B8C07C2D0A68122 , bdr:NMA25C64B1A703062E ;
+        :personStudentOf    bdr:P2271 , bdr:P4456 .
+}

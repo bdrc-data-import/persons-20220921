@@ -1,0 +1,69 @@
+@base          <bdg:P8LS13119> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13119 {
+    bda:LGA6C2BF32104F4B70
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T11:59:24.373Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13119  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13119 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "96/P8LS13119.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13119 ;
+        adm:logEntry        bda:LGA6C2BF32104F4B70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE83841F573545B6
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVFDDB32688C339A2D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:NM4010235B41EFD0FB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Sertok Nomonhan 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM4255667BD5AC95FE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser tog no mon han 02 blo bzang 'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMAFC88694C872B29A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gser tog no mon han 02"@bo-x-ewts .
+    
+    bdr:NMD9F64824016BAE67
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT75CC221CC90FF2B1
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 151" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS13119  a        :Person ;
+        skos:prefLabel      "blo bzang 'phrin las rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13118 ;
+        :isRoot             true ;
+        :note               bdr:NT75CC221CC90FF2B1 ;
+        :personEvent        bdr:EVAE83841F573545B6 , bdr:EVFDDB32688C339A2D ;
+        :personName         bdr:NM4010235B41EFD0FB , bdr:NM4255667BD5AC95FE , bdr:NMAFC88694C872B29A , bdr:NMD9F64824016BAE67 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P3680> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3680 {
+    bda:P3680  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3680 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "be/P3680.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3680 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF6854CB65120287A
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM1AF500EDFAC42509
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM5365EB2BEE66FD98
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde chen pa shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NT454A12F8988173B6
+        a                   :Note ;
+        :noteText           "dge lugs master from a mdo"@en .
+    
+    bdr:P3680  a            :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT454A12F8988173B6 ;
+        :personEvent        bdr:EVF6854CB65120287A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AF500EDFAC42509 , bdr:NM5365EB2BEE66FD98 ;
+        :personTeacherOf    bdr:P292 .
+}

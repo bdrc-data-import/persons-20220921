@@ -1,0 +1,66 @@
+@base          <bdg:P6095> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6095 {
+    bda:LGA2188F256182BBD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T11:35:32.536Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6095  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6095 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "41/P6095.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6095 ;
+        adm:logEntry        bda:LGA2188F256182BBD4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F2EBC4DFB0742EC
+        a                   :PersonBirth ;
+        :onYear             "1798"^^xsd:gYear .
+    
+    bdr:EV9191F5912526A400
+        a                   :PersonDeath ;
+        :onYear             "1874"^^xsd:gYear .
+    
+    bdr:EVA6FA47CEBA1D7108
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3703 .
+    
+    bdr:NM148FF518309EC830
+        a                   :PersonPrimaryName ;
+        rdfs:label          "snang mdzad rdo rje/"@bo-x-ewts .
+    
+    bdr:NM4542C1F0B053A2DA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyang skyes snang mdzad rdo rje/"@bo-x-ewts .
+    
+    bdr:NTEAD9780F3724A2D6
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years given and establishment of connection with g.ya' ma bkra shis 'khyil"@en .
+    
+    bdr:P6095  a            :Person ;
+        skos:prefLabel      "snang mdzad rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEAD9780F3724A2D6 ;
+        :personEvent        bdr:EV2F2EBC4DFB0742EC , bdr:EV9191F5912526A400 , bdr:EVA6FA47CEBA1D7108 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM148FF518309EC830 , bdr:NM4542C1F0B053A2DA ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Nangse-Dorje/8675"^^xsd:anyURI .
+}

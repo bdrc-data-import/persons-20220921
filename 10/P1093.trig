@@ -1,0 +1,61 @@
+@base          <bdg:P1093> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1093 {
+    bda:LG1B8DC0E247BB8006
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T14:04:56.749Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1093  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1093 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "10/P1093.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1093 ;
+        adm:logEntry        bda:LG1B8DC0E247BB8006 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BD305D2237C5AF2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G126 .
+    
+    bdr:EV272950D4399B89AA
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0559A1DDC07ECC5A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang rin chen phun tshogs/"@bo-x-ewts .
+    
+    bdr:NM3BA655538F3F4957
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen phun tshogs/"@bo-x-ewts .
+    
+    bdr:NT238B3E3AB0A3193E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1093  a            :Person ;
+        skos:prefLabel      "rin chen phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT238B3E3AB0A3193E ;
+        :personEvent        bdr:EV0BD305D2237C5AF2 , bdr:EV272950D4399B89AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0559A1DDC07ECC5A , bdr:NM3BA655538F3F4957 ;
+        :personTeacherOf    bdr:P282 .
+}

@@ -1,0 +1,87 @@
+@base          <bdg:P1016> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1016 {
+    bda:LG12C8F0D6B49428C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-28T14:40:47.82Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, teachers and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG35D912ECF2A962C0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG680DAA58B697A893
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T14:35:25.586Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1016  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1016 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c0/P1016.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1016 ;
+        adm:logEntry        bda:LG12C8F0D6B49428C1 , bda:LG35D912ECF2A962C0 , bda:LG680DAA58B697A893 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8401C5071FAD7D54
+        a                   :PersonDeath ;
+        :onYear             "1796"^^xsd:gYear .
+    
+    bdr:EVC3C9D0102785804E
+        a                   :PersonBirth ;
+        :onYear             "1747"^^xsd:gYear .
+    
+    bdr:NM18B7D0901A1E9B1E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "hor chos rje 02"@bo-x-ewts .
+    
+    bdr:NM33FA6F9353040C9D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang mthu stobs dpal 'bar/"@bo-x-ewts .
+    
+    bdr:NMDBAD1F844590C261
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor chos rje 02 skal bzang mthu stobs dpal 'bar/"@bo-x-ewts .
+    
+    bdr:NME32967EA549C0874
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Hor Choje 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT22CEEBFB379FEA63
+        a                   :Note ;
+        :locationStatement  "p. 57-80" ;
+        :noteSource         bdr:MW22125 ;
+        :noteText           "The second Hor Chos rje was a contemporry of the eighth Dalai Lama"@en .
+    
+    bdr:NT46343CF4EB075A67
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1016  a            :Person ;
+        skos:prefLabel      "skal bzang mthu stobs dpal 'bar/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1015 ;
+        :isRoot             true ;
+        :note               bdr:NT22CEEBFB379FEA63 , bdr:NT46343CF4EB075A67 ;
+        :personEvent        bdr:EV8401C5071FAD7D54 , bdr:EVC3C9D0102785804E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18B7D0901A1E9B1E , bdr:NM33FA6F9353040C9D , bdr:NMDBAD1F844590C261 , bdr:NME32967EA549C0874 ;
+        :personStudentOf    bdr:P108 , bdr:P168 , bdr:P182 , bdr:P3106 .
+}

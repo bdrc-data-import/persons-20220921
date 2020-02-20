@@ -1,0 +1,72 @@
+@base          <bdg:P6005> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6005 {
+    bda:LG353916D5B25FEB98
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T12:40:20.187Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6005  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6005 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "95/P6005.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6005 ;
+        adm:logEntry        bda:LG353916D5B25FEB98 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA38CBAF0A5239150
+        a                   :PersonBirth ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EVB80A800406C806EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM12CE00FEBD533AB9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drime Zhingkyong 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM35A3EC0065AE47ED
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dri med zhing skyong 05 'jigs med 'phrin las mgon po/"@bo-x-ewts .
+    
+    bdr:NM620DDF7DAA8678DE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dri med zhing skyong 05"@bo-x-ewts .
+    
+    bdr:NMCD582C0B4A8301FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med 'phrin las mgon po/"@bo-x-ewts .
+    
+    bdr:NT315DB94A78D3026B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:NT31DD54D5A2B32810
+        a                   :Note ;
+        :locationStatement  "p. 108" .
+    
+    bdr:P6005  a            :Person ;
+        skos:prefLabel      "'jigs med 'phrin las mgon po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6003 ;
+        :isRoot             true ;
+        :note               bdr:NT315DB94A78D3026B , bdr:NT31DD54D5A2B32810 ;
+        :personEvent        bdr:EVA38CBAF0A5239150 , bdr:EVB80A800406C806EC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12CE00FEBD533AB9 , bdr:NM35A3EC0065AE47ED , bdr:NM620DDF7DAA8678DE , bdr:NMCD582C0B4A8301FF .
+}

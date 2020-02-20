@@ -1,0 +1,83 @@
+@base          <bdg:P8LS12002> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12002 {
+    bda:LG1908B107BC3554F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T12:51:00.088Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG47CC111D2D58F181
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T17:51:26.893Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8LS12002  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12002 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "57/P8LS12002.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12002 ;
+        adm:logEntry        bda:LG1908B107BC3554F1 , bda:LG47CC111D2D58F181 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV868FCF50773ABB35
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G2181 .
+    
+    bdr:EV87F037BE6B19E837
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G241 .
+    
+    bdr:EVBD062F307574D5BE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVFDB4CAEF867387BC
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM668F1F83384E257E
+        a                   :PersonTitle ;
+        rdfs:label          "mkhas mchog sga leb pa/"@bo-x-ewts .
+    
+    bdr:NM6FE8D1D97CF1CCED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sga leb/"@bo-x-ewts .
+    
+    bdr:NMD95E5091298AA61C
+        a                   :PersonTitle ;
+        rdfs:label          "slob dpon sga leb/"@bo-x-ewts .
+    
+    bdr:NMF74FF12F6F1B14DA
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 02"@bo-x-ewts .
+    
+    bdr:NT9DE1AD577849625C
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 27" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12002  a        :Person ;
+        skos:prefLabel      "sga leb/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9DE1AD577849625C ;
+        :personEvent        bdr:EV868FCF50773ABB35 , bdr:EV87F037BE6B19E837 , bdr:EVBD062F307574D5BE , bdr:EVFDB4CAEF867387BC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM668F1F83384E257E , bdr:NM6FE8D1D97CF1CCED , bdr:NMD95E5091298AA61C , bdr:NMF74FF12F6F1B14DA .
+}

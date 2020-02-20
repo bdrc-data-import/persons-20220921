@@ -1,0 +1,68 @@
+@base          <bdg:P1945> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1945 {
+    bda:LG9B9C7A8578F2A0A2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:48:28.698Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGF1C36623FDCAEB0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-09T12:37:25.936Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1945  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1945 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8a/P1945.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1945 ;
+        adm:logEntry        bda:LG9B9C7A8578F2A0A2 , bda:LGF1C36623FDCAEB0A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV009D2E0E11DAD1EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G321 .
+    
+    bdr:EVFDB5BF8BDF3B4D10
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM50EB90CE01CE58A1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rin chen/"@bo-x-ewts .
+    
+    bdr:NMDAC499AC6CA59E88
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang sems blo gros rin chen/"@bo-x-ewts .
+    
+    bdr:NT9F674CDA7A2291EA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1945  a            :Person ;
+        skos:prefLabel      "blo gros rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9F674CDA7A2291EA ;
+        :personEvent        bdr:EV009D2E0E11DAD1EC , bdr:EVFDB5BF8BDF3B4D10 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM50EB90CE01CE58A1 , bdr:NMDAC499AC6CA59E88 ;
+        :personStudentOf    bdr:P0RK640 ;
+        :personTeacherOf    bdr:P1027 , bdr:P487 , bdr:P489 .
+}

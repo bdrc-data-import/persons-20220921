@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12319> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12319 {
+    bda:LG5DDC23A0398DCA72
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T10:03:06.274Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12319  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12319 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "62/P8LS12319.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12319 ;
+        adm:logEntry        bda:LG5DDC23A0398DCA72 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB3BC744152B98E3E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:EVDC00EA08A146EC31
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM7D1BCF503A4E81F0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman 'tshong bde chen blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMC54E71BFC4D0C0D1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMEFCB80A183DCD3A4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 05"@bo-x-ewts .
+    
+    bdr:NT8C5FD89700BF61CF
+        a                   :Note ;
+        :locationStatement  "p. 391" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12319  a        :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8C5FD89700BF61CF ;
+        :personEvent        bdr:EVB3BC744152B98E3E , bdr:EVDC00EA08A146EC31 ;
+        :personName         bdr:NM7D1BCF503A4E81F0 , bdr:NMC54E71BFC4D0C0D1 , bdr:NMEFCB80A183DCD3A4 .
+}

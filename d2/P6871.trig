@@ -1,0 +1,52 @@
+@base          <bdg:P6871> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6871 {
+    bda:P6871  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6871 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d2/P6871.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6871 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3EE1C45C0F538F8A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G41 .
+    
+    bdr:EVA84A798E4AE914F1
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM189F4CDB2CD9ED0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lung rigs smra ba'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT6F4AD55930720ECB
+        a                   :Note ;
+        :locationStatement  "p. 41" ;
+        :noteSource         bdr:MW9668 ;
+        :noteText           "described as a teacher of chags med rin po che, presumably karma chags med"@en .
+    
+    bdr:P6871  a            :Person ;
+        skos:prefLabel      "lung rigs smra ba'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F4AD55930720ECB ;
+        :personEvent        bdr:EV3EE1C45C0F538F8A , bdr:EVA84A798E4AE914F1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM189F4CDB2CD9ED0E ;
+        :personTeacherOf    bdr:P649 .
+}

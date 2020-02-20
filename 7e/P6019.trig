@@ -1,0 +1,99 @@
+@base          <bdg:P6019> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6019 {
+    bda:LG984823A771EFB94C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGB4216AD72273959D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-30T17:17:35.662Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE8F556B60B3F57FF
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-26T09:57:54.018Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6019  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6019 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "7e/P6019.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6019 ;
+        adm:logEntry        bda:LG984823A771EFB94C , bda:LGB4216AD72273959D , bda:LGE8F556B60B3F57FF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C6A46E0784CF05D
+        a                   :PersonDeath ;
+        :onYear             "1885"^^xsd:gYear .
+    
+    bdr:EV33A1DE1D9754F740
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EV975A0BBE0CFF78A6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G518 .
+    
+    bdr:EVCC8CC6F7F2961F27
+        a                   :PersonBirth ;
+        :onYear             "1830"^^xsd:gYear .
+    
+    bdr:NM36617C4006BC1C64
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "kaH thog dge rtse 02"@bo-x-ewts .
+    
+    bdr:NMB22C5C16054F82B8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge rtse 02 tshe dbang rig 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC5E0D0103F6CB220
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Katok Getse 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD539649DADB31DDF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rig 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT763FBAA79FE129EC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:NT8E3E567CE23F49F4
+        a                   :Note ;
+        :locationStatement  "p. 111" ;
+        :noteSource         bdr:MW20396 .
+    
+    bdr:NTBBE91157D91B10BA
+        a                   :Note ;
+        :noteText           "Died at an early age."@en .
+    
+    bdr:P6019  a            :Person ;
+        skos:prefLabel      "tshe dbang rig 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2943 ;
+        :isRoot             true ;
+        :note               bdr:NT763FBAA79FE129EC , bdr:NT8E3E567CE23F49F4 , bdr:NTBBE91157D91B10BA ;
+        :personEvent        bdr:EV1C6A46E0784CF05D , bdr:EV33A1DE1D9754F740 , bdr:EV975A0BBE0CFF78A6 , bdr:EVCC8CC6F7F2961F27 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM36617C4006BC1C64 , bdr:NMB22C5C16054F82B8 , bdr:NMC5E0D0103F6CB220 , bdr:NMD539649DADB31DDF ;
+        :personStudentOf    bdr:P6026 ;
+        :personTeacherOf    bdr:P1712 .
+}

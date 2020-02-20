@@ -1,0 +1,81 @@
+@base          <bdg:P6519> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6519 {
+    bda:LG2A5D8B02A7D821F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T14:33:29.729Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6519  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6519 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b1/P6519.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6519 ;
+        adm:logEntry        bda:LG2A5D8B02A7D821F1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB21487ABC8CD2FD1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVCCF3C25A0A95CD66
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1898"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD8B130D01B776B7B
+        a                   :PersonBirth ;
+        :onYear             "1875"^^xsd:gYear .
+    
+    bdr:NM07F1B7F81895BE41
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nya kyA zhabs drung bsod nams dar rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM1CE5067618D036C9
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 73 bsod nams dar rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM479B238AB4398418
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 73"@bo-x-ewts .
+    
+    bdr:NMBA063B7A7D54DC7F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dar rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT162A7BD0326FC817
+        a                   :Note ;
+        :locationStatement  "p. 201" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:NT61E632C9BADC147C
+        a                   :Note ;
+        :locationStatement  "p. 290" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "His first incarnate lama was nya kya dge bshes rgyal mtshan nor bu became sman pa khri"@en .
+    
+    bdr:P6519  a            :Person ;
+        skos:prefLabel      "bsod nams dar rgyas rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6518 ;
+        :isRoot             true ;
+        :note               bdr:NT162A7BD0326FC817 , bdr:NT61E632C9BADC147C ;
+        :personEvent        bdr:EVB21487ABC8CD2FD1 , bdr:EVCCF3C25A0A95CD66 , bdr:EVD8B130D01B776B7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07F1B7F81895BE41 , bdr:NM1CE5067618D036C9 , bdr:NM479B238AB4398418 , bdr:NMBA063B7A7D54DC7F .
+}

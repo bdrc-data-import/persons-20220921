@@ -1,0 +1,50 @@
+@base          <bdg:P110> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P110 {
+    bda:P110  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P110 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "11/P110.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P110 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE46B9DE0306279A4
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM9F1D6B927004A7A3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang byams pa/"@bo-x-ewts .
+    
+    bdr:NMED7B9FF466BADC98
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen blo bzang byams pa/"@bo-x-ewts .
+    
+    bdr:NTE2BEBA921E2A3EAD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P110  a             :Person ;
+        skos:prefLabel      "blo bzang byams pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2BEBA921E2A3EAD ;
+        :personEvent        bdr:EVE46B9DE0306279A4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9F1D6B927004A7A3 , bdr:NMED7B9FF466BADC98 ;
+        :personTeacherOf    bdr:P107 .
+}

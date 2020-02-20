@@ -1,0 +1,66 @@
+@base          <bdg:P8LS12089> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12089 {
+    bda:LGBC76D947695E7067
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-05T11:35:59.12Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12089  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12089 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "25/P8LS12089.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12089 ;
+        adm:logEntry        bda:LGBC76D947695E7067 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0989708DD1776232
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV586904F8FB7C67BB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1653"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC83F5B2E4A48EA21
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM6A5FD87C1E88ADA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dam chos phun tshogs/"@bo-x-ewts .
+    
+    bdr:NM7FE8061189E2F7FA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 03"@bo-x-ewts .
+    
+    bdr:NT72061F88B9EE3479
+        a                   :Note ;
+        :locationStatement  "p. 249" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12089  a        :Person ;
+        skos:prefLabel      "dam chos phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT72061F88B9EE3479 ;
+        :personEvent        bdr:EV0989708DD1776232 , bdr:EV586904F8FB7C67BB , bdr:EVC83F5B2E4A48EA21 ;
+        :personName         bdr:NM6A5FD87C1E88ADA1 , bdr:NM7FE8061189E2F7FA .
+}

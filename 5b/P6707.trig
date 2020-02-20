@@ -1,0 +1,61 @@
+@base          <bdg:P6707> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6707 {
+    bda:P6707  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6707 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5b/P6707.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6707 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV876E757791CC086C
+        a                   :PersonAssumesOffice ;
+        :onYear             "1932"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVC3ADF87A70DF91A7
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVD30756B4FD06BF5E
+        a                   :PersonLeavesOffice ;
+        :onYear             "1934"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:NM0A16658DEA9DD8CB
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon bla ma dge 'dun chos dar/"@bo-x-ewts .
+    
+    bdr:NM2248169211DB0514
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun chos dar, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NT22654A0FE4B95A95
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "served as bka' blon bla ma, 1932-1934"@en .
+    
+    bdr:P6707  a            :Person ;
+        skos:prefLabel      "dge 'dun chos dar, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22654A0FE4B95A95 ;
+        :personEvent        bdr:EV876E757791CC086C , bdr:EVC3ADF87A70DF91A7 , bdr:EVD30756B4FD06BF5E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A16658DEA9DD8CB , bdr:NM2248169211DB0514 .
+}

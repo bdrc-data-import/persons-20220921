@@ -1,0 +1,81 @@
+@base          <bdg:P11MS253> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS253 {
+    bda:LG760D27DC3BC221D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-02T15:14:36.662Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG7E6AB5B58B83B5CF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T13:08:47.602Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGC970D55EBB4392F8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T10:07:27.155Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P11MS253  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS253 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ab/P11MS253.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS253 ;
+        adm:logEntry        bda:LG760D27DC3BC221D0 , bda:LG7E6AB5B58B83B5CF , bda:LGC970D55EBB4392F8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BD3880D981B4F8B
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G1KR1884 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4DFCE503F3AC15CF
+        a                   :PersonDeath ;
+        :onYear             "1313"^^xsd:gYear .
+    
+    bdr:EVF04CE0F3A1447B0A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR1884 .
+    
+    bdr:EVFED2C71BFC7E7710
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1239"^^xsd:gYear .
+    
+    bdr:NM0D14A72BEE63326B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Lama Orgyen"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM2DC29867518E6E4B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bla ma o rgyan/"@bo-x-ewts .
+    
+    bdr:NT8E950602F398A5F0
+        a                   :Note ;
+        :locationStatement  "325" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P11MS253  a         :Person ;
+        skos:prefLabel      "bla ma o rgyan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8E950602F398A5F0 ;
+        :personEvent        bdr:EV1BD3880D981B4F8B , bdr:EV4DFCE503F3AC15CF , bdr:EVF04CE0F3A1447B0A , bdr:EVFED2C71BFC7E7710 ;
+        :personName         bdr:NM0D14A72BEE63326B , bdr:NM2DC29867518E6E4B ;
+        :personStudentOf    bdr:P11MS254 , bdr:P16 .
+}

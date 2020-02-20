@@ -1,0 +1,57 @@
+@base          <bdg:P1KG1684> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1684 {
+    bda:LGA9C44194190E1B90
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-04T15:19:51.159Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1684  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1684 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "92/P1KG1684.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1684 ;
+        adm:logEntry        bda:LGA9C44194190E1B90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD9089124A69D741E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM309452F758441594
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6E80D0B56FFEDDBE
+        a                   :PersonPersonalName ;
+        rdfs:label          "sgo shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC44A89EF321CD0EB
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1682 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1684  a         :Person ;
+        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC44A89EF321CD0EB ;
+        :personEvent        bdr:EVD9089124A69D741E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM309452F758441594 , bdr:NM6E80D0B56FFEDDBE .
+}

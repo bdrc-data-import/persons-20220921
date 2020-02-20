@@ -1,0 +1,68 @@
+@base          <bdg:P6541> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6541 {
+    bda:LG3801ABF58714EAF8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-14T10:20:38.082Z"^^xsd:dateTime ;
+        adm:logMessage      "changed monastery G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD656FC6C80210EF1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-07T15:47:45.399Z"^^xsd:dateTime ;
+        adm:logMessage      "added names & monastery"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6541  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6541 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "21/P6541.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6541 ;
+        adm:logEntry        bda:LG3801ABF58714EAF8 , bda:LGD656FC6C80210EF1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFFA2E21C8592F24B
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM253007B987963613
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhas btsun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6B95B20B27641072
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a rig rab 'byams pa mkhas btsun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCD46554EC87AE0BE
+        a                   :PersonTitle ;
+        rdfs:label          "a rig rab 'byams pa/"@bo-x-ewts .
+    
+    bdr:NT14A4E3F58ACF2555
+        a                   :Note ;
+        :locationStatement  "p. 599" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source notes the foundation of the monastery 'brong tha'i dgon"@en .
+    
+    bdr:P6541  a            :Person ;
+        skos:prefLabel      "mkhas btsun rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT14A4E3F58ACF2555 ;
+        :personEvent        bdr:EVFFA2E21C8592F24B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM253007B987963613 , bdr:NM6B95B20B27641072 , bdr:NMCD46554EC87AE0BE .
+}

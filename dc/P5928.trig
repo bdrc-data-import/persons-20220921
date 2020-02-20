@@ -1,0 +1,61 @@
+@base          <bdg:P5928> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5928 {
+    bda:P5928  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5928 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "dc/P5928.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5928 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5BF3B4AD9891FAD6
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EV9C0CACDA20BAC976
+        a                   :PersonBirth ;
+        :onYear             "1890"^^xsd:gYear .
+    
+    bdr:EVB0077E0FF1EF32A5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NM705D763AFB207218
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpyi sa blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM97CC17050B0D059B
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog blo gros rgya mtsho, dpyi sa/"@bo-x-ewts .
+    
+    bdr:NMECBB32FD6181765E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT7665D10F94256C45
+        a                   :Note ;
+        :noteText           "dge lugs master from a mdo"@en .
+    
+    bdr:P5928  a            :Person ;
+        skos:prefLabel      "blo gros rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7665D10F94256C45 ;
+        :personEvent        bdr:EV5BF3B4AD9891FAD6 , bdr:EV9C0CACDA20BAC976 , bdr:EVB0077E0FF1EF32A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM705D763AFB207218 , bdr:NM97CC17050B0D059B , bdr:NMECBB32FD6181765E ;
+        :personTeacherOf    bdr:P5929 .
+}

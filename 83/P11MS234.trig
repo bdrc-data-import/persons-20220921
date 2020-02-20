@@ -1,0 +1,60 @@
+@base          <bdg:P11MS234> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS234 {
+    bda:LG2A1951111618B8F4
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-24T14:43:21.512Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG78EC141A04718247
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-11T13:25:09.437Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrew P11MS234"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P11MS234  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS234 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "83/P11MS234.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS234 ;
+        adm:logEntry        bda:LG2A1951111618B8F4 , bda:LG78EC141A04718247 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV82A67946E0B22435
+        a                   :PersonDeath ;
+        :onYear             "1751"^^xsd:gYear .
+    
+    bdr:NM3342890C37E61EE2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs bstan pa/"@bo-x-ewts .
+    
+    bdr:NT349E19442F430405
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P1AG85"@en .
+    
+    bdr:NT68289701655F6A31
+        a                   :Note ;
+        :noteText           "King of Dege. Completed the carving of an edition of the Tengyur in 213 volumes, completed in 1744."@en .
+    
+    bdr:P11MS234  a         :Person ;
+        skos:prefLabel      "phun tshogs bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT349E19442F430405 , bdr:NT68289701655F6A31 ;
+        :personEvent        bdr:EV82A67946E0B22435 ;
+        :personName         bdr:NM3342890C37E61EE2 .
+}

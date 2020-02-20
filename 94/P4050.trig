@@ -1,0 +1,50 @@
+@base          <bdg:P4050> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4050 {
+    bda:P4050  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4050 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "94/P4050.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4050 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12FA958CA46F5F80
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM3FBDE525B3E91702
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas dbang blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NME2DDD57D32A84CFF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT934E3B8F7FF04DD5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4050  a            :Person ;
+        skos:prefLabel      "blo bzang dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT934E3B8F7FF04DD5 ;
+        :personEvent        bdr:EV12FA958CA46F5F80 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3FBDE525B3E91702 , bdr:NME2DDD57D32A84CFF ;
+        :personTeacherOf    bdr:P312 .
+}

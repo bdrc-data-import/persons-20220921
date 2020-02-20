@@ -1,0 +1,65 @@
+@base          <bdg:P6680> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6680 {
+    bda:LG74276488EB9D693E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-07T14:18:40.732Z"^^xsd:dateTime ;
+        adm:logMessage      "Added link to Treasury of Lives Biography"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P6680  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6680 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "13/P6680.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6680 ;
+        adm:logEntry        bda:LG74276488EB9D693E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15545DD89E1565D1
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2371 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVAEBF7A574AA0C64F
+        a                   :PersonDeath ;
+        :onYear             "1887"^^xsd:gYear .
+    
+    bdr:NM3BD4CAA24E609A02
+        a                   :PersonPrimaryName ;
+        rdfs:label          "glang mdun kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NM941E6BEDBAC2ADBE
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NT6B85AEB09D026D0A
+        a                   :Note ;
+        :locationStatement  "p. 23" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "founder of the glang mdun family, the yab gzhis of the 13th dalai lama\nname comes from a village at the foot of the dwags lha sgam po mountain in dwags po, where he was a farmer\n1879. was granted the title of kung and the jewel button and peacock feathers"@en .
+    
+    bdr:P6680  a            :Person ;
+        skos:prefLabel      "glang mdun kun dga' rin chen/"@bo-x-ewts ;
+        :hasSon             bdr:P197 , bdr:P6681 , bdr:P6682 ;
+        :isRoot             true ;
+        :note               bdr:NT6B85AEB09D026D0A ;
+        :personEvent        bdr:EV15545DD89E1565D1 , bdr:EVAEBF7A574AA0C64F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3BD4CAA24E609A02 , bdr:NM941E6BEDBAC2ADBE ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Langdun-Kunga-Rinchen/9287"^^xsd:anyURI .
+}

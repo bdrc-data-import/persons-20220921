@@ -1,0 +1,52 @@
+@base          <bdg:P10621> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10621 {
+    bda:P10621  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10621 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "09/P10621.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10621 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4688FE96D3CAA02D
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM3181BA2B7B0266D4
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdo rje 'od zer/"@bo-x-ewts .
+    
+    bdr:NM89872AA4149E35F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang zhung pa rdo rje'od zer/"@bo-x-ewts .
+    
+    bdr:NTEB47D18E43D02EA7
+        a                   :Note ;
+        :locationStatement  "p. 174" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "noted as a teacher of 'gro mgon 'phags pa"@en .
+    
+    bdr:P10621  a           :Person ;
+        skos:prefLabel      "rdo rje 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEB47D18E43D02EA7 ;
+        :personEvent        bdr:EV4688FE96D3CAA02D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3181BA2B7B0266D4 , bdr:NM89872AA4149E35F2 ;
+        :personTeacherOf    bdr:P1048 .
+}

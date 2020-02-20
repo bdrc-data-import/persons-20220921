@@ -1,0 +1,114 @@
+@base          <bdg:P1204> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1204 {
+    bda:LG44879C3F00A91277
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG8E05B555F71B7998
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T16:39:03.404Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9EC4739913F9EF7A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T11:38:28.166Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEA9E010520BDFE08
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-13T17:38:14.181Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P1204  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1204 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "27/P1204.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1204 ;
+        adm:logEntry        bda:LG44879C3F00A91277 , bda:LG8E05B555F71B7998 , bda:LG9EC4739913F9EF7A , bda:LGEA9E010520BDFE08 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV050BF27D27044F92
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EV22B2EB03B3289255
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EV8CBD49C7B71C5851
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB528D7516B062EE9
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:NM2A3B717857FA6D58
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a rol 03"@bo-x-ewts .
+    
+    bdr:NM4228AE82DB12F78A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Arol 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM55CBC9D9CE5301F9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 60"@bo-x-ewts .
+    
+    bdr:NM71A62841F7B051C4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "don gling mkhan sprul a rol blo bzang lung rtogs bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB9D8C0767C39993B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang lung rtogs bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT2902CF8F138FA852
+        a                   :Note ;
+        :locationStatement  "p. 1912" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:NTB08FB2D26C4D4960
+        a                   :Note ;
+        :locationStatement  "p. 600" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source gives dates as 1888-1959"@en .
+    
+    bdr:NTF0853B20D4C9E524
+        a                   :Note ;
+        :locationStatement  "p. 282-287" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P1204  a            :Person ;
+        skos:prefLabel      "blo bzang lung rtogs bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P273 ;
+        :isRoot             true ;
+        :note               bdr:NT2902CF8F138FA852 , bdr:NTB08FB2D26C4D4960 , bdr:NTF0853B20D4C9E524 ;
+        :personEvent        bdr:EV050BF27D27044F92 , bdr:EV22B2EB03B3289255 , bdr:EV8CBD49C7B71C5851 , bdr:EVB528D7516B062EE9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A3B717857FA6D58 , bdr:NM4228AE82DB12F78A , bdr:NM55CBC9D9CE5301F9 , bdr:NM71A62841F7B051C4 , bdr:NMB9D8C0767C39993B ;
+        :personStudentOf    bdr:P229 , bdr:P237 , bdr:P29 , bdr:P6965 ;
+        :personTeacherOf    bdr:P4708 , bdr:P6770 .
+}

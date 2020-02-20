@@ -1,0 +1,64 @@
+@base          <bdg:P727> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P727 {
+    bda:P727  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P727 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "99/P727.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P727 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FC4A7CF5C195E36
+        a                   :PersonBirth ;
+        :onYear             "1893"^^xsd:gYear .
+    
+    bdr:EV75153264D71703DD
+        a                   :PersonDeath ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:NM16991C43C6D9AA05
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sras 'phags mchog rdo rje/"@bo-x-ewts .
+    
+    bdr:NM868ACDF1EEB1EEF9
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun bzang rdo rje/"@bo-x-ewts .
+    
+    bdr:NME3462C48A3580AF0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phags mchog rdo rje/"@bo-x-ewts .
+    
+    bdr:NT2F5E59E23063EF33
+        a                   :Note ;
+        :noteText           "Mind emanation of 'Jam-dbyangs Mkhyen-brtse'i-dbang-po"@en .
+    
+    bdr:NT49A30F14D7B71673
+        a                   :Note ;
+        :locationStatement  "v. 1, pp. 3 (first group) et ff." ;
+        :noteSource         bdr:MW27299 ;
+        :noteText           "biography"@en .
+    
+    bdr:P727  a             :Person ;
+        skos:prefLabel      "'phags mchog rdo rje/"@bo-x-ewts ;
+        :hasSon             bdr:P620 ;
+        :isRoot             true ;
+        :note               bdr:NT2F5E59E23063EF33 , bdr:NT49A30F14D7B71673 ;
+        :personEvent        bdr:EV0FC4A7CF5C195E36 , bdr:EV75153264D71703DD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16991C43C6D9AA05 , bdr:NM868ACDF1EEB1EEF9 , bdr:NME3462C48A3580AF0 ;
+        :personTeacherOf    bdr:P864 .
+}

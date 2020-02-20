@@ -1,0 +1,57 @@
+@base          <bdg:P4788> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4788 {
+    bda:LG89AE3CF89FDEE428
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T09:00:29.977Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4788  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4788 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "20/P4788.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4788 ;
+        adm:logEntry        bda:LG89AE3CF89FDEE428 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV63F3B961E8E923B4
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM237E6BDE16B6D570
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM69E91A3CD6F9B0C9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rta chung bla ma tshe ring chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT7E7538703B12A8B3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P4788  a            :Person ;
+        skos:prefLabel      "tshe ring chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7E7538703B12A8B3 ;
+        :personEvent        bdr:EV63F3B961E8E923B4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM237E6BDE16B6D570 , bdr:NM69E91A3CD6F9B0C9 ;
+        :personTeacherOf    bdr:P4779 .
+}

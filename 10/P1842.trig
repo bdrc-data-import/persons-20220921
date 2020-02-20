@@ -1,0 +1,52 @@
+@base          <bdg:P1842> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1842 {
+    bda:P1842  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1842 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "10/P1842.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1842 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD7E4A76F5E0B47F4
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM140E720B7A9E0394
+        a                   :PersonPersonalName ;
+        rdfs:label          "se re, rgya ba/"@bo-x-ewts .
+    
+    bdr:NM6307A19345976730
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgya ba se re/"@bo-x-ewts .
+    
+    bdr:NT981A15963996AEF8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud"@en .
+    
+    bdr:P1842  a            :Person ;
+        skos:prefLabel      "rgya ba se re/"@bo-x-ewts ;
+        :hasSon             bdr:P1841 , bdr:P1845 ;
+        :hasWife            bdr:P1843 ;
+        :hasYoungerBrother  bdr:P1844 ;
+        :isRoot             true ;
+        :note               bdr:NT981A15963996AEF8 ;
+        :personEvent        bdr:EVD7E4A76F5E0B47F4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM140E720B7A9E0394 , bdr:NM6307A19345976730 .
+}

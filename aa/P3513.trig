@@ -1,0 +1,100 @@
+@base          <bdg:P3513> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3513 {
+    bda:LG35589AC53A72030F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T11:10:10.017Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG51E90D7F85D4EE30
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T12:25:59.675Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF8C5E48D698D2CD5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T11:52:03.081Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3513  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3513 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "aa/P3513.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3513 ;
+        adm:logEntry        bda:LG35589AC53A72030F , bda:LG51E90D7F85D4EE30 , bda:LGF8C5E48D698D2CD5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV34F2E074860F2FCA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EV552361858B346CD4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1811"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV661A1BD4C362A8AF
+        a                   :PersonBirth ;
+        :onYear             "1776"^^xsd:gYear .
+    
+    bdr:EVDC25693279FEEA81
+        a                   :PersonDeath ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:NM55EA16EFF0DCB081
+        a                   :PersonTitle ;
+        rdfs:label          "thar rtse mkhan chen byams pa kun dga' bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM7B402DE0320F5F34
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 47"@bo-x-ewts .
+    
+    bdr:NMAA160CD5392CC87D
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' bstan 'dzin, byams pa/"@bo-x-ewts .
+    
+    bdr:NMEFB79CDB6B673A17
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 47 byams pa kun dga' bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMF8AC35DF26AC2484
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa kun dga' bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT06CD0325EED7FEA8
+        a                   :Note ;
+        :locationStatement  "p. 107-109" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NT6035016CFE66E8E2
+        a                   :Note ;
+        :locationStatement  "p. 195" ;
+        :noteSource         bdr:MW24184 ;
+        :noteText           "biography\nascended to abbatial throne of ngor in 1811"@en .
+    
+    bdr:P3513  a            :Person ;
+        skos:prefLabel      "byams pa kun dga' bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT06CD0325EED7FEA8 , bdr:NT6035016CFE66E8E2 ;
+        :personEvent        bdr:EV34F2E074860F2FCA , bdr:EV552361858B346CD4 , bdr:EV661A1BD4C362A8AF , bdr:EVDC25693279FEEA81 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM55EA16EFF0DCB081 , bdr:NM7B402DE0320F5F34 , bdr:NMAA160CD5392CC87D , bdr:NMEFB79CDB6B673A17 , bdr:NMF8AC35DF26AC2484 ;
+        :personStudentOf    bdr:P7047 ;
+        :personTeacherOf    bdr:P2521 , bdr:P258 , bdr:P7146 , bdr:P7187 , bdr:P7766 , bdr:P808 , bdr:P961 , bdr:P962 .
+}

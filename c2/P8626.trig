@@ -1,0 +1,73 @@
+@base          <bdg:P8626> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8626 {
+    bda:LG1AE16F07DE28D542
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG305B8D5A3D3E5D7E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T17:46:43.115Z"^^xsd:dateTime ;
+        adm:logMessage      "cleaned up tulku titles and incarnation relations"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG9DC6C3F3C1367BD2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T09:09:13.416Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8626  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8626 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c2/P8626.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8626 ;
+        adm:logEntry        bda:LG1AE16F07DE28D542 , bda:LG305B8D5A3D3E5D7E , bda:LG9DC6C3F3C1367BD2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM2BFDF9118BE688C0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Riwang 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM60BEA138816575D5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMBD64E93CE0DA2E81
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri dbang 04 dkon mchog bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME6F38F4E96E04833
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "ri dbang 04"@bo-x-ewts .
+    
+    bdr:NT1B2A2BEBD04C101D
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8626  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8625 ;
+        :isRoot             true ;
+        :note               bdr:NT1B2A2BEBD04C101D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2BFDF9118BE688C0 , bdr:NM60BEA138816575D5 , bdr:NMBD64E93CE0DA2E81 , bdr:NME6F38F4E96E04833 .
+}

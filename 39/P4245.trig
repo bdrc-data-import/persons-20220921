@@ -1,0 +1,50 @@
+@base          <bdg:P4245> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4245 {
+    bda:P4245  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4245 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "39/P4245.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4245 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDC671E57CA840D44
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NMDFF41ABF10E011F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shrI d+harma kIrti/"@bo-x-ewts .
+    
+    bdr:NT57B5173477B5FCF0
+        a                   :Note ;
+        :locationStatement  "p. 1722" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT9B304AF42AA4B044
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Later Translators"@en .
+    
+    bdr:P4245  a            :Person ;
+        skos:prefLabel      "shrI d+harma kIrti/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT57B5173477B5FCF0 , bdr:NT9B304AF42AA4B044 ;
+        :personEvent        bdr:EVDC671E57CA840D44 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDFF41ABF10E011F6 .
+}

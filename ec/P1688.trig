@@ -1,0 +1,56 @@
+@base          <bdg:P1688> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1688 {
+    bda:P1688  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1688 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ec/P1688.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1688 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C1AD85AA78D88F8
+        a                   :PersonDeath ;
+        :onYear             "1677"^^xsd:gYear .
+    
+    bdr:EV66C98D8C904B5D6E
+        a                   :PersonBirth ;
+        :onYear             "1602"^^xsd:gYear .
+    
+    bdr:NM1195735BA4099B21
+        a                   :PersonPersonalName ;
+        rdfs:label          "bla chen 'bres gshongs pa chos rgyal rdo rje/"@bo-x-ewts .
+    
+    bdr:NM8F898625511934FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rgyal rdo rje/"@bo-x-ewts .
+    
+    bdr:NMCEA41DE95A975C19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla chen 'bres gshongs pa/"@bo-x-ewts .
+    
+    bdr:NTB0376B99E04CBB3D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P1688  a            :Person ;
+        skos:prefLabel      "chos rgyal rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB0376B99E04CBB3D ;
+        :personEvent        bdr:EV4C1AD85AA78D88F8 , bdr:EV66C98D8C904B5D6E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1195735BA4099B21 , bdr:NM8F898625511934FB , bdr:NMCEA41DE95A975C19 .
+}

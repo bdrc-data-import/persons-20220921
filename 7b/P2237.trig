@@ -1,0 +1,107 @@
+@base          <bdg:P2237> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2237 {
+    bda:LG169AF8F961EEB0E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T12:46:02.459Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6E528E2189263E0F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-01T09:35:01.598Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2237  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2237 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "7b/P2237.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2237 ;
+        adm:logEntry        bda:LG169AF8F961EEB0E4 , bda:LG6E528E2189263E0F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E7BEA1AFC1B6DFB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1565"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV53E52907E41BA791
+        a                   :PersonDeath ;
+        :notAfter           "1570"^^xsd:gYear ;
+        :notBefore          "1569"^^xsd:gYear .
+    
+    bdr:EV9449F1219FE7636A
+        a                   :PersonBirth ;
+        :onYear             "1527"^^xsd:gYear .
+    
+    bdr:EVAC2D512E8FDB108B
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1570"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVCCCD0825E17266CD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NM2B19EEB9A375086E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'bri gung gdan rabs 19"@bo-x-ewts .
+    
+    bdr:NM6AC49B67B03F24BD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal gyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6B11833D1443BC87
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN chen bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8DA771924A26C422
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsod nams dpal gyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC8A157EAE5AA78E6
+        a                   :PersonTitle ;
+        rdfs:label          "'bri gung gdan rabs 19 dpal gyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3710F3FBE9212F11
+        a                   :Note ;
+        :locationStatement  "pp. 447-450" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT83CBC9EA74AA44AF
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1569. 'bri gung pa paN chen bsod nams dpal gyi rgya mtsho gshegs"@en .
+    
+    bdr:NTAC60F1A46976927C
+        a                   :Note ;
+        :locationStatement  "p. 214-217" ;
+        :noteSource         bdr:MW1KG6255 ;
+        :noteText           "according to this source he is the 18th throne holder of 'bri gung but in the official throne holder list of drikung kagyu he is the 19th. See http://www.drikung.org/index.php/drikung-kagyu-lineage/list-of-lineage-holders. Also see W26674"@en .
+    
+    bdr:P2237  a            :Person ;
+        skos:prefLabel      "dpal gyi rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3710F3FBE9212F11 , bdr:NT83CBC9EA74AA44AF , bdr:NTAC60F1A46976927C ;
+        :personEvent        bdr:EV3E7BEA1AFC1B6DFB , bdr:EV53E52907E41BA791 , bdr:EV9449F1219FE7636A , bdr:EVAC2D512E8FDB108B , bdr:EVCCCD0825E17266CD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2B19EEB9A375086E , bdr:NM6AC49B67B03F24BD , bdr:NM6B11833D1443BC87 , bdr:NM8DA771924A26C422 , bdr:NMC8A157EAE5AA78E6 .
+}

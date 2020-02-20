@@ -1,0 +1,57 @@
+@base          <bdg:P8LS12325> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12325 {
+    bda:LG51686962AA55B9BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T11:17:28.332Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12325  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12325 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2b/P8LS12325.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12325 ;
+        adm:logEntry        bda:LG51686962AA55B9BB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV33E36FFDC0AA081D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV613319461A339A94
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:NM4C4B725B0D9E731D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 18"@bo-x-ewts .
+    
+    bdr:NT7F61A5917B873206
+        a                   :Note ;
+        :locationStatement  "p. 396" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "the name is not known, however, according to this source either one of the junior and senior drung yig"@en .
+    
+    bdr:P8LS12325  a        :Person ;
+        skos:prefLabel      "rong po dus 'khor khri 18"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7F61A5917B873206 ;
+        :personEvent        bdr:EV33E36FFDC0AA081D , bdr:EV613319461A339A94 ;
+        :personName         bdr:NM4C4B725B0D9E731D .
+}

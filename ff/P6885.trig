@@ -1,0 +1,49 @@
+@base          <bdg:P6885> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6885 {
+    bda:P6885  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6885 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ff/P6885.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6885 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV25F440C624864BA7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G317 .
+    
+    bdr:EVEE9062AF1880BE59
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMB66E1467ABE0A668
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bka' brgyud sgron me/"@bo-x-ewts .
+    
+    bdr:NMD3A6D49B2D5419BB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dkar rta so sprul sku karma bka' brgyud sgron me/"@bo-x-ewts .
+    
+    bdr:P6885  a            :Person ;
+        skos:prefLabel      "karma bka' brgyud sgron me/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV25F440C624864BA7 , bdr:EVEE9062AF1880BE59 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB66E1467ABE0A668 , bdr:NMD3A6D49B2D5419BB ;
+        :personTeacherOf    bdr:P6878 .
+}

@@ -1,0 +1,77 @@
+@base          <bdg:P4087> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4087 {
+    bda:LG0802C0E90C54701D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:59:07.149Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG95AE5D92395B6816
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-09T16:52:14.319Z"^^xsd:dateTime ;
+        adm:logMessage      "added G210"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P4087  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4087 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b9/P4087.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4087 ;
+        adm:logEntry        bda:LG0802C0E90C54701D , bda:LG95AE5D92395B6816 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10905995CF4CE4BA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1353"^^xsd:gYear .
+    
+    bdr:EV4C327A5EB46AF320
+        a                   :PersonDeath ;
+        :onYear             "1405"^^xsd:gYear .
+    
+    bdr:EV7BCE74DB01D5C08F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G440 .
+    
+    bdr:NMC69E85C196D20993
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya pa rdo rje rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME59539514BB9A23D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT639B4F73765F16F5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NTE3D3EFE09B201319
+        a                   :Note ;
+        :locationStatement  "p. 896" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4087  a            :Person ;
+        skos:prefLabel      "rdo rje rin chen rgyal mtshan/"@bo-x-ewts ;
+        :hasFather          bdr:P3566 ;
+        :hasMother          bdr:P4071 ;
+        :isRoot             true ;
+        :note               bdr:NT639B4F73765F16F5 , bdr:NTE3D3EFE09B201319 ;
+        :personEvent        bdr:EV10905995CF4CE4BA , bdr:EV4C327A5EB46AF320 , bdr:EV7BCE74DB01D5C08F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC69E85C196D20993 , bdr:NME59539514BB9A23D .
+}

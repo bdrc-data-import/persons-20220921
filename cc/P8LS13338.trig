@@ -1,0 +1,65 @@
+@base          <bdg:P8LS13338> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13338 {
+    bda:LGCE4079DC4FECC7C2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-21T16:01:19.985Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13338  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13338 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "cc/P8LS13338.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13338 ;
+        adm:logEntry        bda:LGCE4079DC4FECC7C2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV177A1D451A8236B4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2530 .
+    
+    bdr:EV19D9C451B5BFB511
+        a                   :PersonBirth ;
+        :onYear             "1796"^^xsd:gYear .
+    
+    bdr:NM3BF87C1D679210FC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'gyang ro a lags 04"@bo-x-ewts .
+    
+    bdr:NM52570801DA2F5DA0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyangro Alak 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB8B3325D3B3C694A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD06BEDFA540C5FA7
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 307" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "'gying ro bzhi ba 'jigs med bstan pa'i rgyal mtshan ni/ rab byung bcu gsum pa'i shing 'brug spyi lo 1796 lor sbrel lung du 'khrungs/ gdan sar bkod/ dgung lo re gcig par 'das/"@bo-x-ewts .
+    
+    bdr:P8LS13338  a        :Person ;
+        skos:prefLabel      "'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13337 ;
+        :isRoot             true ;
+        :note               bdr:NTD06BEDFA540C5FA7 ;
+        :personEvent        bdr:EV177A1D451A8236B4 , bdr:EV19D9C451B5BFB511 ;
+        :personName         bdr:NM3BF87C1D679210FC , bdr:NM52570801DA2F5DA0 , bdr:NMB8B3325D3B3C694A .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P18> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P18 {
+    bda:P18  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P18 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "52/P18.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P18 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09D96024AF211774
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G26 .
+    
+    bdr:EVDC698692E4E767C4
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G535 ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM3C8DCF95521D181A
+        a                   :PersonPersonalName ;
+        rdfs:label          "mon gra pa tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NM5430A3CCE2FDAD56
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mon grwa pa tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NM9A97C4E933A48549
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NTEDD52B03EDAB704D
+        a                   :Note ;
+        :noteText           "lam rim bla brgyud bla rabs 21."@en .
+    
+    bdr:NTF8585ECF2AC98A4C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Gzhung-pa"@en .
+    
+    bdr:P18  a              :Person ;
+        skos:prefLabel      "tshul khrims bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEDD52B03EDAB704D , bdr:NTF8585ECF2AC98A4C ;
+        :personEvent        bdr:EV09D96024AF211774 , bdr:EVDC698692E4E767C4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3C8DCF95521D181A , bdr:NM5430A3CCE2FDAD56 , bdr:NM9A97C4E933A48549 ;
+        :personStudentOf    bdr:P1500 ;
+        :personTeacherOf    bdr:P1969 , bdr:P1970 , bdr:P3470 .
+}

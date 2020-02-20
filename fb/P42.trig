@@ -1,0 +1,51 @@
+@base          <bdg:P42> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P42 {
+    bda:P42  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P42 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "fb/P42.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P42 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B32BAAF332FDE3F
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NMB056D4ACE20F41AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "su ma ti/"@bo-x-ewts .
+    
+    bdr:NMCA5F36AB09418A8A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN+Di ta su ma ti/"@bo-x-ewts .
+    
+    bdr:NT1319E90BC0FC5D6E
+        a                   :Note ;
+        :locationStatement  "p. 218" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P42  a              :Person ;
+        skos:prefLabel      "su ma ti/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1319E90BC0FC5D6E ;
+        :personEvent        bdr:EV5B32BAAF332FDE3F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB056D4ACE20F41AF , bdr:NMCA5F36AB09418A8A ;
+        :personTeacherOf    bdr:P39 .
+}

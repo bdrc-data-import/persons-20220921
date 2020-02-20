@@ -1,0 +1,105 @@
+@base          <bdg:P8523> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8523 {
+    bda:LG6EF97E8BFECB378E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T16:53:05.006Z"^^xsd:dateTime ;
+        adm:logMessage      "added office and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6F845B997F45D09A
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-05-03T16:17:01.08Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed incarnation relationship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG700C940E2AD08E49
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-05-03T16:19:45.428Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed tulku title"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG9AB63B668433DBA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-05-04T16:52:59.228Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB64DFFA3D8616AB9
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-30T10:03:36.607Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8523  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8523 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "09/P8523.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8523 ;
+        adm:logEntry        bda:LG6EF97E8BFECB378E , bda:LG6F845B997F45D09A , bda:LG700C940E2AD08E49 , bda:LG9AB63B668433DBA7 , bda:LGB64DFFA3D8616AB9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2FFE604B97075BB0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVBB0AA3D3F872CFDC
+        a                   :PersonDeath ;
+        :onYear             "1790"^^xsd:gYear .
+    
+    bdr:EVC1215A1BDD9608DF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVC4D21A178492B793
+        a                   :PersonBirth ;
+        :onYear             "1728"^^xsd:gYear .
+    
+    bdr:NM411AF46D563EE231
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul gdan rabs 04"@bo-x-ewts .
+    
+    bdr:NM9CF851EAF2AC7F7A
+        a                   :PersonOtherName ;
+        rdfs:label          "karma chos dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NMCA2B783DD5C6FF5B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "karma sku chen 01"@bo-x-ewts .
+    
+    bdr:NMF972B2AD8ACA40C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bkra shis/"@bo-x-ewts .
+    
+    bdr:NTB2A6246EA25A6454
+        a                   :Note ;
+        :locationStatement  "pp. 53-58" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8523  a            :Person ;
+        skos:prefLabel      "karma bkra shis/"@bo-x-ewts ;
+        :hasNephew          bdr:P8563 ;
+        :isRoot             true ;
+        :note               bdr:NTB2A6246EA25A6454 ;
+        :personEvent        bdr:EV2FFE604B97075BB0 , bdr:EVBB0AA3D3F872CFDC , bdr:EVC1215A1BDD9608DF , bdr:EVC4D21A178492B793 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM411AF46D563EE231 , bdr:NM9CF851EAF2AC7F7A , bdr:NMCA2B783DD5C6FF5B , bdr:NMF972B2AD8ACA40C7 ;
+        :personStudentOf    bdr:P293 , bdr:P692 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Karma-Tashi/11246"^^xsd:anyURI .
+}

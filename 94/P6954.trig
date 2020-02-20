@@ -1,0 +1,74 @@
+@base          <bdg:P6954> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6954 {
+    bda:LG90FDE704186391BD
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-09-28T11:52:28.228Z"^^xsd:dateTime ;
+        adm:logMessage      "added student \"dkon mchog nor bu\""@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE9B157E37F0B4103
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:08:13.768Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P6954  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6954 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "94/P6954.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6954 ;
+        adm:logEntry        bda:LG90FDE704186391BD , bda:LGE9B157E37F0B4103 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B9A6CA84B55424D
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM02F96061DBC0C6AE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NM6C1558000423FBFB
+        a                   :PersonTitle ;
+        rdfs:label          "ra hor chos grags/"@bo-x-ewts .
+    
+    bdr:NM87F77F1A324AE081
+        a                   :PersonTitle ;
+        rdfs:label          "rwa hor chos grags/"@bo-x-ewts .
+    
+    bdr:NMA37FF5BD4C77810B
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos grags, rwa hor/"@bo-x-ewts .
+    
+    bdr:NT8335078CF66BE38F
+        a                   :Note ;
+        :locationStatement  "665" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P6954  a            :Person ;
+        skos:prefLabel      "rwa hor chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8335078CF66BE38F ;
+        :personEvent        bdr:EV5B9A6CA84B55424D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM02F96061DBC0C6AE , bdr:NM6C1558000423FBFB , bdr:NM87F77F1A324AE081 , bdr:NMA37FF5BD4C77810B ;
+        :personStudentOf    bdr:P699 ;
+        :personTeacherOf    bdr:P3CN10672 .
+}

@@ -1,0 +1,74 @@
+@base          <bdg:P1AG48> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG48 {
+    bda:LGA14BFB2776E70D88
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:34:08.597Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF619EAB17817F419
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:46:39.287Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG48  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG48 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "27/P1AG48.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG48 ;
+        adm:logEntry        bda:LGA14BFB2776E70D88 , bda:LGF619EAB17817F419 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV84BA7BAB8708E2BD
+        a                   :PersonDeath ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVA5E33F396BA23B8E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G70 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVBB8C401DBCCD5EB4
+        a                   :PersonBirth ;
+        :onYear             "1688"^^xsd:gYear .
+    
+    bdr:EVCC5FF5D0E5880B55
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G70 .
+    
+    bdr:NM0D9F23F6EE377394
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ri wo che gdan rab 13"@bo-x-ewts .
+    
+    bdr:NM110AAAC1C3BC0492
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'phags mchog 01"@bo-x-ewts .
+    
+    bdr:NM8A34DEFE9A861B4B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dbang rgyal ngag dbang grags pa dam chos phun tshogs/"@bo-x-ewts .
+    
+    bdr:P1AG48  a           :Person ;
+        skos:prefLabel      "bkra shis dbang rgyal ngag dbang grags pa dam chos phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV84BA7BAB8708E2BD , bdr:EVA5E33F396BA23B8E , bdr:EVBB8C401DBCCD5EB4 , bdr:EVCC5FF5D0E5880B55 ;
+        :personName         bdr:NM0D9F23F6EE377394 , bdr:NM110AAAC1C3BC0492 , bdr:NM8A34DEFE9A861B4B .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P1KG859> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG859 {
+    bda:LG9A5BAF8085AFBFE8
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T12:31:39.068Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG9BEF71E485648F50
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T12:32:46.085Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG859  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG859 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "78/P1KG859.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG859 ;
+        adm:logEntry        bda:LG9A5BAF8085AFBFE8 , bda:LG9BEF71E485648F50 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9935F028C0469197
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM7F8B80A07060E6B5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "wang wen chang"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NM94946D714A8EDD33
+        a                   :PersonPrimaryName ;
+        rdfs:label          "wang wun khrang /"@bo-x-ewts .
+    
+    bdr:NT4CABE9EBACFC8953
+        a                   :Note ;
+        :noteSource         bdr:MW1KG857 ;
+        :noteText           "author of bod ljongs kyi dpal 'byor"@en .
+    
+    bdr:P1KG859  a          :Person ;
+        skos:prefLabel      "wang wun khrang /"@bo-x-ewts , "wang wen chang"@zh-latn-pinyin-x-ndia ;
+        :isRoot             true ;
+        :note               bdr:NT4CABE9EBACFC8953 ;
+        :personEvent        bdr:EV9935F028C0469197 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7F8B80A07060E6B5 , bdr:NM94946D714A8EDD33 .
+}

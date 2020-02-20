@@ -1,0 +1,93 @@
+@base          <bdg:P1010> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1010 {
+    bda:LG1D568631B9CB86EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T15:58:22.474Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG34E4FB1BFD6F15BC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-14T17:08:43.895Z"^^xsd:dateTime ;
+        adm:logMessage      "Clean up zhwa dmar incarnation line- Harry"@en ;
+        adm:logWho          bdr:U00010 .
+    
+    bda:LGD165BCC971C357E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P1010  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1010 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "42/P1010.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1010 ;
+        adm:logEntry        bda:LG1D568631B9CB86EC , bda:LG34E4FB1BFD6F15BC , bda:LGD165BCC971C357E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV011A6F0046DE67AF
+        a                   :PersonDeath ;
+        :onYear             "1452"^^xsd:gYear .
+    
+    bdr:EV0A685B20CBFFF099
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G198 .
+    
+    bdr:EV42772977E9B09A94
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G870 ;
+        :onYear             "1406"^^xsd:gYear .
+    
+    bdr:NM982D17734BED3934
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zhamar 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB8CAB4A926BA965A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zhwa dmar 03"@bo-x-ewts .
+    
+    bdr:NME9D64D495EE679D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhwa dmar 03 chos dpal ye shes/"@bo-x-ewts .
+    
+    bdr:NMEADF3C000582FAA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos dpal ye shes/"@bo-x-ewts .
+    
+    bdr:NT3B6AD54BC920C135
+        a                   :Note ;
+        :noteText           "important hierarch of the karma kaM tshang tradition"@en .
+    
+    bdr:NT50190F527D6EDC2D
+        a                   :Note ;
+        :locationStatement  "p. 1494" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:P1010  a            :Person ;
+        skos:prefLabel      "chos dpal ye shes/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1413 ;
+        :isRoot             true ;
+        :note               bdr:NT3B6AD54BC920C135 , bdr:NT50190F527D6EDC2D ;
+        :personEvent        bdr:EV011A6F0046DE67AF , bdr:EV0A685B20CBFFF099 , bdr:EV42772977E9B09A94 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM982D17734BED3934 , bdr:NMB8CAB4A926BA965A , bdr:NME9D64D495EE679D6 , bdr:NMEADF3C000582FAA1 ;
+        :personStudentOf    bdr:P1410 ;
+        :personTeacherOf    bdr:P1006 , bdr:P1009 , bdr:P1380 , bdr:P208 , bdr:P318 , bdr:P4430 .
+}

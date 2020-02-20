@@ -1,0 +1,60 @@
+@base          <bdg:P8787> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8787 {
+    bda:LGCDED19699051DA4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:11.974Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8787  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8787 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "4a/P8787.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8787 ;
+        adm:logEntry        bda:LGCDED19699051DA4C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAC8A778206A12EB8
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM308A0405FF30E4ED
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdzogs chen po shAkya'i mtshan ldan/"@bo-x-ewts .
+    
+    bdr:NM3AF02B86F19D6C8D
+        a                   :PersonPersonalName ;
+        rdfs:label          "shAkya'i mtshan ldan/"@bo-x-ewts .
+    
+    bdr:NT7B61F836325C24DA
+        a                   :Note ;
+        :locationStatement  "p. 284" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography\noriginally a student of gtsang gser mdog can"@en .
+    
+    bdr:P8787  a            :Person ;
+        skos:prefLabel      "shAkya'i mtshan ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B61F836325C24DA ;
+        :personEvent        bdr:EVAC8A778206A12EB8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM308A0405FF30E4ED , bdr:NM3AF02B86F19D6C8D ;
+        :personStudentOf    bdr:P8786 ;
+        :personTeacherOf    bdr:P4682 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P1888> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1888 {
+    bda:P1888  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1888 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2b/P1888.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1888 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE0FA9CE5E7D6D416
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM6EC0A96CE8579835
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bde legs/"@bo-x-ewts .
+    
+    bdr:NM9F34661966F9B586
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgom chen dge 'dun bde legs/"@bo-x-ewts .
+    
+    bdr:NTA315586CF2303F3E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1888  a            :Person ;
+        skos:prefLabel      "dge 'dun bde legs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA315586CF2303F3E ;
+        :personEvent        bdr:EVE0FA9CE5E7D6D416 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6EC0A96CE8579835 , bdr:NM9F34661966F9B586 ;
+        :personTeacherOf    bdr:P350 .
+}

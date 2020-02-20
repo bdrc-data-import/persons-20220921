@@ -1,0 +1,52 @@
+@base          <bdg:P2019> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2019 {
+    bda:P2019  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2019 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9e/P2019.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2019 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88290423A0D34D99
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM9DDA5556608E2CFC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMC3A8DBE65F7BCFC8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri bo che chos rje grags pa dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT1061A91A73FDC965
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 173v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "a student of karma pa chos dbyings rdo rje;\nhe obviously belonged to the stag lugs bka' brgyud tradition"@en .
+    
+    bdr:P2019  a            :Person ;
+        skos:prefLabel      "grags pa dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1061A91A73FDC965 ;
+        :personEvent        bdr:EV88290423A0D34D99 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9DDA5556608E2CFC , bdr:NMC3A8DBE65F7BCFC8 ;
+        :personStudentOf    bdr:P1382 .
+}

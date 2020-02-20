@@ -1,0 +1,73 @@
+@base          <bdg:P3959> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3959 {
+    bda:LG01DF71CAD257FAA5
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-24T12:25:43.557Z"^^xsd:dateTime ;
+        adm:logMessage      "Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3959  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3959 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3b/P3959.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3959 ;
+        adm:logEntry        bda:LG01DF71CAD257FAA5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV913C7D192642A406
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVAB563A6E1EE0513E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:NM0C20EE35BA0DFF18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med stobs rgyas/"@bo-x-ewts .
+    
+    bdr:NMDDA272F1DB34C86C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 15 'jigs med stobs rgyas/"@bo-x-ewts .
+    
+    bdr:NT3BCFA13365FD4B22
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:NT8E61CCD90A69D830
+        a                   :Note ;
+        :noteText           "On throne: 1814-1844\n1820. Gave Mang-'gyed at Bla-brang and invited the 3rd 'Jam-dbyangs-bzhad-pa Blo-bzang-thub-bstan-rgya-mtsho to Mdo Dgon and Khya-dge\n1833. tho'u ju'i rgya dpon gyis 'bangs nom za btsan 'phrog byas pa'i gtug gyod 'os shing 'tsham par bsdums."@en .
+    
+    bdr:NTAC27667B6B5D661F
+        a                   :Note ;
+        :locationStatement  "p. 51" ;
+        :noteSource         bdr:MW19834 .
+    
+    bdr:P3959  a            :Person ;
+        skos:prefLabel      "'jigs med stobs rgyas/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P3958 ;
+        :hasSon             bdr:P3944 , bdr:P3961 ;
+        :hasWife            bdr:P3960 ;
+        :isRoot             true ;
+        :note               bdr:NT3BCFA13365FD4B22 , bdr:NT8E61CCD90A69D830 , bdr:NTAC27667B6B5D661F ;
+        :personEvent        bdr:EV913C7D192642A406 , bdr:EVAB563A6E1EE0513E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C20EE35BA0DFF18 , bdr:NMDDA272F1DB34C86C ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Fifteenth-Chone-Sakyong-Jigme-Topgye/6350"^^xsd:anyURI .
+}

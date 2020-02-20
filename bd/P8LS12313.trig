@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12313> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12313 {
+    bda:LGEC0A08457282A1A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T14:16:17.36Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12313  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12313 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bd/P8LS12313.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12313 ;
+        adm:logEntry        bda:LGEC0A08457282A1A5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60D2CAD278F443D5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6125282ED03185E2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:NM19780D726CD8FDEE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM2353EB64A096E79D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje dge 'dun yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7AE0EA73E52894CC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 26"@bo-x-ewts .
+    
+    bdr:NTC669D4B4300BA88F
+        a                   :Note ;
+        :locationStatement  "p. 380" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "he is the third incarnation of dar zhing bla ma dge legs rgya mtsho also incarnation of sku dbon dge 'dun mkhas grub"@en .
+    
+    bdr:P8LS12313  a        :Person ;
+        skos:prefLabel      "dge 'dun yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC669D4B4300BA88F ;
+        :personEvent        bdr:EV60D2CAD278F443D5 , bdr:EV6125282ED03185E2 ;
+        :personName         bdr:NM19780D726CD8FDEE , bdr:NM2353EB64A096E79D , bdr:NM7AE0EA73E52894CC .
+}

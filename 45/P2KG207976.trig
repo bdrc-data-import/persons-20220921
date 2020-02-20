@@ -1,0 +1,55 @@
+@base          <bdg:P2KG207976> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG207976 {
+    bda:LG0EA11FF4FE8176F7
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-07-12T11:30:30.404Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG207976  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG207976 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "45/P2KG207976.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG207976 ;
+        adm:logEntry        bda:LG0EA11FF4FE8176F7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0705406DBA4C8892
+        a                   :PersonBirth ;
+        :onYear             "1965"^^xsd:gYear .
+    
+    bdr:NM30F89B283A821253
+        a                   :PersonOtherName ;
+        rdfs:label          "dawa tashi"@en .
+    
+    bdr:NM968D035B631579AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba bkra shis/"@bo-x-ewts .
+    
+    bdr:NT98B8C3EB3F742908
+        a                   :Note ;
+        :noteText           "Principal at Sambhota Tibetan Schools Society, Bylakuppe, Karnataka"@en .
+    
+    bdr:P2KG207976  a       :Person ;
+        skos:prefLabel      "zla ba bkra shis/"@bo-x-ewts ;
+        :hasBrother         bdr:P1KG11741 ;
+        :isRoot             true ;
+        :note               bdr:NT98B8C3EB3F742908 ;
+        :personEvent        bdr:EV0705406DBA4C8892 ;
+        :personName         bdr:NM30F89B283A821253 , bdr:NM968D035B631579AF .
+}

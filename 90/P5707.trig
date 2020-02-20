@@ -1,0 +1,58 @@
+@base          <bdg:P5707> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5707 {
+    bda:LG74BC081530C89F33
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-27T12:15:03.42Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of and teacher of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5707  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5707 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "90/P5707.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5707 ;
+        adm:logEntry        bda:LG74BC081530C89F33 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC94E04204EE28500
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM77DCEA48E80D47A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba blo gros/"@bo-x-ewts .
+    
+    bdr:NMB1860D6FEEBF3048
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen zla ba blo gros/"@bo-x-ewts .
+    
+    bdr:NT8EAFA98D51AE9F71
+        a                   :Note ;
+        :noteText           "shangs pa bka' brgyud master and abbot"@en .
+    
+    bdr:P5707  a            :Person ;
+        skos:prefLabel      "zla ba blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8EAFA98D51AE9F71 ;
+        :personEvent        bdr:EVC94E04204EE28500 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM77DCEA48E80D47A8 , bdr:NMB1860D6FEEBF3048 ;
+        :personStudentOf    bdr:P0RK695 ;
+        :personTeacherOf    bdr:P5708 .
+}

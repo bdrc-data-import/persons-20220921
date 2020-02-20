@@ -1,0 +1,59 @@
+@base          <bdg:P5913> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5913 {
+    bda:P5913  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5913 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a8/P5913.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5913 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4324701043ED8F91
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVA9A8025493C791CD
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EVC467B6E5DC93B2D5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1480 ;
+        :onYear             "1879"^^xsd:gYear .
+    
+    bdr:NM5D4359033898D03F
+        a                   :PersonPersonalName ;
+        rdfs:label          "thabs mkhas rgya mtsho, skal bzang /"@bo-x-ewts .
+    
+    bdr:NMD04BB30757D5679C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang thabs mkhas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT7A1E89F5FF28245A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5913  a            :Person ;
+        skos:prefLabel      "skal bzang thabs mkhas rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7A1E89F5FF28245A ;
+        :personEvent        bdr:EV4324701043ED8F91 , bdr:EVA9A8025493C791CD , bdr:EVC467B6E5DC93B2D5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D4359033898D03F , bdr:NMD04BB30757D5679C ;
+        :personStudentOf    bdr:P1470 ;
+        :personTeacherOf    bdr:P1640 .
+}

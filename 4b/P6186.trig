@@ -1,0 +1,72 @@
+@base          <bdg:P6186> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6186 {
+    bda:LG439BA55A47B3F292
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-08T14:50:43.987Z"^^xsd:dateTime ;
+        adm:logMessage      "edited students and teachers"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGF3F794FA9D73EACB
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T07:54:49.031Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6186  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6186 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4b/P6186.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6186 ;
+        adm:logEntry        bda:LG439BA55A47B3F292 , bda:LGF3F794FA9D73EACB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV363DA365F1DE5213
+        a                   :PersonBirth ;
+        :onYear             "1418"^^xsd:gYear .
+    
+    bdr:EV48685AB9E456325A
+        a                   :PersonDeath ;
+        :onYear             "1506"^^xsd:gYear .
+    
+    bdr:NM0DED65FF8C0CA851
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF7CA460CAD0A6375
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mon rdzong ras chen zla ba rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTC613240413BC12DF
+        a                   :Note ;
+        :noteText           "The 'Ba' ra dkar brgyud gser 'phreng contains a rnam thar of Mon-rdzong Ras-chen by his consort Kun-tu-bzang-mo."@en .
+    
+    bdr:NTE58AA05E2FB96EF3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Stod 'Brug transmissions\n\n-- 'Ba'-ra transmissions"@en .
+    
+    bdr:P6186  a            :Person ;
+        skos:prefLabel      "zla ba rgyal mtshan/"@bo-x-ewts ;
+        :hasWife            bdr:P6185 ;
+        :isRoot             true ;
+        :note               bdr:NTC613240413BC12DF , bdr:NTE58AA05E2FB96EF3 ;
+        :personEvent        bdr:EV363DA365F1DE5213 , bdr:EV48685AB9E456325A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0DED65FF8C0CA851 , bdr:NMF7CA460CAD0A6375 ;
+        :personStudentOf    bdr:P6184 ;
+        :personTeacherOf    bdr:P1013 , bdr:P3102 , bdr:P475 , bdr:P6185 , bdr:P6890 .
+}

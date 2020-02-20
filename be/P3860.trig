@@ -1,0 +1,59 @@
+@base          <bdg:P3860> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3860 {
+    bda:P3860  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3860 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "be/P3860.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3860 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV524C9107B6995420
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G434 .
+    
+    bdr:EV95F01DEF978271EB
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1500228BAA82D7FB
+        a                   :PersonTitle ;
+        rdfs:label          "thel mkhan chen nam mkha' dbang phyug"@bo-x-ewts .
+    
+    bdr:NM9E31B8227E83A90F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' dbang phyug"@bo-x-ewts .
+    
+    bdr:NMD42EF0C71DCB757C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman rgyal ba nam mkha' dbang phyug"@bo-x-ewts .
+    
+    bdr:NTA8BE18708B83E486
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud"@en .
+    
+    bdr:P3860  a            :Person ;
+        skos:prefLabel      "nam mkha' dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8BE18708B83E486 ;
+        :personEvent        bdr:EV524C9107B6995420 , bdr:EV95F01DEF978271EB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1500228BAA82D7FB , bdr:NM9E31B8227E83A90F , bdr:NMD42EF0C71DCB757C ;
+        :personStudentOf    bdr:P3859 ;
+        :personTeacherOf    bdr:P2642 .
+}

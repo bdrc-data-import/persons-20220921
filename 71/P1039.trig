@@ -1,0 +1,69 @@
+@base          <bdg:P1039> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1039 {
+    bda:LGDD926F565E37D0F6
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-02-12T18:39:57.64Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationship established"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1039  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1039 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "71/P1039.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1039 ;
+        adm:logEntry        bda:LGDD926F565E37D0F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7B95E19C435B98CA
+        a                   :PersonBirth ;
+        :onYear             "1412"^^xsd:gYear .
+    
+    bdr:EV93A2CFF5EC698AEE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G245 .
+    
+    bdr:EV9A91D62BDF68820D
+        a                   :PersonDeath ;
+        :onYear             "1485"^^xsd:gYear .
+    
+    bdr:NM0BDD44EB50460380
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byams chen rab 'byams pa sangs rgyas 'phel/"@bo-x-ewts .
+    
+    bdr:NM48C5C3C0AB5711E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas 'phel/"@bo-x-ewts .
+    
+    bdr:NMD53599C53A131F88
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas dpal, byams chen rab 'byams pa/"@bo-x-ewts .
+    
+    bdr:NT546B82CCC6944571
+        a                   :Note ;
+        :noteText           "follower of the Sakya tradition"@en .
+    
+    bdr:P1039  a            :Person ;
+        skos:prefLabel      "sangs rgyas 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT546B82CCC6944571 ;
+        :personEvent        bdr:EV7B95E19C435B98CA , bdr:EV93A2CFF5EC698AEE , bdr:EV9A91D62BDF68820D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0BDD44EB50460380 , bdr:NM48C5C3C0AB5711E3 , bdr:NMD53599C53A131F88 ;
+        :personStudentOf    bdr:P0RK1707 , bdr:P1034 ;
+        :personTeacherOf    bdr:P1027 , bdr:P1038 , bdr:P1042 , bdr:P489 , bdr:P5096 .
+}

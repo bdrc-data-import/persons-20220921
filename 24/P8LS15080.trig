@@ -1,0 +1,51 @@
+@base          <bdg:P8LS15080> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15080 {
+    bda:LGD05909EC98278701
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-27T15:19:45.483Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15080  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15080 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "24/P8LS15080.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15080 ;
+        adm:logEntry        bda:LGD05909EC98278701 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM856BB60517117ABC
+        a                   :PersonOtherName ;
+        rdfs:label          "sar+ba rak+shi ta"@sa-x-ewts .
+    
+    bdr:NMF888F377C3539302
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thams cad srung /"@bo-x-ewts .
+    
+    bdr:NTC63922457C4930D3
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 30a1" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "acharya from yu gur"@en .
+    
+    bdr:P8LS15080  a        :Person ;
+        skos:prefLabel      "thams cad srung /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC63922457C4930D3 ;
+        :personName         bdr:NM856BB60517117ABC , bdr:NMF888F377C3539302 .
+}

@@ -1,0 +1,96 @@
+@base          <bdg:P3869> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3869 {
+    bda:LG039C4802D6198735
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T08:58:58.567Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC03D8253ED453CFF
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T14:05:23.539Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC7DFD169C2A5FB17
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T17:01:38.349Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE8F0D05B1391FD2B
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-08-01T16:06:20.605Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3869  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3869 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a1/P3869.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3869 ;
+        adm:logEntry        bda:LG039C4802D6198735 , bda:LGC03D8253ED453CFF , bda:LGC7DFD169C2A5FB17 , bda:LGE8F0D05B1391FD2B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV11CF8194EEC0B8D4
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1514"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV45A3CDDF3F683D8F
+        a                   :PersonDeath ;
+        :onYear             "1517"^^xsd:gYear .
+    
+    bdr:EV806588F7805777AC
+        a                   :PersonBirth ;
+        :onYear             "1445"^^xsd:gYear .
+    
+    bdr:EV8F6C5ACAE7B3B347
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1507"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2D52D271CEDFDEA3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM5890A4F445594C5A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 08"@bo-x-ewts .
+    
+    bdr:NMC389270F5947452E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen dkon mchog tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT3C51F7692297FC1D
+        a                   :Note ;
+        :locationStatement  "p. 383-384" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P3869  a            :Person ;
+        skos:prefLabel      "dkon mchog tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C51F7692297FC1D ;
+        :personEvent        bdr:EV11CF8194EEC0B8D4 , bdr:EV45A3CDDF3F683D8F , bdr:EV806588F7805777AC , bdr:EV8F6C5ACAE7B3B347 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D52D271CEDFDEA3 , bdr:NM5890A4F445594C5A , bdr:NMC389270F5947452E ;
+        :personStudentOf    bdr:P1873 , bdr:P3864 ;
+        :personTeacherOf    bdr:P3507 , bdr:P3870 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Konchok-Tsultrim/6251"^^xsd:anyURI .
+}

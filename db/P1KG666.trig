@@ -1,0 +1,67 @@
+@base          <bdg:P1KG666> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG666 {
+    bda:LG4F9009602D67C554
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-02T12:23:21.252Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG89790B696E9A2C11
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-02T12:28:37.912Z"^^xsd:dateTime ;
+        adm:logMessage      "refreshed"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG666  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG666 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "db/P1KG666.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG666 ;
+        adm:logEntry        bda:LG4F9009602D67C554 , bda:LG89790B696E9A2C11 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVED85347EA6134C42
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3827E62D4531702E
+        a                   :PersonPersonalName ;
+        rdfs:label          "gling rgya bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3B67CA1B5C5DC652
+        a                   :PersonPersonalName ;
+        rdfs:label          "bstan 'dzin rgya mtsho, gling rgya/"@bo-x-ewts .
+    
+    bdr:NMB7AEFB9A42B88B79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTF7D4717C787B069F
+        a                   :Note ;
+        :noteSource         bdr:MW1KG665 ;
+        :noteText           "author of snyan tshig sems kyi me tog"@en .
+    
+    bdr:P1KG666  a          :Person ;
+        skos:prefLabel      "bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF7D4717C787B069F ;
+        :personEvent        bdr:EVED85347EA6134C42 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3827E62D4531702E , bdr:NM3B67CA1B5C5DC652 , bdr:NMB7AEFB9A42B88B79 .
+}

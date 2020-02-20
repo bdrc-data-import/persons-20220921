@@ -1,0 +1,62 @@
+@base          <bdg:P3645> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3645 {
+    bda:P3645  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3645 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ae/P3645.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3645 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BA8968184A41A00
+        a                   :PersonBirth ;
+        :onYear             "1117"^^xsd:gYear .
+    
+    bdr:EVE6DA3032EA9F3C48
+        a                   :PersonDeath ;
+        :onYear             "1192"^^xsd:gYear .
+    
+    bdr:NM0047486F0E095961
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dar ma brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NM9653D6240EC27198
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'chus pa dar ma brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NT01FCA31E06CE57DE
+        a                   :Note ;
+        :locationStatement  "p. 603" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTBDC5CD6B77526132
+        a                   :Note ;
+        :noteText           "master of the zhi byed transmission"@en .
+    
+    bdr:P3645  a            :Person ;
+        skos:prefLabel      "dar ma brtson 'grus/"@bo-x-ewts ;
+        :hasFather          bdr:P3646 , bdr:P3647 ;
+        :hasMother          bdr:P3647 ;
+        :hasSon             bdr:P3762 ;
+        :isRoot             true ;
+        :note               bdr:NT01FCA31E06CE57DE , bdr:NTBDC5CD6B77526132 ;
+        :personEvent        bdr:EV0BA8968184A41A00 , bdr:EVE6DA3032EA9F3C48 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0047486F0E095961 , bdr:NM9653D6240EC27198 ;
+        :personStudentOf    bdr:P3648 , bdr:P3707 .
+}

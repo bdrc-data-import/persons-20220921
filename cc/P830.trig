@@ -1,0 +1,72 @@
+@base          <bdg:P830> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P830 {
+    bda:LGF9DE8FE3114E904A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-29T11:10:41.081Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P830  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P830 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "cc/P830.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P830 ;
+        adm:logEntry        bda:LGF9DE8FE3114E904A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV734E5F6786336E63
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2813 .
+    
+    bdr:EV9E15ADEAABF63EBF
+        a                   :PersonDeath ;
+        :onYear             "1792"^^xsd:gYear .
+    
+    bdr:EVB9DE89EAC0264C68
+        a                   :PersonBirth ;
+        :onYear             "1735"^^xsd:gYear .
+    
+    bdr:NM1C55337D982EEB6B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnam sras gling zhwa dmar 01 gar dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3477747BF60A4A4C
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog gar dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM90C9786BEC119C68
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gar dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM953E4CBA679799F0
+        a                   :PersonTitle ;
+        rdfs:label          "zhwa dmar zur pa gar dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTE1A831E9CF2D004B
+        a                   :Note ;
+        :noteText           "important teacher of the karma kaM tshang tradition; following the death of the 8th zhwa dmar dpal chen chos kyi don grub, there were two incarnations, one born in bhutan and the other connected with ancient house of rnam sras gling\nthe young bhutanese zhwa dmar was installed at yangs pa can and gar dbang rgya mtsho at the family palace at rnam sras gling\nthe incarnation lineage persisted down to recent times"@en .
+    
+    bdr:P830  a             :Person ;
+        skos:prefLabel      "gar dbang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE1A831E9CF2D004B ;
+        :personEvent        bdr:EV734E5F6786336E63 , bdr:EV9E15ADEAABF63EBF , bdr:EVB9DE89EAC0264C68 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C55337D982EEB6B , bdr:NM3477747BF60A4A4C , bdr:NM90C9786BEC119C68 , bdr:NM953E4CBA679799F0 ;
+        :personTeacherOf    bdr:P834 .
+}

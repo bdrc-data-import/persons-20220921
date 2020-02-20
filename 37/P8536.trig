@@ -1,0 +1,72 @@
+@base          <bdg:P8536> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8536 {
+    bda:LG7BFFBC4CDF1FCC15
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T09:54:51.395Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8536  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8536 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "37/P8536.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8536 ;
+        adm:logEntry        bda:LG7BFFBC4CDF1FCC15 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B0D4C9030690440
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB05FBD187C1FEF22
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVBA0E436232A7C18D
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM01ACB633A15D2BF8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan rin po che bsod nams don grub/"@bo-x-ewts .
+    
+    bdr:NM10B8B0F0BAEFDF21
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams don grub/"@bo-x-ewts .
+    
+    bdr:NMBEF096D2E0810D4C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 06"@bo-x-ewts .
+    
+    bdr:NTF54566654F6C744B
+        a                   :Note ;
+        :locationStatement  "pp. 333-334" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "one of the teachers and throne holders of the rnying ma dpal yul monastery"@en .
+    
+    bdr:P8536  a            :Person ;
+        skos:prefLabel      "bsod nams don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF54566654F6C744B ;
+        :personEvent        bdr:EV1B0D4C9030690440 , bdr:EVB05FBD187C1FEF22 , bdr:EVBA0E436232A7C18D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01ACB633A15D2BF8 , bdr:NM10B8B0F0BAEFDF21 , bdr:NMBEF096D2E0810D4C ;
+        :personStudentOf    bdr:P6962 , bdr:P724 .
+}

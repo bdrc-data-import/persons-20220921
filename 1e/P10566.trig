@@ -1,0 +1,64 @@
+@base          <bdg:P10566> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10566 {
+    bda:LG730AEDF06589AD7E
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-07-07T16:17:46.371Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by SN, LS, Kg and CZ"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGAAAD02F251ADFB8D
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-30T14:34:33.429Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P10566  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10566 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1e/P10566.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10566 ;
+        adm:logEntry        bda:LG730AEDF06589AD7E , bda:LGAAAD02F251ADFB8D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV99E11919F22BDEDE
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NME906EBC955BC5489
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgyal po/"@bo-x-ewts .
+    
+    bdr:NMF60727C7987CB754
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo rje 'dzin pa chen po dkon mchog rgyal po/"@bo-x-ewts .
+    
+    bdr:NTAC931A42DF28FD1F
+        a                   :Note ;
+        :locationStatement  "pp. 568-712" ;
+        :noteSource         bdr:MW27309 ;
+        :noteText           "noted as a guru of the sa skya master ngag dbang kun dga' bsod nams rin chen"@en .
+    
+    bdr:P10566  a           :Person ;
+        skos:prefLabel      "dkon mchog rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAC931A42DF28FD1F ;
+        :personEvent        bdr:EV99E11919F22BDEDE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME906EBC955BC5489 , bdr:NMF60727C7987CB754 ;
+        :personTeacherOf    bdr:P806 .
+}

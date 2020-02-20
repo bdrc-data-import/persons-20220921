@@ -1,0 +1,91 @@
+@base          <bdg:P6783> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6783 {
+    bda:LG15B51ED218ECF14B
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-24T11:03:20.013Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG24B0DF2065DD7F50
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-19T10:25:38.787Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGBDD2D18BFFBA201A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-24T11:02:13.384Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary, personel name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6783  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6783 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "47/P6783.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6783 ;
+        adm:logEntry        bda:LG15B51ED218ECF14B , bda:LG24B0DF2065DD7F50 , bda:LGBDD2D18BFFBA201A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91DFF301A1572589
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1518 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:EVA339178C8595E300
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:NM1547B928C225A930
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zam tsha 07 rnam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM158FDDB7AE360ADE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zam tsha 07"@bo-x-ewts .
+    
+    bdr:NMCD81F609417C7721
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zamtsa 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD87F758D5EF5D869
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME26FE7125F7B89C0
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang rnam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT76402142D00469A3
+        a                   :Note ;
+        :locationStatement  "p. 312-319" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:NTB2944B5F0A1867B7
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "important dge lugs incarnation of south gansu\nrecognition by gung thang, 'jam dbyangs bzhad pa, sde ba, lung rigs sengge\nprovincial recognition\ninstalled at bla brang bkra shis 'khyil in 1992"@en .
+    
+    bdr:P6783  a            :Person ;
+        skos:prefLabel      "rnam mkha' rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P10649 ;
+        :isRoot             true ;
+        :note               bdr:NT76402142D00469A3 , bdr:NTB2944B5F0A1867B7 ;
+        :personEvent        bdr:EV91DFF301A1572589 , bdr:EVA339178C8595E300 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1547B928C225A930 , bdr:NM158FDDB7AE360ADE , bdr:NMCD81F609417C7721 , bdr:NMD87F758D5EF5D869 , bdr:NME26FE7125F7B89C0 .
+}

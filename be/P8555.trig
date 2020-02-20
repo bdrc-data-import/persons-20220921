@@ -1,0 +1,74 @@
+@base          <bdg:P8555> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8555 {
+    bda:LGCB9E30C513602F26
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-01T14:54:50.1Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8555  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8555 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "be/P8555.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8555 ;
+        adm:logEntry        bda:LGCB9E30C513602F26 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E59ACD75CCE2206
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVDFB4DD4CC9CD7786
+        a                   :PersonBirth ;
+        :onYear             "1936"^^xsd:gYear .
+    
+    bdr:NM67848FCDD2F69EC2
+        a                   :PersonTitle ;
+        rdfs:label          "gya kha thub bstan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM760C03CB4B18A364
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM87E5F9F42F7E5E33
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gyang khang 04 thub bstan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM9191B824A9C982DE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyangkhang 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB3B4656E4816EF4E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gyang khang 04"@bo-x-ewts .
+    
+    bdr:NTB41FF105F1A3D2C9
+        a                   :Note ;
+        :locationStatement  "pp. 214-288" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8555  a            :Person ;
+        skos:prefLabel      "thub bstan dpal bzang /"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8557 ;
+        :isRoot             true ;
+        :note               bdr:NTB41FF105F1A3D2C9 ;
+        :personEvent        bdr:EV3E59ACD75CCE2206 , bdr:EVDFB4DD4CC9CD7786 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM67848FCDD2F69EC2 , bdr:NM760C03CB4B18A364 , bdr:NM87E5F9F42F7E5E33 , bdr:NM9191B824A9C982DE , bdr:NMB3B4656E4816EF4E .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P8883> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8883 {
+    bda:P8883  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8883 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "66/P8883.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8883 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV90785DCFB40A1A29
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM8372B2BEDD400D67
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khro bcu pa/"@bo-x-ewts .
+    
+    bdr:NME1B66B2BC24E2DFB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma khro bcu pa/"@bo-x-ewts .
+    
+    bdr:NTA2E4DB58B407FFF1
+        a                   :Note ;
+        :locationStatement  "p. 116" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "noted as a disciple of rgyal ba bzang po"@en .
+    
+    bdr:P8883  a            :Person ;
+        skos:prefLabel      "khro bcu pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA2E4DB58B407FFF1 ;
+        :personEvent        bdr:EV90785DCFB40A1A29 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8372B2BEDD400D67 , bdr:NME1B66B2BC24E2DFB ;
+        :personStudentOf    bdr:P8877 .
+}

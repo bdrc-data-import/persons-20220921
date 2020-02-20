@@ -1,0 +1,52 @@
+@base          <bdg:P613> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P613 {
+    bda:P613  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P613 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a1/P613.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P613 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV11B91154D1B2EDA7
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM78673628755578B6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bum thang dge bshes smin drug"@bo-x-ewts .
+    
+    bdr:NMBED6D49C1334A99D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smin drug"@bo-x-ewts .
+    
+    bdr:NTA97060EEC6BF3B86
+        a                   :Note ;
+        :locationStatement  "f. 186r-186v" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "founder of the chos rtse bshad sgra under the patronage of king o rgyan dbang phyug"@en .
+    
+    bdr:P613  a             :Person ;
+        skos:prefLabel      "smin drug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA97060EEC6BF3B86 ;
+        :personEvent        bdr:EV11B91154D1B2EDA7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM78673628755578B6 , bdr:NMBED6D49C1334A99D ;
+        :personTeacherOf    bdr:P612 , bdr:P614 , bdr:P615 .
+}

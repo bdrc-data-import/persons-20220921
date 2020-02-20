@@ -1,0 +1,57 @@
+@base          <bdg:P6583> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6583 {
+    bda:LGC1EEB1E9D036A5E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-25T09:54:55.018Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6583  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6583 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "6d/P6583.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6583 ;
+        adm:logEntry        bda:LGC1EEB1E9D036A5E0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15317DF60632DEA4
+        a                   :PersonBirth ;
+        :onYear             "1961"^^xsd:gYear .
+    
+    bdr:NM371CF1ADB80C8FA0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang rig kho/"@bo-x-ewts .
+    
+    bdr:NMDD467A7CA1BD0431
+        a                   :PersonPersonalName ;
+        rdfs:label          "gling ba byang rig kho/"@bo-x-ewts .
+    
+    bdr:NT0C3E706C1481E265
+        a                   :Note ;
+        :locationStatement  "pp. 97-102" ;
+        :noteSource         bdr:MW1KG6091 ;
+        :noteText           "short biography in W1KG6091"@en .
+    
+    bdr:P6583  a            :Person ;
+        skos:prefLabel      "byang rig kho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0C3E706C1481E265 ;
+        :personEvent        bdr:EV15317DF60632DEA4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM371CF1ADB80C8FA0 , bdr:NMDD467A7CA1BD0431 .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P3244> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3244 {
+    bda:LG8B606B71B605B782
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-19T11:17:41.988Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and date"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P3244  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3244 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "17/P3244.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3244 ;
+        adm:logEntry        bda:LG8B606B71B605B782 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8915D529572EED08
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM1FDFCA49BC00276C
+        a                   :PersonPersonalName ;
+        rdfs:label          "so ma nA tha"@sa-x-ewts .
+    
+    bdr:NM3A58223F96B78712
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha che paN chen zla ba'i mgon po/"@bo-x-ewts .
+    
+    bdr:NM4AEB4934C6681DFC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba'i mgon po/"@bo-x-ewts .
+    
+    bdr:NT0E36D66DA47AA1A9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3244  a            :Person ;
+        skos:prefLabel      "zla ba'i mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0E36D66DA47AA1A9 ;
+        :personEvent        bdr:EV8915D529572EED08 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1FDFCA49BC00276C , bdr:NM3A58223F96B78712 , bdr:NM4AEB4934C6681DFC ;
+        :personStudentOf    bdr:P3239 ;
+        :personTeacherOf    bdr:P2553 , bdr:P3246 .
+}

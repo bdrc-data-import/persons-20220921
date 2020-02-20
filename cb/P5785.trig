@@ -1,0 +1,81 @@
+@base          <bdg:P5785> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5785 {
+    bda:LG0F54882D5AB695F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-01T13:24:20.726Z"^^xsd:dateTime ;
+        adm:logMessage      "revised birthplace to g1366"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG1F86070B275D4024
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-29T10:06:02.752Z"^^xsd:dateTime ;
+        adm:logMessage      "date of death added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P5785  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5785 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cb/P5785.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5785 ;
+        adm:logEntry        bda:LG0F54882D5AB695F2 , bda:LG1F86070B275D4024 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7626DC70F56E1FF5
+        a                   :PersonDeath ;
+        :onYear             "2008"^^xsd:gYear .
+    
+    bdr:EV8D6ECAEDA63E54B6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G213 .
+    
+    bdr:EVB5CD9BF0BA407F7F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1366 ;
+        :notAfter           "1923"^^xsd:gYear ;
+        :notBefore          "1921"^^xsd:gYear .
+    
+    bdr:NM147BEEBADCB36B50
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdzong sar mkhan po kun dga' dbang phyug"@bo-x-ewts .
+    
+    bdr:NM361CB2B7268F58D4
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang kun dga' dbang phyug, rdzong sar mkhan po/"@bo-x-ewts .
+    
+    bdr:NM7DB1A2F474782602
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dbang phyug"@bo-x-ewts .
+    
+    bdr:NT19DDCFB7A41F77CF
+        a                   :Note ;
+        :noteText           "important sa skya master and teacher at the sakya institutes"@en .
+    
+    bdr:NTB0B9B288E6971BFD
+        a                   :Note ;
+        :noteText           "notes in colophon to his tshad ma rnam nges commentary that he wrote this in 1993, his 73rd year, which would mean that he must have been born in 1921;  \nthe english introd. notes that he was born in 1923;  \nobituary in the khyentse foundation bulletin gives dates as 1921-2008"@en .
+    
+    bdr:P5785  a            :Person ;
+        skos:prefLabel      "kun dga' dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT19DDCFB7A41F77CF , bdr:NTB0B9B288E6971BFD ;
+        :personEvent        bdr:EV7626DC70F56E1FF5 , bdr:EV8D6ECAEDA63E54B6 , bdr:EVB5CD9BF0BA407F7F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM147BEEBADCB36B50 , bdr:NM361CB2B7268F58D4 , bdr:NM7DB1A2F474782602 ;
+        :personStudentOf    bdr:P733 ;
+        :personTeacherOf    bdr:P8LS66406 .
+}

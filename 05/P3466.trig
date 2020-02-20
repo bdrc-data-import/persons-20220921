@@ -1,0 +1,53 @@
+@base          <bdg:P3466> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3466 {
+    bda:P3466  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3466 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "05/P3466.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3466 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B5B68208A2E06F9
+        a                   :PersonBirth ;
+        :onYear             "1023"^^xsd:gYear .
+    
+    bdr:EVD032E98BD884338C
+        a                   :PersonDeath ;
+        :onYear             "1115"^^xsd:gYear .
+    
+    bdr:NMA38D15249009006B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khams pa lung pa shAkya yon tan/"@bo-x-ewts .
+    
+    bdr:NMC3AA5717AA00230E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya yon tan/"@bo-x-ewts .
+    
+    bdr:NT750E6E6E7CF3818B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P3466  a            :Person ;
+        skos:prefLabel      "shAkya yon tan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT750E6E6E7CF3818B ;
+        :personEvent        bdr:EV0B5B68208A2E06F9 , bdr:EVD032E98BD884338C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA38D15249009006B , bdr:NMC3AA5717AA00230E ;
+        :personStudentOf    bdr:P2557 .
+}

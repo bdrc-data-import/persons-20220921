@@ -1,0 +1,82 @@
+@base          <bdg:P5651> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5651 {
+    bda:LG684659FE7CAD9D3A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-25T14:43:18.212Z"^^xsd:dateTime ;
+        adm:logMessage      "added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG737F766E61943185
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-04T11:08:26.016Z"^^xsd:dateTime ;
+        adm:logMessage      "add title"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG8034375C7DAEB0BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T16:52:37.439Z"^^xsd:dateTime ;
+        adm:logMessage      "New p"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG8D5B84AFE07850C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-02-27T15:56:58.032Z"^^xsd:dateTime ;
+        adm:logMessage      "added student \"pa tshab sgom pa\""@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5651  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5651 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c4/P5651.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5651 ;
+        adm:logEntry        bda:LG684659FE7CAD9D3A , bda:LG737F766E61943185 , bda:LG8034375C7DAEB0BA , bda:LG8D5B84AFE07850C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01CE57EB9BD815AA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1116 ;
+        :onYear             "1055"^^xsd:gYear .
+    
+    bdr:NM23467F2E0184C40E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma grags/"@bo-x-ewts .
+    
+    bdr:NMB8F08443FE05C4DF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pa tshab lo tsA ba nyi ma grags pa/"@bo-x-ewts .
+    
+    bdr:NT5E82554805F69550
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source of birth year 1055"@en .
+    
+    bdr:NT9B1262ECFC4CBA94
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Later Translators"@en .
+    
+    bdr:P5651  a            :Person ;
+        skos:prefLabel      "nyi ma grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E82554805F69550 , bdr:NT9B1262ECFC4CBA94 ;
+        :personEvent        bdr:EV01CE57EB9BD815AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM23467F2E0184C40E , bdr:NMB8F08443FE05C4DF ;
+        :personStudentOf    bdr:P4CZ15246 , bdr:P4CZ16737 , bdr:P4CZ16738 , bdr:P4CZ16745 , bdr:P5654 ;
+        :personTeacherOf    bdr:P4455 , bdr:P4669 , bdr:P5655 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P01CT138> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P01CT138 {
+    bda:LG41879353849C5010
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-11T12:43:21.783Z"^^xsd:dateTime ;
+        adm:logMessage      "test person record"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGC96E5213B8B941F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-03T12:54:12.8Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P01CT138  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P01CT138 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1f/P01CT138.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P01CT138 ;
+        adm:logEntry        bda:LG41879353849C5010 , bda:LGC96E5213B8B941F2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:NMC9E33FD808B46489
+        a                   :PersonPrimaryName ;
+        rdfs:label          "not a real person"@en .
+    
+    bdr:NT9E375830CD055816
+        a                   :Note ;
+        :locationStatement  "pg 6" ;
+        :noteText           "frog"@en .
+    
+    bdr:P01CT138  a         :Person ;
+        skos:prefLabel      "not a real person"@en ;
+        :isRoot             true ;
+        :note               bdr:NT9E375830CD055816 ;
+        :personName         bdr:NMC9E33FD808B46489 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P9481> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9481 {
+    bda:P9481  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9481 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "fd/P9481.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9481 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1561020F3C7DB1E9
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM8CDAA9D016C9EA7D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'od gsal rang grol/"@bo-x-ewts .
+    
+    bdr:NMF5BCBE7B01B189A8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya ston 'od gsal rang grol/"@bo-x-ewts .
+    
+    bdr:NT7EB33D923336AE8C
+        a                   :Note ;
+        :locationStatement  "f. 99r" ;
+        :noteSource         bdr:MW9105 ;
+        :noteText           "noted as a teacher of gter bdag gling pa: smin grol bdud rtsi thob pa'i bshes gnyen bcu gcig"@en .
+    
+    bdr:P9481  a            :Person ;
+        skos:prefLabel      "'od gsal rang grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7EB33D923336AE8C ;
+        :personEvent        bdr:EV1561020F3C7DB1E9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8CDAA9D016C9EA7D , bdr:NMF5BCBE7B01B189A8 ;
+        :personTeacherOf    bdr:P7 .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P2335> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2335 {
+    bda:LG1CA1887BC0823080
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T19:02:53.019Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGBF9F8BC24114D279
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-22T16:16:08.604Z"^^xsd:dateTime ;
+        adm:logMessage      "event info"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGFA32D0ECE023B5D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-30T16:49:40.7Z"^^xsd:dateTime ;
+        adm:logMessage      "seat, abbot dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2335  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2335 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "87/P2335.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2335 ;
+        adm:logEntry        bda:LG1CA1887BC0823080 , bda:LGBF9F8BC24114D279 , bda:LGFA32D0ECE023B5D0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B6563629E8A342B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EV662233CFDD84AD71
+        a                   :PersonBirth ;
+        :onYear             "1395"^^xsd:gYear .
+    
+    bdr:EV7BB2DC4D3F4C4C98
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G17 ;
+        :notAfter           "1459"^^xsd:gYear ;
+        :notBefore          "1440"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM07D4ACDCF35FC870
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog pa ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM82D4C19E8C8F4676
+        a                   :PersonTitle ;
+        rdfs:label          "slob dpon ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD410128829A3BEBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT826B9C10D7BDC9CC
+        a                   :Note ;
+        :locationStatement  "p. 51" ;
+        :noteSource         bdr:MW20396 ;
+        :noteText           "b, rab byung 7 shing phag"@en .
+    
+    bdr:P2335  a            :Person ;
+        skos:prefLabel      "ye shes rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT826B9C10D7BDC9CC ;
+        :personEvent        bdr:EV4B6563629E8A342B , bdr:EV662233CFDD84AD71 , bdr:EV7BB2DC4D3F4C4C98 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07D4ACDCF35FC870 , bdr:NM82D4C19E8C8F4676 , bdr:NMD410128829A3BEBD ;
+        :personStudentOf    bdr:P3AG17 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Yeshe-Gyeltsen/4028"^^xsd:anyURI .
+}

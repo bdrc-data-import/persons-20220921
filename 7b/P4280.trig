@@ -1,0 +1,65 @@
+@base          <bdg:P4280> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4280 {
+    bda:LG5929842FDD6B65D9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T16:37:28.322Z"^^xsd:dateTime ;
+        adm:logMessage      "adde name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4280  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4280 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7b/P4280.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4280 ;
+        adm:logEntry        bda:LG5929842FDD6B65D9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCCD9D1E7A7655CDD
+        a                   :PersonBirth ;
+        :onYear             "1362"^^xsd:gYear .
+    
+    bdr:EVCD5926A0547B4928
+        a                   :PersonDeath ;
+        :onYear             "1453"^^xsd:gYear .
+    
+    bdr:NMD49144E5E3E47E80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:NMDCDB6B4E61A8BFE4
+        a                   :PersonPersonalName ;
+        rdfs:label          "ri mi 'bab pa bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:NT2A99B8425188F608
+        a                   :Note ;
+        :locationStatement  "p. 1603" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT9AEA5850A5DB485D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:P4280  a            :Person ;
+        skos:prefLabel      "bsod nams rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2A99B8425188F608 , bdr:NT9AEA5850A5DB485D ;
+        :personEvent        bdr:EVCCD9D1E7A7655CDD , bdr:EVCD5926A0547B4928 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD49144E5E3E47E80 , bdr:NMDCDB6B4E61A8BFE4 ;
+        :personStudentOf    bdr:P1413 .
+}

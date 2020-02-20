@@ -1,0 +1,74 @@
+@base          <bdg:P10724> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10724 {
+    bda:LGAD505B84E9A17B35
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-28T17:01:14.962Z"^^xsd:dateTime ;
+        adm:logMessage      "added khri 16"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGF26A133C2EA71176
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:41:25.687Z"^^xsd:dateTime ;
+        adm:logMessage      "shad 'then pa"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P10724  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10724 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7d/P10724.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10724 ;
+        adm:logEntry        bda:LGAD505B84E9A17B35 , bda:LGF26A133C2EA71176 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV29C3A4CFF7073468
+        a                   :PersonBirth ;
+        :onYear             "1726"^^xsd:gYear .
+    
+    bdr:EV7128A939972BBC11
+        a                   :PersonDeath ;
+        :onYear             "1792"^^xsd:gYear .
+    
+    bdr:EV8559309C23BABEC1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4245 .
+    
+    bdr:NM04894C5DDB633AA7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bkras lhun rgyud pa grwa tshang khri 16 yon tan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM3357C48403FD306A
+        a                   :PersonPersonalName ;
+        rdfs:label          "yon tan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM3460492424177D82
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yongs 'dzin yon tan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTC26D34534C51D9E9
+        a                   :Note ;
+        :noteText           "dge lugs master; preceptor of the 4th paN chen bla ma"@en .
+    
+    bdr:P10724  a           :Person ;
+        skos:prefLabel      "yon tan rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC26D34534C51D9E9 ;
+        :personEvent        bdr:EV29C3A4CFF7073468 , bdr:EV7128A939972BBC11 , bdr:EV8559309C23BABEC1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM04894C5DDB633AA7 , bdr:NM3357C48403FD306A , bdr:NM3460492424177D82 ;
+        :personTeacherOf    bdr:P285 .
+}

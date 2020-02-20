@@ -1,0 +1,53 @@
+@base          <bdg:P5613> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5613 {
+    bda:LGE125AC2076491107
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-31T15:12:34.708Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typo"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5613  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5613 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "78/P5613.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5613 ;
+        adm:logEntry        bda:LGE125AC2076491107 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7286DE7054CAA124
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2C78EF34092274B3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo la dga'"@bo-x-ewts .
+    
+    bdr:NMA293A65507B84B10
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo dga'"@bo-x-ewts .
+    
+    bdr:P5613  a            :Person ;
+        skos:prefLabel      "blo dga'"@bo-x-ewts ;
+        :hasHusband         bdr:P5612 ;
+        :hasSon             bdr:P5611 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV7286DE7054CAA124 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM2C78EF34092274B3 , bdr:NMA293A65507B84B10 .
+}

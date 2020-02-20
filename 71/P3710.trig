@@ -1,0 +1,91 @@
+@base          <bdg:P3710> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3710 {
+    bda:LG22998E2C14CDC9E8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T14:24:44.607Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3710  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3710 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "71/P3710.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3710 ;
+        adm:logEntry        bda:LG22998E2C14CDC9E8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV858BB97678C2C4B2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1908"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVBCF8FA3BCE9AC203
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVCEA22A64D8DF60FF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1238 ;
+        :onYear             "1858"^^xsd:gYear .
+    
+    bdr:NM56A9149ECDDCE76A
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 94 dge 'dun bstan pa yar 'phel/"@bo-x-ewts .
+    
+    bdr:NM694D05B2B9AB28B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya tshang dge 'dun bstan pa yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMAA87B8CEB3994A7C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bstan pa yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMCD1FB7BE2CE409F9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 94"@bo-x-ewts .
+    
+    bdr:NT749B0C2C69D30973
+        a                   :Note ;
+        :locationStatement  "p. 1099" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT7E876D854E088EB0
+        a                   :Note ;
+        :locationStatement  "p. 202-205" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT97F9C81529A397EB
+        a                   :Note ;
+        :noteText           "Recognized as the reembodiment of Bya-tshang Rgyal-mtshan-bzang-po\nEntered Bya-khyung Dgon\nTraveled to Mongolia for preaching.\n1908. Ascends khri of Bya-khyung\n1909. Meets 13th Dalai Lama at Sku-'bum and invites to Bya-khyung."@en .
+    
+    bdr:NTB1A4FB93F6102B51
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3710  a            :Person ;
+        skos:prefLabel      "dge 'dun bstan pa yar 'phel/"@bo-x-ewts ;
+        :hasFather          bdr:P3711 ;
+        :hasMother          bdr:P3712 ;
+        :isRoot             true ;
+        :note               bdr:NT749B0C2C69D30973 , bdr:NT7E876D854E088EB0 , bdr:NT97F9C81529A397EB , bdr:NTB1A4FB93F6102B51 ;
+        :personEvent        bdr:EV858BB97678C2C4B2 , bdr:EVBCF8FA3BCE9AC203 , bdr:EVCEA22A64D8DF60FF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM56A9149ECDDCE76A , bdr:NM694D05B2B9AB28B4 , bdr:NMAA87B8CEB3994A7C , bdr:NMCD1FB7BE2CE409F9 ;
+        :personStudentOf    bdr:P196 , bdr:P251 , bdr:P267 , bdr:P324 , bdr:P3711 , bdr:P3713 , bdr:P3714 .
+}

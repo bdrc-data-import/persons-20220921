@@ -1,0 +1,50 @@
+@base          <bdg:P4507> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4507 {
+    bda:P4507  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4507 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "0f/P4507.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4507 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV43DEF2FF04C8ABE7
+        a                   :PersonBirth ;
+        :onYear             "1644"^^xsd:gYear .
+    
+    bdr:EVD6B785BCFD5A486D
+        a                   :PersonDeath ;
+        :onYear             "1696"^^xsd:gYear .
+    
+    bdr:NM47F7A2D3BFF1E037
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang klong yangs/"@bo-x-ewts .
+    
+    bdr:NTA96CB1B7869EE3B7
+        a                   :Note ;
+        :noteText           "major master in the transmission lineage of the ri chos snying po ma drug as it passed through 'ba' ra ba"@en .
+    
+    bdr:P4507  a            :Person ;
+        skos:prefLabel      "kun bzang klong yangs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA96CB1B7869EE3B7 ;
+        :personEvent        bdr:EV43DEF2FF04C8ABE7 , bdr:EVD6B785BCFD5A486D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM47F7A2D3BFF1E037 ;
+        :personStudentOf    bdr:P9791 ;
+        :personTeacherOf    bdr:P1918 , bdr:P950 .
+}

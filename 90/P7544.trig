@@ -1,0 +1,54 @@
+@base          <bdg:P7544> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7544 {
+    bda:P7544  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7544 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "90/P7544.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7544 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV43B9199E0D8AD72E
+        a                   :PersonDeath ;
+        :onYear             "1832"^^xsd:gYear .
+    
+    bdr:EVFD2A08E533B08979
+        a                   :PersonBirth ;
+        :onYear             "1821"^^xsd:gYear .
+    
+    bdr:NM122A117EB6DC5A1C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD1A2779DE54DC70C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shing bza' 03a blo bzang 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT654166C1C5EC8920
+        a                   :Note ;
+        :locationStatement  "p. 7" ;
+        :noteSource         bdr:MW22354 ;
+        :noteText           "born in sog po su rug chen; installed at bla brang"@en .
+    
+    bdr:P7544  a            :Person ;
+        skos:prefLabel      "shing bza' 03a blo bzang 'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT654166C1C5EC8920 ;
+        :personEvent        bdr:EV43B9199E0D8AD72E , bdr:EVFD2A08E533B08979 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM122A117EB6DC5A1C , bdr:NMD1A2779DE54DC70C .
+}

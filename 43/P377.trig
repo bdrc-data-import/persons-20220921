@@ -1,0 +1,54 @@
+@base          <bdg:P377> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P377 {
+    bda:P377  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P377 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "43/P377.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P377 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7E03425174DE83E7
+        a                   :PersonDeath ;
+        :onYear             "1822"^^xsd:gYear .
+    
+    bdr:EVB29AB04E4A50DD0E
+        a                   :PersonBirth ;
+        :onYear             "1762"^^xsd:gYear .
+    
+    bdr:NM3058659905F39143
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM8CD8E0CDEF178F6E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'ba' ling zhabs drung dkon mchog chos 'phel/"@bo-x-ewts .
+    
+    bdr:NTA4614FA0DCE8B1BF
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 282-285" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\ndates: 1762-1822"@en .
+    
+    bdr:P377  a             :Person ;
+        skos:prefLabel      "dkon mchog chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA4614FA0DCE8B1BF ;
+        :personEvent        bdr:EV7E03425174DE83E7 , bdr:EVB29AB04E4A50DD0E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3058659905F39143 , bdr:NM8CD8E0CDEF178F6E .
+}

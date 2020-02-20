@@ -1,0 +1,77 @@
+@base          <bdg:P9827> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9827 {
+    bda:LG8B2DEF50175686DF
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-11-28T09:56:26.109Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth date"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LGEF73DD4338EFBA6C
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-08T11:44:22.622Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF6C6DB693FDDC98D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T11:58:20.713Z"^^xsd:dateTime ;
+        adm:logMessage      "edited seat"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P9827  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9827 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "00/P9827.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9827 ;
+        adm:logEntry        bda:LG8B2DEF50175686DF , bda:LGEF73DD4338EFBA6C , bda:LGF6C6DB693FDDC98D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13A21E9AF8650E95
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV79A34CBA0A9C5DA0
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1700 ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NM13A0B8D966ADA86D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rjes dkar o rgyan brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NM8AA4B8016723CC24
+        a                   :PersonTitle ;
+        rdfs:label          "rjes dkar mkhan po o rgyan brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NM8B7BDDCD08A9916A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NTBA94C4A40D66A43A
+        a                   :Note ;
+        :noteText           "folklorist"@en .
+    
+    bdr:P9827  a            :Person ;
+        skos:prefLabel      "o rgyan brtson 'grus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBA94C4A40D66A43A ;
+        :personEvent        bdr:EV13A21E9AF8650E95 , bdr:EV79A34CBA0A9C5DA0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM13A0B8D966ADA86D , bdr:NM8AA4B8016723CC24 , bdr:NM8B7BDDCD08A9916A ;
+        :personStudentOf    bdr:P5083 , bdr:P6334 , bdr:P6342 , bdr:P7774 .
+}

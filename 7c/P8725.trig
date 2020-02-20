@@ -1,0 +1,50 @@
+@base          <bdg:P8725> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8725 {
+    bda:P8725  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8725 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "7c/P8725.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8725 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF5CA465C7CD2F7A
+        a                   :PersonBirth ;
+        :onYear             "1233"^^xsd:gYear .
+    
+    bdr:NM6EA403F12974CF77
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bla ma/"@bo-x-ewts .
+    
+    bdr:NMDC0AA1816E7B98DD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rog shes rab bla ma/"@bo-x-ewts .
+    
+    bdr:NT3C9F2118CEFC40F3
+        a                   :Note ;
+        :locationStatement  "p. 2286" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1233..rog shes rab bla ma  gshegs"@en .
+    
+    bdr:P8725  a            :Person ;
+        skos:prefLabel      "shes rab bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C9F2118CEFC40F3 ;
+        :personEvent        bdr:EVCF5CA465C7CD2F7A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6EA403F12974CF77 , bdr:NMDC0AA1816E7B98DD .
+}

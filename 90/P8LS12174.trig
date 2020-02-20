@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12174> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12174 {
+    bda:LG60BE49A9D7D1E9C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T11:23:31.45Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12174  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12174 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "90/P8LS12174.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12174 ;
+        adm:logEntry        bda:LG60BE49A9D7D1E9C7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15E75FDA3BFE9750
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVDCFC7AB02D2C578B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1962 .
+    
+    bdr:EVDD616097D54BA212
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :onYear             "1995"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVEB53517F49024FDF
+        a                   :PersonBirth ;
+        :onYear             "1945"^^xsd:gYear .
+    
+    bdr:NM9B79FA98BEFDDD95
+        a                   :PersonOtherName ;
+        rdfs:label          "zhing nge a lags/"@bo-x-ewts .
+    
+    bdr:NMA0C65E9807BE81C3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 45"@bo-x-ewts .
+    
+    bdr:NMEA6DE1B2E7C993F9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTFC696D1DD596DD49
+        a                   :Note ;
+        :locationStatement  "p. 219" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "incarnate lama of dga' ldan lho ba blo bzang don 'grub\n1983 khri of gnyan rtse dgon dge ldan byang chub gling. This monastery was founded by gnyan rtse dpon slog ngag chos 'phel\n1991 khri of khang dmar dgon\n1997 khri of a mchog mtshan nyid dgon"@en .
+    
+    bdr:P8LS12174  a        :Person ;
+        skos:prefLabel      "skal bzang lung rtogs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFC696D1DD596DD49 ;
+        :personEvent        bdr:EV15E75FDA3BFE9750 , bdr:EVDCFC7AB02D2C578B , bdr:EVDD616097D54BA212 , bdr:EVEB53517F49024FDF ;
+        :personName         bdr:NM9B79FA98BEFDDD95 , bdr:NMA0C65E9807BE81C3 , bdr:NMEA6DE1B2E7C993F9 ;
+        :personStudentOf    bdr:P1647 .
+}

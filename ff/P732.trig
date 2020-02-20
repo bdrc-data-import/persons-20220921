@@ -1,0 +1,75 @@
+@base          <bdg:P732> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P732 {
+    bda:LGF1A9C01B0C353946
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-21T09:56:48.455Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P732  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P732 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ff/P732.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P732 ;
+        adm:logEntry        bda:LGF1A9C01B0C353946 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0495FD536726E6A6
+        a                   :PersonDeath ;
+        :onYear             "1961"^^xsd:gYear .
+    
+    bdr:EV972FEC0915FC749D
+        a                   :PersonBirth ;
+        :onYear             "1879"^^xsd:gYear .
+    
+    bdr:EVA31C1CF148EBD4FD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:NM19F6797F6663374A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6A7F7042C70BAD0B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rag mgo mchog sprul thub bstan bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT222A2E9D89AEA03F
+        a                   :Note ;
+        :noteText           "lc gives dates as 1890-1973"@en .
+    
+    bdr:NT404967F0D1CEE05B
+        a                   :Note ;
+        :locationStatement  "p. 301" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:NT41795D155F074449
+        a                   :Note ;
+        :locationStatement  "pp. 314-316" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P732  a             :Person ;
+        skos:prefLabel      "thub bstan bshad sgrub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT222A2E9D89AEA03F , bdr:NT404967F0D1CEE05B , bdr:NT41795D155F074449 ;
+        :personEvent        bdr:EV0495FD536726E6A6 , bdr:EV972FEC0915FC749D , bdr:EVA31C1CF148EBD4FD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19F6797F6663374A , bdr:NM6A7F7042C70BAD0B ;
+        :personStudentOf    bdr:P6168 ;
+        :personTeacherOf    bdr:P6333 , bdr:P8297 .
+}

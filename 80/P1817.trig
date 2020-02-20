@@ -1,0 +1,75 @@
+@base          <bdg:P1817> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1817 {
+    bda:LGA7D3BB9D3AF4AFAF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:47:26.653Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1817  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1817 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "80/P1817.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1817 ;
+        adm:logEntry        bda:LGA7D3BB9D3AF4AFAF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6AC9C6E7EB951EC3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G306 .
+    
+    bdr:EV9F5B4898F56508B7
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1003 ;
+        :onYear             "1228"^^xsd:gYear .
+    
+    bdr:EVF9739499B944DADB
+        a                   :PersonDeath ;
+        :onYear             "1310"^^xsd:gYear .
+    
+    bdr:NM72F68B3F2F7817CE
+        a                   :PersonPersonalName ;
+        rdfs:label          "do pa dar ma shes rab/"@bo-x-ewts .
+    
+    bdr:NMD403C8F18E0116BF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dar ma shes rab/"@bo-x-ewts .
+    
+    bdr:NT60E53BF8F67F2DFA
+        a                   :Note ;
+        :locationStatement  "p. 833" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT902A773432F88A29
+        a                   :Note ;
+        :noteText           "Studied both Stag-lung Bka'-brgyud-pa and Bka'-gdams-pa doctrines.\n\"khong ni phyag rgya chen po'i lam la mnga' brnyes pa'i grub thob chen po zhig yin te/ bka' lung tsam gyis chos skyong bskul bar nus pa/ a tsa ra pa shis 'dam du slebs/ rta g.yog bskul ba la spre'u mang po'i rta g.yog bkye/ dang por sangs rgyas dbon grags pa dpal kho nar dad pas 'bul ba rnams kyang ri bo cher skyel/ mangga la gu ru la cung mi dad/ dus phyis su 'di ba yang grub thob tu 'dug gsungs nas 'bul ba snga phyi mang du mdzad/\"\n1288. Founds Skong Monastery."@en .
+    
+    bdr:NT9C92A1FAC4A052AD
+        a                   :Note ;
+        :noteText           "early master of the stag lung bka' rgyud tradition"@en .
+    
+    bdr:P1817  a            :Person ;
+        skos:prefLabel      "dar ma shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60E53BF8F67F2DFA , bdr:NT902A773432F88A29 , bdr:NT9C92A1FAC4A052AD ;
+        :personEvent        bdr:EV6AC9C6E7EB951EC3 , bdr:EV9F5B4898F56508B7 , bdr:EVF9739499B944DADB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM72F68B3F2F7817CE , bdr:NMD403C8F18E0116BF ;
+        :personStudentOf    bdr:P1818 .
+}

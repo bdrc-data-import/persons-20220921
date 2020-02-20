@@ -1,0 +1,67 @@
+@base          <bdg:P3AG6> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG6 {
+    bda:LGA0554A861A2A5ECB
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T16:09:01.648Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF45C0B7689CAB1C6
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T13:00:08.818Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P3AG6  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG6 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f8/P3AG6.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG6 ;
+        adm:logEntry        bda:LGA0554A861A2A5ECB , bda:LGF45C0B7689CAB1C6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB5C9E6781DDEC06D
+        a                   :PersonBirth ;
+        :onYear             "1134"^^xsd:gYear .
+    
+    bdr:EVB689E388E1B4EBD5
+        a                   :PersonDeath ;
+        :onYear             "1169"^^xsd:gYear .
+    
+    bdr:NM8215647703AE7FD9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gro mgon g.yor po me dpal/"@bo-x-ewts .
+    
+    bdr:NM8BC7DC2817980A7C
+        a                   :PersonPersonalName ;
+        rdfs:label          "g.yor po me dpal/"@bo-x-ewts .
+    
+    bdr:NT446D12E6703BEF40
+        a                   :Note ;
+        :noteText           "the fifth holder of the bon a khrid rdzogs chen lineage"@en .
+    
+    bdr:P3AG6  a            :Person ;
+        skos:prefLabel      "'gro mgon g.yor po me dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT446D12E6703BEF40 ;
+        :personEvent        bdr:EVB5C9E6781DDEC06D , bdr:EVB689E388E1B4EBD5 ;
+        :personName         bdr:NM8215647703AE7FD9 , bdr:NM8BC7DC2817980A7C ;
+        :personStudentOf    bdr:P3AG5 ;
+        :personTeacherOf    bdr:P3AG7 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Yorpo-Mepel/13090"^^xsd:anyURI .
+}

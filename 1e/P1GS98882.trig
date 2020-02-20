@@ -1,0 +1,61 @@
+@base          <bdg:P1GS98882> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1GS98882 {
+    bda:LGB3C511EC2CDA096E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-31T12:41:06.845Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of earlier record"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGE47A9D61CC05CD63
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-31T12:34:04.364Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1GS98882  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1GS98882 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1e/P1GS98882.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1GS98882 ;
+        adm:logEntry        bda:LGB3C511EC2CDA096E , bda:LGE47A9D61CC05CD63 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV5CA0330353F3A3B8
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1853"^^xsd:gYear .
+    
+    bdr:EV6D240D1D7EBB4E4F
+        a                   :PersonDeath ;
+        :onYear             "1906"^^xsd:gYear .
+    
+    bdr:NM7A8EE39C1D357F10
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes bstan 'dzin dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NT9A0A82AB9401FAE0
+        a                   :Note ;
+        :noteSource         bdr:MW2DB4627 ;
+        :noteText           "medical practitioner and author from Inner Mongolia"@en .
+    
+    bdr:P1GS98882  a        :Person ;
+        skos:prefLabel      "ye shes bstan 'dzin dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9A0A82AB9401FAE0 ;
+        :personEvent        bdr:EV5CA0330353F3A3B8 , bdr:EV6D240D1D7EBB4E4F ;
+        :personName         bdr:NM7A8EE39C1D357F10 .
+}

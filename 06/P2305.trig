@@ -1,0 +1,92 @@
+@base          <bdg:P2305> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2305 {
+    bda:LG3622831C69FD72EF
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-09-19T14:41:52.648Z"^^xsd:dateTime ;
+        adm:logMessage      "R39 deleted"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9A9553865C8FD2E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-23T09:25:48.658Z"^^xsd:dateTime ;
+        adm:logMessage      "test publish"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGEC5E65479E492F46
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-23T09:27:13.346Z"^^xsd:dateTime ;
+        adm:logMessage      "another test publish"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P2305  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2305 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "06/P2305.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2305 ;
+        adm:logEntry        bda:LG3622831C69FD72EF , bda:LG9A9553865C8FD2E7 , bda:LGEC5E65479E492F46 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV537444246AA1B54A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G222 ;
+        :notAfter           "1707"^^xsd:gYear ;
+        :notBefore          "1706"^^xsd:gYear .
+    
+    bdr:EV7725C37CF7183285
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G222 .
+    
+    bdr:EVA89DE693304106FA
+        a                   :PersonBirth ;
+        :onYear             "1686"^^xsd:gYear .
+    
+    bdr:EVA9563D2A9A3BFAE0
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G222 ;
+        :onYear             "1717"^^xsd:gYear .
+    
+    bdr:NM15989D6613F15A3E
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes rgya mtsho, pad dkar 'dzin pa/"@bo-x-ewts .
+    
+    bdr:NM5A1F9115E7CD536F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pad dkar 'dzin pa ngag dbang ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM80C9AE41E25A7A81
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT29ED3122E7FAD27F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTEC359F9FBFB90A86
+        a                   :Note ;
+        :locationStatement  "p. 301" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:P2305  a            :Person ;
+        skos:prefLabel      "ngag dbang ye shes rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT29ED3122E7FAD27F , bdr:NTEC359F9FBFB90A86 ;
+        :personEvent        bdr:EV537444246AA1B54A , bdr:EV7725C37CF7183285 , bdr:EVA89DE693304106FA , bdr:EVA9563D2A9A3BFAE0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15989D6613F15A3E , bdr:NM5A1F9115E7CD536F , bdr:NM80C9AE41E25A7A81 ;
+        :personStudentOf    bdr:P7709 .
+}

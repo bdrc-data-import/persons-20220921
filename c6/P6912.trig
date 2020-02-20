@@ -1,0 +1,52 @@
+@base          <bdg:P6912> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6912 {
+    bda:P6912  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6912 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c6/P6912.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6912 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCB0121B11635AA18
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2955 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM15814D7A07863B8E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang rang grol/"@bo-x-ewts .
+    
+    bdr:NM708D5BD65D2ED3D5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rba kha 03 kun bzang rang grol/"@bo-x-ewts .
+    
+    bdr:NTF39828C60662F780
+        a                   :Note ;
+        :locationStatement  "p. 104" ;
+        :noteSource         bdr:MW20520 ;
+        :noteText           "beyond the place of birth nothing is reported on this incarnation"@en .
+    
+    bdr:P6912  a            :Person ;
+        skos:prefLabel      "kun bzang rang grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF39828C60662F780 ;
+        :personEvent        bdr:EVCB0121B11635AA18 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15814D7A07863B8E , bdr:NM708D5BD65D2ED3D5 .
+}

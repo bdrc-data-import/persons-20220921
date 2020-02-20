@@ -1,0 +1,95 @@
+@base          <bdg:P373> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P373 {
+    bda:LGB955CDE3CEB42085
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-04T10:39:45.343Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGBCEAA66699C0A95E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-11T12:37:33.795Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, office, seat, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P373  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P373 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "40/P373.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P373 ;
+        adm:logEntry        bda:LGB955CDE3CEB42085 , bda:LGBCEAA66699C0A95E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2BB212E1EA5A95C2
+        a                   :PersonDeath ;
+        :onYear             "1848"^^xsd:gYear .
+    
+    bdr:EV4FD7366B4CC2F800
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G271 .
+    
+    bdr:EVA3B27C8D0A3767EE
+        a                   :PersonBirth ;
+        :onYear             "1807"^^xsd:gYear .
+    
+    bdr:EVBE1EBDECA0682653
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G271 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM50CC932E7E371EA1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a mdo zhwa dmar 03"@bo-x-ewts .
+    
+    bdr:NM5343889781C7B51D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBDEDF913C267B74F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a mdo zhwa dmar 03 ngag dbang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMDFDA84D7DF77257B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Amdo Zhamar 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT5C997E3A9B60C6E8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTCB1B0CB7DC839044
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 620-622" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "He also served as the throne hoder at rnga sgar byang chub gling and o bswo monasteries as well\nAt the age of thirty-eight he traveled to Mongolia and on to Mount Wutai Shan in China. He then went to Beijing.  On his return he stopped in mgar thar Monastery, in Kham. There he received teaching from a teacher named mi nyag tshul khrims nam rgyal"@en .
+    
+    bdr:NTF473CA88BCF73437
+        a                   :Note ;
+        :locationStatement  "p. 273" ;
+        :noteSource         bdr:MW19804 .
+    
+    bdr:P373  a             :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12690 ;
+        :isRoot             true ;
+        :note               bdr:NT5C997E3A9B60C6E8 , bdr:NTCB1B0CB7DC839044 , bdr:NTF473CA88BCF73437 ;
+        :personEvent        bdr:EV2BB212E1EA5A95C2 , bdr:EV4FD7366B4CC2F800 , bdr:EVA3B27C8D0A3767EE , bdr:EVBE1EBDECA0682653 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM50CC932E7E371EA1 , bdr:NM5343889781C7B51D , bdr:NMBDEDF913C267B74F , bdr:NMDFDA84D7DF77257B ;
+        :personStudentOf    bdr:P3243 , bdr:P3439 , bdr:P4CZ65552 ;
+        :personTeacherOf    bdr:P1262 , bdr:P8LS12237 .
+}

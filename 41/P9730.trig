@@ -1,0 +1,83 @@
+@base          <bdg:P9730> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9730 {
+    bda:LG075DC2CA80C5A46B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T14:53:37.604Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG0E802E69A5795532
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T14:46:29.647Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2B75B656F1DBE949
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P9730  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9730 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "41/P9730.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9730 ;
+        adm:logEntry        bda:LG075DC2CA80C5A46B , bda:LG0E802E69A5795532 , bda:LG2B75B656F1DBE949 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3009AB1118FC6AB1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2562 .
+    
+    bdr:EVD41797583F1D1669
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM19F0B8F20246975F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes bzang po/"@bo-x-ewts .
+    
+    bdr:NM28B31BFBA60D33FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lab skyabs mgon 03 ye shes bzang po/"@bo-x-ewts .
+    
+    bdr:NM5C527629F23D387C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lab Kyabgon 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC68CDDCC26AA4EDB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lab skyabs mgon 03"@bo-x-ewts .
+    
+    bdr:NTBDBEDFF2DA77F375
+        a                   :Note ;
+        :locationStatement  "p. 396" ;
+        :noteSource         bdr:MW29401 ;
+        :noteText           "the third reembodiment of the lab skyabs mgon"@en .
+    
+    bdr:P9730  a            :Person ;
+        skos:prefLabel      "ye shes bzang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9729 ;
+        :isRoot             true ;
+        :note               bdr:NTBDBEDFF2DA77F375 ;
+        :personEvent        bdr:EV3009AB1118FC6AB1 , bdr:EVD41797583F1D1669 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19F0B8F20246975F , bdr:NM28B31BFBA60D33FA , bdr:NM5C527629F23D387C , bdr:NMC68CDDCC26AA4EDB .
+}

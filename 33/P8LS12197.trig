@@ -1,0 +1,91 @@
+@base          <bdg:P8LS12197> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12197 {
+    bda:LG5BCCDD9D9F341579
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T08:50:22.86Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8E8F4577F7625B61
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-12T10:14:18.157Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favour of P8702"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12197  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12197 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "33/P8LS12197.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12197 ;
+        adm:logEntry        bda:LG5BCCDD9D9F341579 , bda:LG8E8F4577F7625B61 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P8702 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV3936BA0CF7A527FB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:EV78C9DF948A2A34EC
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV7DDFB4683B756FF1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA7EC8D10B17213E6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:NM137E9CDCAE6A3CA9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phur tsha mkhan po dkon mchog 'od zer/"@bo-x-ewts .
+    
+    bdr:NM6E78564414EC9507
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 11"@bo-x-ewts .
+    
+    bdr:NMBDFD336154B9D20D
+        a                   :PersonTitle ;
+        rdfs:label          "phur tsha mkhan po a dkon/"@bo-x-ewts .
+    
+    bdr:NME2F1C2A203FD90EF
+        a                   :PersonTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 11 dkon mchog 'od zer/"@bo-x-ewts .
+    
+    bdr:NME666140C3A71B33F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'od zer/"@bo-x-ewts .
+    
+    bdr:NT332EF099E9929685
+        a                   :Note ;
+        :locationStatement  "p. 424-425" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "at the age of 60's he passed away"@en .
+    
+    bdr:P8LS12197  a        :Person ;
+        skos:prefLabel      "dkon mchog 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT332EF099E9929685 ;
+        :personEvent        bdr:EV3936BA0CF7A527FB , bdr:EV78C9DF948A2A34EC , bdr:EV7DDFB4683B756FF1 , bdr:EVA7EC8D10B17213E6 ;
+        :personName         bdr:NM137E9CDCAE6A3CA9 , bdr:NM6E78564414EC9507 , bdr:NMBDFD336154B9D20D , bdr:NME2F1C2A203FD90EF , bdr:NME666140C3A71B33F ;
+        :personStudentOf    bdr:P3AG53 , bdr:P6744 , bdr:P8687 ;
+        :personTeacherOf    bdr:P2JM314 , bdr:P2JM322 , bdr:P6955 .
+}

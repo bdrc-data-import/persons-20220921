@@ -1,0 +1,76 @@
+@base          <bdg:P6873> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6873 {
+    bda:LG3BE687D23F439067
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-13T10:59:39.817Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGC242733DBA0CA9F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-19T13:58:40.359Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P6873  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6873 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7c/P6873.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6873 ;
+        adm:logEntry        bda:LG3BE687D23F439067 , bda:LGC242733DBA0CA9F5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1685A2F749A7CB0B
+        a                   :PersonBirth ;
+        :onYear             "1705"^^xsd:gYear .
+    
+    bdr:EV730350ED79B0F748
+        a                   :PersonDeath ;
+        :onYear             "1735"^^xsd:gYear .
+    
+    bdr:NM3016495D6F6FC25C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sprul sku byang chub rdor rje/"@bo-x-ewts .
+    
+    bdr:NM450968BA58AC50ED
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tulku Changchub Dorje"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMBF3DB466A128A05A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas gling pa (bon po gter ston)"@bo-x-ewts .
+    
+    bdr:NT3924A6500D148FF5
+        a                   :Note ;
+        :locationStatement  "p. 42" ;
+        :noteSource         bdr:MW9668 ;
+        :noteText           "connected with finding gter ma in the rnog dgon karma dngos grub gling area at khyung po rtse drug\nkaH thog si tu notes that the incarnation lineage of sangs rgyas gling pa was active to his date in the tsha ba rong drag po rdzong area"@en .
+    
+    bdr:NT7AF31B9B9EB2D5C6
+        a                   :Note ;
+        :locationStatement  "p. 36" ;
+        :noteSource         bdr:MW21638 .
+    
+    bdr:P6873  a            :Person ;
+        skos:prefLabel      "sangs rgyas gling pa (bon po gter ston)"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3924A6500D148FF5 , bdr:NT7AF31B9B9EB2D5C6 ;
+        :personEvent        bdr:EV1685A2F749A7CB0B , bdr:EV730350ED79B0F748 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3016495D6F6FC25C , bdr:NM450968BA58AC50ED , bdr:NMBF3DB466A128A05A ;
+        :personTeacherOf    bdr:P1681 .
+}

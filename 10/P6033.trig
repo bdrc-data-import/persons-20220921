@@ -1,0 +1,55 @@
+@base          <bdg:P6033> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6033 {
+    bda:P6033  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6033 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "10/P6033.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6033 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2BDF6246970509B2
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM68AF60B9E1548619
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rig 'dzin bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM761C7FAFBE9FFB80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NT01FE2D54FC864FBE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:NTDA6483EA56793C68
+        a                   :Note ;
+        :locationStatement  "p. 128" .
+    
+    bdr:P6033  a            :Person ;
+        skos:prefLabel      "bsod nams dpal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT01FE2D54FC864FBE , bdr:NTDA6483EA56793C68 ;
+        :personEvent        bdr:EV2BDF6246970509B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM68AF60B9E1548619 , bdr:NM761C7FAFBE9FFB80 ;
+        :personStudentOf    bdr:P6008 ;
+        :personTeacherOf    bdr:P5995 .
+}

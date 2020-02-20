@@ -1,0 +1,58 @@
+@base          <bdg:P5908> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5908 {
+    bda:LG607467D7938A1166
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T11:01:14.454Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5908  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5908 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "8c/P5908.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5908 ;
+        adm:logEntry        bda:LG607467D7938A1166 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3EF60CB7F87CEE29
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM3725A1E84F832165
+        a                   :PersonPersonalName ;
+        rdfs:label          "gan pa rin rgyal/"@bo-x-ewts .
+    
+    bdr:NMD8D7025F34CE6EA4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin rgyal/"@bo-x-ewts .
+    
+    bdr:NT5FA673A6FF4B0EC8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud"@en .
+    
+    bdr:P5908  a            :Person ;
+        skos:prefLabel      "rin rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5FA673A6FF4B0EC8 ;
+        :personEvent        bdr:EV3EF60CB7F87CEE29 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3725A1E84F832165 , bdr:NMD8D7025F34CE6EA4 ;
+        :personStudentOf    bdr:P0RK103 , bdr:P0RK148 , bdr:P0RK234 ;
+        :personTeacherOf    bdr:P3408 .
+}

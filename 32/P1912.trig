@@ -1,0 +1,56 @@
+@base          <bdg:P1912> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1912 {
+    bda:P1912  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1912 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "32/P1912.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1912 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88985711EE4A25AA
+        a                   :PersonDeath ;
+        :onYear             "1677"^^xsd:gYear .
+    
+    bdr:EVCAF58E9ABBA4D105
+        a                   :PersonBirth ;
+        :onYear             "1617"^^xsd:gYear .
+    
+    bdr:NM808416AF16252EF0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT75827B9028F296F0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:NTD2A078917A692C5C
+        a                   :Note ;
+        :locationStatement  "p. 2" ;
+        :noteSource         bdr:MW23147 ;
+        :noteText           "dates."@en .
+    
+    bdr:P1912  a            :Person ;
+        skos:prefLabel      "o rgyan dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT75827B9028F296F0 , bdr:NTD2A078917A692C5C ;
+        :personEvent        bdr:EV88985711EE4A25AA , bdr:EVCAF58E9ABBA4D105 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM808416AF16252EF0 ;
+        :personStudentOf    bdr:P2728 , bdr:P651 , bdr:P656 ;
+        :personTeacherOf    bdr:P1918 , bdr:P656 , bdr:P7631 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P430> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P430 {
+    bda:P430  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P430 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "70/P430.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P430 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAD7583B9990B2092
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM5EE9D5BF5115E7E9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtogs ldan sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NMEF256A8E47AF8551
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NT9035584E6211679F
+        a                   :Note ;
+        :noteText           "dge lugs practitioner who was the teacher of the first 'phags pa lha of chab mdo"@en .
+    
+    bdr:P430  a             :Person ;
+        skos:prefLabel      "sangs rgyas 'bum/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9035584E6211679F ;
+        :personEvent        bdr:EVAD7583B9990B2092 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5EE9D5BF5115E7E9 , bdr:NMEF256A8E47AF8551 ;
+        :personTeacherOf    bdr:P427 .
+}

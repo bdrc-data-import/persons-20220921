@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12692> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12692 {
+    bda:LG1198051A5858A883
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-11T14:34:39.03Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG94541112DB8CF355
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T17:26:01.008Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8LS12692  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12692 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "99/P8LS12692.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12692 ;
+        adm:logEntry        bda:LG1198051A5858A883 , bda:LG94541112DB8CF355 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4AA21B586D6F7425
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1PD96117 .
+    
+    bdr:EVA17D4644D745F24B
+        a                   :PersonDeath ;
+        :onYear             "1987"^^xsd:gYear .
+    
+    bdr:EVF6948338FFBB42E4
+        a                   :PersonBirth ;
+        :onYear             "1953"^^xsd:gYear .
+    
+    bdr:NM510B0D6697611673
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Amdo Zhamar 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM809EC280E5F65956
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a mdo zhwa dmar 06"@bo-x-ewts .
+    
+    bdr:NMB66C2A9470F62E5E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'jigs med bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2084A1B9A3B382BB
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 626-627" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12692  a        :Person ;
+        skos:prefLabel      "blo bzang 'jigs med bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12691 ;
+        :isRoot             true ;
+        :note               bdr:NT2084A1B9A3B382BB ;
+        :personEvent        bdr:EV4AA21B586D6F7425 , bdr:EVA17D4644D745F24B , bdr:EVF6948338FFBB42E4 ;
+        :personName         bdr:NM510B0D6697611673 , bdr:NM809EC280E5F65956 , bdr:NMB66C2A9470F62E5E ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sixth-Amdo-Zhamar-Lobzang-Jigme-Tendzin-Gyatso/13177"^^xsd:anyURI .
+}

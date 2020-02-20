@@ -1,0 +1,57 @@
+@base          <bdg:P4835> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4835 {
+    bda:P4835  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4835 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "48/P4835.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4835 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31060F4E1D2CA04B
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVB92BC599B06149BE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G20 .
+    
+    bdr:NM9219B5755ABFD8FD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhe chen drung yig bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMEA0B5CEBCE3269DA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTF83D3B42E2082AF5
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 12v, 14r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "important figure in the transmission of the literary and grammatic teachings in tibet\n\nhe passed on the lineage of teachings to one kaH thog pa (is this tshe dbang nor bu?), who taught them to 'jam dbyangs mkhyen brtse'i dbang po\n\nthis teacher is called earlier: kaH thog paN chhen tshe dbang mchog grub, who passed the sum rtags to si tu paN chen who passed the teachings to mthu stobs rnam rgyal"@en .
+    
+    bdr:P4835  a            :Person ;
+        skos:prefLabel      "bstan 'dzin rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF83D3B42E2082AF5 ;
+        :personEvent        bdr:EV31060F4E1D2CA04B , bdr:EVB92BC599B06149BE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9219B5755ABFD8FD , bdr:NMEA0B5CEBCE3269DA ;
+        :personStudentOf    bdr:P801 ;
+        :personTeacherOf    bdr:P676 .
+}

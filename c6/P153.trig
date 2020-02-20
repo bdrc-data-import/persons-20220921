@@ -1,0 +1,97 @@
+@base          <bdg:P153> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P153 {
+    bda:LGAA354B117445742A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-21T12:13:15.878Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDCBBDCA992F2F31C
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:10:09.525Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF3550995F44439B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-15T15:30:04.353Z"^^xsd:dateTime ;
+        adm:logMessage      "office"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P153  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P153 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c6/P153.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P153 ;
+        adm:logEntry        bda:LGAA354B117445742A , bda:LGDCBBDCA992F2F31C , bda:LGF3550995F44439B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV23B6CD1FB728AF2F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EV4426F140D4E44329
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :onYear             "1339"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV589E841BE0F6EAFC
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G201 ;
+        :onYear             "1354"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7773A1921E73D879
+        a                   :PersonBirth ;
+        :onYear             "1299"^^xsd:gYear .
+    
+    bdr:EV7E6328158A9BCE49
+        a                   :PersonDeath ;
+        :notAfter           "1354"^^xsd:gYear ;
+        :notBefore          "1353"^^xsd:gYear .
+    
+    bdr:NM19D8F77915571DCD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM36A2BB75A95701A5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NM632726CD305421D8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo tsA ba blo gros dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT893CFD23F9AE5C2D
+        a                   :Note ;
+        :locationStatement  "p. 33" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "regarded as the emanation of sgrib-sel.\n1323. studies grammer with dpang lo-tsA-ba brag ram\nhears of the reputation of dol-po-pa and proceeds to jo-nang.\n1339. becomes abbot of jo-nang\nhis writings included bka' 'grel, ngo sprod, 'phreng thig skor, rtsis sogs\n\nsee also jo nang gnas bshad, f. 7v"@en .
+    
+    bdr:P153  a             :Person ;
+        skos:prefLabel      "blo gros dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT893CFD23F9AE5C2D ;
+        :personEvent        bdr:EV23B6CD1FB728AF2F , bdr:EV4426F140D4E44329 , bdr:EV589E841BE0F6EAFC , bdr:EV7773A1921E73D879 , bdr:EV7E6328158A9BCE49 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19D8F77915571DCD , bdr:NM36A2BB75A95701A5 , bdr:NM632726CD305421D8 ;
+        :personStudentOf    bdr:P139 , bdr:P2085 ;
+        :personTeacherOf    bdr:P2255 , bdr:P2256 , bdr:P2412 , bdr:P2414 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jonang-Lotsawa-Lodro-Pel/2823"^^xsd:anyURI .
+}

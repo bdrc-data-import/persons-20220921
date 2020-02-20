@@ -1,0 +1,55 @@
+@base          <bdg:P45> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P45 {
+    bda:P45  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P45 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "48/P45.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P45 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D5A2E438C32D464
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NMF8DD347FDF4B29C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sbas pa'i rnal 'byor/"@bo-x-ewts .
+    
+    bdr:NT1ADD5F30F8284936
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- shangs-pa bka'-brgyud-pa transmissions"@en .
+    
+    bdr:NT915DE7F6F25938CD
+        a                   :Note ;
+        :noteText           "Sometimes identified with P4004. The reasoning is the following: biographies indicate that P39 (khyung po rnal 'byor) had 4 main indian masters: P44, P43, P46 plus a fourth one. The fourth one is often referred to as sbas pa'i rnal 'byor (P45), like in W19801. But in W20877, he is referred to as 'jigs med 'byung gnas sbas pa (P4004). It could be interpreted as an indication that P45 and P4004 are the same person."@en .
+    
+    bdr:NTD7754C47624ADBCE
+        a                   :Note ;
+        :locationStatement  "p. 218" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P45  a              :Person ;
+        skos:prefLabel      "sbas pa'i rnal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1ADD5F30F8284936 , bdr:NT915DE7F6F25938CD , bdr:NTD7754C47624ADBCE ;
+        :personEvent        bdr:EV9D5A2E438C32D464 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMF8DD347FDF4B29C5 ;
+        :personTeacherOf    bdr:P39 .
+}

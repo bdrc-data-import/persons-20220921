@@ -1,0 +1,53 @@
+@base          <bdg:P1939> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1939 {
+    bda:LG5FB9C0C8A5E0449D
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-04T10:24:00.414Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1939  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1939 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "60/P1939.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1939 ;
+        adm:logEntry        bda:LG5FB9C0C8A5E0449D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV0BF1768887FEC222
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NMCF820F24B45285A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "stag lung thang pa/"@bo-x-ewts .
+    
+    bdr:NT5659B728D789622C
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P2649"@en .
+    
+    bdr:P1939  a            :Person ;
+        skos:prefLabel      "stag lung thang pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5659B728D789622C ;
+        :personEvent        bdr:EV0BF1768887FEC222 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCF820F24B45285A4 ;
+        :personTeacherOf    bdr:P1856 , bdr:P6777 .
+}

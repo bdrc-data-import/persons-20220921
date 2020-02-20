@@ -1,0 +1,55 @@
+@base          <bdg:P2942> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2942 {
+    bda:P2942  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2942 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9a/P2942.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2942 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F48F3811A4910CF
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD9B26705E00E59EE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM21D66594986B50DF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rdo rje/"@bo-x-ewts .
+    
+    bdr:NMAB913C7F2B3C8C0C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog pa chos kyi rdo rje/"@bo-x-ewts .
+    
+    bdr:NTB3E3EF609E8CB5FA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:P2942  a            :Person ;
+        skos:prefLabel      "chos kyi rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB3E3EF609E8CB5FA ;
+        :personEvent        bdr:EV3F48F3811A4910CF , bdr:EVD9B26705E00E59EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM21D66594986B50DF , bdr:NMAB913C7F2B3C8C0C ;
+        :personStudentOf    bdr:P1361 ;
+        :personTeacherOf    bdr:P2943 , bdr:P5987 , bdr:P6012 .
+}

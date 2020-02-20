@@ -1,0 +1,58 @@
+@base          <bdg:P6672> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6672 {
+    bda:LG6A153D5F3FDAE763
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-06-09T09:42:12.457Z"^^xsd:dateTime ;
+        adm:logMessage      "created relationship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB268CABDC01DE84B
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-07-05T16:42:25.492Z"^^xsd:dateTime ;
+        adm:logMessage      "added bith place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6672  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6672 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "da/P6672.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6672 ;
+        adm:logEntry        bda:LG6A153D5F3FDAE763 , bda:LGB268CABDC01DE84B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA94575BC5390F72A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1366 ;
+        :onYear             "1938"^^xsd:gYear .
+    
+    bdr:NM6AD0BB1D70DE55F3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rgyal nam mkha' nor bu/"@bo-x-ewts .
+    
+    bdr:NMDA6643DEA8642AFC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha'i nor bu/"@bo-x-ewts .
+    
+    bdr:P6672  a            :Person ;
+        skos:prefLabel      "nam mkha'i nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVA94575BC5390F72A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6AD0BB1D70DE55F3 , bdr:NMDA6643DEA8642AFC ;
+        :personStudentOf    bdr:P3AG24 .
+}

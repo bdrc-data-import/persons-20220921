@@ -1,0 +1,57 @@
+@base          <bdg:P3857> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3857 {
+    bda:LGB93482E9EF55FCF8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-10T09:13:19.9Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3857  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3857 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "48/P3857.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3857 ;
+        adm:logEntry        bda:LGB93482E9EF55FCF8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3FAA7DAB34EC40E2
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM72A4CDA948C89E3F
+        a                   :PersonTitle ;
+        rdfs:label          "mkhan chen grags pa rdo rje/"@bo-x-ewts .
+    
+    bdr:NM844D431FA5199C0A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rdo rje/"@bo-x-ewts .
+    
+    bdr:NM8A3BA4C8E804AAD5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thel grags pa rdo rje/"@bo-x-ewts .
+    
+    bdr:P3857  a            :Person ;
+        skos:prefLabel      "grags pa rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV3FAA7DAB34EC40E2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM72A4CDA948C89E3F , bdr:NM844D431FA5199C0A , bdr:NM8A3BA4C8E804AAD5 ;
+        :personStudentOf    bdr:P3206 ;
+        :personTeacherOf    bdr:P1301 .
+}

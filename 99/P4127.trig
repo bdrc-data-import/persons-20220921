@@ -1,0 +1,65 @@
+@base          <bdg:P4127> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4127 {
+    bda:LGD1C981CDEF5C260E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T11:40:57.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4127  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4127 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "99/P4127.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4127 ;
+        adm:logEntry        bda:LGD1C981CDEF5C260E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A68CCE7B64009B1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV922ECD342B27826D
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM5DF4A6E9ED9CBB8D
+        a                   :PersonTitle ;
+        rdfs:label          "nya kyA lha rams pa ngag dbang chos grags/"@bo-x-ewts .
+    
+    bdr:NMA3AB00F918438AF4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nya kyA lha rams pa/"@bo-x-ewts .
+    
+    bdr:NMD790DFF18C415A6B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos grags/"@bo-x-ewts .
+    
+    bdr:NTC775DBC0DA60A2DC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa\n \t\nCalled Yongs-'dzin."@en .
+    
+    bdr:P4127  a            :Person ;
+        skos:prefLabel      "ngag dbang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC775DBC0DA60A2DC ;
+        :personEvent        bdr:EV8A68CCE7B64009B1 , bdr:EV922ECD342B27826D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5DF4A6E9ED9CBB8D , bdr:NMA3AB00F918438AF4 , bdr:NMD790DFF18C415A6B ;
+        :personTeacherOf    bdr:P1289 , bdr:P4125 .
+}

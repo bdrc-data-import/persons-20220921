@@ -1,0 +1,101 @@
+@base          <bdg:P527> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P527 {
+    bda:LG09BAF13D65690C1D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T15:47:47.712Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and brith place"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA3B4BAE5AD0BBFC5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T15:59:28.499Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P527  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P527 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "bf/P527.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P527 ;
+        adm:logEntry        bda:LG09BAF13D65690C1D , bda:LGA3B4BAE5AD0BBFC5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0339B03CBA53F813
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1730"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV0DF6EDF2C175F89F
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1738"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV1E8F83EF431E054B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G737 ;
+        :notAfter           "1671"^^xsd:gYear ;
+        :notBefore          "1668"^^xsd:gYear .
+    
+    bdr:EV65EAEB73BBD5FD20
+        a                   :PersonDeath ;
+        :onYear             "1746"^^xsd:gYear .
+    
+    bdr:EV8A4D44BFE0AD8343
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM4D38D0DFD7231BCE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 07"@bo-x-ewts .
+    
+    bdr:NM9352B1D623CDD46F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMD47013D4F84CA872
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 07 ngag dbang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT794D772F31F6F528
+        a                   :Note ;
+        :locationStatement  "prefatory material" ;
+        :noteSource         bdr:MW30150 ;
+        :noteText           "gives dates as 1671-1746"@en .
+    
+    bdr:NTA8AA6B184D36A367
+        a                   :Note ;
+        :locationStatement  "f. 143v-144r" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "bhutanese teacher born into the lineage of the shar wa can zhal ngo\nserved as the 7th rje mkhan po of bhutan from 1730-1738\nserved previously as 'bum thang chos rje brag and spa gro stag tshang 'dren pa became yongs 'dzin to rgyal sras 02 'jigs med nor bu\nmonastery kho thang brag (byang chub)"@en .
+    
+    bdr:NTCE6133314BD83F85
+        a                   :Note ;
+        :noteText           "born into the lineage of shar wa can zhal ngo"@en .
+    
+    bdr:P527  a             :Person ;
+        skos:prefLabel      "ngag dbang 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT794D772F31F6F528 , bdr:NTA8AA6B184D36A367 , bdr:NTCE6133314BD83F85 ;
+        :personEvent        bdr:EV0339B03CBA53F813 , bdr:EV0DF6EDF2C175F89F , bdr:EV1E8F83EF431E054B , bdr:EV65EAEB73BBD5FD20 , bdr:EV8A4D44BFE0AD8343 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4D38D0DFD7231BCE , bdr:NM9352B1D623CDD46F , bdr:NMD47013D4F84CA872 ;
+        :personStudentOf    bdr:P510 , bdr:P511 , bdr:P524 ;
+        :personTeacherOf    bdr:P530 , bdr:P535 , bdr:P538 , bdr:P540 , bdr:P550 , bdr:P9910 .
+}

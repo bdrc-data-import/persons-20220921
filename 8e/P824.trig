@@ -1,0 +1,67 @@
+@base          <bdg:P824> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P824 {
+    bda:P824  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P824 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8e/P824.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P824 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV044BD70C51A63A51
+        a                   :PersonBirth ;
+        :onYear             "1530"^^xsd:gYear .
+    
+    bdr:EVC70DFB1E4F675897
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G70 .
+    
+    bdr:EVC865BC46E2146D5B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVF66BD622A02CD8B9
+        a                   :PersonDeath ;
+        :onYear             "1590"^^xsd:gYear .
+    
+    bdr:NM45633C7A8686F411
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mtsho skyes rdo rje/"@bo-x-ewts .
+    
+    bdr:NM4900CDE77E29C838
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri bo che chos rje mtsho skyes rdo rje/"@bo-x-ewts .
+    
+    bdr:NMFD1CE049091EA25B
+        a                   :PersonTitle ;
+        rdfs:label          "stag lung pa mtsho skyes rdo rje/"@bo-x-ewts .
+    
+    bdr:NT41077B9538A80EBF
+        a                   :Note ;
+        :locationStatement  "p. 2327" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1590. ri bo che chos rje mtsho skyes rdo rje gshegs"@en .
+    
+    bdr:P824  a             :Person ;
+        skos:prefLabel      "mtsho skyes rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT41077B9538A80EBF ;
+        :personEvent        bdr:EV044BD70C51A63A51 , bdr:EVC70DFB1E4F675897 , bdr:EVC865BC46E2146D5B , bdr:EVF66BD622A02CD8B9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45633C7A8686F411 , bdr:NM4900CDE77E29C838 , bdr:NMFD1CE049091EA25B ;
+        :personTeacherOf    bdr:P875 .
+}

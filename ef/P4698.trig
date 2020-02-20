@@ -1,0 +1,57 @@
+@base          <bdg:P4698> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4698 {
+    bda:LG4661AA0414B23E49
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:00:29.419Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4698  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4698 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ef/P4698.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4698 ;
+        adm:logEntry        bda:LG4661AA0414B23E49 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5689FD337ED16FDD
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM5EA12627CF866424
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa tshe ring /"@bo-x-ewts .
+    
+    bdr:NMF94B516DE8AFBE26
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sog po dge bshes grags pa tshe ring /"@bo-x-ewts .
+    
+    bdr:NTE964FE6C211A2F02
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4698  a            :Person ;
+        skos:prefLabel      "grags pa tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE964FE6C211A2F02 ;
+        :personEvent        bdr:EV5689FD337ED16FDD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5EA12627CF866424 , bdr:NMF94B516DE8AFBE26 ;
+        :personTeacherOf    bdr:P259 , bdr:P6263 .
+}

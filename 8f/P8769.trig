@@ -1,0 +1,73 @@
+@base          <bdg:P8769> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8769 {
+    bda:LG8670EFA56A5A1A66
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:41.955Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8769  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8769 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8f/P8769.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8769 ;
+        adm:logEntry        bda:LG8670EFA56A5A1A66 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12E19056970797CB
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVCA650C1D6EB15EB4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4170 .
+    
+    bdr:NM79801D827329E94F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhan phan rdo rje/"@bo-x-ewts .
+    
+    bdr:NMCD5814EE861D7D02
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gu ru gzhan phan rdo rje/"@bo-x-ewts .
+    
+    bdr:NT39D590F4B15007FA
+        a                   :Note ;
+        :locationStatement  "278" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:NTEF9A7C78A9719F19
+        a                   :Note ;
+        :locationStatement  "p. 278" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography\nson of dmar rigs bsod nams sengge"@en .
+    
+    bdr:P8769  a            :Person ;
+        skos:prefLabel      "gzhan phan rdo rje/"@bo-x-ewts ;
+        :hasFather          bdr:P8770 ;
+        :hasOlderBrother    bdr:P8771 ;
+        :hasSon             bdr:P8772 ;
+        :isRoot             true ;
+        :note               bdr:NT39D590F4B15007FA , bdr:NTEF9A7C78A9719F19 ;
+        :personEvent        bdr:EV12E19056970797CB , bdr:EVCA650C1D6EB15EB4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79801D827329E94F , bdr:NMCD5814EE861D7D02 ;
+        :personStudentOf    bdr:P1317 , bdr:P8764 ;
+        :personTeacherOf    bdr:P8772 .
+}

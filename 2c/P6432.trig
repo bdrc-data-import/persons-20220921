@@ -1,0 +1,52 @@
+@base          <bdg:P6432> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6432 {
+    bda:P6432  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6432 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2c/P6432.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6432 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7062EECF9E07CDF0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM8662C6838CF73670
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pad nag bsod nams rab brtan/"@bo-x-ewts .
+    
+    bdr:NMED16F612BED9A749
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rab brtan/"@bo-x-ewts .
+    
+    bdr:NT8B4796BE089D23A8
+        a                   :Note ;
+        :locationStatement  "p. 145" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "mentioned among the students of rgya sprul mdo sngags bstan 'dzin"@en .
+    
+    bdr:P6432  a            :Person ;
+        skos:prefLabel      "bsod nams rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8B4796BE089D23A8 ;
+        :personEvent        bdr:EV7062EECF9E07CDF0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8662C6838CF73670 , bdr:NMED16F612BED9A749 ;
+        :personStudentOf    bdr:P6169 .
+}

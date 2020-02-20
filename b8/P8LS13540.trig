@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13540> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13540 {
+    bda:LG241B884EA0490301
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-22T14:06:45.385Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF0D8C03CB0A8F084
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-22T14:06:06.364Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13540  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13540 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b8/P8LS13540.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13540 ;
+        adm:logEntry        bda:LG241B884EA0490301 , bda:LGF0D8C03CB0A8F084 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM7D048A93071F13B8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smyos ras/"@bo-x-ewts .
+    
+    bdr:NM8E261AC266EEBFE0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma smyos ras/"@bo-x-ewts .
+    
+    bdr:NT3E08C97276864B83
+        a                   :Note ;
+        :locationStatement  "f. 4r" ;
+        :noteSource         bdr:MW2CZ7882 .
+    
+    bdr:P8LS13540  a        :Person ;
+        skos:prefLabel      "smyos ras/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3E08C97276864B83 ;
+        :personName         bdr:NM7D048A93071F13B8 , bdr:NM8E261AC266EEBFE0 ;
+        :personTeacherOf    bdr:P5291 .
+}

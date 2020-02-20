@@ -1,0 +1,60 @@
+@base          <bdg:P6673> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6673 {
+    bda:LGA1073D19FE869A54
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-05-28T14:05:35.64Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6673  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6673 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "60/P6673.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6673 ;
+        adm:logEntry        bda:LGA1073D19FE869A54 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV488079F1F33E089C
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM07BC665DDA2C80CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NM1ECE6E2BD98B9F32
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bum rams pa dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NM8B0948004BA878DC
+        a                   :PersonPersonalName ;
+        rdfs:label          "go 'jo dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NT23A63238D8A07A88
+        a                   :Note ;
+        :noteText           "bod ljongs bod lugs gso rig slob gling gi dge rgan 'bum rams pa mkhas dbang go 'jo dbang 'dus/"@bo-x-ewts .
+    
+    bdr:P6673  a            :Person ;
+        skos:prefLabel      "dbang 'dus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT23A63238D8A07A88 ;
+        :personEvent        bdr:EV488079F1F33E089C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07BC665DDA2C80CE , bdr:NM1ECE6E2BD98B9F32 , bdr:NM8B0948004BA878DC .
+}

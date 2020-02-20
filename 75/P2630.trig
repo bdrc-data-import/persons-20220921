@@ -1,0 +1,84 @@
+@base          <bdg:P2630> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2630 {
+    bda:LG215461BC1F57DB4A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T15:35:48.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGBEA58B1AAE949CB0
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:50:06.498Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat from G44 to G3582"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2630  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2630 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "75/P2630.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2630 ;
+        adm:logEntry        bda:LG215461BC1F57DB4A , bda:LGBEA58B1AAE949CB0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6152F67CD7E86D05
+        a                   :PersonDeath ;
+        :onYear             "1438"^^xsd:gYear .
+    
+    bdr:EVB5485EB54622DD4E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EVBA8E75920863CD64
+        a                   :PersonBirth ;
+        :onYear             "1400"^^xsd:gYear .
+    
+    bdr:NM4398B1536569DC51
+        a                   :PersonTitle ;
+        rdfs:label          "gsang bdag shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NM9E733EE70FD449C9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NMAF7DC090E18344B6
+        a                   :PersonPersonalName ;
+        rdfs:label          "pradznya b+ha dra"@sa-x-ewts .
+    
+    bdr:NMCDA49C1F12B60C51
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NT61BF24B488558390
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P2630  a            :Person ;
+        skos:prefLabel      "shes rab bzang po/"@bo-x-ewts ;
+        :hasFather          bdr:P2632 ;
+        :hasOlderBrother    bdr:P2631 ;
+        :hasSon             bdr:P4477 , bdr:P920 ;
+        :hasWife            bdr:P5813 ;
+        :isRoot             true ;
+        :note               bdr:NT61BF24B488558390 ;
+        :personEvent        bdr:EV6152F67CD7E86D05 , bdr:EVB5485EB54622DD4E , bdr:EVBA8E75920863CD64 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4398B1536569DC51 , bdr:NM9E733EE70FD449C9 , bdr:NMAF7DC090E18344B6 , bdr:NMCDA49C1F12B60C51 ;
+        :personStudentOf    bdr:P2631 , bdr:P2632 , bdr:P5804 ;
+        :personTeacherOf    bdr:P920 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sherab-Zangpo/4348"^^xsd:anyURI .
+}

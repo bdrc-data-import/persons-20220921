@@ -1,0 +1,60 @@
+@base          <bdg:P2CZ8016> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2CZ8016 {
+    bda:LG0EBEACE61857432D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-03T13:01:07.673Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGBA5D58D7C9E95506
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-11-20T16:52:28.983Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P2CZ8016  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2CZ8016 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "53/P2CZ8016.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2CZ8016 ;
+        adm:logEntry        bda:LG0EBEACE61857432D , bda:LGBA5D58D7C9E95506 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1DCA961F4563E771
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4249 .
+    
+    bdr:EV5C7DE01F89D396E3
+        a                   :PersonDeath ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:EVE00B7D4580CD7018
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G3401 ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NMF847D903A7807F03
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa phun tshogs/"@bo-x-ewts .
+    
+    bdr:P2CZ8016  a         :Person ;
+        skos:prefLabel      "byams pa phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1DCA961F4563E771 , bdr:EV5C7DE01F89D396E3 , bdr:EVE00B7D4580CD7018 ;
+        :personName         bdr:NMF847D903A7807F03 .
+}

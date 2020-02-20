@@ -1,0 +1,71 @@
+@base          <bdg:P78> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P78 {
+    bda:LG54ECD111995C4833
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-29T17:13:35.595Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P78  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P78 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ac/P78.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P78 ;
+        adm:logEntry        bda:LG54ECD111995C4833 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV805CDE5A46FF3D5E
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM412072DBBCE6C495
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grags pa bzang po/"@bo-x-ewts .
+    
+    bdr:NMACC9A08245389CF9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhyen rab dbang phyug grags pa bzang po/"@bo-x-ewts .
+    
+    bdr:NT073A631DE87C871E
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 49" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "important teacher in the transmission lineage of the abhidharmakosakarika"@en .
+    
+    bdr:NT34E48128C3306CCE
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 14v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "important teacher in the transmission lineage of the pramanasamuccaya"@en .
+    
+    bdr:NTC713482F2BECE47A
+        a                   :Note ;
+        :noteText           "associated with ri khud chos sde."@en .
+    
+    bdr:P78  a              :Person ;
+        skos:prefLabel      "grags pa bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT073A631DE87C871E , bdr:NT34E48128C3306CCE , bdr:NTC713482F2BECE47A ;
+        :personEvent        bdr:EV805CDE5A46FF3D5E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM412072DBBCE6C495 , bdr:NMACC9A08245389CF9 ;
+        :personStudentOf    bdr:P431 ;
+        :personTeacherOf    bdr:P426 , bdr:P75 ;
+        adm:seeOtherToL     "httpss://www.treasuryoflives.org/biographies/view/Khyenrab-Wangchuk-Drakpa-Zangpo/10480"^^xsd:anyURI .
+}

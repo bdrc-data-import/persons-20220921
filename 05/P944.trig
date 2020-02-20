@@ -1,0 +1,83 @@
+@base          <bdg:P944> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P944 {
+    bda:LG3794EAED6A4E10AB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T09:57:47.071Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P944  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P944 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "05/P944.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P944 ;
+        adm:logEntry        bda:LG3794EAED6A4E10AB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8882E39270718D05
+        a                   :PersonBirth ;
+        :onYear             "1653"^^xsd:gYear .
+    
+    bdr:EVFF51705AFB4BFF6B
+        a                   :PersonDeath ;
+        :onYear             "1730"^^xsd:gYear .
+    
+    bdr:NM2BA3A26FCB074C09
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tre hor sprul sku 03"@bo-x-ewts .
+    
+    bdr:NM71F2A363A1940113
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Trehor Tulku 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM93F81A3EE503A240
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tre ho 03 bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMB89F323A176ED0C8
+        a                   :PersonOtherName ;
+        rdfs:label          "chos kyi dbang po/"@bo-x-ewts .
+    
+    bdr:NMCB1D9A754BD0155C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT613B0C4366A79917
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:NTB35EACA5AE62E1EE
+        a                   :Note ;
+        :locationStatement  "p. 324" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ chos kyi rgya mtsho/ gting skyes su 'khrungs/ dgung lo lnga bcur gshegs/\n2) de'i skye ba dpal bzang dbang po/ rgyal rtser 'khrungs/ dgung lo zhe gsum par gshegs/\n3) de'i skye ba bstan 'dzin dar rgyas/ lho brag tu 'khrungs/ dgung lo nga drug par gshegs/"@bo-x-ewts .
+    
+    bdr:NTF0453BDBC6F9A99A
+        a                   :Note ;
+        :locationStatement  "p. 154" ;
+        :noteSource         bdr:MW27303 .
+    
+    bdr:P944  a             :Person ;
+        skos:prefLabel      "bstan 'dzin dar rgyas/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12490 ;
+        :isRoot             true ;
+        :note               bdr:NT613B0C4366A79917 , bdr:NTB35EACA5AE62E1EE , bdr:NTF0453BDBC6F9A99A ;
+        :personEvent        bdr:EV8882E39270718D05 , bdr:EVFF51705AFB4BFF6B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2BA3A26FCB074C09 , bdr:NM71F2A363A1940113 , bdr:NM93F81A3EE503A240 , bdr:NMB89F323A176ED0C8 , bdr:NMCB1D9A754BD0155C .
+}

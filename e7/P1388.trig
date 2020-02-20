@@ -1,0 +1,76 @@
+@base          <bdg:P1388> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1388 {
+    bda:LG0B40B836F00AB323
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-07-21T10:52:36.339Z"^^xsd:dateTime ;
+        adm:logMessage      "remove empty incarnationOf"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG384E564214D3CE3C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-15T16:51:48.563Z"^^xsd:dateTime ;
+        adm:logMessage      "added Incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1388  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1388 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e7/P1388.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1388 ;
+        adm:logEntry        bda:LG0B40B836F00AB323 , bda:LG384E564214D3CE3C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C3DE3832A007A63
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4801 .
+    
+    bdr:EVC238131F1E8A1029
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM3A7842A4E0EB247F
+        a                   :PersonTitle ;
+        rdfs:label          "mkha' reg sprul sku karma bstan srung /"@bo-x-ewts .
+    
+    bdr:NM6861ED7AA36F1A02
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha reg karma bstan srung /"@bo-x-ewts .
+    
+    bdr:NMF8E7F5AF5E70599B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bstan srung /"@bo-x-ewts .
+    
+    bdr:NTA4F76B634743FC4E
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 169v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "karma kaM tshang teacher. he was born as the son of one of the last rulers of the yar stod principality, yar stod rgyal chen karma mi pham bsod nams rab brtan. he was recognized as the reembodiment of mkhan chen rin chen shes rab by the 9th karma pa dbang phyug rdo rje\nhis monastery was the mkha' reg chos sde."@en .
+    
+    bdr:P1388  a            :Person ;
+        skos:prefLabel      "karma bstan srung /"@bo-x-ewts ;
+        :hasSon             bdr:P10352 ;
+        :incarnationOf      bdr:P10350 ;
+        :isRoot             true ;
+        :note               bdr:NTA4F76B634743FC4E ;
+        :personEvent        bdr:EV0C3DE3832A007A63 , bdr:EVC238131F1E8A1029 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3A7842A4E0EB247F , bdr:NM6861ED7AA36F1A02 , bdr:NMF8E7F5AF5E70599B ;
+        :personStudentOf    bdr:P1382 , bdr:P889 ;
+        :personTeacherOf    bdr:P10353 , bdr:P10354 , bdr:P10355 , bdr:P10356 , bdr:P10357 .
+}

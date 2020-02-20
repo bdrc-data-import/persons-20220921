@@ -1,0 +1,59 @@
+@base          <bdg:P1KG5003> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5003 {
+    bda:LG5B5B6EBD0ED39CB4
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-30T11:57:01.587Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG752157493EEAAFA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-05-05T12:23:37.014Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG5003  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5003 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "69/P1KG5003.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5003 ;
+        adm:logEntry        bda:LG5B5B6EBD0ED39CB4 , bda:LG752157493EEAAFA7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB2E6C28699E67711
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM360E9DF4911F7D44
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTB21C46093B82E86C
+        a                   :Note ;
+        :noteText           "Graduate from CIHTS, Sarnath, Varanasi, India"@en .
+    
+    bdr:P1KG5003  a         :Person ;
+        skos:prefLabel      "o rgyan bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB21C46093B82E86C ;
+        :personEvent        bdr:EVB2E6C28699E67711 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM360E9DF4911F7D44 ;
+        :personStudentOf    bdr:P1KG5004 .
+}

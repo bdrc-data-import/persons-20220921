@@ -1,0 +1,53 @@
+@base          <bdg:P991> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P991 {
+    bda:P991  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P991 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "30/P991.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P991 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV102AD4768F661BA9
+        a                   :PersonBirth ;
+        :notAfter           "1527"^^xsd:gYear ;
+        :notBefore          "1526"^^xsd:gYear .
+    
+    bdr:EV17B6D972FD2AF672
+        a                   :PersonDeath ;
+        :onYear             "1587"^^xsd:gYear .
+    
+    bdr:NM68954B6C89F79F70
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mai tri don yod rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFC2EED99DCEC587B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don yod rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTD1E633452F4BFCBB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Slob-bshad transmissions"@en .
+    
+    bdr:P991  a             :Person ;
+        skos:prefLabel      "don yod rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD1E633452F4BFCBB ;
+        :personEvent        bdr:EV102AD4768F661BA9 , bdr:EV17B6D972FD2AF672 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM68954B6C89F79F70 , bdr:NMFC2EED99DCEC587B .
+}

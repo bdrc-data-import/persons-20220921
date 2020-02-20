@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12487> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12487 {
+    bda:LG7E44E43CFB454213
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-20T14:25:29.813Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12487  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12487 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "92/P8LS12487.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12487 ;
+        adm:logEntry        bda:LG7E44E43CFB454213 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV831107B4230FC6AD
+        a                   :PersonDeath ;
+        :onYear             "1944"^^xsd:gYear .
+    
+    bdr:EVDD6226BCD5EC4D02
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1325 ;
+        :onYear             "1884"^^xsd:gYear .
+    
+    bdr:NMA7A4935D831C9B6B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Kyorlung Ngari Tulku 13"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMAF8704012FAD71DF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "skyor lung mnga' ris sprul sku 13"@bo-x-ewts .
+    
+    bdr:NMF94DAE314DDB1623
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo bzang mkhas grub bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTCFB033144023C12A
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 560-561" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12487  a        :Person ;
+        skos:prefLabel      "ngag dbang blo bzang mkhas grub bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12486 ;
+        :isRoot             true ;
+        :note               bdr:NTCFB033144023C12A ;
+        :personEvent        bdr:EV831107B4230FC6AD , bdr:EVDD6226BCD5EC4D02 ;
+        :personName         bdr:NMA7A4935D831C9B6B , bdr:NMAF8704012FAD71DF , bdr:NMF94DAE314DDB1623 .
+}

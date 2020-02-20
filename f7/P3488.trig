@@ -1,0 +1,72 @@
+@base          <bdg:P3488> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3488 {
+    bda:LG63849157CFA72B1F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-21T14:39:18.605Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG77A902E6FC492635
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-19T18:59:29.038Z"^^xsd:dateTime ;
+        adm:logMessage      "releassed again (different than P742)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGDA017A94BD276860
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-21T11:12:29.189Z"^^xsd:dateTime ;
+        adm:logMessage      "P3488 withdrawn in favor of P742"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGE627C2C1B32C4B67
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-21T14:35:14.703Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P3488  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3488 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f7/P3488.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3488 ;
+        adm:logEntry        bda:LG63849157CFA72B1F , bda:LG77A902E6FC492635 , bda:LGDA017A94BD276860 , bda:LGE627C2C1B32C4B67 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD31B1F3D79693DCF
+        a                   :PersonBirth .
+    
+    bdr:NM9ABC21E66B59B061
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde ba'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA43C58F4EA3849F7
+        a                   :PersonOtherName ;
+        rdfs:label          "su kha badz+ra/"@bo-x-ewts .
+    
+    bdr:NMC2FD193176919E34
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter ston bde ba'i rdo rje/"@bo-x-ewts .
+    
+    bdr:P3488  a            :Person ;
+        skos:prefLabel      "bde ba'i rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD31B1F3D79693DCF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9ABC21E66B59B061 , bdr:NMA43C58F4EA3849F7 , bdr:NMC2FD193176919E34 ;
+        :personStudentOf    bdr:P3487 ;
+        :personTeacherOf    bdr:P176 .
+}

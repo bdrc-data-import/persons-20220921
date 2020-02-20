@@ -1,0 +1,56 @@
+@base          <bdg:P10433> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10433 {
+    bda:P10433  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10433 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "15/P10433.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10433 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDB264B320F20E2B6
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM059B675765867BEE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma don dam/"@bo-x-ewts .
+    
+    bdr:NM72B798E22CCFACBE
+        a                   :PersonPersonalName ;
+        rdfs:label          "yang dag 'phags/"@bo-x-ewts .
+    
+    bdr:NMDCDEF2BF62C04D07
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thob rgyal kun spangs karma don dam/"@bo-x-ewts .
+    
+    bdr:NTD3A51EBFB055A486
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 27v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "teacher of the karma kaM tshang tradition\nis yang dag 'phags one of the names of this teacher or a separate name?"@en .
+    
+    bdr:P10433  a           :Person ;
+        skos:prefLabel      "karma don dam/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD3A51EBFB055A486 ;
+        :personEvent        bdr:EVDB264B320F20E2B6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM059B675765867BEE , bdr:NM72B798E22CCFACBE , bdr:NMDCDEF2BF62C04D07 ;
+        :personStudentOf    bdr:P385 .
+}

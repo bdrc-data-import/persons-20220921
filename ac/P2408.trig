@@ -1,0 +1,50 @@
+@base          <bdg:P2408> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2408 {
+    bda:P2408  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2408 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ac/P2408.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2408 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E23393E1F31F7FA
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1D38FA2982D4FC8E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "a mo tshang /"@bo-x-ewts .
+    
+    bdr:NM6644CD41E1F1B2BC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "se ra dge bshes a mo tshang /"@bo-x-ewts .
+    
+    bdr:NT74D76EE94C3960DE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2408  a            :Person ;
+        skos:prefLabel      "a mo tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT74D76EE94C3960DE ;
+        :personEvent        bdr:EV3E23393E1F31F7FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1D38FA2982D4FC8E , bdr:NM6644CD41E1F1B2BC ;
+        :personTeacherOf    bdr:P2403 .
+}

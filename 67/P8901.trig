@@ -1,0 +1,52 @@
+@base          <bdg:P8901> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8901 {
+    bda:P8901  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8901 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "67/P8901.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8901 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9751CFC5B7308E99
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM28C60429348881FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgyal mtshan, lha sgang ba/"@bo-x-ewts .
+    
+    bdr:NM8EEA323B7984E2DC
+        a                   :PersonPersonalName ;
+        rdfs:label          "lha sgang ba shes rab rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE12B29BF96AF8595
+        a                   :Note ;
+        :locationStatement  "pp. 118-132" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "mentioned as a student of chos rje 02 rgyal ba sengge"@en .
+    
+    bdr:P8901  a            :Person ;
+        skos:prefLabel      "lha sgang ba shes rab rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE12B29BF96AF8595 ;
+        :personEvent        bdr:EV9751CFC5B7308E99 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM28C60429348881FF , bdr:NM8EEA323B7984E2DC ;
+        :personStudentOf    bdr:P8898 .
+}

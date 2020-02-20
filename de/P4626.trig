@@ -1,0 +1,50 @@
+@base          <bdg:P4626> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4626 {
+    bda:P4626  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4626 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "de/P4626.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4626 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5722F43F290DE630
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM803CDA9A7B3EC562
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tsandra/"@bo-x-ewts .
+    
+    bdr:NT492C3D7E4EDEFADB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Later Translators"@en .
+    
+    bdr:NTFB86C62D81672D20
+        a                   :Note ;
+        :locationStatement  "p. 1335" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4626  a            :Person ;
+        skos:prefLabel      "tsandra/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT492C3D7E4EDEFADB , bdr:NTFB86C62D81672D20 ;
+        :personEvent        bdr:EV5722F43F290DE630 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM803CDA9A7B3EC562 .
+}

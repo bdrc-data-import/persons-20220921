@@ -1,0 +1,54 @@
+@base          <bdg:P1KG14502> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14502 {
+    bda:LG5470B7AEED6969A2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-21T16:27:27.706Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14502  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14502 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "24/P1KG14502.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14502 ;
+        adm:logEntry        bda:LG5470B7AEED6969A2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC298D097B2D64C63
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM80A53D7FAA8EB3EC
+        a                   :PersonPenName ;
+        rdfs:label          "'od dkar/"@bo-x-ewts .
+    
+    bdr:NMB6A0FA2B8A1B8466
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shing bza' bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCD11F1EA8A2B6229
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P1KG14502  a        :Person ;
+        skos:prefLabel      "bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC298D097B2D64C63 ;
+        :personName         bdr:NM80A53D7FAA8EB3EC , bdr:NMB6A0FA2B8A1B8466 , bdr:NMCD11F1EA8A2B6229 .
+}

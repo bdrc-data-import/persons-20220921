@@ -1,0 +1,66 @@
+@base          <bdg:P00KG03800> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG03800 {
+    bda:LG47CD8A5761DB7775
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-10-30T14:27:55.631Z"^^xsd:dateTime ;
+        adm:logMessage      "published first time"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGDBDF3989193976A3
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-10-30T13:00:45.714Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG03800  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG03800 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "19/P00KG03800.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG03800 ;
+        adm:logEntry        bda:LG47CD8A5761DB7775 , bda:LGDBDF3989193976A3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV633FE956DBED39C6
+        a                   :PersonOccupiesSeat .
+    
+    bdr:EVD42C36537D2E9D83
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM0317B3BFB114EF8B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag bla bsod nams snyan grags/"@bo-x-ewts .
+    
+    bdr:NMBFD945F796DA084F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thub bstan yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFAADC526CBF2FA0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams snyan grags/"@bo-x-ewts .
+    
+    bdr:P00KG03800  a       :Person ;
+        skos:prefLabel      "bsod nams snyan grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV633FE956DBED39C6 , bdr:EVD42C36537D2E9D83 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0317B3BFB114EF8B , bdr:NMBFD945F796DA084F , bdr:NMFAADC526CBF2FA0E ;
+        :personStudentOf    bdr:P00KG03801 , bdr:P7629 ;
+        :personTeacherOf    bdr:P00KG03802 , bdr:P00KG03803 .
+}

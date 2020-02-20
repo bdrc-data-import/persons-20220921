@@ -1,0 +1,109 @@
+@base          <bdg:P1999> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1999 {
+    bda:LG54DF57D007D77D9F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-28T12:21:29.62Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5D795F2285547E3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-17T09:46:34.868Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth plcace G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1999  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1999 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "41/P1999.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1999 ;
+        adm:logEntry        bda:LG54DF57D007D77D9F , bda:LG5D795F2285547E3E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9CD2307CEA24AB40
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVD07D7A84A6A897F1
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G806 ;
+        :onYear             "1716"^^xsd:gYear .
+    
+    bdr:EVDB02EB103FDD5C71
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1765"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF6E7CF4E08B93A2D
+        a                   :PersonDeath ;
+        :onYear             "1790"^^xsd:gYear .
+    
+    bdr:NM12E292DA04E8BB89
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM17C8D764B62E82A2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri chen dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM7E75C2B7A53416F7
+        a                   :PersonTitle ;
+        rdfs:label          "spyang lung dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMA015D92A1D2A79E1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 14"@bo-x-ewts .
+    
+    bdr:NMEA5ECAFC73796EF3
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMFF5C56DBBD9447AD
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jam dbyangs dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT3DB513DF6766A250
+        a                   :Note ;
+        :locationStatement  "p. 214-218" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NT692A24B2A40115C5
+        a                   :Note ;
+        :noteText           "1731. Enters Ron-bo Thos-bsam-rnam-rgyal-gling for academic studies\nTeachers (not recorded): Dpal-chos Mkhan-chen\n1751. Responsible for the carving of the blocks for printing Skal-ldan-rgya-mtsho's Mgur 'bum.\n1765. Comes to khri of Rong-bo Dgon-chen and serves 6 years.\nStudents (not recorded): Drung-yig Blo-bzang-rgya-mtsho"@en .
+    
+    bdr:NT960FD64F01D0B92B
+        a                   :Note ;
+        :noteText           "dge lugs master from rong bo dgon chen"@en .
+    
+    bdr:NTDE830AE7317C5277
+        a                   :Note ;
+        :locationStatement  "p. 1024" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P1999  a            :Person ;
+        skos:prefLabel      "dge 'dun bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3DB513DF6766A250 , bdr:NT692A24B2A40115C5 , bdr:NT960FD64F01D0B92B , bdr:NTDE830AE7317C5277 ;
+        :personEvent        bdr:EV9CD2307CEA24AB40 , bdr:EVD07D7A84A6A897F1 , bdr:EVDB02EB103FDD5C71 , bdr:EVF6E7CF4E08B93A2D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12E292DA04E8BB89 , bdr:NM17C8D764B62E82A2 , bdr:NM7E75C2B7A53416F7 , bdr:NMA015D92A1D2A79E1 , bdr:NMEA5ECAFC73796EF3 , bdr:NMFF5C56DBBD9447AD ;
+        :personStudentOf    bdr:P1468 , bdr:P169 , bdr:P3786 , bdr:P3787 ;
+        :personTeacherOf    bdr:P1996 , bdr:P292 , bdr:P312 , bdr:P3681 , bdr:P3788 , bdr:P3789 , bdr:P3790 , bdr:P3791 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P10444> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10444 {
+    bda:P10444  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10444 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ff/P10444.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10444 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B3AF699114473A9
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM180E95C8654252FA
+        a                   :PersonTitle ;
+        rdfs:label          "bla ma mtha' phu ba/"@bo-x-ewts .
+    
+    bdr:NMCA463D9A464F4B27
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mtha' phu ba/"@bo-x-ewts .
+    
+    bdr:NT5C11FCEF560854F9
+        a                   :Note ;
+        :locationStatement  "f. 159v" ;
+        :noteSource         bdr:MW30161 ;
+        :noteText           "teacher of the karma kaM tshang tradition"@en .
+    
+    bdr:P10444  a           :Person ;
+        skos:prefLabel      "mtha' phu ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C11FCEF560854F9 ;
+        :personEvent        bdr:EV8B3AF699114473A9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM180E95C8654252FA , bdr:NMCA463D9A464F4B27 ;
+        :personStudentOf    bdr:P385 .
+}

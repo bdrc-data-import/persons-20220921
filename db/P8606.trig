@@ -1,0 +1,61 @@
+@base          <bdg:P8606> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8606 {
+    bda:LGB36289D2F7466E5A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-07T13:38:24.081Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8606  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8606 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "db/P8606.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8606 ;
+        adm:logEntry        bda:LGB36289D2F7466E5A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0B8EB877C6832D93
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zhog pa 04"@bo-x-ewts .
+    
+    bdr:NM1A37944F12031B74
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhan phan lhun grub/"@bo-x-ewts .
+    
+    bdr:NM39E6AA6C3F039464
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zhokpa 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM95FFF8591DDCA94C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhog pa 04 gzhan phan lhun grub/"@bo-x-ewts .
+    
+    bdr:NTB0158D4864E19BF4
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8606  a            :Person ;
+        skos:prefLabel      "gzhan phan lhun grub/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8605 ;
+        :isRoot             true ;
+        :note               bdr:NTB0158D4864E19BF4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B8EB877C6832D93 , bdr:NM1A37944F12031B74 , bdr:NM39E6AA6C3F039464 , bdr:NM95FFF8591DDCA94C .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P9438> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9438 {
+    bda:LG8CA2C062483F1606
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T11:41:21.59Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9438  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9438 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "48/P9438.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9438 ;
+        adm:logEntry        bda:LG8CA2C062483F1606 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV212E02F813EBE46A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1864 .
+    
+    bdr:EV9BBE0CD6D2501FED
+        a                   :PersonBirth ;
+        :onYear             "1776"^^xsd:gYear .
+    
+    bdr:NM2285FCA06CAD8329
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ayak Bonpo 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM49943AA1FDFE8902
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDD4F73FFEED144E5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a yag dbon po 02 blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMED69545C16F0CBC9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a yag dbon po 02"@bo-x-ewts .
+    
+    bdr:NTE89383ABA6FB6CA0
+        a                   :Note ;
+        :locationStatement  "p. 302-303" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "gshong mo che bkra shis 'khyil \n'di ni sngar gyi dgon rnying du a yag sbyin pa rgya mtsho'i dbon po blo bzang dpal 'byor gyis gzhi bzung bas dgon pa byang chub bde chen gling chags/ 'di la a yag shes rab yang zer/ dbus su byon/ rnam 'joms kyi rnal 'byor pa nus ldan du grags/ de'i sprul sku blo bzang bstan pa'i rgyal mtshan chos tsha'i o rung du yab klu 'bum dang/ yum lha mo rgyal gyi sras su me sprel la 'khrungs/"@bo-x-ewts .
+    
+    bdr:P9438  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9437 ;
+        :isRoot             true ;
+        :note               bdr:NTE89383ABA6FB6CA0 ;
+        :personEvent        bdr:EV212E02F813EBE46A , bdr:EV9BBE0CD6D2501FED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2285FCA06CAD8329 , bdr:NM49943AA1FDFE8902 , bdr:NMDD4F73FFEED144E5 , bdr:NMED69545C16F0CBC9 .
+}

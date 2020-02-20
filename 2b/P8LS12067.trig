@@ -1,0 +1,78 @@
+@base          <bdg:P8LS12067> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12067 {
+    bda:LG4A202F6066E0081F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:19:33.393Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG546A3BAD1436E8B7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T16:22:06.518Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G2126 to G2800"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8LS12067  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12067 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2b/P8LS12067.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12067 ;
+        adm:logEntry        bda:LG4A202F6066E0081F , bda:LG546A3BAD1436E8B7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV65D948214347EC38
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "2003"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV82363E1551C2D497
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G2800 ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:EVCC8106122FC1F2C5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G447 .
+    
+    bdr:NM996D170BEA434046
+        a                   :PersonTitle ;
+        rdfs:label          "har gdong dge bshes blo bzang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NMAE9ACEBE3BEAED40
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 78"@bo-x-ewts .
+    
+    bdr:NMD2138FEFDC0EABE7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NTCAAF8C98DD8B26D7
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 228-230" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "1973- geshes lharam degree"@en .
+    
+    bdr:P8LS12067  a        :Person ;
+        skos:prefLabel      "blo bzang bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCAAF8C98DD8B26D7 ;
+        :personEvent        bdr:EV65D948214347EC38 , bdr:EV82363E1551C2D497 , bdr:EVCC8106122FC1F2C5 ;
+        :personName         bdr:NM996D170BEA434046 , bdr:NMAE9ACEBE3BEAED40 , bdr:NMD2138FEFDC0EABE7 ;
+        :personStudentOf    bdr:P1649 , bdr:P2596 , bdr:P4559 , bdr:P4796 , bdr:P4801 .
+}

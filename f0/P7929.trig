@@ -1,0 +1,50 @@
+@base          <bdg:P7929> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7929 {
+    bda:P7929  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7929 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f0/P7929.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7929 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAAF23B58514356F0
+        a                   :PersonBirth ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:EVDBBB4D438FCAD92E
+        a                   :PersonDeath ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:NM521B9A3ACC9D8143
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma bdud 'dul/"@bo-x-ewts .
+    
+    bdr:NTAB64E36518DF014B
+        a                   :Note ;
+        :locationStatement  "p. 74" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given"@en .
+    
+    bdr:P7929  a            :Person ;
+        skos:prefLabel      "karma bdud 'dul/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAB64E36518DF014B ;
+        :personEvent        bdr:EVAAF23B58514356F0 , bdr:EVDBBB4D438FCAD92E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM521B9A3ACC9D8143 .
+}

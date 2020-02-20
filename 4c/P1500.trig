@@ -1,0 +1,77 @@
+@base          <bdg:P1500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1500 {
+    bda:LG5EE146F9F04F1506
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-29T17:07:33.45Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P1500  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1500 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4c/P1500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1500 ;
+        adm:logEntry        bda:LG5EE146F9F04F1506 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08D60C80CF912C33
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3469 .
+    
+    bdr:EV6A74AFC12D9002BD
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G951 ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EV8F469ADAF020C698
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G26 .
+    
+    bdr:NM0839E76DDBF484B5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtsho sna ba shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NMC46934A4E4F6B5B7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NT3B1931AB33B84222
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:NT5EC5A28F0D40D65A
+        a                   :Note ;
+        :locationStatement  "p. 1400" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT6D0D455AEAD839CD
+        a                   :Note ;
+        :noteText           "Born in the beginning of the dus rabs 13.\n20th in the bla-rabs of the Lam rim bla brgyud."@en .
+    
+    bdr:P1500  a            :Person ;
+        skos:prefLabel      "shes rab bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3B1931AB33B84222 , bdr:NT5EC5A28F0D40D65A , bdr:NT6D0D455AEAD839CD ;
+        :personEvent        bdr:EV08D60C80CF912C33 , bdr:EV6A74AFC12D9002BD , bdr:EV8F469ADAF020C698 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0839E76DDBF484B5 , bdr:NMC46934A4E4F6B5B7 ;
+        :personStudentOf    bdr:P17 ;
+        :personTeacherOf    bdr:P18 , bdr:P3470 ;
+        adm:seeOtherToL     "httpss://www.treasuryoflives.org/biographies/view/Tsonawa-Sherab-Zangpo/2791"^^xsd:anyURI .
+}

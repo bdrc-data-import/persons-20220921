@@ -1,0 +1,70 @@
+@base          <bdg:P9400> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9400 {
+    bda:LGA6FAA087561611BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T12:30:29.568Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9400  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9400 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cb/P9400.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9400 ;
+        adm:logEntry        bda:LGA6FAA087561611BA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV73A999E2303B7156
+        a                   :PersonBirth ;
+        :onYear             "1824"^^xsd:gYear .
+    
+    bdr:EVC5DFC6278E2F401C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1913 .
+    
+    bdr:NM1956D8B0FAECA4AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6210392F0539BA8A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Changkya Drungyig 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD827AEB56429D125
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcang skya drung yig 02 blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME37F6892BEF21B97
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lcang skya drung yig 02"@bo-x-ewts .
+    
+    bdr:NT54E6F49F36181890
+        a                   :Note ;
+        :locationStatement  "p. 301" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "this pa dgon bkra shis chos rdzong \n'di ni lcang skya gong ma'i drung yig mthil ba blo bzang nyi mas btab/ dpon slob gser khang pas 'di pa'i zhabs la gtugs/ khri chen bsod nams grags pa nas brgyud pa'i gcod dbang gsan/ de'i sprul sku blo bzang bstan pa'i rgyal mtshan shing sprel la gcan tsha'i dpon rgyud du 'khrungs/ bde chen du thugs gnyer dang khri mdzad/ dbus su phebs/ da lta dgung lo zhe gnyis la sleb/"@bo-x-ewts .
+    
+    bdr:P9400  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3347 ;
+        :isRoot             true ;
+        :note               bdr:NT54E6F49F36181890 ;
+        :personEvent        bdr:EV73A999E2303B7156 , bdr:EVC5DFC6278E2F401C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1956D8B0FAECA4AF , bdr:NM6210392F0539BA8A , bdr:NMD827AEB56429D125 , bdr:NME37F6892BEF21B97 .
+}

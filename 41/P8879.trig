@@ -1,0 +1,75 @@
+@base          <bdg:P8879> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8879 {
+    bda:LGC92E669AF1895F23
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:07:17.548Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGF6E50080A92FE6ED
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T09:42:13.562Z"^^xsd:dateTime ;
+        adm:logMessage      "yig nor bcos yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8879  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8879 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "41/P8879.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8879 ;
+        adm:logEntry        bda:LGC92E669AF1895F23 , bda:LGF6E50080A92FE6ED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F36F8D3DB425E2B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4325 ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVAF91850163C2D8FB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:NM2188FD72E515C424
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen grags pa/"@bo-x-ewts .
+    
+    bdr:NM440CCFC847089EBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rat+na kIrti/"@bo-x-ewts .
+    
+    bdr:NMD6DABFD53FFC3785
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshes bcu 01 rat+na kIrti/"@bo-x-ewts .
+    
+    bdr:NT8715663C3B196CAB
+        a                   :Note ;
+        :locationStatement  "p. 116, 161-162" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\n\nwritings:\ndrung dka' bzhi pa'i rnam thar\ndus kyi 'khor lo'i cho ga\n\nart works:\n'dzam thang gi chos sder mchod rten bkra shis sgo mang che khyad rdzogs pa'i ngo mtshar ba phyi nang bkod mdzes cha kun dang rten lug ma sku brnyan sna tshogs gyang ris lha yi bkod rim bcas gang thad nas khyad chos yongs su rdzogs pa'i thugs rten legs grub rab gnas dga' ston sogs legs grub mdzad"@en .
+    
+    bdr:P8879  a            :Person ;
+        skos:prefLabel      "rat+na kIrti/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8715663C3B196CAB ;
+        :personEvent        bdr:EV0F36F8D3DB425E2B , bdr:EVAF91850163C2D8FB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2188FD72E515C424 , bdr:NM440CCFC847089EBD , bdr:NMD6DABFD53FFC3785 ;
+        :personStudentOf    bdr:P8877 , bdr:P8878 ;
+        :personTeacherOf    bdr:P8898 .
+}

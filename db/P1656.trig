@@ -1,0 +1,68 @@
+@base          <bdg:P1656> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1656 {
+    bda:LG718DD3262DCBB597
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-12-23T14:52:26.222Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGF83B9C84DE9FD44A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-12-23T15:03:06.018Z"^^xsd:dateTime ;
+        adm:logMessage      "edited monastery"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1656  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1656 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "db/P1656.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1656 ;
+        adm:logEntry        bda:LG718DD3262DCBB597 , bda:LGF83B9C84DE9FD44A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV223DF4FECB18457A
+        a                   :PersonDeath ;
+        :onYear             "1956"^^xsd:gYear .
+    
+    bdr:EV52A7F911C14565CD
+        a                   :PersonBirth ;
+        :onYear             "1897"^^xsd:gYear .
+    
+    bdr:NM491E609CA64F35B7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khyung sprul 'jigs med nam mkha'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC1FC192B40D79825
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med nam mkha'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NTDB952700F28ED69B
+        a                   :Note ;
+        :locationStatement  "p. 301" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "famous bonpo lama who founded in 1936 the monastery of mdo sngags grags rgyas gling and who restored in the same year gu ru byang dgon\nhe was the brother of the famed tibetan bandit gaja dramnag"@en .
+    
+    bdr:P1656  a            :Person ;
+        skos:prefLabel      "'jigs med nam mkha'i rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDB952700F28ED69B ;
+        :personEvent        bdr:EV223DF4FECB18457A , bdr:EV52A7F911C14565CD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM491E609CA64F35B7 , bdr:NMC1FC192B40D79825 ;
+        :personTeacherOf    bdr:P7130 , bdr:P859 .
+}

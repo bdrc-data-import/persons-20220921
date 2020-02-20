@@ -1,0 +1,54 @@
+@base          <bdg:P6835> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6835 {
+    bda:P6835  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6835 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d9/P6835.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6835 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3BA96F1B8D24E8BF
+        a                   :PersonDeath ;
+        :onYear             "1844"^^xsd:gYear .
+    
+    bdr:EVBC4D752C144F3632
+        a                   :PersonBirth ;
+        :onYear             "1775"^^xsd:gYear .
+    
+    bdr:NMB30F861233034FBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'jam dbyangs bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF47DC1C5C88B5799
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag lung mkhan po ngag dbang 'jam dbyangs bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6CA0FD3ABD006DF8
+        a                   :Note ;
+        :locationStatement  "p. 368" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "the brother of la mo gser khri\n1794. received ordination from chu bzang"@en .
+    
+    bdr:P6835  a            :Person ;
+        skos:prefLabel      "ngag dbang 'jam dbyangs bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6CA0FD3ABD006DF8 ;
+        :personEvent        bdr:EV3BA96F1B8D24E8BF , bdr:EVBC4D752C144F3632 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB30F861233034FBD , bdr:NMF47DC1C5C88B5799 .
+}

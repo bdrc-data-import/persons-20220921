@@ -1,0 +1,76 @@
+@base          <bdg:P8LS13229> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13229 {
+    bda:LG2E4C9EAE21BAF36C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-17T13:42:11.427Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGAA2276DEC9F2D9B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-02-26T13:06:09.765Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGED288D592CB5FA60
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-21T15:21:11.882Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13229  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13229 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fa/P8LS13229.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13229 ;
+        adm:logEntry        bda:LG2E4C9EAE21BAF36C , bda:LGAA2276DEC9F2D9B0 , bda:LGED288D592CB5FA60 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B374C2A103AE2A6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EVB0B1911A75E2B33A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM174ECE810FE338E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub seng+ge"@bo-x-ewts .
+    
+    bdr:NM3D73EC389A3E57F4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 09"@bo-x-ewts .
+    
+    bdr:NM41A08CD9E90D3792
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kun mkhyen byang chub seng+ge"@bo-x-ewts .
+    
+    bdr:NTC5E3FA5114968D22
+        a                   :Note ;
+        :noteText           "jo nang gnas bshad, f. 8r\nde rjes rim can du kun mkhyen byang chub seng+ge"@en .
+    
+    bdr:P8LS13229  a        :Person ;
+        skos:prefLabel      "byang chub seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC5E3FA5114968D22 ;
+        :personEvent        bdr:EV1B374C2A103AE2A6 , bdr:EVB0B1911A75E2B33A ;
+        :personName         bdr:NM174ECE810FE338E4 , bdr:NM3D73EC389A3E57F4 , bdr:NM41A08CD9E90D3792 ;
+        :personTeacherOf    bdr:P3094 , bdr:P3874 .
+}

@@ -1,0 +1,68 @@
+@base          <bdg:P11MS250> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS250 {
+    bda:LG9640E1C6124B1E16
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T12:57:10.881Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS250  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS250 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "07/P11MS250.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS250 ;
+        adm:logEntry        bda:LG9640E1C6124B1E16 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31B517376D6CCCA9
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:EV63BCDE4C22ECB8D3
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G4631 ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM0985247389754BE1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdor 'dzin mgo bo che/"@bo-x-ewts .
+    
+    bdr:NM57BBD21825510CA7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Dordzin Gowoche"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT6A781113D0137BBD
+        a                   :Note ;
+        :locationStatement  "330-331" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:NTF4425D2D1EBEEA04
+        a                   :Note ;
+        :noteText           "first retreat master at Tsari"@en .
+    
+    bdr:P11MS250  a         :Person ;
+        skos:prefLabel      "rdor 'dzin mgo bo che/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6A781113D0137BBD , bdr:NTF4425D2D1EBEEA04 ;
+        :personEvent        bdr:EV31B517376D6CCCA9 , bdr:EV63BCDE4C22ECB8D3 ;
+        :personName         bdr:NM0985247389754BE1 , bdr:NM57BBD21825510CA7 ;
+        :personStudentOf    bdr:P16 .
+}

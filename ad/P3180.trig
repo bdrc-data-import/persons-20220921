@@ -1,0 +1,58 @@
+@base          <bdg:P3180> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3180 {
+    bda:LG85800C3A935A4874
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:53:00.85Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3180  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3180 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ad/P3180.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3180 ;
+        adm:logEntry        bda:LG85800C3A935A4874 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9E289299EC87DE29
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM26D2BE0F3DB3F330
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM736C67835D9470C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1F3B07A2A21FB2B5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P3180  a            :Person ;
+        skos:prefLabel      "bsod nams rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1F3B07A2A21FB2B5 ;
+        :personEvent        bdr:EV9E289299EC87DE29 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM26D2BE0F3DB3F330 , bdr:NM736C67835D9470C3 ;
+        :personStudentOf    bdr:P3179 ;
+        :personTeacherOf    bdr:P3181 .
+}

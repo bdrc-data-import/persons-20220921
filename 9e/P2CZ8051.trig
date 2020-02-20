@@ -1,0 +1,81 @@
+@base          <bdg:P2CZ8051> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2CZ8051 {
+    bda:LG51CC3C54DC3DE2F0
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-14T13:56:42.274Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG527DE2378969C6D6
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-06T16:36:42.281Z"^^xsd:dateTime ;
+        adm:logMessage      "new persons"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG74FA584F58B0EAE6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-20T09:31:58.099Z"^^xsd:dateTime ;
+        adm:logMessage      "changed G# of the seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG76DA9641D3889D0F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T18:26:16.084Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G649 to G1202"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2CZ8051  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2CZ8051 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9e/P2CZ8051.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2CZ8051 ;
+        adm:logEntry        bda:LG51CC3C54DC3DE2F0 , bda:LG527DE2378969C6D6 , bda:LG74FA584F58B0EAE6 , bda:LG76DA9641D3889D0F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV219C3F9825CA1C6A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1202 ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:EV4D4E8A8BC5348A77
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR2438 .
+    
+    bdr:NM70323B0F6731D926
+        a                   :PersonPrimaryName ;
+        rdfs:label          "甲吉晋美嘉措"@zh-hans .
+    
+    bdr:NM848EAB68E8F0D002
+        a                   :PersonPenName ;
+        rdfs:label          "'gar nyag phran/"@bo-x-ewts .
+    
+    bdr:NM9F9475D578E30F80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF8C76A23E076E5B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gya skyes 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P2CZ8051  a         :Person ;
+        skos:prefLabel      "'jigs med rgya mtsho/"@bo-x-ewts , "甲吉晋美嘉措"@zh-hans ;
+        :isRoot             true ;
+        :personEvent        bdr:EV219C3F9825CA1C6A , bdr:EV4D4E8A8BC5348A77 ;
+        :personName         bdr:NM70323B0F6731D926 , bdr:NM848EAB68E8F0D002 , bdr:NM9F9475D578E30F80 , bdr:NMF8C76A23E076E5B2 ;
+        :personStudentOf    bdr:P1647 , bdr:P4708 .
+}

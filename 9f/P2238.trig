@@ -1,0 +1,77 @@
+@base          <bdg:P2238> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2238 {
+    bda:LGE9B38ED9890497AC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T15:35:28.792Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2238  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2238 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9f/P2238.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2238 ;
+        adm:logEntry        bda:LGE9B38ED9890497AC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB84C2521CCFEBEE0
+        a                   :PersonDeath ;
+        :onYear             "1886"^^xsd:gYear .
+    
+    bdr:EVC4543D269789C9F5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2148 ;
+        :onYear             "1809"^^xsd:gYear .
+    
+    bdr:EVE688E3CBAF613FDC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G62 .
+    
+    bdr:NM21E27A7B5B4FF186
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dam chos/"@bo-x-ewts .
+    
+    bdr:NMCF69AE2FA75BFA33
+        a                   :PersonPersonalName ;
+        rdfs:label          "yang ri sgar rdor slob 22 dkon mchog dam chos/"@bo-x-ewts .
+    
+    bdr:NME50F2790AEF55435
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yang ri sgar rdor slob 22"@bo-x-ewts .
+    
+    bdr:NT6FA1CB965A41CDA9
+        a                   :Note ;
+        :locationStatement  "p. 243" ;
+        :noteSource         bdr:MW19814 .
+    
+    bdr:NT78F2FD45392C9F39
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Bri-gung Bka'-brgyud"@en .
+    
+    bdr:NT9F752DC762556838
+        a                   :Note ;
+        :noteText           "Teachers (not recorded): Rgyal-tshab Lho Rin-po-che, Dge-slong A-grags."@en .
+    
+    bdr:P2238  a            :Person ;
+        skos:prefLabel      "dkon mchog dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6FA1CB965A41CDA9 , bdr:NT78F2FD45392C9F39 , bdr:NT9F752DC762556838 ;
+        :personEvent        bdr:EVB84C2521CCFEBEE0 , bdr:EVC4543D269789C9F5 , bdr:EVE688E3CBAF613FDC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM21E27A7B5B4FF186 , bdr:NMCF69AE2FA75BFA33 , bdr:NME50F2790AEF55435 .
+}

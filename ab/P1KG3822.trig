@@ -1,0 +1,63 @@
+@base          <bdg:P1KG3822> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3822 {
+    bda:LGC9042EE70D6D46F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-27T12:40:49.2Z"^^xsd:dateTime ;
+        adm:logMessage      "adde date and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3822  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3822 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ab/P1KG3822.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3822 ;
+        adm:logEntry        bda:LGC9042EE70D6D46F5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F9998488E7A524F
+        a                   :PersonBirth ;
+        :onYear             "1906"^^xsd:gYear .
+    
+    bdr:EV6B231B35FED0EF36
+        a                   :PersonDeath ;
+        :onYear             "1992"^^xsd:gYear .
+    
+    bdr:NM3308BA9B1C5CF798
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NM489A1CA486C4E4F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NM985786B0F2B39CF1
+        a                   :PersonPersonalName ;
+        rdfs:label          "shel brag byams pa blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NT544361D149396999
+        a                   :Note ;
+        :noteText           "the dates are according to tashi tsering of amnye machen institute"@en .
+    
+    bdr:P1KG3822  a         :Person ;
+        skos:prefLabel      "byams pa blo gros bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT544361D149396999 ;
+        :personEvent        bdr:EV0F9998488E7A524F , bdr:EV6B231B35FED0EF36 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3308BA9B1C5CF798 , bdr:NM489A1CA486C4E4F6 , bdr:NM985786B0F2B39CF1 .
+}

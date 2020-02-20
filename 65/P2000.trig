@@ -1,0 +1,42 @@
+@base          <bdg:P2000> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2000 {
+    bda:P2000  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2000 ;
+        adm:facetIndex      3 ;
+        adm:gitPath         "65/P2000.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2000 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC94F42F714232425
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM00EC635B7F9A00E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs dpal 'dzoms/"@bo-x-ewts .
+    
+    bdr:P2000  a            :Person ;
+        skos:prefLabel      "phun tshogs dpal 'dzoms/"@bo-x-ewts ;
+        :hasDaughter        bdr:P678 ;
+        :hasHusband         bdr:P7 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC94F42F714232425 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM00EC635B7F9A00E9 .
+}

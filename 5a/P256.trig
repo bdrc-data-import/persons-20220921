@@ -1,0 +1,65 @@
+@base          <bdg:P256> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P256 {
+    bda:P256  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P256 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5a/P256.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P256 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41A6D383EF03D6CE
+        a                   :PersonDeath ;
+        :onYear             "1871"^^xsd:gYear .
+    
+    bdr:EVA5E9B02D27D274F0
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1712 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVD0F3F110C9B8D545
+        a                   :PersonAssumesOffice ;
+        :onYear             "1868"^^xsd:gYear ;
+        :personEventRole    bdr:R40 .
+    
+    bdr:NM650D76B58676C4EF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spyi khyab mkhan po dpal ldan don grub/"@bo-x-ewts .
+    
+    bdr:NM78C85031ED8EF108
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan don grub/"@bo-x-ewts .
+    
+    bdr:NT46A1D8252AFB439B
+        a                   :Note ;
+        :locationStatement  "p. 926" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a brief biography"@en .
+    
+    bdr:NT5C34C10DD9574BB4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P256  a             :Person ;
+        skos:prefLabel      "dpal ldan don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT46A1D8252AFB439B , bdr:NT5C34C10DD9574BB4 ;
+        :personEvent        bdr:EV41A6D383EF03D6CE , bdr:EVA5E9B02D27D274F0 , bdr:EVD0F3F110C9B8D545 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM650D76B58676C4EF , bdr:NM78C85031ED8EF108 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P8LS12275> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12275 {
+    bda:LG99F917FC03C56D7B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T15:56:52.09Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12275  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12275 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b4/P8LS12275.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12275 ;
+        adm:logEntry        bda:LG99F917FC03C56D7B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB5DBB2AE2D167F9D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1955"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCDE119773E4F10F2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM04163A6191E13CF2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMF8E51F0FAE7843F3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshe rug bon gya dka' bcu bstan 'dzin sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMFBB5ABC42CD2A475
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 122"@bo-x-ewts .
+    
+    bdr:NT00968D29A2D96C0C
+        a                   :Note ;
+        :locationStatement  "p. 216-217" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "at the time of asceding to the throne of this abbot, rong ston blo bzang 'phrin las lung rtogs rgya mtsho and sprul sku 'jigs med lung rtogs rgya mtsho visited bya khyung monastery"@en .
+    
+    bdr:P8LS12275  a        :Person ;
+        skos:prefLabel      "bstan 'dzin sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00968D29A2D96C0C ;
+        :personEvent        bdr:EVB5DBB2AE2D167F9D , bdr:EVCDE119773E4F10F2 ;
+        :personName         bdr:NM04163A6191E13CF2 , bdr:NMF8E51F0FAE7843F3 , bdr:NMFBB5ABC42CD2A475 .
+}

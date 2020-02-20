@@ -1,0 +1,75 @@
+@base          <bdg:P8904> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8904 {
+    bda:LG19AAB53925C19229
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T10:54:34.367Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8904  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8904 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e9/P8904.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8904 ;
+        adm:logEntry        bda:LG19AAB53925C19229 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV44379CEE2CA6F6ED
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:EV88FFD9CAC9D456B7
+        a                   :PersonDeath ;
+        :onYear             "1736"^^xsd:gYear .
+    
+    bdr:EV8EC1E60F65965D11
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4322 ;
+        :onYear             "1674"^^xsd:gYear .
+    
+    bdr:NMC8E98DD839699F40
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 05"@bo-x-ewts .
+    
+    bdr:NMC90EDA756C906085
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 05 grags pa lhun grub grags pa/"@bo-x-ewts .
+    
+    bdr:NMF52D42C045DFB115
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa lhun grub grags pa/"@bo-x-ewts .
+    
+    bdr:NMF90411E4027AE5DA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Choje Kutreng 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT177D007BF70F0037
+        a                   :Note ;
+        :locationStatement  "pp. 137-141" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8904  a            :Person ;
+        skos:prefLabel      "grags pa lhun grub grags pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8903 ;
+        :isRoot             true ;
+        :note               bdr:NT177D007BF70F0037 ;
+        :personEvent        bdr:EV44379CEE2CA6F6ED , bdr:EV88FFD9CAC9D456B7 , bdr:EV8EC1E60F65965D11 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC8E98DD839699F40 , bdr:NMC90EDA756C906085 , bdr:NMF52D42C045DFB115 , bdr:NMF90411E4027AE5DA .
+}

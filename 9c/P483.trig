@@ -1,0 +1,53 @@
+@base          <bdg:P483> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P483 {
+    bda:LG091351015455E331
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-27T14:37:03.262Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P483  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P483 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9c/P483.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P483 ;
+        adm:logEntry        bda:LG091351015455E331 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBA38DF5DFEB6E870
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1E17FC242970133C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "se ra rje shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NMEF079BA64D112223
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:P483  a             :Person ;
+        skos:prefLabel      "shes rab bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVBA38DF5DFEB6E870 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E17FC242970133C , bdr:NMEF079BA64D112223 ;
+        :personStudentOf    bdr:P64 ;
+        :personTeacherOf    bdr:P477 .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P1KG1681> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1681 {
+    bda:LG23431F13CA04C817
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-05T12:36:25.892Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1681  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1681 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "62/P1KG1681.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1681 ;
+        adm:logEntry        bda:LG23431F13CA04C817 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BEBE1879CFC3346
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM279638CAC1375C16
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NMCE64DD76B7B31111
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drag shos phun tshogs dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NTE8622550F6EE928D
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG1681  a         :Person ;
+        skos:prefLabel      "phun tshogs dbang 'dus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE8622550F6EE928D ;
+        :personEvent        bdr:EV0BEBE1879CFC3346 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM279638CAC1375C16 , bdr:NMCE64DD76B7B31111 .
+}

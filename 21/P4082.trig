@@ -1,0 +1,98 @@
+@base          <bdg:P4082> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4082 {
+    bda:LGB5B1F50D65E7EF07
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T12:55:59.874Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4082  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4082 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "21/P4082.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4082 ;
+        adm:logEntry        bda:LGB5B1F50D65E7EF07 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV51088DE819DB2516
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVC674528B1AFD97EE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1265 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD419D6374A55E690
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1815"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFCCDF7A253064ED3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM0DF2C367BC6D1B88
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar gdong ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM445D7B24AD7CA72C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 55"@bo-x-ewts .
+    
+    bdr:NM4BADD8ED36458B22
+        a                   :PersonTitle ;
+        rdfs:label          "mdo ba'i dbon chung ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM5F033F098C30455F
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 55 ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM8E47BB1D0928F373
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT10243EE7EFE82618
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT36DC3E40F1498636
+        a                   :Note ;
+        :noteText           "Began studies at Bya-khyung.\nTraveled to Dbus and entered Se-ra Byes for studies\nReturned to homeland\n1815. Becomes khri of Bya-khyung for four years"@en .
+    
+    bdr:NT494D67F25443A3E0
+        a                   :Note ;
+        :locationStatement  "p. 186-187" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT93ABDED9395F2CE6
+        a                   :Note ;
+        :locationStatement  "p. 880" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4082  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT10243EE7EFE82618 , bdr:NT36DC3E40F1498636 , bdr:NT494D67F25443A3E0 , bdr:NT93ABDED9395F2CE6 ;
+        :personEvent        bdr:EV51088DE819DB2516 , bdr:EVC674528B1AFD97EE , bdr:EVD419D6374A55E690 , bdr:EVFCCDF7A253064ED3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0DF2C367BC6D1B88 , bdr:NM445D7B24AD7CA72C , bdr:NM4BADD8ED36458B22 , bdr:NM5F033F098C30455F , bdr:NM8E47BB1D0928F373 ;
+        :personStudentOf    bdr:P1889 , bdr:P3243 , bdr:P4077 .
+}

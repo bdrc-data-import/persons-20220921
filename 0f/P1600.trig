@@ -1,0 +1,58 @@
+@base          <bdg:P1600> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1600 {
+    bda:LG0462443CB75DB6B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T10:16:06.486Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1600  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1600 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "0f/P1600.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1600 ;
+        adm:logEntry        bda:LG0462443CB75DB6B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F8768D54AED1F2E
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1D4E537E2334C4B1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mang thos rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM88FE5843C1D29C24
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'khrul zhig Mang thos rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8EAEC3A0CA20CDAE
+        a                   :Note ;
+        :noteText           "master of the dge lugs tradition"@en .
+    
+    bdr:P1600  a            :Person ;
+        skos:prefLabel      "mang thos rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8EAEC3A0CA20CDAE ;
+        :personEvent        bdr:EV7F8768D54AED1F2E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1D4E537E2334C4B1 , bdr:NM88FE5843C1D29C24 ;
+        :personStudentOf    bdr:P5731 , bdr:P7229 ;
+        :personTeacherOf    bdr:P345 .
+}

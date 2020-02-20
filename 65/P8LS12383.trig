@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12383> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12383 {
+    bda:LG01E686371D0F833E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:13:54.821Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12383  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12383 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "65/P8LS12383.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12383 ;
+        adm:logEntry        bda:LG01E686371D0F833E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0ADC58225D5F1B0F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV3BDEF35EBFC1CD16
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM73C4C1F24BC171DF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 18"@bo-x-ewts .
+    
+    bdr:NM77FB29EE8B830731
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las bsam grub/"@bo-x-ewts .
+    
+    bdr:NMB606ECEE7BBBCE31
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "se ra shar pa 'phrin las bsam grub/"@bo-x-ewts .
+    
+    bdr:NT0F0B5E9B051051C7
+        a                   :Note ;
+        :locationStatement  "p. 288" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12383  a        :Person ;
+        skos:prefLabel      "'phrin las bsam grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0F0B5E9B051051C7 ;
+        :personEvent        bdr:EV0ADC58225D5F1B0F , bdr:EV3BDEF35EBFC1CD16 ;
+        :personName         bdr:NM73C4C1F24BC171DF , bdr:NM77FB29EE8B830731 , bdr:NMB606ECEE7BBBCE31 .
+}

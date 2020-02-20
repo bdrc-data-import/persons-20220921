@@ -1,0 +1,65 @@
+@base          <bdg:P1> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1 {
+    bda:LG952E8AB4671B809E
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-05-29T15:25:53.476Z"^^xsd:dateTime ;
+        adm:logMessage      "no changes"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P1  a               adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5f/P1.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1 ;
+        adm:logEntry        bda:LG952E8AB4671B809E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC913F1FF425CD72D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1715 ;
+        :onYear             "1965"^^xsd:gYear .
+    
+    bdr:EVE73AB555BA26B9A1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM4083122C83CFACAE
+        a                   :PersonPersonalName ;
+        rdfs:label          "kunchok gyaltsen"@en .
+    
+    bdr:NM68EE3382A1056CCC
+        a                   :PersonReversal ;
+        rdfs:label          "gyaltsen, kunchok"@en .
+    
+    bdr:NMBB1C4D353E791CD1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTBA6026FBFBD03864
+        a                   :Note ;
+        :noteText           "modern medical scholar and medical practitioner\n1981: took monastic ordination from ske kyA rin po che of sku 'bum.\nstudied at sku 'bum, zi ling, bkra shis lhun po, and at the krung go'i bod brgyud mtho rim nang bstan slob gling in beijing.\nserved at the sku 'bum bod sman khang as the dbu gtso gzhon pa\nteachers included khro ru tshe rnam and ngag dbang.\nin 1998 was studying at the s.i.t. in brattleboro, vt."@en .
+    
+    bdr:P1  a               :Person ;
+        skos:prefLabel      "dkon mchog rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBA6026FBFBD03864 ;
+        :personEvent        bdr:EVC913F1FF425CD72D , bdr:EVE73AB555BA26B9A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4083122C83CFACAE , bdr:NM68EE3382A1056CCC , bdr:NMBB1C4D353E791CD1 ;
+        :personStudentOf    bdr:P4779 .
+}

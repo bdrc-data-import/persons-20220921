@@ -1,0 +1,79 @@
+@base          <bdg:P1902> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1902 {
+    bda:LG1DB40C89B0681269
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-05T15:21:20.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1902  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1902 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "89/P1902.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1902 ;
+        adm:logEntry        bda:LG1DB40C89B0681269 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18469BB2440FC41F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EV1B28754C3B7CDCC9
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV3293FC7A25CE6382
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5E5FFB9BBDAB0A5A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:NM0682A83BA262AA63
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs mkhas btsun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM195A8FB6B278C375
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 75"@bo-x-ewts .
+    
+    bdr:NMC692C458CF412479
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang rtse 'jam dbyangs mkhas btsun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3EBB5B5774C58556
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTCEBD2DD4E4B77A27
+        a                   :Note ;
+        :locationStatement  "p. 355" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P1902  a            :Person ;
+        skos:prefLabel      "'jam dbyangs mkhas btsun rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3EBB5B5774C58556 , bdr:NTCEBD2DD4E4B77A27 ;
+        :personEvent        bdr:EV18469BB2440FC41F , bdr:EV1B28754C3B7CDCC9 , bdr:EV3293FC7A25CE6382 , bdr:EV5E5FFB9BBDAB0A5A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0682A83BA262AA63 , bdr:NM195A8FB6B278C375 , bdr:NMC692C458CF412479 ;
+        :personStudentOf    bdr:P1253 , bdr:P1901 .
+}

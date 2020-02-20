@@ -1,0 +1,50 @@
+@base          <bdg:P3661> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3661 {
+    bda:P3661  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3661 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9e/P3661.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3661 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV45BF1E4182900D58
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NME0DE0E704AC9FB1A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin don grub/"@bo-x-ewts .
+    
+    bdr:NMEC5031671D88186D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyor mo lung dge bshes bstan 'dzin don grub/"@bo-x-ewts .
+    
+    bdr:NT5E30BB0262BC3B2A
+        a                   :Note ;
+        :noteText           "teacher of the bka' gdams tradition"@en .
+    
+    bdr:P3661  a            :Person ;
+        skos:prefLabel      "bstan 'dzin don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E30BB0262BC3B2A ;
+        :personEvent        bdr:EV45BF1E4182900D58 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME0DE0E704AC9FB1A , bdr:NMEC5031671D88186D ;
+        :personTeacherOf    bdr:P318 .
+}

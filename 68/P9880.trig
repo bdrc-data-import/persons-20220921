@@ -1,0 +1,74 @@
+@base          <bdg:P9880> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9880 {
+    bda:LGD1F2AE2362FA609C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T14:47:35.8Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9880  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9880 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "68/P9880.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9880 ;
+        adm:logEntry        bda:LGD1F2AE2362FA609C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E2B6F70C6E92329
+        a                   :PersonBirth ;
+        :onYear             "1895"^^xsd:gYear .
+    
+    bdr:EV66AD7B4D904B0A4C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4652 .
+    
+    bdr:EV89990E3810325F42
+        a                   :PersonDeath ;
+        :onYear             "1941"^^xsd:gYear .
+    
+    bdr:NM778FF4E2FCEA5DFD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon bla 03 'jam dbyangs blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMC9476F9CA85C4763
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ponla 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF3018C51CB812CAD
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dpon bla 03"@bo-x-ewts .
+    
+    bdr:NMF9631C31518552F0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NTCDE1DB812DEE0B99
+        a                   :Note ;
+        :locationStatement  "pp. 255-263" ;
+        :noteSource         bdr:MW29636 ;
+        :noteText           "biography\nthis teacher was born before his predecessor died; \nhe died in lcags sbrul (1941) but his successor was born in 1940\nhe was also a ma 'das sprul who survived until after the death of his successor in the incarnation lineage"@en .
+    
+    bdr:P9880  a            :Person ;
+        skos:prefLabel      "'jam dbyangs blo bzang bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9879 ;
+        :isRoot             true ;
+        :note               bdr:NTCDE1DB812DEE0B99 ;
+        :personEvent        bdr:EV0E2B6F70C6E92329 , bdr:EV66AD7B4D904B0A4C , bdr:EV89990E3810325F42 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM778FF4E2FCEA5DFD , bdr:NMC9476F9CA85C4763 , bdr:NMF3018C51CB812CAD , bdr:NMF9631C31518552F0 .
+}

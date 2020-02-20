@@ -1,0 +1,65 @@
+@base          <bdg:P2146> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2146 {
+    bda:LGE3A9DE43B0893E87
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:56:34.785Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2146  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2146 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e6/P2146.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2146 ;
+        adm:logEntry        bda:LGE3A9DE43B0893E87 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D4814086F3E8607
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G210 .
+    
+    bdr:EVF89D3F4AFB83633C
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM893F7077AFCFB31E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon byams pa mgon/"@bo-x-ewts .
+    
+    bdr:NME69BE615976DBBA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa mgon/"@bo-x-ewts .
+    
+    bdr:NT3096A1A3DCB696A3
+        a                   :Note ;
+        :noteText           "Ming mdzod, p. 84: Taught the Tshad ma rig gter to Dka'-bzhi Rig-pa'i-sengge."@en .
+    
+    bdr:NT9E94D717F40BDCF8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P2146  a            :Person ;
+        skos:prefLabel      "byams pa mgon/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3096A1A3DCB696A3 , bdr:NT9E94D717F40BDCF8 ;
+        :personEvent        bdr:EV3D4814086F3E8607 , bdr:EVF89D3F4AFB83633C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM893F7077AFCFB31E , bdr:NME69BE615976DBBA1 ;
+        :personTeacherOf    bdr:P2143 .
+}

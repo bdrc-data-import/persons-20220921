@@ -1,0 +1,87 @@
+@base          <bdg:P930> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P930 {
+    bda:LG0FC091B89AE454BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T10:20:59.492Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation line"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG16465D3F5884041C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T12:06:26.212Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG8FB491465696439E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P930  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P930 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ab/P930.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P930 ;
+        adm:logEntry        bda:LG0FC091B89AE454BF , bda:LG16465D3F5884041C , bda:LG8FB491465696439E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13D72EC3638DEF03
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G33 .
+    
+    bdr:EV5EAABB3C5527534A
+        a                   :PersonDeath ;
+        :notAfter           "1963"^^xsd:gYear ;
+        :notBefore          "1952"^^xsd:gYear .
+    
+    bdr:EVEAF06BE3408D8D07
+        a                   :PersonBirth ;
+        :notAfter           "1902"^^xsd:gYear ;
+        :notBefore          "1894"^^xsd:gYear .
+    
+    bdr:NM2F262AE98400E4B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshur phu rgyal tshab 11 grags pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM46E1DC2A6F30D3E3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsurphu Gyeltsab 11"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMCF9BA639F8ABA877
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mtshur phu rgyal tshab 11"@bo-x-ewts .
+    
+    bdr:NMF982FC378FD7DF66
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT532638C525EF13B6
+        a                   :Note ;
+        :noteText           "important karma kaM tshang incarnation; the name and dates (1902-1953) are from the rangjung yeshe wiki."@en .
+    
+    bdr:P930  a             :Person ;
+        skos:prefLabel      "grags pa rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P10584 ;
+        :isRoot             true ;
+        :note               bdr:NT532638C525EF13B6 ;
+        :personEvent        bdr:EV13D72EC3638DEF03 , bdr:EV5EAABB3C5527534A , bdr:EVEAF06BE3408D8D07 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F262AE98400E4B4 , bdr:NM46E1DC2A6F30D3E3 , bdr:NMCF9BA639F8ABA877 , bdr:NMF982FC378FD7DF66 ;
+        :personStudentOf    bdr:P563 , bdr:P937 .
+}

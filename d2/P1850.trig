@@ -1,0 +1,95 @@
+@base          <bdg:P1850> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1850 {
+    bda:LG26BC8B51D6758891
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-05T11:42:37.178Z"^^xsd:dateTime ;
+        adm:logMessage      "office"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG53DA2185158A7BAA
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-21T16:21:46.329Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGF7468CA3B4F3BB9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-24T11:41:27.758Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1850  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1850 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d2/P1850.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1850 ;
+        adm:logEntry        bda:LG26BC8B51D6758891 , bda:LG53DA2185158A7BAA , bda:LGF7468CA3B4F3BB9E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1DC1A13B6070895C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1013 ;
+        :onYear             "1134"^^xsd:gYear .
+    
+    bdr:EV52F9760931623DAE
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G197 ;
+        :onYear             "1218"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV826C60C95EC67389
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G197 .
+    
+    bdr:EVA270C3F6B5794A44
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G197 ;
+        :onYear             "1171"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCEFC2A9FCC5B3869
+        a                   :PersonDeath ;
+        :onYear             "1218"^^xsd:gYear .
+    
+    bdr:NM4374ECC8B57DD283
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dwags po 'dul 'dzin/"@bo-x-ewts .
+    
+    bdr:NT08017E141C5E3991
+        a                   :Note ;
+        :locationStatement  "p. 842" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "born in dwags po zes mkhar into a bon lineage"@en .
+    
+    bdr:NT9E6697F58F0AF74F
+        a                   :Note ;
+        :noteText           "Teachers (not recorded): Snubs Sgom-chung (first ordination) at Gnas-mkhar; Mdos-mkhar-ba (phar phyin) ; Sha-mi 'Dul-'dzin ('dul ba)\nFourth in the gdan-rabs of Dwags-lha-sgam-po.\nSpent eight years in meditation.\nBuilt the rgya-khyon-can of the 40 pillared Gtsug-lag-khang."@en .
+    
+    bdr:NTA85DE7B6338649FC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud"@en .
+    
+    bdr:P1850  a            :Person ;
+        skos:prefLabel      "dwags po 'dul 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08017E141C5E3991 , bdr:NT9E6697F58F0AF74F , bdr:NTA85DE7B6338649FC ;
+        :personEvent        bdr:EV1DC1A13B6070895C , bdr:EV52F9760931623DAE , bdr:EV826C60C95EC67389 , bdr:EVA270C3F6B5794A44 , bdr:EVCEFC2A9FCC5B3869 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4374ECC8B57DD283 ;
+        :personStudentOf    bdr:P1841 , bdr:P1844 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dakpo-Duldzin/3175"^^xsd:anyURI .
+}

@@ -1,0 +1,91 @@
+@base          <bdg:P8425> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8425 {
+    bda:LG536BF75A0450A35E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T10:26:14.333Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG59889DD414E8B27A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-15T11:32:21.755Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P8425  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8425 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "75/P8425.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8425 ;
+        adm:logEntry        bda:LG536BF75A0450A35E , bda:LG59889DD414E8B27A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04CC32D48A52DF9B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVC177A6F27A260589
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1240 ;
+        :onYear             "1359"^^xsd:gYear .
+    
+    bdr:EVE42F22B981ADD504
+        a                   :PersonDeath ;
+        :onYear             "1424"^^xsd:gYear .
+    
+    bdr:EVE6A73CA8EEC49F03
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM86EA320504EDC356
+        a                   :PersonPersonalName ;
+        rdfs:label          "bkra shis dpal brtsegs nyi ma'i dbang po bsrung ba'i go cha/"@bo-x-ewts .
+    
+    bdr:NMAD48516B820856D2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal brtsegs/"@bo-x-ewts .
+    
+    bdr:NMFC2A73549CF2280E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 09"@bo-x-ewts .
+    
+    bdr:NT6620866B579DB306
+        a                   :Note ;
+        :locationStatement  "pp. 365-391" ;
+        :noteSource         bdr:MW17276 ;
+        :noteText           "full name: rgyal dbang bkra shis dpal brtses nyi ma'i dbang po bsrung ba'i go cha\neldest of the family\nother teachers (not recorded): lo chen grags pa rgyal mtshan, jo mo ston rgyal"@en .
+    
+    bdr:NTE416CC8D8304BA96
+        a                   :Note ;
+        :locationStatement  "p. 197" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "according to this source he is the 10th khri of stag lung"@en .
+    
+    bdr:P8425  a            :Person ;
+        skos:prefLabel      "bkra shis dpal brtsegs/"@bo-x-ewts ;
+        :hasFather          bdr:P8426 , bdr:P8427 ;
+        :hasMother          bdr:P8427 ;
+        :isRoot             true ;
+        :note               bdr:NT6620866B579DB306 , bdr:NTE416CC8D8304BA96 ;
+        :personEvent        bdr:EV04CC32D48A52DF9B , bdr:EVC177A6F27A260589 , bdr:EVE42F22B981ADD504 , bdr:EVE6A73CA8EEC49F03 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM86EA320504EDC356 , bdr:NMAD48516B820856D2 , bdr:NMFC2A73549CF2280E ;
+        :personStudentOf    bdr:P2388 , bdr:P2921 , bdr:P3565 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Taklung-Tripa-09-Tashi-Peltseg/11141"^^xsd:anyURI .
+}

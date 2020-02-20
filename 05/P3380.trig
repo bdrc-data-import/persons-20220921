@@ -1,0 +1,47 @@
+@base          <bdg:P3380> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3380 {
+    bda:P3380  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3380 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "05/P3380.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3380 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV369CE0596F5BE448
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM9B054BED75CF2E73
+        a                   :PersonPrimaryName ;
+        rdfs:label          "do ba sgom chen/"@bo-x-ewts .
+    
+    bdr:NT58FFEA2F2697FBAD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P3380  a            :Person ;
+        skos:prefLabel      "do ba sgom chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT58FFEA2F2697FBAD ;
+        :personEvent        bdr:EV369CE0596F5BE448 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9B054BED75CF2E73 ;
+        :personStudentOf    bdr:P3379 ;
+        :personTeacherOf    bdr:P3381 .
+}

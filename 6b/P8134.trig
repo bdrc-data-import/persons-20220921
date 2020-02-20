@@ -1,0 +1,78 @@
+@base          <bdg:P8134> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8134 {
+    bda:LG2F6D02E3A9DD0880
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T16:30:44.462Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF6053D45CE6F18F4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T12:06:25.746Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8134  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8134 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "6b/P8134.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8134 ;
+        adm:logEntry        bda:LG2F6D02E3A9DD0880 , bda:LGF6053D45CE6F18F4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C93D50CBD72EB56
+        a                   :PersonBirth ;
+        :onYear             "1745"^^xsd:gYear .
+    
+    bdr:EV3285C80CE02D95EC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1716 ;
+        :onYear             "1792"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM20BBB08203C852DF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rigs grwa blo bzang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NM58832109462E966D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NM8A7B8A89EA2E3292
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang sman pa khri 02"@bo-x-ewts .
+    
+    bdr:NT2D218DC12D3572EB
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 248-252" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\nb. 1745"@en .
+    
+    bdr:NTFCD475DF27F76939
+        a                   :Note ;
+        :locationStatement  "p. 541-543" ;
+        :noteSource         bdr:MW00KG09686 .
+    
+    bdr:P8134  a            :Person ;
+        skos:prefLabel      "blo bzang 'jigs med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2D218DC12D3572EB , bdr:NTFCD475DF27F76939 ;
+        :personEvent        bdr:EV1C93D50CBD72EB56 , bdr:EV3285C80CE02D95EC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM20BBB08203C852DF , bdr:NM58832109462E966D , bdr:NM8A7B8A89EA2E3292 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P9280> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9280 {
+    bda:LG44084AB10BC7B815
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T14:35:10.889Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9280  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9280 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a0/P9280.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9280 ;
+        adm:logEntry        bda:LG44084AB10BC7B815 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E4215509A380BC4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1820"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV745F8FFC51101698
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4 .
+    
+    bdr:EVC9E6D3E8643EDA83
+        a                   :PersonDeath ;
+        :onYear             "1835"^^xsd:gYear .
+    
+    bdr:EVE75166DE96040B0F
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM440DCF39C63E9C4E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NMB8BDE2168B9DFFFB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman ri khri 'dzin shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NMC48989667714A5ED
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'od dkar gnas 'dzin sprul pa shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NTAE2C36373D42A0CB
+        a                   :Note ;
+        :locationStatement  "p. 298" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon po religious hierarch;\nassumed khri of sman ri in 1820\nstyled 'od dkar gnas 'dzin sprul pa\ndied in 1835"@en .
+    
+    bdr:P9280  a            :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE2C36373D42A0CB ;
+        :personEvent        bdr:EV0E4215509A380BC4 , bdr:EV745F8FFC51101698 , bdr:EVC9E6D3E8643EDA83 , bdr:EVE75166DE96040B0F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM440DCF39C63E9C4E , bdr:NMB8BDE2168B9DFFFB , bdr:NMC48989667714A5ED .
+}

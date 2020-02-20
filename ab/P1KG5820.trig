@@ -1,0 +1,70 @@
+@base          <bdg:P1KG5820> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5820 {
+    bda:LG67226C03D25EE0A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-24T12:35:34.207Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGECB3337F0C0A678A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-15T15:29:35.659Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG5820  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5820 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ab/P1KG5820.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5820 ;
+        adm:logEntry        bda:LG67226C03D25EE0A5 , bda:LGECB3337F0C0A678A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV458F349BFD30CCFA
+        a                   :PersonDeath ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:EVA663A6712366EE45
+        a                   :PersonBirth ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EVE8BF795C4B49D63C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4910 .
+    
+    bdr:NM478F6B1A54051805
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' shes rab chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM50E707EF80E48E8F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhar rdo rje 'chang kun dga' shes rab chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8D365C5570E375A0
+        a                   :PersonPersonalName ;
+        rdfs:label          "shes rab chos 'phel/"@bo-x-ewts .
+    
+    bdr:P1KG5820  a         :Person ;
+        skos:prefLabel      "kun dga' shes rab chos 'phel rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV458F349BFD30CCFA , bdr:EVA663A6712366EE45 , bdr:EVE8BF795C4B49D63C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM478F6B1A54051805 , bdr:NM50E707EF80E48E8F , bdr:NM8D365C5570E375A0 ;
+        :personStudentOf    bdr:P6772 ;
+        :personTeacherOf    bdr:P1KG5819 .
+}

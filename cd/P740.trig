@@ -1,0 +1,93 @@
+@base          <bdg:P740> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P740 {
+    bda:LG25A8DA31D8BB003E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-04T15:50:59.959Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG543EE3AB01A9FDC2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T12:06:39.534Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG8BC22FDDB6AF95C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-13T17:38:00.17Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGEA3DB0BCE56E45BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-04-06T10:19:04.635Z"^^xsd:dateTime ;
+        adm:logMessage      "new"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P740  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P740 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "cd/P740.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P740 ;
+        adm:logEntry        bda:LG25A8DA31D8BB003E , bda:LG543EE3AB01A9FDC2 , bda:LG8BC22FDDB6AF95C3 , bda:LGEA3DB0BCE56E45BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F11F61E3FABF8B1
+        a                   :PersonBirth ;
+        :onYear             "1894"^^xsd:gYear .
+    
+    bdr:EVD87E797265EAAECC
+        a                   :PersonDeath ;
+        :onYear             "1977"^^xsd:gYear .
+    
+    bdr:NMBD3230F379C0CDA0
+        a                   :PersonTitle ;
+        rdfs:label          "ne gi bla ma bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMEBC37481DE8FBD20
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khu nu rin po che bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMED56BE79F4E5DCFB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT67EEBDCE88EAF4C3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT9699451C8D56174B
+        a                   :Note ;
+        :noteText           "Dates: 1894/1895-1977"@en .
+    
+    bdr:NTB82C955D2FEE1DDB
+        a                   :Note ;
+        :locationStatement  "710" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P740  a             :Person ;
+        skos:prefLabel      "bstan 'dzin rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT67EEBDCE88EAF4C3 , bdr:NT9699451C8D56174B , bdr:NTB82C955D2FEE1DDB ;
+        :personEvent        bdr:EV9F11F61E3FABF8B1 , bdr:EVD87E797265EAAECC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBD3230F379C0CDA0 , bdr:NMEBC37481DE8FBD20 , bdr:NMED56BE79F4E5DCFB ;
+        :personStudentOf    bdr:P2370 , bdr:P4661 , bdr:P4662 , bdr:P6002 , bdr:P6600 , bdr:P6962 , bdr:P699 , bdr:P706 , bdr:P724 , bdr:P733 , bdr:P8433 , bdr:P9709 ;
+        :personTeacherOf    bdr:P1649 , bdr:P5640 , bdr:P748 , bdr:P9236 .
+}

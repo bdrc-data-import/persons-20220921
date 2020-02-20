@@ -1,0 +1,68 @@
+@base          <bdg:P6719> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6719 {
+    bda:P6719  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6719 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5e/P6719.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6719 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0D4B51998CCA1A45
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EV6CE78C7B201E5595
+        a                   :PersonLeavesOffice ;
+        :onYear             "1959"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVD66DA0E0C4609A5F
+        a                   :PersonAssumesOffice ;
+        :onYear             "1951"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVE0026082DB4EC6ED
+        a                   :PersonDeath ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:NM02A936CBF44A9B58
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon bla ma thub bstan thar pa/"@bo-x-ewts .
+    
+    bdr:NM89FDBB4D062FA408
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sne'u shar thub bstan thar pa/"@bo-x-ewts .
+    
+    bdr:NMA76D8E91FE538FAA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan thar pa, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NT5CCB2301BDDAE9C7
+        a                   :Note ;
+        :locationStatement  "p. 234" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon bla ma, 1955/1956-1959"@en .
+    
+    bdr:P6719  a            :Person ;
+        skos:prefLabel      "thub bstan thar pa, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5CCB2301BDDAE9C7 ;
+        :personEvent        bdr:EV0D4B51998CCA1A45 , bdr:EV6CE78C7B201E5595 , bdr:EVD66DA0E0C4609A5F , bdr:EVE0026082DB4EC6ED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM02A936CBF44A9B58 , bdr:NM89FDBB4D062FA408 , bdr:NMA76D8E91FE538FAA .
+}

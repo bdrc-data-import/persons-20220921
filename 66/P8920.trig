@@ -1,0 +1,77 @@
+@base          <bdg:P8920> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8920 {
+    bda:LG270248D4A32D4E16
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T11:35:04.853Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarantion relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7B1193450CBB9886
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T15:28:03.248Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA4C3B1047BAE7914
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8920  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8920 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "66/P8920.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8920 ;
+        adm:logEntry        bda:LG270248D4A32D4E16 , bda:LG7B1193450CBB9886 , bda:LGA4C3B1047BAE7914 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV71D05CEAE6C8AA83
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:NM71D4097D91E572FA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang arge sku phreng 04"@bo-x-ewts .
+    
+    bdr:NMC0A9488E57D5B7BA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rab brtan/"@bo-x-ewts .
+    
+    bdr:NMD14068ACEC6E0FF2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Arge Kutreng 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME12A43FFC1810202
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang arge sku phreng 04 'phrin las rab brtan/"@bo-x-ewts .
+    
+    bdr:NTA1D3CD8FC985AF82
+        a                   :Note ;
+        :locationStatement  "p. 167" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P8920  a            :Person ;
+        skos:prefLabel      "'phrin las rab brtan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8919 ;
+        :isRoot             true ;
+        :note               bdr:NTA1D3CD8FC985AF82 ;
+        :personEvent        bdr:EV71D05CEAE6C8AA83 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM71D4097D91E572FA , bdr:NMC0A9488E57D5B7BA , bdr:NMD14068ACEC6E0FF2 , bdr:NME12A43FFC1810202 .
+}

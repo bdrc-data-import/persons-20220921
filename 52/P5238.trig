@@ -1,0 +1,51 @@
+@base          <bdg:P5238> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5238 {
+    bda:P5238  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5238 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "52/P5238.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5238 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV69860C30C7291A0F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G299 ;
+        :onYear             "1909"^^xsd:gYear .
+    
+    bdr:EVE61E324E93F3434D
+        a                   :PersonDeath ;
+        :onYear             "1971"^^xsd:gYear .
+    
+    bdr:NM937DDA064BE9E2F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT82811B83B1695EB6
+        a                   :Note ;
+        :locationStatement  "p. 10" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography\nworks:\nbod rtsom 'grel gsar\nsum rtags las la don gyi gnad don kha shas"@en .
+    
+    bdr:P5238  a            :Person ;
+        skos:prefLabel      "bstan pa rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT82811B83B1695EB6 ;
+        :personEvent        bdr:EV69860C30C7291A0F , bdr:EVE61E324E93F3434D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM937DDA064BE9E2F2 .
+}

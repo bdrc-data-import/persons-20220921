@@ -1,0 +1,72 @@
+@base          <bdg:P3580> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3580 {
+    bda:LG04060AB028A1840F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T09:33:40.956Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3580  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3580 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e9/P3580.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3580 ;
+        adm:logEntry        bda:LG04060AB028A1840F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV51B8DF2D878C69F1
+        a                   :PersonDeath ;
+        :onYear             "1373"^^xsd:gYear .
+    
+    bdr:EV6112ACF0D81410AE
+        a                   :PersonBirth ;
+        :onYear             "1340"^^xsd:gYear .
+    
+    bdr:NM451A9562C8115778
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "phag mo gru pa sde srid 02"@bo-x-ewts .
+    
+    bdr:NM6A191B8F50B4D5DF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF8ADEEB1525E49A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phag mo gru pa sde srid 02 shAkya rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1331248CA1BF5062
+        a                   :Note ;
+        :locationStatement  "p. 83" ;
+        :noteSource         bdr:MW19828 .
+    
+    bdr:NT8BAC1C31B090A009
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:NTC79B744B53DD8304
+        a                   :Note ;
+        :noteText           "Ruled: 1365-1373"@en .
+    
+    bdr:P3580  a            :Person ;
+        skos:prefLabel      "shAkya rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1331248CA1BF5062 , bdr:NT8BAC1C31B090A009 , bdr:NTC79B744B53DD8304 ;
+        :personEvent        bdr:EV51B8DF2D878C69F1 , bdr:EV6112ACF0D81410AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM451A9562C8115778 , bdr:NM6A191B8F50B4D5DF , bdr:NMF8ADEEB1525E49A5 .
+}

@@ -1,0 +1,95 @@
+@base          <bdg:P4468> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4468 {
+    bda:LG33E3EB14F11F23C6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-27T16:13:47.842Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7C81E441375FF2D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T14:37:17.934Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4468  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4468 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "db/P4468.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4468 ;
+        adm:logEntry        bda:LG33E3EB14F11F23C6 , bda:LG7C81E441375FF2D0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30E48F31FF7F12B4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1668"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV3D06B4E1200B1EFD
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1671"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4D2A98C055AB08DA
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVEA07784F0CEA5FDA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM772B4A7E9009FEBF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM825649747BE3F38D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzims khang gong ma 'jam dbyangs dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMA00A27BB0FC6D885
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum khri chen 12"@bo-x-ewts .
+    
+    bdr:NMF4880364F114B3A4
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum khri 12 'jam dbyangs dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT16C5AAD35D3BEF37
+        a                   :Note ;
+        :noteText           "1668-1671. On throne of Sku-'bum"@en .
+    
+    bdr:NT770FC73237998CDC
+        a                   :Note ;
+        :locationStatement  "p. 55" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "bio"@en .
+    
+    bdr:NT84E9BC29E810A83F
+        a                   :Note ;
+        :noteText           "dge lugs scholar from a mdo"@en .
+    
+    bdr:P4468  a            :Person ;
+        skos:prefLabel      "'jam dbyangs dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16C5AAD35D3BEF37 , bdr:NT770FC73237998CDC , bdr:NT84E9BC29E810A83F ;
+        :personEvent        bdr:EV30E48F31FF7F12B4 , bdr:EV3D06B4E1200B1EFD , bdr:EV4D2A98C055AB08DA , bdr:EVEA07784F0CEA5FDA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM772B4A7E9009FEBF , bdr:NM825649747BE3F38D , bdr:NMA00A27BB0FC6D885 , bdr:NMF4880364F114B3A4 .
+}

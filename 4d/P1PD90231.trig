@@ -1,0 +1,60 @@
+@base          <bdg:P1PD90231> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1PD90231 {
+    bda:LG0BBEA84C80C5DF07
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T16:19:11.795Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG22810866B3D82BD7
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-22T16:48:37.17Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P1PD90231  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1PD90231 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4d/P1PD90231.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1PD90231 ;
+        adm:logEntry        bda:LG0BBEA84C80C5DF07 , bda:LG22810866B3D82BD7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1FADD7B3745DA8B7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV4BE355BD5675DBE6
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM065CDDEDC69D8B77
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med dam chos/"@bo-x-ewts .
+    
+    bdr:NM189B33275EFD0950
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes 'jigs med dam chos/"@bo-x-ewts .
+    
+    bdr:P1PD90231  a        :Person ;
+        skos:prefLabel      "'jigs med dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1FADD7B3745DA8B7 , bdr:EV4BE355BD5675DBE6 ;
+        :personName         bdr:NM065CDDEDC69D8B77 , bdr:NM189B33275EFD0950 .
+}

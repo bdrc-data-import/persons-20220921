@@ -1,0 +1,51 @@
+@base          <bdg:P5653> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5653 {
+    bda:P5653  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5653 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "15/P5653.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5653 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A5DAB5A159E8F2F
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM3FC960DEFE485802
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM94D0A5523B615409
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bag ston gzhon nu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE4834608F4A6BABD
+        a                   :Note ;
+        :noteText           "sa skya teacher; master of rong ston"@en .
+    
+    bdr:P5653  a            :Person ;
+        skos:prefLabel      "gzhon nu rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE4834608F4A6BABD ;
+        :personEvent        bdr:EV8A5DAB5A159E8F2F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3FC960DEFE485802 , bdr:NM94D0A5523B615409 ;
+        :personStudentOf    bdr:P4846 ;
+        :personTeacherOf    bdr:P431 .
+}

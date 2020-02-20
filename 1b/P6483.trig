@@ -1,0 +1,67 @@
+@base          <bdg:P6483> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6483 {
+    bda:P6483  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6483 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1b/P6483.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6483 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22C996F4A1686C5D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1720 .
+    
+    bdr:EV7CBE5570FC793009
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4333 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM460BFCDD5BB28883
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshams pa smon lam bzang po/"@bo-x-ewts .
+    
+    bdr:NM9068AF8404075DF9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smon lam bzang po/"@bo-x-ewts .
+    
+    bdr:NMC1313D7273E550B3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gdung yangs bla ma smon lam bzang po/"@bo-x-ewts .
+    
+    bdr:NT5A394A58F6731DFA
+        a                   :Note ;
+        :locationStatement  "pp. 504-513" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nborn in gdung yangs (mgo log)\nwriting: gsol 'debs sogs 'ga' re yod"@en .
+    
+    bdr:NT8642E4241AA59A6E
+        a                   :Note ;
+        :locationStatement  "p. 147" ;
+        :noteSource         bdr:MW20140 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6483  a            :Person ;
+        skos:prefLabel      "smon lam bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A394A58F6731DFA , bdr:NT8642E4241AA59A6E ;
+        :personEvent        bdr:EV22C996F4A1686C5D , bdr:EV7CBE5570FC793009 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM460BFCDD5BB28883 , bdr:NM9068AF8404075DF9 , bdr:NMC1313D7273E550B3 ;
+        :personStudentOf    bdr:P7843 .
+}

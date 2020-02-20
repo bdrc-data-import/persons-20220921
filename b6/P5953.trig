@@ -1,0 +1,65 @@
+@base          <bdg:P5953> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5953 {
+    bda:LGC76FDCA870E5ABD5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-21T15:19:29.086Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5953  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5953 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b6/P5953.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5953 ;
+        adm:logEntry        bda:LGC76FDCA870E5ABD5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12EB10559D0287B0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G210 .
+    
+    bdr:EVB755DCCF3F51622D
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM91FAE32A8ED9C04D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "las tshan pa gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NMFDB5F3C641285A4A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NMFEC2BA8BF12B76D1
+        a                   :PersonTitle ;
+        rdfs:label          "sa skya las tshan pa gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NTCD1661744DF1DA90
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P5953  a            :Person ;
+        skos:prefLabel      "gzhon nu seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCD1661744DF1DA90 ;
+        :personEvent        bdr:EV12EB10559D0287B0 , bdr:EVB755DCCF3F51622D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM91FAE32A8ED9C04D , bdr:NMFDB5F3C641285A4A , bdr:NMFEC2BA8BF12B76D1 ;
+        :personTeacherOf    bdr:P1037 , bdr:P1557 .
+}

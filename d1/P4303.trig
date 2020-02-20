@@ -1,0 +1,76 @@
+@base          <bdg:P4303> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4303 {
+    bda:LGB062AAA720402228
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T06:00:03.812Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4303  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4303 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d1/P4303.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4303 ;
+        adm:logEntry        bda:LGB062AAA720402228 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0033CCB340F51220
+        a                   :PersonBirth ;
+        :onYear             "1283"^^xsd:gYear .
+    
+    bdr:EV0957A0D48AED95C2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3477 .
+    
+    bdr:EV8B141B18ACEC429C
+        a                   :PersonDeath ;
+        :onYear             "1325"^^xsd:gYear .
+    
+    bdr:NMA39FB3CA1C99A574
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMADD938A6BFC25637
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong pa rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT22A816DB47C3AC46
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates given: 1283-1325"@en .
+    
+    bdr:NT4647932EF9BBC0A9
+        a                   :Note ;
+        :locationStatement  "p. 1632" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTC5F1C5FC42BE49D4
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 550" ;
+        :noteSource         bdr:MW22378 ;
+        :noteText           "founds monastery of mkhar steng in gnyal citing the bai ser"@en .
+    
+    bdr:P4303  a            :Person ;
+        skos:prefLabel      "rdo rje rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22A816DB47C3AC46 , bdr:NT4647932EF9BBC0A9 , bdr:NTC5F1C5FC42BE49D4 ;
+        :personEvent        bdr:EV0033CCB340F51220 , bdr:EV0957A0D48AED95C2 , bdr:EV8B141B18ACEC429C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA39FB3CA1C99A574 , bdr:NMADD938A6BFC25637 .
+}

@@ -1,0 +1,75 @@
+@base          <bdg:P9879> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9879 {
+    bda:LG8A4E3FAC4A1E4E0F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T14:34:04.053Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9879  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9879 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "9f/P9879.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9879 ;
+        adm:logEntry        bda:LG8A4E3FAC4A1E4E0F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B1BF90B65330FCF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4694 ;
+        :onYear             "1839"^^xsd:gYear .
+    
+    bdr:EV8AC50031599B1B3F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4652 .
+    
+    bdr:EV92C25AF7F3E45761
+        a                   :PersonDeath ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:NM0B4CBDD5ABD803F3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dpon bla 02"@bo-x-ewts .
+    
+    bdr:NM0BF7BFC08E551316
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon bla 02 blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM1F57D60212823092
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ponla 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMDB0E931937FE5AEF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT18B396F0AEFF4458
+        a                   :Note ;
+        :locationStatement  "p. 228" ;
+        :noteSource         bdr:MW29636 ;
+        :noteText           "biography\ndied at the age of 58 in me sbrul\nhis successor was a ma 'das sprul sku"@en .
+    
+    bdr:P9879  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9888 ;
+        :isRoot             true ;
+        :note               bdr:NT18B396F0AEFF4458 ;
+        :personEvent        bdr:EV4B1BF90B65330FCF , bdr:EV8AC50031599B1B3F , bdr:EV92C25AF7F3E45761 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B4CBDD5ABD803F3 , bdr:NM0BF7BFC08E551316 , bdr:NM1F57D60212823092 , bdr:NMDB0E931937FE5AEF .
+}

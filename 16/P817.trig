@@ -1,0 +1,70 @@
+@base          <bdg:P817> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P817 {
+    bda:LG7C5FC66151960D1B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:09:38.068Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGB462A89FD9EE0C25
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-01T05:48:45.504Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and monastery ri bo che"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P817  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P817 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "16/P817.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P817 ;
+        adm:logEntry        bda:LG7C5FC66151960D1B , bda:LGB462A89FD9EE0C25 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D8A51BD64BEFEF7
+        a                   :PersonDeath ;
+        :onYear             "1532"^^xsd:gYear .
+    
+    bdr:EV76F362767435B939
+        a                   :PersonBirth ;
+        :onYear             "1454"^^xsd:gYear .
+    
+    bdr:EVEA3FF0F93EF3B5F5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G70 .
+    
+    bdr:NM48BD8466154BA53C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jig rten dbang phyug"@bo-x-ewts .
+    
+    bdr:NM5184448A115438B6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag lung pa 'jig rten dbang phyug"@bo-x-ewts .
+    
+    bdr:NT530960E1046491DA
+        a                   :Note ;
+        :noteText           "teacher belonging to the stag lung bka' brgyud pa tradition teaching at ri bo che"@en .
+    
+    bdr:P817  a             :Person ;
+        skos:prefLabel      "'jig rten dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT530960E1046491DA ;
+        :personEvent        bdr:EV5D8A51BD64BEFEF7 , bdr:EV76F362767435B939 , bdr:EVEA3FF0F93EF3B5F5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM48BD8466154BA53C , bdr:NM5184448A115438B6 ;
+        :personTeacherOf    bdr:P2GS1059 .
+}

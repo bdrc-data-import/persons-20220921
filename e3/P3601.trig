@@ -1,0 +1,45 @@
+@base          <bdg:P3601> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3601 {
+    bda:P3601  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3601 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "e3/P3601.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3601 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV469DD8CA187E08D9
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM0A0B7F18F5948ADC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag phu dpal ldan rin chen/"@bo-x-ewts .
+    
+    bdr:NM343FA6898BD4925B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan rin chen/"@bo-x-ewts .
+    
+    bdr:P3601  a            :Person ;
+        skos:prefLabel      "dpal ldan rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV469DD8CA187E08D9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A0B7F18F5948ADC , bdr:NM343FA6898BD4925B ;
+        :personTeacherOf    bdr:P3600 .
+}

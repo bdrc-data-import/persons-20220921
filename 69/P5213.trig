@@ -1,0 +1,50 @@
+@base          <bdg:P5213> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5213 {
+    bda:P5213  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5213 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "69/P5213.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5213 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA5B3321A899E5BA8
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM6F8EB64192E30F43
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar chen blo gros grags pa/"@bo-x-ewts .
+    
+    bdr:NM8025D878CB1B73A5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros grags pa/"@bo-x-ewts .
+    
+    bdr:NT3B31661EBA776D1E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P5213  a            :Person ;
+        skos:prefLabel      "blo gros grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3B31661EBA776D1E ;
+        :personEvent        bdr:EVA5B3321A899E5BA8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6F8EB64192E30F43 , bdr:NM8025D878CB1B73A5 ;
+        :personTeacherOf    bdr:P5202 .
+}

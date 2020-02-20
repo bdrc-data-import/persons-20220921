@@ -1,0 +1,74 @@
+@base          <bdg:P6675> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6675 {
+    bda:LGB6BD006101BBFC9A
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-14T15:10:53.515Z"^^xsd:dateTime ;
+        adm:logMessage      "revised"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGD3E03E8C249C8347
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-03T18:51:19.159Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p7134"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6675  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6675 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "91/P6675.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6675 ;
+        adm:logEntry        bda:LGB6BD006101BBFC9A , bda:LGD3E03E8C249C8347 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P7134 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVBD513E3E42358A46
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1033 ;
+        :onYear             "1835"^^xsd:gYear .
+    
+    bdr:EVD8015B6859DF8596
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G132 .
+    
+    bdr:NM8571B40CB5587CF6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMA5DBA3E6570B61FD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshogs shul bla ma nor bu bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMDCC8A3310DAA8B6D
+        a                   :PersonTitle ;
+        rdfs:label          "sa bcad bla ma nor bu bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT834408854DF95DD0
+        a                   :Note ;
+        :locationStatement  "p. 1-4 (1st group)" ;
+        :noteSource         bdr:MW20240 ;
+        :noteText           "biography;\nbelieved that the post-final -s in tibetan spelling is not needed"@en .
+    
+    bdr:P6675  a            :Person ;
+        skos:prefLabel      "nor bu bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT834408854DF95DD0 ;
+        :personEvent        bdr:EVBD513E3E42358A46 , bdr:EVD8015B6859DF8596 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8571B40CB5587CF6 , bdr:NMA5DBA3E6570B61FD , bdr:NMDCC8A3310DAA8B6D ;
+        :personStudentOf    bdr:P258 , bdr:P264 , bdr:P270 .
+}

@@ -1,0 +1,85 @@
+@base          <bdg:P8537> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8537 {
+    bda:LGC4517A2792838938
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T10:06:09.263Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8537  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8537 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b9/P8537.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8537 ;
+        adm:logEntry        bda:LGC4517A2792838938 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV284793ACC706319A
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV3045717415D0F137
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVC9338B7B918A5B9E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3835 .
+    
+    bdr:EVD9F4701D68D0BFA0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF7F78F907ACB8437
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM06E483F1F2DD0CB1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 07"@bo-x-ewts .
+    
+    bdr:NMB491CFF9F44055AB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan dam pa pad+ma/"@bo-x-ewts .
+    
+    bdr:NMB78C65FED89EC733
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dam pa pad+ma/"@bo-x-ewts .
+    
+    bdr:NT6CEF5E6CD26040D5
+        a                   :Note ;
+        :locationStatement  "p. 334" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographical sketch"@en .
+    
+    bdr:NTEFC29E62C7B679BB
+        a                   :Note ;
+        :noteText           "rnying ma teacher of the dpal yul tradition; he was a student of mkhan po ngag chung"@en .
+    
+    bdr:P8537  a            :Person ;
+        skos:prefLabel      "dam pa pad+ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6CEF5E6CD26040D5 , bdr:NTEFC29E62C7B679BB ;
+        :personEvent        bdr:EV284793ACC706319A , bdr:EV3045717415D0F137 , bdr:EVC9338B7B918A5B9E , bdr:EVD9F4701D68D0BFA0 , bdr:EVF7F78F907ACB8437 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06E483F1F2DD0CB1 , bdr:NMB491CFF9F44055AB , bdr:NMB78C65FED89EC733 ;
+        :personStudentOf    bdr:P724 ;
+        :personTeacherOf    bdr:P10631 .
+}

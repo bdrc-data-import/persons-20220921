@@ -1,0 +1,54 @@
+@base          <bdg:P8485> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8485 {
+    bda:LG4E53920B8CEFF2B3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T14:20:47.018Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8485  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8485 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "53/P8485.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8485 ;
+        adm:logEntry        bda:LG4E53920B8CEFF2B3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDD64D9127F1C22C2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2800 ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:NM5CD5F1402E97F51F
+        a                   :PersonPersonalName ;
+        rdfs:label          "nor bu tshe ring /"@bo-x-ewts .
+    
+    bdr:NTB30F283AE46DD1A6
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW27021 ;
+        :noteText           "biodata and writings"@en .
+    
+    bdr:P8485  a            :Person ;
+        skos:prefLabel      "nor bu tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB30F283AE46DD1A6 ;
+        :personEvent        bdr:EVDD64D9127F1C22C2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5CD5F1402E97F51F .
+}

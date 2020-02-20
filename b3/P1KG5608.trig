@@ -1,0 +1,75 @@
+@base          <bdg:P1KG5608> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5608 {
+    bda:LG0E4C5390F3CD3E51
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-13T15:01:15.135Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth date"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG86C44A4DA02FEE3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-14T12:25:15.452Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGC270EC6E92C41F69
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-13T10:23:10.329Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG5608  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5608 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b3/P1KG5608.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5608 ;
+        adm:logEntry        bda:LG0E4C5390F3CD3E51 , bda:LG86C44A4DA02FEE3D , bda:LGC270EC6E92C41F69 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E84BD9D01CAF005
+        a                   :PersonBirth ;
+        :onYear             "1951"^^xsd:gYear .
+    
+    bdr:NM85AC25F9ED48F7C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba dar rgyas/"@bo-x-ewts .
+    
+    bdr:NME8C6E96601C4453C
+        a                   :PersonPersonalName ;
+        rdfs:label          "zla ba dar rgyas, spo rong /"@bo-x-ewts .
+    
+    bdr:NMF590908D69357831
+        a                   :PersonPersonalName ;
+        rdfs:label          "dawa dhargye/"@bo-x-ewts .
+    
+    bdr:NMF8B43E999A686508
+        a                   :PersonPersonalName ;
+        rdfs:label          "spo rong zla ba dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTD849E9C08DFCBED5
+        a                   :Note ;
+        :noteText           "modern tibetan scholar from india"@en .
+    
+    bdr:P1KG5608  a         :Person ;
+        skos:prefLabel      "zla ba dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD849E9C08DFCBED5 ;
+        :personEvent        bdr:EV3E84BD9D01CAF005 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM85AC25F9ED48F7C7 , bdr:NME8C6E96601C4453C , bdr:NMF590908D69357831 , bdr:NMF8B43E999A686508 .
+}

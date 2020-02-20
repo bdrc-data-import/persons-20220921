@@ -1,0 +1,58 @@
+@base          <bdg:P8720> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8720 {
+    bda:LGE2FD045007426F62
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-11T03:56:05.765Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P00EGS101795"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P8720  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8720 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "44/P8720.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8720 ;
+        adm:logEntry        bda:LGE2FD045007426F62 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P00EGS101795 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV4B57F98B2DF13D91
+        a                   :PersonDeath ;
+        :onYear             "1217"^^xsd:gYear .
+    
+    bdr:NMB865697CA7D7F5D7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal ba ten sne/"@bo-x-ewts .
+    
+    bdr:NMFC57E9664F294437
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ten sne/"@bo-x-ewts .
+    
+    bdr:NT9CB46DB62E47C49C
+        a                   :Note ;
+        :locationStatement  "p. 2285" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1217. rgyal ba ten sne gshegs"@en .
+    
+    bdr:P8720  a            :Person ;
+        skos:prefLabel      "ten sne/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9CB46DB62E47C49C ;
+        :personEvent        bdr:EV4B57F98B2DF13D91 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB865697CA7D7F5D7 , bdr:NMFC57E9664F294437 .
+}

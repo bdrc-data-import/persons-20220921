@@ -1,0 +1,86 @@
+@base          <bdg:P547> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P547 {
+    bda:LGA4D0440A2DE277F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T11:41:00.374Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and changed brith place"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P547  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P547 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "24/P547.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P547 ;
+        adm:logEntry        bda:LGA4D0440A2DE277F2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B1D03B0C1FF4ED0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1781"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV0E7F51B36BD2D89C
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1784"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV5279322C5F01A216
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV8720B6375635ABED
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G742 ;
+        :onYear             "1729"^^xsd:gYear .
+    
+    bdr:EVF4E7403AF83DA9FF
+        a                   :PersonDeath ;
+        :onYear             "1786"^^xsd:gYear .
+    
+    bdr:NM7A47A072C574F0C8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 15"@bo-x-ewts .
+    
+    bdr:NM80EA56DB9320E80E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 15 kun bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME4F7E84D20706852
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT6F93BA671FD536F1
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1781-1784.\nPraised as the best grammar and literary student of Rje Mkhan-po Kun-dga'-rgya-mtsho.\nRetired from the abbacy because of illness."@en .
+    
+    bdr:NTC1698C65D6F81797
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P547  a             :Person ;
+        skos:prefLabel      "kun bzang rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F93BA671FD536F1 , bdr:NTC1698C65D6F81797 ;
+        :personEvent        bdr:EV0B1D03B0C1FF4ED0 , bdr:EV0E7F51B36BD2D89C , bdr:EV5279322C5F01A216 , bdr:EV8720B6375635ABED , bdr:EVF4E7403AF83DA9FF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7A47A072C574F0C8 , bdr:NM80EA56DB9320E80E , bdr:NME4F7E84D20706852 ;
+        :personStudentOf    bdr:P528 , bdr:P530 , bdr:P538 ;
+        :personTeacherOf    bdr:P555 , bdr:P844 .
+}

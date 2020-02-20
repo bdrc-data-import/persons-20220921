@@ -1,0 +1,53 @@
+@base          <bdg:P3052> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3052 {
+    bda:P3052  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3052 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "22/P3052.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3052 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B2642366A477F8F
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM38C891EC526ECA31
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMCF86C7B0040690AC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal 'byor gling pa ngag dbang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT992731B31AEAE3CD
+        a                   :Note ;
+        :locationStatement  "f. 35r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher involved in the transmission of prajnaparamita texts"@en .
+    
+    bdr:P3052  a            :Person ;
+        skos:prefLabel      "ngag dbang rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT992731B31AEAE3CD ;
+        :personEvent        bdr:EV5B2642366A477F8F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM38C891EC526ECA31 , bdr:NMCF86C7B0040690AC ;
+        :personStudentOf    bdr:P3050 , bdr:P3051 , bdr:P3861 ;
+        :personTeacherOf    bdr:P3053 , bdr:P3256 .
+}

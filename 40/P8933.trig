@@ -1,0 +1,66 @@
+@base          <bdg:P8933> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8933 {
+    bda:LG1F185B580EDD1E83
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:37:56.366Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8933  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8933 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "40/P8933.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8933 ;
+        adm:logEntry        bda:LG1F185B580EDD1E83 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5FAB6A373DE3F5EC
+        a                   :PersonDeath ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:EVFC335E37E0D9F5DF
+        a                   :PersonBirth ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:NM4BB4D6A1E89C669F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' mkhas grub dbang phyug"@bo-x-ewts .
+    
+    bdr:NMC1E5D39E226153C7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 05 kun dga' mkhas grub dbang phyug"@bo-x-ewts .
+    
+    bdr:NMCBC38669DAE70F67
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang don ldan dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NT0874FAAD2434D8BA
+        a                   :Note ;
+        :locationStatement  "pp. 207-217" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: 'dzi gzhung rab kha"@en .
+    
+    bdr:P8933  a            :Person ;
+        skos:prefLabel      "kun dga' mkhas grub dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0874FAAD2434D8BA ;
+        :personEvent        bdr:EV5FAB6A373DE3F5EC , bdr:EVFC335E37E0D9F5DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4BB4D6A1E89C669F , bdr:NMC1E5D39E226153C7 , bdr:NMCBC38669DAE70F67 ;
+        :personTeacherOf    bdr:P8955 .
+}

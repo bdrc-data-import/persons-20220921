@@ -1,0 +1,63 @@
+@base          <bdg:P2445> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2445 {
+    bda:LG46FC662B37A2CDA0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-22T17:36:07.802Z"^^xsd:dateTime ;
+        adm:logMessage      "edited withdrawn record; deleted person associations, notes, etc. all in P10313"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG80AC3766AC94CB3C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-05T14:52:54.769Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P10313"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2445  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2445 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "04/P2445.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2445 ;
+        adm:logEntry        bda:LG46FC662B37A2CDA0 , bda:LG80AC3766AC94CB3C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P10313 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV7C8608A796E1C930
+        a                   :PersonDeath ;
+        :onYear             "1683"^^xsd:gYear .
+    
+    bdr:EV999EBE7E35AD45CA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1124 ;
+        :onYear             "1618"^^xsd:gYear .
+    
+    bdr:NM2BF61311228C2F6F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT5D7F771256A88630
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P10313"@en .
+    
+    bdr:P2445  a            :Person ;
+        skos:prefLabel      "blo bzang rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5D7F771256A88630 ;
+        :personEvent        bdr:EV7C8608A796E1C930 , bdr:EV999EBE7E35AD45CA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2BF61311228C2F6F .
+}

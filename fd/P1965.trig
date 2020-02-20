@@ -1,0 +1,61 @@
+@base          <bdg:P1965> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1965 {
+    bda:LG52D7975C0AE6DAD9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:49:12.275Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1965  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1965 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fd/P1965.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1965 ;
+        adm:logEntry        bda:LG52D7975C0AE6DAD9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3DB5676C5F8D4CBA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EV9547B6B828E0C798
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM2D87FF49462A15E9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bri gung mkhan chen kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFABD98A2C3FDCE98
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6CAD6ED4913A553A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Bri-gung Bka'-brgyud"@en .
+    
+    bdr:P1965  a            :Person ;
+        skos:prefLabel      "kun dga' rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6CAD6ED4913A553A ;
+        :personEvent        bdr:EV3DB5676C5F8D4CBA , bdr:EV9547B6B828E0C798 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D87FF49462A15E9 , bdr:NMFABD98A2C3FDCE98 ;
+        :personStudentOf    bdr:P466 .
+}

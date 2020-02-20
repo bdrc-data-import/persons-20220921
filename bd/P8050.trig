@@ -1,0 +1,68 @@
+@base          <bdg:P8050> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8050 {
+    bda:LGC4E367AA3FC9C77F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-15T13:55:22.334Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation relation"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGCFE9BBDAD2EEDF52
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-09-30T15:49:00.41Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P8050  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8050 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "bd/P8050.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8050 ;
+        adm:logEntry        bda:LGC4E367AA3FC9C77F , bda:LGCFE9BBDAD2EEDF52 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB8E5D10187179AC5
+        a                   :PersonDeath ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:EVDF5BEAB8CBA40840
+        a                   :PersonBirth ;
+        :onYear             "1871"^^xsd:gYear .
+    
+    bdr:NM14538A6292DC1677
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMA5C0D2C294BD9F61
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtsi ke mchog gling 02 dkon mchog 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMA915A08551629EEA
+        a                   :PersonTitle ;
+        rdfs:label          "rtsi ke mchog sprul dkon mchog 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMBDE6F816F4A3FD20
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rtsi ke mchog gling 02"@bo-x-ewts .
+    
+    bdr:P8050  a            :Person ;
+        skos:prefLabel      "dkon mchog 'gyur med/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P564 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVB8E5D10187179AC5 , bdr:EVDF5BEAB8CBA40840 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14538A6292DC1677 , bdr:NMA5C0D2C294BD9F61 , bdr:NMA915A08551629EEA , bdr:NMBDE6F816F4A3FD20 .
+}

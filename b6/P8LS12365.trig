@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12365> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12365 {
+    bda:LG8059B86D87638642
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T10:20:40.384Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12365  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12365 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b6/P8LS12365.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12365 ;
+        adm:logEntry        bda:LG8059B86D87638642 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BA071951343FB46
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EV958EE7A6A3954F66
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1922"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM456490ABB3D5C3F6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "do tshe'i dge slong dkon mchog sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM9DC10BC8C64764AE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 26"@bo-x-ewts .
+    
+    bdr:NMD2FD7FBDEB8350F1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog sbyin pa/"@bo-x-ewts .
+    
+    bdr:NT4BD9531BA60D2E1E
+        a                   :Note ;
+        :locationStatement  "p. 184-185" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12365  a        :Person ;
+        skos:prefLabel      "dkon mchog sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4BD9531BA60D2E1E ;
+        :personEvent        bdr:EV1BA071951343FB46 , bdr:EV958EE7A6A3954F66 ;
+        :personName         bdr:NM456490ABB3D5C3F6 , bdr:NM9DC10BC8C64764AE , bdr:NMD2FD7FBDEB8350F1 .
+}

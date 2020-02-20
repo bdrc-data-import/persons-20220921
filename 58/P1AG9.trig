@@ -1,0 +1,96 @@
+@base          <bdg:P1AG9> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG9 {
+    bda:LG7A0163E16A6B6B2A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-02T15:59:36.303Z"^^xsd:dateTime ;
+        adm:logMessage      "added Treasury of Lives link and note"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG9  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG9 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "58/P1AG9.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG9 ;
+        adm:logEntry        bda:LG7A0163E16A6B6B2A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60954C77A78E162F
+        a                   :PersonLeavesSeat ;
+        :eventWhere         bdr:G434 ;
+        :onYear             "1267"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8870B9524744A1E6
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G434 ;
+        :notAfter           "1235"^^xsd:gYear ;
+        :notBefore          "1234"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVAE92D7AD0CED54A7
+        a                   :PersonDeath ;
+        :onYear             "1267"^^xsd:gYear .
+    
+    bdr:EVFAE4EC397693A45D
+        a                   :PersonBirth ;
+        :onYear             "1203"^^xsd:gYear .
+    
+    bdr:NM06C91D57A0B819EC
+        a                   :PersonTitle ;
+        rdfs:label          "gdan sa mtshil gdan rabs 05 grags pa brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NM360128EE2AEE06A2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Drakpa Tsondru"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM72DDB064B69B23E1
+        a                   :PersonTitle ;
+        rdfs:label          "phag gru rgyal ba/"@bo-x-ewts .
+    
+    bdr:NM7D06F5B1F0D99100
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NM8455BDAAFD77742C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gdan sa mthil gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NM94249395DA19EA04
+        a                   :PersonTitle ;
+        rdfs:label          "Pakdru Gyelwa"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME43B52A7F8D429EC
+        a                   :PersonTitle ;
+        rdfs:label          "phag gru spyan snga rgyal ba thog brdugs pa/"@bo-x-ewts .
+    
+    bdr:NTB97F3395EE8C2E8D
+        a                   :Note ;
+        :locationStatement  "pp. 357-358" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG9  a            :Person ;
+        skos:prefLabel      "grags pa brtson 'grus/"@bo-x-ewts ;
+        :hasUncle           bdr:P132 ;
+        :isRoot             true ;
+        :note               bdr:NTB97F3395EE8C2E8D ;
+        :personEvent        bdr:EV60954C77A78E162F , bdr:EV8870B9524744A1E6 , bdr:EVAE92D7AD0CED54A7 , bdr:EVFAE4EC397693A45D ;
+        :personName         bdr:NM06C91D57A0B819EC , bdr:NM360128EE2AEE06A2 , bdr:NM72DDB064B69B23E1 , bdr:NM7D06F5B1F0D99100 , bdr:NM8455BDAAFD77742C , bdr:NM94249395DA19EA04 , bdr:NME43B52A7F8D429EC ;
+        :personStudentOf    bdr:P131 , bdr:P132 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drakpa-Tsondru/13437"^^xsd:anyURI .
+}

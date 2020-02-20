@@ -1,0 +1,58 @@
+@base          <bdg:P5705> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5705 {
+    bda:LG1D0AA44417FD0FBF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T10:01:37.397Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5705  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5705 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d2/P5705.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5705 ;
+        adm:logEntry        bda:LG1D0AA44417FD0FBF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39C514280DBD5C42
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM350E78954DE6060E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas btsun yon tan rin chen/"@bo-x-ewts .
+    
+    bdr:NM656F5666C6D61CC8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rin chen/"@bo-x-ewts .
+    
+    bdr:NTFE36DF8909BC4ABE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Shangs-pa Bka'-brgyud-pa transmissions"@en .
+    
+    bdr:P5705  a            :Person ;
+        skos:prefLabel      "yon tan rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFE36DF8909BC4ABE ;
+        :personEvent        bdr:EV39C514280DBD5C42 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM350E78954DE6060E , bdr:NM656F5666C6D61CC8 ;
+        :personStudentOf    bdr:P5709 ;
+        :personTeacherOf    bdr:P5704 .
+}

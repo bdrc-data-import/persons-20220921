@@ -1,0 +1,80 @@
+@base          <bdg:P6051> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6051 {
+    bda:LG02798E66992D7AAE
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-12-21T10:48:47.375Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation line"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE49DBF930416691C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T09:42:10.119Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note (see C2CN10997)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6051  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6051 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3c/P6051.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6051 ;
+        adm:logEntry        bda:LG02798E66992D7AAE , bda:LGE49DBF930416691C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9E4A868533E45975
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1326 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM855F5DEEFB7AA48F
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos nyid rgya mtsho 06 'jam dpal bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC63985288BF08053
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos nyid rgya mtsho 06"@bo-x-ewts .
+    
+    bdr:NMD4EA8E14547FEF75
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3D16DDFC89246268
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:NTA1285522C86968B6
+        a                   :Note ;
+        :locationStatement  "p. 137" .
+    
+    bdr:NTC52BE023E5598FA8
+        a                   :Note ;
+        :noteText           "Born into the lineage of Rig-'dzin Bdud-'dul-rdo-rje."@en .
+    
+    bdr:NTCE8B013606BB6786
+        a                   :Note ;
+        :noteText           "'di 'khrungs sa nya gshis gser g.yu tshang yin par gsal ba khams kyi sa cha zhib cha gang yin rgyu cha rnyed rim bzhin kha skongs dgos rgyu/"@bo-x-ewts .
+    
+    bdr:P6051  a            :Person ;
+        skos:prefLabel      "'jam dpal bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6052 ;
+        :isRoot             true ;
+        :note               bdr:NT3D16DDFC89246268 , bdr:NTA1285522C86968B6 , bdr:NTC52BE023E5598FA8 , bdr:NTCE8B013606BB6786 ;
+        :personEvent        bdr:EV9E4A868533E45975 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM855F5DEEFB7AA48F , bdr:NMC63985288BF08053 , bdr:NMD4EA8E14547FEF75 .
+}

@@ -1,0 +1,88 @@
+@base          <bdg:P7077> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7077 {
+    bda:LG877FFCB119260246
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-18T14:09:41.205Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7077  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7077 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "44/P7077.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7077 ;
+        adm:logEntry        bda:LG877FFCB119260246 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C2133C2CA67D5CC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3091 .
+    
+    bdr:EV6CA1698F00A63BC4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7217D8DB01876C1F
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVBBE6F668EE64D45A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NM4B61BD52E4A948B0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar rtse chos rje blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NM4FA5E267007D2B39
+        a                   :PersonTitle ;
+        rdfs:label          "rnga ba sgo mang khri rabs 04 blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NM8BC72FC1AE65124B
+        a                   :PersonTitle ;
+        rdfs:label          "mtshe blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NMD393A77A591B6DC0
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 04"@bo-x-ewts .
+    
+    bdr:NMF4F9FFC0DC3A755C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NTBE88339ACEFAFC61
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "born in khang gsar\ntravelled to central tibet and enrolled in dga' ldan\nrose to become abbot of shar rtse and mtshan zhabs of the 8th dalai lama\nbecame the abbot of a 'dus ya mgo dgon gsang chen bkra shis gling\nand rnga ba sgo mang dgon"@en .
+    
+    bdr:NTE974F5A2374D6C23
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW21017 .
+    
+    bdr:P7077  a            :Person ;
+        skos:prefLabel      "blo bzang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBE88339ACEFAFC61 , bdr:NTE974F5A2374D6C23 ;
+        :personEvent        bdr:EV1C2133C2CA67D5CC , bdr:EV6CA1698F00A63BC4 , bdr:EV7217D8DB01876C1F , bdr:EVBBE6F668EE64D45A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B61BD52E4A948B0 , bdr:NM4FA5E267007D2B39 , bdr:NM8BC72FC1AE65124B , bdr:NMD393A77A591B6DC0 , bdr:NMF4F9FFC0DC3A755C .
+}

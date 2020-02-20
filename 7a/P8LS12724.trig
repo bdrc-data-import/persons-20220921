@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12724> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12724 {
+    bda:LG07EAB19400754658
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-14T15:31:12.014Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGAFB739441248C8AC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGF0CB9D96F0576711
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-07T09:32:25.576Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12724  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12724 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7a/P8LS12724.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12724 ;
+        adm:logEntry        bda:LG07EAB19400754658 , bda:LGAFB739441248C8AC , bda:LGF0CB9D96F0576711 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDB1F99B3353F5FC1
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12901 .
+    
+    bdr:NM3B16CA4B58F3FC34
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge slong longs sku/"@bo-x-ewts .
+    
+    bdr:NMAF3EE9D16D8B867F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lha khang gong zhabs drung sprul sku 01"@bo-x-ewts .
+    
+    bdr:NMB4CFC4A76FEA25B3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lhakang Gong Zhabdrung Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT6E275E1CBC9AF793
+        a                   :Note ;
+        :locationStatement  "p. 306" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "incarnation lineage from the e area of central tibet; as yet unknown sectarial affiliation\ne lha khang gong zhabs drung gi skye phreng\n\n1) dang po ni/ dge slong longs sku/ e khams pa sdings su 'khrungs/"@en .
+    
+    bdr:P8LS12724  a        :Person ;
+        skos:prefLabel      "dge slong longs sku/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E275E1CBC9AF793 ;
+        :personEvent        bdr:EVDB1F99B3353F5FC1 ;
+        :personName         bdr:NM3B16CA4B58F3FC34 , bdr:NMAF3EE9D16D8B867F , bdr:NMB4CFC4A76FEA25B3 .
+}

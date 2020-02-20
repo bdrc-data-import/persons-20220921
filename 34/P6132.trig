@@ -1,0 +1,64 @@
+@base          <bdg:P6132> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6132 {
+    bda:LG0BD63175FDAD1BD9
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-11-15T08:45:48.878Z"^^xsd:dateTime ;
+        adm:logMessage      "changed order of names, added seat and son"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6132  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6132 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "34/P6132.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6132 ;
+        adm:logEntry        bda:LG0BD63175FDAD1BD9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F2629234815AC83
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2CN10930 .
+    
+    bdr:EV8834300EF4E30766
+        a                   :PersonDeath ;
+        :onYear             "1834"^^xsd:gYear .
+    
+    bdr:EV905354BAD6544A72
+        a                   :PersonBirth ;
+        :onYear             "1784"^^xsd:gYear .
+    
+    bdr:NM175962F8DFEB1CB2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi 'gyur bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM63FEB610B477E92E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo ring pa mi 'gyur bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMA49432A434E55AFE
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon mi 'gyur bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:P6132  a            :Person ;
+        skos:prefLabel      "mi 'gyur bsod nams dpal 'byor/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P4592 ;
+        :hasSon             bdr:P2LS193 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1F2629234815AC83 , bdr:EV8834300EF4E30766 , bdr:EV905354BAD6544A72 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM175962F8DFEB1CB2 , bdr:NM63FEB610B477E92E , bdr:NMA49432A434E55AFE .
+}

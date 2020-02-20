@@ -1,0 +1,54 @@
+@base          <bdg:P1KG20972> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG20972 {
+    bda:LG773BD9DE4A97FD3C
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-01-07T10:05:48.975Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG20972  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG20972 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "09/P1KG20972.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG20972 ;
+        adm:logEntry        bda:LG773BD9DE4A97FD3C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE01342AA1D2EE4B5
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NM49E1EE9917161C0C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gene sharp"@en .
+    
+    bdr:NMF8A6DFFFFECA7652
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sharp, gene"@en .
+    
+    bdr:NT20CBBC91C3446684
+        a                   :Note ;
+        :noteSource         bdr:MW1KG20957 .
+    
+    bdr:P1KG20972  a        :Person ;
+        skos:prefLabel      "gene sharp"@en ;
+        :isRoot             true ;
+        :note               bdr:NT20CBBC91C3446684 ;
+        :personEvent        bdr:EVE01342AA1D2EE4B5 ;
+        :personName         bdr:NM49E1EE9917161C0C , bdr:NMF8A6DFFFFECA7652 .
+}

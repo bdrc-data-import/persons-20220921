@@ -1,0 +1,76 @@
+@base          <bdg:P628> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P628 {
+    bda:LGEC5ED726E37A582F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-29T14:43:59.684Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGFDD7F19F64F2FF39
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-25T17:04:36.096Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P628  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P628 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "6e/P628.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P628 ;
+        adm:logEntry        bda:LGEC5ED726E37A582F , bda:LGFDD7F19F64F2FF39 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEE98407ADFFC71D0
+        a                   :PersonDeath ;
+        :onYear             "1303"^^xsd:gYear .
+    
+    bdr:EVFCB9A89054DCFD3F
+        a                   :PersonBirth ;
+        :onYear             "1243"^^xsd:gYear .
+    
+    bdr:NM85D53146E8BA9547
+        a                   :PersonPrimaryName ;
+        rdfs:label          "me long rdo rje/"@bo-x-ewts .
+    
+    bdr:NMB7D7C2429C2E971E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub thob me long rdo rje/"@bo-x-ewts .
+    
+    bdr:NTA1E607940EB17C5F
+        a                   :Note ;
+        :locationStatement  "230" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n\nAn important master in the transmission of the man ngag sde of rdzogs pa chen po."@en .
+    
+    bdr:NTC0AE38147AE0DC1B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P628  a             :Person ;
+        skos:prefLabel      "me long rdo rje/"@bo-x-ewts ;
+        :hasFather          bdr:P2JM158 ;
+        :hasMother          bdr:P2JM159 ;
+        :isRoot             true ;
+        :note               bdr:NTA1E607940EB17C5F , bdr:NTC0AE38147AE0DC1B ;
+        :personEvent        bdr:EVEE98407ADFFC71D0 , bdr:EVFCB9A89054DCFD3F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM85D53146E8BA9547 , bdr:NMB7D7C2429C2E971E ;
+        :personStudentOf    bdr:P1021 , bdr:P2JM160 ;
+        :personTeacherOf    bdr:P2349 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Melong-Dorje/8857"^^xsd:anyURI .
+}

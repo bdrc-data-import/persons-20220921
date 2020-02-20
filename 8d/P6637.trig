@@ -1,0 +1,69 @@
+@base          <bdg:P6637> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6637 {
+    bda:LG167761278AA3FEC7
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-21T17:10:02.745Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGED981693C66EEDB4
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-04-21T12:09:14.951Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected birth date"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6637  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6637 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8d/P6637.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6637 ;
+        adm:logEntry        bda:LG167761278AA3FEC7 , bda:LGED981693C66EEDB4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0EA42FB81C1DC278
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2333 ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:NM1872FCA680B9CFAD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring bkra shis/"@bo-x-ewts .
+    
+    bdr:NM728ED79252B0FEC6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a sngags tshe ring bkra shis/"@bo-x-ewts .
+    
+    bdr:NT00C4FFE5F6FB741C
+        a                   :Note ;
+        :locationStatement  "p. 101" ;
+        :noteSource         bdr:MW30454 ;
+        :noteText           "modern tibetan poet"@en .
+    
+    bdr:NT11A8CF5C2C273E9E
+        a                   :Note ;
+        :locationStatement  "p. 68" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P6637  a            :Person ;
+        skos:prefLabel      "tshe ring bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00C4FFE5F6FB741C , bdr:NT11A8CF5C2C273E9E ;
+        :personEvent        bdr:EV0EA42FB81C1DC278 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1872FCA680B9CFAD , bdr:NM728ED79252B0FEC6 .
+}

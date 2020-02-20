@@ -1,0 +1,61 @@
+@base          <bdg:P2699> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2699 {
+    bda:LGAAFE23FAE8B2374C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T16:58:11.63Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2699  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2699 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b0/P2699.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2699 ;
+        adm:logEntry        bda:LGAAFE23FAE8B2374C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C77FDE95CFDAD66
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVBA59C610FB1EF456
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM26CB4498BE40BC37
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med tshe nor/"@bo-x-ewts .
+    
+    bdr:NM8017E39717F66A3C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phyag mdzod 'gyur med tshe nor/"@bo-x-ewts .
+    
+    bdr:NTD9AE7386256194AF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Smin-grol-gling Lho-gter"@en .
+    
+    bdr:P2699  a            :Person ;
+        skos:prefLabel      "'gyur med tshe nor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD9AE7386256194AF ;
+        :personEvent        bdr:EV8C77FDE95CFDAD66 , bdr:EVBA59C610FB1EF456 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM26CB4498BE40BC37 , bdr:NM8017E39717F66A3C ;
+        :personTeacherOf    bdr:P2697 .
+}

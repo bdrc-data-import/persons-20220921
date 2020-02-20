@@ -1,0 +1,82 @@
+@base          <bdg:P8911> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8911 {
+    bda:LG07C3995706E2DCB6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T15:12:01.706Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG10F1A430FC611D49
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG228AB45C1BA824D1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T09:57:21.1Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8911  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8911 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8a/P8911.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8911 ;
+        adm:logEntry        bda:LG07C3995706E2DCB6 , bda:LG10F1A430FC611D49 , bda:LG228AB45C1BA824D1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV05E2F34DC426CD44
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:EVC86C1979E0403CDC
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM5880B7E003B12290
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nus ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NM7E791E0A054C5997
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Tsechu 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMAA37102478E007B7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang tshes bcu 03 nus ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF0FD94B36C5574A0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang tshes bcu 03"@bo-x-ewts .
+    
+    bdr:NT92C3682BB37CA2C3
+        a                   :Note ;
+        :locationStatement  "pp. 163-164" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: mkha' ras"@en .
+    
+    bdr:P8911  a            :Person ;
+        skos:prefLabel      "nus ldan rdo rje/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8910 ;
+        :isRoot             true ;
+        :note               bdr:NT92C3682BB37CA2C3 ;
+        :personEvent        bdr:EV05E2F34DC426CD44 , bdr:EVC86C1979E0403CDC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5880B7E003B12290 , bdr:NM7E791E0A054C5997 , bdr:NMAA37102478E007B7 , bdr:NMF0FD94B36C5574A0 .
+}

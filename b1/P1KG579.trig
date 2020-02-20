@@ -1,0 +1,62 @@
+@base          <bdg:P1KG579> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG579 {
+    bda:LG2209CD0F55AF17C8
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-15T10:31:50.879Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG266D90CF21DEF6DC
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-15T14:06:31.405Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG579  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG579 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b1/P1KG579.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG579 ;
+        adm:logEntry        bda:LG2209CD0F55AF17C8 , bda:LG266D90CF21DEF6DC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE58DDA57D594370B
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMD8FE2CE5B138A8EE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring mtsho/"@bo-x-ewts .
+    
+    bdr:NMDCA5AB05D6AE87F7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring 'tsho/"@bo-x-ewts .
+    
+    bdr:NTB4AFCE75E30A306C
+        a                   :Note ;
+        :noteSource         bdr:MW1KG577 ;
+        :noteText           "co-author of"@en .
+    
+    bdr:P1KG579  a          :Person ;
+        skos:prefLabel      "tshe ring 'tsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB4AFCE75E30A306C ;
+        :personEvent        bdr:EVE58DDA57D594370B ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NMD8FE2CE5B138A8EE , bdr:NMDCA5AB05D6AE87F7 .
+}

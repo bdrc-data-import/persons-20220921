@@ -1,0 +1,48 @@
+@base          <bdg:P6602> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6602 {
+    bda:P6602  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6602 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d4/P6602.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6602 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2B12937DF7F910C8
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVB9551F2BDF82D0CB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2270 .
+    
+    bdr:NM6846ADCAA365C254
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen kun dga' bkra shis/"@bo-x-ewts .
+    
+    bdr:NM932E5292535716E5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bkra shis/"@bo-x-ewts .
+    
+    bdr:P6602  a            :Person ;
+        skos:prefLabel      "kun dga' bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV2B12937DF7F910C8 , bdr:EVB9551F2BDF82D0CB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6846ADCAA365C254 , bdr:NM932E5292535716E5 .
+}

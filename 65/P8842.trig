@@ -1,0 +1,57 @@
+@base          <bdg:P8842> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8842 {
+    bda:LG128CD8F817A64AD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-02-20T12:04:07.268Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en .
+    
+    bda:LG2A584E30EB21F81D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-13T17:39:39.746Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P8842  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8842 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "65/P8842.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8842 ;
+        adm:logEntry        bda:LG128CD8F817A64AD4 , bda:LG2A584E30EB21F81D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV259EB14FE8DCCB92
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMB1F4FD30E30D264F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po rig 'dzin rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC210ED903460B203
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin rdo rje/"@bo-x-ewts .
+    
+    bdr:P8842  a            :Person ;
+        skos:prefLabel      "rig 'dzin rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV259EB14FE8DCCB92 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB1F4FD30E30D264F , bdr:NMC210ED903460B203 ;
+        :personStudentOf    bdr:P6036 , bdr:P748 .
+}

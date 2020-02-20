@@ -1,0 +1,77 @@
+@base          <bdg:P6114> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6114 {
+    bda:LG060A8A4E852FB156
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-09T16:12:08.946Z"^^xsd:dateTime ;
+        adm:logMessage      "added student info."@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG6C1A9DEB0DAAFFB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-01T12:38:46.021Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad and names"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG73B57189C6B29B51
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-07-11T11:03:11.682Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6114  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6114 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "58/P6114.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6114 ;
+        adm:logEntry        bda:LG060A8A4E852FB156 , bda:LG6C1A9DEB0DAAFFB1 , bda:LG73B57189C6B29B51 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4FA88EE54FACB695
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM21718E4B39CB15E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6A8FA6A5F6040B17
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sngags smyon blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6BCFEB3C6E860A30
+        a                   :PersonOtherName ;
+        rdfs:label          "d+hI s+wa ra samudra"@sa-alalc97 .
+    
+    bdr:NMDFC2AA38EF304BCC
+        a                   :PersonSecretInitiatoryName ;
+        rdfs:label          "che mchog 'dus pa rtsal/"@bo-x-ewts .
+    
+    bdr:NT429FE614740D894D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Smin-grol-gling Lho-gter"@en .
+    
+    bdr:P6114  a            :Person ;
+        skos:prefLabel      "blo gsal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT429FE614740D894D ;
+        :personEvent        bdr:EV4FA88EE54FACB695 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM21718E4B39CB15E9 , bdr:NM6A8FA6A5F6040B17 , bdr:NM6BCFEB3C6E860A30 , bdr:NMDFC2AA38EF304BCC ;
+        :personTeacherOf    bdr:P675 .
+}

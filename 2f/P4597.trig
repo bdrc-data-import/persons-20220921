@@ -1,0 +1,54 @@
+@base          <bdg:P4597> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4597 {
+    bda:P4597  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4597 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2f/P4597.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4597 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A6DE565EF48D573
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVBD639F1496E20F3A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:NM765CFAC1BBAF093B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas dbang blo bzang dge legs/"@bo-x-ewts .
+    
+    bdr:NMA183E1B82FE45D8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dge legs/"@bo-x-ewts .
+    
+    bdr:NT02E7DC5823A99836
+        a                   :Note ;
+        :noteText           "dge lugs teacher of the 17th cent."@en .
+    
+    bdr:P4597  a            :Person ;
+        skos:prefLabel      "blo bzang dge legs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT02E7DC5823A99836 ;
+        :personEvent        bdr:EV1A6DE565EF48D573 , bdr:EVBD639F1496E20F3A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM765CFAC1BBAF093B , bdr:NMA183E1B82FE45D8D ;
+        :personTeacherOf    bdr:P104 .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P913> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P913 {
+    bda:LG0018179012F52312
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:41:09.287Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG7A1F4481DE134B4A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:11:57.333Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE83CE8ED1063B75E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T11:30:48.663Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P913  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P913 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "27/P913.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P913 ;
+        adm:logEntry        bda:LG0018179012F52312 , bda:LG7A1F4481DE134B4A , bda:LGE83CE8ED1063B75E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8AFD12F3E7245CF1
+        a                   :PersonBirth ;
+        :onYear             "1200"^^xsd:gYear .
+    
+    bdr:EVA703C7020CDCA49B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EVF35AB6B7158C9CA8
+        a                   :PersonDeath ;
+        :onYear             "1266"^^xsd:gYear .
+    
+    bdr:NM7DBF7682132DCAE7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NMD86E59169C50EA1B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa gzhon nu seng+ge"@bo-x-ewts .
+    
+    bdr:NT12CBF0381C3DE047
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT5FB6BBE609288FD5
+        a                   :Note ;
+        :locationStatement  "p. 2287" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1237. gzhon nu seng+ge 'brug pa'i gdan sar phebs"@en .
+    
+    bdr:P913  a             :Person ;
+        skos:prefLabel      "gzhon nu seng+ge"@bo-x-ewts ;
+        :hasBrother         bdr:P915 ;
+        :hasFather          bdr:P4473 ;
+        :isRoot             true ;
+        :note               bdr:NT12CBF0381C3DE047 , bdr:NT5FB6BBE609288FD5 ;
+        :personEvent        bdr:EV8AFD12F3E7245CF1 , bdr:EVA703C7020CDCA49B , bdr:EVF35AB6B7158C9CA8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7DBF7682132DCAE7 , bdr:NMD86E59169C50EA1B ;
+        :personStudentOf    bdr:P909 , bdr:P912 ;
+        :personTeacherOf    bdr:P914 , bdr:P916 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Zhonnu-Sengge/11909"^^xsd:anyURI .
+}

@@ -1,0 +1,56 @@
+@base          <bdg:P922> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P922 {
+    bda:P922  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P922 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f0/P922.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P922 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A10CB9F0A35CF4B
+        a                   :PersonDeath ;
+        :onYear             "1678"^^xsd:gYear .
+    
+    bdr:EV2DB99297EF79E8BF
+        a                   :PersonBirth ;
+        :onYear             "1639"^^xsd:gYear .
+    
+    bdr:EVF6F1F600F8DF33B3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G50 .
+    
+    bdr:NM243B0F5204EF8058
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bstan 'phel/"@bo-x-ewts .
+    
+    bdr:NMC44113BD9223E472
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khams sprul 02 kun dga' bstan 'phel/"@bo-x-ewts .
+    
+    bdr:NT121A626E254A52C1
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P922  a             :Person ;
+        skos:prefLabel      "kun dga' bstan 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT121A626E254A52C1 ;
+        :personEvent        bdr:EV0A10CB9F0A35CF4B , bdr:EV2DB99297EF79E8BF , bdr:EVF6F1F600F8DF33B3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM243B0F5204EF8058 , bdr:NMC44113BD9223E472 .
+}

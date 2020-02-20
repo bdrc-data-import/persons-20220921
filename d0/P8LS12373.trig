@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12373> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12373 {
+    bda:LG5402CF47382507A2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T14:46:04.826Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12373  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12373 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d0/P8LS12373.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12373 ;
+        adm:logEntry        bda:LG5402CF47382507A2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06B177AECA8B4B1D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1954"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVC7C2D850C9243211
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:NM88FC67C693000995
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a rig chos 'phel don yod/"@bo-x-ewts .
+    
+    bdr:NMA48A06E0669FF115
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'phel don yod/"@bo-x-ewts .
+    
+    bdr:NMDE1CF4F92EB3E777
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 37"@bo-x-ewts .
+    
+    bdr:NTD9159629FA540E12
+        a                   :Note ;
+        :locationStatement  "p. 190-192" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12373  a        :Person ;
+        skos:prefLabel      "chos 'phel don yod/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD9159629FA540E12 ;
+        :personEvent        bdr:EV06B177AECA8B4B1D , bdr:EVC7C2D850C9243211 ;
+        :personName         bdr:NM88FC67C693000995 , bdr:NMA48A06E0669FF115 , bdr:NMDE1CF4F92EB3E777 .
+}

@@ -1,0 +1,101 @@
+@base          <bdg:P8783> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8783 {
+    bda:LG13037E244477A857
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:29.238Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGA01A2056BB2FB009
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-20T12:37:47.863Z"^^xsd:dateTime ;
+        adm:logMessage      "added years of birth and death"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGC94799B4AA1E4D81
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T11:41:10.19Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGCA3C07EE5AA2B34C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T09:40:15.374Z"^^xsd:dateTime ;
+        adm:logMessage      "added 2 biodata notes"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGE2356D7D02B376DD
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-21T16:27:51.848Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8783  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8783 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "82/P8783.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8783 ;
+        adm:logEntry        bda:LG13037E244477A857 , bda:LGA01A2056BB2FB009 , bda:LGC94799B4AA1E4D81 , bda:LGCA3C07EE5AA2B34C , bda:LGE2356D7D02B376DD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV020FE50731F0B511
+        a                   :PersonBirth ;
+        :onYear             "1673"^^xsd:gYear .
+    
+    bdr:EV0693C74A4B0A393B
+        a                   :PersonDeath ;
+        :onYear             "1757"^^xsd:gYear .
+    
+    bdr:NM96E6E94ED86FCFA3
+        a                   :PersonPersonalName ;
+        rdfs:label          "dbang rgyal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM98C687FD54EE13E9
+        a                   :PersonPersonalName ;
+        rdfs:label          "dbang ldan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBE40E16C6DAF8C37
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyi grags bla ma skal bzang dbang ldan/"@bo-x-ewts .
+    
+    bdr:NMC0D845C7DF93FF07
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang dbang ldan/"@bo-x-ewts .
+    
+    bdr:NT9EB107CB36F2F174
+        a                   :Note ;
+        :locationStatement  "p. 505" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "date given for birth is rab byung 11 chu glang ; d. rab byung 13 me glang"@en .
+    
+    bdr:NTAC2DEFA5310AF3BF
+        a                   :Note ;
+        :locationStatement  "p. 281" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "teacher of the second nyi sprul bstan pa'i rgyal mtshan"@en .
+    
+    bdr:P8783  a            :Person ;
+        skos:prefLabel      "skal bzang dbang ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9EB107CB36F2F174 , bdr:NTAC2DEFA5310AF3BF ;
+        :personEvent        bdr:EV020FE50731F0B511 , bdr:EV0693C74A4B0A393B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM96E6E94ED86FCFA3 , bdr:NM98C687FD54EE13E9 , bdr:NMBE40E16C6DAF8C37 , bdr:NMC0D845C7DF93FF07 ;
+        :personStudentOf    bdr:P425 , bdr:P6006 , bdr:P653 , bdr:P8137 ;
+        :personTeacherOf    bdr:P677 , bdr:P692 , bdr:P7731 .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P1757> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1757 {
+    bda:LGC23F0E8EAFD9F24A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-08T09:35:04.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1757  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1757 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "78/P1757.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1757 ;
+        adm:logEntry        bda:LGC23F0E8EAFD9F24A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV748968897EBB2B2F
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVA93E1E8E570D52EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4853 .
+    
+    bdr:NM2F9522D7B668FD59
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde thang sprul sku tshul khrims rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMFE2F1C1CD1B6F4F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT863A9B7B4E937A81
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1757  a            :Person ;
+        skos:prefLabel      "tshul khrims rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT863A9B7B4E937A81 ;
+        :personEvent        bdr:EV748968897EBB2B2F , bdr:EVA93E1E8E570D52EC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F9522D7B668FD59 , bdr:NMFE2F1C1CD1B6F4F6 ;
+        :personStudentOf    bdr:P1753 .
+}

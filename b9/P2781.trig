@@ -1,0 +1,72 @@
+@base          <bdg:P2781> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2781 {
+    bda:LG5D31E5CA9A5CE364
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:50:24.008Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGEA8E77A9DDF368CF
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:03:21.496Z"^^xsd:dateTime ;
+        adm:logMessage      "added studen and teacher infomation"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2781  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2781 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b9/P2781.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2781 ;
+        adm:logEntry        bda:LG5D31E5CA9A5CE364 , bda:LGEA8E77A9DDF368CF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCDFAD437C531FDA3
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM70BFB2775C8E8D9A
+        a                   :PersonFamilyName ;
+        rdfs:label          "gnyags/"@bo-x-ewts .
+    
+    bdr:NM762E52B2646AFDD5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnyags ston chos rje rgyal mtshan dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NM8C6148829A5C6C75
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus chen rgyal mtshan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM92B9EE12A1C14209
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal mtshan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT36BDFD0E31E7B69A
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- shangs pa bka' brgyud pa transmissions"@en .
+    
+    bdr:P2781  a            :Person ;
+        skos:prefLabel      "rgyal mtshan dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT36BDFD0E31E7B69A ;
+        :personEvent        bdr:EVCDFAD437C531FDA3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM70BFB2775C8E8D9A , bdr:NM762E52B2646AFDD5 , bdr:NM8C6148829A5C6C75 , bdr:NM92B9EE12A1C14209 ;
+        :personStudentOf    bdr:P88 ;
+        :personTeacherOf    bdr:P0RK1539 , bdr:P1973 , bdr:P2780 , bdr:P5713 .
+}

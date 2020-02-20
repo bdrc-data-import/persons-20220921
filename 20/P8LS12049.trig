@@ -1,0 +1,86 @@
+@base          <bdg:P8LS12049> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12049 {
+    bda:LG65CEA653E3E921A7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-12T15:23:35.598Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF8D56737BF4103F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T16:22:06.518Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G2126 to G2800"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8LS12049  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12049 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "20/P8LS12049.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12049 ;
+        adm:logEntry        bda:LG65CEA653E3E921A7 , bda:LGF8D56737BF4103F1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1ACAD380D7AEB491
+        a                   :PersonDeath ;
+        :onYear             "1945"^^xsd:gYear .
+    
+    bdr:EV3F7F3A1F1AE9B41D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1913"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD4F15487D8341B76
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1919"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVDEB8444A1DF5F9D3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVEC2D988C43969745
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G2800 ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:NM782D833E38AA8A1C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM94B2CA5D631C9BEB
+        a                   :PersonTitle ;
+        rdfs:label          "bar thog tshang ngag dbang blo bzang 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBF1ECF0D13C6FEB4
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 63"@bo-x-ewts .
+    
+    bdr:NT88101AD9555EE7B8
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 159-162" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12049  a        :Person ;
+        skos:prefLabel      "'jigs med rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT88101AD9555EE7B8 ;
+        :personEvent        bdr:EV1ACAD380D7AEB491 , bdr:EV3F7F3A1F1AE9B41D , bdr:EVD4F15487D8341B76 , bdr:EVDEB8444A1DF5F9D3 , bdr:EVEC2D988C43969745 ;
+        :personName         bdr:NM782D833E38AA8A1C , bdr:NM94B2CA5D631C9BEB , bdr:NMBF1ECF0D13C6FEB4 .
+}

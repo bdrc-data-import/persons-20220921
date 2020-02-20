@@ -1,0 +1,73 @@
+@base          <bdg:P8613> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8613 {
+    bda:LGCCA7F6B1540C81E6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-08T09:13:47.222Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnate relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE0497FB4A8EE714E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-18T14:55:00.466Z"^^xsd:dateTime ;
+        adm:logMessage      "edited title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGED76D957F3C1C1EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8613  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8613 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f8/P8613.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8613 ;
+        adm:logEntry        bda:LGCCA7F6B1540C81E6 , bda:LGE0497FB4A8EE714E , bda:LGED76D957F3C1C1EC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM01E63CF322C38319
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyara Tulku 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM508E1D95D1B80CBE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "brgyad ra sprul sku 05"@bo-x-ewts .
+    
+    bdr:NM5C6E26F29EABBA5D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brgyad ra 05 bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM646C02AEC2E218DD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NTAA28AFFE04C7B558
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8613  a            :Person ;
+        skos:prefLabel      "bstan 'dzin 'phrin las/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8612 ;
+        :isRoot             true ;
+        :note               bdr:NTAA28AFFE04C7B558 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01E63CF322C38319 , bdr:NM508E1D95D1B80CBE , bdr:NM5C6E26F29EABBA5D , bdr:NM646C02AEC2E218DD .
+}

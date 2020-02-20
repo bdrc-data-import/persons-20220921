@@ -1,0 +1,69 @@
+@base          <bdg:P8LS12184> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12184 {
+    bda:LGCBD7C576B1465A68
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-26T10:51:03.031Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12184  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12184 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "76/P8LS12184.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12184 ;
+        adm:logEntry        bda:LGCBD7C576B1465A68 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB734CCE057E19BC0
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1714"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD5E75FF7A2B0DB75
+        a                   :PersonDeath ;
+        :onYear             "1714"^^xsd:gYear .
+    
+    bdr:EVEE6D1948AE258CD6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:NM70ACB3CD82A9FB12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM7620EE233D00F1A1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 25"@bo-x-ewts .
+    
+    bdr:NME0C0CD6426625366
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rin chen 'jam dpal bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT9BA4D6009C13138F
+        a                   :Note ;
+        :locationStatement  "p. 402-405" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P8LS12184  a        :Person ;
+        skos:prefLabel      "bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9BA4D6009C13138F ;
+        :personEvent        bdr:EVB734CCE057E19BC0 , bdr:EVD5E75FF7A2B0DB75 , bdr:EVEE6D1948AE258CD6 ;
+        :personName         bdr:NM70ACB3CD82A9FB12 , bdr:NM7620EE233D00F1A1 , bdr:NME0C0CD6426625366 .
+}

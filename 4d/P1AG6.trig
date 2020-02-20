@@ -1,0 +1,81 @@
+@base          <bdg:P1AG6> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG6 {
+    bda:LG6C79077B8EBFEA0E
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-28T16:27:04.289Z"^^xsd:dateTime ;
+        adm:logMessage      "added Treasury of Lives link to P1AG6"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB001B54982CF05F6
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-29T14:45:34.024Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1AG6  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG6 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "4d/P1AG6.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG6 ;
+        adm:logEntry        bda:LG6C79077B8EBFEA0E , bda:LGB001B54982CF05F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF99F8C16CC45201E
+        a                   :PersonDeath ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EVFB7AFAEDD0E28911
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM309808F751AC9F5C
+        a                   :PersonTitle ;
+        rdfs:label          "rdo rje 'dzin pa bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM822D50D9C4739A30
+        a                   :PersonOtherName ;
+        rdfs:label          "Dordzin Sonam Gyatso"@en .
+    
+    bdr:NMA9327343B14CD714
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD9D3F5328D181F99
+        a                   :PersonOtherName ;
+        rdfs:label          "Sonam Gyatso"@en .
+    
+    bdr:NMDC054271D08FB4F9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdor 'dzin bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC6D10561F8003B3A
+        a                   :Note ;
+        :locationStatement  "W27020" ;
+        :noteText           "pp. 330-331"@en .
+    
+    bdr:P1AG6  a            :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC6D10561F8003B3A ;
+        :personEvent        bdr:EVF99F8C16CC45201E , bdr:EVFB7AFAEDD0E28911 ;
+        :personName         bdr:NM309808F751AC9F5C , bdr:NM822D50D9C4739A30 , bdr:NMA9327343B14CD714 , bdr:NMD9D3F5328D181F99 , bdr:NMDC054271D08FB4F9 ;
+        :personStudentOf    bdr:P16 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dordzin-Sonam-Gyatso/13433"^^xsd:anyURI .
+}

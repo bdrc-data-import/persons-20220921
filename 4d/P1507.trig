@@ -1,0 +1,103 @@
+@base          <bdg:P1507> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1507 {
+    bda:LG842160053C8AF201
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T13:40:26.293Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note C#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB49444D6FBAFA32A
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:10:08.794Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE21583EE78F6C8BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-01-30T06:26:34.203Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGEB769218DCE46A75
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-07-29T11:19:20.389Z"^^xsd:dateTime ;
+        adm:logMessage      "connected to P1AG37"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1507  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1507 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "4d/P1507.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1507 ;
+        adm:logEntry        bda:LG842160053C8AF201 , bda:LGB49444D6FBAFA32A , bda:LGE21583EE78F6C8BA , bda:LGEB769218DCE46A75 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41017A472F39504F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G953 ;
+        :onYear             "1148"^^xsd:gYear .
+    
+    bdr:EV5141001A686E6A07
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G279 .
+    
+    bdr:EVDEF610CF08002665
+        a                   :PersonDeath ;
+        :onYear             "1217"^^xsd:gYear .
+    
+    bdr:NMFB60408244B65EE3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun ldan ras pa/"@bo-x-ewts .
+    
+    bdr:NT4273CD8D78D3FE39
+        a                   :Note ;
+        :locationStatement  "p. 51" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT7A8F2DBF7A26D881
+        a                   :Note ;
+        :noteText           "Ascended the throne of Phag-mo-gru.\nSettled at Khro-phu.\nMiracles."@en .
+    
+    bdr:NT80E974D7DDFA9367
+        a                   :Note ;
+        :noteText           "see corporetion C2CN11026"@en .
+    
+    bdr:NTC32C8101F5003CC7
+        a                   :Note ;
+        :locationStatement  "p. 2285" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1217. year of death"@en .
+    
+    bdr:NTF6D57703C4830E39
+        a                   :Note ;
+        :locationStatement  "p. 4" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "follower of the pagmodru tradition; dates given 1148-1217"@en .
+    
+    bdr:P1507  a            :Person ;
+        skos:prefLabel      "kun ldan ras pa/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P1508 ;
+        :isRoot             true ;
+        :note               bdr:NT4273CD8D78D3FE39 , bdr:NT7A8F2DBF7A26D881 , bdr:NT80E974D7DDFA9367 , bdr:NTC32C8101F5003CC7 , bdr:NTF6D57703C4830E39 ;
+        :personEvent        bdr:EV41017A472F39504F , bdr:EV5141001A686E6A07 , bdr:EVDEF610CF08002665 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMFB60408244B65EE3 ;
+        :personStudentOf    bdr:P127 ;
+        :personTeacherOf    bdr:P1AG37 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Khyeuchung-Lotsawa/13077"^^xsd:anyURI .
+}

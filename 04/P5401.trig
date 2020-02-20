@@ -1,0 +1,103 @@
+@base          <bdg:P5401> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5401 {
+    bda:LG1DF3EA6AA33AD7F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T16:18:33.578Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA44CCB554E608E98
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGFABD4709071BA8D2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:06:34.999Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5401  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5401 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "04/P5401.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5401 ;
+        adm:logEntry        bda:LG1DF3EA6AA33AD7F5 , bda:LGA44CCB554E608E98 , bda:LGFABD4709071BA8D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A46F1CA1C0A40A8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1407 ;
+        :onYear             "1925"^^xsd:gYear .
+    
+    bdr:EV1D0EA5DB33A5E02F
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVB3591A2219BC05CE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EVE5B5B04C6EAC963F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM062EE3F6B3B91EBB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'bring ba sprul sku/"@bo-x-ewts .
+    
+    bdr:NM3DDA3D33CA25C708
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang smra ba'i seng+ge"@bo-x-ewts .
+    
+    bdr:NM44D22401FAD69B08
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 53"@bo-x-ewts .
+    
+    bdr:NMB35353A63DB1A089
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bring ba sprul sku skal bzang smra ba'i seng+ge"@bo-x-ewts .
+    
+    bdr:NMDE1342A35D79C043
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dringwa Tulku"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT4A63D09BC8AD1A14
+        a                   :Note ;
+        :locationStatement  "p. 494-495" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:NT67BAB2A2B2250E5D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTC68444C7A84C74C1
+        a                   :Note ;
+        :noteText           "Recognized as the 'Bring-ba Sprul-sku by Skyabs-mgon Blo-bzang-'jam-dbyangs-ye-shes-bstan-pa'i-rgyal-mtshan.\nSeat of the 'Bring-ba: Bza'-rgyo'i Gdong-mgo or Bor-chung Ri-khrod Bkra-shis-chos-'phel-gling."@en .
+    
+    bdr:P5401  a            :Person ;
+        skos:prefLabel      "skal bzang smra ba'i seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A63D09BC8AD1A14 , bdr:NT67BAB2A2B2250E5D , bdr:NTC68444C7A84C74C1 ;
+        :personEvent        bdr:EV0A46F1CA1C0A40A8 , bdr:EV1D0EA5DB33A5E02F , bdr:EVB3591A2219BC05CE , bdr:EVE5B5B04C6EAC963F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM062EE3F6B3B91EBB , bdr:NM3DDA3D33CA25C708 , bdr:NM44D22401FAD69B08 , bdr:NMB35353A63DB1A089 , bdr:NMDE1342A35D79C043 ;
+        :personStudentOf    bdr:P5402 , bdr:P5403 .
+}

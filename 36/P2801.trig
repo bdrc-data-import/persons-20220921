@@ -1,0 +1,42 @@
+@base          <bdg:P2801> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2801 {
+    bda:P2801  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2801 ;
+        adm:facetIndex      3 ;
+        adm:gitPath         "36/P2801.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2801 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE24873DC04FBAD6
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMFEC2FAD1214A0D04
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgyal mchog"@bo-x-ewts .
+    
+    bdr:P2801  a            :Person ;
+        skos:prefLabel      "ye shes rgyal mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVAE24873DC04FBAD6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMFEC2FAD1214A0D04 ;
+        :personStudentOf    bdr:P2802 ;
+        :personTeacherOf    bdr:P7094 .
+}

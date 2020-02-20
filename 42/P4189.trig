@@ -1,0 +1,59 @@
+@base          <bdg:P4189> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4189 {
+    bda:P4189  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4189 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "42/P4189.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4189 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV70F470D471518947
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVEFC5FD1AF37E0EC7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G446 .
+    
+    bdr:NM020A2C943A099605
+        a                   :PersonPersonalName ;
+        rdfs:label          "sang she, sri dkar/"@bo-x-ewts .
+    
+    bdr:NM91B2725398CE2D80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sri dkar sang she"@bo-x-ewts .
+    
+    bdr:NT16789528E5C01BA0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:NT1E23970A3DB9B735
+        a                   :Note ;
+        :locationStatement  "p. 1791" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4189  a            :Person ;
+        skos:prefLabel      "sri dkar sang she"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16789528E5C01BA0 , bdr:NT1E23970A3DB9B735 ;
+        :personEvent        bdr:EV70F470D471518947 , bdr:EVEFC5FD1AF37E0EC7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM020A2C943A099605 , bdr:NM91B2725398CE2D80 ;
+        :personStudentOf    bdr:P1413 .
+}

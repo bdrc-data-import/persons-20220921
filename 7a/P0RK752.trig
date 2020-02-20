@@ -1,0 +1,65 @@
+@base          <bdg:P0RK752> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK752 {
+    bda:LGABE0448709A13F5E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-02T14:40:16.611Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB91CC7403F41D637
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T15:45:12.533Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGE7491931CA77E426
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:P0RK752  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK752 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7a/P0RK752.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK752 ;
+        adm:logEntry        bda:LGABE0448709A13F5E , bda:LGB91CC7403F41D637 , bda:LGE7491931CA77E426 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV502BF3D361BAA0F7
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM11ADDA267DBC3AF6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:NMFBC336BCE9E749E8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:P0RK752  a          :Person ;
+        skos:prefLabel      "kun dga' blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV502BF3D361BAA0F7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11ADDA267DBC3AF6 , bdr:NMFBC336BCE9E749E8 ;
+        :personStudentOf    bdr:P0RK751 ;
+        :personTeacherOf    bdr:P0RK779 , bdr:P1694 , bdr:P2608 , bdr:P466 .
+}

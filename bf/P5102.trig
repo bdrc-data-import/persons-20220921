@@ -1,0 +1,56 @@
+@base          <bdg:P5102> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5102 {
+    bda:P5102  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5102 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bf/P5102.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5102 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV85B2D1EA3EE1E6D3
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM6447A55BE2F1547E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun tu bzang po/"@bo-x-ewts .
+    
+    bdr:NM6AC0A87ED83323F1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yang ri bla ma kun tu bzang po/"@bo-x-ewts .
+    
+    bdr:NMD8C9F2ED98BD1A8D
+        a                   :PersonTitle ;
+        rdfs:label          "rtogs ldan kun tu bzang po/"@bo-x-ewts .
+    
+    bdr:NT43EA20411D24D759
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 27v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "devoted practitioner of the karma kaM tshang tradition"@en .
+    
+    bdr:P5102  a            :Person ;
+        skos:prefLabel      "kun tu bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT43EA20411D24D759 ;
+        :personEvent        bdr:EV85B2D1EA3EE1E6D3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6447A55BE2F1547E , bdr:NM6AC0A87ED83323F1 , bdr:NMD8C9F2ED98BD1A8D ;
+        :personTeacherOf    bdr:P1386 .
+}

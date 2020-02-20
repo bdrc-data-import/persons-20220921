@@ -1,0 +1,53 @@
+@base          <bdg:P9073> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9073 {
+    bda:P9073  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9073 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ab/P9073.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9073 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV19F258EA9D8F052A
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM31D99833A003D37C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bde skyong bu khrid/"@bo-x-ewts .
+    
+    bdr:NMF1B9BB192C6E3541
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos lung ma skal bzang bde skyong bu khrid/"@bo-x-ewts .
+    
+    bdr:NT21E95CA3C2BB4679
+        a                   :Note ;
+        :locationStatement  "p. 264" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as the wife of sa skya gong ma kun dga' blo gros who produced two sons"@en .
+    
+    bdr:P9073  a            :Person ;
+        skos:prefLabel      "skal bzang bde skyong bu khrid/"@bo-x-ewts ;
+        :hasHusband         bdr:P805 ;
+        :hasSon             bdr:P807 , bdr:P9088 ;
+        :isRoot             true ;
+        :note               bdr:NT21E95CA3C2BB4679 ;
+        :personEvent        bdr:EV19F258EA9D8F052A ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM31D99833A003D37C , bdr:NMF1B9BB192C6E3541 .
+}

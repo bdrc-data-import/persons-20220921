@@ -1,0 +1,55 @@
+@base          <bdg:P6188> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6188 {
+    bda:LG68D9F4C4A786A1E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-10T10:47:10.339Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn infavour of P475"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6188  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6188 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "78/P6188.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6188 ;
+        adm:logEntry        bda:LG68D9F4C4A786A1E9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P475 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV556A1A5911AA0E97
+        a                   :PersonBirth ;
+        :onYear             "1475"^^xsd:gYear .
+    
+    bdr:EV70673F7A115D0E4C
+        a                   :PersonDeath ;
+        :onYear             "1530"^^xsd:gYear .
+    
+    bdr:NM6482A98228783485
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB9ACD2F37DA6EFB1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P6188  a            :Person ;
+        skos:prefLabel      "nam mkha' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV556A1A5911AA0E97 , bdr:EV70673F7A115D0E4C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6482A98228783485 , bdr:NMB9ACD2F37DA6EFB1 .
+}

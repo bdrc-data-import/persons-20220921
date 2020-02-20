@@ -1,0 +1,110 @@
+@base          <bdg:P2516> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2516 {
+    bda:LG181E98E319117AED
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-02T16:08:40.015Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG31CEA75CB85938C8
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-01T14:43:00.188Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG5B2B42E7F13DEC69
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T11:15:35.488Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates, teacher and student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG8B88860A0E95B2CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T10:48:41.781Z"^^xsd:dateTime ;
+        adm:logMessage      "dates of tenure"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE7A5B2DFB42A4535
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T14:31:58.753Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and changed office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2516  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2516 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "ea/P2516.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2516 ;
+        adm:logEntry        bda:LG181E98E319117AED , bda:LG31CEA75CB85938C8 , bda:LG5B2B42E7F13DEC69 , bda:LG8B88860A0E95B2CA , bda:LGE7A5B2DFB42A4535 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03000A7A25401A93
+        a                   :PersonBirth ;
+        :onYear             "1599"^^xsd:gYear .
+    
+    bdr:EV77C1D4AA3AD1F255
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1667"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV8B556746B3690D81
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1671"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVA1972B854A48E2C8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM00B7B2AF3BB7D902
+        a                   :PersonTitle ;
+        rdfs:label          "'jam mgon dpal mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM21F25706075EC685
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 22"@bo-x-ewts .
+    
+    bdr:NM6BF266DA614F5708
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA302B71B5F03BF29
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 22 dpal mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT267766270890E575
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Tshogs-bshad transmissions"@en .
+    
+    bdr:NT2FF1441E15B7849C
+        a                   :Note ;
+        :noteText           "nephew of sgrub khang dpal ldan don grub"@en .
+    
+    bdr:P2516  a            :Person ;
+        skos:prefLabel      "dpal mchog rgyal mtshan/"@bo-x-ewts ;
+        :hasUncle           bdr:P779 ;
+        :isRoot             true ;
+        :note               bdr:NT267766270890E575 , bdr:NT2FF1441E15B7849C ;
+        :personEvent        bdr:EV03000A7A25401A93 , bdr:EV77C1D4AA3AD1F255 , bdr:EV8B556746B3690D81 , bdr:EVA1972B854A48E2C8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00B7B2AF3BB7D902 , bdr:NM21F25706075EC685 , bdr:NM6BF266DA614F5708 , bdr:NMA302B71B5F03BF29 ;
+        :personStudentOf    bdr:P779 ;
+        :personTeacherOf    bdr:P1PD108836 , bdr:P2517 , bdr:P2519 , bdr:P3510 , bdr:P7087 , bdr:P796 .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P2585> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2585 {
+    bda:LGD9BD2DF306E7C7B6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-07T15:56:32.52Z"^^xsd:dateTime ;
+        adm:logMessage      "added kin relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2585  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2585 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6e/P2585.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2585 ;
+        adm:logEntry        bda:LGD9BD2DF306E7C7B6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCEC67A13D4052176
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM6408AB0DCEB85CA4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM8FFDD6C4AC527881
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'jam gsar ba shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NT13B0D7B56108B2FD
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 7" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the 'bro transmission of the kalacakra"@en .
+    
+    bdr:NTEAF8FE7154748EAD
+        a                   :Note ;
+        :noteText           "check: 'jam dbyangs gsar ma, the author of a tshad ma rnam nges kyi TI k+ka"@en .
+    
+    bdr:P2585  a            :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT13B0D7B56108B2FD , bdr:NTEAF8FE7154748EAD ;
+        :personEvent        bdr:EVCEC67A13D4052176 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6408AB0DCEB85CA4 , bdr:NM8FFDD6C4AC527881 ;
+        :personStudentOf    bdr:P0RK1534 , bdr:P0RK1765 , bdr:P10090 , bdr:P2586 ;
+        :personTeacherOf    bdr:P1244 , bdr:P1475 , bdr:P1511 , bdr:P2375 , bdr:P3274 , bdr:P858 .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P3783> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3783 {
+    bda:LG994564B209038E8D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:26:58.815Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3783  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3783 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "42/P3783.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3783 ;
+        adm:logEntry        bda:LG994564B209038E8D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2CB84F440C825968
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G430 .
+    
+    bdr:EVBD20EE067A620948
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM11DEF14977BA0A17
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM7EE53146CE53B9B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po tshul khrims/"@bo-x-ewts .
+    
+    bdr:NTA21B061E4B327A17
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- the Vinaya transmissions of the Stod-'dul"@en .
+    
+    bdr:P3783  a            :Person ;
+        skos:prefLabel      "tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA21B061E4B327A17 ;
+        :personEvent        bdr:EV2CB84F440C825968 , bdr:EVBD20EE067A620948 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11DEF14977BA0A17 , bdr:NM7EE53146CE53B9B2 ;
+        :personTeacherOf    bdr:P127 .
+}

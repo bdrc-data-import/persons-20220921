@@ -1,0 +1,80 @@
+@base          <bdg:P8LS13013> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13013 {
+    bda:LG0E29786B5F676165
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T10:42:04.242Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2D15BE273555AEB8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-08T13:59:10.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG766F8AD4B1B4EED2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T10:31:19.745Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA03D0295584F4BEA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS13013  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13013 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "62/P8LS13013.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13013 ;
+        adm:logEntry        bda:LG0E29786B5F676165 , bda:LG2D15BE273555AEB8 , bda:LG766F8AD4B1B4EED2 , bda:LGA03D0295584F4BEA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3052832AD2F98C00
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G157 .
+    
+    bdr:NMC86E2DBD5B321FAB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mchog gling yongs 'dzin sprul sku 02"@bo-x-ewts .
+    
+    bdr:NME7D317F901F40851
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsechok Ling Yongzin Tulku 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF1EEC210AA8D5AE8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal ye shes bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT74FF118C397D66B2
+        a                   :Note ;
+        :locationStatement  "p. 360" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) rgyal ba sku phreng brgyad pa'i yongs 'dzin paN+Di ta ye shes rgyal mtshan/ chan lung khri lo zhe bdun thog gong mar gser snyan sgron te yongs 'dzin la phebs/ ko'u tsung shun hwang di'i paN+Di ta'i cho lo dang/ mgul phreng/ gos chen sogs kyi gsol ras bstsal/ chan lung khri lo nga brgyad pa'i thog gshegs/\n2) de'i skye ba 'jam dpal ye shes bstan pa'i rgyal mtshan/ ho g.yin am ban gnyis la skyabs mgon 'jam dpal rgya mtsho nas bka' phebs kyis rim brgyud gong mar gser snyan sgron te ngos 'dzin byas 'dug"@en .
+    
+    bdr:P8LS13013  a        :Person ;
+        skos:prefLabel      "'jam dpal ye shes bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P105 ;
+        :isRoot             true ;
+        :note               bdr:NT74FF118C397D66B2 ;
+        :personEvent        bdr:EV3052832AD2F98C00 ;
+        :personName         bdr:NMC86E2DBD5B321FAB , bdr:NME7D317F901F40851 , bdr:NMF1EEC210AA8D5AE8 ;
+        :personTeacherOf    bdr:P255 , bdr:P260 .
+}

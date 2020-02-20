@@ -1,0 +1,45 @@
+@base          <bdg:P6667> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6667 {
+    bda:P6667  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6667 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "b8/P6667.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6667 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6B4C364D12D4BD68
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1700 ;
+        :onYear             "1954"^^xsd:gYear .
+    
+    bdr:NMA5D56058EBCD1549
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTB1B48A029D0F4A2D
+        a                   :Note ;
+        :noteText           "modern writer from mgo log"@en .
+    
+    bdr:P6667  a            :Person ;
+        skos:prefLabel      "pad+ma rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB1B48A029D0F4A2D ;
+        :personEvent        bdr:EV6B4C364D12D4BD68 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA5D56058EBCD1549 .
+}

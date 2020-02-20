@@ -1,0 +1,84 @@
+@base          <bdg:P5634> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5634 {
+    bda:LGCD43C8DF0628425E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-19T09:29:13.418Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5634  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5634 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "88/P5634.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5634 ;
+        adm:logEntry        bda:LGCD43C8DF0628425E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4DC94F4E1F066D5D
+        a                   :PersonBirth ;
+        :onYear             "1741"^^xsd:gYear .
+    
+    bdr:EV8E7F4D04ADDEB4E1
+        a                   :PersonDeath ;
+        :onYear             "1774"^^xsd:gYear .
+    
+    bdr:EV9C79572F90571892
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G460 .
+    
+    bdr:NM16FE9361303CA152
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang thub bstan dbang phyug"@bo-x-ewts .
+    
+    bdr:NM51CF0100E2FF71A7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drakyab Chungtsang 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC24F835268D3F05D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "brag g.yab chung tshang 04"@bo-x-ewts .
+    
+    bdr:NMD8FD59262DCA3356
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag g.yab chung tshang 04 skal bzang thub bstan dbang phyug"@bo-x-ewts .
+    
+    bdr:NT058FDE7D248DC6CE
+        a                   :Note ;
+        :locationStatement  "p. 365" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "brag g.yab sprul sku chung tshang gi skye phreng\n...\n1) dang po ni/ rje bla ma sangs rgyas bkra shis/ brag g.yab tu 'khrungs/ dgung lo drug cu re bzhi gshegs/\n2) de'i skye ba grags pa chos 'dzin/ brag g.yab tu 'khrungs/ dgung lo nyi shu rtsa drug la gshegs/\n3) de'i skye ba blo bzang bstan pa/ lha thog nang du 'khrungs/ dgung lo nyi shu rtsa brgyad la gshegs/\n4) de'i skye ba skal bzang thub bstan dbang phyug/ brag g.yab tu 'khrungs. dgung lo sum cu so bzhi la gshegs/ [p. 365]"@bo-x-ewts .
+    
+    bdr:NT81DAC982175B5734
+        a                   :Note ;
+        :locationStatement  "p. 296" ;
+        :noteSource         bdr:MW2GS1123 ;
+        :noteText           "1) rje bla ma sangs rgyas bkra shis ('khrungs yul brag g.yab) ('tsho bzhugs dgung grangs 64); \n2) grags pa chos 'dzin ('khrungs yul brag g.yab) ('tsho bzhugs dgung grangs 26); \n3) blo bzang bstan pa ('khrungs yul lha thog nang du 'khrungs) ('tsho bzhugs dgung grangs 28); \n4) skal bzang thub bstan dbang phyug ('khrungs yul brag g.yab) ('tsho bzhugs dgung grangs 24); "@en .
+    
+    bdr:NTB9E075EB4A81B86F
+        a                   :Note ;
+        :noteText           "dates from the brief biography written by dkon mchog 'jigs med dbang po in v. 2, pp. 563-588, of the gsung 'bum of the author."@en .
+    
+    bdr:P5634  a            :Person ;
+        skos:prefLabel      "skal bzang thub bstan dbang phyug"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P351 ;
+        :isRoot             true ;
+        :note               bdr:NT058FDE7D248DC6CE , bdr:NT81DAC982175B5734 , bdr:NTB9E075EB4A81B86F ;
+        :personEvent        bdr:EV4DC94F4E1F066D5D , bdr:EV8E7F4D04ADDEB4E1 , bdr:EV9C79572F90571892 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16FE9361303CA152 , bdr:NM51CF0100E2FF71A7 , bdr:NMC24F835268D3F05D , bdr:NMD8FD59262DCA3356 .
+}

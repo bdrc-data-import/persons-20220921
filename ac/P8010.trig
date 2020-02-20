@@ -1,0 +1,44 @@
+@base          <bdg:P8010> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8010 {
+    bda:P8010  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8010 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "ac/P8010.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8010 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4022BED0D327C184
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM09D65725D5F60843
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha sa ba blo bzang don ldan/"@bo-x-ewts .
+    
+    bdr:NM25E542D913F700F3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang don ldan/"@bo-x-ewts .
+    
+    bdr:P8010  a            :Person ;
+        skos:prefLabel      "blo bzang don ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV4022BED0D327C184 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM09D65725D5F60843 , bdr:NM25E542D913F700F3 .
+}

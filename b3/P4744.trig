@@ -1,0 +1,65 @@
+@base          <bdg:P4744> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4744 {
+    bda:LGD9CED800B08A86ED
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:01:40.493Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4744  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4744 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b3/P4744.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4744 ;
+        adm:logEntry        bda:LGD9CED800B08A86ED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV561D5A92F24CFC05
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G105 .
+    
+    bdr:EVF2B76A06D75F3699
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM77DF3B98BC0384AD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bkra shis/"@bo-x-ewts .
+    
+    bdr:NM786B8FD4206B6EF4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen blo bzang bkra shis/"@bo-x-ewts .
+    
+    bdr:NMAB16396F852A2E4E
+        a                   :PersonTitle ;
+        rdfs:label          "bkra shis lhun po thos bsam gling mkhan chen blo bzang bkra shis/"@bo-x-ewts .
+    
+    bdr:NTE234DBECAA71CC4B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4744  a            :Person ;
+        skos:prefLabel      "blo bzang bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE234DBECAA71CC4B ;
+        :personEvent        bdr:EV561D5A92F24CFC05 , bdr:EVF2B76A06D75F3699 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM77DF3B98BC0384AD , bdr:NM786B8FD4206B6EF4 , bdr:NMAB16396F852A2E4E ;
+        :personTeacherOf    bdr:P311 .
+}

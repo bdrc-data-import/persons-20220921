@@ -1,0 +1,91 @@
+@base          <bdg:P2492> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2492 {
+    bda:LG17C5BB8F5D7D02DD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:28:12.762Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG38A4039CEC91EEB7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T11:07:42.813Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2492  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2492 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "32/P2492.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2492 ;
+        adm:logEntry        bda:LG17C5BB8F5D7D02DD , bda:LG38A4039CEC91EEB7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A73AC5187DCFDDC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EV29F5746C019C41C9
+        a                   :PersonDeath ;
+        :onYear             "1530"^^xsd:gYear .
+    
+    bdr:EVA395FB877956FEDE
+        a                   :PersonBirth ;
+        :onYear             "1469"^^xsd:gYear .
+    
+    bdr:EVA6942391BC949641
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM430B214137E86E47
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 13"@bo-x-ewts .
+    
+    bdr:NM5183890D63668BD0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje rnam rgyal grags pa/"@bo-x-ewts .
+    
+    bdr:NM889D33578D00F359
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal grags pa/"@bo-x-ewts .
+    
+    bdr:NT161EFECE3B5AE055
+        a                   :Note ;
+        :locationStatement  "p. 472-486" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:NT9AFDCAD25099E496
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "b. 1469; d. 1530; on see 27 years.\nstyled stag lung khri 15 and gcen 'bring ba.\nb. 'phan yul stod spras sgang pa ga zi gdung brgyud."@en .
+    
+    bdr:NTB26801B00CB180B0
+        a                   :Note ;
+        :locationStatement  "p. 56" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:P2492  a            :Person ;
+        skos:prefLabel      "rnam rgyal grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT161EFECE3B5AE055 , bdr:NT9AFDCAD25099E496 , bdr:NTB26801B00CB180B0 ;
+        :personEvent        bdr:EV0A73AC5187DCFDDC , bdr:EV29F5746C019C41C9 , bdr:EVA395FB877956FEDE , bdr:EVA6942391BC949641 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM430B214137E86E47 , bdr:NM5183890D63668BD0 , bdr:NM889D33578D00F359 ;
+        :personTeacherOf    bdr:P1426 .
+}

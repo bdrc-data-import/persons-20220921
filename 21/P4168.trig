@@ -1,0 +1,96 @@
+@base          <bdg:P4168> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4168 {
+    bda:LG2941303AC5BD0792
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T12:34:23.897Z"^^xsd:dateTime ;
+        adm:logMessage      "leaves office"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG69E9D4CA4B56125D
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-28T16:55:41.405Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher to P1AG7"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB2ACC0A29536D041
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T12:26:04.523Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4168  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4168 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "21/P4168.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4168 ;
+        adm:logEntry        bda:LG2941303AC5BD0792 , bda:LG69E9D4CA4B56125D , bda:LGB2ACC0A29536D041 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV40719D3E246AAFB1
+        a                   :PersonBirth ;
+        :onYear             "1169"^^xsd:gYear .
+    
+    bdr:EV7C5A1383F61A2223
+        a                   :PersonDeath ;
+        :onYear             "1226"^^xsd:gYear .
+    
+    bdr:EVA0F7C622ADBFEF21
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G368 .
+    
+    bdr:EVA60B68179D6BE890
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G368 ;
+        :onYear             "1208"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC0D6C29245D99B89
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G368 ;
+        :onYear             "1226"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM7A50195158AE4A1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NMEC66A5F90BCE6DA0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ro skam mkhan rabs 02 sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NT048898A9393C984E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Tshal-pa transmissions"@en .
+    
+    bdr:NTF2BAD0F4F9EEB116
+        a                   :Note ;
+        :locationStatement  "p. 1740" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4168  a            :Person ;
+        skos:prefLabel      "sangs rgyas rdo rje/"@bo-x-ewts ;
+        :hasNibling         bdr:P1AG7 ;
+        :hasUncle           bdr:P2470 ;
+        :isRoot             true ;
+        :note               bdr:NT048898A9393C984E , bdr:NTF2BAD0F4F9EEB116 ;
+        :personEvent        bdr:EV40719D3E246AAFB1 , bdr:EV7C5A1383F61A2223 , bdr:EVA0F7C622ADBFEF21 , bdr:EVA60B68179D6BE890 , bdr:EVC0D6C29245D99B89 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7A50195158AE4A1E , bdr:NMEC66A5F90BCE6DA0 ;
+        :personStudentOf    bdr:P132 , bdr:P16 , bdr:P2470 ;
+        :personTeacherOf    bdr:P1AG7 .
+}

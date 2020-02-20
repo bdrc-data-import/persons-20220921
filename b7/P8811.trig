@@ -1,0 +1,54 @@
+@base          <bdg:P8811> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8811 {
+    bda:P8811  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8811 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b7/P8811.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8811 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC03FAAE6B93A9198
+        a                   :PersonBirth ;
+        :onYear             "1550"^^xsd:gYear .
+    
+    bdr:EVDA0A9659B93A7064
+        a                   :PersonDeath ;
+        :onYear             "1575"^^xsd:gYear .
+    
+    bdr:NMB9334C1FE12B5AB5
+        a                   :PersonPersonalName ;
+        rdfs:label          "gzhon nu rdo rje/"@bo-x-ewts .
+    
+    bdr:NME7D654FD6E584D66
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po gzhon nu rdo rje/"@bo-x-ewts .
+    
+    bdr:NTCFCDCFA9979ABB18
+        a                   :Note ;
+        :locationStatement  "p. 2322, 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1550. dwags po gzhon nu rdo rje 'khrungs\n1575. dwags po chos rje gzhon nu rdo rje gshegs"@en .
+    
+    bdr:P8811  a            :Person ;
+        skos:prefLabel      "gzhon nu rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCFCDCFA9979ABB18 ;
+        :personEvent        bdr:EVC03FAAE6B93A9198 , bdr:EVDA0A9659B93A7064 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB9334C1FE12B5AB5 , bdr:NME7D654FD6E584D66 .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P1050> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1050 {
+    bda:LG535003841058075B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-30T15:23:22.369Z"^^xsd:dateTime ;
+        adm:logMessage      "yig nor bcos"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGDB5A44F0B690CBE1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:10:51.998Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1050  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1050 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7b/P1050.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1050 ;
+        adm:logEntry        bda:LG535003841058075B , bda:LGDB5A44F0B690CBE1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV390A91C2409EC641
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM63A4A0703FFEAC23
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sa dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NM981E19BA247CE7DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN+Di ta sa dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NT86B98407F5E835ED
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:P1050  a            :Person ;
+        skos:prefLabel      "sa dbang bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT86B98407F5E835ED ;
+        :personEvent        bdr:EV390A91C2409EC641 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM63A4A0703FFEAC23 , bdr:NM981E19BA247CE7DE ;
+        :personTeacherOf    bdr:P1046 .
+}

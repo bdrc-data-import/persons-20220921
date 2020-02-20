@@ -1,0 +1,79 @@
+@base          <bdg:P966> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P966 {
+    bda:LG454A4D3767C877D8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-13T16:40:14.341Z"^^xsd:dateTime ;
+        adm:logMessage      "added personal name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGD0AAABF836778883
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T09:12:58.691Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE85398C01D9984E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-04-06T10:19:05.438Z"^^xsd:dateTime ;
+        adm:logMessage      "new"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P966  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P966 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2a/P966.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P966 ;
+        adm:logEntry        bda:LG454A4D3767C877D8 , bda:LGD0AAABF836778883 , bda:LGE85398C01D9984E0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04D050F083D61DDA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G233 .
+    
+    bdr:EV2686C79DD5925A87
+        a                   :PersonDeath ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:EVDB2860752B17737C
+        a                   :PersonBirth ;
+        :onYear             "1920"^^xsd:gYear .
+    
+    bdr:NM5683146B2187CCCB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bco brgyad khri chen 18 thub bstan legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7468D5CF6D704D75
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME2F69FC754CA4396
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang mkhyen rab legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEA8DBB8D4E1262EF
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang mkhyen rab thub bstan legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P966  a             :Person ;
+        skos:prefLabel      "thub bstan legs bshad rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV04D050F083D61DDA , bdr:EV2686C79DD5925A87 , bdr:EVDB2860752B17737C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5683146B2187CCCB , bdr:NM7468D5CF6D704D75 , bdr:NME2F69FC754CA4396 , bdr:NMEA8DBB8D4E1262EF ;
+        :personTeacherOf    bdr:P1649 , bdr:P6063 .
+}

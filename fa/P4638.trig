@@ -1,0 +1,57 @@
+@base          <bdg:P4638> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4638 {
+    bda:LG2F81537C53EA771C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T12:06:05.741Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4638  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4638 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fa/P4638.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4638 ;
+        adm:logEntry        bda:LG2F81537C53EA771C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A9B43E4545464DB
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM8DED9E1737CD15E1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros mtha' yas/"@bo-x-ewts .
+    
+    bdr:NMBC06068F2EBF2CD7
+        a                   :PersonPersonalName ;
+        rdfs:label          "dwags po blo gros mtha' yas/"@bo-x-ewts .
+    
+    bdr:NT773D9F12AC3CC7C9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4638  a            :Person ;
+        skos:prefLabel      "blo gros mtha' yas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT773D9F12AC3CC7C9 ;
+        :personEvent        bdr:EV2A9B43E4545464DB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8DED9E1737CD15E1 , bdr:NMBC06068F2EBF2CD7 ;
+        :personStudentOf    bdr:P4636 .
+}

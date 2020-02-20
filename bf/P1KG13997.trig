@@ -1,0 +1,55 @@
+@base          <bdg:P1KG13997> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG13997 {
+    bda:LGA9225CE36BB2AF4D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-18T14:41:33.597Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG13997  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG13997 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bf/P1KG13997.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG13997 ;
+        adm:logEntry        bda:LGA9225CE36BB2AF4D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91EDA08D4C2AFA5C
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM04B20435A909C37F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang skal ldan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEE2CF899C4360C9C
+        a                   :PersonPersonalName ;
+        rdfs:label          "shel dkar ba ngag dbang skal ldan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT28C449561F48FFA9
+        a                   :Note ;
+        :noteText           "wrote shel dkar chos 'byug in 1731/32"@en .
+    
+    bdr:P1KG13997  a        :Person ;
+        skos:prefLabel      "ngag dbang skal ldan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT28C449561F48FFA9 ;
+        :personEvent        bdr:EV91EDA08D4C2AFA5C ;
+        :personName         bdr:NM04B20435A909C37F , bdr:NMEE2CF899C4360C9C .
+}

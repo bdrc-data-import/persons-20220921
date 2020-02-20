@@ -1,0 +1,78 @@
+@base          <bdg:P2788> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2788 {
+    bda:LG0D843AB84F8EBDB8
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:14:11.405Z"^^xsd:dateTime ;
+        adm:logMessage      "added second note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG53E5290F1FEDF486
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-02T15:05:11.223Z"^^xsd:dateTime ;
+        adm:logMessage      "added student-teacher relationship"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG7C081A9027CD687B
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:56:12.567Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2788  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2788 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4b/P2788.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2788 ;
+        adm:logEntry        bda:LG0D843AB84F8EBDB8 , bda:LG53E5290F1FEDF486 , bda:LG7C081A9027CD687B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81BA094E27880F2F
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM2927C2B934919281
+        a                   :PersonPersonalName ;
+        rdfs:label          "brag stod pa lha dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NM45AF2C7B6E10E531
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos sku lha dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NM581C719644ED3077
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NT810C6613511C38BD
+        a                   :Note ;
+        :noteText           "scholar of the jo nang tradition of the kalacakra"@en .
+    
+    bdr:NTBB9F1D8CB0B8C9C2
+        a                   :Note ;
+        :noteText           "important master of shang pa bka' brgyud transmission lineage"@en .
+    
+    bdr:P2788  a            :Person ;
+        skos:prefLabel      "lha dbang grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT810C6613511C38BD , bdr:NTBB9F1D8CB0B8C9C2 ;
+        :personEvent        bdr:EV81BA094E27880F2F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2927C2B934919281 , bdr:NM45AF2C7B6E10E531 , bdr:NM581C719644ED3077 ;
+        :personStudentOf    bdr:P2387 , bdr:P4012 ;
+        :personTeacherOf    bdr:P1428 , bdr:P2789 , bdr:P877 .
+}

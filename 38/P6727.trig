@@ -1,0 +1,61 @@
+@base          <bdg:P6727> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6727 {
+    bda:P6727  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6727 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "38/P6727.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6727 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV094EF93391013FF5
+        a                   :PersonLeavesOffice ;
+        :onYear             "1898"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV1933787DC7A66B25
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV698F61A8B6180A7E
+        a                   :PersonAssumesOffice ;
+        :onYear             "1878"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM36E84DC0BFD43DB1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ram pa lha dbang rdo rje/"@bo-x-ewts .
+    
+    bdr:NM92977E5B8229EAB6
+        a                   :PersonPersonalName ;
+        rdfs:label          "lha dbang rdo rje, ram pa/"@bo-x-ewts .
+    
+    bdr:NT654025CB46824420
+        a                   :Note ;
+        :locationStatement  "p. 232" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, (1878)-1898"@en .
+    
+    bdr:P6727  a            :Person ;
+        skos:prefLabel      "ram pa lha dbang rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT654025CB46824420 ;
+        :personEvent        bdr:EV094EF93391013FF5 , bdr:EV1933787DC7A66B25 , bdr:EV698F61A8B6180A7E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM36E84DC0BFD43DB1 , bdr:NM92977E5B8229EAB6 .
+}

@@ -1,0 +1,80 @@
+@base          <bdg:P8908> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8908 {
+    bda:LG84DFE577EB081184
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T11:04:45.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8908  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8908 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "92/P8908.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8908 ;
+        adm:logEntry        bda:LG84DFE577EB081184 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F14130069F328C6
+        a                   :PersonDeath ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:EVDF779AEDD79DD79F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:EVE834394EFC05F2FC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4323 ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:NM0DDCC0FBB5FD29BF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 08"@bo-x-ewts .
+    
+    bdr:NM2BF045E64D93FDC4
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang chos kyi seng+ge mdo rgyud bstan skyong /"@bo-x-ewts .
+    
+    bdr:NM6D72AA35B3D9F7FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi pham chos kyi byams pa/"@bo-x-ewts .
+    
+    bdr:NMB326ACD483F2EC3D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Choje Kutreng 08"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMDDF77C356C6EC6D8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 08 mi pham chos kyi byams pa/"@bo-x-ewts .
+    
+    bdr:NT76EC8540FBCD7F50
+        a                   :Note ;
+        :locationStatement  "pp. 150-152" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: mgo log yo stag gi rmog gdong zer ba'i grong ba \ndied at the age of 25\nartistic works:\nbzo ras kha gang tsam gyi gzhi la dus kyi 'khor lo'i thugs gsung sku yongs rdzogs kyi dkyil 'khor thig tshon legs mdzes kyi bkod pa ngo mtshar ba'i gnas bzhengs grub bgyis\nwritings:\nsngon 'gro ngag 'don gyi rim pa\ngtor ma'i cho ga rgyun khyer gyi tshul"@en .
+    
+    bdr:P8908  a            :Person ;
+        skos:prefLabel      "mi pham chos kyi byams pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8907 ;
+        :isRoot             true ;
+        :note               bdr:NT76EC8540FBCD7F50 ;
+        :personEvent        bdr:EV9F14130069F328C6 , bdr:EVDF779AEDD79DD79F , bdr:EVE834394EFC05F2FC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0DDCC0FBB5FD29BF , bdr:NM2BF045E64D93FDC4 , bdr:NM6D72AA35B3D9F7FB , bdr:NMB326ACD483F2EC3D , bdr:NMDDF77C356C6EC6D8 ;
+        :personStudentOf    bdr:P258 , bdr:P264 .
+}

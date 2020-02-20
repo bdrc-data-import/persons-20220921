@@ -1,0 +1,64 @@
+@base          <bdg:P644> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P644 {
+    bda:LG50913594CBAFF5E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:17:21.766Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P644  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P644 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a7/P644.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P644 ;
+        adm:logEntry        bda:LG50913594CBAFF5E7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA969A595A446DC91
+        a                   :PersonDeath ;
+        :onYear             "1615"^^xsd:gYear .
+    
+    bdr:EVB2116249EF661200
+        a                   :PersonBirth ;
+        :onYear             "1540"^^xsd:gYear .
+    
+    bdr:NM99DDE1AA96A13040
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo chen 'gyur med bde chen/"@bo-x-ewts .
+    
+    bdr:NMDAEFABC8E40224FA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med bde chen/"@bo-x-ewts .
+    
+    bdr:NTA50D35A0773017FC
+        a                   :Note ;
+        :locationStatement  "p. 2330" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1609. 'gyur med bde chen gyis <<gryb chen thang stong rgyal po'i rnam thar>> brtsams"@en .
+    
+    bdr:P644  a             :Person ;
+        skos:prefLabel      "'gyur med bde chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA50D35A0773017FC ;
+        :personEvent        bdr:EVA969A595A446DC91 , bdr:EVB2116249EF661200 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM99DDE1AA96A13040 , bdr:NMDAEFABC8E40224FA ;
+        :personStudentOf    bdr:P2387 , bdr:P2417 , bdr:P5290 , bdr:P5712 , bdr:P6153 , bdr:P6154 , bdr:P6155 , bdr:P6156 , bdr:P6158 ;
+        :personTeacherOf    bdr:P7073 , bdr:P787 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lochen-Gyurme-Dechen/9030"^^xsd:anyURI .
+}

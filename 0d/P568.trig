@@ -1,0 +1,105 @@
+@base          <bdg:P568> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P568 {
+    bda:LG0A6B1527D7F469E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-02T09:50:49.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG43C4B186EF7FAC77
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:03:48.769Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG7D4EA3544651F44E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P568  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P568 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0d/P568.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P568 ;
+        adm:logEntry        bda:LG0A6B1527D7F469E3 , bda:LG43C4B186EF7FAC77 , bda:LG7D4EA3544651F44E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F2A74399C21F1CA
+        a                   :PersonBirth ;
+        :onYear             "1790"^^xsd:gYear .
+    
+    bdr:EVA93AA5CFD667574E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EVD3507917C4E701AA
+        a                   :PersonDeath ;
+        :onYear             "1820"^^xsd:gYear .
+    
+    bdr:NM083C9AD41CCDE233
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug bla ma khri pa 04"@bo-x-ewts .
+    
+    bdr:NM0CD6F056D1DA2B33
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Lama Tripa 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM1130DCF903E5F5F1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug bla ma khri pa 04 ngag dbang 'jam dpal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM48992441B2ED47CB
+        a                   :PersonOtherName ;
+        rdfs:label          "tshul khrims grags pa/"@bo-x-ewts .
+    
+    bdr:NMD34D6321725BD809
+        a                   :PersonTitle ;
+        rdfs:label          "khri sprul ngag dbang 'jam dpal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME3EEE23775BE87E7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'jam dpal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT42AA101C43A1D2EE
+        a                   :Note ;
+        :locationStatement  "p. 264" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "according to this source he is the third in the line of bla ma khri pa"@en .
+    
+    bdr:NTE5F8D742737ED442
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTEC60A6407C488203
+        a                   :Note ;
+        :locationStatement  "p. 108" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "according to this source he is the fourth in the line bla ma khri pa"@en .
+    
+    bdr:P568  a             :Person ;
+        skos:prefLabel      "ngag dbang 'jam dpal rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P537 ;
+        :isRoot             true ;
+        :note               bdr:NT42AA101C43A1D2EE , bdr:NTE5F8D742737ED442 , bdr:NTEC60A6407C488203 ;
+        :personEvent        bdr:EV2F2A74399C21F1CA , bdr:EVA93AA5CFD667574E , bdr:EVD3507917C4E701AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM083C9AD41CCDE233 , bdr:NM0CD6F056D1DA2B33 , bdr:NM1130DCF903E5F5F1 , bdr:NM48992441B2ED47CB , bdr:NMD34D6321725BD809 , bdr:NME3EEE23775BE87E7 ;
+        :personStudentOf    bdr:P552 , bdr:P573 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P2169> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2169 {
+    bda:P2169  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2169 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "92/P2169.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2169 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB2A6F03B33CD4BCE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1068 ;
+        :onYear             "1200"^^xsd:gYear .
+    
+    bdr:EVCB94323F831AA732
+        a                   :PersonDeath ;
+        :onYear             "1282"^^xsd:gYear .
+    
+    bdr:NM25B33A94DF4669A6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis grags pa/"@bo-x-ewts .
+    
+    bdr:NT00C49A9E4FB96B3D
+        a                   :Note ;
+        :locationStatement  "p. 108" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTF45C2079FAB50BAB
+        a                   :Note ;
+        :noteText           "karma kaM tshang teacher; sometimes reckoned as an incarnation predecessor in the zhwa dmar lineage\nin some sources he is regarded to be a rebirth of nam mkha' 'od\namong his teachers (not recorded) are stag lung pa and sangs rgyas yar byon"@en .
+    
+    bdr:P2169  a            :Person ;
+        skos:prefLabel      "bkra shis grags pa/"@bo-x-ewts ;
+        :hasDaughter        bdr:P2171 ;
+        :hasFather          bdr:P2170 ;
+        :hasSon             bdr:P2171 ;
+        :isRoot             true ;
+        :note               bdr:NT00C49A9E4FB96B3D , bdr:NTF45C2079FAB50BAB ;
+        :personEvent        bdr:EVB2A6F03B33CD4BCE , bdr:EVCB94323F831AA732 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM25B33A94DF4669A6 ;
+        :personStudentOf    bdr:P1487 .
+}

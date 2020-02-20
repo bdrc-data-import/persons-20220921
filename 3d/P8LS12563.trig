@@ -1,0 +1,76 @@
+@base          <bdg:P8LS12563> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12563 {
+    bda:LG48BC13A906CAD954
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-28T15:20:47.579Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG80C6B24DEC6D8574
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-28T15:10:30.944Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA680DA2423E92309
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS12563  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12563 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3d/P8LS12563.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12563 ;
+        adm:logEntry        bda:LG48BC13A906CAD954 , bda:LG80C6B24DEC6D8574 , bda:LGA680DA2423E92309 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV80DE7F2EC35A37D6
+        a                   :PersonBirth ;
+        :onYear             "1701"^^xsd:gYear .
+    
+    bdr:NM0CD24D4DF5134BD1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "skyang rtse sprul sku 05"@bo-x-ewts .
+    
+    bdr:NM1173F45705C86EC4
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Kyangtse Tulku 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM22C42A56E606F698
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen dge legs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMF777BE0DF0F883D7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhan po rin chen dge legs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT75230A135BC844AB
+        a                   :Note ;
+        :locationStatement  "p. 89-101" ;
+        :noteSource         bdr:MW00EGS1017117 ;
+        :noteText           "1716\t\testablished stong 'khor dgon dga' ldan bstan rgyas gling"@en .
+    
+    bdr:P8LS12563  a        :Person ;
+        skos:prefLabel      "rin chen dge legs rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12562 ;
+        :isRoot             true ;
+        :note               bdr:NT75230A135BC844AB ;
+        :personEvent        bdr:EV80DE7F2EC35A37D6 ;
+        :personName         bdr:NM0CD24D4DF5134BD1 , bdr:NM1173F45705C86EC4 , bdr:NM22C42A56E606F698 , bdr:NMF777BE0DF0F883D7 .
+}

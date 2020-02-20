@@ -1,0 +1,61 @@
+@base          <bdg:P6723> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6723 {
+    bda:P6723  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6723 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "16/P6723.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6723 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2C3788E57A3C5982
+        a                   :PersonAssumesOffice ;
+        :onYear             "1893"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV787BED691F6EA98A
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV8C3CE5AB83605BE2
+        a                   :PersonLeavesOffice ;
+        :onYear             "1901"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM3C76F17FE403D156
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsod nams dbang chen, zur khang /"@bo-x-ewts .
+    
+    bdr:NMC051CBCEBA1FE8AA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zur khang bsod nams dbang chen/"@bo-x-ewts .
+    
+    bdr:NT7782A936308C569C
+        a                   :Note ;
+        :locationStatement  "p. 232" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1893-1901"@en .
+    
+    bdr:P6723  a            :Person ;
+        skos:prefLabel      "zur khang bsod nams dbang chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7782A936308C569C ;
+        :personEvent        bdr:EV2C3788E57A3C5982 , bdr:EV787BED691F6EA98A , bdr:EV8C3CE5AB83605BE2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3C76F17FE403D156 , bdr:NMC051CBCEBA1FE8AA .
+}

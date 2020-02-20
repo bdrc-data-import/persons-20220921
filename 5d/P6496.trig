@@ -1,0 +1,63 @@
+@base          <bdg:P6496> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6496 {
+    bda:LGC115DF25729FD4BD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T09:53:21.48Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6496  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6496 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5d/P6496.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6496 ;
+        adm:logEntry        bda:LGC115DF25729FD4BD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09FDB653D6783A5C
+        a                   :PersonBirth ;
+        :onYear             "1850"^^xsd:gYear .
+    
+    bdr:EVD3EC5E01FBA61013
+        a                   :PersonDeath ;
+        :onYear             "1909"^^xsd:gYear .
+    
+    bdr:NM016584D6BA21F1A1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnye grub chen 04 blo bzang chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM0F9E3EAFCE386922
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nye Drubchen 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM288D5BD68F91A8A2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM3FE0B3148109D438
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rnye grub chen 04"@bo-x-ewts .
+    
+    bdr:P6496  a            :Person ;
+        skos:prefLabel      "blo bzang chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1262 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV09FDB653D6783A5C , bdr:EVD3EC5E01FBA61013 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM016584D6BA21F1A1 , bdr:NM0F9E3EAFCE386922 , bdr:NM288D5BD68F91A8A2 , bdr:NM3FE0B3148109D438 .
+}

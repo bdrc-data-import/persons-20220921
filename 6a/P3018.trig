@@ -1,0 +1,79 @@
+@base          <bdg:P3018> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3018 {
+    bda:LG27AF05DF2E8FC0FF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:52:54.428Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG944EC860BC621FEE
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-15T16:35:08.671Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3018  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3018 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "6a/P3018.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3018 ;
+        adm:logEntry        bda:LG27AF05DF2E8FC0FF , bda:LG944EC860BC621FEE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD808F87EE67F6162
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1183 ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1FAE43B2D133A0FF
+        a                   :PersonPersonalName ;
+        rdfs:label          "dzi wan ka ra rdo rje'i pha lam/"@bo-x-ewts .
+    
+    bdr:NM329CBBAAAE5E68A1
+        a                   :PersonTitle ;
+        rdfs:label          "byar po paN chen/"@bo-x-ewts .
+    
+    bdr:NM619C565AD5EE10DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje pha lam/"@bo-x-ewts .
+    
+    bdr:NMBA3C44AE9A475324
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byar po paN chen rdo rje pha lam/"@bo-x-ewts .
+    
+    bdr:NT87E8946BD24871E6
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:NT934E0E67FBAC8A5A
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW19835 .
+    
+    bdr:P3018  a            :Person ;
+        skos:prefLabel      "rdo rje pha lam/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT87E8946BD24871E6 , bdr:NT934E0E67FBAC8A5A ;
+        :personEvent        bdr:EVD808F87EE67F6162 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1FAE43B2D133A0FF , bdr:NM329CBBAAAE5E68A1 , bdr:NM619C565AD5EE10DE , bdr:NMBA3C44AE9A475324 ;
+        :personStudentOf    bdr:P3017 ;
+        :personTeacherOf    bdr:P3019 , bdr:P4378 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dorje-Palam/5326"^^xsd:anyURI .
+}

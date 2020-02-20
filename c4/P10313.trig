@@ -1,0 +1,85 @@
+@base          <bdg:P10313> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10313 {
+    bda:LG4AF8F9A4A202D5C9
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-05T14:54:38.819Z"^^xsd:dateTime ;
+        adm:logMessage      "name, dates, relations changed"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG704491A24123A7B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-22T17:42:40.355Z"^^xsd:dateTime ;
+        adm:logMessage      "added titles, relations, notes"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P10313  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10313 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c4/P10313.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10313 ;
+        adm:logEntry        bda:LG4AF8F9A4A202D5C9 , bda:LG704491A24123A7B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV002BBA1855B41C30
+        a                   :PersonBirth ;
+        :onYear             "1618"^^xsd:gYear .
+    
+    bdr:EVA9E24F87EF8BECF9
+        a                   :PersonDeath ;
+        :onYear             "1683"^^xsd:gYear .
+    
+    bdr:NM1B2239EBF17E0D9F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM3B6070A7F989BF18
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NME7B2096DC83A1A60
+        a                   :PersonTitle ;
+        rdfs:label          "mkhas grub blo gros rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT3DE8A6D71C9AC8BD
+        a                   :Note ;
+        :noteText           "regarded as rebirth of tA ra nA tha's mother"@en .
+    
+    bdr:NTB73881BA737A56CB
+        a                   :Note ;
+        :locationStatement  "p. 141" ;
+        :noteSource         bdr:MW19816 .
+    
+    bdr:NTF0B63858DD9BD9A0
+        a                   :Note ;
+        :locationStatement  "pp. 521-523" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "teacher in the transmission of the jo nang teachings\nmet the 5th dalai lama and asked his views on gzhan stong"@en .
+    
+    bdr:P10313  a           :Person ;
+        skos:prefLabel      "blo gros rnam rgyal/"@bo-x-ewts ;
+        :hasFather          bdr:P2446 ;
+        :hasMother          bdr:P2447 ;
+        :hasNephew          bdr:P8968 ;
+        :isRoot             true ;
+        :note               bdr:NT3DE8A6D71C9AC8BD , bdr:NTB73881BA737A56CB , bdr:NTF0B63858DD9BD9A0 ;
+        :personEvent        bdr:EV002BBA1855B41C30 , bdr:EVA9E24F87EF8BECF9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1B2239EBF17E0D9F , bdr:NM3B6070A7F989BF18 , bdr:NME7B2096DC83A1A60 ;
+        :personStudentOf    bdr:P1428 , bdr:P2448 ;
+        :personTeacherOf    bdr:P8963 , bdr:P8968 .
+}

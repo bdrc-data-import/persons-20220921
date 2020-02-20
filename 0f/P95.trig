@@ -1,0 +1,90 @@
+@base          <bdg:P95> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P95 {
+    bda:LG77F314AC4EBA4732
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:29:00.68Z"^^xsd:dateTime ;
+        adm:logMessage      "added student infomation"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG8EEBA9FB231A0D55
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T13:10:51.031Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGD03C79B169C845B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T12:17:32.63Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note (ya ngal dkar po as gdungRus)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P95  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P95 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "0f/P95.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P95 ;
+        adm:logEntry        bda:LG77F314AC4EBA4732 , bda:LG8EEBA9FB231A0D55 , bda:LGD03C79B169C845B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV484119AADEE02E8D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G558 ;
+        :onYear             "1207"^^xsd:gYear .
+    
+    bdr:EV9853DE34BD2146AE
+        a                   :PersonDeath ;
+        :onYear             "1278"^^xsd:gYear .
+    
+    bdr:EVFE74EA965E508EFB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G342 .
+    
+    bdr:NM5101BE774ECC2406
+        a                   :PersonFamilyName ;
+        rdfs:label          "ya ngal dkar po/"@bo-x-ewts .
+    
+    bdr:NM6CBF1082DAE74054
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brtson 'grus seng+ge"@bo-x-ewts .
+    
+    bdr:NM767AE18927A32693
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sangs rgyas ston pa brtson 'grus seng+ge"@bo-x-ewts .
+    
+    bdr:NT36D53904184D2C53
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- shangs pa bka' brgyud pa transmissions"@en .
+    
+    bdr:NTB518746D8881638C
+        a                   :Note ;
+        :noteText           "1216: teacher (not recorded): ma gcig sprul sku, from whom he received the gcod kyi chig brgyud.\n1219. teacher (not recorded): bla ma tsa ri ras pa, from whom he received the rab byung vows and the name brtson 'grus seng+ge.\nteacher (not recorded): slob dpon sregs, from whom he received many teachings, presumably the teachings of mgon po phyag drug. teacher (not recorded): sum ston ras pa (gcod skor).\n1225. final vows from mkhan po chos rgyal can (not recorded).\n\nother teachers (not recorded): bla ma glang phug pa, slob dpon tshogs ston shAkya, bla ma khro phu ba, bla ma sa skya pa, slob dpon gtsang pa, slob dpon jo ston, slob dpon grub thob, mkhar rgyab pa, slob dpon jo rgyal, khams ston. \n\nmeets sangs rgyas gnyan ston chos kyi shes rab at yol phu ri gung and received the shangs shos chig brgyud.\n\ndied at ri gung.\n\nthe last of the ni gu chig brgyud."@en .
+    
+    bdr:NTB5EBC964808635D1
+        a                   :Note ;
+        :noteText           "gdung rus: ya ngal dkar po/"@bo-x-ewts .
+    
+    bdr:P95  a              :Person ;
+        skos:prefLabel      "brtson 'grus seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT36D53904184D2C53 , bdr:NTB518746D8881638C , bdr:NTB5EBC964808635D1 ;
+        :personEvent        bdr:EV484119AADEE02E8D , bdr:EV9853DE34BD2146AE , bdr:EVFE74EA965E508EFB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5101BE774ECC2406 , bdr:NM6CBF1082DAE74054 , bdr:NM767AE18927A32693 ;
+        :personStudentOf    bdr:P2248 , bdr:P3322 ;
+        :personTeacherOf    bdr:P2846 , bdr:P2CN20 , bdr:P3323 , bdr:P5706 , bdr:P88 .
+}

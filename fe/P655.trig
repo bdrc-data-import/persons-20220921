@@ -1,0 +1,96 @@
+@base          <bdg:P655> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P655 {
+    bda:LG5FF59E1A83911892
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T12:56:40.202Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9E584909EF3FF6DE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-08T16:36:44.915Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGAA017CE957F298E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-08-25T14:49:24.314Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P655  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P655 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "fe/P655.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P655 ;
+        adm:logEntry        bda:LG5FF59E1A83911892 , bda:LG9E584909EF3FF6DE , bda:LGAA017CE957F298E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0496C9E3CC48B7F6
+        a                   :PersonDeath ;
+        :onYear             "1698"^^xsd:gYear .
+    
+    bdr:EV09874703CA1A17F6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV9481A99D80DD9212
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVBB21CFD1D8BC7821
+        a                   :PersonBirth ;
+        :onYear             "1636"^^xsd:gYear .
+    
+    bdr:NM0F652F52F72D146A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang shes rab/"@bo-x-ewts .
+    
+    bdr:NM5926C486CAC47466
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rig 'dzin kun bzang shes rab/"@bo-x-ewts .
+    
+    bdr:NMD57E5F4F406964A8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul gdan rabs 01"@bo-x-ewts .
+    
+    bdr:NT124616614BAD9022
+        a                   :Note ;
+        :noteText           "1665: Founds Dpal-yul Monastery"@en .
+    
+    bdr:NTC6D50E6534BF648B
+        a                   :Note ;
+        :locationStatement  "p. 16-43" ;
+        :noteSource         bdr:MW27022 .
+    
+    bdr:NTF211486AF9A928CC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P655  a             :Person ;
+        skos:prefLabel      "kun bzang shes rab/"@bo-x-ewts ;
+        :hasYoungerSister   bdr:P8561 ;
+        :isRoot             true ;
+        :note               bdr:NT124616614BAD9022 , bdr:NTC6D50E6534BF648B , bdr:NTF211486AF9A928CC ;
+        :personEvent        bdr:EV0496C9E3CC48B7F6 , bdr:EV09874703CA1A17F6 , bdr:EV9481A99D80DD9212 , bdr:EVBB21CFD1D8BC7821 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0F652F52F72D146A , bdr:NM5926C486CAC47466 , bdr:NMD57E5F4F406964A8 ;
+        :personStudentOf    bdr:P649 , bdr:P659 ;
+        :personTeacherOf    bdr:P5174 , bdr:P659 .
+}

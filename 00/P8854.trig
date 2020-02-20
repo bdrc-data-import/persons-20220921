@@ -1,0 +1,50 @@
+@base          <bdg:P8854> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8854 {
+    bda:P8854  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8854 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "00/P8854.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8854 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV50E750565DEC80E8
+        a                   :PersonBirth ;
+        :onYear             "1601"^^xsd:gYear .
+    
+    bdr:NM63B876DB4CB3D42D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMDD28E12B6DD8633F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal khang rtse sprul sku chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTE2B7C13B865298B4
+        a                   :Note ;
+        :locationStatement  "p. 2328" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1601. khri chen rgyal khang rtse'i sprul sku chos 'byor rgya mtsho 'khrungs"@en .
+    
+    bdr:P8854  a            :Person ;
+        skos:prefLabel      "chos 'byor rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2B7C13B865298B4 ;
+        :personEvent        bdr:EV50E750565DEC80E8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM63B876DB4CB3D42D , bdr:NMDD28E12B6DD8633F .
+}

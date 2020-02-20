@@ -1,0 +1,77 @@
+@base          <bdg:P7822> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7822 {
+    bda:LG0AA011EAA7E96D36
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-03T09:30:13.017Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB9AB4B8C5960CE20
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-21T10:07:39.411Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P7822  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7822 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "74/P7822.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7822 ;
+        adm:logEntry        bda:LG0AA011EAA7E96D36 , bda:LGB9AB4B8C5960CE20 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7FE122FF0D737B60
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3532 .
+    
+    bdr:EVA607A389B957E995
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM0D9ED4F0647415C1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dmu gshen nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM86CF736FCA633199
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dmu dbang nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB8B3A201CCEFEDC9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT5C952B2107005FFD
+        a                   :Note ;
+        :locationStatement  "p. 23-24" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "གཙང་གི་དམུ་གཤེན་གྱི་གདུང་རྒྱུད་དེ། དམུ་དབང་ཉི་མ་རྒྱལ་མཚན་དགུང་ལོ་སུམ་ཅུའི་སྐོར་ལ་རི་རྒྱལ་དགོན་ཕྱག་བཏབ་པ་གསལ།"@bo .
+    
+    bdr:NTA2E815DC03CF668A
+        a                   :Note ;
+        :locationStatement  "p. 36" ;
+        :noteSource         bdr:MW23886 ;
+        :noteText           "bonpo teacher of the gshen lineage who, in 1360, founded the ri rgyal khri brtan nor bu rtse monastery"@en .
+    
+    bdr:P7822  a            :Person ;
+        skos:prefLabel      "nyi ma rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C952B2107005FFD , bdr:NTA2E815DC03CF668A ;
+        :personEvent        bdr:EV7FE122FF0D737B60 , bdr:EVA607A389B957E995 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D9ED4F0647415C1 , bdr:NM86CF736FCA633199 , bdr:NMB8B3A201CCEFEDC9 .
+}

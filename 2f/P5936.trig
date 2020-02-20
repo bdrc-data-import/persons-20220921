@@ -1,0 +1,58 @@
+@base          <bdg:P5936> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5936 {
+    bda:LG089600C4064FC735
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-04T15:43:35.832Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5936  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5936 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2f/P5936.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5936 ;
+        adm:logEntry        bda:LG089600C4064FC735 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAC1F6A035118763A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G545 ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM059B1B071A493722
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu bzang po/"@bo-x-ewts .
+    
+    bdr:NMC61E40EA2D1EEAE4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a'u gzhon nu bzang po/"@bo-x-ewts .
+    
+    bdr:NT8AE8B9712FCB35ED
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P5936  a            :Person ;
+        skos:prefLabel      "gzhon nu bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8AE8B9712FCB35ED ;
+        :personEvent        bdr:EVAC1F6A035118763A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM059B1B071A493722 , bdr:NMC61E40EA2D1EEAE4 ;
+        :personStudentOf    bdr:P1042 .
+}

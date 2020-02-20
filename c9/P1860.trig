@@ -1,0 +1,90 @@
+@base          <bdg:P1860> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1860 {
+    bda:LG2BE91848A60FD8C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-17T16:15:37.103Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1860  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1860 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c9/P1860.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1860 ;
+        adm:logEntry        bda:LG2BE91848A60FD8C5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV25F8A3AD58D0D64C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1781"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV9389D29C41DAC97F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1017 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV9E3F1F5C06D7D655
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM335C8F2B461069D3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 40"@bo-x-ewts .
+    
+    bdr:NMCD01433C668D866E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NMDAC33A195BBEFC9B
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 40 blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NME61D050889E5F26E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gdong gzhug zhabs drung blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NT517B83ADC90FE6FC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTBBDCB0D7E3AF4CD9
+        a                   :Note ;
+        :locationStatement  "p. 852" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTBD958682A5343E01
+        a                   :Note ;
+        :noteText           "Recognized as the embodiment of Gdong-gzhug Ngag-dbang-chos-grags.\nBegins studies at Bya-khyung.\nWent to Dbus for further studies.\nReturns to A-mdo and becomes Rgyud-pa Bla-ma Dbu-mdzad and Rgyud-pa Dpon-slob at Bya-khyung.\n1781. Ascends to khri of Bya-khyung as the Mkhan-rabs 40 and serves for about 4 years."@en .
+    
+    bdr:NTFB1E185B2D03FC52
+        a                   :Note ;
+        :locationStatement  "p. 173-174" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P1860  a            :Person ;
+        skos:prefLabel      "blo bzang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT517B83ADC90FE6FC , bdr:NTBBDCB0D7E3AF4CD9 , bdr:NTBD958682A5343E01 , bdr:NTFB1E185B2D03FC52 ;
+        :personEvent        bdr:EV25F8A3AD58D0D64C , bdr:EV9389D29C41DAC97F , bdr:EV9E3F1F5C06D7D655 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM335C8F2B461069D3 , bdr:NMCD01433C668D866E , bdr:NMDAC33A195BBEFC9B , bdr:NME61D050889E5F26E ;
+        :personStudentOf    bdr:P108 , bdr:P1861 , bdr:P412 .
+}

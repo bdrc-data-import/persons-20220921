@@ -1,0 +1,63 @@
+@base          <bdg:P3398> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3398 {
+    bda:LG43EE66EA96BD3F3A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-02T09:50:45.511Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6AC3BBE060632C5A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-29T12:50:07.601Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG81B70FB985CF37B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-08T09:36:36.789Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3398  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3398 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "32/P3398.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3398 ;
+        adm:logEntry        bda:LG43EE66EA96BD3F3A , bda:LG6AC3BBE060632C5A , bda:LG81B70FB985CF37B2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM5AA1FF0BEDC88743
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pra ha ti/"@bo-x-ewts .
+    
+    bdr:NM9F17BE2F5956E09F
+        a                   :PersonOtherName ;
+        rdfs:label          "prahasti/"@bo-x-ewts .
+    
+    bdr:NT8554E5F8A5964723
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3398  a            :Person ;
+        skos:prefLabel      "pra ha ti/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8554E5F8A5964723 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5AA1FF0BEDC88743 , bdr:NM9F17BE2F5956E09F ;
+        :personStudentOf    bdr:P3397 ;
+        :personTeacherOf    bdr:P7166 .
+}

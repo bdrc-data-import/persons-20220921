@@ -1,0 +1,58 @@
+@base          <bdg:P3178> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3178 {
+    bda:LG05123DF8A5169C70
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-30T19:49:39.718Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P3178  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3178 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d9/P3178.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3178 ;
+        adm:logEntry        bda:LG05123DF8A5169C70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0EF4329C21615EE4
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMA91204EB6F1C9DB3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgo rum pa dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDC266C59F97B4895
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT2123E605F7AC776A
+        a                   :Note ;
+        :noteText           "sa skya master"@en .
+    
+    bdr:P3178  a            :Person ;
+        skos:prefLabel      "dkon mchog rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2123E605F7AC776A ;
+        :personEvent        bdr:EV0EF4329C21615EE4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA91204EB6F1C9DB3 , bdr:NMDC266C59F97B4895 ;
+        :personStudentOf    bdr:P3177 ;
+        :personTeacherOf    bdr:P3179 , bdr:P3229 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P9327> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9327 {
+    bda:P9327  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9327 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ee/P9327.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9327 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV203611ABE63255D1
+        a                   :PersonBirth ;
+        :onYear             "1767"^^xsd:gYear .
+    
+    bdr:NMA3D2FA20F1A48F79
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'od dkar gnas 'dzin sprul pa shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMCFCE956601AF771D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTF02F01380E13764E
+        a                   :Note ;
+        :locationStatement  "p. 297" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon teacher, reembodiment of 'od dkar gnas 'dzin, born in 1764"@en .
+    
+    bdr:P9327  a            :Person ;
+        skos:prefLabel      "shes rab bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF02F01380E13764E ;
+        :personEvent        bdr:EV203611ABE63255D1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA3D2FA20F1A48F79 , bdr:NMCFCE956601AF771D .
+}

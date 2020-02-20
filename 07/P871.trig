@@ -1,0 +1,62 @@
+@base          <bdg:P871> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P871 {
+    bda:LG5F371172F3A6B80F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T12:45:54.914Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P871  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P871 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "07/P871.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P871 ;
+        adm:logEntry        bda:LG5F371172F3A6B80F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV00035E31B6627664
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM3F47B52C9FD1C567
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal mtshan lhun grub/"@bo-x-ewts .
+    
+    bdr:NM4220E09C7DFF7C75
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sku bsrung ba rgyal mtshan lhun grub/"@bo-x-ewts .
+    
+    bdr:NMFD22B03D4DDC9877
+        a                   :PersonTitle ;
+        rdfs:label          "sku bsrung ba/"@bo-x-ewts .
+    
+    bdr:NTC594A92E7E25E02D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P871  a             :Person ;
+        skos:prefLabel      "rgyal mtshan lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC594A92E7E25E02D ;
+        :personEvent        bdr:EV00035E31B6627664 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3F47B52C9FD1C567 , bdr:NM4220E09C7DFF7C75 , bdr:NMFD22B03D4DDC9877 ;
+        :personStudentOf    bdr:P920 ;
+        :personTeacherOf    bdr:P869 .
+}

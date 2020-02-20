@@ -1,0 +1,51 @@
+@base          <bdg:P2860> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2860 {
+    bda:P2860  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2860 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "03/P2860.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2860 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE50B2C460E06F4FA
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM9C7C95614782B394
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAFEE69EDD3E3FFAC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rab 'byams smra ba sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTA8890CDDBB86254A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2860  a            :Person ;
+        skos:prefLabel      "sangs rgyas rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8890CDDBB86254A ;
+        :personEvent        bdr:EVE50B2C460E06F4FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9C7C95614782B394 , bdr:NMAFEE69EDD3E3FFAC ;
+        :personStudentOf    bdr:P2859 ;
+        :personTeacherOf    bdr:P2286 .
+}

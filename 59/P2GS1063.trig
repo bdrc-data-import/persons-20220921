@@ -1,0 +1,67 @@
+@base          <bdg:P2GS1063> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2GS1063 {
+    bda:LGFD116C355FF42F19
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-01T10:50:44.342Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2GS1063  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2GS1063 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "59/P2GS1063.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2GS1063 ;
+        adm:logEntry        bda:LGFD116C355FF42F19 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C5CBB2A6F0166B8
+        a                   :PersonDeath ;
+        :onYear             "1480"^^xsd:gYear .
+    
+    bdr:EVD948F27199B3B1E9
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1398"^^xsd:gYear .
+    
+    bdr:EVE0DEB93E963A9DF0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G371 .
+    
+    bdr:NM47D01618A9E12D40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge 'dun sgang mkhan chen rab 'byor seng+ge"@bo-x-ewts .
+    
+    bdr:NM4F627214D61747BF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rab 'byor seng+ge"@bo-x-ewts .
+    
+    bdr:NT3E41E6F6B5F473D9
+        a                   :Note ;
+        :noteText           "gave the monastic ordination to the 4th zhwa dmar chos grags ye shes"@en .
+    
+    bdr:NT52A6ABC37C7F7C34
+        a                   :Note ;
+        :noteText           "this record is obviously identical with PORK 1677"@en .
+    
+    bdr:P2GS1063  a         :Person ;
+        skos:prefLabel      "rab 'byor seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3E41E6F6B5F473D9 , bdr:NT52A6ABC37C7F7C34 ;
+        :personEvent        bdr:EV8C5CBB2A6F0166B8 , bdr:EVD948F27199B3B1E9 , bdr:EVE0DEB93E963A9DF0 ;
+        :personName         bdr:NM47D01618A9E12D40 , bdr:NM4F627214D61747BF ;
+        :personTeacherOf    bdr:P317 .
+}

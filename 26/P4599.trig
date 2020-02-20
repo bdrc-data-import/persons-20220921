@@ -1,0 +1,50 @@
+@base          <bdg:P4599> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4599 {
+    bda:P4599  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4599 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "26/P4599.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4599 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2B80862AAB4E3576
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1098D3BA55D90084
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje btsun bsod nams don grub/"@bo-x-ewts .
+    
+    bdr:NM2FCC7B564C98835B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams don grub/"@bo-x-ewts .
+    
+    bdr:NTC342A9DC3B60792B
+        a                   :Note ;
+        :noteText           "dge lugs teacher; he was one of the gurus of zhogs pa don yod mkhas grub"@en .
+    
+    bdr:P4599  a            :Person ;
+        skos:prefLabel      "bsod nams don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC342A9DC3B60792B ;
+        :personEvent        bdr:EV2B80862AAB4E3576 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1098D3BA55D90084 , bdr:NM2FCC7B564C98835B ;
+        :personTeacherOf    bdr:P104 .
+}

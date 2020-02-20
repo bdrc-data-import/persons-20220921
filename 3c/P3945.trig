@@ -1,0 +1,71 @@
+@base          <bdg:P3945> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3945 {
+    bda:LG143CE9C6E3E7261A
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-15T16:39:58.397Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3945  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3945 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3c/P3945.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3945 ;
+        adm:logEntry        bda:LG143CE9C6E3E7261A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2C0B3D85AE084166
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EV8AB2DA5E101F5118
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM9326DA0BF13BD338
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 01 spyang thul/"@bo-x-ewts .
+    
+    bdr:NMACD094529745DC29
+        a                   :PersonPrimaryName ;
+        rdfs:label          "spyang thul/"@bo-x-ewts .
+    
+    bdr:NT5646C9B98DEA620B
+        a                   :Note ;
+        :noteText           "On throne: ????-1429"@en .
+    
+    bdr:NT8C3ED8A55ABB7D64
+        a                   :Note ;
+        :locationStatement  "p. 27" ;
+        :noteSource         bdr:MW19834 .
+    
+    bdr:NTACBEC4D5A58BAD9F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3945  a            :Person ;
+        skos:prefLabel      "spyang thul/"@bo-x-ewts ;
+        :hasSon             bdr:P3946 ;
+        :isRoot             true ;
+        :note               bdr:NT5646C9B98DEA620B , bdr:NT8C3ED8A55ABB7D64 , bdr:NTACBEC4D5A58BAD9F ;
+        :personEvent        bdr:EV2C0B3D85AE084166 , bdr:EV8AB2DA5E101F5118 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9326DA0BF13BD338 , bdr:NMACD094529745DC29 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/First-Chone-Sakyong-Changtul/6335"^^xsd:anyURI .
+}

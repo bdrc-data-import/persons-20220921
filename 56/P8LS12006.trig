@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12006> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12006 {
+    bda:LGABEF7313E155B70B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T12:55:31.861Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12006  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12006 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "56/P8LS12006.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12006 ;
+        adm:logEntry        bda:LGABEF7313E155B70B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV071A86ADF5756B71
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6DC7385A4AC96020
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV835E41E0E693042D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMC475583BB8A38A66
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 06"@bo-x-ewts .
+    
+    bdr:NMEA80050B959156A3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "slob chung kun rgyal/"@bo-x-ewts .
+    
+    bdr:NMEE3C1675881F83BE
+        a                   :PersonTitle ;
+        rdfs:label          "drung kun rgyal/"@bo-x-ewts .
+    
+    bdr:NT5443960F69594EA4
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 29" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12006  a        :Person ;
+        skos:prefLabel      "slob chung kun rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5443960F69594EA4 ;
+        :personEvent        bdr:EV071A86ADF5756B71 , bdr:EV6DC7385A4AC96020 , bdr:EV835E41E0E693042D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC475583BB8A38A66 , bdr:NMEA80050B959156A3 , bdr:NMEE3C1675881F83BE .
+}

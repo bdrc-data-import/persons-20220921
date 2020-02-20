@@ -1,0 +1,50 @@
+@base          <bdg:P6969> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6969 {
+    bda:P6969  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6969 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d3/P6969.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6969 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6F56913EE1901424
+        a                   :PersonBirth ;
+        :onYear             "1950"^^xsd:gYear .
+    
+    bdr:NM4264A31162258847
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong bo lha rgyal dpal/"@bo-x-ewts .
+    
+    bdr:NM971A1CA53016BFF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha rgyal dpal/"@bo-x-ewts .
+    
+    bdr:NT4E19CFE9C86447E7
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW29518 ;
+        :noteText           "brief bio in chinese; b. 1950"@en .
+    
+    bdr:P6969  a            :Person ;
+        skos:prefLabel      "lha rgyal dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4E19CFE9C86447E7 ;
+        :personEvent        bdr:EV6F56913EE1901424 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4264A31162258847 , bdr:NM971A1CA53016BFF7 .
+}

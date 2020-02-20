@@ -1,0 +1,55 @@
+@base          <bdg:P8002> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8002 {
+    bda:P8002  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8002 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a3/P8002.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8002 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV907EDDF337C38F96
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G432 .
+    
+    bdr:EVF158D5BE69B02CBC
+        a                   :PersonDeath ;
+        :onYear             "1807"^^xsd:gYear .
+    
+    bdr:NM76BDA9433F88E3EC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal dge bsam gtan phun tshogs/"@bo-x-ewts .
+    
+    bdr:NM9B737422A598D732
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan phun tshogs/"@bo-x-ewts .
+    
+    bdr:NT33EFA142A65ED296
+        a                   :Note ;
+        :locationStatement  "pp. 1-7 (2nd group)" ;
+        :noteSource         bdr:MW24830 ;
+        :noteText           "the predecessor in the incarnation lineage of rdza dpal spurl"@en .
+    
+    bdr:P8002  a            :Person ;
+        skos:prefLabel      "bsam gtan phun tshogs/"@bo-x-ewts ;
+        :hasIncarnation     bdr:P270 ;
+        :isRoot             true ;
+        :note               bdr:NT33EFA142A65ED296 ;
+        :personEvent        bdr:EV907EDDF337C38F96 , bdr:EVF158D5BE69B02CBC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76BDA9433F88E3EC , bdr:NM9B737422A598D732 .
+}

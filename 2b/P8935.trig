@@ -1,0 +1,62 @@
+@base          <bdg:P8935> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8935 {
+    bda:LGF15CCDB60E10342C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:38:07.158Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8935  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8935 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2b/P8935.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8935 ;
+        adm:logEntry        bda:LGF15CCDB60E10342C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV855C4A07D8D36CC1
+        a                   :PersonDeath ;
+        :onYear             "1948"^^xsd:gYear .
+    
+    bdr:EV9A1FE230B38C9AF3
+        a                   :PersonBirth ;
+        :onYear             "1893"^^xsd:gYear .
+    
+    bdr:NM7901F4EC7E8C48B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 07 ngag dbang rdo rje bzang po/"@bo-x-ewts .
+    
+    bdr:NMF0EA33A096630FE4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rdo rje bzang po/"@bo-x-ewts .
+    
+    bdr:NT0A16DE3F49C9C81E
+        a                   :Note ;
+        :locationStatement  "pp. 225-238" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: 'dzi yul rab kha grong ba"@en .
+    
+    bdr:P8935  a            :Person ;
+        skos:prefLabel      "ngag dbang rdo rje bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A16DE3F49C9C81E ;
+        :personEvent        bdr:EV855C4A07D8D36CC1 , bdr:EV9A1FE230B38C9AF3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7901F4EC7E8C48B4 , bdr:NMF0EA33A096630FE4 ;
+        :personStudentOf    bdr:P269 , bdr:P5930 .
+}

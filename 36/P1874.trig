@@ -1,0 +1,76 @@
+@base          <bdg:P1874> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1874 {
+    bda:LG147A8B4E4B76FDB5
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-10T16:04:42.656Z"^^xsd:dateTime ;
+        adm:logMessage      "added G210"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1874  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1874 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "36/P1874.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1874 ;
+        adm:logEntry        bda:LG147A8B4E4B76FDB5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41A8A88AAA2B6C8F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1359"^^xsd:gYear .
+    
+    bdr:EVDD1BDA0F288338E4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G312 .
+    
+    bdr:EVE98040290D676996
+        a                   :PersonDeath ;
+        :onYear             "1428"^^xsd:gYear .
+    
+    bdr:NMC06302DE5DB69651
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME6AC434607EEC697
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya bdag chen chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT35F6440225829DA8
+        a                   :Note ;
+        :locationStatement  "p. 856" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTA178E0436BAE3802
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NTE05FA5FFF3A3906E
+        a                   :Note ;
+        :noteText           "Died G.yas-ru Srin-po-ri Rnam-rgyal-sgang Gzims-khang Dmar-po.\nInvested by Bla-ma Dam-pa Bsod-nams-rgyal-mtshan with the Rin-chen-sgang Bla-brang and the gdan-sa of Sengge-sgang."@en .
+    
+    bdr:P1874  a            :Person ;
+        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :hasFather          bdr:P1875 ;
+        :hasMother          bdr:P1876 ;
+        :isRoot             true ;
+        :note               bdr:NT35F6440225829DA8 , bdr:NTA178E0436BAE3802 , bdr:NTE05FA5FFF3A3906E ;
+        :personEvent        bdr:EV41A8A88AAA2B6C8F , bdr:EVDD1BDA0F288338E4 , bdr:EVE98040290D676996 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC06302DE5DB69651 , bdr:NME6AC434607EEC697 ;
+        :personStudentOf    bdr:P1226 .
+}

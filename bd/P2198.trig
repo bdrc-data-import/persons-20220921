@@ -1,0 +1,83 @@
+@base          <bdg:P2198> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2198 {
+    bda:LGE1D55290A3EF107E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T16:52:45.29Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2198  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2198 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "bd/P2198.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2198 ;
+        adm:logEntry        bda:LGE1D55290A3EF107E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV65703889288E1AF0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1846"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV82524E6C7506D348
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV869635F70B875E05
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVEC51950C0470F74E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1074 ;
+        :onYear             "1790"^^xsd:gYear .
+    
+    bdr:NM65BC01C60F14F387
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 64"@bo-x-ewts .
+    
+    bdr:NM66C48C3D6C7D9C93
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang legs bshad/"@bo-x-ewts .
+    
+    bdr:NM93754DCA1700A51C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha mang skal bzang legs bshad/"@bo-x-ewts .
+    
+    bdr:NMB507B8ED281324C5
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 64 skal bzang legs bshad/"@bo-x-ewts .
+    
+    bdr:NT3A22A6827FC36978
+        a                   :Note ;
+        :locationStatement  "p. 192" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT623EA1FF211D1F32
+        a                   :Note ;
+        :noteText           "dge lugs teacher from bya khyung monastery in a mdo\nhe traveled to central tibet and enrolled in se ra byes\nin 1838 he returned to a mdo and in 1846 ascended the abbatial throne of bya khyung as the 64th mkhan rabs; served as abbot for about 4 years"@en .
+    
+    bdr:P2198  a            :Person ;
+        skos:prefLabel      "skal bzang legs bshad/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3A22A6827FC36978 , bdr:NT623EA1FF211D1F32 ;
+        :personEvent        bdr:EV65703889288E1AF0 , bdr:EV82524E6C7506D348 , bdr:EV869635F70B875E05 , bdr:EVEC51950C0470F74E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM65BC01C60F14F387 , bdr:NM66C48C3D6C7D9C93 , bdr:NM93754DCA1700A51C , bdr:NMB507B8ED281324C5 .
+}

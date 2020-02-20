@@ -1,0 +1,72 @@
+@base          <bdg:P4669> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4669 {
+    bda:LG6A6569341059D397
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-02-27T15:38:35.565Z"^^xsd:dateTime ;
+        adm:logMessage      "added names & teacher-student info"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4669  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4669 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e6/P4669.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4669 ;
+        adm:logEntry        bda:LG6A6569341059D397 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusProvisional .
+    
+    bdr:EV28156D354C56C86D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1116 ;
+        :onYear             "1077"^^xsd:gYear .
+    
+    bdr:EV8887276D97429B51
+        a                   :PersonDeath ;
+        :notAfter           "1158"^^xsd:gYear ;
+        :notBefore          "1156"^^xsd:gYear .
+    
+    bdr:NM1C3DBF409E305284
+        a                   :PersonOtherName ;
+        rdfs:label          "rgyal ba'i sras po spa tshab bsgom pa/"@bo-x-ewts .
+    
+    bdr:NM30810C721F4248AD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma spa tshab/"@bo-x-ewts .
+    
+    bdr:NM6555D565BBB89644
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pa tshab sgom pa/"@bo-x-ewts .
+    
+    bdr:NMB1BA75FB84BEB039
+        a                   :PersonOtherName ;
+        rdfs:label          "spa tshab bsgom pa/"@bo-x-ewts .
+    
+    bdr:NT1CDB93F849AD5B56
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source gives dates 1077-1158"@en .
+    
+    bdr:P4669  a            :Person ;
+        skos:prefLabel      "pa tshab sgom pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1CDB93F849AD5B56 ;
+        :personEvent        bdr:EV28156D354C56C86D , bdr:EV8887276D97429B51 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C3DBF409E305284 , bdr:NM30810C721F4248AD , bdr:NM6555D565BBB89644 , bdr:NMB1BA75FB84BEB039 ;
+        :personStudentOf    bdr:P3442 , bdr:P5651 .
+}

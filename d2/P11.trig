@@ -1,0 +1,53 @@
+@base          <bdg:P11> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11 {
+    bda:P11  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d2/P11.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV736AD0843544687F
+        a                   :PersonBirth ;
+        :onYear             "1906"^^xsd:gYear .
+    
+    bdr:NM18E44919919AE4E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan rnam grol/"@bo-x-ewts .
+    
+    bdr:NM9764E534F40D8E47
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spyan sras thub bstan rnam grol/"@bo-x-ewts .
+    
+    bdr:NT77EFF2F5A7FF6575
+        a                   :Note ;
+        :noteText           "who's who in tibet sdf:\nwas second favorite of the late dalai lama.\n1938, visited china.\nhad no official influence and little influence in 1945."@en .
+    
+    bdr:NTF25194F8F39452DC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P11  a              :Person ;
+        skos:prefLabel      "thub bstan rnam grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT77EFF2F5A7FF6575 , bdr:NTF25194F8F39452DC ;
+        :personEvent        bdr:EV736AD0843544687F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18E44919919AE4E3 , bdr:NM9764E534F40D8E47 ;
+        :personStudentOf    bdr:P197 .
+}

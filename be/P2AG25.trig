@@ -1,0 +1,61 @@
+@base          <bdg:P2AG25> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2AG25 {
+    bda:LG4E6862AC54C03226
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-01-10T10:47:13.301Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG7EAF4A169328C4B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-16T17:38:35.686Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P2AG25  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2AG25 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "be/P2AG25.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2AG25 ;
+        adm:logEntry        bda:LG4E6862AC54C03226 , bda:LG7EAF4A169328C4B0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV580E6229F1B4E09D
+        a                   :PersonBirth ;
+        :onYear             "1242"^^xsd:gYear .
+    
+    bdr:EV68D9AF3BF0313686
+        a                   :PersonDeath ;
+        :onYear             "1290"^^xsd:gYear .
+    
+    bdr:NMDD111C5FC7D2DB41
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bru rgyal ba g.yung drung /"@bo-x-ewts .
+    
+    bdr:NT99EFAA2B1060E217
+        a                   :Note ;
+        :noteText           "important early master of the bon tradition"@en .
+    
+    bdr:P2AG25  a           :Person ;
+        skos:prefLabel      "bru rgyal ba g.yung drung /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT99EFAA2B1060E217 ;
+        :personEvent        bdr:EV580E6229F1B4E09D , bdr:EV68D9AF3BF0313686 ;
+        :personName         bdr:NMDD111C5FC7D2DB41 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dru-Gyelwa-Yungdrung/13115"^^xsd:anyURI .
+}

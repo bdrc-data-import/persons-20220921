@@ -1,0 +1,50 @@
+@base          <bdg:P1327> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1327 {
+    bda:P1327  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1327 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "7f/P1327.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1327 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8CC70308CD60DD8A
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM93A7A3D9DB479732
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros brtan pa/"@bo-x-ewts .
+    
+    bdr:NMC283C344167DC209
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsang phu ba blo gros brtan pa/"@bo-x-ewts .
+    
+    bdr:NTA8D31F8D5B34D524
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P1327  a            :Person ;
+        skos:prefLabel      "blo gros brtan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8D31F8D5B34D524 ;
+        :personEvent        bdr:EV8CC70308CD60DD8A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93A7A3D9DB479732 , bdr:NMC283C344167DC209 ;
+        :personTeacherOf    bdr:P1323 .
+}

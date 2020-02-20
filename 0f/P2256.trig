@@ -1,0 +1,75 @@
+@base          <bdg:P2256> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2256 {
+    bda:LG988B91E771AC9161
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-03T13:56:23.708Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2256  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2256 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "0f/P2256.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2256 ;
+        adm:logEntry        bda:LG988B91E771AC9161 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C6A5D9B5276B3FD
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1092 ;
+        :onYear             "1285"^^xsd:gYear .
+    
+    bdr:EV640E14E939D87477
+        a                   :PersonDeath ;
+        :onYear             "1356"^^xsd:gYear .
+    
+    bdr:EVD407C542F2E959AD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G346 .
+    
+    bdr:NM6D9217CBF3F57E06
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM8262237F0D36125F
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin tshul, chos rje/"@bo-x-ewts .
+    
+    bdr:NT52D1C594FE0848BC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:NT54959C6D7DBF2458
+        a                   :Note ;
+        :noteText           "Regarded as the emanation of Thogs-med.\nMany teachers, but, in accordance with a prophecy by Rang-byung-rdo-rje, goes to Jo-nang to study with Dol-po-pa.\n1342. Given Stod-lung Rnam-rgyal Dgon by Mkhan-po Nor-bzang.\nTeaches the Sbyor drug in Gung-thang.\nResponsible for the creation of the image of Dol-po-pa in the Jo-khang as a monument of his being invited by the Chinese."@en .
+    
+    bdr:NTCF5FE88BE2D41BD6
+        a                   :Note ;
+        :locationStatement  "p. 70" ;
+        :noteSource         bdr:MW19816 .
+    
+    bdr:P2256  a            :Person ;
+        skos:prefLabel      "rin chen tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT52D1C594FE0848BC , bdr:NT54959C6D7DBF2458 , bdr:NTCF5FE88BE2D41BD6 ;
+        :personEvent        bdr:EV0C6A5D9B5276B3FD , bdr:EV640E14E939D87477 , bdr:EVD407C542F2E959AD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6D9217CBF3F57E06 , bdr:NM8262237F0D36125F ;
+        :personStudentOf    bdr:P139 , bdr:P151 , bdr:P153 , bdr:P2251 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Rinchen-Tsultrim/3940"^^xsd:anyURI .
+}

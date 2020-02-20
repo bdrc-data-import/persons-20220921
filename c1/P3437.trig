@@ -1,0 +1,90 @@
+@base          <bdg:P3437> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3437 {
+    bda:LG04B6E4F12F0F7673
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T10:27:01.012Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3437  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3437 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c1/P3437.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3437 ;
+        adm:logEntry        bda:LG04B6E4F12F0F7673 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV28438FD035A56FB7
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV7A4C3D761F8EDB36
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVCA12248D4256353F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM33A1F67C8C5D2B6F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM5A7253F4E82B1B5C
+        a                   :PersonTitle ;
+        rdfs:label          "se ra byes blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM8B6A57802EC4C0DC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tre hor blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM9F379DE49EF8DE04
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 24"@bo-x-ewts .
+    
+    bdr:NMF33C35525C06C8B9
+        a                   :PersonTitle ;
+        rdfs:label          "byams chen mkhan po blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NT146D09C65A06AD22
+        a                   :Note ;
+        :locationStatement  "p. 290, 376-379" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:NT69518172A5A9D034
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 513" ;
+        :noteSource         bdr:MW19802 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:NT7B58DF250A426F52
+        a                   :Note ;
+        :noteText           "dge lugs lama of the 17th century connected with the byes college of se ra monastery\nthere existed a rnam thar written by blo bzang bkra shis; not yet found"@en .
+    
+    bdr:P3437  a            :Person ;
+        skos:prefLabel      "blo bzang nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT146D09C65A06AD22 , bdr:NT69518172A5A9D034 , bdr:NT7B58DF250A426F52 ;
+        :personEvent        bdr:EV28438FD035A56FB7 , bdr:EV7A4C3D761F8EDB36 , bdr:EVCA12248D4256353F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM33A1F67C8C5D2B6F , bdr:NM5A7253F4E82B1B5C , bdr:NM8B6A57802EC4C0DC , bdr:NM9F379DE49EF8DE04 , bdr:NMF33C35525C06C8B9 ;
+        :personStudentOf    bdr:P417 , bdr:P423 ;
+        :personTeacherOf    bdr:P3438 , bdr:P5317 , bdr:P5700 .
+}

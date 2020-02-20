@@ -1,0 +1,51 @@
+@base          <bdg:P1273> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1273 {
+    bda:P1273  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1273 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1f/P1273.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1273 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV456BBD7BFC3AC2DD
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM17E684545AD947C0
+        a                   :PersonPersonalName ;
+        rdfs:label          "dpal mgon, Ngang pa/"@bo-x-ewts .
+    
+    bdr:NMEAB361B1CC4ED0EF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngang pa dpal mgon/"@bo-x-ewts .
+    
+    bdr:NT599B142C25CCAE9A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P1273  a            :Person ;
+        skos:prefLabel      "ngang pa dpal mgon/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT599B142C25CCAE9A ;
+        :personEvent        bdr:EV456BBD7BFC3AC2DD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM17E684545AD947C0 , bdr:NMEAB361B1CC4ED0EF ;
+        :personStudentOf    bdr:P1271 ;
+        :personTeacherOf    bdr:P00KG07604 .
+}

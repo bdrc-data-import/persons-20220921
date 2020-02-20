@@ -1,0 +1,59 @@
+@base          <bdg:P951> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P951 {
+    bda:LG685C66DFE3309E6C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:10:00.553Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P951  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P951 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f8/P951.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P951 ;
+        adm:logEntry        bda:LG685C66DFE3309E6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7DB08583D701B4C9
+        a                   :PersonDeath ;
+        :onYear             "1706"^^xsd:gYear .
+    
+    bdr:EVB905F99C280ABA78
+        a                   :PersonBirth ;
+        :onYear             "1672"^^xsd:gYear .
+    
+    bdr:NM586541D9EF24ED61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis 'jam dpal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM85DE58B2BA9C73AA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag lung pa bkra shis 'jam dpal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT947D44DDCC7D94BF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- Stag-lung Bka'-brgyud transmissions"@en .
+    
+    bdr:P951  a             :Person ;
+        skos:prefLabel      "bkra shis 'jam dpal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT947D44DDCC7D94BF ;
+        :personEvent        bdr:EV7DB08583D701B4C9 , bdr:EVB905F99C280ABA78 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM586541D9EF24ED61 , bdr:NM85DE58B2BA9C73AA .
+}

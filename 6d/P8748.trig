@@ -1,0 +1,66 @@
+@base          <bdg:P8748> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8748 {
+    bda:LG341D660A105CB15C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-15T16:38:31.948Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LG56F3A7380C2D04CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-01T17:16:50.946Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8748  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8748 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6d/P8748.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8748 ;
+        adm:logEntry        bda:LG341D660A105CB15C , bda:LG56F3A7380C2D04CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72F95D0EC875D2B0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM57B96FEBA5ED876E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rdo rje/"@bo-x-ewts .
+    
+    bdr:NMBFB90C732C023501
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling mkhan chen tshul khrims rdo rje/"@bo-x-ewts .
+    
+    bdr:NT3F5D6D7EB5574E3D
+        a                   :Note ;
+        :locationStatement  "p. 419" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "mentioned as a teacher of gling sprul thub bstan nyin byed rgyal mtshan"@en .
+    
+    bdr:P8748  a            :Person ;
+        skos:prefLabel      "tshul khrims rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3F5D6D7EB5574E3D ;
+        :personEvent        bdr:EV72F95D0EC875D2B0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM57B96FEBA5ED876E , bdr:NMBFB90C732C023501 ;
+        :personStudentOf    bdr:P8747 ;
+        :personTeacherOf    bdr:P6455 , bdr:P8687 , bdr:P8749 .
+}

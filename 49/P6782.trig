@@ -1,0 +1,77 @@
+@base          <bdg:P6782> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6782 {
+    bda:LG54FD03736584F9FB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-21T11:00:20.24Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6782  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6782 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "49/P6782.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6782 ;
+        adm:logEntry        bda:LG54FD03736584F9FB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21760D75D33F7B76
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G298 .
+    
+    bdr:EV7D01DE517C3961B8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2737 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:NM089B6F028F5DDCB7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "khya dge 04"@bo-x-ewts .
+    
+    bdr:NM3B920777455D6F87
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Khyage 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM6347013B4CA3A9A7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khya dge 04 'jigs med thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF7C1D2414D3D83CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1321431A47740109
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "recognized by the gung thang and the 'jam dbyangs bzhad pa\nprovincial recognition\ninstalled at co ne khya dge in 1991"@en .
+    
+    bdr:NTE419DDD1E9343254
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 429" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "sku phreng zhin pa 'jigs med thub bstan rgya mtsho ni/ rab byung bcu drug pa'i chu khyi spyi lo 1982 lor zam tsha'i gnyan tog tu 'khrungs/ spyi lo 1992 lor kun mkhyen rin po che dang / gung thang bstan pa'i dbang phug gnyis kyis gong ma'i yang srid du ngos 'dzin gnang / lo de'i hor zla 9 tshes 22 nyin gdan sar bkod/ rab bstan rgya mtsho ba las rab tu byung / da lta zhal bzhugs bzhin pa'o"@bo-x-ewts .
+    
+    bdr:P6782  a            :Person ;
+        skos:prefLabel      "'jigs med thub bstan rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13325 ;
+        :isRoot             true ;
+        :note               bdr:NT1321431A47740109 , bdr:NTE419DDD1E9343254 ;
+        :personEvent        bdr:EV21760D75D33F7B76 , bdr:EV7D01DE517C3961B8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM089B6F028F5DDCB7 , bdr:NM3B920777455D6F87 , bdr:NM6347013B4CA3A9A7 , bdr:NMF7C1D2414D3D83CE .
+}

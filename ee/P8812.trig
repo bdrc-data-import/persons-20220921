@@ -1,0 +1,51 @@
+@base          <bdg:P8812> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8812 {
+    bda:P8812  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8812 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ee/P8812.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8812 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41F4D760321BB527
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMB8203F6BE8A53454
+        a                   :PersonPrimaryName ;
+        rdfs:label          "li, hri kreng /"@bo-x-ewts .
+    
+    bdr:NMD93E38C6357CE03F
+        a                   :PersonPersonalName ;
+        rdfs:label          "hri kreng li/"@bo-x-ewts .
+    
+    bdr:NT2CFABF8E1EEB2151
+        a                   :Note ;
+        :locationStatement  "p. 2323" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1552. rgya nag gi sman pa mkhas pa li hri kreng gyis <<sngo sman dkar chag>> mdzad"@en .
+    
+    bdr:P8812  a            :Person ;
+        skos:prefLabel      "li, hri kreng /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2CFABF8E1EEB2151 ;
+        :personEvent        bdr:EV41F4D760321BB527 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB8203F6BE8A53454 , bdr:NMD93E38C6357CE03F .
+}

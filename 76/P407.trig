@@ -1,0 +1,70 @@
+@base          <bdg:P407> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P407 {
+    bda:LGA38D79BF410C074D
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-01-30T05:59:15.125Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P407  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P407 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "76/P407.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P407 ;
+        adm:logEntry        bda:LGA38D79BF410C074D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08932218227C6CBF
+        a                   :PersonBirth ;
+        :onYear             "1255"^^xsd:gYear .
+    
+    bdr:EV7299616F2D321D52
+        a                   :PersonDeath ;
+        :onYear             "1327"^^xsd:gYear .
+    
+    bdr:NM05554EE3CA61C2F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kam kam pa rin chen gzhon nu/"@bo-x-ewts .
+    
+    bdr:NM8D0B3E1B15A32914
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen gzhon nu/"@bo-x-ewts .
+    
+    bdr:NMBA26D3899331E549
+        a                   :PersonTitle ;
+        rdfs:label          "skam skam pa rin chen gzhon nu/"@bo-x-ewts .
+    
+    bdr:NT1C091EFB93FC2593
+        a                   :Note ;
+        :locationStatement  "p. 187" ;
+        :noteSource         bdr:MW19804 ;
+        :noteText           "documentation"@en .
+    
+    bdr:NTBDE0417B36E16FAF
+        a                   :Note ;
+        :locationStatement  "p. 1" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "early kadam master of the kamkam monastery; dates given 1255-1327"@en .
+    
+    bdr:P407  a             :Person ;
+        skos:prefLabel      "rin chen gzhon nu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C091EFB93FC2593 , bdr:NTBDE0417B36E16FAF ;
+        :personEvent        bdr:EV08932218227C6CBF , bdr:EV7299616F2D321D52 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05554EE3CA61C2F2 , bdr:NM8D0B3E1B15A32914 , bdr:NMBA26D3899331E549 .
+}

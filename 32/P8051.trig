@@ -1,0 +1,52 @@
+@base          <bdg:P8051> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8051 {
+    bda:P8051  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8051 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "32/P8051.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8051 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF2632ED5E5760632
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM72C56A59A5B28BF3
+        a                   :PersonPersonalName ;
+        rdfs:label          "dpal ldan rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM84F03D841FD27930
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ha rten dpal ldan rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTBFD19C2BAB454E22
+        a                   :Note ;
+        :locationStatement  "p. 206" ;
+        :noteSource         bdr:MW25047 ;
+        :noteText           "deceased at the time of publication of this memoir of the career of his father"@en .
+    
+    bdr:P8051  a            :Person ;
+        skos:prefLabel      "dpal ldan rnam rgyal/"@bo-x-ewts ;
+        :hasFather          bdr:P8049 ;
+        :isRoot             true ;
+        :note               bdr:NTBFD19C2BAB454E22 ;
+        :personEvent        bdr:EVF2632ED5E5760632 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM72C56A59A5B28BF3 , bdr:NM84F03D841FD27930 .
+}

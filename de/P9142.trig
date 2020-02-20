@@ -1,0 +1,56 @@
+@base          <bdg:P9142> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9142 {
+    bda:P9142  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9142 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "de/P9142.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9142 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV772C03CD0967D302
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EV9AE8DD7D34621634
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4445 .
+    
+    bdr:EVB02B25283C8A789A
+        a                   :PersonDeath ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:NM353B296F02B83C65
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' grags pa blo gros/"@bo-x-ewts .
+    
+    bdr:NTB6A6B54EBB51E86D
+        a                   :Note ;
+        :locationStatement  "pp. 830-834" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "biography\nsgrol ma pho brang"@en .
+    
+    bdr:P9142  a            :Person ;
+        skos:prefLabel      "kun dga' grags pa blo gros/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P976 , bdr:P979 ;
+        :isRoot             true ;
+        :note               bdr:NTB6A6B54EBB51E86D ;
+        :personEvent        bdr:EV772C03CD0967D302 , bdr:EV9AE8DD7D34621634 , bdr:EVB02B25283C8A789A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM353B296F02B83C65 ;
+        :personStudentOf    bdr:P976 , bdr:P979 .
+}

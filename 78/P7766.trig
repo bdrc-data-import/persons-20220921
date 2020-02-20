@@ -1,0 +1,89 @@
+@base          <bdg:P7766> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7766 {
+    bda:LGD2F731474D180EAB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T12:52:13.17Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7766  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7766 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "78/P7766.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7766 ;
+        adm:logEntry        bda:LGD2F731474D180EAB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV686F1B016ABEEEAD
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1848"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV71BCBFF9BEBC1219
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVDF2A8B213DE99A9A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1842"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVF7E8D73E4B45B33F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM636D60B5212BEDA8
+        a                   :PersonTitle ;
+        rdfs:label          "khang gsar ngag dbang blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NM65F517237A9F315A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 52 ngag dbang blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NM81C9929243D523C9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 52"@bo-x-ewts .
+    
+    bdr:NM9E16996B379BCE1A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo gros bstan pa/"@bo-x-ewts .
+    
+    bdr:NT502DBD746C7A56B6
+        a                   :Note ;
+        :locationStatement  "p. 112" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NT9F81D7A920E0180B
+        a                   :Note ;
+        :locationStatement  "p. 207" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography\nborn as a nephew of ngor mkhan chen ngag dbang blo gros bzang po\nascended as abbot of ngor in 1842"@en .
+    
+    bdr:P7766  a            :Person ;
+        skos:prefLabel      "ngag dbang blo gros bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT502DBD746C7A56B6 , bdr:NT9F81D7A920E0180B ;
+        :personEvent        bdr:EV686F1B016ABEEEAD , bdr:EV71BCBFF9BEBC1219 , bdr:EVDF2A8B213DE99A9A , bdr:EVF7E8D73E4B45B33F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM636D60B5212BEDA8 , bdr:NM65F517237A9F315A , bdr:NM81C9929243D523C9 , bdr:NM9E16996B379BCE1A ;
+        :personStudentOf    bdr:P3513 ;
+        :personTeacherOf    bdr:P809 .
+}

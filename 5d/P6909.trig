@@ -1,0 +1,72 @@
+@base          <bdg:P6909> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6909 {
+    bda:LG09CD9F00EA1A6BB9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-07T09:52:41.75Z"^^xsd:dateTime ;
+        adm:logMessage      "addded names & event, seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6909  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6909 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5d/P6909.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6909 ;
+        adm:logEntry        bda:LG09CD9F00EA1A6BB9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6839512F82FD38F8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2119 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVA973B106B1B7586D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR1893 .
+    
+    bdr:NM068929AE49FBBB36
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rba kha rig 'dzin yang dag rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM313DCBC26DAD7EF7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rba kha 01"@bo-x-ewts .
+    
+    bdr:NM8A1BC4E70909FAE4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yang dag rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBAF0CDFCD04D10E8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rba kha 01 yang dag rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8AF22A0F71E7A577
+        a                   :Note ;
+        :locationStatement  "p. 103" ;
+        :noteSource         bdr:MW20520 ;
+        :noteText           "born in gtsang snye mo\ncame to spo bo and saw the old rba kha dgon which was gifted by the then kaH nam rgyal po\nappointed gu ru dbang rgyal to be the gdan 'dzin"@en .
+    
+    bdr:P6909  a            :Person ;
+        skos:prefLabel      "yang dag rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8AF22A0F71E7A577 ;
+        :personEvent        bdr:EV6839512F82FD38F8 , bdr:EVA973B106B1B7586D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM068929AE49FBBB36 , bdr:NM313DCBC26DAD7EF7 , bdr:NM8A1BC4E70909FAE4 , bdr:NMBAF0CDFCD04D10E8 ;
+        :personTeacherOf    bdr:P6911 .
+}

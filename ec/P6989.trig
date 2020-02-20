@@ -1,0 +1,63 @@
+@base          <bdg:P6989> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6989 {
+    bda:LGE11A32CF9A076436
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-06T10:02:15.029Z"^^xsd:dateTime ;
+        adm:logMessage      "added kinship & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6989  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6989 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ec/P6989.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6989 ;
+        adm:logEntry        bda:LGE11A32CF9A076436 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB337BEDD65B73B8A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3072 .
+    
+    bdr:EVF5C361781BB7A844
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM16864C61FA91AF86
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag ras pa skal bzang o rgyan bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMB8CF55615FDB508D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang o rgyan bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT736AB095259B1326
+        a                   :Note ;
+        :locationStatement  "p. 31v" ;
+        :noteSource         bdr:MW20915 ;
+        :noteText           "a nephew of kaH thog rig 'dzin padma nor bu\nconfirms that tshe dbang nor bu was the rebirth of his uncle  padma nor bu"@en .
+    
+    bdr:P6989  a            :Person ;
+        skos:prefLabel      "skal bzang o rgyan bstan 'dzin/"@bo-x-ewts ;
+        :hasUncle           bdr:P676 ;
+        :isRoot             true ;
+        :note               bdr:NT736AB095259B1326 ;
+        :personEvent        bdr:EVB337BEDD65B73B8A , bdr:EVF5C361781BB7A844 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16864C61FA91AF86 , bdr:NMB8CF55615FDB508D .
+}

@@ -1,0 +1,53 @@
+@base          <bdg:P8LS13662> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13662 {
+    bda:LG0D6F1FEF7FA0C33B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-06T11:55:49.342Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG17FE15DC00C3F9B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-06T12:00:07.402Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favour of P3835"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13662  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13662 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "7a/P8LS13662.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13662 ;
+        adm:logEntry        bda:LG0D6F1FEF7FA0C33B , bda:LG17FE15DC00C3F9B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P3835 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:NM5B6B3577C0B1E231
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje gdan pa chung ba/"@bo-x-ewts .
+    
+    bdr:NT69B422DF7D3DBDF6
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 60" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13662  a        :Person ;
+        skos:prefLabel      "rdo rje gdan pa chung ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT69B422DF7D3DBDF6 ;
+        :personName         bdr:NM5B6B3577C0B1E231 .
+}

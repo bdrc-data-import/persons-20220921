@@ -1,0 +1,76 @@
+@base          <bdg:P8LS12192> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12192 {
+    bda:LG2BB7B3346F0C4124
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T12:27:12.204Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12192  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12192 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "30/P8LS12192.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12192 ;
+        adm:logEntry        bda:LG2BB7B3346F0C4124 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3EC6B7507C0E9FF6
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV683C0A506FDF0AF8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R8LS12190 .
+    
+    bdr:EVFE603DAF1880E192
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:NM972E0B858AC96FD0
+        a                   :PersonPersonalName ;
+        rdfs:label          "'gyur med don grub dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMD907E5E464C2D371
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMEA565A43D3F9DB86
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling khri chen 10"@bo-x-ewts .
+    
+    bdr:NTB7FF754EC6CEF354
+        a                   :Note ;
+        :locationStatement  "p. 129" ;
+        :noteSource         bdr:MW20250 ;
+        :noteText           "According to this source the 10th khri of smin grol gling monastery is khri chen kun dga' bstan 'dzin or nyag sras khri chen kun dga' bstan 'dzin or padma bde chen. The 11th khri is don grub dbang rgyal."@en .
+    
+    bdr:NTC9D902E23316721D
+        a                   :Note ;
+        :locationStatement  "p. 119-120" ;
+        :noteSource         bdr:MW1CZ2290 ;
+        :noteText           "Because of khri chen don grub dbang rgyal's harsh behaviour he was replaced and rdor 'dzin rnam grol rgya mtsho was appointed as the temporary thorne holder of smin grol gling monastery by the 13th dalai lama. Rdor 'dzin  rnam grol rgya mtsho is not descendant lineage of smin gling and therefore his son could not become the khri of smin grol gling monastery."@en .
+    
+    bdr:P8LS12192  a        :Person ;
+        skos:prefLabel      "don grub dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB7FF754EC6CEF354 , bdr:NTC9D902E23316721D ;
+        :personEvent        bdr:EV3EC6B7507C0E9FF6 , bdr:EV683C0A506FDF0AF8 , bdr:EVFE603DAF1880E192 ;
+        :personName         bdr:NM972E0B858AC96FD0 , bdr:NMD907E5E464C2D371 , bdr:NMEA565A43D3F9DB86 .
+}

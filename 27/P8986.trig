@@ -1,0 +1,72 @@
+@base          <bdg:P8986> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8986 {
+    bda:LG141E2AF28FCC4A99
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-18T14:20:20.372Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8986  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8986 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "27/P8986.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8986 ;
+        adm:logEntry        bda:LG141E2AF28FCC4A99 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV329E64EEC652F501
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8905472F371276AD
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV9B02130B26539841
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NM1AC3B7F534FBEF84
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnga ba sgo mang khri rabs 06 legs bshad rin chen/"@bo-x-ewts .
+    
+    bdr:NM52ED5192988C6FE7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "legs bshad rin chen/"@bo-x-ewts .
+    
+    bdr:NM82D47681EE173854
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 06"@bo-x-ewts .
+    
+    bdr:NT08EF573FD3B4D83C
+        a                   :Note ;
+        :locationStatement  "pp. 89-90" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "biographical sketch\nreceived his lha rams pa degree in 1825 from the 25th khri of bla brang bkra shis 'khyil dkon mchog sengge"@en .
+    
+    bdr:P8986  a            :Person ;
+        skos:prefLabel      "legs bshad rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08EF573FD3B4D83C ;
+        :personEvent        bdr:EV329E64EEC652F501 , bdr:EV8905472F371276AD , bdr:EV9B02130B26539841 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AC3B7F534FBEF84 , bdr:NM52ED5192988C6FE7 , bdr:NM82D47681EE173854 ;
+        :personStudentOf    bdr:P21 .
+}

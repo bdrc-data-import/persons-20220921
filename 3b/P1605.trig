@@ -1,0 +1,50 @@
+@base          <bdg:P1605> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1605 {
+    bda:P1605  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1605 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3b/P1605.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1605 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA8B2447D3B4D3C48
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMD10FB2B172D14268
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NME3EE19102F05D160
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rab 'byams pa blo bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NT49D42E14A03266FF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1605  a            :Person ;
+        skos:prefLabel      "blo bzang nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT49D42E14A03266FF ;
+        :personEvent        bdr:EVA8B2447D3B4D3C48 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD10FB2B172D14268 , bdr:NME3EE19102F05D160 ;
+        :personTeacherOf    bdr:P263 .
+}

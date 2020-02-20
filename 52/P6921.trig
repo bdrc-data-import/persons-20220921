@@ -1,0 +1,54 @@
+@base          <bdg:P6921> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6921 {
+    bda:P6921  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6921 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "52/P6921.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6921 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV44C901DA818816E5
+        a                   :PersonDeath ;
+        :onYear             "1799"^^xsd:gYear .
+    
+    bdr:EV8C83015636CA1003
+        a                   :PersonBirth ;
+        :onYear             "1726"^^xsd:gYear .
+    
+    bdr:NM0383E3E6726F8A71
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bi lung pa dge 'dun bzang po/"@bo-x-ewts .
+    
+    bdr:NM2372C1DC2C7214F5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bzang po/"@bo-x-ewts .
+    
+    bdr:NT6F22FB56785B068B
+        a                   :Note ;
+        :locationStatement  "p. 12" ;
+        :noteSource         bdr:MW6589 ;
+        :noteText           "biography of a prominent dge lugs pa lama from western tibet"@en .
+    
+    bdr:P6921  a            :Person ;
+        skos:prefLabel      "dge 'dun bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F22FB56785B068B ;
+        :personEvent        bdr:EV44C901DA818816E5 , bdr:EV8C83015636CA1003 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0383E3E6726F8A71 , bdr:NM2372C1DC2C7214F5 .
+}

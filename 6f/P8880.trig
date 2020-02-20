@@ -1,0 +1,49 @@
+@base          <bdg:P8880> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8880 {
+    bda:P8880  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8880 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "6f/P8880.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8880 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFD838307489A4071
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM8D27886FEF0E96A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1FE8EC5483BF4233
+        a                   :Note ;
+        :locationStatement  "p. 116, 167-168" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "mentioned as a student of rgyal ba bzang po\nbiography\nchronological problem: how could he have been both a student of rgyal ba bzang po and dka' bzhi pa?\n\nartistic and religious works\n'dzi stod du bshad sgrub zung 'brel gyi chos sde che ba btab mod da lta dus kyi dbang gis shul tsam du gyur\n\n'di'i sku phreng gnyis pa smon lam dbang phyug rgyal mtshan ni chos rje dpal 'byor bzang po'i thugs sras bu chen bcu gsum gyi nang gi zhig yin"@en .
+    
+    bdr:P8880  a            :Person ;
+        skos:prefLabel      "gzhon nu rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1FE8EC5483BF4233 ;
+        :personEvent        bdr:EVFD838307489A4071 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8D27886FEF0E96A9 ;
+        :personStudentOf    bdr:P8877 , bdr:P8878 ;
+        :personTeacherOf    bdr:P8910 .
+}

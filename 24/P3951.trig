@@ -1,0 +1,69 @@
+@base          <bdg:P3951> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3951 {
+    bda:LG0FA900F5F9C73739
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:14.375Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGFC3608D0C9AACAB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T12:11:37.723Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3951  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3951 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "24/P3951.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3951 ;
+        adm:logEntry        bda:LG0FA900F5F9C73739 , bda:LGFC3608D0C9AACAB3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E528B15F9C321EE
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVC3C1C53FD128DE61
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:NM81D70E8D6B413B41
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bskal bzang dbang phyug"@bo-x-ewts .
+    
+    bdr:NMD331D42398D82FC7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 07 bskal bzang dbang phyug"@bo-x-ewts .
+    
+    bdr:NT20C02DF4C2A98913
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3951  a            :Person ;
+        skos:prefLabel      "bskal bzang dbang phyug"@bo-x-ewts ;
+        :hasFather          bdr:P3950 ;
+        :hasSon             bdr:P3952 ;
+        :isRoot             true ;
+        :note               bdr:NT20C02DF4C2A98913 ;
+        :personEvent        bdr:EV4E528B15F9C321EE , bdr:EVC3C1C53FD128DE61 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM81D70E8D6B413B41 , bdr:NMD331D42398D82FC7 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Kelzang-Wangchuk/6342"^^xsd:anyURI .
+}

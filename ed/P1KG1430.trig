@@ -1,0 +1,57 @@
+@base          <bdg:P1KG1430> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1430 {
+    bda:LG2C64B51D41F27A93
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T16:17:01.182Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1430  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1430 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ed/P1KG1430.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1430 ;
+        adm:logEntry        bda:LG2C64B51D41F27A93 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBB6B8FC2F4A49D95
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMDC1E5072BF5C8998
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba bkra shis/"@bo-x-ewts .
+    
+    bdr:NME71A5C3FA2565450
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dawa tashi"@en .
+    
+    bdr:NTD3987CCD2CA8E91F
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1428 ;
+        :noteText           "editor of"@en .
+    
+    bdr:P1KG1430  a         :Person ;
+        skos:prefLabel      "zla ba bkra shis/"@bo-x-ewts , "dawa tashi"@en ;
+        :isRoot             true ;
+        :note               bdr:NTD3987CCD2CA8E91F ;
+        :personEvent        bdr:EVBB6B8FC2F4A49D95 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDC1E5072BF5C8998 , bdr:NME71A5C3FA2565450 .
+}

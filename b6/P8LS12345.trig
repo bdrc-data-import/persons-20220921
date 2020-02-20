@@ -1,0 +1,61 @@
+@base          <bdg:P8LS12345> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12345 {
+    bda:LG292B27A1010B9927
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T10:54:15.537Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12345  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12345 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b6/P8LS12345.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12345 ;
+        adm:logEntry        bda:LG292B27A1010B9927 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E9E29D561DF5CEB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EV984468BDD3D40619
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM6449775A3008DAAF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skyi rin po che/"@bo-x-ewts .
+    
+    bdr:NMD4CD10D8852B0CE2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NTFE34F46E521FA54C
+        a                   :Note ;
+        :locationStatement  "p. 169" ;
+        :noteSource         bdr:MW19871 ;
+        :noteText           "Born in g.yu rngog and also served as gser khri of rab gong. There were few previous incarnation but name and detail information is not available. He was alive in 1958"@en .
+    
+    bdr:P8LS12345  a        :Person ;
+        skos:prefLabel      "skyi rin po che/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFE34F46E521FA54C ;
+        :personEvent        bdr:EV2E9E29D561DF5CEB , bdr:EV984468BDD3D40619 ;
+        :personName         bdr:NM6449775A3008DAAF , bdr:NMD4CD10D8852B0CE2 .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P1KG26416> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG26416 {
+    bda:LG3D999A6A16324F67
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-19T10:32:47.259Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG26416  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG26416 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "2b/P1KG26416.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG26416 ;
+        adm:logEntry        bda:LG3D999A6A16324F67 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5164B81702BB7AEB
+        a                   :PersonBirth ;
+        :onYear             "1962"^^xsd:gYear .
+    
+    bdr:EV9D4ADA366CF58E7B
+        a                   :PersonDeath ;
+        :onYear             "2016"^^xsd:gYear .
+    
+    bdr:NM0D29F394B4FF24EF
+        a                   :PersonOtherName ;
+        rdfs:label          "pema wangyal"@en .
+    
+    bdr:NM899DB22E0DDA3DAB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMC32C0E4A94148E48
+        a                   :PersonOtherName ;
+        rdfs:label          "baima wangjie"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NTD28577D6A811FFC7
+        a                   :Note ;
+        :noteSource         bdr:MW1KG25728 ;
+        :noteText           "Translator of klu sgrub dgongs rgyan into Chinese language"@en .
+    
+    bdr:P1KG26416  a        :Person ;
+        skos:prefLabel      "pad+ma dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD28577D6A811FFC7 ;
+        :personEvent        bdr:EV5164B81702BB7AEB , bdr:EV9D4ADA366CF58E7B ;
+        :personName         bdr:NM0D29F394B4FF24EF , bdr:NM899DB22E0DDA3DAB , bdr:NMC32C0E4A94148E48 .
+}

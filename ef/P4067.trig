@@ -1,0 +1,85 @@
+@base          <bdg:P4067> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4067 {
+    bda:LG404D3C3A2A3A855D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:07:05.475Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG4FBAF916FB831CF9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T11:39:40.347Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB2C2E87BE76DF4D8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-03T11:59:05.2Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth Plcace G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4067  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4067 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ef/P4067.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4067 ;
+        adm:logEntry        bda:LG404D3C3A2A3A855D , bda:LG4FBAF916FB831CF9 , bda:LGB2C2E87BE76DF4D8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB877BC5CBB781C2C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1947 ;
+        :onYear             "1640"^^xsd:gYear .
+    
+    bdr:EVFB1ED5B99B1E5D6A
+        a                   :PersonDeath ;
+        :onYear             "1717"^^xsd:gYear .
+    
+    bdr:EVFC8FF62DBB1AC021
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:NM9E24D0409104266E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thar mi chi blo bzang don grub/"@bo-x-ewts .
+    
+    bdr:NMAE76EE07B64679FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang don grub/"@bo-x-ewts .
+    
+    bdr:NT3E62C164D1BCD8B3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT5479CD456F68F6AC
+        a                   :Note ;
+        :noteText           "Dates 1640-1717 are obviously wrong."@en .
+    
+    bdr:NT8635925B67DC7C5F
+        a                   :Note ;
+        :locationStatement  "p. 789" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4067  a            :Person ;
+        skos:prefLabel      "blo bzang don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3E62C164D1BCD8B3 , bdr:NT5479CD456F68F6AC , bdr:NT8635925B67DC7C5F ;
+        :personEvent        bdr:EVB877BC5CBB781C2C , bdr:EVFB1ED5B99B1E5D6A , bdr:EVFC8FF62DBB1AC021 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9E24D0409104266E , bdr:NMAE76EE07B64679FD .
+}

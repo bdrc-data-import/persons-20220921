@@ -1,0 +1,93 @@
+@base          <bdg:P0RK1289> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK1289 {
+    bda:LG05EA671B3F612432
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T14:26:28.545Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG7DAA14E9F905F015
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:LGAFBBBDCE627A6DC7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-18T11:42:58.79Z"^^xsd:dateTime ;
+        adm:logMessage      "added place of residence"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGBBCCAFF032B71654
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-20T15:45:45.805Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD369DE79E2A8342A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:03:43.078Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P0RK1289  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK1289 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "3f/P0RK1289.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK1289 ;
+        adm:logEntry        bda:LG05EA671B3F612432 , bda:LG7DAA14E9F905F015 , bda:LGAFBBBDCE627A6DC7 , bda:LGBBCCAFF032B71654 , bda:LGD369DE79E2A8342A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13B2BC14B1A03A5E
+        a                   :PersonDeath ;
+        :onYear             "1097"^^xsd:gYear .
+    
+    bdr:EV765AC1647AA9E62B
+        a                   :PersonBirth ;
+        :onYear             "1036"^^xsd:gYear .
+    
+    bdr:EVB507D16DD37990D1
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G4202 .
+    
+    bdr:NM124AA1A208E2D102
+        a                   :PersonFamilyName ;
+        rdfs:label          "rngog"@bo-x-ewts .
+    
+    bdr:NM7AFCD2A547762A6F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos sku rdo rje/"@bo-x-ewts .
+    
+    bdr:NMEF0FF5013ADA82E7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rngog chos sku rdo rje/"@bo-x-ewts .
+    
+    bdr:NT0A5EEC5603DFB2B5
+        a                   :Note ;
+        :noteText           "alternative death date, 1102?"@en .
+    
+    bdr:P0RK1289  a         :Person ;
+        skos:prefLabel      "chos sku rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A5EEC5603DFB2B5 ;
+        :personEvent        bdr:EV13B2BC14B1A03A5E , bdr:EV765AC1647AA9E62B , bdr:EVB507D16DD37990D1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM124AA1A208E2D102 , bdr:NM7AFCD2A547762A6F , bdr:NMEF0FF5013ADA82E7 ;
+        :personStudentOf    bdr:P2636 ;
+        :personTeacherOf    bdr:P5820 .
+}

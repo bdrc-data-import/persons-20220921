@@ -1,0 +1,59 @@
+@base          <bdg:P2604> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2604 {
+    bda:P2604  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2604 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "88/P2604.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2604 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV789763E148A72B24
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVFEE6A417E027F422
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:NM24415BC3A7E0B4C6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NM4BAD37209E0D0291
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyi ma gling pa tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NT92557DFFC9B02E62
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:NTCCE5D447E0FDD36E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P2604  a            :Person ;
+        skos:prefLabel      "tshul khrims bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT92557DFFC9B02E62 , bdr:NTCCE5D447E0FDD36E ;
+        :personEvent        bdr:EV789763E148A72B24 , bdr:EVFEE6A417E027F422 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM24415BC3A7E0B4C6 , bdr:NM4BAD37209E0D0291 ;
+        :personStudentOf    bdr:P2605 , bdr:P3185 , bdr:P3255 , bdr:P7185 ;
+        :personTeacherOf    bdr:P2603 , bdr:P3186 , bdr:P3256 , bdr:P7208 .
+}

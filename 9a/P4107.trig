@@ -1,0 +1,76 @@
+@base          <bdg:P4107> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4107 {
+    bda:LG0D4CD41BACD17111
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-22T09:45:54.379Z"^^xsd:dateTime ;
+        adm:logMessage      "check outcheckin"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG4D99A7CD3D59B3BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-22T06:22:06.609Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected tshe dbang bstan pa to tshe dbang brtan pa"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4107  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4107 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9a/P4107.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4107 ;
+        adm:logEntry        bda:LG0D4CD41BACD17111 , bda:LG4D99A7CD3D59B3BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0423A01C87C60D9A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2129 ;
+        :onYear             "1631"^^xsd:gYear .
+    
+    bdr:EVCCEF568E84D07B46
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NMD2ECD04D07249B8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'gro phan dbang po/"@bo-x-ewts .
+    
+    bdr:NMED08639C11BEF1CB
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dbang brtan pa/"@bo-x-ewts .
+    
+    bdr:NT227C9AB98CAE7647
+        a                   :Note ;
+        :locationStatement  "p. 65-66" ;
+        :noteSource         bdr:MW19856 ;
+        :noteText           "a physician belonging who followed the 'bri gung bka' brgyud pa tradition; this teacher was born in dbu ru'i ru mtshams gzhu stod, formerly connected with mal gro gung dkar rdzong and now a part of snye mo rdzong"@en .
+    
+    bdr:NT2EFF82531F7C34F3
+        a                   :Note ;
+        :locationStatement  "p. 16" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "biobibliography"@en .
+    
+    bdr:P4107  a            :Person ;
+        skos:prefLabel      "dkon mchog 'gro phan dbang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT227C9AB98CAE7647 , bdr:NT2EFF82531F7C34F3 ;
+        :personEvent        bdr:EV0423A01C87C60D9A , bdr:EVCCEF568E84D07B46 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD2ECD04D07249B8D , bdr:NMED08639C11BEF1CB ;
+        :personStudentOf    bdr:P2666 ;
+        :personTeacherOf    bdr:P5007 .
+}

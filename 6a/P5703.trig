@@ -1,0 +1,53 @@
+@base          <bdg:P5703> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5703 {
+    bda:P5703  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5703 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "6a/P5703.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5703 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C5DAF70E930FF4C
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM918C11044BCDE93D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yung rin chen mgon po/"@bo-x-ewts .
+    
+    bdr:NMEA5AF3E699E63A05
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen mgon po/"@bo-x-ewts .
+    
+    bdr:NT16E4CDC872966849
+        a                   :Note ;
+        :locationStatement  "f. 159v" ;
+        :noteSource         bdr:MW30161 ;
+        :noteText           "eclectic teacher who was a student of both the 2nd dalai lama and the 8th karma pa"@en .
+    
+    bdr:P5703  a            :Person ;
+        skos:prefLabel      "rin chen mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16E4CDC872966849 ;
+        :personEvent        bdr:EV1C5DAF70E930FF4C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM918C11044BCDE93D , bdr:NMEA5AF3E699E63A05 ;
+        :personStudentOf    bdr:P385 , bdr:P5704 ;
+        :personTeacherOf    bdr:P5702 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P5347> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5347 {
+    bda:LG3653EF6A641E9573
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-21T12:56:38.198Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary name, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5347  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5347 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d6/P5347.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5347 ;
+        adm:logEntry        bda:LG3653EF6A641E9573 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E321F88E18552A1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4755 .
+    
+    bdr:EVBC947ABA0CE1CA9E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM039A1C2730DD0B18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMED25D23DCC708040
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgan gya'i dkon mchog rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT4AF5EE8B910C0EA8
+        a                   :Note ;
+        :noteText           "Geshe from rgan gya'i brag dkar monastery\n\nsee W8LS17499"@en .
+    
+    bdr:P5347  a            :Person ;
+        skos:prefLabel      "dkon mchog rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4AF5EE8B910C0EA8 ;
+        :personEvent        bdr:EV4E321F88E18552A1 , bdr:EVBC947ABA0CE1CA9E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM039A1C2730DD0B18 , bdr:NMED25D23DCC708040 .
+}

@@ -1,0 +1,54 @@
+@base          <bdg:P5786> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5786 {
+    bda:P5786  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5786 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "31/P5786.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5786 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0800A73124B3A523
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G36 .
+    
+    bdr:EV0CAF69A53E06706C
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM377A43860CBB87D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal spungs mkhan po lhag bsam bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6B0E6513167FE7D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lhag bsam bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD8103906B04C7556
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:P5786  a            :Person ;
+        skos:prefLabel      "lhag bsam bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD8103906B04C7556 ;
+        :personEvent        bdr:EV0800A73124B3A523 , bdr:EV0CAF69A53E06706C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM377A43860CBB87D6 , bdr:NM6B0E6513167FE7D3 ;
+        :personStudentOf    bdr:P252 .
+}

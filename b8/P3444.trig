@@ -1,0 +1,56 @@
+@base          <bdg:P3444> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3444 {
+    bda:P3444  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3444 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b8/P3444.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3444 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5525DA93F37E2A24
+        a                   :PersonDeath ;
+        :onYear             "1111"^^xsd:gYear .
+    
+    bdr:EVD02528EF99026632
+        a                   :PersonBirth ;
+        :onYear             "1032"^^xsd:gYear .
+    
+    bdr:NM62F199A9DBCFA8A7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brag dkar ba/"@bo-x-ewts .
+    
+    bdr:NMEE9493706EFE6526
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes brag dkar ba/"@bo-x-ewts .
+    
+    bdr:NT2B2143A5745B2C51
+        a                   :Note ;
+        :locationStatement  "p. 326" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P3444  a            :Person ;
+        skos:prefLabel      "brag dkar ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B2143A5745B2C51 ;
+        :personEvent        bdr:EV5525DA93F37E2A24 , bdr:EVD02528EF99026632 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM62F199A9DBCFA8A7 , bdr:NMEE9493706EFE6526 ;
+        :personStudentOf    bdr:P3442 ;
+        :personTeacherOf    bdr:P6774 , bdr:P6775 .
+}

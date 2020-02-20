@@ -1,0 +1,53 @@
+@base          <bdg:P1KG26419> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG26419 {
+    bda:LG9094010FA390C5BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-25T15:03:44.74Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG26419  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG26419 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "3e/P1KG26419.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG26419 ;
+        adm:logEntry        bda:LG9094010FA390C5BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAA14C04D0DE9E2BD
+        a                   :PersonBirth ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM5AAA3483F257BD69
+        a                   :PersonPrimaryName ;
+        rdfs:label          "贺文宣"@zh-hans .
+    
+    bdr:NM7909B1B84ABAA46A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ho wun zhon/"@bo-x-ewts .
+    
+    bdr:NM8E77CCE85EBACF99
+        a                   :PersonPrimaryName ;
+        rdfs:label          "he wenxuan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:P1KG26419  a        :Person ;
+        skos:prefLabel      "ho wun zhon/"@bo-x-ewts , "贺文宣"@zh-hans ;
+        :isRoot             true ;
+        :personEvent        bdr:EVAA14C04D0DE9E2BD ;
+        :personName         bdr:NM5AAA3483F257BD69 , bdr:NM7909B1B84ABAA46A , bdr:NM8E77CCE85EBACF99 .
+}

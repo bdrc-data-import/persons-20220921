@@ -1,0 +1,52 @@
+@base          <bdg:P8958> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8958 {
+    bda:P8958  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8958 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ca/P8958.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8958 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB239DAC44759810E
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1427150BCBBA366B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha ba bla ma kun dga' dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM5308C884BC9D8EB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dpal ldan/"@bo-x-ewts .
+    
+    bdr:NT60A52CDD73E15D2A
+        a                   :Note ;
+        :locationStatement  "p. 456" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "mentioned as a teacher of ngag dbang bstan 'dzin grags pa"@en .
+    
+    bdr:P8958  a            :Person ;
+        skos:prefLabel      "kun dga' dpal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60A52CDD73E15D2A ;
+        :personEvent        bdr:EVB239DAC44759810E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1427150BCBBA366B , bdr:NM5308C884BC9D8EB5 ;
+        :personTeacherOf    bdr:P8957 .
+}

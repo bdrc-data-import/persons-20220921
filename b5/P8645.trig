@@ -1,0 +1,77 @@
+@base          <bdg:P8645> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8645 {
+    bda:LG02D1C95A5B8DF920
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T15:55:48.745Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG13626EA8EFE2D6E5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGBEE24A25D8F7956F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-12T09:32:19.468Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8645  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8645 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b5/P8645.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8645 ;
+        adm:logEntry        bda:LG02D1C95A5B8DF920 , bda:LG13626EA8EFE2D6E5 , bda:LGBEE24A25D8F7956F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV535B10EB006D6C2F
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13285 .
+    
+    bdr:NM10FA5FB960C34DAD
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rangdrol 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMBED82E4AEA36B061
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rang grol 01"@bo-x-ewts .
+    
+    bdr:NMDE8CC4B1D4A11931
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rang grol rin chen/"@bo-x-ewts .
+    
+    bdr:NMF7FA25F6C50C5739
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rang grol 01 rang grol rin chen/"@bo-x-ewts .
+    
+    bdr:NTA8A3FC3988BFE234
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8645  a            :Person ;
+        skos:prefLabel      "rang grol rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8A3FC3988BFE234 ;
+        :personEvent        bdr:EV535B10EB006D6C2F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM10FA5FB960C34DAD , bdr:NMBED82E4AEA36B061 , bdr:NMDE8CC4B1D4A11931 , bdr:NMF7FA25F6C50C5739 .
+}

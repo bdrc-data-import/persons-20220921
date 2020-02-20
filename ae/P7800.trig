@@ -1,0 +1,93 @@
+@base          <bdg:P7800> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7800 {
+    bda:LG05EB2AF2D051C21C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T14:10:26.408Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG565FEACD2B7FE11E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-18T19:22:27.668Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG9829EB9C5E4CD0C6
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-13T14:59:38.561Z"^^xsd:dateTime ;
+        adm:logMessage      "student of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P7800  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7800 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ae/P7800.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7800 ;
+        adm:logEntry        bda:LG05EB2AF2D051C21C , bda:LG565FEACD2B7FE11E , bda:LG9829EB9C5E4CD0C6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1E06E9208F7A0395
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G8LS12773 ;
+        :onYear             "2009"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV21749F4FFB9C58D7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12773 ;
+        :onYear             "1993"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4A509E11096D9CA5
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV6839D9A1C2BBC906
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12773 .
+    
+    bdr:NM29246C1361AEB717
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM9C0FAF6E3F6DD02A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "nyi ma lung mkhan rabs 11"@bo-x-ewts .
+    
+    bdr:NMB896931ADE038D85
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma la"@en .
+    
+    bdr:NMDE1B599E4AD88D5D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon pad+ma la/"@bo-x-ewts .
+    
+    bdr:NME36D4E6EFADDC39C
+        a                   :PersonTitle ;
+        rdfs:label          "bla ma pad+ma la/"@bo-x-ewts .
+    
+    bdr:P7800  a            :Person ;
+        skos:prefLabel      "pad+ma tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1E06E9208F7A0395 , bdr:EV21749F4FFB9C58D7 , bdr:EV4A509E11096D9CA5 , bdr:EV6839D9A1C2BBC906 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM29246C1361AEB717 , bdr:NM9C0FAF6E3F6DD02A , bdr:NMB896931ADE038D85 , bdr:NMDE1B599E4AD88D5D , bdr:NME36D4E6EFADDC39C ;
+        :personStudentOf    bdr:P2DB5980 , bdr:P2JM238 , bdr:P2JM501 , bdr:P625 , bdr:P736 , bdr:P933 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lama-Pema-Tsewang/10482"^^xsd:anyURI .
+}

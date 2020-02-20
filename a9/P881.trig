@@ -1,0 +1,54 @@
+@base          <bdg:P881> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P881 {
+    bda:P881  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P881 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a9/P881.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P881 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D35D9DD65850F97
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM15787823FD87CBCC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal grags pa/"@bo-x-ewts .
+    
+    bdr:NM5D21370C4E2796BD
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang 'jam dpal grags pa/"@bo-x-ewts .
+    
+    bdr:NT037600C724F9515F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT47218A34685C5210
+        a                   :Note ;
+        :noteText           "Padma-dkar-po wrote his Gzhi gsum gyi cho ga phan bde'i gnyen at the behest of Ngag-dbang-'jam-dbyangs-grags-pa."@en .
+    
+    bdr:P881  a             :Person ;
+        skos:prefLabel      "'jam dpal grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT037600C724F9515F , bdr:NT47218A34685C5210 ;
+        :personEvent        bdr:EV3D35D9DD65850F97 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15787823FD87CBCC , bdr:NM5D21370C4E2796BD ;
+        :personTeacherOf    bdr:P877 .
+}

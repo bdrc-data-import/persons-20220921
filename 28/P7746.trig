@@ -1,0 +1,80 @@
+@base          <bdg:P7746> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7746 {
+    bda:LG285C1B8E20BFFFCA
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-12-17T22:04:21.39Z"^^xsd:dateTime ;
+        adm:logMessage      "published in connection with scanning of biography"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG7B1A2A8A315DA00E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-01T09:36:30.592Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and events"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P7746  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7746 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "28/P7746.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7746 ;
+        adm:logEntry        bda:LG285C1B8E20BFFFCA , bda:LG7B1A2A8A315DA00E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV494E31F05AE6DEA0
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3468 ;
+        :notAfter           "1650"^^xsd:gYear ;
+        :notBefore          "1649"^^xsd:gYear .
+    
+    bdr:EV59F3350930EED869
+        a                   :PersonDeath ;
+        :onYear             "1729"^^xsd:gYear .
+    
+    bdr:EV93A3070DC0D0E767
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4115 .
+    
+    bdr:NM58EBEB82D68821E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rgyal gling pa/"@bo-x-ewts .
+    
+    bdr:NMBA5A07B409A103B3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar gter rig 'dzin chos rgyal gling pa/"@bo-x-ewts .
+    
+    bdr:NMC23CB19DC4F927CC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter chen chos rgyal gling pa/"@bo-x-ewts .
+    
+    bdr:NT9BF770F24702F80E
+        a                   :Note ;
+        :locationStatement  "p. 98" ;
+        :noteSource         bdr:MW20396 ;
+        :noteText           "biography"@en .
+    
+    bdr:P7746  a            :Person ;
+        skos:prefLabel      "chos rgyal gling pa/"@bo-x-ewts ;
+        :hasFather          bdr:P7747 ;
+        :hasMother          bdr:P7748 ;
+        :isRoot             true ;
+        :note               bdr:NT9BF770F24702F80E ;
+        :personEvent        bdr:EV494E31F05AE6DEA0 , bdr:EV59F3350930EED869 , bdr:EV93A3070DC0D0E767 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM58EBEB82D68821E4 , bdr:NMBA5A07B409A103B3 , bdr:NMC23CB19DC4F927CC ;
+        :personStudentOf    bdr:P1686 .
+}

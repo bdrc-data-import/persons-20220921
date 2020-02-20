@@ -1,0 +1,80 @@
+@base          <bdg:P1839> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1839 {
+    bda:LG1E2927A25898D7D4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-21T14:15:46.393Z"^^xsd:dateTime ;
+        adm:logMessage      "added office and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA2D02EE7E9814497
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-21T14:10:55.156Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, office title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1839  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1839 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "e2/P1839.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1839 ;
+        adm:logEntry        bda:LG1E2927A25898D7D4 , bda:LGA2D02EE7E9814497 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F6A6036DBBF3143
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5D508A74FDF6F22D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EVAEE430744F3BEE91
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM4BFBD49A66BD33C5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas grub dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDB2EACC2FAABF3FC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMFE99B37EE046A6B5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 07"@bo-x-ewts .
+    
+    bdr:NT767833BD54B0F001
+        a                   :Note ;
+        :noteText           "jo nang gnas bshad, 7v\nde rjs lo gsum tsam nas mkhas grub dkon mchog rgyal mtshan gdan sar mnga' gsol mdzad de/"@en .
+    
+    bdr:NTF16EDDDCE994F110
+        a                   :Note ;
+        :noteText           "master of the jo nang tradition, detail biography is not available"@en .
+    
+    bdr:P1839  a            :Person ;
+        skos:prefLabel      "dkon mchog rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT767833BD54B0F001 , bdr:NTF16EDDDCE994F110 ;
+        :personEvent        bdr:EV3F6A6036DBBF3143 , bdr:EV5D508A74FDF6F22D , bdr:EVAEE430744F3BEE91 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4BFBD49A66BD33C5 , bdr:NMDB2EACC2FAABF3FC , bdr:NMFE99B37EE046A6B5 ;
+        :personStudentOf    bdr:P139 .
+}

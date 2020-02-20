@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12434> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12434 {
+    bda:LGE14792D48A743CFB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-10T10:35:25.463Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12434  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12434 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3f/P8LS12434.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12434 ;
+        adm:logEntry        bda:LGE14792D48A743CFB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV540F50719B864087
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1176 ;
+        :onYear             "1925"^^xsd:gYear .
+    
+    bdr:EVF648C7801A498F0F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVF998C8320FDEA4B0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :onYear             "1999"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMD82EC4F784F0817C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang don yod/"@bo-x-ewts .
+    
+    bdr:NME53DD0B3C18829D7
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 73"@bo-x-ewts .
+    
+    bdr:NMF093421F3415D501
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang mkhan zur blo bzang don yod/"@bo-x-ewts .
+    
+    bdr:NT587D1EC7AEA9C844
+        a                   :Note ;
+        :locationStatement  "p. 478-482" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "1943 entered sera monastery\n1954 gave first text at tashi lhunpo monastery\n1958 attended school founded by panchen rinpoche"@en .
+    
+    bdr:P8LS12434  a        :Person ;
+        skos:prefLabel      "blo bzang don yod/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT587D1EC7AEA9C844 ;
+        :personEvent        bdr:EV540F50719B864087 , bdr:EVF648C7801A498F0F , bdr:EVF998C8320FDEA4B0 ;
+        :personName         bdr:NMD82EC4F784F0817C , bdr:NME53DD0B3C18829D7 , bdr:NMF093421F3415D501 .
+}

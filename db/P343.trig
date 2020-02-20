@@ -1,0 +1,96 @@
+@base          <bdg:P343> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P343 {
+    bda:LG12110F528A666F9F
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-17T10:36:09.575Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG1755B9466260EC5D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T11:21:09.25Z"^^xsd:dateTime ;
+        adm:logMessage      "edited circa field"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P343  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P343 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "db/P343.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P343 ;
+        adm:logEntry        bda:LG12110F528A666F9F , bda:LG1755B9466260EC5D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV16065D1253D1C8A0
+        a                   :PersonBirth ;
+        :onYear             "1697"^^xsd:gYear .
+    
+    bdr:EVBC57EC9ABCDA1DDB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVD43BF88F3E7FA880
+        a                   :PersonDeath ;
+        :onYear             "1763"^^xsd:gYear .
+    
+    bdr:NM858B7E3365500790
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mdo mkhar ba tshe ring dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM869552FB9774BF94
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe ring dbang rgyal, mdo mkhar ba/"@bo-x-ewts .
+    
+    bdr:NMA4913920B109BC11
+        a                   :PersonTitle ;
+        rdfs:label          "mdo mkhar zhabs drung tshe ring dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NME86813470675A1F3
+        a                   :PersonGrammatical ;
+        rdfs:label          "tshangs sras dgyes pa'i blo ldan/"@bo-x-ewts .
+    
+    bdr:NT3481BC650BD8F31F
+        a                   :Note ;
+        :locationStatement  "p. 872" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT9ED3D29A7B93E084
+        a                   :Note ;
+        :locationStatement  "p. 756" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains biographic sketch"@en .
+    
+    bdr:NTB69F9A88E0A03FF8
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 504" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NTC0E209A02AAA3BD9
+        a                   :Note ;
+        :locationStatement  "p. 365" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "b. 1697"@en .
+    
+    bdr:P343  a             :Person ;
+        skos:prefLabel      "mdo mkhar ba tshe ring dbang rgyal/"@bo-x-ewts ;
+        :hasUnknownKinship  bdr:P2LS223 ;
+        :isRoot             true ;
+        :note               bdr:NT3481BC650BD8F31F , bdr:NT9ED3D29A7B93E084 , bdr:NTB69F9A88E0A03FF8 , bdr:NTC0E209A02AAA3BD9 ;
+        :personEvent        bdr:EV16065D1253D1C8A0 , bdr:EVBC57EC9ABCDA1DDB , bdr:EVD43BF88F3E7FA880 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM858B7E3365500790 , bdr:NM869552FB9774BF94 , bdr:NMA4913920B109BC11 , bdr:NME86813470675A1F3 ;
+        :personStudentOf    bdr:P104 , bdr:P667 .
+}

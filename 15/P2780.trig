@@ -1,0 +1,75 @@
+@base          <bdg:P2780> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2780 {
+    bda:LG6FFB47B12BE4AE6C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-24T10:39:22.668Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place (?)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC10A430E76E20E7A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:01:12.932Z"^^xsd:dateTime ;
+        adm:logMessage      "added personal name"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGEE749C5C98FBA62C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:27:09.047Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2780  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2780 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "15/P2780.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2780 ;
+        adm:logEntry        bda:LG6FFB47B12BE4AE6C , bda:LGC10A430E76E20E7A , bda:LGEE749C5C98FBA62C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV59DFBC53A07576B3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G849 ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM244B07419B754C44
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus chen nam mkha'i rnal 'byor/"@bo-x-ewts .
+    
+    bdr:NM44BF9FEFA3E97AE7
+        a                   :PersonPersonalName ;
+        rdfs:label          "nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6FB6F18C50B3E437
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha'i rnal 'byor/"@bo-x-ewts .
+    
+    bdr:NT7ED2E0765D47A69C
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- shangs pa bka' brgyud pa transmissions"@en .
+    
+    bdr:P2780  a            :Person ;
+        skos:prefLabel      "nam mkha'i rnal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7ED2E0765D47A69C ;
+        :personEvent        bdr:EV59DFBC53A07576B3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM244B07419B754C44 , bdr:NM44BF9FEFA3E97AE7 , bdr:NM6FB6F18C50B3E437 ;
+        :personStudentOf    bdr:P0RK1539 , bdr:P0RK684 , bdr:P0RK686 , bdr:P1830 , bdr:P2781 , bdr:P5713 ;
+        :personTeacherOf    bdr:P2779 .
+}

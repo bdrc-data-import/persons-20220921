@@ -1,0 +1,93 @@
+@base          <bdg:P2530> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2530 {
+    bda:LGB89A7D09803D8761
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T09:31:18.096Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2530  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2530 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4d/P2530.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2530 ;
+        adm:logEntry        bda:LGB89A7D09803D8761 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DFA2CC62052184D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV603DD5B71A9364EB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3497 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV9D4E5013D414CFA7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM02C0A5C6E19454AD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 40 ngag dbang chos skyong bzang po/"@bo-x-ewts .
+    
+    bdr:NM33176CBC4F1BD18D
+        a                   :PersonTitle ;
+        rdfs:label          "khang gsar ngag dbang chos skyong bzang po/"@bo-x-ewts .
+    
+    bdr:NM39231DC144516F43
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos skyong bzang po, ngag dbang /"@bo-x-ewts .
+    
+    bdr:NM939AFD9E1C66F63D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos skyong bzang po/"@bo-x-ewts .
+    
+    bdr:NMCAB3B4388947F8FC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 40"@bo-x-ewts .
+    
+    bdr:NT5D1422C0B996C25F
+        a                   :Note ;
+        :locationStatement  "p. 104" ;
+        :noteSource         bdr:MW23441 ;
+        :noteText           "b. in gtsang ong gling ma kha\nstudied with dpal ldan chos skyong\ntraveled to sde dge at the end of his life"@en .
+    
+    bdr:NTD192EC156E5BE738
+        a                   :Note ;
+        :locationStatement  "p. 104" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NTE0D9E7F6EBF5A2BF
+        a                   :Note ;
+        :locationStatement  "p. 183" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "b. in the first half of the 18th century in gtsang rong gling ma mkhar as the nephew of byams pa bsod nams bzang po and bsod nams lhun grub"@en .
+    
+    bdr:P2530  a            :Person ;
+        skos:prefLabel      "ngag dbang chos skyong bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5D1422C0B996C25F , bdr:NTD192EC156E5BE738 , bdr:NTE0D9E7F6EBF5A2BF ;
+        :personEvent        bdr:EV2DFA2CC62052184D , bdr:EV603DD5B71A9364EB , bdr:EV9D4E5013D414CFA7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM02C0A5C6E19454AD , bdr:NM33176CBC4F1BD18D , bdr:NM39231DC144516F43 , bdr:NM939AFD9E1C66F63D , bdr:NMCAB3B4388947F8FC ;
+        :personStudentOf    bdr:P802 ;
+        :personTeacherOf    bdr:P2526 .
+}

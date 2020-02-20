@@ -1,0 +1,63 @@
+@base          <bdg:P2791> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2791 {
+    bda:LGBF55044F76E19C01
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-07T09:57:30.953Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC2E7B055E8DB4C5B
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-10T12:09:54.341Z"^^xsd:dateTime ;
+        adm:logMessage      "remove ref to withdrawn P2814"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P2791  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2791 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8d/P2791.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2791 ;
+        adm:logEntry        bda:LGBF55044F76E19C01 , bda:LGC2E7B055E8DB4C5B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV824F773E82A9E708
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM7D58FFC9AA8D059C
+        a                   :PersonPersonalName ;
+        rdfs:label          "yon tan mgon po, byams pa/"@bo-x-ewts .
+    
+    bdr:NMD9C23AD08960068A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa yon tan mgon po/"@bo-x-ewts .
+    
+    bdr:NTB86441803951B8F8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:P2791  a            :Person ;
+        skos:prefLabel      "byams pa yon tan mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB86441803951B8F8 ;
+        :personEvent        bdr:EV824F773E82A9E708 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7D58FFC9AA8D059C , bdr:NMD9C23AD08960068A ;
+        :personStudentOf    bdr:P2790 , bdr:P2813 , bdr:P2832 ;
+        :personTeacherOf    bdr:P2792 , bdr:P8LS12967 .
+}

@@ -1,0 +1,82 @@
+@base          <bdg:P708> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P708 {
+    bda:LG015AD2CEC50CBC55
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-30T23:53:05.99Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGF18AEF89FCC2C8FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-22T20:56:38.39Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher-student link"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P708  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P708 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8d/P708.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P708 ;
+        adm:logEntry        bda:LG015AD2CEC50CBC55 , bda:LGF18AEF89FCC2C8FE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1ECBC26E279FE723
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G186 .
+    
+    bdr:EV5A0FB514ECCA3E3E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2113 ;
+        :onYear             "1867"^^xsd:gYear .
+    
+    bdr:EVF9BE14AFAAC5ACCD
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:NM40F677A069C6D112
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NM68EB03A69B709DF7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdza rong phu sprul sku ngag dbang bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NT13116636F299E3E9
+        a                   :Note ;
+        :noteText           "teacher belonging to the rnying ma tradition"@en .
+    
+    bdr:NT34F52625EB3218B8
+        a                   :Note ;
+        :noteText           "1871. recognized as the incarnation of stod rab zhi sprul sku and brought to rdza rong phu;  \n1876. began studies with shes chos dga' ba rin po che"@en .
+    
+    bdr:NT4F88133E93AD1ACE
+        a                   :Note ;
+        :locationStatement  "p. 317" ;
+        :noteSource         bdr:MW19822 .
+    
+    bdr:P708  a             :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin nor bu/"@bo-x-ewts ;
+        :hasFather          bdr:P5606 ;
+        :hasMother          bdr:P5607 ;
+        :isRoot             true ;
+        :note               bdr:NT13116636F299E3E9 , bdr:NT34F52625EB3218B8 , bdr:NT4F88133E93AD1ACE ;
+        :personEvent        bdr:EV1ECBC26E279FE723 , bdr:EV5A0FB514ECCA3E3E , bdr:EVF9BE14AFAAC5ACCD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM40F677A069C6D112 , bdr:NM68EB03A69B709DF7 ;
+        :personStudentOf    bdr:P1GS135529 , bdr:P7610 .
+}

@@ -1,0 +1,56 @@
+@base          <bdg:P7091> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7091 {
+    bda:LGC3B9AD904740A637
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-02T17:03:04.308Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P7091  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7091 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "51/P7091.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7091 ;
+        adm:logEntry        bda:LGC3B9AD904740A637 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07D90A7B277158D5
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NMB13DBB1B76B1F628
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bya bral chos rje/"@bo-x-ewts .
+    
+    bdr:NT60A771C1079EA05D
+        a                   :Note ;
+        :locationStatement  "267" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "Received the bla ma yang tig from klong chen pa.  This lineage passed through 9 generations and settled on rdzogs chen pad+ma rig 'dzin."@en .
+    
+    bdr:P7091  a            :Person ;
+        skos:prefLabel      "bya bral chos rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60A771C1079EA05D ;
+        :personEvent        bdr:EV07D90A7B277158D5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB13DBB1B76B1F628 ;
+        :personStudentOf    bdr:P1583 , bdr:P1932 ;
+        :personTeacherOf    bdr:P7092 .
+}

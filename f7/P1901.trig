@@ -1,0 +1,71 @@
+@base          <bdg:P1901> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1901 {
+    bda:LG836FCB73AFEF3972
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T14:13:11.88Z"^^xsd:dateTime ;
+        adm:logMessage      "mtsan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1901  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1901 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f7/P1901.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1901 ;
+        adm:logEntry        bda:LG836FCB73AFEF3972 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV301B26230BDF0F06
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EV84EDC1AED35178CA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1025 ;
+        :onYear             "1858"^^xsd:gYear .
+    
+    bdr:NM11EA480AD9F4CE9C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM607BBC1F0682C62B
+        a                   :PersonPersonalName ;
+        rdfs:label          "bde chen blo bzang chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT14D44687E7076AAB
+        a                   :Note ;
+        :noteText           "Patronage of Bde-chen Dpon-po Bstan-pa-dar-rgyas.\n1882. Construction work on a monastic establishment.\n\"skabs shig tu rtse 'bal gzhung gsum gyi nang tshang rgyal po go chen gyi lha zhol du bshad sgrub dar rgyas gling phyag 'debs mdzad de lo bcu gnyis kyi ring du lugs gnyis kyis bskyangs\"\nGsung 'bum in 6 volumes."@en .
+    
+    bdr:NT6F50BA4A0781F060
+        a                   :Note ;
+        :locationStatement  "p. 864" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTC49136AB9D7A0981
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1901  a            :Person ;
+        skos:prefLabel      "blo bzang chos 'phel rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT14D44687E7076AAB , bdr:NT6F50BA4A0781F060 , bdr:NTC49136AB9D7A0981 ;
+        :personEvent        bdr:EV301B26230BDF0F06 , bdr:EV84EDC1AED35178CA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11EA480AD9F4CE9C , bdr:NM607BBC1F0682C62B ;
+        :personStudentOf    bdr:P1252 , bdr:P273 ;
+        :personTeacherOf    bdr:P1902 , bdr:P1903 , bdr:P1904 .
+}

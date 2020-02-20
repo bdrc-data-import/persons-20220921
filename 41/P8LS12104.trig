@@ -1,0 +1,59 @@
+@base          <bdg:P8LS12104> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12104 {
+    bda:LGBEA9B0F66690FC0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-06T15:04:40.652Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12104  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12104 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "41/P8LS12104.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12104 ;
+        adm:logEntry        bda:LGBEA9B0F66690FC0D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20C509A2DA611E55
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV70F5080DE5209299
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1797"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM189836FFF2BE4386
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "an 'ja' su zhabs drung blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NM2B640A38A8DD2006
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NM4C2FAA2EA19BB8A0
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 33"@bo-x-ewts .
+    
+    bdr:P8LS12104  a        :Person ;
+        skos:prefLabel      "blo bzang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV20C509A2DA611E55 , bdr:EV70F5080DE5209299 ;
+        :personName         bdr:NM189836FFF2BE4386 , bdr:NM2B640A38A8DD2006 , bdr:NM4C2FAA2EA19BB8A0 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P211> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P211 {
+    bda:LG95AAE3E4B26B324E
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-10T07:24:17.296Z"^^xsd:dateTime ;
+        adm:logMessage      "added relationships"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG983EAF80C6BD17BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T16:40:09.285Z"^^xsd:dateTime ;
+        adm:logMessage      "changed order of name variants"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P211  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P211 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b3/P211.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P211 ;
+        adm:logEntry        bda:LG95AAE3E4B26B324E , bda:LG983EAF80C6BD17BE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D99BB619F11D070
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2D9484309BBB14B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag bla byang chub rdo rje/"@bo-x-ewts .
+    
+    bdr:NM7D334A3FB1B6AFA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub rdo rje/"@bo-x-ewts .
+    
+    bdr:P211  a             :Person ;
+        skos:prefLabel      "byang chub rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV5D99BB619F11D070 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D9484309BBB14B4 , bdr:NM7D334A3FB1B6AFA1 ;
+        :personStudentOf    bdr:P6057 ;
+        :personTeacherOf    bdr:P210 .
+}

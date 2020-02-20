@@ -1,0 +1,93 @@
+@base          <bdg:P8744> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8744 {
+    bda:LG4568ABEAA48F8E0F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-06T14:47:22.928Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG98A1EA105B8CAD5D
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-01T17:16:57.034Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGFB76074140D71CD9
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-23T17:27:32.807Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8744  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8744 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4c/P8744.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8744 ;
+        adm:logEntry        bda:LG4568ABEAA48F8E0F , bda:LG98A1EA105B8CAD5D , bda:LGFB76074140D71CD9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV238BEADEAFDE6278
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV2798E2C7CC0F8C64
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EVB6A90DFF819335E1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFB53153DC00E57CC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:NMC6B834BD7D4650D2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal rong mkhan po pad+ma shes bya/"@bo-x-ewts .
+    
+    bdr:NMDE02C57D79391D36
+        a                   :PersonTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 04 pad+ma shes bya/"@bo-x-ewts .
+    
+    bdr:NMF52B70C5769443DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma shes bya/"@bo-x-ewts .
+    
+    bdr:NMFA9DB88F98645559
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 04"@bo-x-ewts .
+    
+    bdr:NTE2B301A352ED449C
+        a                   :Note ;
+        :locationStatement  "p. 406" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "rnying ma teacher and scholar connected with the rdzogs chen teaching college; he was from rgyal rong. Ascended teaching throne of rdzogs chen in his forties."@en .
+    
+    bdr:P8744  a            :Person ;
+        skos:prefLabel      "pad+ma shes bya/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2B301A352ED449C ;
+        :personEvent        bdr:EV238BEADEAFDE6278 , bdr:EV2798E2C7CC0F8C64 , bdr:EVB6A90DFF819335E1 , bdr:EVFB53153DC00E57CC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC6B834BD7D4650D2 , bdr:NMDE02C57D79391D36 , bdr:NMF52B70C5769443DC , bdr:NMFA9DB88F98645559 ;
+        :personStudentOf    bdr:P1710 , bdr:P2914 , bdr:P697 , bdr:P698 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Pema-Sheja/11488"^^xsd:anyURI .
+}

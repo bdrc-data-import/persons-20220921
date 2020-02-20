@@ -1,0 +1,55 @@
+@base          <bdg:P1741> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1741 {
+    bda:P1741  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1741 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d4/P1741.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1741 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV277FE18E4533EC83
+        a                   :PersonBirth ;
+        :onYear             "1728"^^xsd:gYear .
+    
+    bdr:EVDAA15C076976EE0F
+        a                   :PersonDeath ;
+        :onYear             "1800"^^xsd:gYear .
+    
+    bdr:NM3D05DD6D1922C9E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang shes rab/"@bo-x-ewts .
+    
+    bdr:NMB276B8DB18FF4957
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag sgom pa blo bzang shes rab/"@bo-x-ewts .
+    
+    bdr:NT5D66953AE69262F5
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 228-233" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\ndates: 1728-1800"@en .
+    
+    bdr:P1741  a            :Person ;
+        skos:prefLabel      "blo bzang shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5D66953AE69262F5 ;
+        :personEvent        bdr:EV277FE18E4533EC83 , bdr:EVDAA15C076976EE0F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3D05DD6D1922C9E9 , bdr:NMB276B8DB18FF4957 ;
+        :personTeacherOf    bdr:P199 .
+}

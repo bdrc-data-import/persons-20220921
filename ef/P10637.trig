@@ -1,0 +1,75 @@
+@base          <bdg:P10637> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10637 {
+    bda:LG14F24866C7C542EE
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-17T13:03:14.89Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGE9B7DEA1CA59566F
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-01-30T14:57:57.794Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P10637  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10637 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ef/P10637.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10637 ;
+        adm:logEntry        bda:LG14F24866C7C542EE , bda:LGE9B7DEA1CA59566F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B7B58F745B9B03A
+        a                   :PersonBirth ;
+        :onYear             "1318"^^xsd:gYear .
+    
+    bdr:EV647226CD7E620E05
+        a                   :PersonDeath ;
+        :onYear             "1386"^^xsd:gYear .
+    
+    bdr:NM421EC1ACAE1B2163
+        a                   :PersonTitle ;
+        rdfs:label          "byams sar chos rje ye shes dpal ba/"@bo-x-ewts .
+    
+    bdr:NM7867D85B577343CE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byams gsar ye shes dpal ba/"@bo-x-ewts .
+    
+    bdr:NMABBA5BE77FC44E38
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes dpal ba/"@bo-x-ewts .
+    
+    bdr:NT45992E4EBF851A70
+        a                   :Note ;
+        :noteText           "teacher who was born in mi nyag and traveled to central tibet for studies\none of the mi nyag mkhas pa mi lnga"@en .
+    
+    bdr:NTEBDFDE0019039697
+        a                   :Note ;
+        :locationStatement  "p. 90" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates: 1318-1386"@en .
+    
+    bdr:P10637  a           :Person ;
+        skos:prefLabel      "ye shes dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT45992E4EBF851A70 , bdr:NTEBDFDE0019039697 ;
+        :personEvent        bdr:EV1B7B58F745B9B03A , bdr:EV647226CD7E620E05 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM421EC1ACAE1B2163 , bdr:NM7867D85B577343CE , bdr:NMABBA5BE77FC44E38 ;
+        :personTeacherOf    bdr:P1PD96268 .
+}

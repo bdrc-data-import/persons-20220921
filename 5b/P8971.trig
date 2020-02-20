@@ -1,0 +1,59 @@
+@base          <bdg:P8971> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8971 {
+    bda:P8971  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8971 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5b/P8971.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8971 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21A015FAFA383209
+        a                   :PersonBirth ;
+        :onYear             "1783"^^xsd:gYear .
+    
+    bdr:EV36EFDDDCE6C068D6
+        a                   :PersonDeath ;
+        :onYear             "1869"^^xsd:gYear .
+    
+    bdr:NM65CA36E811DDD9BB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NM995DF5DBA25CB4A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyabs rje ngag dbang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NMBDCF85E982791220
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang bsam gtan snying po/"@bo-x-ewts .
+    
+    bdr:NTDD848CD6C975241F
+        a                   :Note ;
+        :locationStatement  "pp. 286-295" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nfather: mang dge rdo rje bkra shis \nmother: phur rtsa za lod mo \nbirthplace: 'dzi yul shos mda' \nwritings:\ngdams pa'i gsung mgur"@en .
+    
+    bdr:P8971  a            :Person ;
+        skos:prefLabel      "ngag dbang bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDD848CD6C975241F ;
+        :personEvent        bdr:EV21A015FAFA383209 , bdr:EV36EFDDDCE6C068D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM65CA36E811DDD9BB , bdr:NM995DF5DBA25CB4A0 , bdr:NMBDCF85E982791220 ;
+        :personTeacherOf    bdr:P270 , bdr:P8806 , bdr:P8807 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P2690> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2690 {
+    bda:P2690  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2690 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "0e/P2690.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2690 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV431E9A65D6C8585B
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM93DB7B7C2DC39D1A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbu mdzad 'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM9598ED2E8D5DD121
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTA3D89104401ADE5E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P2690  a            :Person ;
+        skos:prefLabel      "'gyur med rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA3D89104401ADE5E ;
+        :personEvent        bdr:EV431E9A65D6C8585B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93DB7B7C2DC39D1A , bdr:NM9598ED2E8D5DD121 ;
+        :personTeacherOf    bdr:P2687 .
+}

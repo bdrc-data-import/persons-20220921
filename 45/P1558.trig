@@ -1,0 +1,103 @@
+@base          <bdg:P1558> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1558 {
+    bda:LG7EB76BE7EF6D4C86
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T10:06:12.104Z"^^xsd:dateTime ;
+        adm:logMessage      "changed office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA08CE7B786F747AE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-15T14:55:10.178Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFBCC211A7C078240
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-29T17:24:40.635Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P1558  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1558 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "45/P1558.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1558 ;
+        adm:logEntry        bda:LG7EB76BE7EF6D4C86 , bda:LGA08CE7B786F747AE , bda:LGFBCC211A7C078240 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3310ABFD552D73B2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVAA6DD7192C992158
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVB9859129459EB25E
+        a                   :PersonBirth ;
+        :onYear             "1309"^^xsd:gYear .
+    
+    bdr:EVBFB57D9643709077
+        a                   :PersonDeath ;
+        :onYear             "1385"^^xsd:gYear .
+    
+    bdr:NM4B491D2B60572CFF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 01"@bo-x-ewts .
+    
+    bdr:NM966F460FD19C53E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rin chen/"@bo-x-ewts .
+    
+    bdr:NMF96D7AD271E05029
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje don grub rin chen/"@bo-x-ewts .
+    
+    bdr:NT142BE72A3D7E34C7
+        a                   :Note ;
+        :locationStatement  "p. 585" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "abbot of shing kun sde gsar dgon"@en .
+    
+    bdr:NT2F9613F1F3AE2D13
+        a                   :Note ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT38895C8EEFD9820D
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 113-122" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\ndates: 1309-1385"@en .
+    
+    bdr:NT96FEE31A8291CDBA
+        a                   :Note ;
+        :noteText           "First on the abbatial throne of Bya-khyung."@en .
+    
+    bdr:P1558  a            :Person ;
+        skos:prefLabel      "don grub rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT142BE72A3D7E34C7 , bdr:NT2F9613F1F3AE2D13 , bdr:NT38895C8EEFD9820D , bdr:NT96FEE31A8291CDBA ;
+        :personEvent        bdr:EV3310ABFD552D73B2 , bdr:EVAA6DD7192C992158 , bdr:EVB9859129459EB25E , bdr:EVBFB57D9643709077 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B491D2B60572CFF , bdr:NM966F460FD19C53E4 , bdr:NMF96D7AD271E05029 ;
+        :personStudentOf    bdr:P1298 , bdr:P3149 ;
+        :personTeacherOf    bdr:P1557 , bdr:P64 , bdr:P8LS12203 ;
+        adm:seeOtherToL     "httpss://www.treasuryoflives.org/biographies/view/Dondrub-Rinchen/2854"^^xsd:anyURI .
+}

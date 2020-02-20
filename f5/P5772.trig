@@ -1,0 +1,73 @@
+@base          <bdg:P5772> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5772 {
+    bda:LG61DE6B5E54E6D09F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-04T13:25:06.912Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG7624828A9A0FE224
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-23T16:17:07.257Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P5772  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5772 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f5/P5772.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5772 ;
+        adm:logEntry        bda:LG61DE6B5E54E6D09F , bda:LG7624828A9A0FE224 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV192CED3A2D896BF1
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV45AA80059117569F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G510 .
+    
+    bdr:NM7A5C304F5B5CC3C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang pad+ma 'gro 'dul rdo rje/"@bo-x-ewts .
+    
+    bdr:NT0EE12223F676DC84
+        a                   :Note ;
+        :locationStatement  "p. 264" ;
+        :noteSource         bdr:MW19822 .
+    
+    bdr:NTC6D0A06CDC14B73B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Byang-gter revelations"@en .
+    
+    bdr:NTD5B1D6C9F2963805
+        a                   :Note ;
+        :noteText           "1905. Bestows final vows on the Rdo-brag Rig-'dzin Thub-bstan-chos-dbang-mnyam-nyid-rdo-rje at Yar-'brog Brag-ra."@en .
+    
+    bdr:P5772  a            :Person ;
+        skos:prefLabel      "kun bzang pad+ma 'gro 'dul rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0EE12223F676DC84 , bdr:NTC6D0A06CDC14B73B , bdr:NTD5B1D6C9F2963805 ;
+        :personEvent        bdr:EV192CED3A2D896BF1 , bdr:EV45AA80059117569F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7A5C304F5B5CC3C0 ;
+        :personStudentOf    bdr:P1710 ;
+        :personTeacherOf    bdr:P2JM508 , bdr:P728 .
+}

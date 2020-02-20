@@ -1,0 +1,96 @@
+@base          <bdg:P5405> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5405 {
+    bda:LGC27A04734EFD0C73
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-18T09:18:51.837Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, seat, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5405  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5405 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "8a/P5405.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5405 ;
+        adm:logEntry        bda:LGC27A04734EFD0C73 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DD9367B23E8585E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EV36FD45EA431818E4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVA198B5ACFA8F24CB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1405 ;
+        :notAfter           "1731"^^xsd:gYear ;
+        :notBefore          "1668"^^xsd:gYear .
+    
+    bdr:EVC255C4F032B8CEA3
+        a                   :PersonDeath ;
+        :onYear             "1747"^^xsd:gYear .
+    
+    bdr:EVDD14E6D1E2AFF07C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:NM0FE5506DD413D5DF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "hor tshang gser khri 02"@bo-x-ewts .
+    
+    bdr:NM4B232EEBDB9CEA07
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5A0A050C01206829
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "hor tshang gser khri 02"@bo-x-ewts .
+    
+    bdr:NM76C84343FED4E233
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor tshang gser khri 02 blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD9E84869D6AAF348
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Hortsang Sertri 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT0D2C6D306C13D994
+        a                   :Note ;
+        :locationStatement  "p. 444" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "incarnation of the 51st dga' ldan khri rin po che; died in his youth according to this source"@en .
+    
+    bdr:NT3DF26C96C833C69D
+        a                   :Note ;
+        :locationStatement  "p. 444" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "1) dga' ldan khri 51 dpal ldan grags pa\nshis tshang, pp. 443 444\n2) blo bzang bstan 'dzin rgya mtsho (1731 1747)\nshis tshang, p. 444"@en .
+    
+    bdr:P5405  a            :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :hasFather          bdr:P5406 ;
+        :hasMother          bdr:P5407 ;
+        :incarnationGeneral  bdr:P2759 ;
+        :isRoot             true ;
+        :note               bdr:NT0D2C6D306C13D994 , bdr:NT3DF26C96C833C69D ;
+        :personEvent        bdr:EV0DD9367B23E8585E , bdr:EV36FD45EA431818E4 , bdr:EVA198B5ACFA8F24CB , bdr:EVC255C4F032B8CEA3 , bdr:EVDD14E6D1E2AFF07C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0FE5506DD413D5DF , bdr:NM4B232EEBDB9CEA07 , bdr:NM5A0A050C01206829 , bdr:NM76C84343FED4E233 , bdr:NMD9E84869D6AAF348 .
+}

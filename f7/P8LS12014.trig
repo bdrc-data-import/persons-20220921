@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12014> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12014 {
+    bda:LGFE9EB526FD9BF827
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:30:51.063Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12014  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12014 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f7/P8LS12014.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12014 ;
+        adm:logEntry        bda:LGFE9EB526FD9BF827 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4059A605A568189B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4BC45356FF72428C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVCF1E2B0793F4A3A2
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM4C41D68DFD7B0639
+        a                   :PersonTitle ;
+        rdfs:label          "chu bzang bka' bcu pa ngag dbang 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NM83A375F045103C35
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 14"@bo-x-ewts .
+    
+    bdr:NMC8E94CA914504CBA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NT72A12E70BBF7129A
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 32" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "he was the abbot of gomang moastery when panchen sonam dakpa was composing bka' gdam chos 'byung in 1529"@en .
+    
+    bdr:P8LS12014  a        :Person ;
+        skos:prefLabel      "ngag dbang 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT72A12E70BBF7129A ;
+        :personEvent        bdr:EV4059A605A568189B , bdr:EV4BC45356FF72428C , bdr:EVCF1E2B0793F4A3A2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4C41D68DFD7B0639 , bdr:NM83A375F045103C35 , bdr:NMC8E94CA914504CBA .
+}

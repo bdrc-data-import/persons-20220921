@@ -1,0 +1,74 @@
+@base          <bdg:P3724> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3724 {
+    bda:LG05BA2C56955660A9
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-24T11:38:48.28Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG810C8C8513347440
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-20T15:35:08.591Z"^^xsd:dateTime ;
+        adm:logMessage      "added relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P3724  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3724 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "98/P3724.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3724 ;
+        adm:logEntry        bda:LG05BA2C56955660A9 , bda:LG810C8C8513347440 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV85D71B1F6C7E052F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1629 .
+    
+    bdr:EVB8AD240F5DA29319
+        a                   :PersonBirth ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:NM0D1981C72D44184A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM302F59588F94E408
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sems dpa' rdo rje sprul sku shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM7630465A28D5170C
+        a                   :PersonPersonalName ;
+        rdfs:label          "rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE8AA8BB3F779C117
+        a                   :Note ;
+        :locationStatement  "p. 45" ;
+        :noteSource         bdr:MW19831 ;
+        :noteText           "prominent rnying ma pa lama active in nyag rong and yunnan\nrebirth of o rgyan rig 'dzin sems dpa' rdo rje, one of the 8 chief disciples of nyag bla padma bdud 'dul\nrecognized by mtsho phu rdor lo\nteacher not recorded: ja gzi a mye sprul sku"@en .
+    
+    bdr:P3724  a            :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :hasFather          bdr:P3725 , bdr:P3726 ;
+        :hasMother          bdr:P3726 ;
+        :isRoot             true ;
+        :note               bdr:NTE8AA8BB3F779C117 ;
+        :personEvent        bdr:EV85D71B1F6C7E052F , bdr:EVB8AD240F5DA29319 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D1981C72D44184A , bdr:NM302F59588F94E408 , bdr:NM7630465A28D5170C ;
+        :personStudentOf    bdr:P3727 , bdr:P3728 , bdr:P3729 , bdr:P705 .
+}

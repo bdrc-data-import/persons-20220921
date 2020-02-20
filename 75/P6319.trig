@@ -1,0 +1,75 @@
+@base          <bdg:P6319> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6319 {
+    bda:LG28039029ED477B0E
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-06T17:56:07.351Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGD2EB71EC90D08A58
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-09T03:19:08.503Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth and death date"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P6319  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6319 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "75/P6319.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6319 ;
+        adm:logEntry        bda:LG28039029ED477B0E , bda:LGD2EB71EC90D08A58 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F28F0523672A3EB
+        a                   :PersonBirth ;
+        :onYear             "1815"^^xsd:gYear .
+    
+    bdr:EV3FB585C418D1FBCA
+        a                   :PersonDeath ;
+        :onYear             "1997"^^xsd:gYear .
+    
+    bdr:NM323987EF5C244DD1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a bo bla ma bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM5A0E87BC69066B3D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM7AE7C1D5C4FF995E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a wo bla ma bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMAE9F087213AF121B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a bo'i bla ma bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT875C21A07C74238C
+        a                   :Note ;
+        :locationStatement  "W2CZ7959" ;
+        :noteText           "v.6, p.303"@en .
+    
+    bdr:P6319  a            :Person ;
+        skos:prefLabel      "bstan 'dzin dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT875C21A07C74238C ;
+        :personEvent        bdr:EV1F28F0523672A3EB , bdr:EV3FB585C418D1FBCA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM323987EF5C244DD1 , bdr:NM5A0E87BC69066B3D , bdr:NM7AE7C1D5C4FF995E , bdr:NMAE9F087213AF121B ;
+        :personStudentOf    bdr:P2JM511 , bdr:P6169 .
+}

@@ -1,0 +1,54 @@
+@base          <bdg:P9380> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9380 {
+    bda:P9380  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9380 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ff/P9380.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9380 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDBBE3BAC0CB1CD12
+        a                   :PersonBirth ;
+        :onYear             "1978"^^xsd:gYear .
+    
+    bdr:NM91EE3CDF6F21BE00
+        a                   :PersonPenName ;
+        rdfs:label          "rma rang grol/"@bo-x-ewts .
+    
+    bdr:NM92E2B303800EBE6A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rma 'brog blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMA61E593578F07430
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6927024781761DA0
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW28926 ;
+        :noteText           "biography"@en .
+    
+    bdr:P9380  a            :Person ;
+        skos:prefLabel      "blo bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6927024781761DA0 ;
+        :personEvent        bdr:EVDBBE3BAC0CB1CD12 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM91EE3CDF6F21BE00 , bdr:NM92E2B303800EBE6A , bdr:NMA61E593578F07430 .
+}

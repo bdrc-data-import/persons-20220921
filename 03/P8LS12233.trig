@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12233> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12233 {
+    bda:LGE2935F68ECE84CA4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T11:42:18.141Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12233  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12233 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "03/P8LS12233.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12233 ;
+        adm:logEntry        bda:LGE2935F68ECE84CA4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08405CD9703936A6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV0DDCC49B59AAA2DF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV7A5A0A1A38E7A449
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM5D660AD3C50A7A79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rabs bzang po/"@bo-x-ewts .
+    
+    bdr:NM645AFA1D01F788D8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 71"@bo-x-ewts .
+    
+    bdr:NM82385BC60F5FE3C6
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 71 shes rabs bzang po/"@bo-x-ewts .
+    
+    bdr:NT7C3D1A6F88D89956
+        a                   :Note ;
+        :locationStatement  "p. 194-195" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "class mate of phur lcog ngag dbang byams pa\nrecieved teachings from khri byang chub chos 'phel and se ra'i khri 'jam dpal tshul khrims\nreceived bka' bcu degree"@en .
+    
+    bdr:P8LS12233  a        :Person ;
+        skos:prefLabel      "shes rabs bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7C3D1A6F88D89956 ;
+        :personEvent        bdr:EV08405CD9703936A6 , bdr:EV0DDCC49B59AAA2DF , bdr:EV7A5A0A1A38E7A449 ;
+        :personName         bdr:NM5D660AD3C50A7A79 , bdr:NM645AFA1D01F788D8 , bdr:NM82385BC60F5FE3C6 .
+}

@@ -1,0 +1,80 @@
+@base          <bdg:P9105> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9105 {
+    bda:LG01BDBB430E168C0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-13T11:37:38.477Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG4252FF43A891F458
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-13T11:31:24.129Z"^^xsd:dateTime ;
+        adm:logMessage      "date and names"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG489F323A797E302A
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T12:34:38.393Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P9105  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9105 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a8/P9105.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9105 ;
+        adm:logEntry        bda:LG01BDBB430E168C0D , bda:LG4252FF43A891F458 , bda:LG489F323A797E302A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE47F1D4D562E4511
+        a                   :PersonDeath ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:EVF5A052A361191084
+        a                   :PersonBirth ;
+        :onYear             "1836"^^xsd:gYear .
+    
+    bdr:NM083228995E2C43EC
+        a                   :PersonPersonalName ;
+        rdfs:label          "skal bzang chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM3D9D48F854A2EB9A
+        a                   :PersonTitle ;
+        rdfs:label          "rje btsun ma grub pa'i rta mgrin dbang mo skal bzang chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM5A0F4B6329FD00D4
+        a                   :PersonPersonalName ;
+        rdfs:label          "rta mgrin dbang mo/"@bo-x-ewts .
+    
+    bdr:NT838AB60930442EEE
+        a                   :Note ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a student of ngag dbang kun dga' rin chen"@en .
+    
+    bdr:P9105  a            :Person ;
+        skos:prefLabel      "skal bzang chos kyi nyi ma/"@bo-x-ewts ;
+        :hasNephew          bdr:P979 ;
+        :isRoot             true ;
+        :note               bdr:NT838AB60930442EEE ;
+        :personEvent        bdr:EVE47F1D4D562E4511 , bdr:EVF5A052A361191084 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM083228995E2C43EC , bdr:NM3D9D48F854A2EB9A , bdr:NM5A0F4B6329FD00D4 ;
+        :personStudentOf    bdr:P9102 ;
+        :personTeacherOf    bdr:P10MS14669 , bdr:P979 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Kelzang-Chokyi-Nyima/11883"^^xsd:anyURI .
+}

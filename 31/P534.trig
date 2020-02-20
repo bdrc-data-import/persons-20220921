@@ -1,0 +1,97 @@
+@base          <bdg:P534> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P534 {
+    bda:LG31418A13DE109F51
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T09:32:16.243Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5A319C92550FB8B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-01T09:31:19.621Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6F79A08DFBB1881C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P534  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P534 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "31/P534.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P534 ;
+        adm:logEntry        bda:LG31418A13DE109F51 , bda:LG5A319C92550FB8B2 , bda:LG6F79A08DFBB1881C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3797165126F9A99B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4714 ;
+        :onYear             "1737"^^xsd:gYear .
+    
+    bdr:EV576F14B826B40CD4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4711 .
+    
+    bdr:EV94E171CED8773C67
+        a                   :PersonDeath ;
+        :onYear             "1762"^^xsd:gYear .
+    
+    bdr:EVE71ED0466CAF47C1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM29620B6FF2F6127C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 04 'brug sgra rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM73246E56D2BDC3D3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug rgyal sras sprul sku 04"@bo-x-ewts .
+    
+    bdr:NME0D35169B2AEBD63
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Gyelse Tulku 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF5639FBBC140E9DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'brug sgra rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT7C10734157EC4A87
+        a                   :Note ;
+        :locationStatement  "pp. 129v-130r" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "the third 'brug rgyal sras incarnation was born into the dung dkar chos rje lineage of kur stod\nhe ascended the throne after receiving his first vows; meditated at lcags ri"@en .
+    
+    bdr:NTDD9E2879C73D024E
+        a                   :Note ;
+        :locationStatement  "p. 106" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "according to this source he is the fourth in the line of 'brug rgyal sras"@en .
+    
+    bdr:P534  a             :Person ;
+        skos:prefLabel      "'brug sgra rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9910 ;
+        :isRoot             true ;
+        :note               bdr:NT7C10734157EC4A87 , bdr:NTDD9E2879C73D024E ;
+        :personEvent        bdr:EV3797165126F9A99B , bdr:EV576F14B826B40CD4 , bdr:EV94E171CED8773C67 , bdr:EVE71ED0466CAF47C1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM29620B6FF2F6127C , bdr:NM73246E56D2BDC3D3 , bdr:NME0D35169B2AEBD63 , bdr:NMF5639FBBC140E9DC ;
+        :personStudentOf    bdr:P528 , bdr:P530 , bdr:P541 .
+}

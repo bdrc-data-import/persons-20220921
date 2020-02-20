@@ -1,0 +1,63 @@
+@base          <bdg:P5502> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5502 {
+    bda:LG229FE72EC717598A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-01T10:55:02.095Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5502  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5502 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "dc/P5502.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5502 ;
+        adm:logEntry        bda:LG229FE72EC717598A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV225505A318FCD164
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM5FD0390A344642C7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nye gnas ldan sgom/"@bo-x-ewts .
+    
+    bdr:NM7A4FC9FEFE8DF9C1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ldan sgom/"@bo-x-ewts .
+    
+    bdr:NMA304896F160682C0
+        a                   :PersonTitle ;
+        rdfs:label          "ldam sgom chos grags/"@bo-x-ewts .
+    
+    bdr:NT3C7F75A47AA30366
+        a                   :Note ;
+        :locationStatement  "p. 27" ;
+        :noteSource         bdr:MW19808 ;
+        :noteText           "karma kaM tshang teacher and meditator\n\n1264. built the lha khang chen mo at mtshur phu"@en .
+    
+    bdr:P5502  a            :Person ;
+        skos:prefLabel      "ldan sgom/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C7F75A47AA30366 ;
+        :personEvent        bdr:EV225505A318FCD164 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5FD0390A344642C7 , bdr:NM7A4FC9FEFE8DF9C1 , bdr:NMA304896F160682C0 ;
+        :personStudentOf    bdr:P1487 .
+}

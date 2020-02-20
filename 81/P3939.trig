@@ -1,0 +1,80 @@
+@base          <bdg:P3939> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3939 {
+    bda:LG00245D988ED471CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T11:21:32.859Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG41EFC5E401D5EEF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-09T16:44:05.818Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGFCDC59AA50887A15
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T11:51:56.016Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and date, student"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P3939  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3939 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "81/P3939.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3939 ;
+        adm:logEntry        bda:LG00245D988ED471CD , bda:LG41EFC5E401D5EEF2 , bda:LGFCDC59AA50887A15 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14E32BA5F68DE108
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G257 .
+    
+    bdr:EVBE6EC60BECF12036
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM1FAB53C826BFF0A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpyal lo tsA ba chos kyi bzang po/"@bo-x-ewts .
+    
+    bdr:NM788C6C19FFCE970E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi bzang po/"@bo-x-ewts .
+    
+    bdr:NM7DC5DA306848107D
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos kyi dpal bzang, dpyal lo tsA ba/"@bo-x-ewts .
+    
+    bdr:NTDD1984FAC840A327
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 34v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in a prajaparamita transmission lineage"@en .
+    
+    bdr:P3939  a            :Person ;
+        skos:prefLabel      "chos kyi bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDD1984FAC840A327 ;
+        :personEvent        bdr:EV14E32BA5F68DE108 , bdr:EVBE6EC60BECF12036 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1FAB53C826BFF0A5 , bdr:NM788C6C19FFCE970E , bdr:NM7DC5DA306848107D ;
+        :personStudentOf    bdr:P0RK511 , bdr:P1518 , bdr:P43 , bdr:P4CZ15158 , bdr:P4CZ15160 , bdr:P8176 ;
+        :personTeacherOf    bdr:P0RK25 , bdr:P1244 , bdr:P2138 , bdr:P4206 , bdr:P5757 .
+}

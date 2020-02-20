@@ -1,0 +1,57 @@
+@base          <bdg:P2094> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2094 {
+    bda:P2094  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2094 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c2/P2094.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2094 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV33CEA2F00BAC441B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G104 .
+    
+    bdr:EVB61C4E5A3A569553
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMBBE5759FBA10169F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shangs ston dri med bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NMF59ED26DF20A9CEA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dri med bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NTAFA722B75D4EB6F9
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 49" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the transmission lineage of the abhidharmakosakarika; relationship of this teacher to thos bsam gling dri med bshes gnyen as yet unknown; probably the same"@en .
+    
+    bdr:P2094  a            :Person ;
+        skos:prefLabel      "dri med bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAFA722B75D4EB6F9 ;
+        :personEvent        bdr:EV33CEA2F00BAC441B , bdr:EVB61C4E5A3A569553 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBBE5759FBA10169F , bdr:NMF59ED26DF20A9CEA ;
+        :personStudentOf    bdr:P426 ;
+        :personTeacherOf    bdr:P4752 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P7949> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7949 {
+    bda:LGD77A26A7B19314CE
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-23T14:39:47.257Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P7949  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7949 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7d/P7949.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7949 ;
+        adm:logEntry        bda:LGD77A26A7B19314CE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA895AEFC55F66FF3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3630 .
+    
+    bdr:EVBD678FAC3C445626
+        a                   :PersonBirth ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:NM14FBEB5F742A5280
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NM17DACF97F972F370
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jigs med 'od gsal rol pa'i blo gros/"@bo-x-ewts .
+    
+    bdr:NM27B135AAB125D396
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang 03 'jigs med 'od gsal/"@bo-x-ewts .
+    
+    bdr:NT660AB6C2967EE763
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "year of birth and connection with dgon la kha established"@en .
+    
+    bdr:P7949  a            :Person ;
+        skos:prefLabel      "'jigs med 'od gsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT660AB6C2967EE763 ;
+        :personEvent        bdr:EVA895AEFC55F66FF3 , bdr:EVBD678FAC3C445626 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14FBEB5F742A5280 , bdr:NM17DACF97F972F370 , bdr:NM27B135AAB125D396 ;
+        :personStudentOf    bdr:P6339 .
+}

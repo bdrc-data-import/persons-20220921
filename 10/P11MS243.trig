@@ -1,0 +1,62 @@
+@base          <bdg:P11MS243> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS243 {
+    bda:LG9F75A3C06279CDC5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-24T16:09:49.265Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA981CC8321CB0C85
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-11-18T19:56:02.846Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P11MS159"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P11MS243  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS243 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "10/P11MS243.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS243 ;
+        adm:logEntry        bda:LG9F75A3C06279CDC5 , bda:LGA981CC8321CB0C85 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P11MS159 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV96EDD8AAFF5DE351
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM9763EA483E8E56AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gshen sgom zhig po/"@bo-x-ewts .
+    
+    bdr:NMAB8692BEC0B67385
+        a                   :PersonCommonName ;
+        rdfs:label          "bon zhig khyung nag"@bo-x-ewts .
+    
+    bdr:NT39414E05E950AA28
+        a                   :Note ;
+        :noteText           "Bon treasure revealer-- snyan brgyud rig pa cer mthong."@en .
+    
+    bdr:P11MS243  a         :Person ;
+        skos:prefLabel      "gshen sgom zhig po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT39414E05E950AA28 ;
+        :personEvent        bdr:EV96EDD8AAFF5DE351 ;
+        :personName         bdr:NM9763EA483E8E56AF , bdr:NMAB8692BEC0B67385 .
+}

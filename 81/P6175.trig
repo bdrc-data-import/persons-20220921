@@ -1,0 +1,86 @@
+@base          <bdg:P6175> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6175 {
+    bda:LG33ACDB6E5A35A9E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T11:20:03.354Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEACD906B2FE3354A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T16:08:20.616Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF036EB4922F1FBCD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-27T16:24:21.482Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6175  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6175 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "81/P6175.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6175 ;
+        adm:logEntry        bda:LG33ACDB6E5A35A9E1 , bda:LGEACD906B2FE3354A , bda:LGF036EB4922F1FBCD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4CF0AB55AD83ED50
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4E16B52EB59D656E
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV96B612979472F610
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM80759AC774B260FC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM85917C6B202F9129
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang mkhan rabs 02"@bo-x-ewts .
+    
+    bdr:NM8B03F134E4D520D9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde tsho mkhan chung bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NTCB4CBA1815FF3C35
+        a                   :Note ;
+        :locationStatement  "p. 273-278" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:P6175  a            :Person ;
+        skos:prefLabel      "bsod nams dpal ldan/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P6336 ;
+        :isRoot             true ;
+        :note               bdr:NTCB4CBA1815FF3C35 ;
+        :personEvent        bdr:EV4CF0AB55AD83ED50 , bdr:EV4E16B52EB59D656E , bdr:EV96B612979472F610 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM80759AC774B260FC , bdr:NM85917C6B202F9129 , bdr:NM8B03F134E4D520D9 ;
+        :personStudentOf    bdr:P6168 ;
+        :personTeacherOf    bdr:P6332 , bdr:P6337 , bdr:P724 , bdr:P8296 , bdr:P8297 .
+}

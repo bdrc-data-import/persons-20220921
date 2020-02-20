@@ -1,0 +1,60 @@
+@base          <bdg:P5976> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5976 {
+    bda:LGA1540C0766F21492
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-29T15:47:37.365Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher - student info & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5976  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5976 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "da/P5976.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5976 ;
+        adm:logEntry        bda:LGA1540C0766F21492 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusProvisional .
+    
+    bdr:EV9A4E16789549F59F
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM105BFC0485CE15A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya bral bla ma nor bu rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMDFFFA7F82D83A9C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTEE0CED880D4E8293
+        a                   :Note ;
+        :locationStatement  "v.1, ebook p. 91-94" ;
+        :noteSource         bdr:MW23921 ;
+        :noteText           "འདི་ཉིད་ནི་གླང་མཁར་བའི་སྲས་ཀྱི་ཐུ་བོར་གྱུར་ཞིང་། སྒྲུབ་བརྒྱུད་ཀྱི་བསྟན་འཛིན་ཞིག་ཡིན་པར་གསལ། ཞིབ་ཆ་རྣམ་ཐར་གསོལ་འདེབས་རང་རྩོམ་མ་ཞིག་བཞུགས་པར་གཟིགས་ན་མཁྱེན།"@bo .
+    
+    bdr:P5976  a            :Person ;
+        skos:prefLabel      "nor bu rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEE0CED880D4E8293 ;
+        :personEvent        bdr:EV9A4E16789549F59F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM105BFC0485CE15A5 , bdr:NMDFFFA7F82D83A9C0 ;
+        :personStudentOf    bdr:P2CN10828 ;
+        :personTeacherOf    bdr:P5475 , bdr:P5972 .
+}

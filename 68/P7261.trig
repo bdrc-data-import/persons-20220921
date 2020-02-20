@@ -1,0 +1,71 @@
+@base          <bdg:P7261> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7261 {
+    bda:LG321A0F2F2E5AACFB
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-21T13:21:54.522Z"^^xsd:dateTime ;
+        adm:logMessage      "added dete"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LG32D5CD5EC1705350
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-03-13T06:56:52.046Z"^^xsd:dateTime ;
+        adm:logMessage      "added date"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P7261  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7261 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "68/P7261.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7261 ;
+        adm:logEntry        bda:LG321A0F2F2E5AACFB , bda:LG32D5CD5EC1705350 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58D141B1463F3699
+        a                   :PersonDeath ;
+        :onYear             "1630"^^xsd:gYear .
+    
+    bdr:EVF7739501E744EAF9
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G2328 ;
+        :onYear             "1594"^^xsd:gYear .
+    
+    bdr:NM4AEEFBB34814D77E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD973CFC6BFB9A934
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dkon mchog bstan rgyal/"@bo-x-ewts .
+    
+    bdr:NTB12EE54EBA313910
+        a                   :Note ;
+        :locationStatement  "p.  1 (4th group)" ;
+        :noteSource         bdr:MW2DB4623 .
+    
+    bdr:NTF38F203A27DF82AF
+        a                   :Note ;
+        :noteText           "a tibetan author of treatises on medicine"@en .
+    
+    bdr:P7261  a            :Person ;
+        skos:prefLabel      "ngag dbang dkon mchog bstan rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB12EE54EBA313910 , bdr:NTF38F203A27DF82AF ;
+        :personEvent        bdr:EV58D141B1463F3699 , bdr:EVF7739501E744EAF9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4AEEFBB34814D77E , bdr:NMD973CFC6BFB9A934 .
+}

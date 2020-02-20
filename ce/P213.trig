@@ -1,0 +1,102 @@
+@base          <bdg:P213> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P213 {
+    bda:LG4FB5B066CB005A0E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T10:53:35.953Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7F7A6D620996440D
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T11:07:08.327Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of and tearcher of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P213  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P213 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "ce/P213.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P213 ;
+        adm:logEntry        bda:LG4FB5B066CB005A0E , bda:LG7F7A6D620996440D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12FEE52DFB8F43B6
+        a                   :PersonDeath ;
+        :notAfter           "1949"^^xsd:gYear ;
+        :notBefore          "1948"^^xsd:gYear .
+    
+    bdr:EV44A6CC3D8BF7C0A1
+        a                   :PersonBirth ;
+        :onYear             "1910"^^xsd:gYear .
+    
+    bdr:EV5E748C574C53D928
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM4614AFDD19B68EE7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a kyA 06 blo bzang lung rtogs 'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM539B1B0F8DDCCCDE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Akya 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM68D52DDC145618C2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a kyA 06"@bo-x-ewts .
+    
+    bdr:NM9254B4305CAE31C5
+        a                   :PersonPersonalName ;
+        rdfs:label          "bstan pa'i rgyal mtshan, a kyA/"@bo-x-ewts .
+    
+    bdr:NMD078182D8F80F505
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang lung rtogs 'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT03DB88FDC68376EB
+        a                   :Note ;
+        :locationStatement  "p. 959" ;
+        :noteSource         bdr:MW19836 ;
+        :noteText           "bibliographic data"@en .
+    
+    bdr:NT168AE7802BCD520D
+        a                   :Note ;
+        :locationStatement  "p. 1824" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biodata"@en .
+    
+    bdr:NT1BF3495F9686C2F2
+        a                   :Note ;
+        :locationStatement  "p. 1019" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source includes brief biography.\nDeath date unknown."@en .
+    
+    bdr:NT26762787A42D328B
+        a                   :Note ;
+        :noteText           "Entered sku-'bum for studies.\nLater to bla-brang for studies.\nReturned to sku-'bum\nGsung 'bum fills about 2 medium-sized volumes with more than 18 chos tshan; according to the Potala collection in three small volumes with 19 le tshan."@en .
+    
+    bdr:P213  a             :Person ;
+        skos:prefLabel      "blo bzang lung rtogs 'jigs med bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3913 ;
+        :isRoot             true ;
+        :note               bdr:NT03DB88FDC68376EB , bdr:NT168AE7802BCD520D , bdr:NT1BF3495F9686C2F2 , bdr:NT26762787A42D328B ;
+        :personEvent        bdr:EV12FEE52DFB8F43B6 , bdr:EV44A6CC3D8BF7C0A1 , bdr:EV5E748C574C53D928 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4614AFDD19B68EE7 , bdr:NM539B1B0F8DDCCCDE , bdr:NM68D52DDC145618C2 , bdr:NM9254B4305CAE31C5 , bdr:NMD078182D8F80F505 ;
+        :personStudentOf    bdr:P1499 , bdr:P215 , bdr:P5920 .
+}

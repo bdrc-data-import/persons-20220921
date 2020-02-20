@@ -1,0 +1,65 @@
+@base          <bdg:P3728> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3728 {
+    bda:LG8E4CD1A378B7F502
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T16:58:22.055Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3728  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3728 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1b/P3728.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3728 ;
+        adm:logEntry        bda:LG8E4CD1A378B7F502 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E3356D21B360D0B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G417 .
+    
+    bdr:EV477ED4A1B69AA2A0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM70DD7EF24C5E7F02
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pho ba gu sgar bla ma 'gyur med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM854D5F1D0DE304E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF5EF972172A3F2D3
+        a                   :PersonTitle ;
+        rdfs:label          "pho ba gu sgar bla ma/"@bo-x-ewts .
+    
+    bdr:NT278E4ADFD25A81EE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P3728  a            :Person ;
+        skos:prefLabel      "'gyur med rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT278E4ADFD25A81EE ;
+        :personEvent        bdr:EV3E3356D21B360D0B , bdr:EV477ED4A1B69AA2A0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM70DD7EF24C5E7F02 , bdr:NM854D5F1D0DE304E9 , bdr:NMF5EF972172A3F2D3 ;
+        :personTeacherOf    bdr:P3724 .
+}

@@ -1,0 +1,87 @@
+@base          <bdg:P1236> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1236 {
+    bda:LG3D5FA19A9C8E09F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T11:54:09.746Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEA5CB287DE2A7C1E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:53:27.51Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1236  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1236 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "87/P1236.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1236 ;
+        adm:logEntry        bda:LG3D5FA19A9C8E09F1 , bda:LGEA5CB287DE2A7C1E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV168038047B51E265
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV2670FF5CD474254A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G662 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV6D4D7EC3C1EDE533
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF1052E50D46F50B9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM02BE68DE12DE9127
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 91"@bo-x-ewts .
+    
+    bdr:NM22992E6D96F653B1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa ral mkhan chen dge 'dun chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME2CD3C7A9C63609A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3DDB5DFEC4B01708
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT52DA82B5F956A117
+        a                   :Note ;
+        :locationStatement  "p. 201-202" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "incarnate lama of rgyud smad mkhan chen grags pa brtson 'grus\nfounded monastery in the chab skya area\nduring the khri of bya khyung introduced the blo rtags of byang rtse monastery and also block curved"@en .
+    
+    bdr:P1236  a            :Person ;
+        skos:prefLabel      "dge 'dun chos 'byor rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3DDB5DFEC4B01708 , bdr:NT52DA82B5F956A117 ;
+        :personEvent        bdr:EV168038047B51E265 , bdr:EV2670FF5CD474254A , bdr:EV6D4D7EC3C1EDE533 , bdr:EVF1052E50D46F50B9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM02BE68DE12DE9127 , bdr:NM22992E6D96F653B1 , bdr:NME2CD3C7A9C63609A ;
+        :personTeacherOf    bdr:P224 .
+}

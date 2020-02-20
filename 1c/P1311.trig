@@ -1,0 +1,42 @@
+@base          <bdg:P1311> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1311 {
+    bda:P1311  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1311 ;
+        adm:facetIndex      3 ;
+        adm:gitPath         "1c/P1311.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1311 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD084E5B8B9DA8D0F
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NME456348CBA3B0F7E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs chos kyi mgon po/"@bo-x-ewts .
+    
+    bdr:P1311  a            :Person ;
+        skos:prefLabel      "'jam dbyangs chos kyi mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD084E5B8B9DA8D0F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME456348CBA3B0F7E ;
+        :personStudentOf    bdr:P4312 ;
+        :personTeacherOf    bdr:P1310 .
+}

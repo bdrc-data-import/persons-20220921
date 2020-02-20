@@ -1,0 +1,59 @@
+@base          <bdg:P5805> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5805 {
+    bda:LGFE03824E2166A6B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:10:11.672Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5805  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5805 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "7a/P5805.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5805 ;
+        adm:logEntry        bda:LGFE03824E2166A6B5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4C022E57CB20419B
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM35D0671CA1E82448
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhyen brtse rtogs ldan/"@bo-x-ewts .
+    
+    bdr:NT5C7417F5C8831D6C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NTA04610B51645CC1A
+        a                   :Note ;
+        :noteText           "Mentioned in the transmission lineage of the Dge sbyor bdun pa between Blo-gros-sengge and Ye-shes-rin-chen."@en .
+    
+    bdr:P5805  a            :Person ;
+        skos:prefLabel      "mkhyen brtse rtogs ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C7417F5C8831D6C , bdr:NTA04610B51645CC1A ;
+        :personEvent        bdr:EV4C022E57CB20419B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35D0671CA1E82448 ;
+        :personStudentOf    bdr:P1718 ;
+        :personTeacherOf    bdr:P2632 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Khyentse-Tokden/8361"^^xsd:anyURI .
+}

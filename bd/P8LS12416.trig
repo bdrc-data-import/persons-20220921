@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12416> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12416 {
+    bda:LGD37289BE79A53E9D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T09:29:57.549Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12416  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12416 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bd/P8LS12416.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12416 ;
+        adm:logEntry        bda:LGD37289BE79A53E9D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2FE79F2AC473111F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV82E84365416F3658
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM1DFF5F48A3A10B7C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 55"@bo-x-ewts .
+    
+    bdr:NM7D6C39A2F122DC81
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tre hor blo bzang grags pa/"@bo-x-ewts .
+    
+    bdr:NMC01C4DE1E0EBA67A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang grags pa/"@bo-x-ewts .
+    
+    bdr:NTA8CBFEAAA2EC9BCA
+        a                   :Note ;
+        :locationStatement  "p. 294" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "he is said to be born in tre hor area but no detail information is available"@en .
+    
+    bdr:P8LS12416  a        :Person ;
+        skos:prefLabel      "blo bzang grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8CBFEAAA2EC9BCA ;
+        :personEvent        bdr:EV2FE79F2AC473111F , bdr:EV82E84365416F3658 ;
+        :personName         bdr:NM1DFF5F48A3A10B7C , bdr:NM7D6C39A2F122DC81 , bdr:NMC01C4DE1E0EBA67A .
+}

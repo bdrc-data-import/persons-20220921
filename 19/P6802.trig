@@ -1,0 +1,87 @@
+@base          <bdg:P6802> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6802 {
+    bda:LG44C73FD533BE1743
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T10:38:46.722Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGC24AFF8721D4B77A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T10:41:22.182Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGDA0273E3C2314FD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P6802  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6802 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "19/P6802.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6802 ;
+        adm:logEntry        bda:LG44C73FD533BE1743 , bda:LGC24AFF8721D4B77A , bda:LGDA0273E3C2314FD6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BA4FF051B84EC25
+        a                   :PersonDeath ;
+        :onYear             "1774"^^xsd:gYear .
+    
+    bdr:EVC302AA144D5B3D74
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2755 ;
+        :onYear             "1721"^^xsd:gYear .
+    
+    bdr:EVCCB5CFC66C000D39
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2521 .
+    
+    bdr:NM0188818DC1300E2D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsayu 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM1239C75E30DEDBA4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tsa yus 02 'phrin las bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM810DCC13C45E383D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD41A6292DBDA1F91
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tsa yus 02"@bo-x-ewts .
+    
+    bdr:NTD9AEE5E4C444E18A
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 7" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "biography\nb. gtsos mar sgang in 1721\nd. at the age of 54"@en .
+    
+    bdr:P6802  a            :Person ;
+        skos:prefLabel      "'phrin las bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6801 ;
+        :isRoot             true ;
+        :note               bdr:NTD9AEE5E4C444E18A ;
+        :personEvent        bdr:EV1BA4FF051B84EC25 , bdr:EVC302AA144D5B3D74 , bdr:EVCCB5CFC66C000D39 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0188818DC1300E2D , bdr:NM1239C75E30DEDBA4 , bdr:NM810DCC13C45E383D , bdr:NMD41A6292DBDA1F91 .
+}

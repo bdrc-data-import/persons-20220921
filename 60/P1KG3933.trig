@@ -1,0 +1,66 @@
+@base          <bdg:P1KG3933> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3933 {
+    bda:LG11706532D7468DCD
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-07T14:30:21.388Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG94E1DEE9E79B1E8E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-19T09:57:09.498Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, birth date, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1KG3933  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3933 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "60/P1KG3933.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3933 ;
+        adm:logEntry        bda:LG11706532D7468DCD , bda:LG94E1DEE9E79B1E8E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62F46FAC7C3FAC61
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G576 ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:EV70AE26854D220EAE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR984 .
+    
+    bdr:NM27B4C61BE7DEFAFB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NMBF1F54F6FAF7D0CC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NT36F2267810504485
+        a                   :Note ;
+        :noteText           "See W8LS43850"@en .
+    
+    bdr:P1KG3933  a         :Person ;
+        skos:prefLabel      "pad+ma rang grol/"@bo-x-ewts ;
+        :hasFather          bdr:P1KG3932 ;
+        :isRoot             true ;
+        :note               bdr:NT36F2267810504485 ;
+        :personEvent        bdr:EV62F46FAC7C3FAC61 , bdr:EV70AE26854D220EAE ;
+        :personName         bdr:NM27B4C61BE7DEFAFB , bdr:NMBF1F54F6FAF7D0CC .
+}

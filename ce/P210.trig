@@ -1,0 +1,68 @@
+@base          <bdg:P210> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P210 {
+    bda:LGF7CBB0E2661E79CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-29T17:01:56.186Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P210  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P210 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ce/P210.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P210 ;
+        adm:logEntry        bda:LGF7CBB0E2661E79CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AA15626A9A440BC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G19 .
+    
+    bdr:EV379C00472EBA1F6A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G596 ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:EV967E8E2AE08E6FCC
+        a                   :PersonDeath ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:NM856BDBC871B5C5B2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rta mgrin lha mo/"@bo-x-ewts .
+    
+    bdr:NT8B0B1381347E72D6
+        a                   :Note ;
+        :locationStatement  "p. 1022" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source includes short biography\ndates: 1923-1979."@en .
+    
+    bdr:NTD48A0E40DB29654A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P210  a             :Person ;
+        skos:prefLabel      "rta mgrin lha mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8B0B1381347E72D6 , bdr:NTD48A0E40DB29654A ;
+        :personEvent        bdr:EV0AA15626A9A440BC , bdr:EV379C00472EBA1F6A , bdr:EV967E8E2AE08E6FCC ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM856BDBC871B5C5B2 ;
+        :personStudentOf    bdr:P211 ;
+        adm:seeOtherToL     "httpss://www.treasuryoflives.org/biographies/view/Tamdrin-Lhamo/3770"^^xsd:anyURI .
+}

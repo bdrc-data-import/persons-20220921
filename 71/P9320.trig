@@ -1,0 +1,72 @@
+@base          <bdg:P9320> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9320 {
+    bda:LG4A102CEB1223E26E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T14:36:32.557Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9320  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9320 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "71/P9320.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9320 ;
+        adm:logEntry        bda:LG4A102CEB1223E26E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV422A73835F946928
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1732"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8667B7817E2FFF20
+        a                   :PersonDeath ;
+        :onYear             "1735"^^xsd:gYear .
+    
+    bdr:EVC93B2CBAF8792058
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM3890D077DDDF5A59
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM40B56BF608867FE4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman ri khri 'dzin shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NM8AC271123AF13F1E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tsi min gyur chen sprul pa shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NT04936AE2FF159954
+        a                   :Note ;
+        :locationStatement  "p. 296" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon po lama\ntsi min gyer chen sprul pa shes rab 'od zer mnyam med sman ri'i gdan sar phebs/"@bo-x-ewts .
+    
+    bdr:P9320  a            :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT04936AE2FF159954 ;
+        :personEvent        bdr:EV422A73835F946928 , bdr:EV8667B7817E2FFF20 , bdr:EVC93B2CBAF8792058 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3890D077DDDF5A59 , bdr:NM40B56BF608867FE4 , bdr:NM8AC271123AF13F1E .
+}

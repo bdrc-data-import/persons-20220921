@@ -1,0 +1,80 @@
+@base          <bdg:P225> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P225 {
+    bda:LGEDB403FD63B159E6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-02T15:43:06.487Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G1228 to G842"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P225  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P225 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "c7/P225.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P225 ;
+        adm:logEntry        bda:LGEDB403FD63B159E6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CD9A1EC42169237
+        a                   :PersonDeath ;
+        :onYear             "1949"^^xsd:gYear .
+    
+    bdr:EVF6388C2406BF6261
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G842 ;
+        :onYear             "1890"^^xsd:gYear .
+    
+    bdr:EVFD27B4D0570E446D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G126 .
+    
+    bdr:NM257A03568B042690
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ldan ma stong dpon ngag dbang chos 'grub/"@bo-x-ewts .
+    
+    bdr:NM6CDF83D98FC97AC5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos 'grub/"@bo-x-ewts .
+    
+    bdr:NMDDC27A705157F2F7
+        a                   :PersonTitle ;
+        rdfs:label          "gdan ma stong phud/"@bo-x-ewts .
+    
+    bdr:NT32D1CE4DFE8AC3F7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT9BCAB177BFA24F8D
+        a                   :Note ;
+        :locationStatement  "p. 1004" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "mi-sna gives as primary title: gdan-ma Stong-phud; also 'bras blo-gling dge-bshes.\nTravelled to dbus and entered 'bras-spungs blo-gsal-gling.\nCame out very well in the lha-rams-pa examinations.\n1944. Invited to ri-bo rtse-lnga to preach.\ngsung 'bum in one small volume.\nDates: 1890-1949."@en .
+    
+    bdr:NTD85C7515BF239E8F
+        a                   :Note ;
+        :locationStatement  "p. 964" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:P225  a             :Person ;
+        skos:prefLabel      "ngag dbang chos 'grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT32D1CE4DFE8AC3F7 , bdr:NT9BCAB177BFA24F8D , bdr:NTD85C7515BF239E8F ;
+        :personEvent        bdr:EV5CD9A1EC42169237 , bdr:EVF6388C2406BF6261 , bdr:EVFD27B4D0570E446D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM257A03568B042690 , bdr:NM6CDF83D98FC97AC5 , bdr:NMDDC27A705157F2F7 ;
+        :personStudentOf    bdr:P4605 .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P994> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P994 {
+    bda:LGEF71F6061B7A4DF5
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-07-24T10:36:22.212Z"^^xsd:dateTime ;
+        adm:logMessage      "added associated place G1AG31"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF41D3009B54D5476
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T15:40:56.647Z"^^xsd:dateTime ;
+        adm:logMessage      "created link to Treasury of Lives"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P994  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P994 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "87/P994.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P994 ;
+        adm:logEntry        bda:LGEF71F6061B7A4DF5 , bda:LGF41D3009B54D5476 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA1D0946698316FA0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1AG31 .
+    
+    bdr:EVE5045C37FCAD5479
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM210D307D81A7BCF6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen chos kyi rdo rje/"@bo-x-ewts .
+    
+    bdr:NM27F222D590FAFAAF
+        a                   :PersonTitle ;
+        rdfs:label          "dben sa smyon pa/"@bo-x-ewts .
+    
+    bdr:NMBA2F4A461637A756
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos kyi rdo rje, grub chen/"@bo-x-ewts .
+    
+    bdr:NMF4E12C01B035DABF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1D2EF5B6D73583F5
+        a                   :Note ;
+        :noteText           "One of the three chief disciples of Ba-so Chos-kyi-rgyal-mtshan.\n1521. Grub-chen Chos-rdo-rje transmits the Rje bla ma'i sprul pa'i glegs bam to Blo-bzang-don-grub."@en .
+    
+    bdr:NT33EA739A5A1DA593
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT56AF8DEFB1B51D7F
+        a                   :Note ;
+        :locationStatement  "p. 55" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:P994  a             :Person ;
+        skos:prefLabel      "chos rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1D2EF5B6D73583F5 , bdr:NT33EA739A5A1DA593 , bdr:NT56AF8DEFB1B51D7F ;
+        :personEvent        bdr:EVA1D0946698316FA0 , bdr:EVE5045C37FCAD5479 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM210D307D81A7BCF6 , bdr:NM27F222D590FAFAAF , bdr:NMBA2F4A461637A756 , bdr:NMF4E12C01B035DABF ;
+        :personStudentOf    bdr:P432 ;
+        :personTeacherOf    bdr:P2286 , bdr:P997 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Chokyi-Dorje/12883"^^xsd:anyURI .
+}

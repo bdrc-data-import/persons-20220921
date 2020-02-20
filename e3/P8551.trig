@@ -1,0 +1,74 @@
+@base          <bdg:P8551> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8551 {
+    bda:LG60B2F028A8FBC845
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-01T12:57:43.001Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8551  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8551 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e3/P8551.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8551 ;
+        adm:logEntry        bda:LG60B2F028A8FBC845 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV803A40AAE2056BBA
+        a                   :PersonBirth ;
+        :onYear             "1961"^^xsd:gYear .
+    
+    bdr:EV851662A21331EF1B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:NM210558C1CE6208A0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Khangnang 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM24A4DCF29E55E48B
+        a                   :PersonTitle ;
+        rdfs:label          "sga rje khang nang 03 bskal bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NM4AD52AA483689A2B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khang nang 03 sprul sku bskal bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NMA18EC1BF08E193BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bskal bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NMC3F949AD4C64EF40
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "khang nang 03"@bo-x-ewts .
+    
+    bdr:NTFA66DD10DEDB5535
+        a                   :Note ;
+        :locationStatement  "pp. 303-304" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographical sketch"@en .
+    
+    bdr:P8551  a            :Person ;
+        skos:prefLabel      "bskal bzang rin chen/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8553 ;
+        :isRoot             true ;
+        :note               bdr:NTFA66DD10DEDB5535 ;
+        :personEvent        bdr:EV803A40AAE2056BBA , bdr:EV851662A21331EF1B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM210558C1CE6208A0 , bdr:NM24A4DCF29E55E48B , bdr:NM4AD52AA483689A2B , bdr:NMA18EC1BF08E193BE , bdr:NMC3F949AD4C64EF40 .
+}

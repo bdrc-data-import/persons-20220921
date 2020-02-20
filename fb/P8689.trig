@@ -1,0 +1,71 @@
+@base          <bdg:P8689> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8689 {
+    bda:LG1913A7BF952ECD13
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-24T17:01:12.263Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE9B85261B4B4AEA2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-12T17:51:00.582Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P8689  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8689 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fb/P8689.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8689 ;
+        adm:logEntry        bda:LG1913A7BF952ECD13 , bda:LGE9B85261B4B4AEA2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7C32B9A790436F73
+        a                   :PersonDeath ;
+        :onYear             "1954"^^xsd:gYear .
+    
+    bdr:EVAB637911724FCC3A
+        a                   :PersonBirth ;
+        :onYear             "1881"^^xsd:gYear .
+    
+    bdr:NM170EC1B13EBBD736
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMCF33B0779A0D7CB6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yid lhung 'ja' lus pa bsod nams rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTA1D5DF6546351724
+        a                   :Note ;
+        :locationStatement  "pp. 689-692" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8689  a            :Person ;
+        skos:prefLabel      "bsod nams rnam rgyal/"@bo-x-ewts ;
+        :hasFather          bdr:P3JM67 ;
+        :hasMother          bdr:P3JM68 ;
+        :isRoot             true ;
+        :note               bdr:NTA1D5DF6546351724 ;
+        :personEvent        bdr:EV7C32B9A790436F73 , bdr:EVAB637911724FCC3A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM170EC1B13EBBD736 , bdr:NMCF33B0779A0D7CB6 ;
+        :personStudentOf    bdr:P701 , bdr:P8690 ;
+        :personTeacherOf    bdr:P2JM309 , bdr:P750 .
+}

@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12140> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12140 {
+    bda:LGD1AC64B87CF7E354
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-18T09:01:47.453Z"^^xsd:dateTime ;
+        adm:logMessage      "spelling corrected"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEE016C1500209779
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T14:12:00.185Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12140  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12140 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d3/P8LS12140.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12140 ;
+        adm:logEntry        bda:LGD1AC64B87CF7E354 , bda:LGEE016C1500209779 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV02CA16F586314F5B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVFE8787AE5E05FED5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1827"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM30E1C86350F17555
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6350AEDD4EFACD61
+        a                   :PersonOtherName ;
+        rdfs:label          "ngag dbang 'od zer/"@bo-x-ewts .
+    
+    bdr:NM9F397C492626882D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 04"@bo-x-ewts .
+    
+    bdr:NMABA94418440EAC46
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phyag rdo thang phe kyA ho thog thu ngag dbang blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT958CFBA9C18D096B
+        a                   :Note ;
+        :locationStatement  "p. 351" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12140  a        :Person ;
+        skos:prefLabel      "ngag dbang blo gsal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT958CFBA9C18D096B ;
+        :personEvent        bdr:EV02CA16F586314F5B , bdr:EVFE8787AE5E05FED5 ;
+        :personName         bdr:NM30E1C86350F17555 , bdr:NM6350AEDD4EFACD61 , bdr:NM9F397C492626882D , bdr:NMABA94418440EAC46 .
+}

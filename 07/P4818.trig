@@ -1,0 +1,61 @@
+@base          <bdg:P4818> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4818 {
+    bda:LG050C219B27AE2C37
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T14:31:35.933Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4818  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4818 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "07/P4818.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4818 ;
+        adm:logEntry        bda:LG050C219B27AE2C37 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22F33694BCCC72EF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G126 .
+    
+    bdr:EVC7D5FF9E173631E0
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM03D63DA3FEC53FF4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bde legs/"@bo-x-ewts .
+    
+    bdr:NM8DDD0D532F002D43
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lho pa dge 'dun bde legs/"@bo-x-ewts .
+    
+    bdr:NT62BB02BFD7AE5F93
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4818  a            :Person ;
+        skos:prefLabel      "dge 'dun bde legs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT62BB02BFD7AE5F93 ;
+        :personEvent        bdr:EV22F33694BCCC72EF , bdr:EVC7D5FF9E173631E0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03D63DA3FEC53FF4 , bdr:NM8DDD0D532F002D43 ;
+        :personTeacherOf    bdr:P336 .
+}

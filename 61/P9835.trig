@@ -1,0 +1,81 @@
+@base          <bdg:P9835> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9835 {
+    bda:LG07A9037113955494
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-02T10:50:27.77Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG0BE84CE188C00287
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-07T14:30:32.388Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB51F9CF084CB0087
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-26T00:03:21.48Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth and death date"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P9835  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9835 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "61/P9835.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9835 ;
+        adm:logEntry        bda:LG07A9037113955494 , bda:LG0BE84CE188C00287 , bda:LGB51F9CF084CB0087 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CA97BC99D2A1E95
+        a                   :PersonDeath ;
+        :onYear             "1887"^^xsd:gYear .
+    
+    bdr:EV68F8DB49D061B971
+        a                   :PersonBirth ;
+        :onYear             "1735"^^xsd:gYear .
+    
+    bdr:NM1C607ECB49E78C0E
+        a                   :PersonTitle ;
+        rdfs:label          "g.yag rgyal gter ston bzang po rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC6E5493D81F49A96
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzang po rdo rje/"@bo-x-ewts .
+    
+    bdr:NMEF62D8C0011D6AAD
+        a                   :PersonTitle ;
+        rdfs:label          "gter ston bzang po rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF8C94A8BC670642E
+        a                   :PersonPersonalName ;
+        rdfs:label          "rig 'dzin bzang po rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1F810D8881E3731D
+        a                   :Note ;
+        :locationStatement  "p. 1-12 g.yag rgyal gter ston bzang po rdo rje'i gter  byon srin rgyal bdud 'dul drag po'i sgrub thabs yang zab rdo rje pha lam gyi ngo sprod gsal bshad dang dkar chag" ;
+        :noteSource         bdr:MW1KG4000 ;
+        :noteText           "Nyingma terton; date is according to the book hidden teachings of tibet, an explanation of the terma tradition of tibetan buddhism, written by tulku thondup rinpoche, page 194"@en .
+    
+    bdr:P9835  a            :Person ;
+        skos:prefLabel      "bzang po rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1F810D8881E3731D ;
+        :personEvent        bdr:EV5CA97BC99D2A1E95 , bdr:EV68F8DB49D061B971 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C607ECB49E78C0E , bdr:NMC6E5493D81F49A96 , bdr:NMEF62D8C0011D6AAD , bdr:NMF8C94A8BC670642E ;
+        :personStudentOf    bdr:P3920 , bdr:P923 .
+}

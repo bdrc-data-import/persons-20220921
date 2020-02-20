@@ -1,0 +1,64 @@
+@base          <bdg:P234> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P234 {
+    bda:LG12F1BE151CFE24FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-06-28T17:19:28.472Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P4144"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P234  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P234 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d0/P234.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P234 ;
+        adm:logEntry        bda:LG12F1BE151CFE24FD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P4144 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV426FE94BE862E4A6
+        a                   :PersonDeath ;
+        :onYear             "1944"^^xsd:gYear .
+    
+    bdr:EV6977BD3DF232C916
+        a                   :PersonBirth ;
+        :onYear             "1871"^^xsd:gYear .
+    
+    bdr:NM067C1CD883013119
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngo mtshar gzhan phan phul byung sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME4CE984CDB1C9C6C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a lag sha mkhan sprul 05 ngo mtshar gzhan phan phul byung sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEE7EF6B544F853F9
+        a                   :PersonGrammatical ;
+        rdfs:label          "tshangs sras bzhad pa'i rdo rje mchog"@bo-x-ewts .
+    
+    bdr:NT217DD5B2C8308A30
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P234  a             :Person ;
+        skos:prefLabel      "ngo mtshar gzhan phan phul byung sangs rgyas rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT217DD5B2C8308A30 ;
+        :personEvent        bdr:EV426FE94BE862E4A6 , bdr:EV6977BD3DF232C916 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM067C1CD883013119 , bdr:NME4CE984CDB1C9C6C , bdr:NMEE7EF6B544F853F9 .
+}

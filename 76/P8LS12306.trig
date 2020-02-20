@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12306> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12306 {
+    bda:LGEAD9A6025D30A9E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-06T14:33:46.872Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12306  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12306 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "76/P8LS12306.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12306 ;
+        adm:logEntry        bda:LGEAD9A6025D30A9E9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV445DB9F45D4386A9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:EVA4F3786356E4808C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :onYear             "1759"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM3306E8ACAE93C3A4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 07"@bo-x-ewts .
+    
+    bdr:NM5FB1B8F0986F1702
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang thos 'dul 'dzin ngag dbang mkhas grub/"@bo-x-ewts .
+    
+    bdr:NM980C2D66A7D6CF93
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhas grub/"@bo-x-ewts .
+    
+    bdr:NT3FC5EBA0E219CE41
+        a                   :Note ;
+        :locationStatement  "p. 372-373" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12306  a        :Person ;
+        skos:prefLabel      "ngag dbang mkhas grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3FC5EBA0E219CE41 ;
+        :personEvent        bdr:EV445DB9F45D4386A9 , bdr:EVA4F3786356E4808C ;
+        :personName         bdr:NM3306E8ACAE93C3A4 , bdr:NM5FB1B8F0986F1702 , bdr:NM980C2D66A7D6CF93 .
+}

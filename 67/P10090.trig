@@ -1,0 +1,57 @@
+@base          <bdg:P10090> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10090 {
+    bda:LGFDBF601B9E70BAE1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-07T15:56:22.628Z"^^xsd:dateTime ;
+        adm:logMessage      "added kin relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P10090  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10090 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "67/P10090.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10090 ;
+        adm:logEntry        bda:LGFDBF601B9E70BAE1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM454519FD1C26B0BC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku jo 'bum/"@bo-x-ewts .
+    
+    bdr:NM5DA89FA5A4D0C7C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ma gcig jo 'bum/"@bo-x-ewts .
+    
+    bdr:NTF10FB7B5207C29B7
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 7" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the 'bro transmission of the kalacakra\nthe 5th dalai lama cites, however, other gsan yig:\n\"bu ston rje btsong kha pa ngor chen gong dkar thar rtse ngag chos lo pa rnams ki gsan yig na mi snang bas dpyad\"\nno indication of artistic representation"@en .
+    
+    bdr:P10090  a           :Person ;
+        skos:prefLabel      "ma gcig jo 'bum/"@bo-x-ewts ;
+        :hasBrother         bdr:P2586 ;
+        :hasFather          bdr:P2588 ;
+        :hasGrandfather     bdr:P2589 ;
+        :isRoot             true ;
+        :note               bdr:NTF10FB7B5207C29B7 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM454519FD1C26B0BC , bdr:NM5DA89FA5A4D0C7C7 ;
+        :personStudentOf    bdr:P2587 ;
+        :personTeacherOf    bdr:P2585 , bdr:P2586 .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P3952> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3952 {
+    bda:LG1FD86123BCC82377
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:14.754Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3952  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3952 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1e/P3952.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3952 ;
+        adm:logEntry        bda:LG1FD86123BCC82377 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0CFA42F816ABE1DB
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV21045C825D539DAD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:NM712E9F5E78284691
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis rab brtan/"@bo-x-ewts .
+    
+    bdr:NMD476F57B43226DEF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 08 bkra shis rab brtan/"@bo-x-ewts .
+    
+    bdr:NT11499AC71931D39D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3952  a            :Person ;
+        skos:prefLabel      "bkra shis rab brtan/"@bo-x-ewts ;
+        :hasFather          bdr:P3951 ;
+        :hasSon             bdr:P3953 ;
+        :isRoot             true ;
+        :note               bdr:NT11499AC71931D39D ;
+        :personEvent        bdr:EV0CFA42F816ABE1DB , bdr:EV21045C825D539DAD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM712E9F5E78284691 , bdr:NMD476F57B43226DEF ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Tashi-Rabten/6343"^^xsd:anyURI .
+}

@@ -1,0 +1,88 @@
+@base          <bdg:P843> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P843 {
+    bda:LG97E2DBE9A41E438C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-17T15:40:33.619Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P843  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P843 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ab/P843.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P843 ;
+        adm:logEntry        bda:LG97E2DBE9A41E438C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV317CFF87A512ED9C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:EV35F4FC7570A51A3F
+        a                   :PersonDeath ;
+        :onYear             "1780"^^xsd:gYear .
+    
+    bdr:EVC9BB35E675D74B21
+        a                   :PersonBirth ;
+        :onYear             "1720"^^xsd:gYear .
+    
+    bdr:NM5F72923C816A8BF5
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jam dpal dga' ba'i bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NM6FB4C83504C1B5DC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dechen Chokor Yongdzin 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMAA2DADDCBE5D30C9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal dpa' bo/"@bo-x-ewts .
+    
+    bdr:NMC0017FB779F9DB2A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde chen chos 'khor yongs 'dzin 04 'jam dpal dpa' bo/"@bo-x-ewts .
+    
+    bdr:NMCE2FF01ECCCF139F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bde chen chos 'khor yongs 'dzin 04"@bo-x-ewts .
+    
+    bdr:NMD2439C76BF849BF3
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes snang ba'i gter/"@bo-x-ewts .
+    
+    bdr:NT50751CC24ADF1226
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NTCFE301A4EC647E7E
+        a                   :Note ;
+        :locationStatement  "p. 304" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ ngag dbang kun dga' lhun grub/ 'ching ru gong zhol smon sger 'khrungs/ dgung lo re gsum par gshegs/ [p. 303]\n2) de'i skye ba ngag dbang chos kyi rgyal mtshan/ gzhung rnam rab la 'khrungs/ dgung lo re dgu par gshegs/\n3) de'i skye ba blo bzang dge legs dbang phyug/ rnam rab grong stod du 'khrungs/ dgung lo don gcig pa la gshegs/\n4) de'i skye ba bde chen chos kyi nyi ma/ kong po rgya la seng gdong du 'khrungs/ da lta dgung lo sum cu tham pa (36)/ [1785-"@en .
+    
+    bdr:P843  a             :Person ;
+        skos:prefLabel      "'jam dpal dpa' bo/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5160 ;
+        :isRoot             true ;
+        :note               bdr:NT50751CC24ADF1226 , bdr:NTCFE301A4EC647E7E ;
+        :personEvent        bdr:EV317CFF87A512ED9C , bdr:EV35F4FC7570A51A3F , bdr:EVC9BB35E675D74B21 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5F72923C816A8BF5 , bdr:NM6FB4C83504C1B5DC , bdr:NMAA2DADDCBE5D30C9 , bdr:NMC0017FB779F9DB2A , bdr:NMCE2FF01ECCCF139F , bdr:NMD2439C76BF849BF3 ;
+        :personStudentOf    bdr:P5891 , bdr:P8LS12746 ;
+        :personTeacherOf    bdr:P313 , bdr:P691 , bdr:P846 .
+}

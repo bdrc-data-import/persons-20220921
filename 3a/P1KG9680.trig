@@ -1,0 +1,65 @@
+@base          <bdg:P1KG9680> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG9680 {
+    bda:LG9BF3B67517CA8CD1
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-11T14:41:31.415Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG9680  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG9680 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3a/P1KG9680.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG9680 ;
+        adm:logEntry        bda:LG9BF3B67517CA8CD1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F53CC5F04C85574
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3842 .
+    
+    bdr:EV5101D7E2B7BA33F4
+        a                   :PersonDeath ;
+        :onYear             "2002"^^xsd:gYear .
+    
+    bdr:EVC87183CEB298E4AD
+        a                   :PersonBirth ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:NMA6F55C5092C91A61
+        a                   :PersonPenName ;
+        rdfs:label          "lama, c. r."@en .
+    
+    bdr:NMD0FF26FECD56B52A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'khor gdong gter sprul 03 'chi med rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NMD579F278F041D8CC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chime rigzin"@en .
+    
+    bdr:NMF43B570D731639E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med rig 'dzin/"@bo-x-ewts .
+    
+    bdr:P1KG9680  a         :Person ;
+        skos:prefLabel      "'chi med rig 'dzin/"@bo-x-ewts , "chime rigzin"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV3F53CC5F04C85574 , bdr:EV5101D7E2B7BA33F4 , bdr:EVC87183CEB298E4AD ;
+        :personName         bdr:NMA6F55C5092C91A61 , bdr:NMD0FF26FECD56B52A , bdr:NMD579F278F041D8CC , bdr:NMF43B570D731639E3 .
+}

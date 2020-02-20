@@ -1,0 +1,54 @@
+@base          <bdg:P2821> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2821 {
+    bda:LGA376EDD598A13744
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-30T20:03:03.468Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed entries"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2821  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2821 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2d/P2821.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2821 ;
+        adm:logEntry        bda:LGA376EDD598A13744 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV175A1D4D9F11F1BC
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM87B4E2AC38472308
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NT4344A9A541C4EA64
+        a                   :Note ;
+        :noteText           "master of the shangs pa bka' brgyud pa tradition; relationship with the sa skya teacher rdo ring pa kun spangs chen po kun bzang chos kyi nyi ma?"@en .
+    
+    bdr:P2821  a            :Person ;
+        skos:prefLabel      "chos kyi nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4344A9A541C4EA64 ;
+        :personEvent        bdr:EV175A1D4D9F11F1BC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM87B4E2AC38472308 ;
+        :personStudentOf    bdr:P2820 ;
+        :personTeacherOf    bdr:P2822 .
+}

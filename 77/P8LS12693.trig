@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12693> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12693 {
+    bda:LG22CBF777EFD2C086
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-04T10:39:31.034Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG9DA081EE1A4DA882
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-11T14:42:10.468Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12693  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12693 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "77/P8LS12693.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12693 ;
+        adm:logEntry        bda:LG22CBF777EFD2C086 , bda:LG9DA081EE1A4DA882 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B1E755445E4178D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV6E84EEAC1010CB38
+        a                   :PersonBirth ;
+        :onYear             "1988"^^xsd:gYear .
+    
+    bdr:EVDAE59615C9C685A4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1PD96117 .
+    
+    bdr:NM63730057A76C1C7E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Amdo Zhamar 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF53B305D5F12DBE1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin dge 'dun phul byung rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFD541B7018BFF156
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a mdo zhwa dmar 07"@bo-x-ewts .
+    
+    bdr:NTA18765F19DF1297C
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 627" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "1993 ascended to the seat of d+hi tsha bkra shis chos sdings"@en .
+    
+    bdr:P8LS12693  a        :Person ;
+        skos:prefLabel      "bstan 'dzin dge 'dun phul byung rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12692 ;
+        :isRoot             true ;
+        :note               bdr:NTA18765F19DF1297C ;
+        :personEvent        bdr:EV3B1E755445E4178D , bdr:EV6E84EEAC1010CB38 , bdr:EVDAE59615C9C685A4 ;
+        :personName         bdr:NM63730057A76C1C7E , bdr:NMF53B305D5F12DBE1 , bdr:NMFD541B7018BFF156 ;
+        :personStudentOf    bdr:P4CZ65552 .
+}

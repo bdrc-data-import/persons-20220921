@@ -1,0 +1,67 @@
+@base          <bdg:P2360> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2360 {
+    bda:P2360  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2360 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "71/P2360.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2360 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7EF70EC20B067371
+        a                   :PersonDeath ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:EVD6AD89A4B4A9CA21
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G984 ;
+        :onYear             "1881"^^xsd:gYear .
+    
+    bdr:EVE818D9A42734F311
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G353 .
+    
+    bdr:NM06D801CC8A6B02B8
+        a                   :PersonPersonalName ;
+        rdfs:label          "a lags gzan dkar 2 pad+ma dngos grub rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NM604B250589263473
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma dngos grub rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NM6EE8F61DAC6F920F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a lags gzan dkar 2"@bo-x-ewts .
+    
+    bdr:NT00292BF50C4A48B0
+        a                   :Note ;
+        :locationStatement  "p. 275" ;
+        :noteSource         bdr:MW19820 .
+    
+    bdr:NT20140D8D7F75211D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Klong-chen-snying-thig revelations"@en .
+    
+    bdr:P2360  a            :Person ;
+        skos:prefLabel      "pad+ma dngos grub rol pa'i rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00292BF50C4A48B0 , bdr:NT20140D8D7F75211D ;
+        :personEvent        bdr:EV7EF70EC20B067371 , bdr:EVD6AD89A4B4A9CA21 , bdr:EVE818D9A42734F311 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06D801CC8A6B02B8 , bdr:NM604B250589263473 , bdr:NM6EE8F61DAC6F920F ;
+        :personStudentOf    bdr:P2361 , bdr:P252 .
+}

@@ -1,0 +1,67 @@
+@base          <bdg:P1AT285> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AT285 {
+    bda:LG4F7448CA78972A9B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:02:14.578Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG7FB05F0152186C72
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-19T12:58:50.851Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en .
+    
+    bda:LGB76B7E4F4DF9412E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T17:04:01.333Z"^^xsd:dateTime ;
+        adm:logMessage      "added GIS and name"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1AT285  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AT285 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4e/P1AT285.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AT285 ;
+        adm:logEntry        bda:LG4F7448CA78972A9B , bda:LG7FB05F0152186C72 , bda:LGB76B7E4F4DF9412E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA55B5932B5592824
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2884 .
+    
+    bdr:EVE727CDDB57399AF4
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM8AF0F02D4AF1D283
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi 'jigs rdo rje/"@bo-x-ewts .
+    
+    bdr:NT944E46C81C47857C
+        a                   :Note ;
+        :noteText           "scribe of some of Kunzang Drodul's texts"@en .
+    
+    bdr:P1AT285  a          :Person ;
+        skos:prefLabel      "mi 'jigs rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT944E46C81C47857C ;
+        :personEvent        bdr:EVA55B5932B5592824 , bdr:EVE727CDDB57399AF4 ;
+        :personName         bdr:NM8AF0F02D4AF1D283 ;
+        :personStudentOf    bdr:P6897 .
+}

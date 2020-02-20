@@ -1,0 +1,78 @@
+@base          <bdg:P3CN364> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3CN364 {
+    bda:LG124EEC99B3955331
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-05T11:22:40.969Z"^^xsd:dateTime ;
+        adm:logMessage      "tresaury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG530E43D998387209
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-19T12:47:21.722Z"^^xsd:dateTime ;
+        adm:logMessage      "created record & added note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB6226F3FCC771563
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-09T10:03:43.021Z"^^xsd:dateTime ;
+        adm:logMessage      "Added death date, added kinship relation"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P3CN364  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3CN364 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7d/P3CN364.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3CN364 ;
+        adm:logEntry        bda:LG124EEC99B3955331 , bda:LG530E43D998387209 , bda:LGB6226F3FCC771563 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C8F675DF78CDA32
+        a                   :PersonMarriage ;
+        :eventWhere         bdr:G3CN410 ;
+        :onYear             "0740"^^xsd:gYear .
+    
+    bdr:EV75EF8CAF16532C91
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:EVBBE97A32C8175706
+        a                   :PersonDeath ;
+        :onYear             "0712"^^xsd:gYear .
+    
+    bdr:NM44A7394165A57D61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "je ba khri ma lod/"@bo-x-ewts .
+    
+    bdr:NTF4AAEAE89285524D
+        a                   :Note ;
+        :locationStatement  "p. 381" ;
+        :noteSource         bdr:MW1KG6149 ;
+        :noteText           "\"འབྲུག་གི་ལོ་ ༧༤༠ ལ། ་་་ ཇེ་བ་ཁྲི་མ་ལོད་བྲུ་ཞ་རྗེ་ལ་བག་མར་བཏང་། \"ཞེས་པ་ལས། འ་ཞ་རྗེ་དང་འདྲ་བར་བྲུ་ཞ་རྗེ་ཡང་བོད་ཀྱི་བཙན་པོ་དང་གཉེན་འབྲེལ་བྱས་པ་མངོན་ཏེ། ཇེ་བ་ཁྲི་མ་ལོད་འདི་ནི་བོད་བཙན་པོའི་ལོ་རྒྱུས་ཐོག་དམིགས་བསལ་གྱི་གནས་བབས་བཟུང་བའི་བོད་ཀྱི་བུད་མེད་ཞིག་ཡིན་པ་གོར་མ་ཆགས།"@bo .
+    
+    bdr:P3CN364  a          :Person ;
+        skos:prefLabel      "je ba khri ma lod/"@bo-x-ewts ;
+        :hasGrandson        bdr:P2JM168 ;
+        :hasHusband         bdr:P1AG91 ;
+        :isRoot             true ;
+        :note               bdr:NTF4AAEAE89285524D ;
+        :personEvent        bdr:EV0C8F675DF78CDA32 , bdr:EV75EF8CAF16532C91 , bdr:EVBBE97A32C8175706 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM44A7394165A57D61 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Trimalo/13509"^^xsd:anyURI .
+}

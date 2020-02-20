@@ -1,0 +1,86 @@
+@base          <bdg:P1AG5> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG5 {
+    bda:LG6A39313B13298BE5
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-29T14:48:26.08Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB45D71BFF60073BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-28T15:59:48.201Z"^^xsd:dateTime ;
+        adm:logMessage      "added Treasury of Lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG5  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG5 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6c/P1AG5.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG5 ;
+        adm:logEntry        bda:LG6A39313B13298BE5 , bda:LGB45D71BFF60073BE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV02BF4FC2C2B76902
+        a                   :PersonDeath ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EV9F659234643571AC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EVF266B30FCD7985CD
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM0056DEE430179C5B
+        a                   :PersonTitle ;
+        rdfs:label          "ldom bu rtsa bral ba/"@bo-x-ewts .
+    
+    bdr:NM64104863EAD6A0C2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje rtsa bral ba/"@bo-x-ewts .
+    
+    bdr:NMA1DAE7C6351343AA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rtsa bral ba/"@bo-x-ewts .
+    
+    bdr:NMB6F27B70F541DC3A
+        a                   :PersonOtherName ;
+        rdfs:label          "Choje Tsadrelwa"@en .
+    
+    bdr:NMD165316410306F80
+        a                   :PersonOtherName ;
+        rdfs:label          "Dombu Tsadrelwa"@en .
+    
+    bdr:NT60E0FDE0FF0EE72C
+        a                   :Note ;
+        :locationStatement  "p340" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P1AG5  a            :Person ;
+        skos:prefLabel      "rtsa bral ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60E0FDE0FF0EE72C ;
+        :personEvent        bdr:EV02BF4FC2C2B76902 , bdr:EV9F659234643571AC , bdr:EVF266B30FCD7985CD ;
+        :personName         bdr:NM0056DEE430179C5B , bdr:NM64104863EAD6A0C2 , bdr:NMA1DAE7C6351343AA , bdr:NMB6F27B70F541DC3A , bdr:NMD165316410306F80 ;
+        :personStudentOf    bdr:P16 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Choje-Tsadrelwa/13432"^^xsd:anyURI .
+}

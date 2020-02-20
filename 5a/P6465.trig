@@ -1,0 +1,102 @@
+@base          <bdg:P6465> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6465 {
+    bda:LG2A8CB42512137F52
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-11T11:04:53.666Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE86F36D8E9CAA1B8
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-05T13:03:59.724Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6465  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6465 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "5a/P6465.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6465 ;
+        adm:logEntry        bda:LG2A8CB42512137F52 , bda:LGE86F36D8E9CAA1B8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV330FA5C089A9988E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EV3588600CEB8A7EE9
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1874"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV53EE313A71B2CF4D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1869"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV54A850D9D6A427DC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G236 .
+    
+    bdr:EVB9E82B20A5B73367
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G236 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE1483FDCC6628C52
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G92 .
+    
+    bdr:EVE6225E2AF36BD317
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM5F675E34938D5D06
+        a                   :PersonTitle ;
+        rdfs:label          "dga' ldan khri pa 79"@bo-x-ewts .
+    
+    bdr:NM621FA9747B60895D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM691BB3F662307EB8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snang bzang ba blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMF193075F018C3BF8
+        a                   :PersonTitle ;
+        rdfs:label          "khri 79 blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NTC06263640531BEE9
+        a                   :Note ;
+        :locationStatement  "p. 97" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "cites krung go'i bod kyi shes rig, 1990-2, p. 83"@en .
+    
+    bdr:P6465  a            :Person ;
+        skos:prefLabel      "blo bzang sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC06263640531BEE9 ;
+        :personEvent        bdr:EV330FA5C089A9988E , bdr:EV3588600CEB8A7EE9 , bdr:EV53EE313A71B2CF4D , bdr:EV54A850D9D6A427DC , bdr:EVB9E82B20A5B73367 , bdr:EVE1483FDCC6628C52 , bdr:EVE6225E2AF36BD317 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5F675E34938D5D06 , bdr:NM621FA9747B60895D , bdr:NM691BB3F662307EB8 , bdr:NMF193075F018C3BF8 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Trichen-79-Lobzang-Jinpa/9057"^^xsd:anyURI .
+}

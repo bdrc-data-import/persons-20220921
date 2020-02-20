@@ -1,0 +1,109 @@
+@base          <bdg:P3750> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3750 {
+    bda:LG0C0487453F747AAB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T15:42:18.072Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG81BD6A7E087A6693
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-28T10:56:56.093Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student also note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG884943568D12473B
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T04:30:38.546Z"^^xsd:dateTime ;
+        adm:logMessage      "review"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P3750  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3750 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0b/P3750.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3750 ;
+        adm:logEntry        bda:LG0C0487453F747AAB , bda:LG81BD6A7E087A6693 , bda:LG884943568D12473B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10CFB91F182CD7CC
+        a                   :PersonBirth ;
+        :onYear             "1399"^^xsd:gYear .
+    
+    bdr:EV48D29CE35E60CC23
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1466"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4C1FDF606C7D2406
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1440"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVBED46C23AB21CDDD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVCA643252BD75DACB
+        a                   :PersonDeath ;
+        :onYear             "1473"^^xsd:gYear .
+    
+    bdr:NM45D46B87E2F72169
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'khrul zhig tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC70E4FC48D94AAFA
+        a                   :PersonTitle ;
+        rdfs:label          "zhwa lu mkhan chen 04 'khrul zhig tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCAA99E93968F5063
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD97FF9A30D57240E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 04"@bo-x-ewts .
+    
+    bdr:NT81F9D59BFC5B8FBB
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 13" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the transmission of the shong translation of the kalacakratantra"@en .
+    
+    bdr:NTB7265404F6E1CB36
+        a                   :Note ;
+        :locationStatement  "p. 139, 382" ;
+        :noteSource         bdr:MW19832 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTEFEBAFE90AC8E82F
+        a                   :Note ;
+        :noteText           "important teacher in the transmission of the 'od zer dri med lha drug, 4th mandala of the rgyud sde kun btus; he received the teachings and transmitted them through the zhwa lu tradition"@en .
+    
+    bdr:P3750  a            :Person ;
+        skos:prefLabel      "tshul khrims rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT81F9D59BFC5B8FBB , bdr:NTB7265404F6E1CB36 , bdr:NTEFEBAFE90AC8E82F ;
+        :personEvent        bdr:EV10CFB91F182CD7CC , bdr:EV48D29CE35E60CC23 , bdr:EV4C1FDF606C7D2406 , bdr:EVBED46C23AB21CDDD , bdr:EVCA643252BD75DACB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45D46B87E2F72169 , bdr:NMC70E4FC48D94AAFA , bdr:NMCAA99E93968F5063 , bdr:NMD97FF9A30D57240E ;
+        :personStudentOf    bdr:P10095 , bdr:P2806 , bdr:P2915 , bdr:P3100 , bdr:P5952 , bdr:P7169 ;
+        :personTeacherOf    bdr:P3102 , bdr:P3751 , bdr:P3752 .
+}

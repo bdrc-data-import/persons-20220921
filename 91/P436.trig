@@ -1,0 +1,57 @@
+@base          <bdg:P436> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P436 {
+    bda:LG03C513DB6945DF57
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:01:21.28Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P436  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P436 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "91/P436.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P436 ;
+        adm:logEntry        bda:LG03C513DB6945DF57 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8BBE5B28821B972E
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM33391EAA58B2227E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NM67FEA347C4E84C41
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brang ti chos rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NT37B3E6560DA7FA73
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P436  a             :Person ;
+        skos:prefLabel      "chos rgyal bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT37B3E6560DA7FA73 ;
+        :personEvent        bdr:EV8BBE5B28821B972E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM33391EAA58B2227E , bdr:NM67FEA347C4E84C41 ;
+        :personTeacherOf    bdr:P435 .
+}

@@ -1,0 +1,81 @@
+@base          <bdg:P4534> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4534 {
+    bda:LG3C423E39596D532C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-12T14:03:31.355Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4534  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4534 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "27/P4534.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4534 ;
+        adm:logEntry        bda:LG3C423E39596D532C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3124848C2A411990
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1872"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVDD948B90505C8241
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVEAFE6F82266BC780
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM2F4F0CED5669744A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshe ldan dge bshes dam chos yar 'phel/"@bo-x-ewts .
+    
+    bdr:NM6D8C45159D32853B
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum sman pa khri 47 dam chos yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMA0D4266BB4425F7E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 47"@bo-x-ewts .
+    
+    bdr:NME16FE1A16CDCA564
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dam chos yar 'phel/"@bo-x-ewts .
+    
+    bdr:NT40B3F822423D1050
+        a                   :Note ;
+        :locationStatement  "p. 330" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:NT78E760172FE843A4
+        a                   :Note ;
+        :locationStatement  "p. 1387" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "1872. Ascended to the khri of the Sku-'bum Sman-pa Grwa-tshang"@en .
+    
+    bdr:P4534  a            :Person ;
+        skos:prefLabel      "dam chos yar 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT40B3F822423D1050 , bdr:NT78E760172FE843A4 ;
+        :personEvent        bdr:EV3124848C2A411990 , bdr:EVDD948B90505C8241 , bdr:EVEAFE6F82266BC780 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F4F0CED5669744A , bdr:NM6D8C45159D32853B , bdr:NMA0D4266BB4425F7E , bdr:NME16FE1A16CDCA564 .
+}

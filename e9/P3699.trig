@@ -1,0 +1,75 @@
+@base          <bdg:P3699> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3699 {
+    bda:LGA2ADFF6CF423B8C4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T13:43:17.989Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3699  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3699 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e9/P3699.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3699 ;
+        adm:logEntry        bda:LGA2ADFF6CF423B8C4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV148CD3374DD6A1A4
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1234 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVC3BC05786F07D6B0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G409 .
+    
+    bdr:NM0C178B1425F1F403
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma byang chub bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM5453F5881CA32FFA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gangs dkar bla ma 06 karma byang chub bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMD2B073F121295E8B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gangkar Lama 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME02E80B024059BFE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gangs dkar bla ma 06"@bo-x-ewts .
+    
+    bdr:NT8EA7AE556DB7CD12
+        a                   :Note ;
+        :locationStatement  "p. 19" ;
+        :noteSource         bdr:MW19829 .
+    
+    bdr:NT9432FB753DEF6C2E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:P3699  a            :Person ;
+        skos:prefLabel      "karma byang chub bstan 'dzin/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3698 ;
+        :isRoot             true ;
+        :note               bdr:NT8EA7AE556DB7CD12 , bdr:NT9432FB753DEF6C2E ;
+        :personEvent        bdr:EV148CD3374DD6A1A4 , bdr:EVC3BC05786F07D6B0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C178B1425F1F403 , bdr:NM5453F5881CA32FFA , bdr:NMD2B073F121295E8B , bdr:NME02E80B024059BFE .
+}

@@ -1,0 +1,72 @@
+@base          <bdg:P10550> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10550 {
+    bda:LG7B95F830044E5F0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-14T11:04:18.336Z"^^xsd:dateTime ;
+        adm:logMessage      "added la phyi ba"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGD747B25256A2B175
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-08T16:43:44.85Z"^^xsd:dateTime ;
+        adm:logMessage      "kinship and teacher relation"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P10550  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10550 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f0/P10550.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10550 ;
+        adm:logEntry        bda:LG7B95F830044E5F0A , bda:LGD747B25256A2B175 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV981306EA4FF229BD
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM131C4940B1045642
+        a                   :PersonTitle ;
+        rdfs:label          "la phyi pa mdog ston nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCA031339776D703A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdog ston nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMCA952A25E7202933
+        a                   :PersonTitle ;
+        rdfs:label          "la phyi ba mdog ston nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMEB6B3BD0E58E0BE2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT67CF8862705930CE
+        a                   :Note ;
+        :noteText           "master in the transmission lineage of the ras chung snyan brgyud\nstyled here mtshan ldan la phyi pa mdog ston nam mkha' rgyal mtshan"@en .
+    
+    bdr:P10550  a           :Person ;
+        skos:prefLabel      "nam mkha' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT67CF8862705930CE ;
+        :personEvent        bdr:EV981306EA4FF229BD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM131C4940B1045642 , bdr:NMCA031339776D703A , bdr:NMCA952A25E7202933 , bdr:NMEB6B3BD0E58E0BE2 ;
+        :personStudentOf    bdr:P10549 ;
+        :personTeacherOf    bdr:P2363 , bdr:P503 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P8888> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8888 {
+    bda:P8888  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8888 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5d/P8888.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8888 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06210365DE7FA3A0
+        a                   :PersonDeath ;
+        :onYear             "1620"^^xsd:gYear .
+    
+    bdr:NM7277893378E364EF
+        a                   :PersonPersonalName ;
+        rdfs:label          "mkhas btsun rin chen bzang po/"@bo-x-ewts .
+    
+    bdr:NMEE6FAF9D5A8EBFB8
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen bzang po/"@bo-x-ewts .
+    
+    bdr:NTA0229EA22FD7BCC7
+        a                   :Note ;
+        :locationStatement  "p. 2331" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1623. mkhas btsun rin chen bzang po gshegs"@en .
+    
+    bdr:P8888  a            :Person ;
+        skos:prefLabel      "rin chen bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA0229EA22FD7BCC7 ;
+        :personEvent        bdr:EV06210365DE7FA3A0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7277893378E364EF , bdr:NMEE6FAF9D5A8EBFB8 .
+}

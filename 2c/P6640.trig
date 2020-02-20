@@ -1,0 +1,46 @@
+@base          <bdg:P6640> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6640 {
+    bda:P6640  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6640 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "2c/P6640.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6640 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA854E23D8D7394B7
+        a                   :PersonBirth ;
+        :onYear             "1972"^^xsd:gYear .
+    
+    bdr:NMCB1581C7E90ABBA9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen rdo rje/"@bo-x-ewts .
+    
+    bdr:NTC42B4AEF90F8C77C
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P6640  a            :Person ;
+        skos:prefLabel      "rin chen rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC42B4AEF90F8C77C ;
+        :personEvent        bdr:EVA854E23D8D7394B7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCB1581C7E90ABBA9 .
+}

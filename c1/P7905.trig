@@ -1,0 +1,56 @@
+@base          <bdg:P7905> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7905 {
+    bda:P7905  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7905 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c1/P7905.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7905 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB90A428FEBAD6CC5
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM5F20CC474AB509A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMA0C0D921FE980B52
+        a                   :PersonTitle ;
+        rdfs:label          "bya btang rig 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAF2CDBA8850D6B84
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma mnga' bdag pa rig 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC0E62CDDDFDF6295
+        a                   :Note ;
+        :locationStatement  "introd." ;
+        :noteSource         bdr:MW24575 ;
+        :noteText           "teacher of rig 'dzin dpal ldan bkra shis obviously of the mnga' bdag pa lineage"@en .
+    
+    bdr:P7905  a            :Person ;
+        skos:prefLabel      "rig 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC0E62CDDDFDF6295 ;
+        :personEvent        bdr:EVB90A428FEBAD6CC5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5F20CC474AB509A4 , bdr:NMA0C0D921FE980B52 , bdr:NMAF2CDBA8850D6B84 ;
+        :personTeacherOf    bdr:P665 .
+}

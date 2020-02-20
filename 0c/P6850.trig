@@ -1,0 +1,60 @@
+@base          <bdg:P6850> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6850 {
+    bda:LGF78E5827F317DF0B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T16:44:04.901Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note C#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6850  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6850 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "0c/P6850.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6850 ;
+        adm:logEntry        bda:LGF78E5827F317DF0B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D8B176A025DCBD1
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1282 ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EV90547D8AB2E20242
+        a                   :PersonDeath ;
+        :onYear             "1932"^^xsd:gYear .
+    
+    bdr:NM458636AB39384D39
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jam dbyangs tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC20B60777CD10CD1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT6A7607FCEB8B5AC8
+        a                   :Note ;
+        :noteText           "see C2CN11021"@en .
+    
+    bdr:P6850  a            :Person ;
+        skos:prefLabel      "tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6A7607FCEB8B5AC8 ;
+        :personEvent        bdr:EV5D8B176A025DCBD1 , bdr:EV90547D8AB2E20242 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM458636AB39384D39 , bdr:NMC20B60777CD10CD1 .
+}

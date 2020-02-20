@@ -1,0 +1,66 @@
+@base          <bdg:P3132> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3132 {
+    bda:LG172B509F508964B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T09:11:56.143Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3132  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3132 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0b/P3132.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3132 ;
+        adm:logEntry        bda:LG172B509F508964B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18BC02446DC09890
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G233 .
+    
+    bdr:EV567FD51F341C7A9F
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM2E3296EE41CA9FCC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bco brgyad khri chen 07 mkhyen rab bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NM2E78CDC10D49DA64
+        a                   :PersonPersonalName ;
+        rdfs:label          "bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NM482A1631D861F60E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhyen rab bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NTD321B13561C21538
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P3132  a            :Person ;
+        skos:prefLabel      "mkhyen rab bstan 'dzin bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD321B13561C21538 ;
+        :personEvent        bdr:EV18BC02446DC09890 , bdr:EV567FD51F341C7A9F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2E3296EE41CA9FCC , bdr:NM2E78CDC10D49DA64 , bdr:NM482A1631D861F60E ;
+        :personStudentOf    bdr:P3131 , bdr:P5719 ;
+        :personTeacherOf    bdr:P3133 , bdr:P3511 , bdr:P7088 .
+}

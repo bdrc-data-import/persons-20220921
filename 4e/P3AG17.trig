@@ -1,0 +1,75 @@
+@base          <bdg:P3AG17> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG17 {
+    bda:LG266C8CEEE8F78E51
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-22T16:16:13.144Z"^^xsd:dateTime ;
+        adm:logMessage      "event info"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGCD11AB2D2C3FFFD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-18T14:51:37.772Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGF4773E98F2E99EF6
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T18:59:12.802Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P3AG17  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG17 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4e/P3AG17.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG17 ;
+        adm:logEntry        bda:LG266C8CEEE8F78E51 , bda:LGCD11AB2D2C3FFFD4 , bda:LGF4773E98F2E99EF6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1FBB93B2A4FCEDE4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G17 ;
+        :onYear             "1439"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV822025632B72F6FF
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM0167BE9BCBCAA495
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grub mchog chub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM5D74D7C80A3473AA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kaH thog pa byang chub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8EB355485A3F2684
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rje byang chub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P3AG17  a           :Person ;
+        skos:prefLabel      "kaH thog pa byang chub rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1FBB93B2A4FCEDE4 , bdr:EV822025632B72F6FF ;
+        :personName         bdr:NM0167BE9BCBCAA495 , bdr:NM5D74D7C80A3473AA , bdr:NM8EB355485A3F2684 ;
+        :personStudentOf    bdr:P7892 ;
+        :personTeacherOf    bdr:P2335 , bdr:P2CN11089 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Katokpa-Jangchub-Gyeltsen/13134"^^xsd:anyURI .
+}

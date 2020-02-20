@@ -1,0 +1,90 @@
+@base          <bdg:P392> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P392 {
+    bda:LG314764E17128D93B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T16:39:20.165Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P392  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P392 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "4e/P392.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P392 ;
+        adm:logEntry        bda:LG314764E17128D93B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58E1E1278EBA1584
+        a                   :PersonBirth ;
+        :onYear             "1814"^^xsd:gYear .
+    
+    bdr:EVA47421E738236C84
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4646 .
+    
+    bdr:EVF2EA7AF197EDC630
+        a                   :PersonDeath ;
+        :onYear             "1891"^^xsd:gYear .
+    
+    bdr:NM27CA4F0FA2AEB4B3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gungri Khandro 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM38169EF4567C6794
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gung ri mkha' 'gro 05"@bo-x-ewts .
+    
+    bdr:NM5AB079E14CD92F10
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gung ri mkha' 'gro 05 rig 'dzin dpal mo/"@bo-x-ewts .
+    
+    bdr:NM5DF8F362B11281F9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin dpal mo/"@bo-x-ewts .
+    
+    bdr:NM61FFD8C87A1174F6
+        a                   :PersonTitle ;
+        rdfs:label          "gung ru mkha' 'gro dkon mchog rig 'dzin dpal mo/"@bo-x-ewts .
+    
+    bdr:NM8F0E89F05E69DF96
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog rig 'dzin dpal mo/"@bo-x-ewts .
+    
+    bdr:NT5238D5077C88044C
+        a                   :Note ;
+        :locationStatement  "pp. 8-10" ;
+        :noteSource         bdr:MW29131 ;
+        :noteText           "biography\nwrote a number of works"@en .
+    
+    bdr:NT5BF1C797B4D356D9
+        a                   :Note ;
+        :locationStatement  "p. 596" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "dates"@en .
+    
+    bdr:P392  a             :Person ;
+        skos:prefLabel      "rig 'dzin dpal mo/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9544 ;
+        :isRoot             true ;
+        :note               bdr:NT5238D5077C88044C , bdr:NT5BF1C797B4D356D9 ;
+        :personEvent        bdr:EV58E1E1278EBA1584 , bdr:EVA47421E738236C84 , bdr:EVF2EA7AF197EDC630 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM27CA4F0FA2AEB4B3 , bdr:NM38169EF4567C6794 , bdr:NM5AB079E14CD92F10 , bdr:NM5DF8F362B11281F9 , bdr:NM61FFD8C87A1174F6 , bdr:NM8F0E89F05E69DF96 ;
+        :personStudentOf    bdr:P124 , bdr:P1470 , bdr:P393 , bdr:P6537 ;
+        :personTeacherOf    bdr:P6537 .
+}

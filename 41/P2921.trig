@@ -1,0 +1,65 @@
+@base          <bdg:P2921> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2921 {
+    bda:LG181F04CEBC279171
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-18T10:16:10.335Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG8FD0F37826273D70
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T09:44:07.568Z"^^xsd:dateTime ;
+        adm:logMessage      "added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P2921  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2921 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "41/P2921.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2921 ;
+        adm:logEntry        bda:LG181F04CEBC279171 , bda:LG8FD0F37826273D70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV943882EC53EAA3B2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1179 ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM1823F89C29F5288D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo chen nam mkha' bzang po/"@bo-x-ewts .
+    
+    bdr:NM2AEA2D3A4FD71D58
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' bzang po/"@bo-x-ewts .
+    
+    bdr:NT858FCF6338B1DFE4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:P2921  a            :Person ;
+        skos:prefLabel      "nam mkha' bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT858FCF6338B1DFE4 ;
+        :personEvent        bdr:EV943882EC53EAA3B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1823F89C29F5288D , bdr:NM2AEA2D3A4FD71D58 ;
+        :personStudentOf    bdr:P2085 , bdr:P2388 , bdr:P4CZ16866 ;
+        :personTeacherOf    bdr:P1560 , bdr:P2922 , bdr:P8425 .
+}

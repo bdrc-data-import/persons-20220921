@@ -1,0 +1,89 @@
+@base          <bdg:P1288> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1288 {
+    bda:LG85B253690F939819
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T12:14:41.276Z"^^xsd:dateTime ;
+        adm:logMessage      "yig nor bcos"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGB58134A3DDCE88C9
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-08T09:33:18.248Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD35BF6C2FA066EC0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-07T16:41:09.12Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1288  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1288 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "bb/P1288.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1288 ;
+        adm:logEntry        bda:LG85B253690F939819 , bda:LGB58134A3DDCE88C9 , bda:LGD35BF6C2FA066EC0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58238730D378C51D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4853 .
+    
+    bdr:EVB97DF2EAA8174E66
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G917 ;
+        :onYear             "1719"^^xsd:gYear .
+    
+    bdr:EVC90A40F3E6EFCA2D
+        a                   :PersonDeath ;
+        :onYear             "1788"^^xsd:gYear .
+    
+    bdr:NM31433CD5609ED786
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dkon mchog nyi ma/"@bo-x-ewts .
+    
+    bdr:NM909F5000AD74AD6A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dka' bcu 03 'jam dbyangs dkon mchog nyi ma/"@bo-x-ewts .
+    
+    bdr:NMDA7F08E96EF44196
+        a                   :PersonPersonalName ;
+        rdfs:label          "mkhan po btsan po ma/"@bo-x-ewts .
+    
+    bdr:NT018CF9C95F753AEE
+        a                   :Note ;
+        :noteText           "Recognized as the rebirth of Blo-bzang-tshangs-dbyangs-phyogs-las-rnam-rgyal and enthroned at Bde-thang.\nMing mdzod gives his teacher as Dkon-mchog-'jigs-med-dbang-po.\nGoes to Dbus and enters 'Bras-spungs Sgo-mang.\nVisits Mongolia on the way back home to Mdo-smad.\n1760. Brings the Jo-sku to Bde-thang.\n1761. Restores the 'Du-khang, etc.\nInstitutes the 'cham chen.\nTravels again to Mongolia and became the dbu-bla of Seng-wang and Dar-han Wang Ho-shod."@en .
+    
+    bdr:NT346523C424ED261E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT5D7A1204CAC7A097
+        a                   :Note ;
+        :locationStatement  "p. 92" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1288  a            :Person ;
+        skos:prefLabel      "'jam dbyangs dkon mchog nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT018CF9C95F753AEE , bdr:NT346523C424ED261E , bdr:NT5D7A1204CAC7A097 ;
+        :personEvent        bdr:EV58238730D378C51D , bdr:EVB97DF2EAA8174E66 , bdr:EVC90A40F3E6EFCA2D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM31433CD5609ED786 , bdr:NM909F5000AD74AD6A , bdr:NMDA7F08E96EF44196 .
+}

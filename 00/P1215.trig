@@ -1,0 +1,74 @@
+@base          <bdg:P1215> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1215 {
+    bda:LGCF9586E9E9FEB2AD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:07:14.843Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1215  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1215 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "00/P1215.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1215 ;
+        adm:logEntry        bda:LGCF9586E9E9FEB2AD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV375C16C3E0505AE4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G265 .
+    
+    bdr:EV54D494B738B43591
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G899 ;
+        :onYear             "1495"^^xsd:gYear .
+    
+    bdr:EVE75BE0B18CD72ED0
+        a                   :PersonDeath ;
+        :onYear             "1564"^^xsd:gYear .
+    
+    bdr:NM82AFF16CE41D7845
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzang po bkra shis/"@bo-x-ewts .
+    
+    bdr:NMBA49347A30E8CF56
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN grub bzang po bkra shis/"@bo-x-ewts .
+    
+    bdr:NT4E795C0B442B6300
+        a                   :Note ;
+        :noteText           "1537. Comes to the gdan sa of Mnyan-yod Bya-gshongs and serves 7 years\n1542. Becomes dbu-mdzad of Ngam-ring and looks after the bshad-grwa of Ya-ga Chos-sdings\n1547. Comes to khri of Ngam-ring and serves 18 years"@en .
+    
+    bdr:NT7615A55FEAEE9C37
+        a                   :Note ;
+        :locationStatement  "p. 965" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT842281784F81D0E2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1215  a            :Person ;
+        skos:prefLabel      "bzang po bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4E795C0B442B6300 , bdr:NT7615A55FEAEE9C37 , bdr:NT842281784F81D0E2 ;
+        :personEvent        bdr:EV375C16C3E0505AE4 , bdr:EV54D494B738B43591 , bdr:EVE75BE0B18CD72ED0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM82AFF16CE41D7845 , bdr:NMBA49347A30E8CF56 ;
+        :personStudentOf    bdr:P484 .
+}

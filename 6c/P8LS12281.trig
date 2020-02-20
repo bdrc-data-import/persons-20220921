@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12281> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12281 {
+    bda:LG7A37216E0BA79195
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-30T15:27:39.968Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12281  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12281 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6c/P8LS12281.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12281 ;
+        adm:logEntry        bda:LG7A37216E0BA79195 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3E8AFE22158644B0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVE95855427A456B94
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM109474A96E34E79B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhyen rab bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM592E0BBF42BE249A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong bo khri rgan mkhyen rab bstan 'dzin dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM9280E0C3EC3ECF52
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 46"@bo-x-ewts .
+    
+    bdr:NTAA664202F859D77F
+        a                   :Note ;
+        :locationStatement  "p. 260" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12281  a        :Person ;
+        skos:prefLabel      "mkhyen rab bstan 'dzin dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAA664202F859D77F ;
+        :personEvent        bdr:EV3E8AFE22158644B0 , bdr:EVE95855427A456B94 ;
+        :personName         bdr:NM109474A96E34E79B , bdr:NM592E0BBF42BE249A , bdr:NM9280E0C3EC3ECF52 .
+}

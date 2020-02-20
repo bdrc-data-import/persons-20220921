@@ -1,0 +1,82 @@
+@base          <bdg:P4392> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4392 {
+    bda:LG8D075616616CC966
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T11:16:18.408Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4392  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4392 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f1/P4392.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4392 ;
+        adm:logEntry        bda:LG8D075616616CC966 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6678FE0DBE8795D1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1888"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6E9B88D90C6B639F
+        a                   :PersonBirth ;
+        :onYear             "1867"^^xsd:gYear .
+    
+    bdr:EV859B5805433ED219
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM151B3D108DAF148F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5828751B4B9DD58A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 67"@bo-x-ewts .
+    
+    bdr:NM73C6E238DA4AC307
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 67 blo bzang sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB0F79C6C0FEC0576
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zi na blo bzang sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT14E2C114FE497714
+        a                   :Note ;
+        :locationStatement  "p. 1521" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT8A847E34EDCB017F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTB391FC0830FB4728
+        a                   :Note ;
+        :noteText           "1888. Comes to the throne of Sku-'bum Rgyud-pa Grwa-tshang"@en .
+    
+    bdr:P4392  a            :Person ;
+        skos:prefLabel      "blo bzang sangs rgyas rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT14E2C114FE497714 , bdr:NT8A847E34EDCB017F , bdr:NTB391FC0830FB4728 ;
+        :personEvent        bdr:EV6678FE0DBE8795D1 , bdr:EV6E9B88D90C6B639F , bdr:EV859B5805433ED219 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM151B3D108DAF148F , bdr:NM5828751B4B9DD58A , bdr:NM73C6E238DA4AC307 , bdr:NMB0F79C6C0FEC0576 .
+}

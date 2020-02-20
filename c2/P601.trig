@@ -1,0 +1,90 @@
+@base          <bdg:P601> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P601 {
+    bda:LG88502D7DE0411333
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T10:04:03.16Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P601  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P601 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "c2/P601.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P601 ;
+        adm:logEntry        bda:LG88502D7DE0411333 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12CA2C7AD67D2586
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G780 ;
+        :onYear             "1846"^^xsd:gYear .
+    
+    bdr:EV682472D83AEE1FA0
+        a                   :PersonDeath ;
+        :onYear             "1899"^^xsd:gYear .
+    
+    bdr:EV94184B48FEB56340
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1899"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVA7731EFD8BB8B440
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EVCE79DB4A6C2C08A7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1894"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM000C2996B13AFED9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dam chos rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM417A22D6BC7EF8AB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 46 dam chos rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM5F2A02291BACB256
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 46"@bo-x-ewts .
+    
+    bdr:NT066AF3F5F1AC5C3A
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1894-1899."@en .
+    
+    bdr:NTB0D72DC053C37288
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTE4E133E335B89674
+        a                   :Note ;
+        :locationStatement  "p. 162" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:P601  a             :Person ;
+        skos:prefLabel      "dam chos rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT066AF3F5F1AC5C3A , bdr:NTB0D72DC053C37288 , bdr:NTE4E133E335B89674 ;
+        :personEvent        bdr:EV12CA2C7AD67D2586 , bdr:EV682472D83AEE1FA0 , bdr:EV94184B48FEB56340 , bdr:EVA7731EFD8BB8B440 , bdr:EVCE79DB4A6C2C08A7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM000C2996B13AFED9 , bdr:NM417A22D6BC7EF8AB , bdr:NM5F2A02291BACB256 ;
+        :personStudentOf    bdr:P575 .
+}

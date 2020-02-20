@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12679> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12679 {
+    bda:LG98ABD8D88B20EAA1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-10T14:30:26.514Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12679  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12679 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a3/P8LS12679.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12679 ;
+        adm:logEntry        bda:LG98ABD8D88B20EAA1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4A6B89952AFA743E
+        a                   :PersonBirth ;
+        :onYear             "1764"^^xsd:gYear .
+    
+    bdr:EV8C53682F7C7796D4
+        a                   :PersonDeath ;
+        :onYear             "1817"^^xsd:gYear .
+    
+    bdr:NM10C01067CDEE9231
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bde legs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME4549076F3919EC7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "theg chen gling dgon bla ma 06"@bo-x-ewts .
+    
+    bdr:NMF4A8BB812D5F31DF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tekchen Ling Gon Lama 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTD1CCA3926DFAEBB2
+        a                   :Note ;
+        :locationStatement  "p. 326" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ bstan 'dzin grags pa/ mon stag lung du 'khrungs/ dgung lo re gcig par gshegs/\n2) de'i skye ba kun mkhyen tshul khrims rdo rje/ snye mo gong ra lho smad par 'khrungs/ dgung lo don gnyis par gshegs/\n3) de'i skye ba kun bzang stobs ldan rdo rje/ mon la 'og yul gsum du 'khrungs/ dgung lo bdun la gshegs/ [p. 326]\n4) de'i skye ba ngag dbang kun bzang rdo rje/ lho phyi mtshur du 'khrungs/ dgung lo zhe bzhi par gshegs/\n5) de'i skye ba kun bzang stobs ldan rdo rje rgya mtsho/ rgyal rtse nas lung par 'khrungs/ dgung lo so brgyad par gshegs/\n6) de'i skye ba ngag dbang bde legs rgya mtsho/ lho nang smal yul du 'khrungs/ da lta dgung lo lnga bcu nga gcig/ 'dis me glang zla 4 tshes 3 la gshegs/ [1764-1817]"@bo-x-ewts .
+    
+    bdr:P8LS12679  a        :Person ;
+        skos:prefLabel      "ngag dbang bde legs rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12678 ;
+        :isRoot             true ;
+        :note               bdr:NTD1CCA3926DFAEBB2 ;
+        :personEvent        bdr:EV4A6B89952AFA743E , bdr:EV8C53682F7C7796D4 ;
+        :personName         bdr:NM10C01067CDEE9231 , bdr:NME4549076F3919EC7 , bdr:NMF4A8BB812D5F31DF .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P9909> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9909 {
+    bda:LG3E958F8AB872307E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T15:08:59.73Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5DB3AF3E93D32EE9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T15:03:01.337Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9909  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9909 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "24/P9909.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9909 ;
+        adm:logEntry        bda:LG3E958F8AB872307E , bda:LG5DB3AF3E93D32EE9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DCAB099D31BB34B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVB13E9ADEFE934B2E
+        a                   :PersonDeath ;
+        :notAfter           "1906"^^xsd:gYear ;
+        :notBefore          "1905"^^xsd:gYear .
+    
+    bdr:EVE3EE4EF789F5D9D7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM0182C2BC873778C4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 59"@bo-x-ewts .
+    
+    bdr:NM14B259B8D9BAA146
+        a                   :PersonTitle ;
+        rdfs:label          "khang gsar ngag dbang blo gros snying po/"@bo-x-ewts .
+    
+    bdr:NM458D2DE7DDF88A2E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 59 ngag dbang blo gros snying po/"@bo-x-ewts .
+    
+    bdr:NMD17BFC04A8E483EB
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang blo gros snying po/"@bo-x-ewts .
+    
+    bdr:NT586E35FCABA436F0
+        a                   :Note ;
+        :locationStatement  "p. 116-117" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NTB45F5CC89CFD0382
+        a                   :Note ;
+        :locationStatement  "p. 14" ;
+        :noteSource         bdr:MW29659 ;
+        :noteText           "served as abbot of ngor for most of the 80s of the last century\nnoted as a teacher of sga ston ngag dbang legs pa"@en .
+    
+    bdr:P9909  a            :Person ;
+        skos:prefLabel      "ngag dbang blo gros snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT586E35FCABA436F0 , bdr:NTB45F5CC89CFD0382 ;
+        :personEvent        bdr:EV2DCAB099D31BB34B , bdr:EVB13E9ADEFE934B2E , bdr:EVE3EE4EF789F5D9D7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0182C2BC873778C4 , bdr:NM14B259B8D9BAA146 , bdr:NM458D2DE7DDF88A2E , bdr:NMD17BFC04A8E483EB ;
+        :personTeacherOf    bdr:P7533 , bdr:P812 .
+}

@@ -1,0 +1,104 @@
+@base          <bdg:P2567> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2567 {
+    bda:LGA0D69332BB5B12B8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-11T12:40:28.347Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2567  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2567 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0b/P2567.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2567 ;
+        adm:logEntry        bda:LGA0D69332BB5B12B8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1130537AE2458C27
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EV2FB249D8594D66B7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2456 .
+    
+    bdr:EV54F5E5688145DAB9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1889"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV567CD40ED8CA8CB9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G236 .
+    
+    bdr:EV93691201F9942378
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVF5569946848F9853
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G236 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF9CAE679226E34CE
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1894"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:NM39E9F00D14A2AF0F
+        a                   :PersonTitle ;
+        rdfs:label          "rgyal rong pa byang chub nam mkha'"@bo-x-ewts .
+    
+    bdr:NM4E1AB864ED62D365
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub nam mkha'"@bo-x-ewts .
+    
+    bdr:NMB479662F4255C395
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri 83 byang chub nam mkha'"@bo-x-ewts .
+    
+    bdr:NMC1D4AB3B88C36804
+        a                   :PersonTitle ;
+        rdfs:label          "dga' ldan khri pa 83"@bo-x-ewts .
+    
+    bdr:NT738DE8965B4D682D
+        a                   :Note ;
+        :locationStatement  "p. 774" ;
+        :noteSource         bdr:MW19826 .
+    
+    bdr:NTB14C4975CDED9785
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTE138A04E4AB40E1E
+        a                   :Note ;
+        :locationStatement  "p. 98" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "cites krung go'i bod kyi shes rig, 1990-2, p. 83"@en .
+    
+    bdr:P2567  a            :Person ;
+        skos:prefLabel      "byang chub nam mkha'"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT738DE8965B4D682D , bdr:NTB14C4975CDED9785 , bdr:NTE138A04E4AB40E1E ;
+        :personEvent        bdr:EV1130537AE2458C27 , bdr:EV2FB249D8594D66B7 , bdr:EV54F5E5688145DAB9 , bdr:EV567CD40ED8CA8CB9 , bdr:EV93691201F9942378 , bdr:EVF5569946848F9853 , bdr:EVF9CAE679226E34CE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39E9F00D14A2AF0F , bdr:NM4E1AB864ED62D365 , bdr:NMB479662F4255C395 , bdr:NMC1D4AB3B88C36804 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P2591> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2591 {
+    bda:LG20246C8CB8F41F0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-29T15:56:31.649Z"^^xsd:dateTime ;
+        adm:logMessage      "added data"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG554B4055CCBA83EE
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-29T16:25:53.604Z"^^xsd:dateTime ;
+        adm:logMessage      "added data on life of subject"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2591  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2591 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c1/P2591.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2591 ;
+        adm:logEntry        bda:LG20246C8CB8F41F0D , bda:LG554B4055CCBA83EE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9309BF948E745CC6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G379 .
+    
+    bdr:EVDBC370B3405D34BE
+        a                   :PersonDeath ;
+        :onYear             "1719"^^xsd:gYear .
+    
+    bdr:EVFBB6F4ACBC6C7003
+        a                   :PersonBirth ;
+        :onYear             "1646"^^xsd:gYear .
+    
+    bdr:NM0E904AC3B7920CB3
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas grags pa/"@bo-x-ewts .
+    
+    bdr:NM1A256EF61CF47ADC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT0E6105D86EBE0AB8
+        a                   :Note ;
+        :noteSource         bdr:MW2GS1140 ;
+        :noteText           "grags pa rgya mtsho alias sangs rtygs grags pa was regarded to have been an incarnation of phu chung ba gzhon nu rgyal mtshan; he was the most famous pupil of gtsang mkhan chen dpal ldan rgya mtsho; he combined the rnying ma, 'brug pa and kaM tshang bka' brgyud teachings; mkhan chen bsod nams 'od zer received his final vows; he studied with a number of other important masters; he was a fine artist and was responsible for the great embroidered tangka, the gos sku mthong grol chen mo (mthong ba rang grol) of spungs tshang (1689-1692); he built the great temple at stag tshang dpal phug (1692-1693); he was active at sman chu'i nang (which was the seat of his teacher, gtsang mkhan chen) and at rin chen spungs; later he went to gdung and rgya bar nang; he founded the monastery of gzhan phan byang chub gling in rgya bar"@en .
+    
+    bdr:NT761559D8483D8E09
+        a                   :Note ;
+        :noteText           "known as a painter and scholar in bhutan"@en .
+    
+    bdr:P2591  a            :Person ;
+        skos:prefLabel      "grags pa rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0E6105D86EBE0AB8 , bdr:NT761559D8483D8E09 ;
+        :personEvent        bdr:EV9309BF948E745CC6 , bdr:EVDBC370B3405D34BE , bdr:EVFBB6F4ACBC6C7003 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E904AC3B7920CB3 , bdr:NM1A256EF61CF47ADC ;
+        :personStudentOf    bdr:P3530 , bdr:P513 ;
+        :personTeacherOf    bdr:P775 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P932> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P932 {
+    bda:P932  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P932 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "18/P932.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P932 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13691CC807704D72
+        a                   :PersonBirth ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:EV715CC21D427A2384
+        a                   :PersonDeath ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:NM3D501D9DD70B827D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mdo sngags bstan pa'i nyi ma bshad sgrub phrin las mthar phyin/"@bo-x-ewts .
+    
+    bdr:NM4AD518FDC7A678A7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri pa a leb rtogs ldan 2 mdo sngags bstan pa'i nyi ma bshad sgrub 'phrin las mthar phyin/"@bo-x-ewts .
+    
+    bdr:NT31B02AF487224D36
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud"@en .
+    
+    bdr:P932  a             :Person ;
+        skos:prefLabel      "mdo sngags bstan pa'i nyi ma bshad sgrub phrin las mthar phyin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT31B02AF487224D36 ;
+        :personEvent        bdr:EV13691CC807704D72 , bdr:EV715CC21D427A2384 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3D501D9DD70B827D , bdr:NM4AD518FDC7A678A7 .
+}

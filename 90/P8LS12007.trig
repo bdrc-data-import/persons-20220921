@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12007> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12007 {
+    bda:LGF0E4FB5151ADAE77
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T12:56:18.273Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12007  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12007 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "90/P8LS12007.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12007 ;
+        adm:logEntry        bda:LGF0E4FB5151ADAE77 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV465704F66BE09D69
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV9A64A70AF0F9DE3F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:NM132977514605D3DD
+        a                   :PersonTitle ;
+        rdfs:label          "mkhan chen dbang dpal ba/"@bo-x-ewts .
+    
+    bdr:NM76EF246B3B6AB7CF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang dpal pa/"@bo-x-ewts .
+    
+    bdr:NMDA323B6A5347E2F4
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 07"@bo-x-ewts .
+    
+    bdr:NT8BD58853C38859A0
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 29" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12007  a        :Person ;
+        skos:prefLabel      "ngag dbang dpal pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8BD58853C38859A0 ;
+        :personEvent        bdr:EV465704F66BE09D69 , bdr:EV9A64A70AF0F9DE3F ;
+        :personName         bdr:NM132977514605D3DD , bdr:NM76EF246B3B6AB7CF , bdr:NMDA323B6A5347E2F4 ;
+        :personStudentOf    bdr:P28 , bdr:P35 .
+}

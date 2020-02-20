@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12269> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12269 {
+    bda:LG7B27646EE16C4A90
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T14:11:29.896Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12269  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12269 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c4/P8LS12269.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12269 ;
+        adm:logEntry        bda:LG7B27646EE16C4A90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30E46CD0DFA16E22
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV4FB4EA6B76BE8427
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMCED22E85E3282CCD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NMD41797B838CF9BBC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 116"@bo-x-ewts .
+    
+    bdr:NME6E2174EB8A61F28
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dor shul glang gya dge bshes blo bzang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NT0A23B42E655DA8D5
+        a                   :Note ;
+        :locationStatement  "p. 215" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12269  a        :Person ;
+        skos:prefLabel      "blo bzang 'jigs med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A23B42E655DA8D5 ;
+        :personEvent        bdr:EV30E46CD0DFA16E22 , bdr:EV4FB4EA6B76BE8427 ;
+        :personName         bdr:NMCED22E85E3282CCD , bdr:NMD41797B838CF9BBC , bdr:NME6E2174EB8A61F28 .
+}

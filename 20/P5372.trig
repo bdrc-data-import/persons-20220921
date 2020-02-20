@@ -1,0 +1,108 @@
+@base          <bdg:P5372> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5372 {
+    bda:LG2A0DE5371A284421
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T14:48:45.809Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG4DB9796D48C181EA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T12:39:56.851Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5681B171C6FBBDF1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG9F55816BD0374B0B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-21T12:30:57.072Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5372  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5372 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "20/P5372.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5372 ;
+        adm:logEntry        bda:LG2A0DE5371A284421 , bda:LG4DB9796D48C181EA , bda:LG5681B171C6FBBDF1 , bda:LG9F55816BD0374B0B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV356B8398E9020704
+        a                   :PersonBirth ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EV4481E5B6B1D43A06
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV9DA188658D2AE962
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVAEBE60210CFE9515
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVCD039103B038D324
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:NM4615D566EBBB2268
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsod grags sprul sku 04 skal bzang bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6062F8E6BCB7E974
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 47"@bo-x-ewts .
+    
+    bdr:NMA589F161E7D677DA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bsod grags sprul sku 04"@bo-x-ewts .
+    
+    bdr:NMCE2EDDA8044E31EF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Sodrak Tulku 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME9FFFACB82B4B0A0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT06572214D13EC412
+        a                   :Note ;
+        :locationStatement  "p. 449-451" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:NTAB7BE1429909E17E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5372  a            :Person ;
+        skos:prefLabel      "skal bzang bsod nams rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5371 ;
+        :isRoot             true ;
+        :note               bdr:NT06572214D13EC412 , bdr:NTAB7BE1429909E17E ;
+        :personEvent        bdr:EV356B8398E9020704 , bdr:EV4481E5B6B1D43A06 , bdr:EV9DA188658D2AE962 , bdr:EVAEBE60210CFE9515 , bdr:EVCD039103B038D324 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4615D566EBBB2268 , bdr:NM6062F8E6BCB7E974 , bdr:NMA589F161E7D677DA , bdr:NMCE2EDDA8044E31EF , bdr:NME9FFFACB82B4B0A0 .
+}

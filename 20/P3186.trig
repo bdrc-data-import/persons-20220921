@@ -1,0 +1,55 @@
+@base          <bdg:P3186> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3186 {
+    bda:P3186  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3186 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "20/P3186.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3186 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV97CC5BF107E2763E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVDF73F2FE2786E9A2
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM08D259F291E5FB5C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMB746CB64F7433AD9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang thos 'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT359326413A297BB0
+        a                   :Note ;
+        :noteText           "sa skya master"@en .
+    
+    bdr:P3186  a            :Person ;
+        skos:prefLabel      "'phrin las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT359326413A297BB0 ;
+        :personEvent        bdr:EV97CC5BF107E2763E , bdr:EVDF73F2FE2786E9A2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08D259F291E5FB5C , bdr:NMB746CB64F7433AD9 ;
+        :personStudentOf    bdr:P2604 ;
+        :personTeacherOf    bdr:P162 , bdr:P3187 .
+}

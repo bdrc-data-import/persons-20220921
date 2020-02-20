@@ -1,0 +1,84 @@
+@base          <bdg:P8LS12029> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12029 {
+    bda:LG22607F18D7C86972
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T10:14:39.345Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCB055845376D6BAA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:54:24.781Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12029  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12029 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "12/P8LS12029.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12029 ;
+        adm:logEntry        bda:LG22607F18D7C86972 , bda:LGCB055845376D6BAA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6BA8CB952C09CDAD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV7EED0BB61A95BBD3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB3D5609BE8919F0D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4455 .
+    
+    bdr:EVC59E58BBEB3D5739
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G394 .
+    
+    bdr:EVE769C37CA6FB653C
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G584 .
+    
+    bdr:NM10086938CEB22402
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NM480B89D027EF63B5
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 38"@bo-x-ewts .
+    
+    bdr:NME63BA5688EF5BECE
+        a                   :PersonTitle ;
+        rdfs:label          "sog po mkhan chen sangs rgyas rdo rje/"@bo-x-ewts .
+    
+    bdr:NTC0FD8E94983E7FB0
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 92-94" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "his incarnate was rgyal mkhan chen grags pa rgyal mtshan"@en .
+    
+    bdr:P8LS12029  a        :Person ;
+        skos:prefLabel      "sangs rgyas rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC0FD8E94983E7FB0 ;
+        :personEvent        bdr:EV6BA8CB952C09CDAD , bdr:EV7EED0BB61A95BBD3 , bdr:EVB3D5609BE8919F0D , bdr:EVC59E58BBEB3D5739 , bdr:EVE769C37CA6FB653C ;
+        :personName         bdr:NM10086938CEB22402 , bdr:NM480B89D027EF63B5 , bdr:NME63BA5688EF5BECE ;
+        :personTeacherOf    bdr:P169 , bdr:P5642 .
+}

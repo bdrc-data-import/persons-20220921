@@ -1,0 +1,80 @@
+@base          <bdg:P1630> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1630 {
+    bda:LG106D642749DDFE87
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T16:11:49.639Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG34DB68C0B635B263
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-09T15:34:32.395Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1630  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1630 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "51/P1630.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1630 ;
+        adm:logEntry        bda:LG106D642749DDFE87 , bda:LG34DB68C0B635B263 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3FDCB4FC267C5809
+        a                   :PersonDeath ;
+        :onYear             "1718"^^xsd:gYear .
+    
+    bdr:EV8F94938393069DD5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1282 ;
+        :onYear             "1639"^^xsd:gYear .
+    
+    bdr:NM1049FC6237AAF06C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' 'gyur ba blo bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NM6AD7C1C233C92FBC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NT02ADDB9BFDFE8C4B
+        a                   :Note ;
+        :noteText           "One of the first monks after the founding of Bla-brang Bkra-shis-'khyil.\nVisited Central Tibet twice.\nChronology problematical: Ming mdzod (p. 90) says that he exchanged teachings with 3rd PaN-chen Dpal-ldan-ye-shes.\nTeachers (not recorded): Khya-dge Dpon-slob and Thang-tshang Dpon-slob.\nReceived Bka'-'gyur lung from Thang-tshang Dpon-slob.\nDied at Brag-lung Ri-khrod.\nRebirth of Grub-chen Dge-legs-dharma.\nGsung 'bum in 1 small volume."@en .
+    
+    bdr:NT6EDF3460ED4F60C6
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT9304CA00B7B05661
+        a                   :Note ;
+        :noteText           "bor in corporation C2CN11021"@en .
+    
+    bdr:NTDC7FF1CD73C81FA8
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1630  a            :Person ;
+        skos:prefLabel      "blo bzang nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT02ADDB9BFDFE8C4B , bdr:NT6EDF3460ED4F60C6 , bdr:NT9304CA00B7B05661 , bdr:NTDC7FF1CD73C81FA8 ;
+        :personEvent        bdr:EV3FDCB4FC267C5809 , bdr:EV8F94938393069DD5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1049FC6237AAF06C , bdr:NM6AD7C1C233C92FBC ;
+        :personStudentOf    bdr:P179 , bdr:P410 , bdr:P423 ;
+        :personTeacherOf    bdr:P1624 , bdr:P2157 , bdr:P8LS13405 .
+}

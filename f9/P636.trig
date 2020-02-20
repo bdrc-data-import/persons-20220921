@@ -1,0 +1,57 @@
+@base          <bdg:P636> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P636 {
+    bda:LGC31A14D7136BB496
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-08-17T11:29:45.687Z"^^xsd:dateTime ;
+        adm:logMessage      "duplicate of P4043?"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LGF0AAFBA3B7FE889E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T14:00:24.393Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P4043"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P636  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P636 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f9/P636.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P636 ;
+        adm:logEntry        bda:LGC31A14D7136BB496 , bda:LGF0AAFBA3B7FE889E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P4043 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV41B92417C818B260
+        a                   :PersonDeath ;
+        :onYear             "1236"^^xsd:gYear .
+    
+    bdr:EVF1965CF45046B4F8
+        a                   :PersonBirth ;
+        :onYear             "1163"^^xsd:gYear .
+    
+    bdr:NM0901A8D7D4AA4862
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rta ston jo ye/"@bo-x-ewts .
+    
+    bdr:P636  a             :Person ;
+        skos:prefLabel      "rta ston jo ye/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV41B92417C818B260 , bdr:EVF1965CF45046B4F8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0901A8D7D4AA4862 .
+}

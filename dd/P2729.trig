@@ -1,0 +1,47 @@
+@base          <bdg:P2729> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2729 {
+    bda:P2729  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2729 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "dd/P2729.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2729 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC4454D434B1074F3
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NME4B193996422F0E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma klong gsal/"@bo-x-ewts .
+    
+    bdr:NTF11CF48EB245093D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P2729  a            :Person ;
+        skos:prefLabel      "pad+ma klong gsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF11CF48EB245093D ;
+        :personEvent        bdr:EVC4454D434B1074F3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME4B193996422F0E3 ;
+        :personStudentOf    bdr:P2659 ;
+        :personTeacherOf    bdr:P2730 .
+}

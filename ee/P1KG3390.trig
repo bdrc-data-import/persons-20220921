@@ -1,0 +1,71 @@
+@base          <bdg:P1KG3390> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3390 {
+    bda:LG0F1DEEDC3CB1B8D6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T11:07:24.645Z"^^xsd:dateTime ;
+        adm:logMessage      "added withdrawn note"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG50E25BC5F1E84DB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-31T15:51:52.574Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGFD9A561DBF263333
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T11:05:32.647Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P8LS4259"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG3390  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3390 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ee/P1KG3390.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3390 ;
+        adm:logEntry        bda:LG0F1DEEDC3CB1B8D6 , bda:LG50E25BC5F1E84DB3 , bda:LGFD9A561DBF263333 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P8LS4259 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV12322B38C0D81967
+        a                   :PersonDeath .
+    
+    bdr:EV75BA6D59354624AD
+        a                   :PersonBirth ;
+        :onYear             "1671"^^xsd:gYear .
+    
+    bdr:NMDE83B5767AA5744D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin lhun grub/"@bo-x-ewts .
+    
+    bdr:NMFAE467C9BCE3B4F5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcags sprul 05 ngag dbang bstan 'dzin lhun grub/"@bo-x-ewts .
+    
+    bdr:NTEFAAB10DB0553CD4
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P8LS4259"@en .
+    
+    bdr:P1KG3390  a         :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEFAAB10DB0553CD4 ;
+        :personEvent        bdr:EV12322B38C0D81967 , bdr:EV75BA6D59354624AD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDE83B5767AA5744D , bdr:NMFAE467C9BCE3B4F5 .
+}

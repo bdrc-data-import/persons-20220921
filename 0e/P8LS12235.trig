@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12235> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12235 {
+    bda:LGEB5AB01BF4AE5769
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T12:24:34.906Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12235  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12235 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0e/P8LS12235.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12235 ;
+        adm:logEntry        bda:LGEB5AB01BF4AE5769 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV85AC4575EE09E0A8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB9D9AEB4DF1BD684
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM0D5E133C8F08765C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 73"@bo-x-ewts .
+    
+    bdr:NM1E5C29BFF202B706
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NMC046B944642F8B5E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgom thar thang ngag dbang 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NTFE6AE6138BCCDB10
+        a                   :Note ;
+        :locationStatement  "p. 195" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "brother of rje gser khang\nreceived teachings from the previous zhwa dmar"@en .
+    
+    bdr:P8LS12235  a        :Person ;
+        skos:prefLabel      "ngag dbang 'phrin las lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFE6AE6138BCCDB10 ;
+        :personEvent        bdr:EV85AC4575EE09E0A8 , bdr:EVB9D9AEB4DF1BD684 ;
+        :personName         bdr:NM0D5E133C8F08765C , bdr:NM1E5C29BFF202B706 , bdr:NMC046B944642F8B5E .
+}

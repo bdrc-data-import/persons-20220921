@@ -1,0 +1,96 @@
+@base          <bdg:P3551> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3551 {
+    bda:LG03878D1E29B15952
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T16:09:00.203Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE75A081D67545423
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-27T09:03:32.642Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3551  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3551 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "eb/P3551.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3551 ;
+        adm:logEntry        bda:LG03878D1E29B15952 , bda:LGE75A081D67545423 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0D18CA9682747165
+        a                   :PersonDeath ;
+        :onYear             "1830"^^xsd:gYear .
+    
+    bdr:EV89CCDDBD0D39A9E9
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1693 ;
+        :onYear             "1748"^^xsd:gYear .
+    
+    bdr:EVA35FAAEE625D17DA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1716 ;
+        :onYear             "1820"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVDC8CCBDD16076909
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:NM2BB8A0F89A7D248D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs don grub/"@bo-x-ewts .
+    
+    bdr:NM7802A97FA91482D9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang sman pa khri 08"@bo-x-ewts .
+    
+    bdr:NM9B1694A14C704E74
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang sman pa khri 08 'jam dbyangs don grub/"@bo-x-ewts .
+    
+    bdr:NMA9DDCE00D5B808FF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thur ma 'jam dbyangs don grub/"@bo-x-ewts .
+    
+    bdr:NT5F162A0307DA679C
+        a                   :Note ;
+        :locationStatement  "p. 247" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "1820. becomes khri of sman pa grwa tshang"@en .
+    
+    bdr:NT7074E2DE7977E2E0
+        a                   :Note ;
+        :locationStatement  "p. 802" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT81BFBD9471B2AE15
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3551  a            :Person ;
+        skos:prefLabel      "'jam dbyangs don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F162A0307DA679C , bdr:NT7074E2DE7977E2E0 , bdr:NT81BFBD9471B2AE15 ;
+        :personEvent        bdr:EV0D18CA9682747165 , bdr:EV89CCDDBD0D39A9E9 , bdr:EVA35FAAEE625D17DA , bdr:EVDC8CCBDD16076909 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2BB8A0F89A7D248D , bdr:NM7802A97FA91482D9 , bdr:NM9B1694A14C704E74 , bdr:NMA9DDCE00D5B808FF ;
+        :personStudentOf    bdr:P3552 , bdr:P3553 .
+}

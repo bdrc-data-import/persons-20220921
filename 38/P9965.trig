@@ -1,0 +1,57 @@
+@base          <bdg:P9965> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9965 {
+    bda:P9965  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9965 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "38/P9965.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9965 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC1E5B3E3CED35A38
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE007AECCA455BD5F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:NM8316CDF6AA5D204E
+        a                   :PersonPersonalName ;
+        rdfs:label          "byang gling pa ye shes dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMCFEF675C36F4C62F
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NTFC20CCA73E79542D
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 15v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher of the zhwa lu tradition; mentioned here in connection with the transmission of the yogasataka"@en .
+    
+    bdr:P9965  a            :Person ;
+        skos:prefLabel      "ye shes dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFC20CCA73E79542D ;
+        :personEvent        bdr:EVC1E5B3E3CED35A38 , bdr:EVE007AECCA455BD5F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8316CDF6AA5D204E , bdr:NMCFEF675C36F4C62F ;
+        :personStudentOf    bdr:P7031 ;
+        :personTeacherOf    bdr:P857 .
+}

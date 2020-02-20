@@ -1,0 +1,92 @@
+@base          <bdg:P3756> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3756 {
+    bda:LG69CCD4FA6340D262
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T12:35:47.773Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB906D4025DCA814E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:24:19.581Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3756  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3756 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d9/P3756.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3756 ;
+        adm:logEntry        bda:LG69CCD4FA6340D262 , bda:LGB906D4025DCA814E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV26EDE35D3345CFDC
+        a                   :PersonDeath ;
+        :onYear             "1460"^^xsd:gYear .
+    
+    bdr:EV554B01B4F5E12423
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVB4082DBBA68A755C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :onYear             "1430"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF0E60F3563C48CC3
+        a                   :PersonBirth ;
+        :onYear             "1408"^^xsd:gYear .
+    
+    bdr:NM598B5CA30191F4FD
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 11"@bo-x-ewts .
+    
+    bdr:NMCD02DE4FFE39A2FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal 'od/"@bo-x-ewts .
+    
+    bdr:NT1848D47A4A764CC9
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "b. 1408; d. 1460; on seat 29 years\nb. 'phan yul stod bye ma gzhis ka ga zi gdung brgyud.\nstyled 12th khri of stag lung."@en .
+    
+    bdr:NT3ECDC4744831700B
+        a                   :Note ;
+        :noteText           "1430. Comes to throne of Stag-lung and served 31 years."@en .
+    
+    bdr:NTB78A25E36A3324C0
+        a                   :Note ;
+        :locationStatement  "p. 408-420" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:NTD0C752EE6A3BDC04
+        a                   :Note ;
+        :locationStatement  "p. 757" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P3756  a            :Person ;
+        skos:prefLabel      "bkra shis dpal 'od/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1848D47A4A764CC9 , bdr:NT3ECDC4744831700B , bdr:NTB78A25E36A3324C0 , bdr:NTD0C752EE6A3BDC04 ;
+        :personEvent        bdr:EV26EDE35D3345CFDC , bdr:EV554B01B4F5E12423 , bdr:EVB4082DBBA68A755C , bdr:EVF0E60F3563C48CC3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM598B5CA30191F4FD , bdr:NMCD02DE4FFE39A2FF ;
+        :personStudentOf    bdr:P1009 , bdr:P3758 .
+}

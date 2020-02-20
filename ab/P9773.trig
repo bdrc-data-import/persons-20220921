@@ -1,0 +1,88 @@
+@base          <bdg:P9773> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9773 {
+    bda:LG347D341256B3A9B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-18T16:13:09.497Z"^^xsd:dateTime ;
+        adm:logMessage      "edited title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG69E6B4D8B41A6B78
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGA4B7FDFBDEC7B44F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-25T10:59:39.36Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9773  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9773 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ab/P9773.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9773 ;
+        adm:logEntry        bda:LG347D341256B3A9B2 , bda:LG69E6B4D8B41A6B78 , bda:LGA4B7FDFBDEC7B44F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV94E37F5974FABAC5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2749 .
+    
+    bdr:EVB0CEB39A52D59FF6
+        a                   :PersonBirth ;
+        :onYear             "1870"^^xsd:gYear .
+    
+    bdr:EVEAACB356FD4E4906
+        a                   :PersonDeath ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NM00ADCE784FB570C0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsendrok Khenpo 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM09A4E9A83D7E5D7D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "mtshan sgrogs mkhan po 04"@bo-x-ewts .
+    
+    bdr:NM46E8C81698AA2D75
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'jam dpal yon tan/"@bo-x-ewts .
+    
+    bdr:NT3ACEEC297DEC6230
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 551" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "sku phreng bzhi pa dkon mchog 'jam dpal yon tan ni/ rab byung bco lnga ba'i lcags rta spyi lo 1870 lor 'on zhes pa'i yul du khro rus su 'khrungs/ dgung lo bdun par mtshan sgrogs sku gong ma'i yang srid du ngos 'dzin byas/ dgung lo so gsum par dus 'khor grwa tshang btsugs/ dgung grangs zhe lnga par ser byes ltar gyi rta mgrin gtor sgrub btsugs pa la zhabs brtan grwa tshang btags/ bkra shis 'khyil kyai rdor grwa tshang phyag len ltar phyag rdo rje 'khor chen gyi sgrub mchod btsugs pa la gsang sngags dar rgyas gling btags/ dgung lo nga dgu bar rab byang bcu drug pa'i sa 'brug spyi lo 1928 lor dgongs pa rdzogs/"@en .
+    
+    bdr:NT9CCAF94B68CEA04F
+        a                   :Note ;
+        :locationStatement  "p. 29" ;
+        :noteSource         bdr:MW29487 ;
+        :noteText           "according to this source mtshan sgrogs dkon mchog 'jam dpal was born in 1870"@en .
+    
+    bdr:P9773  a            :Person ;
+        skos:prefLabel      "dkon mchog 'jam dpal yon tan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13365 ;
+        :isRoot             true ;
+        :note               bdr:NT3ACEEC297DEC6230 , bdr:NT9CCAF94B68CEA04F ;
+        :personEvent        bdr:EV94E37F5974FABAC5 , bdr:EVB0CEB39A52D59FF6 , bdr:EVEAACB356FD4E4906 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00ADCE784FB570C0 , bdr:NM09A4E9A83D7E5D7D , bdr:NM46E8C81698AA2D75 .
+}

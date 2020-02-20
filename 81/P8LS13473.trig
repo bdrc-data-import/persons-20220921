@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13473> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13473 {
+    bda:LG309A88D98B1DAC4B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-12T11:09:23.828Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7801CE1EDEB3EFDE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-12T11:07:31.869Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13473  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13473 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "81/P8LS13473.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13473 ;
+        adm:logEntry        bda:LG309A88D98B1DAC4B , bda:LG7801CE1EDEB3EFDE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM1AA512F1F7819C8C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NMF655DD09FE3041EF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thams cad mkhyen pa chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NTF861AA30DC212B48
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 22" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13473  a        :Person ;
+        skos:prefLabel      "chos kyi grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF861AA30DC212B48 ;
+        :personName         bdr:NM1AA512F1F7819C8C , bdr:NMF655DD09FE3041EF .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P8183> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8183 {
+    bda:LG1EE875852C928C0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-08T16:42:01.762Z"^^xsd:dateTime ;
+        adm:logMessage      "New released"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG8302A6CE97E29C4D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-16T16:56:21.448Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGBE8FDFF421887D9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T16:18:00.02Z"^^xsd:dateTime ;
+        adm:logMessage      "added note name titile"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P8183  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8183 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "cf/P8183.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8183 ;
+        adm:logEntry        bda:LG1EE875852C928C0A , bda:LG8302A6CE97E29C4D , bda:LGBE8FDFF421887D9E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV672D2EDD4865F021
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G3CN319 ;
+        :notAfter           "0899"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:NM45597D77CB77AE04
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM4CE73997E04F5F4E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "cog gru klu'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM72F038F74C3D06FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "cog ro klu'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD2AB6E0904C8DFDF
+        a                   :Note ;
+        :locationStatement  "pp. 782-783" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "ཆོས་རྒྱལ་ཁྲི་སྲོང་སྐབས་ཀྱི་ལོ་ཙཱ་བ་གྲགས་ཅན་སྐ་ཅོག་ཞང་གསུམ་གྱི་ཡ་གྱལ་དང་། ལོ་ཙཱ་བ་རབ་དགུའི་ནང་གསེས་གཞོན་གསུམ་གྱི་ཡ་གྱལ་ཡང་ཡིན།"@bo .
+    
+    bdr:P8183  a            :Person ;
+        skos:prefLabel      "klu'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD2AB6E0904C8DFDF ;
+        :personEvent        bdr:EV672D2EDD4865F021 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45597D77CB77AE04 , bdr:NM4CE73997E04F5F4E , bdr:NM72F038F74C3D06FA ;
+        :personStudentOf    bdr:P8209 .
+}

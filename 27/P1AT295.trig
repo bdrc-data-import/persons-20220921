@@ -1,0 +1,65 @@
+@base          <bdg:P1AT295> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AT295 {
+    bda:LG34C859951F2AD826
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-02-19T10:15:27.39Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en .
+    
+    bda:LGDE4E59CC0DAF180D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:02:16.052Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1AT295  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AT295 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "27/P1AT295.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AT295 ;
+        adm:logEntry        bda:LG34C859951F2AD826 , bda:LGDE4E59CC0DAF180D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV64551B699A893210
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1987"^^xsd:gYear ;
+        :notBefore          "1986"^^xsd:gYear .
+    
+    bdr:EV93B11EF028133672
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2884 .
+    
+    bdr:NM8FB7F1803E17B818
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog smon lam/"@bo-x-ewts .
+    
+    bdr:NME0D41049C794D173
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon chog smon lam mthar phyin/"@bo-x-ewts .
+    
+    bdr:NT226290763F942826
+        a                   :Note ;
+        :noteText           "scribe of many of Palme Kyentse Kunzang Drodul Lingpa's revelations and biographies"@en .
+    
+    bdr:P1AT295  a          :Person ;
+        skos:prefLabel      "dkon chog smon lam mthar phyin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT226290763F942826 ;
+        :personEvent        bdr:EV64551B699A893210 , bdr:EV93B11EF028133672 ;
+        :personName         bdr:NM8FB7F1803E17B818 , bdr:NME0D41049C794D173 ;
+        :personStudentOf    bdr:P6897 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P1626> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1626 {
+    bda:LGD0385D5C8A7626A9
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-09T15:32:50.755Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD6E6B8E91924789F
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-03-20T12:37:51.68Z"^^xsd:dateTime ;
+        adm:logMessage      "added shad"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1626  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1626 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "19/P1626.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1626 ;
+        adm:logEntry        bda:LGD0385D5C8A7626A9 , bda:LGD6E6B8E91924789F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV73C58C50BD29BD24
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMD0703A23391DD880
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bkra shis/"@bo-x-ewts .
+    
+    bdr:NT583FFCCF7FA4F56C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1626  a            :Person ;
+        skos:prefLabel      "dkon mchog bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT583FFCCF7FA4F56C ;
+        :personEvent        bdr:EV73C58C50BD29BD24 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD0703A23391DD880 ;
+        :personTeacherOf    bdr:P1624 , bdr:P8LS13405 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P1KG15038> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15038 {
+    bda:LG8951703965A4E98A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-09T13:34:51.943Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15038  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15038 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c4/P1KG15038.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15038 ;
+        adm:logEntry        bda:LG8951703965A4E98A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV625FFB9CB80FCAE0
+        a                   :PersonDeath ;
+        :onYear             "1977"^^xsd:gYear .
+    
+    bdr:EVD429B89509CE4589
+        a                   :PersonBirth ;
+        :onYear             "1905"^^xsd:gYear .
+    
+    bdr:NM04CF8C59C0EACD18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rintchen"@en .
+    
+    bdr:NM925B498E5C30A855
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen/"@bo-x-ewts .
+    
+    bdr:NMFBA533C8821E79D6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rinchen"@en .
+    
+    bdr:P1KG15038  a        :Person ;
+        skos:prefLabel      "rin chen/"@bo-x-ewts , "rinchen"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV625FFB9CB80FCAE0 , bdr:EVD429B89509CE4589 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM04CF8C59C0EACD18 , bdr:NM925B498E5C30A855 , bdr:NMFBA533C8821E79D6 .
+}

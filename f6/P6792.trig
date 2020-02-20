@@ -1,0 +1,55 @@
+@base          <bdg:P6792> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6792 {
+    bda:P6792  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6792 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f6/P6792.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6792 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV373E98438FF47A7D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2740 ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:EVFAB3967E5B385509
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2744 .
+    
+    bdr:NM1065D8E9B2B73AAE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8DE66F1F3140A3F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dme mu 05 blo bzang ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTA46E202850516F18
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "recognized by the 6th 'jam dbyangs bzhad pa\nprefectural recognition\ninstalled at thang sar sgar in 1994"@en .
+    
+    bdr:P6792  a            :Person ;
+        skos:prefLabel      "blo bzang ye shes rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA46E202850516F18 ;
+        :personEvent        bdr:EV373E98438FF47A7D , bdr:EVFAB3967E5B385509 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1065D8E9B2B73AAE , bdr:NM8DE66F1F3140A3F2 .
+}

@@ -1,0 +1,78 @@
+@base          <bdg:P8LS12066> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12066 {
+    bda:LGDCBD0DAF9F0CDA77
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:18:59.084Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12066  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12066 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e5/P8LS12066.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12066 ;
+        adm:logEntry        bda:LGDCBD0DAF9F0CDA77 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0D516668ADADED51
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1202 ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:EV3F580CD47EFF4F43
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV4ED771D58296CED3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1995"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7A59EC9A43DB12C1
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "2003"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM4A26503AE59821B5
+        a                   :PersonTitle ;
+        rdfs:label          "zung chu dge bshes tshul khrims phun tshogs/"@bo-x-ewts .
+    
+    bdr:NMCDA0DD6A0F52B38A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 77"@bo-x-ewts .
+    
+    bdr:NMFE758A52FBDBA7C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims phun tshogs/"@bo-x-ewts .
+    
+    bdr:NT87C3E0D0FA2662F5
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 226-228" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "obtained acharya degree in 1973\n1981-1983 visiting scholar at humburg university\n1984 geshe lharam degree\n1990 - entered gumed tantric college"@en .
+    
+    bdr:P8LS12066  a        :Person ;
+        skos:prefLabel      "tshul khrims phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT87C3E0D0FA2662F5 ;
+        :personEvent        bdr:EV0D516668ADADED51 , bdr:EV3F580CD47EFF4F43 , bdr:EV4ED771D58296CED3 , bdr:EV7A59EC9A43DB12C1 ;
+        :personName         bdr:NM4A26503AE59821B5 , bdr:NMCDA0DD6A0F52B38A , bdr:NMFE758A52FBDBA7C5 ;
+        :personStudentOf    bdr:P4801 , bdr:P8LS12060 .
+}

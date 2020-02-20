@@ -1,0 +1,103 @@
+@base          <bdg:P5973> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5973 {
+    bda:LG480CD1352796534F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG594AF441FACD1674
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-27T11:19:38.189Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBA753E8EB3E8D5EA
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-17T17:30:26.653Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGDBE0F5F838C96F74
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-27T12:57:14.687Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5973  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5973 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "f0/P5973.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5973 ;
+        adm:logEntry        bda:LG480CD1352796534F , bda:LG594AF441FACD1674 , bda:LGBA753E8EB3E8D5EA , bda:LGDBE0F5F838C96F74 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6587316C0836464E
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVCAA626AAE1CB0E91
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13254 .
+    
+    bdr:EVCCE12EE215B71B77
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM137B34E14BC2500D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "grub thob nam mkha' rgya mtsho 01"@bo-x-ewts .
+    
+    bdr:NM2DB4E952985ED8D4
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubtob Namkha Gyatso 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM2F5047E46BF8303B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog drung pa nam mkha' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD37F292D22C2933A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT158180C34BA8771B
+        a                   :Note ;
+        :noteText           "reborn as mtsho phu grub chen chos dbyings rang grol"@en .
+    
+    bdr:NT2CB1779954EA17E6
+        a                   :Note ;
+        :locationStatement  "f. 61v" ;
+        :noteSource         bdr:MW20915 ;
+        :noteText           "teacher of kaH thog tshe dbang nor bu"@en .
+    
+    bdr:NT770FC5ACD4F90474
+        a                   :Note ;
+        :locationStatement  "p. 134" ;
+        :noteSource         bdr:MW20396 .
+    
+    bdr:P5973  a            :Person ;
+        skos:prefLabel      "nam mkha' rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT158180C34BA8771B , bdr:NT2CB1779954EA17E6 , bdr:NT770FC5ACD4F90474 ;
+        :personEvent        bdr:EV6587316C0836464E , bdr:EVCAA626AAE1CB0E91 , bdr:EVCCE12EE215B71B77 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM137B34E14BC2500D , bdr:NM2DB4E952985ED8D4 , bdr:NM2F5047E46BF8303B , bdr:NMD37F292D22C2933A ;
+        :personStudentOf    bdr:P653 ;
+        :personTeacherOf    bdr:P5972 , bdr:P676 .
+}

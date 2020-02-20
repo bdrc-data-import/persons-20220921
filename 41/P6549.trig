@@ -1,0 +1,67 @@
+@base          <bdg:P6549> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6549 {
+    bda:LG73A05089EF95AE1B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-11T14:14:23.892Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6549  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6549 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "41/P6549.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6549 ;
+        adm:logEntry        bda:LG73A05089EF95AE1B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C64B05BE68FE4E4
+        a                   :PersonDeath ;
+        :onYear             "1583"^^xsd:gYear .
+    
+    bdr:EVEDC0CB1C1DC6F393
+        a                   :PersonBirth ;
+        :onYear             "1507"^^xsd:gYear .
+    
+    bdr:NM282D3E5760619F97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "al than rgyal po/"@bo-x-ewts .
+    
+    bdr:NMD7AD08FE2E72DB19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sog po al than rgyal po/"@bo-x-ewts .
+    
+    bdr:NT6E21AB5C7D0E0C8C
+        a                   :Note ;
+        :locationStatement  "p. 2325, 2327" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1578. tA la'i bla ma bsod nams rgya mtsho dang sog po al than rgyal po mjal phrad mdzad/ gser tham gser gyi rgyal por grags pa phul te tA la'i bla ma'i zhes pa'i mtshan gsol thog mar phul\n1579. tA la'i bla ma bsod nams rgya mtsho dang sog po al than rgyal po gnyis kyis chab tshab chen chos 'khor gling btab/\n1583. sog po thu med kyi rgyal po al than ke ken han 'das"@en .
+    
+    bdr:NT7DFA57E2408B126A
+        a                   :Note ;
+        :locationStatement  "p. 601" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source seems confused on the chronology\ngives the dates for subject as 1507-1573 but notes his invited the 3rd dalai lama in 1577\nnotes that he served as the patron for the 3rd dalai lama in founding byang chen theg chen chos 'khor gling in 1579"@en .
+    
+    bdr:P6549  a            :Person ;
+        skos:prefLabel      "al than rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E21AB5C7D0E0C8C , bdr:NT7DFA57E2408B126A ;
+        :personEvent        bdr:EV3C64B05BE68FE4E4 , bdr:EVEDC0CB1C1DC6F393 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM282D3E5760619F97 , bdr:NMD7AD08FE2E72DB19 .
+}

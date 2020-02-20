@@ -1,0 +1,59 @@
+@base          <bdg:P10671> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10671 {
+    bda:LG6489C5B168285301
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-01-19T16:24:30.011Z"^^xsd:dateTime ;
+        adm:logMessage      "chaged seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P10671  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10671 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "bd/P10671.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10671 ;
+        adm:logEntry        bda:LG6489C5B168285301 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DEFDEF06C83E6E5
+        a                   :PersonBirth ;
+        :onYear             "1734"^^xsd:gYear .
+    
+    bdr:EV321DBD4BCDF7F123
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2KR46 .
+    
+    bdr:EV92B1DE8E90E72014
+        a                   :PersonDeath ;
+        :onYear             "1803"^^xsd:gYear .
+    
+    bdr:NMC8DDE93074D1E512
+        a                   :PersonPersonalName ;
+        rdfs:label          "grags pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTD2D4B0C7393BE4D6
+        a                   :Note ;
+        :noteText           "mongol master, the first of the incarnation lineage of erdeni ju monastery; he was born in the territory of the tushiyetu khan in khalkha\naccording to ye shes thabs mkhas his dates are 1723-1803\nhis collected works fill three volumes"@en .
+    
+    bdr:P10671  a           :Person ;
+        skos:prefLabel      "grags pa dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD2D4B0C7393BE4D6 ;
+        :personEvent        bdr:EV2DEFDEF06C83E6E5 , bdr:EV321DBD4BCDF7F123 , bdr:EV92B1DE8E90E72014 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC8DDE93074D1E512 .
+}

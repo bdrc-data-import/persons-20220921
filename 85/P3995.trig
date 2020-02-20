@@ -1,0 +1,64 @@
+@base          <bdg:P3995> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3995 {
+    bda:LG02C521EB1B2271ED
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-18T12:22:20.467Z"^^xsd:dateTime ;
+        adm:logMessage      "added G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3995  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3995 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "85/P3995.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3995 ;
+        adm:logEntry        bda:LG02C521EB1B2271ED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BD8CC1D683F171D
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVD8990A12B3D36EF6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2GS1264 .
+    
+    bdr:NM4AB8454929E0DB57
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims dpal ba/"@bo-x-ewts .
+    
+    bdr:NMB438B019C65B4F07
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang mkhar ba tshul khrims dpal ba/"@bo-x-ewts .
+    
+    bdr:NTE273BE3C8E6A9910
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "bka' gdams master; important in the bka' ma transmission lineage of the rgyud bzhi; perhaps identical with p3307"@en .
+    
+    bdr:P3995  a            :Person ;
+        skos:prefLabel      "tshul khrims dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE273BE3C8E6A9910 ;
+        :personEvent        bdr:EV1BD8CC1D683F171D , bdr:EVD8990A12B3D36EF6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4AB8454929E0DB57 , bdr:NMB438B019C65B4F07 ;
+        :personStudentOf    bdr:P1830 ;
+        :personTeacherOf    bdr:P1943 .
+}

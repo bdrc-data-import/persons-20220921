@@ -1,0 +1,62 @@
+@base          <bdg:P1KG3367> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3367 {
+    bda:LG7BC42AA630AC0AF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-20T13:37:41.775Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3367  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3367 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c0/P1KG3367.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3367 ;
+        adm:logEntry        bda:LG7BC42AA630AC0AF2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D1CF3D5468AF222
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV80CE41BE1716F731
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G250 .
+    
+    bdr:NM2D6C45E3D2DAD68F
+        a                   :PersonPersonalName ;
+        rdfs:label          "byams pa lhun grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFA8307CD19D0F1BC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTD6B61C508744745B
+        a                   :Note ;
+        :noteSource         bdr:MW1KG3365 ;
+        :noteText           "name exist on french flap of"@en .
+    
+    bdr:P1KG3367  a         :Person ;
+        skos:prefLabel      "klu sgrub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD6B61C508744745B ;
+        :personEvent        bdr:EV2D1CF3D5468AF222 , bdr:EV80CE41BE1716F731 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D6C45E3D2DAD68F , bdr:NMFA8307CD19D0F1BC ;
+        :personTeacherOf    bdr:P1KG3366 .
+}

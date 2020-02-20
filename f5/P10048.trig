@@ -1,0 +1,47 @@
+@base          <bdg:P10048> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10048 {
+    bda:P10048  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10048 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "f5/P10048.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10048 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB8C355B19A4DC46C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4736 ;
+        :onYear             "1957"^^xsd:gYear .
+    
+    bdr:NMFC6D322F62233A84
+        a                   :PersonPersonalName ;
+        rdfs:label          "rnam sras/"@bo-x-ewts .
+    
+    bdr:NTF73606F8B7F05B58
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW29991 ;
+        :noteText           "biography"@en .
+    
+    bdr:P10048  a           :Person ;
+        skos:prefLabel      "rnam sras/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF73606F8B7F05B58 ;
+        :personEvent        bdr:EVB8C355B19A4DC46C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMFC6D322F62233A84 .
+}

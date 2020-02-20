@@ -1,0 +1,73 @@
+@base          <bdg:P2847> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2847 {
+    bda:LG3F04AFA9CEB1B2FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:49:06.301Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG59ACF9A14439C6E8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-04T10:10:30.106Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of P2CN20"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2847  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2847 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "55/P2847.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2847 ;
+        adm:logEntry        bda:LG3F04AFA9CEB1B2FD , bda:LG59ACF9A14439C6E8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A5D5BF679722CC9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G342 .
+    
+    bdr:EV8665D5E1D0AD8792
+        a                   :PersonDeath ;
+        :onYear             "1365"^^xsd:gYear .
+    
+    bdr:EVD4730067E91882EA
+        a                   :PersonBirth ;
+        :onYear             "1292"^^xsd:gYear .
+    
+    bdr:NM3CC88556851CBC06
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser gling pa bkra shis dpal/"@bo-x-ewts .
+    
+    bdr:NMA84F9E173DCEA230
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal/"@bo-x-ewts .
+    
+    bdr:NTF18A96967CB34623
+        a                   :Note ;
+        :locationStatement  "p. 1812" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2847  a            :Person ;
+        skos:prefLabel      "bkra shis dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF18A96967CB34623 ;
+        :personEvent        bdr:EV6A5D5BF679722CC9 , bdr:EV8665D5E1D0AD8792 , bdr:EVD4730067E91882EA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3CC88556851CBC06 , bdr:NMA84F9E173DCEA230 ;
+        :personStudentOf    bdr:P2846 , bdr:P2CN20 ;
+        :personTeacherOf    bdr:P2848 .
+}

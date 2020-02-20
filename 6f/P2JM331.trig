@@ -1,0 +1,83 @@
+@base          <bdg:P2JM331> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM331 {
+    bda:LG1E9301E4A4B27B84
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T12:20:36.3Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9B66B9790707B4C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T17:36:05.265Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE13162422E0B96B3
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-04T13:16:27.608Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM331  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM331 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6f/P2JM331.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM331 ;
+        adm:logEntry        bda:LG1E9301E4A4B27B84 , bda:LG9B66B9790707B4C7 , bda:LGE13162422E0B96B3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58B62421ED697263
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA04E6CCD79078B5D
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:EVE880EA798031EFAE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:NM2DEF8DB5E6094597
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 18"@bo-x-ewts .
+    
+    bdr:NM38175666BD1099E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rta ba mkhan po dkon mchog bzang po/"@bo-x-ewts .
+    
+    bdr:NM67A507478C456085
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bzang po/"@bo-x-ewts .
+    
+    bdr:NTF3664154BAB00892
+        a                   :Note ;
+        :locationStatement  "p. 441" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "at the age of 39 became the abbot of rdzogs chen shri seng"@en .
+    
+    bdr:P2JM331  a          :Person ;
+        skos:prefLabel      "dkon mchog bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF3664154BAB00892 ;
+        :personEvent        bdr:EV58B62421ED697263 , bdr:EVA04E6CCD79078B5D , bdr:EVE880EA798031EFAE ;
+        :personName         bdr:NM2DEF8DB5E6094597 , bdr:NM38175666BD1099E3 , bdr:NM67A507478C456085 ;
+        :personStudentOf    bdr:P252 , bdr:P270 , bdr:P2JM314 , bdr:P6744 , bdr:P8702 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Konchok-Zangpo/5048"^^xsd:anyURI .
+}

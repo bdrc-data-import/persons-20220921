@@ -1,0 +1,61 @@
+@base          <bdg:P8607> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8607 {
+    bda:LG1CEA9A86DDFAC8C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-07T13:43:09.152Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8607  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8607 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "25/P8607.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8607 ;
+        adm:logEntry        bda:LG1CEA9A86DDFAC8C1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM04D22404F97742AF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhog pa 05 chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM22674A8AA7463DA8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zhokpa 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM67FF5B5596C3563B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zhog pa 05"@bo-x-ewts .
+    
+    bdr:NMBB5AB1027FF96F52
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NTCCA89FB0EC344AE2
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8607  a            :Person ;
+        skos:prefLabel      "chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8606 ;
+        :isRoot             true ;
+        :note               bdr:NTCCA89FB0EC344AE2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM04D22404F97742AF , bdr:NM22674A8AA7463DA8 , bdr:NM67FF5B5596C3563B , bdr:NMBB5AB1027FF96F52 .
+}

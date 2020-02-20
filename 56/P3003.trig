@@ -1,0 +1,66 @@
+@base          <bdg:P3003> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3003 {
+    bda:LG9EA1B0D205D86C2F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:49:27.147Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3003  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3003 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "56/P3003.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3003 ;
+        adm:logEntry        bda:LG9EA1B0D205D86C2F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8002C6CE17E85C18
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G108 .
+    
+    bdr:EV83F13DA0BE40E212
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM25B1AA3BFBE6567F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM69ED8EB65941BA07
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam blo dge bshes bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM757ED80CE41D51D2
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs bsam blo dge bshes bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT433B85F4EC433BCE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:P3003  a            :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT433B85F4EC433BCE ;
+        :personEvent        bdr:EV8002C6CE17E85C18 , bdr:EV83F13DA0BE40E212 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM25B1AA3BFBE6567F , bdr:NM69ED8EB65941BA07 , bdr:NM757ED80CE41D51D2 ;
+        :personStudentOf    bdr:P3002 ;
+        :personTeacherOf    bdr:P3004 .
+}

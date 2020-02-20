@@ -1,0 +1,69 @@
+@base          <bdg:P1105> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1105 {
+    bda:LG3BB90254F191ED24
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-14T16:00:42.365Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation line"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1105  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1105 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e9/P1105.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1105 ;
+        adm:logEntry        bda:LG3BB90254F191ED24 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6F052C576575C046
+        a                   :PersonDeath ;
+        :onYear             "1844"^^xsd:gYear .
+    
+    bdr:EVD9C2029FA4C242B2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G885 ;
+        :onYear             "1765"^^xsd:gYear .
+    
+    bdr:NM093C6A5741018E2D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dpal 'dzin/"@bo-x-ewts .
+    
+    bdr:NM0B9FA90691088BCF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' 'gyur ba chen po dkon mchog dpal 'dzin/"@bo-x-ewts .
+    
+    bdr:NT06B18BEBAB13993A
+        a                   :Note ;
+        :locationStatement  "p. 85" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTA2F11583E78A6360
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1105  a            :Person ;
+        skos:prefLabel      "dkon mchog dpal 'dzin/"@bo-x-ewts ;
+        :hasFather          bdr:P2148 ;
+        :hasMother          bdr:P2149 ;
+        :isRoot             true ;
+        :note               bdr:NT06B18BEBAB13993A , bdr:NTA2F11583E78A6360 ;
+        :personEvent        bdr:EV6F052C576575C046 , bdr:EVD9C2029FA4C242B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM093C6A5741018E2D , bdr:NM0B9FA90691088BCF ;
+        :personStudentOf    bdr:P176 , bdr:P2150 , bdr:P2151 , bdr:P3038 , bdr:P4616 ;
+        :personTeacherOf    bdr:P10342 , bdr:P123 , bdr:P2500 , bdr:P281 , bdr:P3555 .
+}

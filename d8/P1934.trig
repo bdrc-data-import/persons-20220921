@@ -1,0 +1,90 @@
+@base          <bdg:P1934> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1934 {
+    bda:LG19A2BAB070A396F3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-25T09:22:43.928Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA113DCF56ACC8320
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-10T10:46:47.004Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place from corporation to place"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA3135C732ACF8A7D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:22:12.433Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title to office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1934  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1934 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d8/P1934.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1934 ;
+        adm:logEntry        bda:LG19A2BAB070A396F3 , bda:LGA113DCF56ACC8320 , bda:LGA3135C732ACF8A7D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA85B3C231D3E6660
+        a                   :PersonDeath ;
+        :onYear             "1766"^^xsd:gYear .
+    
+    bdr:EVB341CED904F5B5FF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1202 ;
+        :onYear             "1706"^^xsd:gYear .
+    
+    bdr:EVB55CE780B276B059
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVF41C3145534EED40
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM315B8E55A4A8272D
+        a                   :PersonPersonalName ;
+        rdfs:label          "'ba' re bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM691B4E378C8A1135
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMA337B4B9C9F86837
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 11"@bo-x-ewts .
+    
+    bdr:NT0986B86C077C15FC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTF24B192507628308
+        a                   :Note ;
+        :noteText           "In his youth, entered Bla-brang Bkra-shis-'khyil for studies.\nBecame 'Dzin-grwa Skyor-dpon and Tshogs-chen Zhal-ngo.\nAppointed Rgyud-pa Bla-ma Dbu-mdzad\nBecame 11th  Rgyud-pa Khri at Bkra-shis-'khyil, serving for 7 years.\nMany meritorious acts such as the carving of the blocks for printing the Rgyud Tik chen mo.\nWas known for his learning in expounding the 'Grel pa bzhi sbrags.\n\"khyad par du khri rin po che ngag dbang bstan 'dzin dang/ khri pa blo bzang don grub gnyis las 'grel pa'i bshad lung kha yar gsan pa sogs kyis rgyud pa'i gdan rabs rnams kyi khrod na 'grel pa bzhi sbrags 'chad pa la 'gran zla med pa'i mkhas grags rgyas/\""@en .
+    
+    bdr:P1934  a            :Person ;
+        skos:prefLabel      "bkra shis rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0986B86C077C15FC , bdr:NTF24B192507628308 ;
+        :personEvent        bdr:EVA85B3C231D3E6660 , bdr:EVB341CED904F5B5FF , bdr:EVB55CE780B276B059 , bdr:EVF41C3145534EED40 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM315B8E55A4A8272D , bdr:NM691B4E378C8A1135 , bdr:NMA337B4B9C9F86837 ;
+        :personStudentOf    bdr:P3924 .
+}

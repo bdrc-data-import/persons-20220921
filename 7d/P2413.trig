@@ -1,0 +1,64 @@
+@base          <bdg:P2413> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2413 {
+    bda:LGB37FBCD079930A57
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-08T15:42:05.251Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2413  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2413 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7d/P2413.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2413 ;
+        adm:logEntry        bda:LGB37FBCD079930A57 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8354E83217FDEB3D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1116 ;
+        :onYear             "1304"^^xsd:gYear .
+    
+    bdr:EVAC09FEDC29B7AAF2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G358 .
+    
+    bdr:EVB9D8E72418F61BC4
+        a                   :PersonDeath ;
+        :onYear             "1377"^^xsd:gYear .
+    
+    bdr:NM66770A29EF65F45A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs dpal/"@bo-x-ewts .
+    
+    bdr:NT4B86924830267F3C
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "regarded as the rebirth of shAkya bshes gnyen\nbecomes devoted to dol po pa as a result of reading the nges don rgya mtsho\nmeets dol po pa at snar thang\nteaches at gsang phu\nfounds ka la pa'i ri khrod in 'phan yul"@en .
+    
+    bdr:P2413  a            :Person ;
+        skos:prefLabel      "phun tshogs dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4B86924830267F3C ;
+        :personEvent        bdr:EV8354E83217FDEB3D , bdr:EVAC09FEDC29B7AAF2 , bdr:EVB9D8E72418F61BC4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM66770A29EF65F45A ;
+        :personStudentOf    bdr:P139 , bdr:P155 , bdr:P66 , bdr:P70 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Puntsok-Pelsang/4114"^^xsd:anyURI .
+}

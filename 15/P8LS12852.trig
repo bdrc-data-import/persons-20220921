@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12852> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12852 {
+    bda:LGB9B6F40D5850A8D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T13:55:28.26Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12852  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12852 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "15/P8LS12852.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12852 ;
+        adm:logEntry        bda:LGB9B6F40D5850A8D5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV99E5B7CDDEFC55B4
+        a                   :PersonBirth ;
+        :onYear             "1996"^^xsd:gYear .
+    
+    bdr:EVAC67E57D58DB1ED3
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1962 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCD41E1B532495DA3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1962 .
+    
+    bdr:NM0E8E93069AB9FAD9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med bstan pa'i dbang phyug"@bo-x-ewts .
+    
+    bdr:NM1031A124DEB9B165
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "a mchog mtshan nyid dgon gyi gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NT89FC9A5C04C21619
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 21" ;
+        :noteSource         bdr:MW1KG13431 ;
+        :noteText           "birth date given in this source needs to reconfirm"@en .
+    
+    bdr:P8LS12852  a        :Person ;
+        skos:prefLabel      "'jigs med bstan pa'i dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT89FC9A5C04C21619 ;
+        :personEvent        bdr:EV99E5B7CDDEFC55B4 , bdr:EVAC67E57D58DB1ED3 , bdr:EVCD41E1B532495DA3 ;
+        :personName         bdr:NM0E8E93069AB9FAD9 , bdr:NM1031A124DEB9B165 .
+}

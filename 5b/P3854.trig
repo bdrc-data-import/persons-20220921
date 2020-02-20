@@ -1,0 +1,51 @@
+@base          <bdg:P3854> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3854 {
+    bda:P3854  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3854 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5b/P3854.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3854 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC089366A82FB7C95
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM13720EB01642E165
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NM159E984DE870C397
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NT97EE6C0A561BA487
+        a                   :Note ;
+        :noteText           "teacher of one of the gcod transmissions"@en .
+    
+    bdr:P3854  a            :Person ;
+        skos:prefLabel      "grags pa seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT97EE6C0A561BA487 ;
+        :personEvent        bdr:EVC089366A82FB7C95 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM13720EB01642E165 , bdr:NM159E984DE870C397 ;
+        :personStudentOf    bdr:P3853 ;
+        :personTeacherOf    bdr:P3323 .
+}

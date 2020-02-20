@@ -1,0 +1,66 @@
+@base          <bdg:P5712> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5712 {
+    bda:LG5E570431CB335090
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-14T09:20:24.525Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5712  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5712 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "25/P5712.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5712 ;
+        adm:logEntry        bda:LG5E570431CB335090 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A0B4ECFBEFE8C39
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM4A700DE5A3892059
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje btsun bsod nams rtse mo/"@bo-x-ewts .
+    
+    bdr:NM70E8C3F6E6586410
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rtse mo/"@bo-x-ewts .
+    
+    bdr:NMC724DDA24F04F9A4
+        a                   :PersonTitle ;
+        rdfs:label          "zhe dgon pa bsod nams rtse mo/"@bo-x-ewts .
+    
+    bdr:NT5EE5B718D4DB7673
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Shangs-pa Bka'-brgyud-pa transmissions"@en .
+    
+    bdr:NTCA4D7D0E820F8E3D
+        a                   :Note ;
+        :noteText           "1552. Begins to confer Sa-skya and Shangs-pa teachings on 'Gyur-med-bde-chen."@en .
+    
+    bdr:P5712  a            :Person ;
+        skos:prefLabel      "bsod nams rtse mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5EE5B718D4DB7673 , bdr:NTCA4D7D0E820F8E3D ;
+        :personEvent        bdr:EV1A0B4ECFBEFE8C39 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4A700DE5A3892059 , bdr:NM70E8C3F6E6586410 , bdr:NMC724DDA24F04F9A4 ;
+        :personStudentOf    bdr:P2776 ;
+        :personTeacherOf    bdr:P2387 , bdr:P5471 , bdr:P644 .
+}

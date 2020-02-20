@@ -1,0 +1,70 @@
+@base          <bdg:P8804> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8804 {
+    bda:LG1768A4968D35E8EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-14T10:34:24.182Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected typo and added century"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB3C96388713DAC93
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-02T11:32:45.294Z"^^xsd:dateTime ;
+        adm:logMessage      "century of birth changed"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P8804  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8804 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6f/P8804.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8804 ;
+        adm:logEntry        bda:LG1768A4968D35E8EC , bda:LGB3C96388713DAC93 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAB0E3B644CB22873
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM3A20426B5F20B51E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kong po rgyal po stag rdo rje/"@bo-x-ewts .
+    
+    bdr:NM5BCF68B36F248DE1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "stag rdo rje/"@bo-x-ewts .
+    
+    bdr:NT711993C93CF24EFD
+        a                   :Note ;
+        :locationStatement  "p. 333" ;
+        :noteSource         bdr:MW27524 ;
+        :noteText           "dharma ruler of kong po who constructed the bridge for the tsA ri pilgrimage"@en .
+    
+    bdr:NTBAF00B0CAFCDC77F
+        a                   :Note ;
+        :locationStatement  "f. 23r" ;
+        :noteSource         bdr:MW23429 ;
+        :noteText           "1598. meets 'brug chen dpag bsam dbang po at byar phu 'bog; then the 'brug chen was invited to bzhag stag rtse"@en .
+    
+    bdr:P8804  a            :Person ;
+        skos:prefLabel      "stag rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT711993C93CF24EFD , bdr:NTBAF00B0CAFCDC77F ;
+        :personEvent        bdr:EVAB0E3B644CB22873 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3A20426B5F20B51E , bdr:NM5BCF68B36F248DE1 .
+}

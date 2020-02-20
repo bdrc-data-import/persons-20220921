@@ -1,0 +1,66 @@
+@base          <bdg:P8527> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8527 {
+    bda:LGF60AB1781504FC12
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-02T17:03:06.761Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8527  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8527 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e4/P8527.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8527 ;
+        adm:logEntry        bda:LGF60AB1781504FC12 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5EB2F0668EFE0771
+        a                   :PersonDeath ;
+        :onYear             "1400"^^xsd:gYear .
+    
+    bdr:EVA8620F489F2A623F
+        a                   :PersonBirth ;
+        :onYear             "1304"^^xsd:gYear .
+    
+    bdr:NM45B35DCA6856AE42
+        a                   :PersonPersonalName ;
+        rdfs:label          "khyab brdal lhun grub/"@bo-x-ewts .
+    
+    bdr:NM50910B9AD6D3820D
+        a                   :PersonPersonalName ;
+        rdfs:label          "khyab gdal lhun grub/"@bo-x-ewts .
+    
+    bdr:NT72946F5349ADCE01
+        a                   :Note ;
+        :locationStatement  "267" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "From this master, klong chen rab 'byams pa's lineage passed to smin gling gter chen yab sras to rdzogs chen gsum pa nges don bstan 'dzin bzang po"@en .
+    
+    bdr:NT8DBD7D14BCE4FC5B
+        a                   :Note ;
+        :noteText           "dates calculated by stephan arguiller"@en .
+    
+    bdr:P8527  a            :Person ;
+        skos:prefLabel      "khyab brdal lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT72946F5349ADCE01 , bdr:NT8DBD7D14BCE4FC5B ;
+        :personEvent        bdr:EV5EB2F0668EFE0771 , bdr:EVA8620F489F2A623F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45B35DCA6856AE42 , bdr:NM50910B9AD6D3820D ;
+        :personStudentOf    bdr:P1583 .
+}

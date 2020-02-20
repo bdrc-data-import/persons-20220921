@@ -1,0 +1,51 @@
+@base          <bdg:P2606> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2606 {
+    bda:P2606  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2606 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ea/P2606.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2606 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91D33D5B3F47653D
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM05DFACF3094418C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NMBA3E6D1EA2274EBA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bul dpon rnam rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NTF5A6B3276897C598
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:P2606  a            :Person ;
+        skos:prefLabel      "rnam rgyal bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF5A6B3276897C598 ;
+        :personEvent        bdr:EV91D33D5B3F47653D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05DFACF3094418C0 , bdr:NMBA3E6D1EA2274EBA ;
+        :personStudentOf    bdr:P2607 ;
+        :personTeacherOf    bdr:P2605 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P8003> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8003 {
+    bda:LGC695915EF3A07FB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-10T18:26:27.871Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8003  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8003 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "2e/P8003.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8003 ;
+        adm:logEntry        bda:LGC695915EF3A07FB1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVADD9F2F04A8235BD
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM6C8D60A8C7228DF8
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang chos 'byor/"@bo-x-ewts .
+    
+    bdr:NM740ADCAB37DDA7BC
+        a                   :PersonPersonalName ;
+        rdfs:label          "gtsang pa ngag dbang chos 'byor/"@bo-x-ewts .
+    
+    bdr:NT28AA47DAF26192F4
+        a                   :Note ;
+        :locationStatement  "p. 3" ;
+        :noteSource         bdr:MW24830 ;
+        :noteText           "dpal sprul received the sbyor drug from him at dzam thang, suggesting that ngag dbang chos 'byor was a jo nang adherent"@en .
+    
+    bdr:P8003  a            :Person ;
+        skos:prefLabel      "ngag dbang chos 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT28AA47DAF26192F4 ;
+        :personEvent        bdr:EVADD9F2F04A8235BD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6C8D60A8C7228DF8 , bdr:NM740ADCAB37DDA7BC ;
+        :personStudentOf    bdr:P293 ;
+        :personTeacherOf    bdr:P270 .
+}

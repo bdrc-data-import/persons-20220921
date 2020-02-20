@@ -1,0 +1,65 @@
+@base          <bdg:P2261> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2261 {
+    bda:LGAAAB6FC877182045
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T14:49:16.171Z"^^xsd:dateTime ;
+        adm:logMessage      "mtsan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2261  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2261 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0b/P2261.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2261 ;
+        adm:logEntry        bda:LGAAAB6FC877182045 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E0F747E73937A0B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVFAB79647AD0B7BC6
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM357047434F0F134D
+        a                   :PersonPersonalName ;
+        rdfs:label          "rta tshag yongs 'dzin blo gros/"@bo-x-ewts .
+    
+    bdr:NM3DA0A613C6435604
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dul ba mkhan po blo gros/"@bo-x-ewts .
+    
+    bdr:NMF3DF996FD8C446A1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros/"@bo-x-ewts .
+    
+    bdr:NT663E1A6476C84A04
+        a                   :Note ;
+        :noteText           "important dge lugs teacher who served as the official preceptor to one of the rta tshag  incarnations"@en .
+    
+    bdr:P2261  a            :Person ;
+        skos:prefLabel      "blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT663E1A6476C84A04 ;
+        :personEvent        bdr:EV4E0F747E73937A0B , bdr:EVFAB79647AD0B7BC6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM357047434F0F134D , bdr:NM3DA0A613C6435604 , bdr:NMF3DF996FD8C446A1 ;
+        :personTeacherOf    bdr:P374 .
+}

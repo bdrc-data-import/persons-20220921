@@ -1,0 +1,50 @@
+@base          <bdg:P8390> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8390 {
+    bda:P8390  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8390 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "6b/P8390.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8390 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV92C02921240393C3
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM4F89E0351D8F0991
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje mgon po/"@bo-x-ewts .
+    
+    bdr:NMEB1591692EBB85ED
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtogs ldan rdo rje mgon po/"@bo-x-ewts .
+    
+    bdr:NT7508F09C3E28BE02
+        a                   :Note ;
+        :noteText           "master and disciple of o rgyan pa in the tradition of the o rgyan bsnyen sgrub preceipts"@en .
+    
+    bdr:P8390  a            :Person ;
+        skos:prefLabel      "rdo rje mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7508F09C3E28BE02 ;
+        :personEvent        bdr:EV92C02921240393C3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4F89E0351D8F0991 , bdr:NMEB1591692EBB85ED ;
+        :personStudentOf    bdr:P1448 .
+}

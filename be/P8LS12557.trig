@@ -1,0 +1,55 @@
+@base          <bdg:P8LS12557> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12557 {
+    bda:LG6A487BE964DE663B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T16:14:43.508Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record with office and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12557  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12557 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "be/P8LS12557.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12557 ;
+        adm:logEntry        bda:LG6A487BE964DE663B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDB183BFACEBEA873
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4106 .
+    
+    bdr:NM492012EF91817DDE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "brag thog dgon gdan rabs 09"@bo-x-ewts .
+    
+    bdr:NMA4C89287F53F90B2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT6DBF6F7CA57D405B
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 583" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:P8LS12557  a        :Person ;
+        skos:prefLabel      "rig 'dzin 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6DBF6F7CA57D405B ;
+        :personEvent        bdr:EVDB183BFACEBEA873 ;
+        :personName         bdr:NM492012EF91817DDE , bdr:NMA4C89287F53F90B2 .
+}

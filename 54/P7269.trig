@@ -1,0 +1,62 @@
+@base          <bdg:P7269> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7269 {
+    bda:LG64F581692B221A81
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-19T15:45:00.777Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG938FFCE9F60F47F6
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-06-20T16:45:33.678Z"^^xsd:dateTime ;
+        adm:logMessage      "student of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P7269  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7269 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "54/P7269.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7269 ;
+        adm:logEntry        bda:LG64F581692B221A81 , bda:LG938FFCE9F60F47F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCE12D48AB20C8F6B
+        a                   :PersonBirth ;
+        :onYear             "1504"^^xsd:gYear .
+    
+    bdr:NM627010D3AE29AB2D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam grol bzang po/"@bo-x-ewts .
+    
+    bdr:NTD60EAD42992FD0B5
+        a                   :Note ;
+        :locationStatement  "p. 55" ;
+        :noteSource         bdr:MW21585 ;
+        :noteText           "b. 1504"@en .
+    
+    bdr:P7269  a            :Person ;
+        skos:prefLabel      "rnam grol bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD60EAD42992FD0B5 ;
+        :personEvent        bdr:EVCE12D48AB20C8F6B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM627010D3AE29AB2D ;
+        :personStudentOf    bdr:P2387 , bdr:P2626 , bdr:P814 ;
+        :personTeacherOf    bdr:P7270 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Namdrol-Zangpo/9923"^^xsd:anyURI .
+}

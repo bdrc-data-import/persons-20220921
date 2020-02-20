@@ -1,0 +1,54 @@
+@base          <bdg:P00KG07608> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG07608 {
+    bda:LG335F50E056F719B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-24T15:31:33.879Z"^^xsd:dateTime ;
+        adm:logMessage      "created person and released"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG912D6C6914A237D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-22T16:50:48.058Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG07608  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG07608 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "05/P00KG07608.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG07608 ;
+        adm:logEntry        bda:LG335F50E056F719B2 , bda:LG912D6C6914A237D5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66EB4E99937C5873
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMA56FB8CE67554112
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khyi shul bkra tshe/"@bo-x-ewts .
+    
+    bdr:P00KG07608  a       :Person ;
+        skos:prefLabel      "khyi shul bkra tshe/"@bo-x-ewts ;
+        :hasSon             bdr:P00KG07607 ;
+        :hasWife            bdr:P00KG07609 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV66EB4E99937C5873 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA56FB8CE67554112 .
+}

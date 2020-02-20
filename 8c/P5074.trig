@@ -1,0 +1,77 @@
+@base          <bdg:P5074> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5074 {
+    bda:LGF23FFFF45818D94B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T10:54:38.85Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5074  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5074 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8c/P5074.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5074 ;
+        adm:logEntry        bda:LGF23FFFF45818D94B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1392F39A8C710DF9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G271 .
+    
+    bdr:EV81CE170F7BC62901
+        a                   :PersonBirth ;
+        :onYear             "1848"^^xsd:gYear .
+    
+    bdr:EVB74BD8F200F2164A
+        a                   :PersonDeath ;
+        :onYear             "1900"^^xsd:gYear .
+    
+    bdr:NM69BF76142CFA0213
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "la mo grags rgan 04 blo bzang snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCDB110B6EE636DBE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lamo Drakgan 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD7060EBBFF181B0F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEF8D7DA7CFC76634
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "la mo grags rgan 04"@bo-x-ewts .
+    
+    bdr:NT0516B9A70D7246AE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT91F1715C76D25EE1
+        a                   :Note ;
+        :locationStatement  "p. 61" ;
+        :noteSource         bdr:MW19848 .
+    
+    bdr:P5074  a            :Person ;
+        skos:prefLabel      "blo bzang snyan grags rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5073 ;
+        :isRoot             true ;
+        :note               bdr:NT0516B9A70D7246AE , bdr:NT91F1715C76D25EE1 ;
+        :personEvent        bdr:EV1392F39A8C710DF9 , bdr:EV81CE170F7BC62901 , bdr:EVB74BD8F200F2164A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM69BF76142CFA0213 , bdr:NMCDB110B6EE636DBE , bdr:NMD7060EBBFF181B0F , bdr:NMEF8D7DA7CFC76634 .
+}

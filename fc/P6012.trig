@@ -1,0 +1,77 @@
+@base          <bdg:P6012> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6012 {
+    bda:LG3484D6231BDB1E77
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-01T16:17:19.737Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA320F44B81FF68D3
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-11T13:36:20.488Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury of lives link"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P6012  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6012 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fc/P6012.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6012 ;
+        adm:logEntry        bda:LG3484D6231BDB1E77 , bda:LGA320F44B81FF68D3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B275230F4591655
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV94D1760BF69D7CD3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM80BA6CF9CFA83859
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "be ru grub sras byang chub chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM8AEC85A5A5AC1DDB
+        a                   :PersonTitle ;
+        rdfs:label          "pad+ma chos rgyal sprul sku byang chub chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM8F885F106B2C2150
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NT06B918DF74E69099
+        a                   :Note ;
+        :noteText           "follower of the kaH thog tradition"@en .
+    
+    bdr:NTF3F4C53D3477E210
+        a                   :Note ;
+        :noteText           "reembodiment of gter chen chos rje gling pa;\nmany visionary teachings brought forth from his mind."@en .
+    
+    bdr:P6012  a            :Person ;
+        skos:prefLabel      "byang chub chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P671 ;
+        :isRoot             true ;
+        :note               bdr:NT06B918DF74E69099 , bdr:NTF3F4C53D3477E210 ;
+        :personEvent        bdr:EV0B275230F4591655 , bdr:EV94D1760BF69D7CD3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM80BA6CF9CFA83859 , bdr:NM8AEC85A5A5AC1DDB , bdr:NM8F885F106B2C2150 ;
+        :personStudentOf    bdr:P2942 , bdr:P2943 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jangchub-Chokyi-Nyima/8585"^^xsd:anyURI .
+}

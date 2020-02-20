@@ -1,0 +1,72 @@
+@base          <bdg:P1KG14496> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14496 {
+    bda:LG7D9EC6A88F8D19E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-17T08:53:24.471Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC902240A5C69941D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-17T10:49:01.812Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14496  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14496 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b7/P1KG14496.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14496 ;
+        adm:logEntry        bda:LG7D9EC6A88F8D19E7 , bda:LGC902240A5C69941D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F5786A2D4C4DA0A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1928 .
+    
+    bdr:EV4FC7BE7AB1542877
+        a                   :PersonBirth ;
+        :onYear             "1878"^^xsd:gYear .
+    
+    bdr:EV86243B4752E606C9
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:NM548EC86D799C1392
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sngags sa dge bshes/"@bo-x-ewts .
+    
+    bdr:NM54978EE6435E8215
+        a                   :PersonOtherName ;
+        rdfs:label          "mtshams mgon rin po che/"@bo-x-ewts .
+    
+    bdr:NMA77B2709F89DFE57
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs don yod/"@bo-x-ewts .
+    
+    bdr:NMCC7C929140592F8E
+        a                   :PersonPersonalName ;
+        rdfs:label          "sngags sa dge bshes 'jam dbyangs don yod/"@bo-x-ewts .
+    
+    bdr:P1KG14496  a        :Person ;
+        skos:prefLabel      "'jam dbyangs don yod/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV2F5786A2D4C4DA0A , bdr:EV4FC7BE7AB1542877 , bdr:EV86243B4752E606C9 ;
+        :personName         bdr:NM548EC86D799C1392 , bdr:NM54978EE6435E8215 , bdr:NMA77B2709F89DFE57 , bdr:NMCC7C929140592F8E ;
+        :personStudentOf    bdr:P1KG14497 .
+}

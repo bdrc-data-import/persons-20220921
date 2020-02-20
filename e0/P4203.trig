@@ -1,0 +1,64 @@
+@base          <bdg:P4203> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4203 {
+    bda:P4203  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4203 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e0/P4203.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4203 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B205C6638A898BB
+        a                   :PersonDeath ;
+        :onYear             "1474"^^xsd:gYear .
+    
+    bdr:EVBEA28428C172D6DA
+        a                   :PersonBirth ;
+        :onYear             "1384"^^xsd:gYear .
+    
+    bdr:NM8107DA835F41B9CE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon shAkya rgyal po/"@bo-x-ewts .
+    
+    bdr:NME44E56E4F67EEF0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya rgyal po/"@bo-x-ewts .
+    
+    bdr:NMF5DE645EDDDC34F2
+        a                   :PersonTitle ;
+        rdfs:label          "bla chen shAkya rgyal po/"@bo-x-ewts .
+    
+    bdr:NT7B465ABAFA12CF12
+        a                   :Note ;
+        :noteText           "called bla chen shAkya rgyal po; served as the lineage transmitter of teachings to 'gos lo tsa ba gzhon nu dpal"@en .
+    
+    bdr:NTD4016ED860625720
+        a                   :Note ;
+        :locationStatement  "p. 1804" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P4203  a            :Person ;
+        skos:prefLabel      "shAkya rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B465ABAFA12CF12 , bdr:NTD4016ED860625720 ;
+        :personEvent        bdr:EV4B205C6638A898BB , bdr:EVBEA28428C172D6DA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8107DA835F41B9CE , bdr:NME44E56E4F67EEF0E , bdr:NMF5DE645EDDDC34F2 ;
+        :personStudentOf    bdr:P9781 ;
+        :personTeacherOf    bdr:P318 .
+}

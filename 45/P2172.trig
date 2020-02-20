@@ -1,0 +1,49 @@
+@base          <bdg:P2172> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2172 {
+    bda:P2172  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2172 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "45/P2172.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2172 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4331670533029AC9
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NMC27FD9FB660CCC11
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis lde mgon/"@bo-x-ewts .
+    
+    bdr:NT35228B24D2E1D6B2
+        a                   :Note ;
+        :locationStatement  "p. 108" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P2172  a            :Person ;
+        skos:prefLabel      "bkra shis lde mgon/"@bo-x-ewts ;
+        :hasFather          bdr:P2173 ;
+        :hasMother          bdr:P2174 ;
+        :hasSon             bdr:P2175 , bdr:P2176 ;
+        :isRoot             true ;
+        :note               bdr:NT35228B24D2E1D6B2 ;
+        :personEvent        bdr:EV4331670533029AC9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC27FD9FB660CCC11 .
+}

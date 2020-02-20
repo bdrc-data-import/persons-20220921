@@ -1,0 +1,50 @@
+@base          <bdg:P2185> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2185 {
+    bda:P2185  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2185 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a1/P2185.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2185 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BA20C2A9A55FCDE
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM8558E841C17A1472
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMA49A8692A71D34C8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtsed thang bstan pa yar 'phel/"@bo-x-ewts .
+    
+    bdr:NT41D261F0C82CB324
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P2185  a            :Person ;
+        skos:prefLabel      "bstan pa yar 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT41D261F0C82CB324 ;
+        :personEvent        bdr:EV1BA20C2A9A55FCDE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8558E841C17A1472 , bdr:NMA49A8692A71D34C8 ;
+        :personStudentOf    bdr:P2181 .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P4690> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4690 {
+    bda:LGCD94060F4B2AF34E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T09:47:27.117Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4690  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4690 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5c/P4690.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4690 ;
+        adm:logEntry        bda:LGCD94060F4B2AF34E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV53ED0A6189C9792B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1390 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1522E840DA9D7CB6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "o rgyan bstan 'dzin sprul sku 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM335938E707273144
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9CE6D28E47550740
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:NTD96874C1D95795D2
+        a                   :Note ;
+        :locationStatement  "p. 99v" ;
+        :noteSource         bdr:MW19844 .
+    
+    bdr:P4690  a            :Person ;
+        skos:prefLabel      "'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9CE6D28E47550740 , bdr:NTD96874C1D95795D2 ;
+        :personEvent        bdr:EV53ED0A6189C9792B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1522E840DA9D7CB6 , bdr:NM335938E707273144 .
+}

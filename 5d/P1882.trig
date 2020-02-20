@@ -1,0 +1,66 @@
+@base          <bdg:P1882> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1882 {
+    bda:LG4081CEF9E3DC0D78
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-10T15:11:12.283Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favour of P2464"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1882  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1882 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "5d/P1882.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1882 ;
+        adm:logEntry        bda:LG4081CEF9E3DC0D78 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P2464 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV577B3F68EAEC21CB
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EV6065A9DB0446F331
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G313 .
+    
+    bdr:NM1554CBAD088AC44F
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog bzang po, 'jam dbyangs/"@bo-x-ewts .
+    
+    bdr:NM5E13BEFB3BF649FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dkon mchog bzang po/"@bo-x-ewts .
+    
+    bdr:NT2881B5CC564824C3
+        a                   :Note ;
+        :noteText           "Ming mdzod: The reembodiment of Rigs-ldan Drag-po."@en .
+    
+    bdr:NT918830594DAB8A13
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1882  a            :Person ;
+        skos:prefLabel      "'jam dbyangs dkon mchog bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2881B5CC564824C3 , bdr:NT918830594DAB8A13 ;
+        :personEvent        bdr:EV577B3F68EAEC21CB , bdr:EV6065A9DB0446F331 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1554CBAD088AC44F , bdr:NM5E13BEFB3BF649FD ;
+        :personTeacherOf    bdr:P1883 , bdr:P487 .
+}

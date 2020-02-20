@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13790> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13790 {
+    bda:LG335AB5D983554C63
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-20T12:00:49.444Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13790  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13790 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "99/P8LS13790.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13790 ;
+        adm:logEntry        bda:LG335AB5D983554C63 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA99E926391E55CA5
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NMA3628A17F8E26106
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:NMA66280CDDFDD88DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dkar sems pa chen po bsod nams rin chen/"@bo-x-ewts .
+    
+    bdr:NT9CAD8EB337AC3DC2
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 106" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13790  a        :Person ;
+        skos:prefLabel      "bsod nams rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9CAD8EB337AC3DC2 ;
+        :personEvent        bdr:EVA99E926391E55CA5 ;
+        :personName         bdr:NMA3628A17F8E26106 , bdr:NMA66280CDDFDD88DE .
+}

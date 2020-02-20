@@ -1,0 +1,63 @@
+@base          <bdg:P734> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P734 {
+    bda:LG5B67E2219D772FC9
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-15T16:38:31.182Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P734  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P734 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "bc/P734.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P734 ;
+        adm:logEntry        bda:LG5B67E2219D772FC9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24BF36347A0E63B7
+        a                   :PersonDeath ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:EV8BD2D0187E7A0265
+        a                   :PersonBirth ;
+        :notAfter           "1898"^^xsd:gYear ;
+        :notBefore          "1897"^^xsd:gYear .
+    
+    bdr:NM11CF82004F175206
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klong chen ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF39BCA54CE0F8BFB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' 'gyur rin po che klong chen ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NT7EDDBF623AFD0AE6
+        a                   :Note ;
+        :locationStatement  "t.p." ;
+        :noteSource         bdr:MW27918 ;
+        :noteText           "the title page to this work gives the year of birth as 1898"@en .
+    
+    bdr:P734  a             :Person ;
+        skos:prefLabel      "klong chen ye shes rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7EDDBF623AFD0AE6 ;
+        :personEvent        bdr:EV24BF36347A0E63B7 , bdr:EV8BD2D0187E7A0265 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11CF82004F175206 , bdr:NMF39BCA54CE0F8BFB ;
+        :personTeacherOf    bdr:P00KG09697 , bdr:P6455 , bdr:P735 .
+}

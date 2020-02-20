@@ -1,0 +1,41 @@
+@base          <bdg:P641> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P641 {
+    bda:P641  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P641 ;
+        adm:facetIndex      3 ;
+        adm:gitPath         "5e/P641.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P641 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91187BE65AFA65C0
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMBDC9A17E2D48B905
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ma hA nA tha/"@bo-x-ewts .
+    
+    bdr:P641  a             :Person ;
+        skos:prefLabel      "ma hA nA tha/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV91187BE65AFA65C0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBDC9A17E2D48B905 ;
+        :personTeacherOf    bdr:P642 .
+}

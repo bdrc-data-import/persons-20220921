@@ -1,0 +1,50 @@
+@base          <bdg:P115> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P115 {
+    bda:P115  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P115 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a5/P115.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P115 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF95824BB1F5A6A0
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM37D69E59272F9B69
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya btang 'phrin las chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM3926BD971F10F18A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT9DB88D36C58F840B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P115  a             :Person ;
+        skos:prefLabel      "'phrin las chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9DB88D36C58F840B ;
+        :personEvent        bdr:EVCF95824BB1F5A6A0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37D69E59272F9B69 , bdr:NM3926BD971F10F18A ;
+        :personTeacherOf    bdr:P107 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P1KG1448> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1448 {
+    bda:LGD136C10BC8709DF8
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-16T14:52:35.385Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1448  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1448 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "21/P1KG1448.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1448 ;
+        adm:logEntry        bda:LGD136C10BC8709DF8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV805A5D7DAF5A3BD0
+        a                   :PersonDeath ;
+        :onYear             "1990"^^xsd:gYear .
+    
+    bdr:EV9BD1642910F7CC5F
+        a                   :PersonBirth ;
+        :onYear             "1926"^^xsd:gYear .
+    
+    bdr:NMAD6B89068FDEEB29
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NTAF17360EB93F5BC5
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1442 ;
+        :noteText           "biography of Lobzang Nyima"@en .
+    
+    bdr:P1KG1448  a         :Person ;
+        skos:prefLabel      "blo bzang nyi ma/"@bo-x-ewts ;
+        :hasFather          bdr:P1KG1449 ;
+        :hasMother          bdr:P1KG1450 ;
+        :isRoot             true ;
+        :note               bdr:NTAF17360EB93F5BC5 ;
+        :personEvent        bdr:EV805A5D7DAF5A3BD0 , bdr:EV9BD1642910F7CC5F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAD6B89068FDEEB29 .
+}

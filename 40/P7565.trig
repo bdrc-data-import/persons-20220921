@@ -1,0 +1,83 @@
+@base          <bdg:P7565> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7565 {
+    bda:LG12ECAAAE092973CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-07T13:38:30.834Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG1D6F18CFF3995752
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T17:46:41.856Z"^^xsd:dateTime ;
+        adm:logMessage      "cleaned up tulku titles and incarnation relations"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGCCDDCC72BEABF4DF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P7565  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7565 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "40/P7565.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7565 ;
+        adm:logEntry        bda:LG12ECAAAE092973CD , bda:LG1D6F18CFF3995752 , bda:LGCCDDCC72BEABF4DF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV53EA6B37F89D53E9
+        a                   :PersonOccupiesSeat .
+    
+    bdr:EV600A3C659F048A3B
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM18A8EB1B94461FA6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rakra 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM24891AC9555E34E9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tsha ba dpa' shod rak ra bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM85A25662A6AA4333
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rak ra 04"@bo-x-ewts .
+    
+    bdr:NMC365039C72CD9C60
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT5A278B9A9D6A7B99
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 109" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "de nyid lha ldan chos kyi zhing du phebs nas chos sde chen po 'bras spungs sgo mang du gzhung chen bka' pod lnga la thos bsam rnam par dag pa mdzad cing / dge bshes mtshan btags bzhes/ gtong sgo sku 'gyed sogs 'gran bral mdzad/ sku tshe smad du grub pa'i go 'phang mthon por gshegs shing / rgya gar grub chen gyi mdzad spyod ji lta ba bzhin mdzad/ skabs shig dpa' shod du bzhugs skabs/ a mdo gnas skor ba zhig mjal du phyin pas 'phags pa klu sgrub dngos su mjal ba byung zhing / skye 'gro'i don dpag tu med par mdzad snang ngo/ /'di'i sku dmar gdung sho pa mdo dgon par yod/"@bo-x-ewts .
+    
+    bdr:P7565  a            :Person ;
+        skos:prefLabel      "bshad sgrub rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P372 ;
+        :isRoot             true ;
+        :note               bdr:NT5A278B9A9D6A7B99 ;
+        :personEvent        bdr:EV53EA6B37F89D53E9 , bdr:EV600A3C659F048A3B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18A8EB1B94461FA6 , bdr:NM24891AC9555E34E9 , bdr:NM85A25662A6AA4333 , bdr:NMC365039C72CD9C60 ;
+        :personStudentOf    bdr:P6306 .
+}

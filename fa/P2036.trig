@@ -1,0 +1,77 @@
+@base          <bdg:P2036> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2036 {
+    bda:LG7BFA204A028DC164
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T16:44:28.237Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2036  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2036 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fa/P2036.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2036 ;
+        adm:logEntry        bda:LG7BFA204A028DC164 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F6012B106E29ABD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6B4EB3CBF8FDF276
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVD13E59B8383AABD7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVE49B35B8D582AC70
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM08A7CFE1FCE63ED4
+        a                   :PersonOtherName ;
+        rdfs:label          "ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3DC5477411431173
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 24"@bo-x-ewts .
+    
+    bdr:NM535A30A06FE03E6B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT1A4E52FD77FF4355
+        a                   :Note ;
+        :locationStatement  "p. 133-135" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "the founding of brag lung dgon of gcan tsha is attributed to this abbot\nhe was given ho thog thu title by the 8th dalai lama"@en .
+    
+    bdr:P2036  a            :Person ;
+        skos:prefLabel      "ngag dbang tshul khrims/"@bo-x-ewts ;
+        :hasNephew          bdr:P412 ;
+        :isRoot             true ;
+        :note               bdr:NT1A4E52FD77FF4355 ;
+        :personEvent        bdr:EV1F6012B106E29ABD , bdr:EV6B4EB3CBF8FDF276 , bdr:EVD13E59B8383AABD7 , bdr:EVE49B35B8D582AC70 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08A7CFE1FCE63ED4 , bdr:NM3DC5477411431173 , bdr:NM535A30A06FE03E6B ;
+        :personTeacherOf    bdr:P412 .
+}

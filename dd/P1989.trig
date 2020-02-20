@@ -1,0 +1,88 @@
+@base          <bdg:P1989> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1989 {
+    bda:LGA55E964256B72AA9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-04T13:52:54.961Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place to G1300"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1989  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1989 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "dd/P1989.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1989 ;
+        adm:logEntry        bda:LGA55E964256B72AA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA76D9BF8EEB18CC7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G328 .
+    
+    bdr:EVD9BA64813060B6A1
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1300 ;
+        :onYear             "1635"^^xsd:gYear .
+    
+    bdr:EVFC46B47193CF2CD0
+        a                   :PersonDeath ;
+        :onYear             "1707"^^xsd:gYear .
+    
+    bdr:NM39D5B9CA397B2328
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM7BCB6DC3048A203C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman khang pa ngag dbang chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT2915E9542AADBAB3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT2983AE1A972DFCE8
+        a                   :Note ;
+        :locationStatement  "p. 676" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a biographical sketch"@en .
+    
+    bdr:NT33A1FAFA6C6B3A6F
+        a                   :Note ;
+        :locationStatement  "p. 1322" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT7EA0AF55454720BC
+        a                   :Note ;
+        :locationStatement  "p. 222" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:NT9D5BD26346200D97
+        a                   :Note ;
+        :noteText           "Entered Shel-dkar Chos-sde for studies.\nGsung 'bum in 2 volumes."@en .
+    
+    bdr:P1989  a            :Person ;
+        skos:prefLabel      "ngag dbang chos 'phel/"@bo-x-ewts ;
+        :hasFather          bdr:P1990 ;
+        :hasMother          bdr:P1991 ;
+        :isRoot             true ;
+        :note               bdr:NT2915E9542AADBAB3 , bdr:NT2983AE1A972DFCE8 , bdr:NT33A1FAFA6C6B3A6F , bdr:NT7EA0AF55454720BC , bdr:NT9D5BD26346200D97 ;
+        :personEvent        bdr:EVA76D9BF8EEB18CC7 , bdr:EVD9BA64813060B6A1 , bdr:EVFC46B47193CF2CD0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39D5B9CA397B2328 , bdr:NM7BCB6DC3048A203C ;
+        :personStudentOf    bdr:P106 , bdr:P1083 , bdr:P1992 , bdr:P1993 , bdr:P1994 , bdr:P37 .
+}

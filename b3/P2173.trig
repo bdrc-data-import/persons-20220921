@@ -1,0 +1,59 @@
+@base          <bdg:P2173> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2173 {
+    bda:LG790F86970DD2A2DB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-29T17:00:37.899Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2173  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2173 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b3/P2173.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2173 ;
+        adm:logEntry        bda:LG790F86970DD2A2DB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV94EF3657A1A0DF15
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G2LS537 ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:EVF4397066BB6DE08C
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:NM805E6DD820A15DE1
+        a                   :PersonPersonalName ;
+        rdfs:label          "nyi ma mgon/"@bo-x-ewts .
+    
+    bdr:NM896AF140162866F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skyid lde nyi ma mgon/"@bo-x-ewts .
+    
+    bdr:P2173  a            :Person ;
+        skos:prefLabel      "skyid lde nyi ma mgon/"@bo-x-ewts ;
+        :hasSon             bdr:P2172 , bdr:P4281 ;
+        :hasWife            bdr:P2174 , bdr:P4282 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV94EF3657A1A0DF15 , bdr:EVF4397066BB6DE08C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM805E6DD820A15DE1 , bdr:NM896AF140162866F2 .
+}

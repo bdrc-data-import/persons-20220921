@@ -1,0 +1,62 @@
+@base          <bdg:P444> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P444 {
+    bda:LG0BF6A3AB6B031489
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T15:03:46.604Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P444  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P444 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "de/P444.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P444 ;
+        adm:logEntry        bda:LG0BF6A3AB6B031489 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCE0AAC7D84BE3F92
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G714 ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM50038301AC5385BA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMABD9937EADC7B06B
+        a                   :PersonTitle ;
+        rdfs:label          "g.yu lung pa yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT009EBE0E29146097
+        a                   :Note ;
+        :noteText           "'di'i 'khrungs yul gyi sa ming skor snye mo khul du yang g.yu lung zhes pa mchis pas mu mthud bsdur zhib by argyu/"@en .
+    
+    bdr:NT7B9C0B96BC060F49
+        a                   :Note ;
+        :noteText           "Connected with the Dpal-'khor Chos-sde. Teaches Gtsang-smyon in about 1470."@en .
+    
+    bdr:P444  a             :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT009EBE0E29146097 , bdr:NT7B9C0B96BC060F49 ;
+        :personEvent        bdr:EVCE0AAC7D84BE3F92 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM50038301AC5385BA , bdr:NMABD9937EADC7B06B ;
+        :personTeacherOf    bdr:P442 .
+}

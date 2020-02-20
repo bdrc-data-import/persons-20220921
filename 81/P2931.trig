@@ -1,0 +1,53 @@
+@base          <bdg:P2931> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2931 {
+    bda:P2931  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2931 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "81/P2931.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2931 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4728264469A7A7CC
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM1299F072990895B8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma dpal grub/"@bo-x-ewts .
+    
+    bdr:NM1D60362A1BAE9BBA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgra pa karma dpal grub/"@bo-x-ewts .
+    
+    bdr:NTB3DBC1F9482C65DC
+        a                   :Note ;
+        :locationStatement  "f. 1, f. 14v." ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in the transmission lineage of the literary and grammatical teachings in eastern tibet"@en .
+    
+    bdr:P2931  a            :Person ;
+        skos:prefLabel      "karma dpal grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB3DBC1F9482C65DC ;
+        :personEvent        bdr:EV4728264469A7A7CC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1299F072990895B8 , bdr:NM1D60362A1BAE9BBA ;
+        :personStudentOf    bdr:P1043 , bdr:P2930 ;
+        :personTeacherOf    bdr:P956 .
+}

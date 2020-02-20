@@ -1,0 +1,53 @@
+@base          <bdg:P3864> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3864 {
+    bda:P3864  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3864 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "31/P3864.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3864 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88DCE12DFE0DAECD
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMA09F8E708B31CC91
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA54F608F5F7DFABC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bka' 'gyur ba shAkya rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1120E1521478B4D4
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 33r, 34r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in  prajnaparamita transmission slineage, stemming from rong zom"@en .
+    
+    bdr:P3864  a            :Person ;
+        skos:prefLabel      "shAkya rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1120E1521478B4D4 ;
+        :personEvent        bdr:EV88DCE12DFE0DAECD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA09F8E708B31CC91 , bdr:NMA54F608F5F7DFABC ;
+        :personStudentOf    bdr:P3845 , bdr:P464 , bdr:P5761 ;
+        :personTeacherOf    bdr:P1694 , bdr:P3183 , bdr:P3869 .
+}

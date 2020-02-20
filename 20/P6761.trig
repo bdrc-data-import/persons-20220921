@@ -1,0 +1,82 @@
+@base          <bdg:P6761> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6761 {
+    bda:LG08ABB03A94484E4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T16:15:43.546Z"^^xsd:dateTime ;
+        adm:logMessage      "yig nor dang mtshan mnan gsar pa byed yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG401B6EBDE37562E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-29T12:36:13.673Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF983A221BF6B2C3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P6761  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6761 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "20/P6761.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6761 ;
+        adm:logEntry        bda:LG08ABB03A94484E4C , bda:LG401B6EBDE37562E4 , bda:LGF983A221BF6B2C3E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D16493FBAB0415F
+        a                   :PersonBirth ;
+        :onYear             "1781"^^xsd:gYear .
+    
+    bdr:EV5B6FFD4FF6DBFDBA
+        a                   :PersonDeath ;
+        :onYear             "1839"^^xsd:gYear .
+    
+    bdr:NM0B477C6E4C7FB51E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gtsang paN+Di ta 03"@bo-x-ewts .
+    
+    bdr:NM0C92079999E15B1B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang paN+Di ta 03 bsod nams chos mdzad/"@bo-x-ewts .
+    
+    bdr:NM54B7278A8FAF0239
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsang Pandita 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM987B39BAA45C4F1F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams chos mdzad/"@bo-x-ewts .
+    
+    bdr:NT815B13DBA65F3537
+        a                   :Note ;
+        :locationStatement  "p. 112" ;
+        :noteSource         bdr:MW19871 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6761  a            :Person ;
+        skos:prefLabel      "bsod nams chos mdzad/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3788 ;
+        :isRoot             true ;
+        :note               bdr:NT815B13DBA65F3537 ;
+        :personEvent        bdr:EV2D16493FBAB0415F , bdr:EV5B6FFD4FF6DBFDBA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B477C6E4C7FB51E , bdr:NM0C92079999E15B1B , bdr:NM54B7278A8FAF0239 , bdr:NM987B39BAA45C4F1F .
+}

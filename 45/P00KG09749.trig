@@ -1,0 +1,65 @@
+@base          <bdg:P00KG09749> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG09749 {
+    bda:LG00F52017498E48B4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-15T16:00:17.878Z"^^xsd:dateTime ;
+        adm:logMessage      "added year of birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG734C9ACF70E88101
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-11T12:43:55.71Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG09749  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG09749 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "45/P00KG09749.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG09749 ;
+        adm:logEntry        bda:LG00F52017498E48B4 , bda:LG734C9ACF70E88101 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B8ED551F16EE3AB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:EV8D637BF8DC259082
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1927"^^xsd:gYear .
+    
+    bdr:NM210846867D3642E6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes chos dar/"@bo-x-ewts .
+    
+    bdr:NM3FE3FEB993AA3FC2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po ye shes chos dar/"@bo-x-ewts .
+    
+    bdr:NT47CB03D9EBC9A010
+        a                   :Note ;
+        :noteText           "Former professor of Kagyu sect at central Institute of higher Tibetan studies, Sarnath, India"@en .
+    
+    bdr:P00KG09749  a       :Person ;
+        skos:prefLabel      "ye shes chos dar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT47CB03D9EBC9A010 ;
+        :personEvent        bdr:EV3B8ED551F16EE3AB , bdr:EV8D637BF8DC259082 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM210846867D3642E6 , bdr:NM3FE3FEB993AA3FC2 .
+}

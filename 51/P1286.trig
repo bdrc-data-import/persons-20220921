@@ -1,0 +1,89 @@
+@base          <bdg:P1286> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1286 {
+    bda:LG186E1DD586CCDACE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T12:11:18.9Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG95545EBB2DF790FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-04-08T09:58:39.858Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1286  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1286 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "51/P1286.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1286 ;
+        adm:logEntry        bda:LG186E1DD586CCDACE , bda:LG95545EBB2DF790FE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8250DB4032BAB7FF
+        a                   :PersonDeath ;
+        :onYear             "1718"^^xsd:gYear .
+    
+    bdr:EVDF5EAE0A303F9EDC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G916 ;
+        :onYear             "1659"^^xsd:gYear .
+    
+    bdr:EVF9A2DA3EB23E63EF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4853 .
+    
+    bdr:NM2552EAFE9705071E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshangs dbyangs phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM4A7D04850630CF1C
+        a                   :PersonTitle ;
+        rdfs:label          "dka' bcu/"@bo-x-ewts .
+    
+    bdr:NM8B31BAC1363A34FF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dka' bcu 02 blo bzang tshangs dbyangs phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT299895055876ACC3
+        a                   :Note ;
+        :locationStatement  "p. 96" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT35562068F8338B11
+        a                   :Note ;
+        :locationStatement  "p. 867" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT3A06484DB273BBAC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTB472FBCF0B3A95C0
+        a                   :Note ;
+        :noteText           "Lineage: Khyung-po U-tsa.\nRecognized as the embodiment of Dka'-bcu Bsod-nams-bkra-shis and brought to Bde-thang Dgon Dga'-ldan-chos-'khor-gling.\nWent to Dbus and entered 'Bras-spungs Sgo-mang and took his Dka'-bcu degree at Gsang-phu.\nStudied at Rgyud-stod.\n1682. Return to Mdo-smad and founds Bde-thang Dgon.\n1703. Founds Ri-bo-che.\n1710. Preaches at Mkhar-sngon."@en .
+    
+    bdr:P1286  a            :Person ;
+        skos:prefLabel      "blo bzang tshangs dbyangs phyogs las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT299895055876ACC3 , bdr:NT35562068F8338B11 , bdr:NT3A06484DB273BBAC , bdr:NTB472FBCF0B3A95C0 ;
+        :personEvent        bdr:EV8250DB4032BAB7FF , bdr:EVDF5EAE0A303F9EDC , bdr:EVF9A2DA3EB23E63EF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2552EAFE9705071E , bdr:NM4A7D04850630CF1C , bdr:NM8B31BAC1363A34FF ;
+        :personStudentOf    bdr:P1287 , bdr:P37 .
+}

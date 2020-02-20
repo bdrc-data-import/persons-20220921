@@ -1,0 +1,61 @@
+@base          <bdg:P00KG010091> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG010091 {
+    bda:LG0528E966C5EF259B
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-09T11:49:34.384Z"^^xsd:dateTime ;
+        adm:logMessage      "created preson"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG91F79AB9D270899B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-13T15:54:25.276Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed personal name"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:P00KG010091  a      adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG010091 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "78/P00KG010091.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG010091 ;
+        adm:logEntry        bda:LG0528E966C5EF259B , bda:LG91F79AB9D270899B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1507C0DC3081B825
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM54EA418F79E47F71
+        a                   :PersonPersonalName ;
+        rdfs:label          "tashi tsering"@en .
+    
+    bdr:NM8DDF3E38BAD007C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis tshe ring /"@bo-x-ewts .
+    
+    bdr:NTE64831F2D245A4F2
+        a                   :Note ;
+        :noteText           "modern tibetan scholar on computer science and author of tibetan, chinese, english information technology dictionary"@en .
+    
+    bdr:P00KG010091  a      :Person ;
+        skos:prefLabel      "bkra shis tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE64831F2D245A4F2 ;
+        :personEvent        bdr:EV1507C0DC3081B825 ;
+        :personName         bdr:NM54EA418F79E47F71 , bdr:NM8DDF3E38BAD007C3 .
+}

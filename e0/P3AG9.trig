@@ -1,0 +1,68 @@
+@base          <bdg:P3AG9> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG9 {
+    bda:LG46131E1B4FD2EE69
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-16T18:03:36.404Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGA5D21DDA29410F77
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T16:24:02.027Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGD6A0AC38919198BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T16:10:50.883Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3AG9  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG9 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e0/P3AG9.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG9 ;
+        adm:logEntry        bda:LG46131E1B4FD2EE69 , bda:LGA5D21DDA29410F77 , bda:LGD6A0AC38919198BE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F33234361FD45FA
+        a                   :PersonDeath ;
+        :onYear             "1293"^^xsd:gYear .
+    
+    bdr:EVB7D553204B020CCD
+        a                   :PersonBirth ;
+        :onYear             "1239"^^xsd:gYear .
+    
+    bdr:NMC2D7043BECDADD8B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bru ston 'dul ba rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD06955E38661362A
+        a                   :Note ;
+        :noteText           "the 8th holder of the bon a khrid rdzogs chen lineage"@en .
+    
+    bdr:P3AG9  a            :Person ;
+        skos:prefLabel      "bru ston 'dul ba rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD06955E38661362A ;
+        :personEvent        bdr:EV0F33234361FD45FA , bdr:EVB7D553204B020CCD ;
+        :personName         bdr:NMC2D7043BECDADD8B ;
+        :personStudentOf    bdr:P3AG8 ;
+        :personTeacherOf    bdr:P3AG11 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Druton-Dulwa-Gyeltsen/13093"^^xsd:anyURI .
+}

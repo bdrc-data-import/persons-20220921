@@ -1,0 +1,65 @@
+@base          <bdg:P6521> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6521 {
+    bda:LG4AACE68C74C9CA0C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-15T14:07:52.131Z"^^xsd:dateTime ;
+        adm:logMessage      "added name from khams sde dge rgyal po'i srid don lo rgyus"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6521  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6521 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "89/P6521.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6521 ;
+        adm:logEntry        bda:LG4AACE68C74C9CA0C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1697255C2010C1A1
+        a                   :PersonBirth ;
+        :onYear             "1799"^^xsd:gYear .
+    
+    bdr:EV7980F816BE923E45
+        a                   :PersonDeath ;
+        :onYear             "1863"^^xsd:gYear .
+    
+    bdr:NM2B22E23123BF5D41
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag rong mgon po rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMA8A58959B5C8412F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMEB7C0C70A1C43380
+        a                   :PersonPersonalName ;
+        rdfs:label          "nyag skad bu long ma/"@bo-x-ewts .
+    
+    bdr:NT2DF7AF8E913CFDB2
+        a                   :Note ;
+        :locationStatement  "p. 110" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "killed during the tibetan government invasion of nyag rong"@en .
+    
+    bdr:P6521  a            :Person ;
+        skos:prefLabel      "mgon po rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2DF7AF8E913CFDB2 ;
+        :personEvent        bdr:EV1697255C2010C1A1 , bdr:EV7980F816BE923E45 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2B22E23123BF5D41 , bdr:NMA8A58959B5C8412F , bdr:NMEB7C0C70A1C43380 .
+}

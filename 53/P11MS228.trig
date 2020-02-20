@@ -1,0 +1,58 @@
+@base          <bdg:P11MS228> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS228 {
+    bda:LG885678B63821F4D7
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-24T13:51:51.078Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS228  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS228 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "53/P11MS228.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS228 ;
+        adm:logEntry        bda:LG885678B63821F4D7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE31E345A15F520CE
+        a                   :PersonDeath ;
+        :onYear             "1913"^^xsd:gYear .
+    
+    bdr:EVF46CA6B9452AC5A6
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1876"^^xsd:gYear .
+    
+    bdr:NM431EDBFFABDB3FC9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang lhun grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTACCFEF5C7AF0C266
+        a                   :Note ;
+        :locationStatement  "pp. 413-417" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "biodata :"@en .
+    
+    bdr:P11MS228  a         :Person ;
+        skos:prefLabel      "ngag dbang lhun grub rgyal mtshan/"@bo-x-ewts ;
+        :hasBrother         bdr:P979 ;
+        :hasFather          bdr:P976 ;
+        :isRoot             true ;
+        :note               bdr:NTACCFEF5C7AF0C266 ;
+        :personEvent        bdr:EVE31E345A15F520CE , bdr:EVF46CA6B9452AC5A6 ;
+        :personName         bdr:NM431EDBFFABDB3FC9 .
+}

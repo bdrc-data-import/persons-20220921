@@ -1,0 +1,61 @@
+@base          <bdg:P00KG03924> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG03924 {
+    bda:LG218D29431F9219AE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-18T07:29:32.407Z"^^xsd:dateTime ;
+        adm:logMessage      "marked name as english"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG932D27F4A9CACCAF
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-11-15T14:57:03.767Z"^^xsd:dateTime ;
+        adm:logMessage      "created person and published"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG03924  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG03924 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "dd/P00KG03924.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG03924 ;
+        adm:logEntry        bda:LG218D29431F9219AE , bda:LG932D27F4A9CACCAF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2ED7350169E81886
+        a                   :PersonDeath ;
+        :onYear             "1865"^^xsd:gYear .
+    
+    bdr:EVCFBBAE04C1878AFB
+        a                   :PersonBirth ;
+        :onYear             "1822"^^xsd:gYear .
+    
+    bdr:NMEA80841F3409EB53
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bobrovnikov, a. alekshandrovich"@en .
+    
+    bdr:NTE7A2E19128B2E89F
+        a                   :Note ;
+        :noteText           "mongolian scholar"@en .
+    
+    bdr:P00KG03924  a       :Person ;
+        skos:prefLabel      "bobrovnikov, a. alekshandrovich"@en ;
+        :isRoot             true ;
+        :note               bdr:NTE7A2E19128B2E89F ;
+        :personEvent        bdr:EV2ED7350169E81886 , bdr:EVCFBBAE04C1878AFB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMEA80841F3409EB53 .
+}

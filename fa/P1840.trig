@@ -1,0 +1,71 @@
+@base          <bdg:P1840> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1840 {
+    bda:P1840  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1840 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fa/P1840.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1840 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5E7A7AF99F18484C
+        a                   :PersonBirth ;
+        :onYear             "1059"^^xsd:gYear .
+    
+    bdr:EV9C187979C3E06579
+        a                   :PersonDeath ;
+        :onYear             "1131"^^xsd:gYear .
+    
+    bdr:NM1883E982EE437202
+        a                   :PersonTitle ;
+        rdfs:label          "dol pa dmar zhur ba/"@bo-x-ewts .
+    
+    bdr:NM83F93E3F7222BEF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dol pa shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB91372350576C2C4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC1284150E0B60256
+        a                   :PersonTitle ;
+        rdfs:label          "rog shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2EB50FB55B955315
+        a                   :Note ;
+        :locationStatement  "p. 837" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT352042BF87851961
+        a                   :Note ;
+        :locationStatement  "p. 1625" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTB752AA704D5B47CB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Gzhung-pa"@en .
+    
+    bdr:P1840  a            :Person ;
+        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2EB50FB55B955315 , bdr:NT352042BF87851961 , bdr:NTB752AA704D5B47CB ;
+        :personEvent        bdr:EV5E7A7AF99F18484C , bdr:EV9C187979C3E06579 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1883E982EE437202 , bdr:NM83F93E3F7222BEF3 , bdr:NMB91372350576C2C4 , bdr:NMC1284150E0B60256 ;
+        :personStudentOf    bdr:P3442 .
+}

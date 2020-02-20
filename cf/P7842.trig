@@ -1,0 +1,78 @@
+@base          <bdg:P7842> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7842 {
+    bda:LG299AE0237A9792CB
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-25T11:03:07.046Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year and death year"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG5E8E8789BC89A85F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-18T10:05:50.14Z"^^xsd:dateTime ;
+        adm:logMessage      "merged record with that of ldan ma mi bskyod rdo jre"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P7842  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7842 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cf/P7842.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7842 ;
+        adm:logEntry        bda:LG299AE0237A9792CB , bda:LG5E8E8789BC89A85F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV129CB42466DFBF17
+        a                   :PersonDeath ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:EV2265A4BF7DE47218
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:NM075D99D956613A83
+        a                   :PersonPersonalName ;
+        rdfs:label          "mi bskyod rdo rje/"@bo-x-ewts .
+    
+    bdr:NM49A90059C68EA107
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ldan ma blo bzang rdo rje/"@bo-x-ewts .
+    
+    bdr:NM8B79013FC1EEFEA4
+        a                   :PersonTitle ;
+        rdfs:label          "ldan ma mi bskyod rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA9DA292D1619F921
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang rdo rje/"@bo-x-ewts .
+    
+    bdr:NT7081F2ACA74143B2
+        a                   :Note ;
+        :noteText           "the dates of birth and passing are from an e-mail from brag g.yab skyabs mgon dated 25/07/09: \"His lo-rtags (\"year-sign\")  was Monkey (1908).  He passed away 1975 on the 10th of 2nd month in Byangchub Khang gsar, Khrom gzigs sgang, Lhasa. He was several days in the mediation. His cremation was in Pha bong kha cemetery.\""@en .
+    
+    bdr:NTEA3101504329D16F
+        a                   :Note ;
+        :noteText           "ldan ma mi bskyod rdo rje is another name for ldan ma blo bzang rdo rje, a student of pha bong kha pa bde chen snying po; information from an e-mail from brag g.yab skyabs mgon"@en .
+    
+    bdr:P7842  a            :Person ;
+        skos:prefLabel      "blo bzang rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7081F2ACA74143B2 , bdr:NTEA3101504329D16F ;
+        :personEvent        bdr:EV129CB42466DFBF17 , bdr:EV2265A4BF7DE47218 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM075D99D956613A83 , bdr:NM49A90059C68EA107 , bdr:NM8B79013FC1EEFEA4 , bdr:NMA9DA292D1619F921 ;
+        :personStudentOf    bdr:P230 .
+}

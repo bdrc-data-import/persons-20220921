@@ -1,0 +1,50 @@
+@base          <bdg:P116> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P116 {
+    bda:P116  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P116 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d8/P116.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P116 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01C1EC6F01059D17
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM8811611A05F011F8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME2C430C9029140B5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTBFA01F2F95305B21
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P116  a             :Person ;
+        skos:prefLabel      "chos kyi rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBFA01F2F95305B21 ;
+        :personEvent        bdr:EV01C1EC6F01059D17 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8811611A05F011F8 , bdr:NME2C430C9029140B5 ;
+        :personTeacherOf    bdr:P107 .
+}

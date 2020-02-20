@@ -1,0 +1,53 @@
+@base          <bdg:P9744> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9744 {
+    bda:P9744  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9744 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d2/P9744.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9744 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3CABACC69D613E6F
+        a                   :PersonBirth ;
+        :onYear             "1911"^^xsd:gYear .
+    
+    bdr:EV6E1F0DEF70DA2608
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G194 .
+    
+    bdr:EV84D186E0A2F3254C
+        a                   :PersonDeath ;
+        :onYear             "2005"^^xsd:gYear .
+    
+    bdr:NM0B1620AA792B2F9F
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma tshul khrims/"@bo-x-ewts .
+    
+    bdr:NTC94F25C525DE48E8
+        a                   :Note ;
+        :noteText           "according to laurent deshayes, this was the attendant of the of the 10th gnas nang dpa' bo; dates from deshayes"@en .
+    
+    bdr:P9744  a            :Person ;
+        skos:prefLabel      "karma tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC94F25C525DE48E8 ;
+        :personEvent        bdr:EV3CABACC69D613E6F , bdr:EV6E1F0DEF70DA2608 , bdr:EV84D186E0A2F3254C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B1620AA792B2F9F ;
+        :personStudentOf    bdr:P868 .
+}

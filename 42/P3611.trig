@@ -1,0 +1,68 @@
+@base          <bdg:P3611> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3611 {
+    bda:P3611  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3611 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "42/P3611.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3611 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1867F94F89980BED
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G210 .
+    
+    bdr:EV75254B7C18EF55F5
+        a                   :PersonBirth ;
+        :onYear             "1367"^^xsd:gYear .
+    
+    bdr:EV97F0A30AC3B15279
+        a                   :PersonDeath ;
+        :onYear             "1446"^^xsd:gYear .
+    
+    bdr:NM4A39CD48DD178860
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa blo gros/"@bo-x-ewts .
+    
+    bdr:NMA65097B9158FB60D
+        a                   :PersonPersonalName ;
+        rdfs:label          "sa skya pa slob dpon grags pa blo gros/"@bo-x-ewts .
+    
+    bdr:NMEA464D63DAB07A37
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya pa slob dpon grags pa blo gros/"@bo-x-ewts .
+    
+    bdr:NTAB87B67976964A31
+        a                   :Note ;
+        :locationStatement  "p. 1800" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTF5D32DAB4614E0BA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P3611  a            :Person ;
+        skos:prefLabel      "grags pa blo gros/"@bo-x-ewts ;
+        :hasSon             bdr:P3516 ;
+        :hasWife            bdr:P3612 ;
+        :isRoot             true ;
+        :note               bdr:NTAB87B67976964A31 , bdr:NTF5D32DAB4614E0BA ;
+        :personEvent        bdr:EV1867F94F89980BED , bdr:EV75254B7C18EF55F5 , bdr:EV97F0A30AC3B15279 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4A39CD48DD178860 , bdr:NMA65097B9158FB60D , bdr:NMEA464D63DAB07A37 ;
+        :personStudentOf    bdr:P1226 .
+}

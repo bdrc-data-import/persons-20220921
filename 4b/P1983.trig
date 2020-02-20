@@ -1,0 +1,77 @@
+@base          <bdg:P1983> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1983 {
+    bda:LG4E33176D0BE87EE7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-01T10:14:26.679Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn, dup p1008"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P1983  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1983 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4b/P1983.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1983 ;
+        adm:logEntry        bda:LG4E33176D0BE87EE7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV7399DB91A110FDB0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G326 .
+    
+    bdr:EVDB3165B4A151B233
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1033 ;
+        :onYear             "1386"^^xsd:gYear .
+    
+    bdr:NM597D196D80EB0671
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rma se rtogs ldan/"@bo-x-ewts .
+    
+    bdr:NM6466349079A254AD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung rma se rtogs ldan/"@bo-x-ewts .
+    
+    bdr:NT2943E46958AA3183
+        a                   :Note ;
+        :locationStatement  "p. 476" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "according to this source zur mang monastery was founded in 1423"@en .
+    
+    bdr:NTB51731CE37EFF3BB
+        a                   :Note ;
+        :noteText           "Teacher (not recorded): Dge-'dun-sgang-pa for ordination.\nAfter a stay at Mtshur-phu, returned to Khams and in 1423 founds Zur-mang Dgon-pa."@en .
+    
+    bdr:NTBAF2A0DAC6B2C354
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:NTD43EC32FD437ACE8
+        a                   :Note ;
+        :locationStatement  "p. 1318" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1983  a            :Person ;
+        skos:prefLabel      "rma se rtogs ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2943E46958AA3183 , bdr:NTB51731CE37EFF3BB , bdr:NTBAF2A0DAC6B2C354 , bdr:NTD43EC32FD437ACE8 ;
+        :personEvent        bdr:EV7399DB91A110FDB0 , bdr:EVDB3165B4A151B233 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM597D196D80EB0671 , bdr:NM6466349079A254AD ;
+        :personStudentOf    bdr:P1410 ;
+        :personTeacherOf    bdr:P9700 .
+}

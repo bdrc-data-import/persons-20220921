@@ -1,0 +1,71 @@
+@base          <bdg:P2784> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2784 {
+    bda:LG5DE8BBCF8871FC80
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:06:02.559Z"^^xsd:dateTime ;
+        adm:logMessage      "added a student and a primary title"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGFD6F7B70B60D3ACB
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:53:06.521Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2784  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2784 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/P2784.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2784 ;
+        adm:logEntry        bda:LG5DE8BBCF8871FC80 , bda:LGFD6F7B70B60D3ACB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDCC5138DDD43F417
+        a                   :PersonBirth ;
+        :onYear             "1353"^^xsd:gYear .
+    
+    bdr:EVE6CAABE18F6BB96E
+        a                   :PersonDeath ;
+        :onYear             "1434"^^xsd:gYear .
+    
+    bdr:NM5F28FF6DF9F143A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhyen ldan shangs pa dkar po/"@bo-x-ewts .
+    
+    bdr:NMC0802B6450999E92
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMEC53FFFFDF0601C7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shangs dkar ba rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD443111D5AD768BC
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- shangs pa bka' brgyud pa transmissions"@en .
+    
+    bdr:P2784  a            :Person ;
+        skos:prefLabel      "rin chen rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD443111D5AD768BC ;
+        :personEvent        bdr:EVDCC5138DDD43F417 , bdr:EVE6CAABE18F6BB96E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5F28FF6DF9F143A5 , bdr:NMC0802B6450999E92 , bdr:NMEC53FFFFDF0601C7 ;
+        :personStudentOf    bdr:P2783 ;
+        :personTeacherOf    bdr:P2785 .
+}

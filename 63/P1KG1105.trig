@@ -1,0 +1,54 @@
+@base          <bdg:P1KG1105> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1105 {
+    bda:LG4AB039B807C6A961
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-05T11:34:01.551Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1105  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1105 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "63/P1KG1105.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1105 ;
+        adm:logEntry        bda:LG4AB039B807C6A961 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA1163E7C46E2A750
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMD435958BC2CCDB0B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha bo brag pa/"@bo-x-ewts .
+    
+    bdr:NT2CB97BE63D59F8D6
+        a                   :Note ;
+        :locationStatement  "237" ;
+        :noteSource         bdr:MW1KG1104 ;
+        :noteText           "brief introduction in"@en .
+    
+    bdr:P1KG1105  a         :Person ;
+        skos:prefLabel      "lha bo brag pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2CB97BE63D59F8D6 ;
+        :personEvent        bdr:EVA1163E7C46E2A750 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD435958BC2CCDB0B .
+}

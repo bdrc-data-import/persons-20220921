@@ -1,0 +1,78 @@
+@base          <bdg:P4010> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4010 {
+    bda:LG13752586E5289C35
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T11:00:52.026Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG3BF2338871B6C87D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-08T06:56:10.453Z"^^xsd:dateTime ;
+        adm:logMessage      "checkin"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG9DB6CFEE1E05AD9F
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-11-27T16:39:01.633Z"^^xsd:dateTime ;
+        adm:logMessage      "added mdo stod pa yon tan blo gros"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P4010  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4010 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ed/P4010.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4010 ;
+        adm:logEntry        bda:LG13752586E5289C35 , bda:LG3BF2338871B6C87D , bda:LG9DB6CFEE1E05AD9F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV677A451D2B480F9E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G279 .
+    
+    bdr:EV71BC1A4EDE8D023A
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM35A46AE3BED8555B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan blo gros/"@bo-x-ewts .
+    
+    bdr:NM415C65E6E129579B
+        a                   :PersonPersonalName ;
+        rdfs:label          "mdo stod pa yon tan blo gros/"@bo-x-ewts .
+    
+    bdr:NMAECD1257C1CA016A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dgra bcom yon tan blo gros/"@bo-x-ewts .
+    
+    bdr:NTC641F7F48AA3D248
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- Khro-phu Bka'-brgyud"@en .
+    
+    bdr:P4010  a            :Person ;
+        skos:prefLabel      "yon tan blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC641F7F48AA3D248 ;
+        :personEvent        bdr:EV677A451D2B480F9E , bdr:EV71BC1A4EDE8D023A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35A46AE3BED8555B , bdr:NM415C65E6E129579B , bdr:NMAECD1257C1CA016A ;
+        :personStudentOf    bdr:P3099 ;
+        :personTeacherOf    bdr:P8966 .
+}

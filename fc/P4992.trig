@@ -1,0 +1,68 @@
+@base          <bdg:P4992> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4992 {
+    bda:LG12573AF71F566B79
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:18:50.225Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG19653AA109F415C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-07T11:39:26.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added year and student of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P4992  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4992 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fc/P4992.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4992 ;
+        adm:logEntry        bda:LG12573AF71F566B79 , bda:LG19653AA109F415C7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4D1AFF1D3B3D35C1
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM5DE124E147121C5A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman pa blo bzang dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMEDFE94E431606105
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NT857989B82633490D
+        a                   :Note ;
+        :locationStatement  "p. 95" ;
+        :noteSource         bdr:MW19835 .
+    
+    bdr:NT939E8C0B7F094C39
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P4992  a            :Person ;
+        skos:prefLabel      "blo bzang dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT857989B82633490D , bdr:NT939E8C0B7F094C39 ;
+        :personEvent        bdr:EV4D1AFF1D3B3D35C1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5DE124E147121C5A , bdr:NMEDFE94E431606105 ;
+        :personStudentOf    bdr:P339 .
+}

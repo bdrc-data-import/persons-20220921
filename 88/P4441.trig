@@ -1,0 +1,53 @@
+@base          <bdg:P4441> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4441 {
+    bda:P4441  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4441 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "88/P4441.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4441 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV316ACB4AF4B6B9F9
+        a                   :PersonBirth ;
+        :onYear             "1473"^^xsd:gYear .
+    
+    bdr:EVD70C5A370A7AA35D
+        a                   :PersonDeath ;
+        :onYear             "1557"^^xsd:gYear .
+    
+    bdr:NM694B0E00201153C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMBA83A1C9B2BEF2CC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha btsun rin chen rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTB2ACC3E95DF2BA06
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Mes-ston transmissions\n\n-- Ras-chung snyan-brgyud transmissions"@en .
+    
+    bdr:P4441  a            :Person ;
+        skos:prefLabel      "rin chen rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2ACC3E95DF2BA06 ;
+        :personEvent        bdr:EV316ACB4AF4B6B9F9 , bdr:EVD70C5A370A7AA35D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM694B0E00201153C5 , bdr:NMBA83A1C9B2BEF2CC ;
+        :personStudentOf    bdr:P442 .
+}

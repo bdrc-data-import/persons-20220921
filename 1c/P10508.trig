@@ -1,0 +1,53 @@
+@base          <bdg:P10508> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10508 {
+    bda:P10508  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10508 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1c/P10508.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10508 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13EE9D6784097383
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM754C0ED15595D22F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan bzang po/"@bo-x-ewts .
+    
+    bdr:NMB8E6A0E6C41A4224
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbon po yon tan bzang po/"@bo-x-ewts .
+    
+    bdr:NTAF66E97306D2CB0C
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 303v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "rnying ma teacher in the transmission lineage of the revelations of gu ru jo tshe"@en .
+    
+    bdr:P10508  a           :Person ;
+        skos:prefLabel      "yon tan bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAF66E97306D2CB0C ;
+        :personEvent        bdr:EV13EE9D6784097383 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM754C0ED15595D22F , bdr:NMB8E6A0E6C41A4224 ;
+        :personStudentOf    bdr:P5595 ;
+        :personTeacherOf    bdr:P10509 .
+}

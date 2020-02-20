@@ -1,0 +1,96 @@
+@base          <bdg:P2698> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2698 {
+    bda:LG3E4417814C3F9113
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T11:22:52.091Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG928E07E53EE858EE
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-24T17:03:40.064Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2698  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2698 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "bf/P2698.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2698 ;
+        adm:logEntry        bda:LG3E4417814C3F9113 , bda:LG928E07E53EE858EE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5AB30687D51C525D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EV8FEAC92789E5723B
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVB657AC603C1F51DA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R8LS12190 .
+    
+    bdr:NM0E14870E6418D57A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling khri chen 07"@bo-x-ewts .
+    
+    bdr:NM7722BC8E861F54B5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling khri chen sangs rgyas kun dga'"@bo-x-ewts .
+    
+    bdr:NM7FE9EE3269558D6B
+        a                   :PersonPersonalName ;
+        rdfs:label          "'gyur med sangs rgyas kun dga'"@bo-x-ewts .
+    
+    bdr:NMEE2D2C84AF93C9A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas kun dga'"@bo-x-ewts .
+    
+    bdr:NT59C8E6FC914D31CC
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 358v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "one of the throne holders of smin grol gling"@en .
+    
+    bdr:NTC31126D839071EDF
+        a                   :Note ;
+        :locationStatement  "p. 113-114" ;
+        :noteSource         bdr:MW1CZ2290 ;
+        :noteText           "'jam dbyangs mkhyen brtse dbang po, gzhan phan mtha' yas and kong sprul blo gros mtha' yas received snying thig cycle of teaching from this smin gling khri chen"@en .
+    
+    bdr:NTC87AD3C114790F8A
+        a                   :Note ;
+        :locationStatement  "p. 128" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:P2698  a            :Person ;
+        skos:prefLabel      "sangs rgyas kun dga'"@bo-x-ewts ;
+        :hasChild           bdr:P8LS12191 ;
+        :hasSon             bdr:P2709 ;
+        :isRoot             true ;
+        :note               bdr:NT59C8E6FC914D31CC , bdr:NTC31126D839071EDF , bdr:NTC87AD3C114790F8A ;
+        :personEvent        bdr:EV5AB30687D51C525D , bdr:EV8FEAC92789E5723B , bdr:EVB657AC603C1F51DA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E14870E6418D57A , bdr:NM7722BC8E861F54B5 , bdr:NM7FE9EE3269558D6B , bdr:NMEE2D2C84AF93C9A8 ;
+        :personStudentOf    bdr:P697 ;
+        :personTeacherOf    bdr:P2697 .
+}

@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12329> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12329 {
+    bda:LG767C4460495B26A7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T09:18:47.262Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8416E7B4E06FB152
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T09:27:26.302Z"^^xsd:dateTime ;
+        adm:logMessage      "added event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12329  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12329 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7f/P8LS12329.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12329 ;
+        adm:logEntry        bda:LG767C4460495B26A7 , bda:LG8416E7B4E06FB152 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3BB9EC584F71BC48
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV6C5E45A3D34B0C0E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM361100A57C1E5DA5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 05"@bo-x-ewts .
+    
+    bdr:NM9DC81469A0391158
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NMFCA93638082FA310
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan rgan 'jam dpal rdo rje/"@bo-x-ewts .
+    
+    bdr:NT4529E565D67773B9
+        a                   :Note ;
+        :locationStatement  "p. 331-333" ;
+        :noteSource         bdr:MW27022 .
+    
+    bdr:P8LS12329  a        :Person ;
+        skos:prefLabel      "'jam dpal rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4529E565D67773B9 ;
+        :personEvent        bdr:EV3BB9EC584F71BC48 , bdr:EV6C5E45A3D34B0C0E ;
+        :personName         bdr:NM361100A57C1E5DA5 , bdr:NM9DC81469A0391158 , bdr:NMFCA93638082FA310 ;
+        :personStudentOf    bdr:P252 , bdr:P699 ;
+        :personTeacherOf    bdr:P8LS12327 .
+}

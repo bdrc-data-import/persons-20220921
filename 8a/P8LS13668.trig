@@ -1,0 +1,62 @@
+@base          <bdg:P8LS13668> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13668 {
+    bda:LGB7C304649F001CC8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-07T09:25:58.187Z"^^xsd:dateTime ;
+        adm:logMessage      "birth date changed"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD57634E2ECA318AD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-07T09:14:40.184Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13668  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13668 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8a/P8LS13668.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13668 ;
+        adm:logEntry        bda:LGB7C304649F001CC8 , bda:LGD57634E2ECA318AD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA53A172B84463F47
+        a                   :PersonBirth ;
+        :onYear             "0842"^^xsd:gYear .
+    
+    bdr:NM142D8BB13CA54C42
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'od srungs/"@bo-x-ewts .
+    
+    bdr:NM1E739660AD2C1E67
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mnga' bdag 'od srungs/"@bo-x-ewts .
+    
+    bdr:NT5A08EE0BCD7E77ED
+        a                   :Note ;
+        :locationStatement  "p. 157-163" ;
+        :noteSource         bdr:MW00KG09729 .
+    
+    bdr:P8LS13668  a        :Person ;
+        skos:prefLabel      "'od srungs/"@bo-x-ewts ;
+        :hasFather          bdr:P2MS13219 ;
+        :isRoot             true ;
+        :note               bdr:NT5A08EE0BCD7E77ED ;
+        :personEvent        bdr:EVA53A172B84463F47 ;
+        :personName         bdr:NM142D8BB13CA54C42 , bdr:NM1E739660AD2C1E67 .
+}

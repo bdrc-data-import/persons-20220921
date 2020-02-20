@@ -1,0 +1,65 @@
+@base          <bdg:P00KG09770> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG09770 {
+    bda:LG1C2D2120D8C9C93C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-17T16:23:20.499Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG9DF7CBBB1CAAE9EB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-15T10:31:16.535Z"^^xsd:dateTime ;
+        adm:logMessage      "added pen name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG09770  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG09770 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e4/P00KG09770.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG09770 ;
+        adm:logEntry        bda:LG1C2D2120D8C9C93C , bda:LG9DF7CBBB1CAAE9EB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB266BA4FEB2FF04F
+        a                   :PersonBirth ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:NM0A5CF8DB7F4AD9BE
+        a                   :PersonPenName ;
+        rdfs:label          "mi pham tshangs thig"@bo-x-ewts .
+    
+    bdr:NM790EDF05CA18C77D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar mkhan sprul 'jam dpal blo gros/"@bo-x-ewts .
+    
+    bdr:NM9758B1017451CE8B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal blo gros/"@bo-x-ewts .
+    
+    bdr:NTCA587F0EB9A8584A
+        a                   :Note ;
+        :noteSource         bdr:MW00KG09769 ;
+        :noteText           "a short biography is on french flap of the text"@en .
+    
+    bdr:P00KG09770  a       :Person ;
+        skos:prefLabel      "'jam dpal blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCA587F0EB9A8584A ;
+        :personEvent        bdr:EVB266BA4FEB2FF04F ;
+        :personName         bdr:NM0A5CF8DB7F4AD9BE , bdr:NM790EDF05CA18C77D , bdr:NM9758B1017451CE8B .
+}

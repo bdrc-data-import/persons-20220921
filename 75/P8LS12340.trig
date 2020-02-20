@@ -1,0 +1,77 @@
+@base          <bdg:P8LS12340> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12340 {
+    bda:LGA82B276F3DF0A018
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T10:10:08.293Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12340  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12340 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "75/P8LS12340.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12340 ;
+        adm:logEntry        bda:LGA82B276F3DF0A018 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58B42CC241E8E1B1
+        a                   :PersonBirth ;
+        :onYear             "1840"^^xsd:gYear .
+    
+    bdr:EV8F1ABECD89E73A22
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV99115EDC66DAF9CB
+        a                   :PersonDeath ;
+        :onYear             "1899"^^xsd:gYear .
+    
+    bdr:EVEC183EC112DB0EE8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EVF5D5DA45955DAC22
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM3AEB743566A53F06
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gyo ra sprul sku blo bzang don grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMA58ECC6E987A5AF5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang don grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFC6FF3ED397FFF9B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 26"@bo-x-ewts .
+    
+    bdr:NTED6F899186D7C3A3
+        a                   :Note ;
+        :locationStatement  "p. 409-411" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "His previous incarnate lama was gyo ra bsod nams rin chen and his immediate  incarnate lama was 'jam dbyangs bstan 'dzin 'phrin las (1911-1961)"@en .
+    
+    bdr:P8LS12340  a        :Person ;
+        skos:prefLabel      "blo bzang don grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTED6F899186D7C3A3 ;
+        :personEvent        bdr:EV58B42CC241E8E1B1 , bdr:EV8F1ABECD89E73A22 , bdr:EV99115EDC66DAF9CB , bdr:EVEC183EC112DB0EE8 , bdr:EVF5D5DA45955DAC22 ;
+        :personName         bdr:NM3AEB743566A53F06 , bdr:NMA58ECC6E987A5AF5 , bdr:NMFC6FF3ED397FFF9B .
+}

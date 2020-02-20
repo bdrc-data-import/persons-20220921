@@ -1,0 +1,55 @@
+@base          <bdg:P7915> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7915 {
+    bda:P7915  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7915 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9e/P7915.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7915 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0EB113F8F1950D33
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EV5BAD815BAF3FB2AA
+        a                   :PersonBirth ;
+        :onYear             "1899"^^xsd:gYear .
+    
+    bdr:NM0D819553B85246A0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma mthu stobs rdo rje/"@bo-x-ewts .
+    
+    bdr:NM2252BAD4E5B18163
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug sprul 05 pad+ma mthu stobs rdo rje/"@bo-x-ewts .
+    
+    bdr:NT3CDC49DA10E490D7
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given and association with hor gter ston chos sgar"@en .
+    
+    bdr:P7915  a            :Person ;
+        skos:prefLabel      "pad+ma mthu stobs rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3CDC49DA10E490D7 ;
+        :personEvent        bdr:EV0EB113F8F1950D33 , bdr:EV5BAD815BAF3FB2AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D819553B85246A0 , bdr:NM2252BAD4E5B18163 ;
+        :personStudentOf    bdr:P7914 .
+}

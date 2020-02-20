@@ -1,0 +1,81 @@
+@base          <bdg:P8LS12164> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12164 {
+    bda:LG51B088EB22250122
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:20:15.307Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG7582A83F82908BBA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-19T12:06:47.298Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDD09A19D75EC2C14
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-19T12:14:39.046Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12164  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12164 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9b/P8LS12164.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12164 ;
+        adm:logEntry        bda:LG51B088EB22250122 , bda:LG7582A83F82908BBA , bda:LGDD09A19D75EC2C14 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2806EC236404095E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4353 .
+    
+    bdr:EV6F96731F430633D3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVDBD9E362F5F33085
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM0908924DE0E8D83A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 24"@bo-x-ewts .
+    
+    bdr:NM94324939C591AD8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dmu dge rgyam go tshang /"@bo-x-ewts .
+    
+    bdr:NME2768F00D64D1065
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dmu dge'i rgyam go tshang /"@bo-x-ewts .
+    
+    bdr:NT18EA3FDA643EB36C
+        a                   :Note ;
+        :locationStatement  "p. 122" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "no detail biography is available to the author of this source"@en .
+    
+    bdr:P8LS12164  a        :Person ;
+        skos:prefLabel      "dmu dge rgyam go tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT18EA3FDA643EB36C ;
+        :personEvent        bdr:EV2806EC236404095E , bdr:EV6F96731F430633D3 , bdr:EVDBD9E362F5F33085 ;
+        :personName         bdr:NM0908924DE0E8D83A , bdr:NM94324939C591AD8D , bdr:NME2768F00D64D1065 .
+}

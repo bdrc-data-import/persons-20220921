@@ -1,0 +1,81 @@
+@base          <bdg:P3022> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3022 {
+    bda:LG5AD3D5C1F0FC4ADF
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-03T17:19:01.479Z"^^xsd:dateTime ;
+        adm:logMessage      "added multiple records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGA4FBA0E917A1DA77
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-08T12:06:15.325Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3022  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3022 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "bb/P3022.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3022 ;
+        adm:logEntry        bda:LG5AD3D5C1F0FC4ADF , bda:LGA4FBA0E917A1DA77 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0091B403D6F5B76A
+        a                   :PersonBirth ;
+        :onYear             "1590"^^xsd:gYear .
+    
+    bdr:EVD9128AE3DF8F830C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G226 .
+    
+    bdr:NM0B5471A74EA11F0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM58B11C50CE71DD73
+        a                   :PersonTitle ;
+        rdfs:label          "nyi thang chos rje blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM88D4A5FF7C5FB252
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gling stod nyi thang chos rje blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT85730496E2104C5A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:NT87929698D2DACB2F
+        a                   :Note ;
+        :noteText           "in some sources: Blo-bzang-rgyal-mtshan"@en .
+    
+    bdr:NTAD1B38EA37C169EE
+        a                   :Note ;
+        :locationStatement  "p. 62" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:P3022  a            :Person ;
+        skos:prefLabel      "blo bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT85730496E2104C5A , bdr:NT87929698D2DACB2F , bdr:NTAD1B38EA37C169EE ;
+        :personEvent        bdr:EV0091B403D6F5B76A , bdr:EVD9128AE3DF8F830C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B5471A74EA11F0E , bdr:NM58B11C50CE71DD73 , bdr:NM88D4A5FF7C5FB252 ;
+        :personStudentOf    bdr:P3021 , bdr:P647 ;
+        :personTeacherOf    bdr:P1791 , bdr:P2156 , bdr:P3031 , bdr:P3435 , bdr:P3436 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lobzang-Gyatso/5331"^^xsd:anyURI .
+}

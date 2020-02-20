@@ -1,0 +1,63 @@
+@base          <bdg:P6025> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6025 {
+    bda:P6025  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6025 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "41/P6025.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6025 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0D494D65D32ED6FE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G516 .
+    
+    bdr:EVEA229AC84FD2E488
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMAF16F0BDE620F0DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NME04CE59E6FD163FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyin dgon bya bral ba nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NT56FDA53EBEF132C2
+        a                   :Note ;
+        :locationStatement  "p. 114" .
+    
+    bdr:NT678FACE6388FA7FA
+        a                   :Note ;
+        :locationStatement  "p. 139" .
+    
+    bdr:NTAF1DD2426A34A82C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:P6025  a            :Person ;
+        skos:prefLabel      "nam mkha' rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT56FDA53EBEF132C2 , bdr:NT678FACE6388FA7FA , bdr:NTAF1DD2426A34A82C ;
+        :personEvent        bdr:EV0D494D65D32ED6FE , bdr:EVEA229AC84FD2E488 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAF16F0BDE620F0DE , bdr:NME04CE59E6FD163FA ;
+        :personStudentOf    bdr:P2943 , bdr:P6013 ;
+        :personTeacherOf    bdr:P5994 , bdr:P6010 .
+}

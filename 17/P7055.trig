@@ -1,0 +1,81 @@
+@base          <bdg:P7055> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7055 {
+    bda:LGE57F839EF6091A3C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-30T12:00:10.568Z"^^xsd:dateTime ;
+        adm:logMessage      "Corrected birth year to 1646 based on W1KG10294, W00KG01502"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P7055  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7055 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "17/P7055.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7055 ;
+        adm:logEntry        bda:LGE57F839EF6091A3C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV605B4D047E6F943F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4697 .
+    
+    bdr:EVCFEA5A27C5AEC709
+        a                   :PersonBirth ;
+        :onYear             "1646"^^xsd:gYear .
+    
+    bdr:EVDB2DCDEA3EE773F4
+        a                   :PersonDeath ;
+        :onYear             "1716"^^xsd:gYear .
+    
+    bdr:NM6617D14BF31617C6
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang bsod nams, byang chub mi la/"@bo-x-ewts .
+    
+    bdr:NM6AF0C0236D454966
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne byang chub mi la/"@bo-x-ewts .
+    
+    bdr:NMB7D39A5337A4631E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub mi la/"@bo-x-ewts .
+    
+    bdr:NT1BEA3ED95D29EAAA
+        a                   :Note ;
+        :locationStatement  "p. 349, 368" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1636. co ne byang chub mi la ngag dbang bsod nams, the author of  the co ne'i lo rgyus me tog phreng mdzes, born\n1716. death"@en .
+    
+    bdr:NT5976B87BFF0DCC65
+        a                   :Note ;
+        :locationStatement  "p. 583" ;
+        :noteSource         bdr:MW00KG01502 ;
+        :noteText           "Birth date listed as 1646 (11 sexagenary cycle, fire dog year)"@en .
+    
+    bdr:NT9EFE4F07A40FA88E
+        a                   :Note ;
+        :locationStatement  "p. 633" ;
+        :noteSource         bdr:MW1KG10294 ;
+        :noteText           "Birth year listed as 1646"@en .
+    
+    bdr:P7055  a            :Person ;
+        skos:prefLabel      "byang chub mi la/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1BEA3ED95D29EAAA , bdr:NT5976B87BFF0DCC65 , bdr:NT9EFE4F07A40FA88E ;
+        :personEvent        bdr:EV605B4D047E6F943F , bdr:EVCFEA5A27C5AEC709 , bdr:EVDB2DCDEA3EE773F4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6617D14BF31617C6 , bdr:NM6AF0C0236D454966 , bdr:NMB7D39A5337A4631E .
+}

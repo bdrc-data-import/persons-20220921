@@ -1,0 +1,105 @@
+@base          <bdg:P3583> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3583 {
+    bda:LG48992FCDCA49029E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T09:34:03.272Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGAF76C39B3DB1AD53
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-12T12:42:30.292Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, office and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF576EA1DDF89D001
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-12T12:44:34.793Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3583  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3583 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "78/P3583.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3583 ;
+        adm:logEntry        bda:LG48992FCDCA49029E , bda:LGAF76C39B3DB1AD53 , bda:LGF576EA1DDF89D001 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39DB5FCE52078488
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G1513 ;
+        :onYear             "1432"^^xsd:gYear ;
+        :personEventRole    bdr:R44 .
+    
+    bdr:EV88DFBCD8D97E2278
+        a                   :PersonDeath ;
+        :onYear             "1432"^^xsd:gYear .
+    
+    bdr:EV97B657F750BE0D33
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1513 ;
+        :onYear             "1385"^^xsd:gYear ;
+        :personEventRole    bdr:R44 .
+    
+    bdr:EVC122152E59B6F4EA
+        a                   :PersonBirth ;
+        :onYear             "1374"^^xsd:gYear .
+    
+    bdr:NM154E74F2D773FE01
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "phag mo gru pa sde srid 05"@bo-x-ewts .
+    
+    bdr:NM15850D1FAB48C3AA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbang grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM23B37EC56086847E
+        a                   :PersonTitle ;
+        rdfs:label          "phag mo gru pa sde srid 05 dbang grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB3D05AF380C2FC89
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT20B7233797338006
+        a                   :Note ;
+        :noteText           "Ruled: 1385-1432"@en .
+    
+    bdr:NT6298CFCAEFBEB532
+        a                   :Note ;
+        :locationStatement  "p. 1523-1524" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1389 received dbang title and golden seal"@en .
+    
+    bdr:NTD838629F458E1458
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:NTFF3008068CB416F8
+        a                   :Note ;
+        :locationStatement  "p. 83" ;
+        :noteSource         bdr:MW19828 .
+    
+    bdr:P3583  a            :Person ;
+        skos:prefLabel      "grags pa rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT20B7233797338006 , bdr:NT6298CFCAEFBEB532 , bdr:NTD838629F458E1458 , bdr:NTFF3008068CB416F8 ;
+        :personEvent        bdr:EV39DB5FCE52078488 , bdr:EV88DFBCD8D97E2278 , bdr:EV97B657F750BE0D33 , bdr:EVC122152E59B6F4EA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM154E74F2D773FE01 , bdr:NM15850D1FAB48C3AA , bdr:NM23B37EC56086847E , bdr:NMB3D05AF380C2FC89 .
+}

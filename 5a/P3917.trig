@@ -1,0 +1,52 @@
+@base          <bdg:P3917> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3917 {
+    bda:LG03374E4E33FE3712
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T11:39:07.645Z"^^xsd:dateTime ;
+        adm:logMessage      "addded name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3917  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3917 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5a/P3917.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3917 ;
+        adm:logEntry        bda:LG03374E4E33FE3712 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC5C14F988DB30BCB
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3EDEBE69B27025F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yar 'phel/"@bo-x-ewts .
+    
+    bdr:NM61946B31739D76DC
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos shul yar 'phel/"@bo-x-ewts .
+    
+    bdr:P3917  a            :Person ;
+        skos:prefLabel      "yar 'phel/"@bo-x-ewts ;
+        :hasWife            bdr:P3918 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC5C14F988DB30BCB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3EDEBE69B27025F2 , bdr:NM61946B31739D76DC .
+}

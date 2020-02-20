@@ -1,0 +1,111 @@
+@base          <bdg:P1219> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1219 {
+    bda:LG00289FFDA64600A6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-10T12:02:08.961Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG00ABBED9DD917655
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-14T15:10:56.585Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG433E3AD9C49C68AE
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-28T12:38:22.641Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG889F6D1F918A75B7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T16:42:14.956Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE55833513C9ABF7C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-28T15:52:22.865Z"^^xsd:dateTime ;
+        adm:logMessage      "added multiple records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P1219  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1219 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0f/P1219.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1219 ;
+        adm:logEntry        bda:LG00289FFDA64600A6 , bda:LG00ABBED9DD917655 , bda:LG433E3AD9C49C68AE , bda:LG889F6D1F918A75B7 , bda:LGE55833513C9ABF7C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0EB819088339DF70
+        a                   :PersonBirth ;
+        :onYear             "1219"^^xsd:gYear .
+    
+    bdr:EV125070DA3053C6CD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1285"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5D87CFB18D7237CC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:EVD5E32E888EBA3048
+        a                   :PersonDeath ;
+        :onYear             "1299"^^xsd:gYear .
+    
+    bdr:EVDCB27A5A55866BEA
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1299"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1B583F207A5919BB
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 08"@bo-x-ewts .
+    
+    bdr:NM250855CF8040ACB4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smon lam tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM81F27FC59539FEC9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyo ston smon lam tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT169D35998AAF24FD
+        a                   :Note ;
+        :locationStatement  "134" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n\nRebuilt temples at snar-thang and lcags-ri"@en .
+    
+    bdr:NT59CAA862D0E3CE83
+        a                   :Note ;
+        :locationStatement  "p. 33" ;
+        :noteSource         bdr:MW1CZ2413 .
+    
+    bdr:P1219  a            :Person ;
+        skos:prefLabel      "smon lam tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT169D35998AAF24FD , bdr:NT59CAA862D0E3CE83 ;
+        :personEvent        bdr:EV0EB819088339DF70 , bdr:EV125070DA3053C6CD , bdr:EV5D87CFB18D7237CC , bdr:EVD5E32E888EBA3048 , bdr:EVDCB27A5A55866BEA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1B583F207A5919BB , bdr:NM250855CF8040ACB4 , bdr:NM81F27FC59539FEC9 ;
+        :personStudentOf    bdr:P1060 ;
+        :personTeacherOf    bdr:P1217 , bdr:P1304 , bdr:P2CZ7866 , bdr:P3644 .
+}

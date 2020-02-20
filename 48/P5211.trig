@@ -1,0 +1,63 @@
+@base          <bdg:P5211> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5211 {
+    bda:LG719045D432C74A3A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:19:18.026Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG71B7D1A2F1F00C7D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T11:15:41.357Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates, teacher and student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5211  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5211 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "48/P5211.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5211 ;
+        adm:logEntry        bda:LG719045D432C74A3A , bda:LG71B7D1A2F1F00C7D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D698C0F3B4F6CA7
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM06D4B47C9AC8E70D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD0C0056D54206F77
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus chen kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTF910A17997945755
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P5211  a            :Person ;
+        skos:prefLabel      "kun dga' rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF910A17997945755 ;
+        :personEvent        bdr:EV3D698C0F3B4F6CA7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06D4B47C9AC8E70D , bdr:NMD0C0056D54206F77 ;
+        :personTeacherOf    bdr:P2519 , bdr:P5202 .
+}

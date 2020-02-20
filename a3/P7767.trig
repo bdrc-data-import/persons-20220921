@@ -1,0 +1,78 @@
+@base          <bdg:P7767> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7767 {
+    bda:LG3D78C038C839CD5B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T14:14:04.717Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7767  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7767 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a3/P7767.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7767 ;
+        adm:logEntry        bda:LG3D78C038C839CD5B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F39C0EBB7B580FC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV66C30350B162F441
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3506 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3EEF12556E18CA15
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 56 'jam dbyangs shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM71F267B28A0CF128
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBC49B1BE7E423F4F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 56"@bo-x-ewts .
+    
+    bdr:NMEBE71E565599472B
+        a                   :PersonTitle ;
+        rdfs:label          "khang gsar 'jam dbyangs shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT565A2EA8CA9222A8
+        a                   :Note ;
+        :locationStatement  "p. 218" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography \nb. in gtsang rong sman thangs as the nephew and the reembodiment ngor mkhan chen ngag dbang blo gros bzang po"@en .
+    
+    bdr:NT59142E26B12A17E4
+        a                   :Note ;
+        :locationStatement  "p. 115" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P7767  a            :Person ;
+        skos:prefLabel      "'jam dbyangs shes rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT565A2EA8CA9222A8 , bdr:NT59142E26B12A17E4 ;
+        :personEvent        bdr:EV1F39C0EBB7B580FC , bdr:EV66C30350B162F441 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3EEF12556E18CA15 , bdr:NM71F267B28A0CF128 , bdr:NMBC49B1BE7E423F4F , bdr:NMEBE71E565599472B ;
+        :personTeacherOf    bdr:P973 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P1KG22730> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG22730 {
+    bda:LG45598EF7696BCE31
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-25T10:48:10.841Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG22730  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG22730 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e5/P1KG22730.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG22730 ;
+        adm:logEntry        bda:LG45598EF7696BCE31 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13FD1645F1A77890
+        a                   :PersonBirth ;
+        :onYear             "1817"^^xsd:gYear .
+    
+    bdr:EV57C0809A79809A93
+        a                   :PersonDeath ;
+        :onYear             "1883"^^xsd:gYear .
+    
+    bdr:NM684F5E8DDCA1BE8E
+        a                   :PersonReversal ;
+        rdfs:label          "jaschike, h. a. (heinrich august)"@en .
+    
+    bdr:NMDA31BCBF93FFC7EC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "h. a. jaschike"@en .
+    
+    bdr:NT5D3AC9E8F83119A9
+        a                   :Note ;
+        :noteSource         bdr:MW1KG22690 .
+    
+    bdr:P1KG22730  a        :Person ;
+        skos:prefLabel      "h. a. jaschike"@en ;
+        :isRoot             true ;
+        :note               bdr:NT5D3AC9E8F83119A9 ;
+        :personEvent        bdr:EV13FD1645F1A77890 , bdr:EV57C0809A79809A93 ;
+        :personName         bdr:NM684F5E8DDCA1BE8E , bdr:NMDA31BCBF93FFC7EC .
+}

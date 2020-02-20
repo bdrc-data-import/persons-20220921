@@ -1,0 +1,55 @@
+@base          <bdg:P10> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10 {
+    bda:P10  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a8/P10.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F50A1111B9E6C5E
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0FBA4DD589F548CA
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos kyi dbang phyug, stag phu/"@bo-x-ewts .
+    
+    bdr:NMB008D29C7A850250
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag phu gar dbang chos kyi dbang phyug"@bo-x-ewts .
+    
+    bdr:NMD96576EF43B086CF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gar dbang chos kyi dbang phyug"@bo-x-ewts .
+    
+    bdr:NTB71D6028E4DE10DC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P10  a              :Person ;
+        skos:prefLabel      "gar dbang chos kyi dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB71D6028E4DE10DC ;
+        :personEvent        bdr:EV0F50A1111B9E6C5E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0FBA4DD589F548CA , bdr:NMB008D29C7A850250 , bdr:NMD96576EF43B086CF ;
+        :personStudentOf    bdr:P282 ;
+        :personTeacherOf    bdr:P5216 .
+}

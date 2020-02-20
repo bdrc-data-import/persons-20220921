@@ -1,0 +1,65 @@
+@base          <bdg:P1855> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1855 {
+    bda:LGD7086ADCD86D0C65
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-12T15:32:45.068Z"^^xsd:dateTime ;
+        adm:logMessage      "added event & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGFAF016EF8D292A04
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:48:23.066Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1855  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1855 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8a/P1855.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1855 ;
+        adm:logEntry        bda:LGD7086ADCD86D0C65 , bda:LGFAF016EF8D292A04 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV737B84C2C05E43A1
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM417771BDF61E60D4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shwo sgom/"@bo-x-ewts .
+    
+    bdr:NM7D8DEF8362B42E3B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsal ston shwo sgom/"@bo-x-ewts .
+    
+    bdr:NTA760F359F04F2E9C
+        a                   :Note ;
+        :locationStatement  "v. 3, pp. 509-510" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "ངག་རྒྱུན་ལྟར་ན་གྲུབ་ཐོབ་ཁམས་པ་མི་གསུམ་འདབ་པ་རྫོང་༼སྔར་ལི་ཐང་ཁོངས་༽དུ་ཕེབས་ནས་དགོན་པ་རེ་རེ་བཏབ་པ་ལས་འདི་ནི་ཤྭོ་སྒོམ་གྱིས་བཏབ་ཚུལ་འཁོད།"@bo .
+    
+    bdr:P1855  a            :Person ;
+        skos:prefLabel      "shwo sgom/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA760F359F04F2E9C ;
+        :personEvent        bdr:EV737B84C2C05E43A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM417771BDF61E60D4 , bdr:NM7D8DEF8362B42E3B ;
+        :personStudentOf    bdr:P1844 .
+}

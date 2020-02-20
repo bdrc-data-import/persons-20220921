@@ -1,0 +1,73 @@
+@base          <bdg:P7168> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7168 {
+    bda:LGE656C6B53BD7DC31
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:09:00.666Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P7168  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7168 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "91/P7168.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7168 ;
+        adm:logEntry        bda:LGE656C6B53BD7DC31 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2B7F3BA9DBC8CBEB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3216 ;
+        :onYear             "1895"^^xsd:gYear .
+    
+    bdr:EV6A3FB45424CE875B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3217 .
+    
+    bdr:EV8174F4978156E0F8
+        a                   :PersonDeath ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM374E99127F02EF32
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams mgon po/"@bo-x-ewts .
+    
+    bdr:NM9F91E1D847B89CAA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rme ba mkhan chen bsod nams mgon po/"@bo-x-ewts .
+    
+    bdr:NT9804632A60DB68F1
+        a                   :Note ;
+        :locationStatement  "pp. 672-673" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTD0CB4D081AAEB5A4
+        a                   :Note ;
+        :locationStatement  "f. 318v" ;
+        :noteSource         bdr:MW26629 ;
+        :noteText           "biography\nb. in shing lug as the son of yab a dkar u rgyan and yum rag bza' ka tho in rme yul\nd at the age of 73"@en .
+    
+    bdr:P7168  a            :Person ;
+        skos:prefLabel      "bsod nams mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9804632A60DB68F1 , bdr:NTD0CB4D081AAEB5A4 ;
+        :personEvent        bdr:EV2B7F3BA9DBC8CBEB , bdr:EV6A3FB45424CE875B , bdr:EV8174F4978156E0F8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM374E99127F02EF32 , bdr:NM9F91E1D847B89CAA ;
+        :personStudentOf    bdr:P5054 , bdr:P699 .
+}

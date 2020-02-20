@@ -1,0 +1,86 @@
+@base          <bdg:P5619> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5619 {
+    bda:LG00E7F4AE7D48479B
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-08T14:03:46.72Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEF42E5F3AB372C38
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T11:16:08.579Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5619  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5619 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d3/P5619.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5619 ;
+        adm:logEntry        bda:LG00E7F4AE7D48479B , bda:LGEF42E5F3AB372C38 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5393994C954139F6
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVF7580813C2BF5320
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G157 .
+    
+    bdr:NM19CEAA778469D4A7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mchog gling yongs 'dzin sprul sku 05"@bo-x-ewts .
+    
+    bdr:NM2AAC2547B8AC7BFB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsechok Ling Yongzin Tulku 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM6DF8F0B374E57502
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM7421129BB432764D
+        a                   :PersonOtherName ;
+        rdfs:label          "ngag dbang blo bzang 'phrin las dpal ldan bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM81EB50B27F3821BA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshe mchog gling sprul sku dpal ldan bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT7525017D0EBC87A4
+        a                   :Note ;
+        :noteText           "Among Tibetan Texts, p. 312\nbrother of the sixth panchen chos kyi nyi ma, died at gzhis ka rtse"@en .
+    
+    bdr:NTE9E5C7FA754B66B9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5619  a            :Person ;
+        skos:prefLabel      "dpal ldan bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P215 ;
+        :incarnationGeneral  bdr:P8LS13015 ;
+        :isRoot             true ;
+        :note               bdr:NT7525017D0EBC87A4 , bdr:NTE9E5C7FA754B66B9 ;
+        :personEvent        bdr:EV5393994C954139F6 , bdr:EVF7580813C2BF5320 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19CEAA778469D4A7 , bdr:NM2AAC2547B8AC7BFB , bdr:NM6DF8F0B374E57502 , bdr:NM7421129BB432764D , bdr:NM81EB50B27F3821BA ;
+        :personStudentOf    bdr:P216 ;
+        :personTeacherOf    bdr:P5617 .
+}

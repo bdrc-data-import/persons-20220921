@@ -1,0 +1,52 @@
+@base          <bdg:P1833> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1833 {
+    bda:LGF6D3FC66697D80F9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:26:10.261Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1833  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1833 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "4c/P1833.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1833 ;
+        adm:logEntry        bda:LGF6D3FC66697D80F9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E0DABE74E3B4255
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM9B925DEAE556331B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMA0042AFB4F4D4100
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:P1833  a            :Person ;
+        skos:prefLabel      "rin chen dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV4E0DABE74E3B4255 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9B925DEAE556331B , bdr:NMA0042AFB4F4D4100 ;
+        :personTeacherOf    bdr:P1830 .
+}

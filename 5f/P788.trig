@@ -1,0 +1,61 @@
+@base          <bdg:P788> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P788 {
+    bda:P788  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P788 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5f/P788.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P788 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV69D3BF63975D1460
+        a                   :PersonBirth ;
+        :onYear             "1527"^^xsd:gYear .
+    
+    bdr:EVC185830A2672E62F
+        a                   :PersonDeath ;
+        :notAfter           "1600"^^xsd:gYear ;
+        :notBefore          "1599"^^xsd:gYear .
+    
+    bdr:NMAD32E58D5C36B326
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu blo gros/"@bo-x-ewts .
+    
+    bdr:NMF06CCBC6E4070490
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yol mkhan chen gzhon nu blo gros/"@bo-x-ewts .
+    
+    bdr:NT19ACEF9EE8E82FE8
+        a                   :Note ;
+        :locationStatement  "p. 2326" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1591. sa skya'i mkhan chen gzhon nu blo gros kis yar lung bkra shis rtse'i chos sde phyag btab\n1599. mkhan chen gzhon nu blo gros gshegs"@en .
+    
+    bdr:NT6D2CAB0A9F6C3BBE
+        a                   :Note ;
+        :noteText           "sa skya master of the lam 'bras slob bshad transmission"@en .
+    
+    bdr:P788  a             :Person ;
+        skos:prefLabel      "gzhon nu blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT19ACEF9EE8E82FE8 , bdr:NT6D2CAB0A9F6C3BBE ;
+        :personEvent        bdr:EV69D3BF63975D1460 , bdr:EVC185830A2672E62F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAD32E58D5C36B326 , bdr:NMF06CCBC6E4070490 ;
+        :personStudentOf    bdr:P786 ;
+        :personTeacherOf    bdr:P2664 , bdr:P5956 .
+}

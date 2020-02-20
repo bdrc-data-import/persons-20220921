@@ -1,0 +1,75 @@
+@base          <bdg:P5065> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5065 {
+    bda:LG1A23013A2B607212
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T10:21:20.534Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG745E5D585D71CFF3
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T15:53:01.384Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD5FDE64A23D71E9A
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-02-13T19:09:04.943Z"^^xsd:dateTime ;
+        adm:logMessage      "added wife and daughter"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P5065  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5065 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f6/P5065.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5065 ;
+        adm:logEntry        bda:LG1A23013A2B607212 , bda:LG745E5D585D71CFF3 , bda:LGD5FDE64A23D71E9A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A5951718B6D42C4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:EVE95C81C4164D5676
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM88AD06C1428BDF08
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge rgyal po sa dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NME0BA485A3BC9E8EE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sa dbang bzang po/"@bo-x-ewts .
+    
+    bdr:NTF60F4762FFBD0D0F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P5065  a            :Person ;
+        skos:prefLabel      "sa dbang bzang po/"@bo-x-ewts ;
+        :hasDaughter        bdr:P1TD46 ;
+        :hasSon             bdr:P5064 ;
+        :hasWife            bdr:P10MS14671 ;
+        :isRoot             true ;
+        :note               bdr:NTF60F4762FFBD0D0F ;
+        :personEvent        bdr:EV2A5951718B6D42C4 , bdr:EVE95C81C4164D5676 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM88AD06C1428BDF08 , bdr:NME0BA485A3BC9E8EE .
+}

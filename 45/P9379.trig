@@ -1,0 +1,51 @@
+@base          <bdg:P9379> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9379 {
+    bda:P9379  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9379 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "45/P9379.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9379 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE66C654F65C5D9BE
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM8BE95F19C3599A33
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMFD8CB8808F62548A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdza. tshe dbang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTBF0F2D4B0AA9F48F
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW28925 ;
+        :noteText           "biography"@en .
+    
+    bdr:P9379  a            :Person ;
+        skos:prefLabel      "tshe dbang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBF0F2D4B0AA9F48F ;
+        :personEvent        bdr:EVE66C654F65C5D9BE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8BE95F19C3599A33 , bdr:NMFD8CB8808F62548A .
+}

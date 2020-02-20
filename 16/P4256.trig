@@ -1,0 +1,61 @@
+@base          <bdg:P4256> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4256 {
+    bda:LG7AA5D057E1511AD3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T11:54:51.79Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4256  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4256 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "16/P4256.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4256 ;
+        adm:logEntry        bda:LG7AA5D057E1511AD3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV51D777C2B954CBE8
+        a                   :PersonBirth ;
+        :notAfter           "0899"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:NM05FC4B8D049BA5D8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo tsA ba bzang skyong /"@bo-x-ewts .
+    
+    bdr:NM5671B04416185E37
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzang skyong /"@bo-x-ewts .
+    
+    bdr:NT1E0F6BA4A5AB943A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Early Translators"@en .
+    
+    bdr:NT25DD309D4C55EA4B
+        a                   :Note ;
+        :locationStatement  "p. 1681" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4256  a            :Person ;
+        skos:prefLabel      "bzang skyong /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E0F6BA4A5AB943A , bdr:NT25DD309D4C55EA4B ;
+        :personEvent        bdr:EV51D777C2B954CBE8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM05FC4B8D049BA5D8 , bdr:NM5671B04416185E37 .
+}

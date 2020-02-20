@@ -1,0 +1,52 @@
+@base          <bdg:P9500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9500 {
+    bda:P9500  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9500 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3d/P9500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9500 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV64E10D5978AA7418
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM45918B54C63A3282
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsod snyoms pa grub pa rdo rje/"@bo-x-ewts .
+    
+    bdr:NM51F87F8B6CF35432
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grub pa rdo rje/"@bo-x-ewts .
+    
+    bdr:NTEA185104042D206A
+        a                   :Note ;
+        :locationStatement  "f. 99v" ;
+        :noteSource         bdr:MW9105 ;
+        :noteText           "noted as a teacher of gter bdag gling pa: zab chos sna tshogs gsan cing dag snang sbyangs pa'i bshes gnyen nyi shu rtsa lnga"@en .
+    
+    bdr:P9500  a            :Person ;
+        skos:prefLabel      "grub pa rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEA185104042D206A ;
+        :personEvent        bdr:EV64E10D5978AA7418 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45918B54C63A3282 , bdr:NM51F87F8B6CF35432 ;
+        :personTeacherOf    bdr:P7 .
+}

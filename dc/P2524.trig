@@ -1,0 +1,93 @@
+@base          <bdg:P2524> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2524 {
+    bda:LG397C2851F48E1B7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-17T12:27:16.851Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGFFD83DAE8741F43F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T10:53:35.295Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2524  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2524 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "dc/P2524.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2524 ;
+        adm:logEntry        bda:LG397C2851F48E1B7F , bda:LGFFD83DAE8741F43F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B32BB929A2B10F5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1804"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV81FDB5C4C453E015
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVFB37EB50D3376C7B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3503 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM57016E40EF25FD8A
+        a                   :PersonTitle ;
+        rdfs:label          "li thang pa byams pa bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM80323B2CEAE801DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM8E5533E59F7C0E8F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 46 byams pa bsod nams dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMB1F8A84CB650B081
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 46"@bo-x-ewts .
+    
+    bdr:NMBDAC0D6BFCC5F4F9
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsod nams dpal 'byor, byams pa/"@bo-x-ewts .
+    
+    bdr:NT9148118B177AD60A
+        a                   :Note ;
+        :locationStatement  "p. 194" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTA29FBC981C9B3A8E
+        a                   :Note ;
+        :locationStatement  "p. 107" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P2524  a            :Person ;
+        skos:prefLabel      "byams pa bsod nams dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9148118B177AD60A , bdr:NTA29FBC981C9B3A8E ;
+        :personEvent        bdr:EV1B32BB929A2B10F5 , bdr:EV81FDB5C4C453E015 , bdr:EVFB37EB50D3376C7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM57016E40EF25FD8A , bdr:NM80323B2CEAE801DE , bdr:NM8E5533E59F7C0E8F , bdr:NMB1F8A84CB650B081 , bdr:NMBDAC0D6BFCC5F4F9 ;
+        :personStudentOf    bdr:P2526 ;
+        :personTeacherOf    bdr:P1PD90377 .
+}

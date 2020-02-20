@@ -1,0 +1,53 @@
+@base          <bdg:P2642> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2642 {
+    bda:P2642  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2642 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d3/P2642.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2642 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE6F07B1DD416C87
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM3472F32D963D1D25
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen chos dbang /"@bo-x-ewts .
+    
+    bdr:NMB0D59D05648AEE00
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bum rams pa rin chen chos dbang /"@bo-x-ewts .
+    
+    bdr:NT27B60A648168C875
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 34v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in a prajaparamita transmission lineage"@en .
+    
+    bdr:P2642  a            :Person ;
+        skos:prefLabel      "rin chen chos dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT27B60A648168C875 ;
+        :personEvent        bdr:EVAE6F07B1DD416C87 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3472F32D963D1D25 , bdr:NMB0D59D05648AEE00 ;
+        :personStudentOf    bdr:P2642 , bdr:P3045 , bdr:P3860 ;
+        :personTeacherOf    bdr:P2641 , bdr:P2642 , bdr:P3046 .
+}

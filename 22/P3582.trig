@@ -1,0 +1,78 @@
+@base          <bdg:P3582> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3582 {
+    bda:LG8381E7A7D71F58E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-07-29T16:46:57.324Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA6E7F4073B91479C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T09:33:53.574Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3582  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3582 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "22/P3582.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3582 ;
+        adm:logEntry        bda:LG8381E7A7D71F58E7 , bda:LGA6E7F4073B91479C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39F6BDCCDA2970D5
+        a                   :PersonBirth ;
+        :onYear             "1359"^^xsd:gYear .
+    
+    bdr:EVDC3EA48C21203C60
+        a                   :PersonDeath ;
+        :onYear             "1408"^^xsd:gYear .
+    
+    bdr:NM568558334A49F981
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams grags pa/"@bo-x-ewts .
+    
+    bdr:NMF87EEDAA42A6D4AC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phag mo gru pa sde srid 04 bsod nams grags pa/"@bo-x-ewts .
+    
+    bdr:NMFE62CBD66F6BFCD6
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "phag mo gru pa sde srid 04"@bo-x-ewts .
+    
+    bdr:NT08E4A1886F0F7AEC
+        a                   :Note ;
+        :noteText           "Ruled: 1381-1385"@en .
+    
+    bdr:NT127E4EE88C925F26
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:NT9D228ADD9EF498BE
+        a                   :Note ;
+        :locationStatement  "p. 83" ;
+        :noteSource         bdr:MW19828 .
+    
+    bdr:P3582  a            :Person ;
+        skos:prefLabel      "bsod nams grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08E4A1886F0F7AEC , bdr:NT127E4EE88C925F26 , bdr:NT9D228ADD9EF498BE ;
+        :personEvent        bdr:EV39F6BDCCDA2970D5 , bdr:EVDC3EA48C21203C60 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM568558334A49F981 , bdr:NMF87EEDAA42A6D4AC , bdr:NMFE62CBD66F6BFCD6 ;
+        :personTeacherOf    bdr:P1AG39 .
+}

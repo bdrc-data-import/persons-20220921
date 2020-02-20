@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12417> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12417 {
+    bda:LG9D1D3E99E246C3FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T10:48:29.23Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12417  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12417 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fb/P8LS12417.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12417 ;
+        adm:logEntry        bda:LG9D1D3E99E246C3FE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22DFE4320194C99F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVAFE9FD28FD9D441C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMB56DE66B1CAF9270
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa tshogs gnyis/"@bo-x-ewts .
+    
+    bdr:NMEA66E7DFAF9BB398
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 56"@bo-x-ewts .
+    
+    bdr:NT129085F3F716289F
+        a                   :Note ;
+        :locationStatement  "p. 294" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12417  a        :Person ;
+        skos:prefLabel      "byams pa tshogs gnyis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT129085F3F716289F ;
+        :personEvent        bdr:EV22DFE4320194C99F , bdr:EVAFE9FD28FD9D441C ;
+        :personName         bdr:NMB56DE66B1CAF9270 , bdr:NMEA66E7DFAF9BB398 .
+}

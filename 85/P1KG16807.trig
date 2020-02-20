@@ -1,0 +1,46 @@
+@base          <bdg:P1KG16807> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG16807 {
+    bda:LGCF8C1881313781CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-25T09:15:04.321Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG16807  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG16807 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "85/P1KG16807.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG16807 ;
+        adm:logEntry        bda:LGCF8C1881313781CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV682F13283795D921
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMBF37EF538C6CB128
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi 'gyur/"@bo-x-ewts .
+    
+    bdr:P1KG16807  a        :Person ;
+        skos:prefLabel      "mi 'gyur/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV682F13283795D921 ;
+        :personName         bdr:NMBF37EF538C6CB128 .
+}

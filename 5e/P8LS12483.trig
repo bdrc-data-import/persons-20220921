@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12483> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12483 {
+    bda:LGA40AC83970497D09
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-20T12:09:34.999Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12483  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12483 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5e/P8LS12483.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12483 ;
+        adm:logEntry        bda:LGA40AC83970497D09 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB17DC124D8A53B86
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1390 ;
+        :onYear             "1745"^^xsd:gYear .
+    
+    bdr:EVFBA002314416A744
+        a                   :PersonDeath ;
+        :onYear             "1807"^^xsd:gYear .
+    
+    bdr:NM874C536453C5A123
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Kyorlung Ngari Tulku 09"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM98F96B2073F057CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dge legs grags pa/"@bo-x-ewts .
+    
+    bdr:NME2336BE8DF39CA8D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "skyor lung mnga' ris sprul sku 09"@bo-x-ewts .
+    
+    bdr:NT334F1A1709793B25
+        a                   :Note ;
+        :locationStatement  "p. 293" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "according to this source\n1) paN chen bsod nams grags pa/ rtsed thang du 'khrungs/ dgung lo drug cu par gshegs/\n2) de'i sku skye bsod nams ye shes dbang po/ stod lung lam bar sku 'khrungs/ dgung lo bzhi bcu par gshegs/\n3) de'i sku skye bsod nams dge legs dbang po/ 'ol dga' za lha nang du 'khrungs/ dgung lo so brgyad par gshegs/\n4) de'i sku skye blo bzang bkra shis/ kong po dga' chag tu 'khrungs/ dgung lo so bdun par gshegs/\n5) de'i sku skye blo bzang dge legs ye shes grags pa/ dwags po bhrum du 'khrungs/ dgung lo drug cu re gsum pa/"@en .
+    
+    bdr:NT60C344B28355BE7E
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 558-559" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12483  a        :Person ;
+        skos:prefLabel      "blo bzang dge legs grags pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12482 ;
+        :isRoot             true ;
+        :note               bdr:NT334F1A1709793B25 , bdr:NT60C344B28355BE7E ;
+        :personEvent        bdr:EVB17DC124D8A53B86 , bdr:EVFBA002314416A744 ;
+        :personName         bdr:NM874C536453C5A123 , bdr:NM98F96B2073F057CD , bdr:NME2336BE8DF39CA8D .
+}

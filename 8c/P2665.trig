@@ -1,0 +1,67 @@
+@base          <bdg:P2665> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2665 {
+    bda:LG4B27559C75C7BC54
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-11-24T18:30:28.734Z"^^xsd:dateTime ;
+        adm:logMessage      "added annotation"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGDD2AB2DD794D7E45
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-20T12:59:21.071Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2665  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2665 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "8c/P2665.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2665 ;
+        adm:logEntry        bda:LG4B27559C75C7BC54 , bda:LGDD2AB2DD794D7E45 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46F08E0A2CEE6B7B
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVB272B053E4DDCB18
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NM1D5430CC4D77E6CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog pa pad+ma blo gros/"@bo-x-ewts .
+    
+    bdr:NM6918EA78AE7643C8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma blo gros/"@bo-x-ewts .
+    
+    bdr:NT3F7D11E193C47C14
+        a                   :Note ;
+        :noteText           "Dzogchen master and teacher; met in his youth 'ja' tshon snying po and studied with 'gro mgon ngag dbang grags pa and gar dbang pad ma rgyal mtshan; mentioned in the history of gu ru bkra shis and of bdud 'joms 'jigs bral ye shes rdo rje"@en .
+    
+    bdr:P2665  a            :Person ;
+        skos:prefLabel      "pad+ma blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3F7D11E193C47C14 ;
+        :personEvent        bdr:EV46F08E0A2CEE6B7B , bdr:EVB272B053E4DDCB18 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1D5430CC4D77E6CA , bdr:NM6918EA78AE7643C8 ;
+        :personTeacherOf    bdr:P1689 , bdr:P1692 .
+}

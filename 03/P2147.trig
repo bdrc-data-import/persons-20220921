@@ -1,0 +1,74 @@
+@base          <bdg:P2147> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2147 {
+    bda:LG84EBA76001DD65A6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-19T10:35:42.649Z"^^xsd:dateTime ;
+        adm:logMessage      "NP"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG881C64DD9F0ED2BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T15:33:03.829Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P2147  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2147 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "03/P2147.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2147 ;
+        adm:logEntry        bda:LG84EBA76001DD65A6 , bda:LG881C64DD9F0ED2BE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38759605087678D0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G257 .
+    
+    bdr:EVF39B617712CAEF7B
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM72FE6DA9D5B02D5F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thar pa lo tsA ba nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDB5246F686DFBB75
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT672B2766F541EB95
+        a                   :Note ;
+        :locationStatement  "p. 84" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "taught the sbyor drug, 'dul ba, and mngon pa mdzod to dka' bzhi rig pa'i sengge.\ntranslations for bka' 'gyur and bstan 'gyur number 52 separate works"@en .
+    
+    bdr:NT9FB9E6CD4369C88D
+        a                   :Note ;
+        :noteText           "important master in the transmission of the yogasataka and other teachings to bu ston rin chen grub and others"@en .
+    
+    bdr:P2147  a            :Person ;
+        skos:prefLabel      "nyi ma rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT672B2766F541EB95 , bdr:NT9FB9E6CD4369C88D ;
+        :personEvent        bdr:EV38759605087678D0 , bdr:EVF39B617712CAEF7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM72FE6DA9D5B02D5F , bdr:NMDB5246F686DFBB75 ;
+        :personStudentOf    bdr:P3275 , bdr:P4CZ10558 , bdr:P4CZ15161 , bdr:P4CZ15522 , bdr:P9963 ;
+        :personTeacherOf    bdr:P155 , bdr:P2143 .
+}

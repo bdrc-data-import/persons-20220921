@@ -1,0 +1,50 @@
+@base          <bdg:P2241> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2241 {
+    bda:P2241  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2241 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "0c/P2241.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2241 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68F70187A0A0203B
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3EB05E3C87A4D7B8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rang grol nyi ma/"@bo-x-ewts .
+    
+    bdr:NMB6CC9A9BB78444D8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ba ku la dkon mchog rang grol nyi ma/"@bo-x-ewts .
+    
+    bdr:NTD82C53E256C4D813
+        a                   :Note ;
+        :noteText           "one of the famed ba ku la incarnations of ladakh"@en .
+    
+    bdr:P2241  a            :Person ;
+        skos:prefLabel      "dkon mchog rang grol nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD82C53E256C4D813 ;
+        :personEvent        bdr:EV68F70187A0A0203B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3EB05E3C87A4D7B8 , bdr:NMB6CC9A9BB78444D8 ;
+        :personStudentOf    bdr:P2240 .
+}

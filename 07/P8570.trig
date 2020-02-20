@@ -1,0 +1,52 @@
+@base          <bdg:P8570> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8570 {
+    bda:P8570  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8570 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "07/P8570.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8570 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39FDA1C1CFC516CC
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM5AA931260389A0AB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya ri mkha' 'gro mkha' spyod dbang mo/"@bo-x-ewts .
+    
+    bdr:NMA80B51BDAFB2643F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkha' spyod dbang mo/"@bo-x-ewts .
+    
+    bdr:NT3B470790BC9FC62E
+        a                   :Note ;
+        :locationStatement  "p. 648" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "student of the 4th 'bri gung rtse sprul dkon mchog 'phrin las ngag dbang chos rgyal"@en .
+    
+    bdr:P8570  a            :Person ;
+        skos:prefLabel      "mkha' spyod dbang mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3B470790BC9FC62E ;
+        :personEvent        bdr:EV39FDA1C1CFC516CC ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM5AA931260389A0AB , bdr:NMA80B51BDAFB2643F ;
+        :personStudentOf    bdr:P8569 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P10625> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10625 {
+    bda:P10625  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10625 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e8/P10625.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10625 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV49822597CD0BC841
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM98BB646E144F693E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag ston shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NMAD1A5F3A45E2EA72
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od zer/"@bo-x-ewts .
+    
+    bdr:NT930D6B392DAAF710
+        a                   :Note ;
+        :locationStatement  "p. 175" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "one of the teachers of the sa skya pa master 'gro mgon 'phags pa"@en .
+    
+    bdr:P10625  a           :Person ;
+        skos:prefLabel      "shes rab 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT930D6B392DAAF710 ;
+        :personEvent        bdr:EV49822597CD0BC841 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM98BB646E144F693E , bdr:NMAD1A5F3A45E2EA72 ;
+        :personTeacherOf    bdr:P1048 .
+}

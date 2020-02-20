@@ -1,0 +1,57 @@
+@base          <bdg:P119> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P119 {
+    bda:LGD73FE87961440612
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T09:44:34.889Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P119  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P119 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "14/P119.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P119 ;
+        adm:logEntry        bda:LGD73FE87961440612 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C5A457F6BD7A53C
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMB8DF69A8FB4C0408
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sngags rams pa ye shes skal ldan/"@bo-x-ewts .
+    
+    bdr:NMEAD815148E95E4A6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes skal ldan/"@bo-x-ewts .
+    
+    bdr:NTA8F9048C020FAC14
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P119  a             :Person ;
+        skos:prefLabel      "ye shes skal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8F9048C020FAC14 ;
+        :personEvent        bdr:EV3C5A457F6BD7A53C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB8DF69A8FB4C0408 , bdr:NMEAD815148E95E4A6 ;
+        :personStudentOf    bdr:P107 .
+}

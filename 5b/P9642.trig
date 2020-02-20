@@ -1,0 +1,51 @@
+@base          <bdg:P9642> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9642 {
+    bda:P9642  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9642 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5b/P9642.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9642 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA3AC863C84DB9A96
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4658 ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NM2EB41D275EAF3205
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma 'tsho/"@bo-x-ewts .
+    
+    bdr:NMA9F221B02D5E5BFD
+        a                   :PersonPenName ;
+        rdfs:label          "'chi med/"@bo-x-ewts .
+    
+    bdr:NTEB32DFC7EB07039C
+        a                   :Note ;
+        :locationStatement  "p. 114" ;
+        :noteSource         bdr:MW29298 ;
+        :noteText           "biograpy of the poetess"@en .
+    
+    bdr:P9642  a            :Person ;
+        skos:prefLabel      "pad+ma 'tsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEB32DFC7EB07039C ;
+        :personEvent        bdr:EVA3AC863C84DB9A96 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM2EB41D275EAF3205 , bdr:NMA9F221B02D5E5BFD .
+}

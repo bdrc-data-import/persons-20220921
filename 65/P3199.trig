@@ -1,0 +1,58 @@
+@base          <bdg:P3199> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3199 {
+    bda:LG185D2DD1158C3392
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T12:53:42.808Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3199  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3199 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "65/P3199.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3199 ;
+        adm:logEntry        bda:LG185D2DD1158C3392 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BBC8C5DA056FFAB
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM4ADEB1EE615AA36D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mtha' yas/"@bo-x-ewts .
+    
+    bdr:NM51CDDFAE65DB6A3D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje drung blo bzang mtha' yas/"@bo-x-ewts .
+    
+    bdr:NT1C61FB6FA02D3E94
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3199  a            :Person ;
+        skos:prefLabel      "blo bzang mtha' yas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C61FB6FA02D3E94 ;
+        :personEvent        bdr:EV1BBC8C5DA056FFAB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4ADEB1EE615AA36D , bdr:NM51CDDFAE65DB6A3D ;
+        :personStudentOf    bdr:P106 ;
+        :personTeacherOf    bdr:P169 .
+}

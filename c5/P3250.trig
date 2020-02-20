@@ -1,0 +1,78 @@
+@base          <bdg:P3250> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3250 {
+    bda:LG3A57EE760D977A39
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-09-14T10:16:55.521Z"^^xsd:dateTime ;
+        adm:logMessage      "added sanskrit name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6B71CB81DDD576BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-29T15:38:14.217Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG894E940270B9733E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:56:39.508Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3250  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3250 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c5/P3250.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3250 ;
+        adm:logEntry        bda:LG3A57EE760D977A39 , bda:LG6B71CB81DDD576BE , bda:LG894E940270B9733E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBF8B68D2A1D9D8FE
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM1EB12489A97ABA1B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NM22AA2BE2359919DC
+        a                   :PersonPersonalName ;
+        rdfs:label          "d+harma mitra/"@bo-x-ewts .
+    
+    bdr:NM6B60E9C7686467CA
+        a                   :PersonOtherName ;
+        rdfs:label          "dharmamitra"@sa-alalc97 .
+    
+    bdr:NMF8249F331394B5FC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon chos kyi bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NT55B67CBB931B34C8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3250  a            :Person ;
+        skos:prefLabel      "chos kyi bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT55B67CBB931B34C8 ;
+        :personEvent        bdr:EVBF8B68D2A1D9D8FE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1EB12489A97ABA1B , bdr:NM22AA2BE2359919DC , bdr:NM6B60E9C7686467CA , bdr:NMF8249F331394B5FC ;
+        :personStudentOf    bdr:P3251 ;
+        :personTeacherOf    bdr:P3213 , bdr:P4CZ16819 .
+}

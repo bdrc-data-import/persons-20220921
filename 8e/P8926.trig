@@ -1,0 +1,78 @@
+@base          <bdg:P8926> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8926 {
+    bda:LG11ECFE097C4115C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T09:47:59.784Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2ECDAEAFDC9CFBC5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGFBCD637EA2EA9B22
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-28T11:22:23.745Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8926  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8926 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "8e/P8926.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8926 ;
+        adm:logEntry        bda:LG11ECFE097C4115C1 , bda:LG2ECDAEAFDC9CFBC5 , bda:LGFBCD637EA2EA9B22 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A12A7C86492C074
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:NM452D13B93234191E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Trungpa 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM485213B5E086A9A0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "drung pa 05"@bo-x-ewts .
+    
+    bdr:NM8C750F6049FAFACA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rin chen dpal gyi snying po/"@bo-x-ewts .
+    
+    bdr:NMB3F8A9C221CC0ADA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung pa 05 kun dga' rin chen dpal gyi snying po/"@bo-x-ewts .
+    
+    bdr:NTCF57F7E2D3174A5D
+        a                   :Note ;
+        :locationStatement  "p. 170" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biodata\nborn in sbugs shul dme skor"@en .
+    
+    bdr:P8926  a            :Person ;
+        skos:prefLabel      "kun dga' rin chen dpal gyi snying po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8925 ;
+        :isRoot             true ;
+        :note               bdr:NTCF57F7E2D3174A5D ;
+        :personEvent        bdr:EV3A12A7C86492C074 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM452D13B93234191E , bdr:NM485213B5E086A9A0 , bdr:NM8C750F6049FAFACA , bdr:NMB3F8A9C221CC0ADA .
+}

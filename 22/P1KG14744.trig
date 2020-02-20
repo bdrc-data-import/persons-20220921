@@ -1,0 +1,57 @@
+@base          <bdg:P1KG14744> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14744 {
+    bda:LG264F9D2D2EFB927B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-25T16:49:03.879Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14744  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14744 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "22/P1KG14744.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14744 ;
+        adm:logEntry        bda:LG264F9D2D2EFB927B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88ED838BD663097C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4446 ;
+        :onYear             "1929"^^xsd:gYear .
+    
+    bdr:NMB293989BE994804C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMB83D065B2D162B25
+        a                   :PersonPersonalName ;
+        rdfs:label          "bye gzhong bkra shis dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NTC63653E81DF6D022
+        a                   :Note ;
+        :noteText           "brief biography of author is in page 107 of W1KG14743"@en .
+    
+    bdr:P1KG14744  a        :Person ;
+        skos:prefLabel      "bkra shis dbang rgyal/"@bo-x-ewts ;
+        :hasBrother         bdr:P9675 ;
+        :isRoot             true ;
+        :note               bdr:NTC63653E81DF6D022 ;
+        :personEvent        bdr:EV88ED838BD663097C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB293989BE994804C , bdr:NMB83D065B2D162B25 .
+}

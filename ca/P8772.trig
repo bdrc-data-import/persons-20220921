@@ -1,0 +1,76 @@
+@base          <bdg:P8772> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8772 {
+    bda:LGCA8EEE0189DA3544
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:39.74Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8772  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8772 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ca/P8772.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8772 ;
+        adm:logEntry        bda:LGCA8EEE0189DA3544 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D6A59F3648A09E9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4171 .
+    
+    bdr:EV9503914E60AA8DEA
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVCAB16B7A8AACB838
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4170 .
+    
+    bdr:NM1C3DA724F9A6D47C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal sras nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NM689B009FCC1C6749
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NT681E1524B69C46A2
+        a                   :Note ;
+        :locationStatement  "p. 279" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTE65E49E8EB16381A
+        a                   :Note ;
+        :locationStatement  "279" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P8772  a            :Person ;
+        skos:prefLabel      "nam mkha' rdo rje/"@bo-x-ewts ;
+        :hasFather          bdr:P8769 ;
+        :hasSon             bdr:P8773 ;
+        :isRoot             true ;
+        :note               bdr:NT681E1524B69C46A2 , bdr:NTE65E49E8EB16381A ;
+        :personEvent        bdr:EV2D6A59F3648A09E9 , bdr:EV9503914E60AA8DEA , bdr:EVCAB16B7A8AACB838 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C3DA724F9A6D47C , bdr:NM689B009FCC1C6749 ;
+        :personStudentOf    bdr:P8769 ;
+        :personTeacherOf    bdr:P8773 .
+}

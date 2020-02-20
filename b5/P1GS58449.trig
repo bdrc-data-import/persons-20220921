@@ -1,0 +1,57 @@
+@base          <bdg:P1GS58449> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1GS58449 {
+    bda:LG1645CEB81FC74166
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-09-11T10:57:30.242Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrew person and remapped work to P10084"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGFB7FF8CC04ED6A0E
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-09-11T07:29:14.546Z"^^xsd:dateTime ;
+        adm:logMessage      "record created for use as author"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1GS58449  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1GS58449 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b5/P1GS58449.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1GS58449 ;
+        adm:logEntry        bda:LG1645CEB81FC74166 , bda:LGFB7FF8CC04ED6A0E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV7DA3A2FDD46A0CFF
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM1C5CB8BF2B62ECB8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzungs 'bum thar/"@bo-x-ewts .
+    
+    bdr:NT3EC5EE6F0CED723A
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P10084"@en .
+    
+    bdr:P1GS58449  a        :Person ;
+        skos:prefLabel      "gzungs 'bum thar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3EC5EE6F0CED723A ;
+        :personEvent        bdr:EV7DA3A2FDD46A0CFF ;
+        :personName         bdr:NM1C5CB8BF2B62ECB8 .
+}

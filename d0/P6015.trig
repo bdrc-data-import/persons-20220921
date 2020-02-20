@@ -1,0 +1,61 @@
+@base          <bdg:P6015> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6015 {
+    bda:LG961BE724E7CA232B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T11:47:30.528Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6015  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6015 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d0/P6015.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6015 ;
+        adm:logEntry        bda:LG961BE724E7CA232B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV122C27AD2DDE29FC
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMD924016D913BE6F0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde chen rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMECA798BC18316E1C
+        a                   :PersonPersonalName ;
+        rdfs:label          "gnas mgo bde chen rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC84AF88B047F3180
+        a                   :Note ;
+        :locationStatement  "p. 111" .
+    
+    bdr:NTFD21A8D8EBD65203
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:P6015  a            :Person ;
+        skos:prefLabel      "bde chen rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC84AF88B047F3180 , bdr:NTFD21A8D8EBD65203 ;
+        :personEvent        bdr:EV122C27AD2DDE29FC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD924016D913BE6F0 , bdr:NMECA798BC18316E1C ;
+        :personStudentOf    bdr:P2943 .
+}

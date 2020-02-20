@@ -1,0 +1,64 @@
+@base          <bdg:P00KG03806> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG03806 {
+    bda:LG363F63D8D043E3D6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T17:03:56.06Z"^^xsd:dateTime ;
+        adm:logMessage      "added GIS and name"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG770BF83FE43EE022
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T11:54:20.96Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGEEC485FC3180CF75
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-10-30T16:28:01.434Z"^^xsd:dateTime ;
+        adm:logMessage      "created person and published"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG03806  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG03806 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b3/P00KG03806.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG03806 ;
+        adm:logEntry        bda:LG363F63D8D043E3D6 , bda:LG770BF83FE43EE022 , bda:LGEEC485FC3180CF75 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV926AD1AFE25E5477
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVAD56EAD25E8652EB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4336 .
+    
+    bdr:NM61F5C733412AC77B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab gsal byed/"@bo-x-ewts .
+    
+    bdr:P00KG03806  a       :Person ;
+        skos:prefLabel      "shes rab gsal byed/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV926AD1AFE25E5477 , bdr:EVAD56EAD25E8652EB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM61F5C733412AC77B ;
+        :personTeacherOf    bdr:P00KG03805 .
+}

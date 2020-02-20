@@ -1,0 +1,61 @@
+@base          <bdg:P1KG9845> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG9845 {
+    bda:LGF55F13138F7ABAA0
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-06-21T11:42:26.686Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG9845  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG9845 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "76/P1KG9845.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG9845 ;
+        adm:logEntry        bda:LGF55F13138F7ABAA0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV86D4805BB4C9A17A
+        a                   :PersonDeath ;
+        :onYear             "1875"^^xsd:gYear .
+    
+    bdr:EVB50349CD4A59DA7C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G70 ;
+        :onYear             "1817"^^xsd:gYear .
+    
+    bdr:NM507773EC69185AC7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan gzhan phan mtha' yas/"@bo-x-ewts .
+    
+    bdr:NMFC917F900C9B937A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang o rgyan gzhan phan mtha' yas/"@bo-x-ewts .
+    
+    bdr:NT5694117984747175
+        a                   :Note ;
+        :noteSource         bdr:MW1KG9844 ;
+        :noteText           "short biography in nyams mgur dmar khrid thos grol ye shes sgrom bu/ W1KG9844"@en .
+    
+    bdr:P1KG9845  a         :Person ;
+        skos:prefLabel      "o rgyan gzhan phan mtha' yas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5694117984747175 ;
+        :personEvent        bdr:EV86D4805BB4C9A17A , bdr:EVB50349CD4A59DA7C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM507773EC69185AC7 , bdr:NMFC917F900C9B937A .
+}

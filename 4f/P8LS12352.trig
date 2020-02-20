@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12352> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12352 {
+    bda:LGD741D16B06FBB8BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T12:35:47.625Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12352  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12352 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "4f/P8LS12352.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12352 ;
+        adm:logEntry        bda:LGD741D16B06FBB8BB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV623A711A7E184B90
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EVC4D53E8B2C4818E0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1877"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVF7C1833E7ED33070
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1885"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM62FBBACF2135500E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a lag byang chub/"@bo-x-ewts .
+    
+    bdr:NM64156A337031858E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub/"@bo-x-ewts .
+    
+    bdr:NM80B218BF8C4CC0BC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 13"@bo-x-ewts .
+    
+    bdr:NTF532160ACCE78BD9
+        a                   :Note ;
+        :locationStatement  "p. 172-173" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12352  a        :Person ;
+        skos:prefLabel      "byang chub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF532160ACCE78BD9 ;
+        :personEvent        bdr:EV623A711A7E184B90 , bdr:EVC4D53E8B2C4818E0 , bdr:EVF7C1833E7ED33070 ;
+        :personName         bdr:NM62FBBACF2135500E , bdr:NM64156A337031858E , bdr:NM80B218BF8C4CC0BC .
+}

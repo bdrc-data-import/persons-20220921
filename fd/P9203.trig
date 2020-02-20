@@ -1,0 +1,52 @@
+@base          <bdg:P9203> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9203 {
+    bda:P9203  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9203 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "fd/P9203.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9203 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE4F6651CDAC44ACE
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMC49DF7F612D3146D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'phags chen dpal ldan bkra shis/"@bo-x-ewts .
+    
+    bdr:NMF9D2E19A095FEBD0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan bkra shis/"@bo-x-ewts .
+    
+    bdr:NT796A96A04C8D04BC
+        a                   :Note ;
+        :locationStatement  "p. 417" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "noted as teacher of sngags 'chang chen po kun dga' rin chen"@en .
+    
+    bdr:P9203  a            :Person ;
+        skos:prefLabel      "dpal ldan bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT796A96A04C8D04BC ;
+        :personEvent        bdr:EVE4F6651CDAC44ACE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC49DF7F612D3146D , bdr:NMF9D2E19A095FEBD0 ;
+        :personTeacherOf    bdr:P460 .
+}

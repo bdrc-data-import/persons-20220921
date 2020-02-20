@@ -1,0 +1,78 @@
+@base          <bdg:P8LS12949> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12949 {
+    bda:LG781661D90C8199F7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-08T15:00:01.733Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBC21B7CCFC493D50
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-14T09:49:54.442Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE0DFBC45CF1253E2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGE7DFFD3B58A36CA5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-08T14:49:09.598Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12949  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12949 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4b/P8LS12949.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12949 ;
+        adm:logEntry        bda:LG781661D90C8199F7 , bda:LGBC21B7CCFC493D50 , bda:LGE0DFBC45CF1253E2 , bda:LGE7DFFD3B58A36CA5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58F51E19024F2EBF
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13027 .
+    
+    bdr:NM1D9449DC6973066E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dgon rtse brgyad sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM49EB3055702FC019
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA220CD194532A595
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gontsegye Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTD19137008B7BB61C
+        a                   :Note ;
+        :locationStatement  "p. 335" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "rgya'i tang tser 'khod kyang gser snyan du mi 'gro gras/\ndgon rtse brgyad sprul sku'i skye phreng dang po ni/\n1) phun tshogs rgyal mtshan/ dbus su 'khrungs/ dgung lo drug cu re bzhi par gshegs/"@bo-x-ewts .
+    
+    bdr:P8LS12949  a        :Person ;
+        skos:prefLabel      "phun tshogs rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD19137008B7BB61C ;
+        :personEvent        bdr:EV58F51E19024F2EBF ;
+        :personName         bdr:NM1D9449DC6973066E , bdr:NM49EB3055702FC019 , bdr:NMA220CD194532A595 .
+}

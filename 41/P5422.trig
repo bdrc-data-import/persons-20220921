@@ -1,0 +1,77 @@
+@base          <bdg:P5422> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5422 {
+    bda:LG3E19266B9D66FBEE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T15:14:41.833Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5422  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5422 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "41/P5422.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5422 ;
+        adm:logEntry        bda:LG3E19266B9D66FBEE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F18D1FB2FC98B4B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV314246091BD83008
+        a                   :PersonBirth ;
+        :onYear             "1926"^^xsd:gYear .
+    
+    bdr:EV768860E60DBB6C11
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EVDD51731BF8BA9FD0
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:NMB0090047CD772FD4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ko'u dge sprul sku skal bzang lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB6BE7AC5AD50ED66
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 49"@bo-x-ewts .
+    
+    bdr:NMFE27143C998EEBD0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTAE81F9E4A0CBB88F
+        a                   :Note ;
+        :noteText           "recent dge lugs incarnation from shis tshang monastery in gansu"@en .
+    
+    bdr:NTD88AC01F57EFBD5F
+        a                   :Note ;
+        :locationStatement  "p. 452-453" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:P5422  a            :Person ;
+        skos:prefLabel      "skal bzang lung rigs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE81F9E4A0CBB88F , bdr:NTD88AC01F57EFBD5F ;
+        :personEvent        bdr:EV2F18D1FB2FC98B4B , bdr:EV314246091BD83008 , bdr:EV768860E60DBB6C11 , bdr:EVDD51731BF8BA9FD0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB0090047CD772FD4 , bdr:NMB6BE7AC5AD50ED66 , bdr:NMFE27143C998EEBD0 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P3JM12> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JM12 {
+    bda:LG40D37DE98FE9D5DA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T16:08:18.438Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG5835266D0E252275
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-16T11:26:57.187Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student and reincarnation relations"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGBB69316AA73C72D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-30T17:21:56.855Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P3JM12  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JM12 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "1c/P3JM12.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JM12 ;
+        adm:logEntry        bda:LG40D37DE98FE9D5DA , bda:LG5835266D0E252275 , bda:LGBB69316AA73C72D5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF51049AE17642A66
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3E7C322AEB7301CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu shul mkhan po/"@bo-x-ewts .
+    
+    bdr:P3JM12  a           :Person ;
+        skos:prefLabel      "klu shul mkhan po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVF51049AE17642A66 ;
+        :personName         bdr:NM3E7C322AEB7301CE ;
+        :personStudentOf    bdr:P248 , bdr:P3JM9 ;
+        :personTeacherOf    bdr:P8297 .
+}

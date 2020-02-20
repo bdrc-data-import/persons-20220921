@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12004 {
+    bda:LG501E5C134E141701
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T12:54:10.465Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12004  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12004 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "21/P8LS12004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12004 ;
+        adm:logEntry        bda:LG501E5C134E141701 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV444DEDC4AEA6AEC1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVEFA91EFADFD847F1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2D5486114A02418D
+        a                   :PersonTitle ;
+        rdfs:label          "gung ru tshul bzang /"@bo-x-ewts .
+    
+    bdr:NM9C437E2EFFFF5039
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 04"@bo-x-ewts .
+    
+    bdr:NMA1F29E1170446F2D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul bzang /"@bo-x-ewts .
+    
+    bdr:P8LS12004  a        :Person ;
+        skos:prefLabel      "tshul bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV444DEDC4AEA6AEC1 , bdr:EVEFA91EFADFD847F1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D5486114A02418D , bdr:NM9C437E2EFFFF5039 , bdr:NMA1F29E1170446F2D ;
+        :personStudentOf    bdr:P35 .
+}

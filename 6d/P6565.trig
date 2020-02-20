@@ -1,0 +1,62 @@
+@base          <bdg:P6565> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6565 {
+    bda:P6565  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6565 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6d/P6565.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6565 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E4D6EF4DC97780C
+        a                   :PersonAssumesOffice ;
+        :onYear             "1242"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:EV6283BEE446CF4E32
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EVF6DA0B8CBADA48F3
+        a                   :PersonLeavesOffice ;
+        :onYear             "1242"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:NM93F05FBD8E523952
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nas ma jin/"@bo-x-ewts .
+    
+    bdr:NT5009E670D7C9A8EF
+        a                   :Note ;
+        :locationStatement  "p. 579" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "regent in the minority of go yug, the son of o go ta'i"@en .
+    
+    bdr:NTB2382279C4978D79
+        a                   :Note ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:P6565  a            :Person ;
+        skos:prefLabel      "nas ma jin/"@bo-x-ewts ;
+        :hasWife            bdr:P6564 ;
+        :isRoot             true ;
+        :note               bdr:NT5009E670D7C9A8EF , bdr:NTB2382279C4978D79 ;
+        :personEvent        bdr:EV0E4D6EF4DC97780C , bdr:EV6283BEE446CF4E32 , bdr:EVF6DA0B8CBADA48F3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93F05FBD8E523952 .
+}

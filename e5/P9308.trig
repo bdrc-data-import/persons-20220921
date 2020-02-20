@@ -1,0 +1,50 @@
+@base          <bdg:P9308> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9308 {
+    bda:P9308  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9308 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e5/P9308.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9308 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2EAB3DB9BFDBB90C
+        a                   :PersonBirth ;
+        :onYear             "1876"^^xsd:gYear .
+    
+    bdr:NM2A75B3F3D13440CA
+        a                   :PersonPersonalName ;
+        rdfs:label          "phun tshogs blo gros/"@bo-x-ewts .
+    
+    bdr:NM537EABC4AD4DAE2F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen phun tshogs blo gros/"@bo-x-ewts .
+    
+    bdr:NT20F28DFC121768AA
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon teacher\nborn 1876"@en .
+    
+    bdr:P9308  a            :Person ;
+        skos:prefLabel      "phun tshogs blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT20F28DFC121768AA ;
+        :personEvent        bdr:EV2EAB3DB9BFDBB90C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A75B3F3D13440CA , bdr:NM537EABC4AD4DAE2F .
+}

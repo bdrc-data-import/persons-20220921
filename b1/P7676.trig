@@ -1,0 +1,60 @@
+@base          <bdg:P7676> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7676 {
+    bda:P7676  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7676 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b1/P7676.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7676 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA99E4D0CF43DCEC4
+        a                   :PersonBirth ;
+        :onYear             "1854"^^xsd:gYear .
+    
+    bdr:EVEFB6809AB666F949
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM309C1F62942FAFB8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma 'bum gsal dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM45F019F2A4E3EBB8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spa tshang bla ma nyi ma 'bum gsal/"@bo-x-ewts .
+    
+    bdr:NT728E3900C13C2003
+        a                   :Note ;
+        :noteText           "bon teacher from the spa tshang lineage."@en .
+    
+    bdr:NTB10149075EA435BD
+        a                   :Note ;
+        :locationStatement  "p. 299" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "according to this reliable source spa ston nyi ma 'bum gsal was born in 1854"@en .
+    
+    bdr:P7676  a            :Person ;
+        skos:prefLabel      "nyi ma 'bum gsal dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT728E3900C13C2003 , bdr:NTB10149075EA435BD ;
+        :personEvent        bdr:EVA99E4D0CF43DCEC4 , bdr:EVEFB6809AB666F949 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM309C1F62942FAFB8 , bdr:NM45F019F2A4E3EBB8 ;
+        :personTeacherOf    bdr:P7675 .
+}

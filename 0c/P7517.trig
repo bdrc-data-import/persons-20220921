@@ -1,0 +1,83 @@
+@base          <bdg:P7517> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7517 {
+    bda:LG3A669643E49D251F
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-14T12:08:57.195Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6EF64E9796E95110
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-26T15:07:47.853Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG894AB4508FA84F13
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-14T12:01:38.313Z"^^xsd:dateTime ;
+        adm:logMessage      "adde name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB623CEF4384EBA3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-05-02T12:18:03.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth G# and seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P7517  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7517 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "0c/P7517.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7517 ;
+        adm:logEntry        bda:LG3A669643E49D251F , bda:LG6EF64E9796E95110 , bda:LG894AB4508FA84F13 , bda:LGB623CEF4384EBA3E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1745B339C024F395
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G682 ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:EVC6E0762A9CC3746D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:NM3F76AEC598C9E7AA
+        a                   :PersonGrammatical ;
+        rdfs:label          "ngag dbang dbyangs can gtsug lag rgya mtsho lung rigs smra ba'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM548BFCE1FC3EA6C5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen bstan pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMA7AA83606415089A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis bstan pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NT6155CCEDDFD453EE
+        a                   :Note ;
+        :locationStatement  "p. 1-4 (1st group)" ;
+        :noteSource         bdr:MW22294 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P7517  a            :Person ;
+        skos:prefLabel      "bkra shis bstan pa rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6155CCEDDFD453EE ;
+        :personEvent        bdr:EV1745B339C024F395 , bdr:EVC6E0762A9CC3746D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3F76AEC598C9E7AA , bdr:NM548BFCE1FC3EA6C5 , bdr:NMA7AA83606415089A ;
+        :personTeacherOf    bdr:P8LS20818 .
+}

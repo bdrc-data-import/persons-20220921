@@ -1,0 +1,66 @@
+@base          <bdg:P6861> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6861 {
+    bda:LGE01A42A0C61D06EB
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-16T16:06:04.051Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE01AB5EEFBDCD629
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-02T17:03:07.849Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P6861  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6861 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3c/P6861.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6861 ;
+        adm:logEntry        bda:LGE01A42A0C61D06EB , bda:LGE01AB5EEFBDCD629 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAFF04EB946762CE2
+        a                   :PersonDeath ;
+        :notAfter           "1385"^^xsd:gYear ;
+        :notBefore          "1375"^^xsd:gYear .
+    
+    bdr:EVF33A2C7D9BE1B0B0
+        a                   :PersonBirth ;
+        :notAfter           "1310"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NMADFE914357FE7391
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos grags bzang po/"@bo-x-ewts .
+    
+    bdr:NT4A6B36C8CE625B6F
+        a                   :Note ;
+        :noteText           "this entry is courtesy of stephane arguillere\nmasters, not recorded in database as yet:\nblo bzang pa\nrgyal rong pa\ntsA ri pa\nlha khang pa\nrin chen gling pa"@en .
+    
+    bdr:P6861  a            :Person ;
+        skos:prefLabel      "chos grags bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A6B36C8CE625B6F ;
+        :personEvent        bdr:EVAFF04EB946762CE2 , bdr:EVF33A2C7D9BE1B0B0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMADFE914357FE7391 ;
+        :personStudentOf    bdr:P139 , bdr:P150 , bdr:P152 , bdr:P1583 , bdr:P7625 ;
+        :personTeacherOf    bdr:P8530 , bdr:P8531 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Kunpang-Chodrak-Pelsang-/9482"^^xsd:anyURI .
+}

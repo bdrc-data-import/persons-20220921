@@ -1,0 +1,50 @@
+@base          <bdg:P1739> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1739 {
+    bda:P1739  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1739 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "99/P1739.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1739 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA988E1BF9B8A78B1
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM6EFA4696BC5733F0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMFEA3225CF20F249C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mu ne dpon slob sangs rgyas dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT028D5D48678FD775
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1739  a            :Person ;
+        skos:prefLabel      "sangs rgyas dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT028D5D48678FD775 ;
+        :personEvent        bdr:EVA988E1BF9B8A78B1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6EFA4696BC5733F0 , bdr:NMFEA3225CF20F249C ;
+        :personTeacherOf    bdr:P199 .
+}

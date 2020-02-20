@@ -1,0 +1,96 @@
+@base          <bdg:P2196> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2196 {
+    bda:LG1B57AE4DD2C89709
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T13:22:53.622Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG632C11C492F0A55E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T16:23:13.696Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC93C17256A08F2B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T10:24:39.579Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2196  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2196 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "5c/P2196.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2196 ;
+        adm:logEntry        bda:LG1B57AE4DD2C89709 , bda:LG632C11C492F0A55E , bda:LGC93C17256A08F2B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4AA1B7EC0371976D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV695922E06952983C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1073 ;
+        :onYear             "1742"^^xsd:gYear .
+    
+    bdr:EV79779B5C94AF1CF8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12072 ;
+        :onYear             "1798"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM19C99B474C8C3934
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM5298CF7513CA2D25
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang dus 'khor khri 10"@bo-x-ewts .
+    
+    bdr:NMD07C03B900470ABD
+        a                   :PersonTitle ;
+        rdfs:label          "kha gya dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMEC996C3B4AD8E14A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha gya dkon mchog dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT22BE628CA1269F71
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT2AFEAA4C2E4769D3
+        a                   :Note ;
+        :locationStatement  "p. 133" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTD1EB1221B3AD0FD3
+        a                   :Note ;
+        :noteText           "Entered Kha-gya Dgon for his early studies.\nFled to Bla-brang Bkra-shis-'khyil.\nTook, quite late, his Rdo-rams-pa degree.\nWent to Dbus Gtsang as a zhabs-phyi of 'Jam-dbyangs-bzhad-pa Dkon-mchog-'jigs-med-dbang-po.\nReturn to Mdo-smad.\nEntered the Rgyud-pa Grwa-tshang for three years.\nTaught at Sku-'bum and Bya-khyung.\n1798. Becomes 10th Dus-'khor Khri of Bla-brang Bkra-shis-'khyil."@en .
+    
+    bdr:P2196  a            :Person ;
+        skos:prefLabel      "dkon mchog dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22BE628CA1269F71 , bdr:NT2AFEAA4C2E4769D3 , bdr:NTD1EB1221B3AD0FD3 ;
+        :personEvent        bdr:EV4AA1B7EC0371976D , bdr:EV695922E06952983C , bdr:EV79779B5C94AF1CF8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19C99B474C8C3934 , bdr:NM5298CF7513CA2D25 , bdr:NMD07C03B900470ABD , bdr:NMEC996C3B4AD8E14A ;
+        :personStudentOf    bdr:P169 , bdr:P22 .
+}

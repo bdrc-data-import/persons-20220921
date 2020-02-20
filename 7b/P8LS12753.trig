@@ -1,0 +1,63 @@
+@base          <bdg:P8LS12753> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12753 {
+    bda:LG224191BF5148CBE0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-17T16:10:42.588Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG87723FF30E92D32C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-17T16:09:21.372Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9070447E310AA379
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-17T16:27:36.081Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favour of p5162"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12753  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12753 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7b/P8LS12753.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12753 ;
+        adm:logEntry        bda:LG224191BF5148CBE0 , bda:LG87723FF30E92D32C , bda:LG9070447E310AA379 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P5162 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV75524C043E4F031B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:NM1550DD23FF16EA12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag gi dbang po/"@bo-x-ewts .
+    
+    bdr:NM805CD12CDE55E8C9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bde chen chos 'khor yongs 'dzin 08"@bo-x-ewts .
+    
+    bdr:P8LS12753  a        :Person ;
+        skos:prefLabel      "ngag gi dbang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1375 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV75524C043E4F031B ;
+        :personName         bdr:NM1550DD23FF16EA12 , bdr:NM805CD12CDE55E8C9 .
+}

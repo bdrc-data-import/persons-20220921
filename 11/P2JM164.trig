@@ -1,0 +1,56 @@
+@base          <bdg:P2JM164> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM164 {
+    bda:LG3D4164212379A012
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-26T14:34:32.327Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG4ED7B82CC3E25652
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-25T17:03:47.888Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM164  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM164 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "11/P2JM164.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM164 ;
+        adm:logEntry        bda:LG3D4164212379A012 , bda:LG4ED7B82CC3E25652 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE266F9A7AE5BA8DE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4173 .
+    
+    bdr:NM295AE0CC8365D701
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya sman pa nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:NMB268E2FC1D2E4DFB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rdo rje/"@bo-x-ewts .
+    
+    bdr:P2JM164  a          :Person ;
+        skos:prefLabel      "nam mkha' rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVE266F9A7AE5BA8DE ;
+        :personName         bdr:NM295AE0CC8365D701 , bdr:NMB268E2FC1D2E4DFB ;
+        :personTeacherOf    bdr:P2349 .
+}

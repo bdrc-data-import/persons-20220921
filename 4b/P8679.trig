@@ -1,0 +1,62 @@
+@base          <bdg:P8679> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8679 {
+    bda:LG5B2A1653D559A9E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T18:38:10.483Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8679  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8679 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4b/P8679.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8679 ;
+        adm:logEntry        bda:LG5B2A1653D559A9E4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9FF41B330E95BD7D
+        a                   :PersonDeath ;
+        :onYear             "1998"^^xsd:gYear .
+    
+    bdr:EVDD79AEAF8B3CC4FA
+        a                   :PersonBirth ;
+        :onYear             "1917"^^xsd:gYear .
+    
+    bdr:NM8833025FB5EDDCB6
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas tshe 'phel/"@bo-x-ewts .
+    
+    bdr:NMB9D5A428AC1FF2D9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya bral sangs rgyas tshe 'phel/"@bo-x-ewts .
+    
+    bdr:NTF163292652E2D435
+        a                   :Note ;
+        :locationStatement  "p. 3, 63" ;
+        :noteSource         bdr:MW27322 ;
+        :noteText           "years of birth and death"@en .
+    
+    bdr:P8679  a            :Person ;
+        skos:prefLabel      "sangs rgyas tshe 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF163292652E2D435 ;
+        :personEvent        bdr:EV9FF41B330E95BD7D , bdr:EVDD79AEAF8B3CC4FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8833025FB5EDDCB6 , bdr:NMB9D5A428AC1FF2D9 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sanggye-Tsepel/11417"^^xsd:anyURI .
+}

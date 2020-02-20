@@ -1,0 +1,78 @@
+@base          <bdg:P2239> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2239 {
+    bda:LG7AD0D7EC9753909C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-16T10:16:06.146Z"^^xsd:dateTime ;
+        adm:logMessage      "relationship of teacher student added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG7F2D9898260FBFAA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T14:18:33.089Z"^^xsd:dateTime ;
+        adm:logMessage      "changed burth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2239  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2239 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7a/P2239.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2239 ;
+        adm:logEntry        bda:LG7AD0D7EC9753909C , bda:LG7F2D9898260FBFAA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4EBD0BD706E4F770
+        a                   :PersonDeath ;
+        :onYear             "1893"^^xsd:gYear .
+    
+    bdr:EV574527908870933E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G62 .
+    
+    bdr:EVCCDB0A9DA624E041
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2119 ;
+        :onYear             "1830"^^xsd:gYear .
+    
+    bdr:NM330BB74BD2F2A252
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yang ri sgar rdor slob 23 dkon mchog tshe brtan/"@bo-x-ewts .
+    
+    bdr:NM34F6FDBDD0932E3F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog tshe brtan/"@bo-x-ewts .
+    
+    bdr:NTCA82BABB6ABA2483
+        a                   :Note ;
+        :locationStatement  "p. 243" ;
+        :noteSource         bdr:MW19814 .
+    
+    bdr:NTD0FC49204E1CA76A
+        a                   :Note ;
+        :locationStatement  "p. 592" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "important 'bri gung bka' brgyud teacher, connected with the teaching college of yang ri sgar; born in snye mo byang rtswa skye mo at ru khrod yangs can zam gsar gdong into the 'o bran clan; his father was sgang rta mgrin and his mother chos sgron;\n\nmain students: ti se rdor 'dzin dpal 'bar; grub dbang sman sgom tshe thar; sgrub dbang dkon mchog tshe brtan"@en .
+    
+    bdr:P2239  a            :Person ;
+        skos:prefLabel      "dkon mchog tshe brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCA82BABB6ABA2483 , bdr:NTD0FC49204E1CA76A ;
+        :personEvent        bdr:EV4EBD0BD706E4F770 , bdr:EV574527908870933E , bdr:EVCCDB0A9DA624E041 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM330BB74BD2F2A252 , bdr:NM34F6FDBDD0932E3F ;
+        :personStudentOf    bdr:P2240 .
+}

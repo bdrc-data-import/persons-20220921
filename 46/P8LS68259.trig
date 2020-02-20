@@ -1,0 +1,65 @@
+@base          <bdg:P8LS68259> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS68259 {
+    bda:LG5F257EB40F23E652
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-31T09:39:53.353Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5FFD41F0DC1391B7
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-31T09:43:12.618Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS68259  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS68259 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "46/P8LS68259.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS68259 ;
+        adm:logEntry        bda:LG5F257EB40F23E652 , bda:LG5FFD41F0DC1391B7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA3B7299385966058
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3185 ;
+        :onYear             "1966"^^xsd:gYear .
+    
+    bdr:EVB39548D64A5A99A3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR2480 .
+    
+    bdr:NM0E85501B63685E1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM7611210E0A08510C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mda' tshan dge 'dun 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT20FD399BA8818558
+        a                   :Note ;
+        :noteText           "See work number W8LS68258, p. 1-7\n\nsnyan ngag pa grags can/\nbla brang bkra shis 'khyil gyi dge ba'i bshes gnyen chen po a khu dge 'dun rgya mtsho che ba tshang zhes pa'i spyan sngar rab byung dang dge tshul sdom pa mnos/\nmda' tshan dgon bkra shis dga' ldan gling gi chos grwar zhugs/"@en .
+    
+    bdr:P8LS68259  a        :Person ;
+        skos:prefLabel      "dge 'dun 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT20FD399BA8818558 ;
+        :personEvent        bdr:EVA3B7299385966058 , bdr:EVB39548D64A5A99A3 ;
+        :personName         bdr:NM0E85501B63685E1E , bdr:NM7611210E0A08510C .
+}

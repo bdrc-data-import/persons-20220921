@@ -1,0 +1,54 @@
+@base          <bdg:P8544> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8544 {
+    bda:P8544  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8544 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d9/P8544.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8544 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB67EE6E3D955A2A8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVE06D5A6EC29478E9
+        a                   :PersonBirth ;
+        :onYear             "1946"^^xsd:gYear .
+    
+    bdr:NM7447EB65610B31E2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA59AFD6B855637E8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gdong 'gu mkhan rgan sprul sku 'chi med rdo rje/"@bo-x-ewts .
+    
+    bdr:NT76C19AC2AB8AD4A1
+        a                   :Note ;
+        :locationStatement  "p. 311-313" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8544  a            :Person ;
+        skos:prefLabel      "'chi med rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT76C19AC2AB8AD4A1 ;
+        :personEvent        bdr:EVB67EE6E3D955A2A8 , bdr:EVE06D5A6EC29478E9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7447EB65610B31E2 , bdr:NMA59AFD6B855637E8 .
+}

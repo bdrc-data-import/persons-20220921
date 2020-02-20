@@ -1,0 +1,57 @@
+@base          <bdg:P3749> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3749 {
+    bda:P3749  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3749 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fa/P3749.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3749 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV060B11D1D3380155
+        a                   :PersonBirth ;
+        :onYear             "1355"^^xsd:gYear .
+    
+    bdr:EV5612494E17DD3F13
+        a                   :PersonDeath ;
+        :onYear             "1432"^^xsd:gYear .
+    
+    bdr:NM4B6EE37FE73F36F1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "so ston shAkya dpal/"@bo-x-ewts .
+    
+    bdr:NMCB915243C5FF3B43
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya dpal/"@bo-x-ewts .
+    
+    bdr:NT318392E5D1A9D61B
+        a                   :Note ;
+        :locationStatement  "p. 123" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:NT765AF7154455F027
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P3749  a            :Person ;
+        skos:prefLabel      "shAkya dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT318392E5D1A9D61B , bdr:NT765AF7154455F027 ;
+        :personEvent        bdr:EV060B11D1D3380155 , bdr:EV5612494E17DD3F13 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B6EE37FE73F36F1 , bdr:NMCB915243C5FF3B43 .
+}

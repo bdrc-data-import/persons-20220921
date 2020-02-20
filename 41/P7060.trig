@@ -1,0 +1,54 @@
+@base          <bdg:P7060> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7060 {
+    bda:P7060  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7060 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "41/P7060.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7060 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F5E64CAF6C7EEF6
+        a                   :PersonBirth ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:EV9270F8AF54BE27B2
+        a                   :PersonDeath ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM1D0E2F1685559AFC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM5EEB861F2BA48492
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshan sgrog 'jam dbyangs chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT0D99A7EE10C46281
+        a                   :Note ;
+        :locationStatement  "p. 428, 443" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "b. 1914\nd. 1933"@en .
+    
+    bdr:P7060  a            :Person ;
+        skos:prefLabel      "'jam dbyangs chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D99A7EE10C46281 ;
+        :personEvent        bdr:EV0F5E64CAF6C7EEF6 , bdr:EV9270F8AF54BE27B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1D0E2F1685559AFC , bdr:NM5EEB861F2BA48492 .
+}

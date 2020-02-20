@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12381> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12381 {
+    bda:LG714B9D941B4C2347
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:49:10.051Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12381  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12381 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0d/P8LS12381.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12381 ;
+        adm:logEntry        bda:LG714B9D941B4C2347 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV279B836F3AF44B74
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVBD640231A7FDE4F9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM6AA494CB97A1D1DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kong ston bsam grub rin chen/"@bo-x-ewts .
+    
+    bdr:NMC2A281F22F46A77D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 16"@bo-x-ewts .
+    
+    bdr:NMC56BC1CCBED900D0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam grub rin chen/"@bo-x-ewts .
+    
+    bdr:NT9CA7127D158E673C
+        a                   :Note ;
+        :locationStatement  "p. 287" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12381  a        :Person ;
+        skos:prefLabel      "bsam grub rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9CA7127D158E673C ;
+        :personEvent        bdr:EV279B836F3AF44B74 , bdr:EVBD640231A7FDE4F9 ;
+        :personName         bdr:NM6AA494CB97A1D1DE , bdr:NMC2A281F22F46A77D , bdr:NMC56BC1CCBED900D0 .
+}

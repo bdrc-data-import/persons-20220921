@@ -1,0 +1,62 @@
+@base          <bdg:P4461> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4461 {
+    bda:LGA5F7AE4CE8CB25C1
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-08-25T14:49:23.003Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4461  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4461 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3c/P4461.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4461 ;
+        adm:logEntry        bda:LGA5F7AE4CE8CB25C1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV410145F7A86C0CEA
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVA0EA2DEC3CBDF200
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:NMB47FDFDAF6048319
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBBAA2EA637170504
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge drung pa kun dga' rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTE86982FAD6933EE7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P4461  a            :Person ;
+        skos:prefLabel      "kun dga' rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE86982FAD6933EE7 ;
+        :personEvent        bdr:EV410145F7A86C0CEA , bdr:EVA0EA2DEC3CBDF200 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB47FDFDAF6048319 , bdr:NMBBAA2EA637170504 ;
+        :personStudentOf    bdr:P659 ;
+        :personTeacherOf    bdr:P801 .
+}

@@ -1,0 +1,95 @@
+@base          <bdg:P4628> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4628 {
+    bda:LG0589ADEE6A4ACBC0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T11:38:19.314Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5B3497E7FB24F274
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T12:34:03.813Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4628  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4628 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "50/P4628.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4628 ;
+        adm:logEntry        bda:LG0589ADEE6A4ACBC0 , bda:LG5B3497E7FB24F274 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2C767F75CAD89EAC
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV3212D413849355AE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1652"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4EBE81D48E9F6FF0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM76DAA51B1CE228D6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NM8AB58AE4C13B0CD3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 13"@bo-x-ewts .
+    
+    bdr:NMB119F1D5B7E68233
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang pa ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NMC1D32CD0622A22C9
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 13 ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NT469F5BD5BA64D7AB
+        a                   :Note ;
+        :locationStatement  "p. 115-116" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "His name is not listed in baiser by sde srid sangs rgyas rgya mtsho \nHis name is also not mentioned in the gdan rabs of chu bzang rin po che and ngag dbang dge legs"@en .
+    
+    bdr:NT47BA47636921009E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTA8BDEB5509D96C0E
+        a                   :Note ;
+        :noteText           "1652. On throne of Bya-khyung according to Rong-po Grub-chen's Chos 'byung sa bon."@en .
+    
+    bdr:NTE0B3B48A6CEA8D2C
+        a                   :Note ;
+        :locationStatement  "p. 1340" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4628  a            :Person ;
+        skos:prefLabel      "ngag dbang bsod nams/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT469F5BD5BA64D7AB , bdr:NT47BA47636921009E , bdr:NTA8BDEB5509D96C0E , bdr:NTE0B3B48A6CEA8D2C ;
+        :personEvent        bdr:EV2C767F75CAD89EAC , bdr:EV3212D413849355AE , bdr:EV4EBE81D48E9F6FF0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76DAA51B1CE228D6 , bdr:NM8AB58AE4C13B0CD3 , bdr:NMB119F1D5B7E68233 , bdr:NMC1D32CD0622A22C9 .
+}

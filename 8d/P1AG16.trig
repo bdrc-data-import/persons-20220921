@@ -1,0 +1,59 @@
+@base          <bdg:P1AG16> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG16 {
+    bda:LG516DA2BEE3374739
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-05T12:15:16.831Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG5FD512C94FD97684
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T15:25:39.782Z"^^xsd:dateTime ;
+        adm:logMessage      "addred Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG16  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG16 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "8d/P1AG16.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG16 ;
+        adm:logEntry        bda:LG516DA2BEE3374739 , bda:LG5FD512C94FD97684 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM6E77CA8A9974E83D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang thang ras pa/"@bo-x-ewts .
+    
+    bdr:NM707E8D9C7791EBE4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Jangtang Repa"@en .
+    
+    bdr:NTDF7D73631E9F7BD1
+        a                   :Note ;
+        :locationStatement  "p. 333" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG16  a           :Person ;
+        skos:prefLabel      "byang thang ras pa/"@bo-x-ewts , "Jangtang Repa"@en ;
+        :isRoot             true ;
+        :note               bdr:NTDF7D73631E9F7BD1 ;
+        :personName         bdr:NM6E77CA8A9974E83D , bdr:NM707E8D9C7791EBE4 ;
+        :personStudentOf    bdr:P16 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jangtang-Repa/13443"^^xsd:anyURI .
+}

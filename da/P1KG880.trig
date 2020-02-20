@@ -1,0 +1,57 @@
+@base          <bdg:P1KG880> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG880 {
+    bda:LG8291AEA5098F27D2
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-23T15:08:18.463Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG880  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG880 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "da/P1KG880.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG880 ;
+        adm:logEntry        bda:LG8291AEA5098F27D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5BEAFAE57EF56E7F
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0EEA7D4E89BB9F79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME07CA15F5785DA5A
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsam gtan rgya mtsho leb ca/"@bo-x-ewts .
+    
+    bdr:NT4BAEA0CF46BA1CCB
+        a                   :Note ;
+        :noteSource         bdr:MW1KG879 ;
+        :noteText           "author of 'bras ljongs dgon sde'i lo rgyus gsar bzhad chu skyes bung ba'i rol mtsho"@en .
+    
+    bdr:P1KG880  a          :Person ;
+        skos:prefLabel      "bsam gtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4BAEA0CF46BA1CCB ;
+        :personEvent        bdr:EV5BEAFAE57EF56E7F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0EEA7D4E89BB9F79 , bdr:NME07CA15F5785DA5A .
+}

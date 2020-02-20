@@ -1,0 +1,56 @@
+@base          <bdg:P10473> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10473 {
+    bda:P10473  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10473 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "01/P10473.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10473 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72AE44CC30B229D5
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVA9A7789A3466BD16
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G391 .
+    
+    bdr:NM2BE39DC108676120
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME602AF377DACCF98
+        a                   :PersonPersonalName ;
+        rdfs:label          "gser mdog can gdan sa pa kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTC70713E6B6D70B9B
+        a                   :Note ;
+        :locationStatement  "p. 325" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "sa skya master and throne holder of the early gser mdog can teaching tradition"@en .
+    
+    bdr:P10473  a           :Person ;
+        skos:prefLabel      "kun dga' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC70713E6B6D70B9B ;
+        :personEvent        bdr:EV72AE44CC30B229D5 , bdr:EVA9A7789A3466BD16 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2BE39DC108676120 , bdr:NME602AF377DACCF98 ;
+        :personStudentOf    bdr:P487 .
+}

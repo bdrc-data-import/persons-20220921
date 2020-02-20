@@ -1,0 +1,84 @@
+@base          <bdg:P9732> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9732 {
+    bda:LG1CA895F9EF259875
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG78647FE12591A817
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T14:55:17.032Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGAB20B9301C58537A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T14:56:23.003Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9732  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9732 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "60/P9732.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9732 ;
+        adm:logEntry        bda:LG1CA895F9EF259875 , bda:LG78647FE12591A817 , bda:LGAB20B9301C58537A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FF8FB526B83780B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2562 .
+    
+    bdr:EVB117FEB2C0BA8C02
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM111D22F44283D379
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lab skyabs mgon 07"@bo-x-ewts .
+    
+    bdr:NM5FBF4B00C65394CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mkhas grub/"@bo-x-ewts .
+    
+    bdr:NM7169072ABE093803
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lab skyabs mgon 07 blo bzang mkhas grub/"@bo-x-ewts .
+    
+    bdr:NMFE40BF44CFE119D0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lab Kyabgon 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT9F39D859C5351233
+        a                   :Note ;
+        :locationStatement  "p. 398" ;
+        :noteSource         bdr:MW29401 ;
+        :noteText           "reckoned as the 7th lab skyabs mgon\na student of the 7th dalai lama\nauthor of two works:\ndpal 'khor lo sdom pa'i mchod pa'i cho ga bde chen snying po rab tu rgyas pa\ndpal rdo rje 'jigs byed kyi tshogs 'khor gyi cho ga dga' ston 'dzum zhal"@en .
+    
+    bdr:P9732  a            :Person ;
+        skos:prefLabel      "blo bzang mkhas grub/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9731 ;
+        :isRoot             true ;
+        :note               bdr:NT9F39D859C5351233 ;
+        :personEvent        bdr:EV0FF8FB526B83780B , bdr:EVB117FEB2C0BA8C02 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM111D22F44283D379 , bdr:NM5FBF4B00C65394CD , bdr:NM7169072ABE093803 , bdr:NMFE40BF44CFE119D0 ;
+        :personStudentOf    bdr:P179 .
+}

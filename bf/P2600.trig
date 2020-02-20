@@ -1,0 +1,64 @@
+@base          <bdg:P2600> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2600 {
+    bda:P2600  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2600 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bf/P2600.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV108D849C5A4FB78A
+        a                   :PersonBirth ;
+        :onYear             "1774"^^xsd:gYear .
+    
+    bdr:NM0E62A8342E227C75
+        a                   :PersonTitle ;
+        rdfs:label          "'dan ma dpal ldan thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM69465B56F0E82388
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA8493B315893FB14
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ldan ma sprul sku dpal ldan thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTB632EDC659FFA9BB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTCA058756F2304DA0
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:NTFC92D469A1ED7389
+        a                   :Note ;
+        :locationStatement  "p. 271" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source notes the birth year as 1774"@en .
+    
+    bdr:P2600  a            :Person ;
+        skos:prefLabel      "dpal ldan thub bstan rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB632EDC659FFA9BB , bdr:NTCA058756F2304DA0 , bdr:NTFC92D469A1ED7389 ;
+        :personEvent        bdr:EV108D849C5A4FB78A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E62A8342E227C75 , bdr:NM69465B56F0E82388 , bdr:NMA8493B315893FB14 ;
+        :personStudentOf    bdr:P2601 ;
+        :personTeacherOf    bdr:P2599 , bdr:P3800 .
+}

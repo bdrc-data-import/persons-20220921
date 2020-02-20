@@ -1,0 +1,69 @@
+@base          <bdg:P9889> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9889 {
+    bda:LG4849C708A11D2EFB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-03T14:10:19.493Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9889  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9889 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d1/P9889.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9889 ;
+        adm:logEntry        bda:LG4849C708A11D2EFB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9356711DD4D6D7E5
+        a                   :PersonBirth ;
+        :onYear             "1795"^^xsd:gYear .
+    
+    bdr:EVB4490F0B8B17E780
+        a                   :PersonDeath ;
+        :onYear             "1867"^^xsd:gYear .
+    
+    bdr:EVF7EB58AB37D0D71B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4652 .
+    
+    bdr:NM37BD74DF1FB8505F
+        a                   :PersonTitle ;
+        rdfs:label          "khyab bdag bzod pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM81C2EB4EFBE96F06
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzod pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD1460726C2D19D55
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal shul 01 bzod pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT34DF1CFD27E4DB76
+        a                   :Note ;
+        :locationStatement  "p. 286" ;
+        :noteSource         bdr:MW29636 ;
+        :noteText           "biography"@en .
+    
+    bdr:P9889  a            :Person ;
+        skos:prefLabel      "bzod pa rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT34DF1CFD27E4DB76 ;
+        :personEvent        bdr:EV9356711DD4D6D7E5 , bdr:EVB4490F0B8B17E780 , bdr:EVF7EB58AB37D0D71B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37BD74DF1FB8505F , bdr:NM81C2EB4EFBE96F06 , bdr:NMD1460726C2D19D55 .
+}

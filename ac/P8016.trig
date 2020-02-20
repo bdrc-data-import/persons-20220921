@@ -1,0 +1,59 @@
+@base          <bdg:P8016> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8016 {
+    bda:LG5A3F4CCE4DA86E63
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-11T14:48:46.029Z"^^xsd:dateTime ;
+        adm:logMessage      "added personal name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P8016  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8016 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ac/P8016.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8016 ;
+        adm:logEntry        bda:LG5A3F4CCE4DA86E63 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV00842DFC4D579C07
+        a                   :PersonBirth ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:EVA145351A93B752DF
+        a                   :PersonDeath ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:NM19752CED1E380651
+        a                   :PersonPersonalName ;
+        rdfs:label          "bde grong dbang 'dud rdo rje/"@bo-x-ewts .
+    
+    bdr:NMFF7C5A4F65A4FB4A
+        a                   :PersonPersonalName ;
+        rdfs:label          "dbang 'dud rdo rje/"@bo-x-ewts .
+    
+    bdr:NTE1F04B7B26A511A6
+        a                   :Note ;
+        :noteText           "cabinet minister in the exile tibetan government;\nformerly a servant of the house of zur khang"@en .
+    
+    bdr:P8016  a            :Person ;
+        skos:prefLabel      "dbang 'dud rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE1F04B7B26A511A6 ;
+        :personEvent        bdr:EV00842DFC4D579C07 , bdr:EVA145351A93B752DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19752CED1E380651 , bdr:NMFF7C5A4F65A4FB4A .
+}

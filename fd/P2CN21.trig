@@ -1,0 +1,57 @@
+@base          <bdg:P2CN21> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2CN21 {
+    bda:LGD61E86A836E1D19E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-27T12:23:52.186Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P2783"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF5DCF8AD69595390
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:21:25.197Z"^^xsd:dateTime ;
+        adm:logMessage      "added persons records"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2CN21  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2CN21 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fd/P2CN21.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2CN21 ;
+        adm:logEntry        bda:LGD61E86A836E1D19E , bda:LGF5DCF8AD69595390 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P2783 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVA6EF0A6DDB766D38
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM808E91A7617AA75C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ri khrod ras chen/"@bo-x-ewts .
+    
+    bdr:NMBDDC5ADD6CC22DB7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya bral ri khrod ras chen/"@bo-x-ewts .
+    
+    bdr:P2CN21  a           :Person ;
+        skos:prefLabel      "ri khrod ras chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVA6EF0A6DDB766D38 ;
+        :personName         bdr:NM808E91A7617AA75C , bdr:NMBDDC5ADD6CC22DB7 .
+}

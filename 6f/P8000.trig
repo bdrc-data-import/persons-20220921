@@ -1,0 +1,50 @@
+@base          <bdg:P8000> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8000 {
+    bda:P8000  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8000 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "6f/P8000.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8000 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF660DE58D94B734
+        a                   :PersonBirth ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NM78342C88C1ADE171
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang blo gros/"@bo-x-ewts .
+    
+    bdr:NM8747D85A206D1CF4
+        a                   :PersonPersonalName ;
+        rdfs:label          "shes rab kun bzang blo gros dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NTD71E57C0E2AC2A69
+        a                   :Note ;
+        :locationStatement  "pp. 1-4 (2d group)" ;
+        :noteSource         bdr:MW24825 ;
+        :noteText           "born in the rme'u mo ba'i gtor mo chung tshang in rnga ba; went to gtsang in 1947 to study at g,yung drung gling with mkhan chen bstan pa rgyal mtshan and dpon slob bstan pa rab rgyas; took his final ordination and received the name shes rab kun bzang blo gros dpal bzang po"@en .
+    
+    bdr:P8000  a            :Person ;
+        skos:prefLabel      "kun bzang blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD71E57C0E2AC2A69 ;
+        :personEvent        bdr:EVCF660DE58D94B734 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM78342C88C1ADE171 , bdr:NM8747D85A206D1CF4 .
+}

@@ -1,0 +1,55 @@
+@base          <bdg:P6264> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6264 {
+    bda:P6264  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6264 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fb/P6264.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6264 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEFBCDA96429778AA
+        a                   :PersonBirth ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:NM2DBE4A1947341A5D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lab phan 'dum blo bzang blo gros/"@bo-x-ewts .
+    
+    bdr:NM72BDFB723E2D3F1D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang blo gros/"@bo-x-ewts .
+    
+    bdr:NMD4A4D6571AC62245
+        a                   :PersonGrammatical ;
+        rdfs:label          "legs bshad tshangs pa bzhad pa'i blo gros/"@bo-x-ewts .
+    
+    bdr:NT9232202B558ADB22
+        a                   :Note ;
+        :locationStatement  "french flap" ;
+        :noteSource         bdr:MW19968 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P6264  a            :Person ;
+        skos:prefLabel      "blo bzang blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9232202B558ADB22 ;
+        :personEvent        bdr:EVEFBCDA96429778AA ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM2DBE4A1947341A5D , bdr:NM72BDFB723E2D3F1D , bdr:NMD4A4D6571AC62245 ;
+        :personStudentOf    bdr:P4779 .
+}

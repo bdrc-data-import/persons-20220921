@@ -1,0 +1,51 @@
+@base          <bdg:P3283> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3283 {
+    bda:P3283  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3283 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "7d/P3283.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3283 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B9ACBBFBC20D9CA
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EV8AA4AAD47F0F61B2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:NM062CD7464FD055CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dpal bzang /"@bo-x-ewts .
+    
+    bdr:NTC5CDE5FA7BB10AD7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P3283  a            :Person ;
+        skos:prefLabel      "dkon mchog dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC5CDE5FA7BB10AD7 ;
+        :personEvent        bdr:EV1B9ACBBFBC20D9CA , bdr:EV8AA4AAD47F0F61B2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM062CD7464FD055CE ;
+        :personStudentOf    bdr:P0RK558 , bdr:P3102 ;
+        :personTeacherOf    bdr:P0RK559 , bdr:P3120 .
+}

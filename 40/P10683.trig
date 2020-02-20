@@ -1,0 +1,55 @@
+@base          <bdg:P10683> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10683 {
+    bda:LG285D5EC42401938A
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-21T12:59:16.239Z"^^xsd:dateTime ;
+        adm:logMessage      "added primaryName and date"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P10683  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10683 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "40/P10683.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10683 ;
+        adm:logEntry        bda:LG285D5EC42401938A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C2DACB6F1CB6E56
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0472EBE1C986FDDE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byes bsam bya gzhung ba blo bzang dkon mchog"@bo-x-ewts .
+    
+    bdr:NM6041CD3D25617480
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byes bsam blo bzang dkon mchog"@bo-x-ewts .
+    
+    bdr:NM72235838FDC7EB8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dkon mchog"@bo-x-ewts .
+    
+    bdr:P10683  a           :Person ;
+        skos:prefLabel      "blo bzang dkon mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1C2DACB6F1CB6E56 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0472EBE1C986FDDE , bdr:NM6041CD3D25617480 , bdr:NM72235838FDC7EB8D .
+}

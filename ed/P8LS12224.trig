@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12224> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12224 {
+    bda:LGC8209594AC822723
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T10:52:42.839Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12224  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12224 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ed/P8LS12224.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12224 ;
+        adm:logEntry        bda:LGC8209594AC822723 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV97BB0C274A11F302
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVBB2F40E934C7A534
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVC8D726547EA6BB34
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM32E6C47D60D7AA67
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sbyin pa kun bzang /"@bo-x-ewts .
+    
+    bdr:NM391F5C5D72ACE652
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 48 sbyin pa kun bzang /"@bo-x-ewts .
+    
+    bdr:NM80C43A126B0CE6B1
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 48"@bo-x-ewts .
+    
+    bdr:NT5A9CC781A96FEEB1
+        a                   :Note ;
+        :locationStatement  "p. 178-179" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "born in tantric family and became a famous scholar of se ra byes monastery"@en .
+    
+    bdr:P8LS12224  a        :Person ;
+        skos:prefLabel      "sbyin pa kun bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A9CC781A96FEEB1 ;
+        :personEvent        bdr:EV97BB0C274A11F302 , bdr:EVBB2F40E934C7A534 , bdr:EVC8D726547EA6BB34 ;
+        :personName         bdr:NM32E6C47D60D7AA67 , bdr:NM391F5C5D72ACE652 , bdr:NM80C43A126B0CE6B1 ;
+        :personStudentOf    bdr:P105 , bdr:P108 , bdr:P168 , bdr:P310 .
+}

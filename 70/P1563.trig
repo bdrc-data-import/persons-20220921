@@ -1,0 +1,95 @@
+@base          <bdg:P1563> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1563 {
+    bda:LG055671922472B42F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-21T15:22:08.308Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1563  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1563 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "70/P1563.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1563 ;
+        adm:logEntry        bda:LG055671922472B42F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV045474D88DF25C45
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV4C35A48DCCA4FB09
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G962 ;
+        :onYear             "1773"^^xsd:gYear .
+    
+    bdr:EV787EF946ABE1F810
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G162 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV805B0A293EA85F40
+        a                   :PersonDeath ;
+        :onYear             "1844"^^xsd:gYear .
+    
+    bdr:NM01022CE4DE966CFA
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang gdan rabs 37"@bo-x-ewts .
+    
+    bdr:NM2D7F611080D7941A
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang khri 37 phun tshogs seng+ge"@bo-x-ewts .
+    
+    bdr:NM77497A625A0F19B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "klu shod phun tshogs seng+ge"@bo-x-ewts .
+    
+    bdr:NM81E662A777BD6E83
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang khri 37"@bo-x-ewts .
+    
+    bdr:NMC609661604AAFD18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs seng+ge"@bo-x-ewts .
+    
+    bdr:NT101FB6BDA9A7D29A
+        a                   :Note ;
+        :locationStatement  "p. 71" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT736F468F5DA65B36
+        a                   :Note ;
+        :locationStatement  "p. 37" ;
+        :noteSource         bdr:MW23670 ;
+        :noteText           "37th khri of bla brang bkra shis 'khyil\northography: klu shod pa phun tshogs seng+ge"@en .
+    
+    bdr:NTC37BB993EAF2AD57
+        a                   :Note ;
+        :noteText           "Teachers (not yet registered): Hor-tshang Gser-khri, Rkang-tsha Mkhas-mchog, Mkhas-dbang Rigs-grwa Blo-bzang (Sanskrit grammar), Dge-bshes Cho-hor Sbyin-pa, Gung-thang 'Jam-pa'i-dbyangs\nServed a number of years as the 'Dzin-grwa Skyor-dpon.\nTook Rdo-rams-pa degree.\nSuccessively became:\nGrwa-tshang Dge-bskos\nDus-'khor Khri\nRgyud-pa Khri\nand finally the 37 khri of Bkra-shis-'khyil.\nLater taught at Mdzod-dge Dgon-gsar and Bde-mo-thang."@en .
+    
+    bdr:P1563  a            :Person ;
+        skos:prefLabel      "phun tshogs seng+ge"@bo-x-ewts ;
+        :hasFather          bdr:P1564 , bdr:P1565 ;
+        :hasMother          bdr:P1565 ;
+        :isRoot             true ;
+        :note               bdr:NT101FB6BDA9A7D29A , bdr:NT736F468F5DA65B36 , bdr:NTC37BB993EAF2AD57 ;
+        :personEvent        bdr:EV045474D88DF25C45 , bdr:EV4C35A48DCCA4FB09 , bdr:EV787EF946ABE1F810 , bdr:EV805B0A293EA85F40 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01022CE4DE966CFA , bdr:NM2D7F611080D7941A , bdr:NM77497A625A0F19B2 , bdr:NM81E662A777BD6E83 , bdr:NMC609661604AAFD18 ;
+        :personTeacherOf    bdr:P1566 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P7084> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7084 {
+    bda:LG9B59D85738B1AF0F
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-12-05T13:03:05.87Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P7084  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7084 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "53/P7084.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7084 ;
+        adm:logEntry        bda:LG9B59D85738B1AF0F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4B680568F1C765E
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM7D0ABE22E0313038
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang mdo sde dpal/"@bo-x-ewts .
+    
+    bdr:NM8E0D78530D8669FC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mdo sde dpal/"@bo-x-ewts .
+    
+    bdr:NTC784074F586D8727
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 14v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher of the sa skya tradition in the transmission of the pramanasamuccaya"@en .
+    
+    bdr:P7084  a            :Person ;
+        skos:prefLabel      "mdo sde dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC784074F586D8727 ;
+        :personEvent        bdr:EVA4B680568F1C765E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7D0ABE22E0313038 , bdr:NM8E0D78530D8669FC ;
+        :personStudentOf    bdr:P0RK1023 , bdr:P0RK1638 , bdr:P1048 , bdr:P3089 , bdr:P7083 ;
+        :personTeacherOf    bdr:P0RK15 , bdr:P0RK431 , bdr:P1865 , bdr:P2010 , bdr:P3630 , bdr:P6866 .
+}

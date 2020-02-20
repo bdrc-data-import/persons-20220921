@@ -1,0 +1,62 @@
+@base          <bdg:P8737> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8737 {
+    bda:P8737  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8737 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3e/P8737.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8737 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F2C6937AF6B5528
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4606 .
+    
+    bdr:EVC9B153099504B527
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMA96E1F69E27C96D4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NMC4D78769C4FA4EA2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snye thang pa grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NT9101A961689A6FF9
+        a                   :Note ;
+        :locationStatement  "p. 2287" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1242. snye thang pa grags pa seng ges <<bstan rtsis>> mdzad"@en .
+    
+    bdr:NTA627EC50395893BC
+        a                   :Note ;
+        :locationStatement  "p. 173" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "abbot of snye thang and teacher of 'gro mgon 'phags pa"@en .
+    
+    bdr:P8737  a            :Person ;
+        skos:prefLabel      "grags pa seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9101A961689A6FF9 , bdr:NTA627EC50395893BC ;
+        :personEvent        bdr:EV7F2C6937AF6B5528 , bdr:EVC9B153099504B527 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA96E1F69E27C96D4 , bdr:NMC4D78769C4FA4EA2 ;
+        :personTeacherOf    bdr:P1048 .
+}

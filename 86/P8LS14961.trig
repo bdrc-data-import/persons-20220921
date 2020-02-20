@@ -1,0 +1,65 @@
+@base          <bdg:P8LS14961> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS14961 {
+    bda:LG448399535E52599C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-12-13T15:11:55.574Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG91D3868E8A4A3A28
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-12-13T15:30:43.27Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS14961  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS14961 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "86/P8LS14961.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS14961 ;
+        adm:logEntry        bda:LG448399535E52599C , bda:LG91D3868E8A4A3A28 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM2313A41A18303331
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drang srong yid las skyes/"@bo-x-ewts .
+    
+    bdr:NM5CD6F34B6149DAFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yid las skyes/"@bo-x-ewts .
+    
+    bdr:NM6E768B26C7A885BE
+        a                   :PersonOtherName ;
+        rdfs:label          "ka ret+pan+ta"@sa-x-ewts .
+    
+    bdr:NT5584429A677DE26D
+        a                   :Note ;
+        :locationStatement  "vol. ka, p. 654" ;
+        :noteSource         bdr:MW29307 .
+    
+    bdr:NT61D2328DBA1573D1
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 27" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS14961  a        :Person ;
+        skos:prefLabel      "yid las skyes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5584429A677DE26D , bdr:NT61D2328DBA1573D1 ;
+        :personName         bdr:NM2313A41A18303331 , bdr:NM5CD6F34B6149DAFD , bdr:NM6E768B26C7A885BE .
+}

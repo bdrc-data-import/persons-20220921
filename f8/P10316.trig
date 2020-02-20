@@ -1,0 +1,53 @@
+@base          <bdg:P10316> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10316 {
+    bda:P10316  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10316 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f8/P10316.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10316 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8571D65FBF08B6B6
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM1446ADD8A806C1F9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbon bsam gtan blo gros/"@bo-x-ewts .
+    
+    bdr:NMDF15580B311BB8C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan blo gros/"@bo-x-ewts .
+    
+    bdr:NTDD43F11B71F12E05
+        a                   :Note ;
+        :locationStatement  "p. 22" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "dge lugs pa teacher active in a mdo; he was a student of tsong kha pa; together with his uncle, he founded the monastery of gro tshang\n\nglang dkar ba sangs rgyas bkra shis \nchos rje bsam gtan blo gros \n'di khu dbon gnyis ni rje blo bzang grags pa'i dngos slob yin pa dang gro tshang dgon btab/ ta'i ming gi ti shrI mdzad/ (p. 22)"@en .
+    
+    bdr:P10316  a           :Person ;
+        skos:prefLabel      "bsam gtan blo gros/"@bo-x-ewts ;
+        :hasUncle           bdr:P10315 ;
+        :isRoot             true ;
+        :note               bdr:NTDD43F11B71F12E05 ;
+        :personEvent        bdr:EV8571D65FBF08B6B6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1446ADD8A806C1F9 , bdr:NMDF15580B311BB8C5 ;
+        :personStudentOf    bdr:P64 .
+}

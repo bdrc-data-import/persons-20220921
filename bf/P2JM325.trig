@@ -1,0 +1,89 @@
+@base          <bdg:P2JM325> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM325 {
+    bda:LG3D29E040A260903C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T10:24:54.839Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5438A9CD2006028C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T12:43:04.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG552BE5EEBFFB123E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-01T17:16:32.051Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM325  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM325 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "bf/P2JM325.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM325 ;
+        adm:logEntry        bda:LG3D29E040A260903C , bda:LG5438A9CD2006028C , bda:LG552BE5EEBFFB123E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV50482894F4445972
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:EV5C88CD99D757A40A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EVBEC13B79CD48ECAB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVFFE827F84E7AF4EF
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM4CFC94D380731BA1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdzo mkhan po dge legs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM7F5121F27BDD134B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge legs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMFE3BBCA178E22C0A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 13"@bo-x-ewts .
+    
+    bdr:NT9EA47D0DEBE02426
+        a                   :Note ;
+        :locationStatement  "p. 439-440" ;
+        :noteSource         bdr:MW27401 .
+    
+    bdr:P2JM325  a          :Person ;
+        skos:prefLabel      "dge legs rnam rgyal/"@bo-x-ewts ;
+        :hasFather          bdr:P2JM326 ;
+        :hasMother          bdr:P2JM327 ;
+        :isRoot             true ;
+        :note               bdr:NT9EA47D0DEBE02426 ;
+        :personEvent        bdr:EV50482894F4445972 , bdr:EV5C88CD99D757A40A , bdr:EVBEC13B79CD48ECAB , bdr:EVFFE827F84E7AF4EF ;
+        :personName         bdr:NM4CFC94D380731BA1 , bdr:NM7F5121F27BDD134B , bdr:NMFE3BBCA178E22C0A ;
+        :personStudentOf    bdr:P1710 , bdr:P270 , bdr:P6744 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Gelek-Namgyel/5041"^^xsd:anyURI .
+}

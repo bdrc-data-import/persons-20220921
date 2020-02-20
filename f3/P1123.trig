@@ -1,0 +1,56 @@
+@base          <bdg:P1123> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1123 {
+    bda:LGE07A742326F3B39C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:15:51.471Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1123  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1123 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f3/P1123.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1123 ;
+        adm:logEntry        bda:LGE07A742326F3B39C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09CA4D531AB92174
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3 .
+    
+    bdr:NM202205C5E8483CAF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman ri mkhan chen shes rab dgongs rgyal/"@bo-x-ewts .
+    
+    bdr:NME5F531619917F21F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab dgongs rgyal/"@bo-x-ewts .
+    
+    bdr:NT03A1D83C46B2CC8C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bon"@en .
+    
+    bdr:P1123  a            :Person ;
+        skos:prefLabel      "shes rab dgongs rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT03A1D83C46B2CC8C ;
+        :personEvent        bdr:EV09CA4D531AB92174 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM202205C5E8483CAF , bdr:NME5F531619917F21F ;
+        :personTeacherOf    bdr:P278 .
+}

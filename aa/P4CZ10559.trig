@@ -1,0 +1,70 @@
+@base          <bdg:P4CZ10559> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4CZ10559 {
+    bda:LG92A5212519AFA9B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-31T12:47:59.353Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE85EF657F65A4BEF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-09T15:46:40.522Z"^^xsd:dateTime ;
+        adm:logMessage      "New people."@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P4CZ10559  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4CZ10559 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "aa/P4CZ10559.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4CZ10559 ;
+        adm:logEntry        bda:LG92A5212519AFA9B5 , bda:LGE85EF657F65A4BEF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV54343FC72137BEC7
+        a                   :PersonEventNotSpecified ;
+        :onOrAbout          "11cent." .
+    
+    bdr:NM3144AF669790BB1B
+        a                   :PersonOtherName ;
+        rdfs:label          "samantabhadra"@sa-x-ndia .
+    
+    bdr:NM7D08996C47A01FEC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun tu bzang po/"@bo-x-ewts .
+    
+    bdr:NM9E87132DC0ED5D56
+        a                   :PersonOtherName ;
+        rdfs:label          "sa man+ta b+ha dra/"@bo-x-ewts .
+    
+    bdr:NMDC2B12EA0A4C17A6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po kun tu bzang po/"@bo-x-ewts .
+    
+    bdr:NT6642DF9119CEA775
+        a                   :Note ;
+        :noteText           "indian master"@en .
+    
+    bdr:P4CZ10559  a        :Person ;
+        skos:prefLabel      "kun tu bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6642DF9119CEA775 ;
+        :personEvent        bdr:EV54343FC72137BEC7 ;
+        :personName         bdr:NM3144AF669790BB1B , bdr:NM7D08996C47A01FEC , bdr:NM9E87132DC0ED5D56 , bdr:NMDC2B12EA0A4C17A6 ;
+        :personStudentOf    bdr:P0RK1619 , bdr:P3217 ;
+        :personTeacherOf    bdr:P0RK1392 , bdr:P3456 , bdr:P7218 .
+}

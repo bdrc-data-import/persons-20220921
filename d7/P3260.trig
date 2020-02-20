@@ -1,0 +1,64 @@
+@base          <bdg:P3260> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3260 {
+    bda:LG0F18B572D5FDFF29
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:33:05.452Z"^^xsd:dateTime ;
+        adm:logMessage      "shad 'then yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGBA71E544A4F73DF9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-11T16:57:30.364Z"^^xsd:dateTime ;
+        adm:logMessage      "04/10/12"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P3260  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3260 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d7/P3260.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3260 ;
+        adm:logEntry        bda:LG0F18B572D5FDFF29 , bda:LGBA71E544A4F73DF9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2ED5BB334B183368
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM60CA34BF68CA9C13
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo ldan rje/"@bo-x-ewts .
+    
+    bdr:NMF60E72DB6DE43806
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon dbu ba blo ldan/"@bo-x-ewts .
+    
+    bdr:NTB78DE9BD55AAE259
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3260  a            :Person ;
+        skos:prefLabel      "blo ldan rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB78DE9BD55AAE259 ;
+        :personEvent        bdr:EV2ED5BB334B183368 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM60CA34BF68CA9C13 , bdr:NMF60E72DB6DE43806 ;
+        :personStudentOf    bdr:P3261 ;
+        :personTeacherOf    bdr:P3259 .
+}

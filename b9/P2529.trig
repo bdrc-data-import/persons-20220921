@@ -1,0 +1,89 @@
+@base          <bdg:P2529> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2529 {
+    bda:LG82E92B6360A0A65B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T09:52:31.577Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2529  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2529 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b9/P2529.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2529 ;
+        adm:logEntry        bda:LG82E92B6360A0A65B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7423713C5914B082
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVC435C9841A0D8EA9
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3500 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE9AC34E9892E91EF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM0578DFF8AD21FB8B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 41 sangs rgyas grags pa/"@bo-x-ewts .
+    
+    bdr:NM7B0D074457D70058
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 41"@bo-x-ewts .
+    
+    bdr:NMD75A823EC307558F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas grags pa/"@bo-x-ewts .
+    
+    bdr:NMDCF1F70591EF2898
+        a                   :PersonTitle ;
+        rdfs:label          "khams pa rnam 'dren sangs rgyas grags pa/"@bo-x-ewts .
+    
+    bdr:NT5D26B9274A29A24D
+        a                   :Note ;
+        :locationStatement  "pp. 104-105" ;
+        :noteSource         bdr:MW23441 ;
+        :noteText           "born in mi nyag\nstudied with thar rtse nam mkha' bsam grub\nhis students included thar rtse nam mkha' 'chi med\nserved a long time on the abbatial throne of ngor"@en .
+    
+    bdr:NT6389A0DDD2BBD105
+        a                   :Note ;
+        :locationStatement  "p. 104-105" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NTDB8FBCDB7B1CE91F
+        a                   :Note ;
+        :locationStatement  "p. 184" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography\nborn in mi nyag bzhag bra lha rtse in the first half of the 18th century"@en .
+    
+    bdr:P2529  a            :Person ;
+        skos:prefLabel      "sangs rgyas grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5D26B9274A29A24D , bdr:NT6389A0DDD2BBD105 , bdr:NTDB8FBCDB7B1CE91F ;
+        :personEvent        bdr:EV7423713C5914B082 , bdr:EVC435C9841A0D8EA9 , bdr:EVE9AC34E9892E91EF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0578DFF8AD21FB8B , bdr:NM7B0D074457D70058 , bdr:NMD75A823EC307558F , bdr:NMDCF1F70591EF2898 ;
+        :personStudentOf    bdr:P2535 ;
+        :personTeacherOf    bdr:P2525 , bdr:P2526 .
+}

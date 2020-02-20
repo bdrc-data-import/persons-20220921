@@ -1,0 +1,59 @@
+@base          <bdg:P8718> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8718 {
+    bda:P8718  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8718 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2a/P8718.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8718 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08C1C5DF7D44B58E
+        a                   :PersonDeath ;
+        :onYear             "1220"^^xsd:gYear .
+    
+    bdr:EV58FF796F3EAB0369
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:EVA045FF8906D4DFEC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G30 .
+    
+    bdr:NM15D39D12F486DE62
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nye gnas dar ma gzhon nu/"@bo-x-ewts .
+    
+    bdr:NME9E243D560A50800
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dar ma gzhon nu/"@bo-x-ewts .
+    
+    bdr:NTE7D7C24509D6BF6A
+        a                   :Note ;
+        :locationStatement  "p. 2284-2285" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1214. resignas as tshal pa'i sde dpon (nye gnas dar ma gzhon nu tshal pa'i sde dpon dgongs zhu byas)\n1220. bla ma zhang gi nye gnas dar ma gzhon nu 'das"@en .
+    
+    bdr:P8718  a            :Person ;
+        skos:prefLabel      "dar ma gzhon nu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE7D7C24509D6BF6A ;
+        :personEvent        bdr:EV08C1C5DF7D44B58E , bdr:EV58FF796F3EAB0369 , bdr:EVA045FF8906D4DFEC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15D39D12F486DE62 , bdr:NME9E243D560A50800 .
+}

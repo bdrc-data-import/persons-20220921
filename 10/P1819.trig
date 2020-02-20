@@ -1,0 +1,89 @@
+@base          <bdg:P1819> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1819 {
+    bda:LG9AC500A7DB5F9EE7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T09:14:49.77Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1819  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1819 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "10/P1819.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1819 ;
+        adm:logEntry        bda:LG9AC500A7DB5F9EE7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV116FBDAB17BDB119
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1005 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV54ED22BB0013C0F4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1885"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCE91BE88A04B02DF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM08FB97B7C54BCA67
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 82"@bo-x-ewts .
+    
+    bdr:NM344BDEA4DE258159
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dor shul ngag dbang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM6571E923A2E5FC56
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 82 ngag dbang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMF2A503526BA163B4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NT5250C36E254CCA14
+        a                   :Note ;
+        :locationStatement  "p. 200" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT6DEB24E6368A2F92
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT7BB5CF4CDA996D95
+        a                   :Note ;
+        :noteText           "1885. Became 82nd Mkhan-rabs of Bya-khyung.\n1887. Invited Shing-bza' PaNDi-ta Blo-bzang-bstan-pa'i-dbang-phyug to Bya-khyung for conveying major dbang."@en .
+    
+    bdr:NTC6C31624404539F7
+        a                   :Note ;
+        :locationStatement  "p. 834" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1819  a            :Person ;
+        skos:prefLabel      "ngag dbang sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5250C36E254CCA14 , bdr:NT6DEB24E6368A2F92 , bdr:NT7BB5CF4CDA996D95 , bdr:NTC6C31624404539F7 ;
+        :personEvent        bdr:EV116FBDAB17BDB119 , bdr:EV54ED22BB0013C0F4 , bdr:EVCE91BE88A04B02DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08FB97B7C54BCA67 , bdr:NM344BDEA4DE258159 , bdr:NM6571E923A2E5FC56 , bdr:NMF2A503526BA163B4 .
+}

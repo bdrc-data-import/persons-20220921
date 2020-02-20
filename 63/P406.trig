@@ -1,0 +1,66 @@
+@base          <bdg:P406> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P406 {
+    bda:LG65D925E23CB7E67E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-13T14:41:18.365Z"^^xsd:dateTime ;
+        adm:logMessage      "master disciple relation"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P406  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P406 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "63/P406.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P406 ;
+        adm:logEntry        bda:LG65D925E23CB7E67E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV655A3C96D7C01916
+        a                   :PersonBirth ;
+        :onYear             "1029"^^xsd:gYear .
+    
+    bdr:EV962FA2A57146E4DD
+        a                   :PersonDeath ;
+        :onYear             "1116"^^xsd:gYear .
+    
+    bdr:NM2DAC1376A79ED30B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun rig"@bo-x-ewts .
+    
+    bdr:NM8837E2A5B428DE26
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "se ston kun rig"@bo-x-ewts .
+    
+    bdr:NT62BBFCC0EC4BD12C
+        a                   :Note ;
+        :locationStatement  "p. 155" ;
+        :noteSource         bdr:MW19804 .
+    
+    bdr:NTA05A5257E8B857C0
+        a                   :Note ;
+        :noteText           "BRKB. 'Brog mi'i slob ma ma cig Zha ma lcam sring gi bla ma"@en .
+    
+    bdr:P406  a             :Person ;
+        skos:prefLabel      "kun rig"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT62BBFCC0EC4BD12C , bdr:NTA05A5257E8B857C0 ;
+        :personEvent        bdr:EV655A3C96D7C01916 , bdr:EV962FA2A57146E4DD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2DAC1376A79ED30B , bdr:NM8837E2A5B428DE26 ;
+        :personStudentOf    bdr:P3285 ;
+        :personTeacherOf    bdr:P0RK536 , bdr:P4574 .
+}

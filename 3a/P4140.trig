@@ -1,0 +1,78 @@
+@base          <bdg:P4140> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4140 {
+    bda:P4140  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4140 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3a/P4140.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4140 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30318E5E54CFED0E
+        a                   :PersonBirth ;
+        :onYear             "1190"^^xsd:gYear .
+    
+    bdr:EVA332422273393D3A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G445 .
+    
+    bdr:EVBAC485111A7A7B1B
+        a                   :PersonDeath ;
+        :onYear             "1286"^^xsd:gYear .
+    
+    bdr:NM4CAF6027B92DBEA9
+        a                   :PersonTitle ;
+        rdfs:label          "brag kha pa blo gros ye shes/"@bo-x-ewts .
+    
+    bdr:NM4E03E3361293DF3A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros ye shes/"@bo-x-ewts .
+    
+    bdr:NM612AB7124F820606
+        a                   :PersonTitle ;
+        rdfs:label          "se spyil lha brag kha pa/"@bo-x-ewts .
+    
+    bdr:NM965E74CDB156898B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha brag kha pa blo gros ye shes/"@bo-x-ewts .
+    
+    bdr:NMEBDC56EA6AE06DB0
+        a                   :PersonTitle ;
+        rdfs:label          "'chad kha gsar ma gdan rabs 04 blo gros ye shes/"@bo-x-ewts .
+    
+    bdr:NT5A9C67F037DA3C6C
+        a                   :Note ;
+        :locationStatement  "p. 1853" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bka' gdams master of the gzhung pa transmission\nborn in 1190 as the son of jo bo shAkya bkra shis and the lady skyo mo dar rgyan\nhe passed away in 1286\nhe was the 4th in the abbatial succession to the monastery of 'chad kha gsar ma in mal gro, ascending in 1260 and serving until his death in 1286 for 27 years"@en .
+    
+    bdr:NTB037CDDAE2CB856D
+        a                   :Note ;
+        :locationStatement  "p. 27" ;
+        :noteSource         bdr:MW19808 ;
+        :noteText           "according to the re'u mig of sum pa mkhan po he ascended the abbatial throne of 'chad kha in 1280. called se spyil lha brag kha pa"@en .
+    
+    bdr:P4140  a            :Person ;
+        skos:prefLabel      "blo gros ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A9C67F037DA3C6C , bdr:NTB037CDDAE2CB856D ;
+        :personEvent        bdr:EV30318E5E54CFED0E , bdr:EVA332422273393D3A , bdr:EVBAC485111A7A7B1B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4CAF6027B92DBEA9 , bdr:NM4E03E3361293DF3A , bdr:NM612AB7124F820606 , bdr:NM965E74CDB156898B , bdr:NMEBDC56EA6AE06DB0 ;
+        :personStudentOf    bdr:P4137 ;
+        :personTeacherOf    bdr:P403 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P9297> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9297 {
+    bda:P9297  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9297 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "68/P9297.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9297 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD53C629B469D6504
+        a                   :PersonBirth ;
+        :onYear             "1910"^^xsd:gYear .
+    
+    bdr:NM2CEDA1314576D9F5
+        a                   :PersonPersonalName ;
+        rdfs:label          "smon rgyal nam mkha' grags pa/"@bo-x-ewts .
+    
+    bdr:NM64E9CC2955E5DF30
+        a                   :PersonPersonalName ;
+        rdfs:label          "nam mkha' grags pa/"@bo-x-ewts .
+    
+    bdr:NTE7FEBD0A9E17EF26
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bonpo teacher\nborn in 1910"@en .
+    
+    bdr:P9297  a            :Person ;
+        skos:prefLabel      "nam mkha' grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE7FEBD0A9E17EF26 ;
+        :personEvent        bdr:EVD53C629B469D6504 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2CEDA1314576D9F5 , bdr:NM64E9CC2955E5DF30 .
+}

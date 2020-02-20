@@ -1,0 +1,72 @@
+@base          <bdg:P6212> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6212 {
+    bda:LG7A86C00E399D4D27
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-02-18T12:15:47.338Z"^^xsd:dateTime ;
+        adm:logMessage      "birth year added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG961A6A1110A9532F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-06T04:49:14.437Z"^^xsd:dateTime ;
+        adm:logMessage      "added death date"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGE3F6E86D9F3D9AF6
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-29T15:07:26.885Z"^^xsd:dateTime ;
+        adm:logMessage      "dot deleted"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6212  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6212 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "ee/P6212.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6212 ;
+        adm:logEntry        bda:LG7A86C00E399D4D27 , bda:LG961A6A1110A9532F , bda:LGE3F6E86D9F3D9AF6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A8A76DD2C8CA501
+        a                   :PersonDeath ;
+        :onYear             "2008"^^xsd:gYear .
+    
+    bdr:EVF51ED8CC9DC3DA76
+        a                   :PersonBirth ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:NME674AA0B4B7A3682
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi nyag mgon po/"@bo-x-ewts .
+    
+    bdr:NTA6EDB7B2374BEE68
+        a                   :Note ;
+        :noteText           "modern tibetan scholar; he is the major living disciple of 'bo gangs dkar karma bshad sgrub chos kyi seng+ge"@en .
+    
+    bdr:NTB36A3496D2E23F15
+        a                   :Note ;
+        :noteText           "born rab byung 15 chu phag (1923); died at the age of 83 in rab byung 17 sa byi on the 24th day of the 4th month -- source information from zenkar tudeng nima"@en .
+    
+    bdr:P6212  a            :Person ;
+        skos:prefLabel      "mi nyag mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA6EDB7B2374BEE68 , bdr:NTB36A3496D2E23F15 ;
+        :personEvent        bdr:EV6A8A76DD2C8CA501 , bdr:EVF51ED8CC9DC3DA76 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME674AA0B4B7A3682 ;
+        :personStudentOf    bdr:P1445 .
+}

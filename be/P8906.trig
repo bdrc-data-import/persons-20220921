@@ -1,0 +1,71 @@
+@base          <bdg:P8906> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8906 {
+    bda:LG73633A089941266A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T10:57:40.616Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8906  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8906 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "be/P8906.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8906 ;
+        adm:logEntry        bda:LG73633A089941266A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA5424D91E916B2F7
+        a                   :PersonDeath ;
+        :onYear             "1787"^^xsd:gYear .
+    
+    bdr:EVC09066AE38EE5850
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4323 ;
+        :onYear             "1753"^^xsd:gYear .
+    
+    bdr:NM2D289E53A97FE79A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Choje Kutreng 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMA3A009A22E27ABD7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nges don bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMAE343AAEFB670F4C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 06"@bo-x-ewts .
+    
+    bdr:NMAF04F18AF1C2D99E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang chos rje sku 'phreng 06 nges don bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT4C025D81071A6FC4
+        a                   :Note ;
+        :locationStatement  "pp. 141-143" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nlived to the age of 35\nartistic works and manuscripts created:\nsku rten byams pa dang thub pa dus 'khor spyan ras gzigs rnams kyi zab thang du ma dang gsung rten gser dngul gyi nges don bka' chos sogs rten chos bcu gsum bzhengs par mdzad"@en .
+    
+    bdr:P8906  a            :Person ;
+        skos:prefLabel      "nges don bstan pa dar rgyas/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8904 ;
+        :isRoot             true ;
+        :note               bdr:NT4C025D81071A6FC4 ;
+        :personEvent        bdr:EVA5424D91E916B2F7 , bdr:EVC09066AE38EE5850 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D289E53A97FE79A , bdr:NMA3A009A22E27ABD7 , bdr:NMAE343AAEFB670F4C , bdr:NMAF04F18AF1C2D99E .
+}

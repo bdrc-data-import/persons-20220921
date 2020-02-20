@@ -1,0 +1,76 @@
+@base          <bdg:P6316> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6316 {
+    bda:LG2B4C62A0DDEC6DE9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-01T14:15:27.739Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6316  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6316 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "54/P6316.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6316 ;
+        adm:logEntry        bda:LG2B4C62A0DDEC6DE9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA35AF0B9BFAF339D
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVA8A0FCC616C680C9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:NM4E4F45A71438C648
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma theg mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM821C7D7AF21F70E5
+        a                   :PersonTitle ;
+        rdfs:label          "rgya kha grub chen pad+ma theg mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMB9D0EE29C2CE41C9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gyang khang sprul sku 02 pad+ma theg mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMCD6E112E383BB386
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gyang khang 02"@bo-x-ewts .
+    
+    bdr:NME19D92983CF77B7A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyangkhang 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT3499048A09F8F357
+        a                   :Note ;
+        :locationStatement  "pp. 211-212" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "rnying ma incarnation and teacher of the dpal yul tradition\nbiographical sketch"@en .
+    
+    bdr:P6316  a            :Person ;
+        skos:prefLabel      "pad+ma theg mchog bstan 'dzin/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8558 ;
+        :isRoot             true ;
+        :note               bdr:NT3499048A09F8F357 ;
+        :personEvent        bdr:EVA35AF0B9BFAF339D , bdr:EVA8A0FCC616C680C9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4E4F45A71438C648 , bdr:NM821C7D7AF21F70E5 , bdr:NMB9D0EE29C2CE41C9 , bdr:NMCD6E112E383BB386 , bdr:NME19D92983CF77B7A ;
+        :personStudentOf    bdr:P6169 , bdr:P6172 .
+}

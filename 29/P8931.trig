@@ -1,0 +1,65 @@
+@base          <bdg:P8931> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8931 {
+    bda:LGC32AA4FA9C48F011
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:37:53.511Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8931  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8931 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "29/P8931.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8931 ;
+        adm:logEntry        bda:LGC32AA4FA9C48F011 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1552EBA13A2E01D2
+        a                   :PersonDeath ;
+        :onYear             "1891"^^xsd:gYear .
+    
+    bdr:EV1581EFD7724F57CA
+        a                   :PersonBirth ;
+        :onYear             "1829"^^xsd:gYear .
+    
+    bdr:NM397407D3AC0F2ADB
+        a                   :PersonPersonalName ;
+        rdfs:label          "skal ko"@bo-x-ewts .
+    
+    bdr:NM5CC6DAC5C23EC948
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' dpal ldan/"@bo-x-ewts .
+    
+    bdr:NMDF3D54FA967646D8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 03 kun dga' dpal ldan/"@bo-x-ewts .
+    
+    bdr:NTF1DEF802201E1C37
+        a                   :Note ;
+        :locationStatement  "pp. 195-201" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nborn: place: smra rong phyogs kyi grong ba kheb leb"@en .
+    
+    bdr:P8931  a            :Person ;
+        skos:prefLabel      "kun dga' dpal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF1DEF802201E1C37 ;
+        :personEvent        bdr:EV1552EBA13A2E01D2 , bdr:EV1581EFD7724F57CA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM397407D3AC0F2ADB , bdr:NM5CC6DAC5C23EC948 , bdr:NMDF3D54FA967646D8 .
+}

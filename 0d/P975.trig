@@ -1,0 +1,105 @@
+@base          <bdg:P975> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P975 {
+    bda:LG1E94A45A4F7DDCAC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-20T11:22:22.082Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG68F493287551A5E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-21T10:38:01.362Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P975  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P975 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0d/P975.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P975 ;
+        adm:logEntry        bda:LG1E94A45A4F7DDCAC , bda:LG68F493287551A5E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14E994A40E8DDF0F
+        a                   :PersonBirth ;
+        :onYear             "1842"^^xsd:gYear .
+    
+    bdr:EV3F79B4EAD454C228
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G232 .
+    
+    bdr:EV596309A8CA50B62F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1866"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG23 .
+    
+    bdr:EVABBCA9868F05EA3B
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1882"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG23 .
+    
+    bdr:EVB1B0747F7968DB30
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G880 .
+    
+    bdr:EVF6DAB19DE8AF0908
+        a                   :PersonDeath ;
+        :onYear             "1882"^^xsd:gYear .
+    
+    bdr:NM2581111F5BBAAB8F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bsod nams/"@bo-x-ewts .
+    
+    bdr:NM41617581202BB366
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sa skya khri 'dzin 36"@bo-x-ewts .
+    
+    bdr:NM6DA37C56F5D2DA7D
+        a                   :PersonTitle ;
+        rdfs:label          "sa skya khri chen 36"@bo-x-ewts .
+    
+    bdr:NM9CC86007EA99C4B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya khri chen 37 kun dga' bsod nams/"@bo-x-ewts .
+    
+    bdr:NMB783BF3FD6381B43
+        a                   :PersonTitle ;
+        rdfs:label          "phun tshogs pho brang bdag chen 02 kun dga' bsod nams/"@bo-x-ewts .
+    
+    bdr:NMD7286765250979EB
+        a                   :PersonTitle ;
+        rdfs:label          "sa skya gong ma/"@bo-x-ewts .
+    
+    bdr:NT11CFA36481BDEF91
+        a                   :Note ;
+        :locationStatement  "p. 552" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "the second bdag chen of the phun tshogs pho brang of sa skya"@en .
+    
+    bdr:P975  a             :Person ;
+        skos:prefLabel      "kun dga' bsod nams/"@bo-x-ewts ;
+        :hasFather          bdr:P10486 ;
+        :hasSon             bdr:P977 ;
+        :isRoot             true ;
+        :note               bdr:NT11CFA36481BDEF91 ;
+        :personEvent        bdr:EV14E994A40E8DDF0F , bdr:EV3F79B4EAD454C228 , bdr:EV596309A8CA50B62F , bdr:EVABBCA9868F05EA3B , bdr:EVB1B0747F7968DB30 , bdr:EVF6DAB19DE8AF0908 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2581111F5BBAAB8F , bdr:NM41617581202BB366 , bdr:NM6DA37C56F5D2DA7D , bdr:NM9CC86007EA99C4B2 , bdr:NMB783BF3FD6381B43 , bdr:NMD7286765250979EB .
+}

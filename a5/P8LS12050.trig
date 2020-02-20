@@ -1,0 +1,81 @@
+@base          <bdg:P8LS12050> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12050 {
+    bda:LGD00FA405563793CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-12T15:24:01.124Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12050  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12050 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a5/P8LS12050.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12050 ;
+        adm:logEntry        bda:LGD00FA405563793CA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2857A07CEABFFE09
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr: ;
+        :personEventRole    bdr: .
+    
+    bdr:EV312A06BEDA84A11C
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1301 .
+    
+    bdr:EV97EC5EA1F04D7005
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1928"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB4036FAF4057BACE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVEA39513266FB71F5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1919"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1EB4B1317F04B112
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'od zer rdo rje/"@bo-x-ewts .
+    
+    bdr:NM29E1093B5A6AA0C8
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 64"@bo-x-ewts .
+    
+    bdr:NMDC6669F8B6DE4B4C
+        a                   :PersonTitle ;
+        rdfs:label          "'jur byed mkhan chen 'od zer rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1867A0E494D69851
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 162-169" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "his incarnate bstan pa dar rgyas born in lhasa and entered gomang monastery."@en .
+    
+    bdr:P8LS12050  a        :Person ;
+        skos:prefLabel      "'od zer rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1867A0E494D69851 ;
+        :personEvent        bdr:EV2857A07CEABFFE09 , bdr:EV312A06BEDA84A11C , bdr:EV97EC5EA1F04D7005 , bdr:EVB4036FAF4057BACE , bdr:EVEA39513266FB71F5 ;
+        :personName         bdr:NM1EB4B1317F04B112 , bdr:NM29E1093B5A6AA0C8 , bdr:NMDC6669F8B6DE4B4C .
+}

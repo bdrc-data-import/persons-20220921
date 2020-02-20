@@ -1,0 +1,51 @@
+@base          <bdg:P4963> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4963 {
+    bda:P4963  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4963 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "bf/P4963.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4963 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8794616367E91CE0
+        a                   :PersonBirth ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:NM0902DB56C0E8C20C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ma hA yA na/"@bo-x-ewts .
+    
+    bdr:NM2EB97769224BB658
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hwa shang ma hA yA na/"@bo-x-ewts .
+    
+    bdr:NTFD8D1BC46C243F76
+        a                   :Note ;
+        :locationStatement  "p. 282" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "bio-bibligraphy\nco-author of the smad dpyad zla ba'i rgyal po"@en .
+    
+    bdr:P4963  a            :Person ;
+        skos:prefLabel      "ma hA yA na/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFD8D1BC46C243F76 ;
+        :personEvent        bdr:EV8794616367E91CE0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0902DB56C0E8C20C , bdr:NM2EB97769224BB658 .
+}

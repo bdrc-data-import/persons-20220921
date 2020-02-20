@@ -1,0 +1,50 @@
+@base          <bdg:P1112> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1112 {
+    bda:P1112  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1112 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f0/P1112.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1112 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV966D544C21E3AE9A
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0D84A46744F557E2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang shes rab/"@bo-x-ewts .
+    
+    bdr:NMDA0E2B652E76B3B9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtsis thang mkhan chen ngag dbang shes rab/"@bo-x-ewts .
+    
+    bdr:NTA146F60D277CF2C6
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1112  a            :Person ;
+        skos:prefLabel      "ngag dbang shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA146F60D277CF2C6 ;
+        :personEvent        bdr:EV966D544C21E3AE9A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D84A46744F557E2 , bdr:NMDA0E2B652E76B3B9 ;
+        :personTeacherOf    bdr:P280 .
+}

@@ -1,0 +1,55 @@
+@base          <bdg:P1KG20673> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG20673 {
+    bda:LG9B4DE516493691FC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-19T15:03:39.363Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG20673  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG20673 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "00/P1KG20673.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG20673 ;
+        adm:logEntry        bda:LG9B4DE516493691FC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9B15B1EE7D348127
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM6D2823588DB0ECA9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "hor dkar no mo/"@bo-x-ewts .
+    
+    bdr:NM7A17EEC83FCC98C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "霍尔噶·努木"@zh-hans .
+    
+    bdr:NT2F3826C69399F3AA
+        a                   :Note ;
+        :noteSource         bdr:MW1KG20638 .
+    
+    bdr:P1KG20673  a        :Person ;
+        skos:prefLabel      "hor dkar no mo/"@bo-x-ewts , "霍尔噶·努木"@zh-hans ;
+        :isRoot             true ;
+        :note               bdr:NT2F3826C69399F3AA ;
+        :personEvent        bdr:EV9B15B1EE7D348127 ;
+        :personName         bdr:NM6D2823588DB0ECA9 , bdr:NM7A17EEC83FCC98C3 .
+}

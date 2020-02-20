@@ -1,0 +1,93 @@
+@base          <bdg:P1AG75> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG75 {
+    bda:LG2D8216EBDDF3BC99
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-10T15:38:59.494Z"^^xsd:dateTime ;
+        adm:logMessage      "kinship relations"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG6A137B0E81A52C45
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-12T15:27:29.338Z"^^xsd:dateTime ;
+        adm:logMessage      "kinship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGCCD6B4910E78F173
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-10T15:44:31.428Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGDA0A913B07C8114B
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-11T10:46:03.043Z"^^xsd:dateTime ;
+        adm:logMessage      "notes and treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG75  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG75 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ea/P1AG75.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG75 ;
+        adm:logEntry        bda:LG2D8216EBDDF3BC99 , bda:LG6A137B0E81A52C45 , bda:LGCCD6B4910E78F173 , bda:LGDA0A913B07C8114B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24EFF04EC346308D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:NM754911C210177A9E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu 'phel/"@bo-x-ewts .
+    
+    bdr:NMBC18E1D95A6F37B1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge rgyal rabs 07"@bo-x-ewts .
+    
+    bdr:NT2960874C7BFF1EB5
+        a                   :Note ;
+        :noteSource         bdr:MW1KG5539 ;
+        :noteText           "according to this source his brother, byams pa phun tshogs, who expanded sde dge dgon chen, was the seventh king. historically this seems accurate. klu 'phel is listed as the head of the family in its thirty-seventh generation."@en .
+    
+    bdr:NT74F9CA4213A8B0CD
+        a                   :Note ;
+        :locationStatement  "pp. 12-20" ;
+        :noteSource         bdr:MW1KG15407 ;
+        :noteText           "bio data"@en .
+    
+    bdr:NTAB02DB61C9DE3BC7
+        a                   :Note ;
+        :locationStatement  "vol 3" ;
+        :noteSource         bdr:MW1KG17456 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG75  a           :Person ;
+        skos:prefLabel      "klu 'phel/"@bo-x-ewts ;
+        :hasBrother         bdr:P1087 , bdr:P1AG76 ;
+        :hasChild           bdr:P1AG72 , bdr:P1AG77 ;
+        :hasFather          bdr:P1AG74 ;
+        :hasParent          bdr:P1AG70 ;
+        :hasSibling         bdr:P1AG76 ;
+        :hasSon             bdr:P1AG72 , bdr:P1AG77 , bdr:P5082 ;
+        :hasUnknownKinship  bdr:P5082 ;
+        :isRoot             true ;
+        :note               bdr:NT2960874C7BFF1EB5 , bdr:NT74F9CA4213A8B0CD , bdr:NTAB02DB61C9DE3BC7 ;
+        :personEvent        bdr:EV24EFF04EC346308D ;
+        :personName         bdr:NM754911C210177A9E , bdr:NMBC18E1D95A6F37B1 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lupel/13514"^^xsd:anyURI .
+}

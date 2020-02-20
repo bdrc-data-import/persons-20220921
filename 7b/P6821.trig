@@ -1,0 +1,54 @@
+@base          <bdg:P6821> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6821 {
+    bda:P6821  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6821 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "7b/P6821.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6821 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39644AD460B66B85
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1932 .
+    
+    bdr:EV6F8F2CD168E0FE0B
+        a                   :PersonBirth ;
+        :onYear             "1901"^^xsd:gYear .
+    
+    bdr:EVDFE8B326178692C5
+        a                   :PersonDeath ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:NMDFB14EE66496517F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTCC6E61E199424AAD
+        a                   :Note ;
+        :locationStatement  "p. 756" ;
+        :noteSource         bdr:MW20214 ;
+        :noteText           "biography\nfounder of gser khang dgon dgam chos byin rlabs dga' 'khyil gling in thun te rdzong\nborn into the kho nag sbra nag sde ba of the sha brang tsho drug, said to have been descended from the la dwags rulers"@en .
+    
+    bdr:P6821  a            :Person ;
+        skos:prefLabel      "'jam dbyangs blo bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCC6E61E199424AAD ;
+        :personEvent        bdr:EV39644AD460B66B85 , bdr:EV6F8F2CD168E0FE0B , bdr:EVDFE8B326178692C5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDFB14EE66496517F .
+}

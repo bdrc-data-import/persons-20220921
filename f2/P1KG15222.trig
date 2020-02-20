@@ -1,0 +1,51 @@
+@base          <bdg:P1KG15222> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15222 {
+    bda:LG6DABDF4799FC9FD3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-17T14:25:14.392Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15222  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15222 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f2/P1KG15222.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15222 ;
+        adm:logEntry        bda:LG6DABDF4799FC9FD3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD6995DBDBD613966
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMF73EB60FFEDE13C2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab/"@bo-x-ewts .
+    
+    bdr:NMFD0112AF4E693A0F
+        a                   :PersonPersonalName ;
+        rdfs:label          "rnga ba shes rab/"@bo-x-ewts .
+    
+    bdr:P1KG15222  a        :Person ;
+        skos:prefLabel      "shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD6995DBDBD613966 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMF73EB60FFEDE13C2 , bdr:NMFD0112AF4E693A0F .
+}

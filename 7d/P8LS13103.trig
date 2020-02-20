@@ -1,0 +1,74 @@
+@base          <bdg:P8LS13103> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13103 {
+    bda:LG73655F157043C6FB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T10:12:23.879Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG89773E27924E9C0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T12:11:02.031Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13103  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13103 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "7d/P8LS13103.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13103 ;
+        adm:logEntry        bda:LG73655F157043C6FB , bda:LG89773E27924E9C0A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAA9432937C1C69BF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVDC3AAC68F2D41D12
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM03CE132121187277
+        a                   :PersonTitle ;
+        rdfs:label          "klu lding 'jam dbyangs thub bstan lung rtogs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM074BE7FE65D98FDA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 72"@bo-x-ewts .
+    
+    bdr:NM915ADD145A9120A6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs thub bstan lung rtogs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF618507D11B3EFCE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 72 'jam dbyangs thub bstan lung rtogs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT0FC479943C6D2A96
+        a                   :Note ;
+        :locationStatement  "p. 122" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P8LS13103  a        :Person ;
+        skos:prefLabel      "'jam dbyangs thub bstan lung rtogs rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0FC479943C6D2A96 ;
+        :personEvent        bdr:EVAA9432937C1C69BF , bdr:EVDC3AAC68F2D41D12 ;
+        :personName         bdr:NM03CE132121187277 , bdr:NM074BE7FE65D98FDA , bdr:NM915ADD145A9120A6 , bdr:NMF618507D11B3EFCE ;
+        :personTeacherOf    bdr:P8LS13105 .
+}

@@ -1,0 +1,89 @@
+@base          <bdg:P6804> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6804 {
+    bda:LG035340DC6DCBC06D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG1A7D450053F4DDA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T08:45:27.235Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG361E019F3EDC9F42
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T16:38:46.362Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6804  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6804 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "b4/P6804.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6804 ;
+        adm:logEntry        bda:LG035340DC6DCBC06D , bda:LG1A7D450053F4DDA7 , bda:LG361E019F3EDC9F42 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8DAA521399E18B87
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13077 .
+    
+    bdr:EVD5BAEE1EEE150A10
+        a                   :PersonBirth ;
+        :onYear             "1651"^^xsd:gYear .
+    
+    bdr:EVE6ED8C195291C8E7
+        a                   :PersonDeath ;
+        :onYear             "1743"^^xsd:gYear .
+    
+    bdr:EVFEE016766B9E0B58
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2525 .
+    
+    bdr:NM0158C8D01B5BBBEE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dawon 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMBFD021C3028A7C6E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tA dbon 01 tshul khrims seng+ge"@bo-x-ewts .
+    
+    bdr:NME146612F029F9886
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tA dbon 01"@bo-x-ewts .
+    
+    bdr:NMFFD935455AE3EBB9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims seng+ge"@bo-x-ewts .
+    
+    bdr:NT1A4F5FB2C089315B
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 17" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6804  a            :Person ;
+        skos:prefLabel      "tshul khrims seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1A4F5FB2C089315B ;
+        :personEvent        bdr:EV8DAA521399E18B87 , bdr:EVD5BAEE1EEE150A10 , bdr:EVE6ED8C195291C8E7 , bdr:EVFEE016766B9E0B58 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0158C8D01B5BBBEE , bdr:NMBFD021C3028A7C6E , bdr:NME146612F029F9886 , bdr:NMFFD935455AE3EBB9 .
+}

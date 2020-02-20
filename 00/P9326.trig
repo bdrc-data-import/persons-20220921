@@ -1,0 +1,57 @@
+@base          <bdg:P9326> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9326 {
+    bda:P9326  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9326 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "00/P9326.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9326 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4220775620D8861F
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVF6A54F2EF24ACF1A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1760"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMB195E62CD0902BE7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMD869B9E50F9C179A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "steng chen dmu tsa'i tshugs sprul shes rab bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT02A9B6A8A87F08D8
+        a                   :Note ;
+        :locationStatement  "p. 297" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "steng chen dmu tsa'i tshugs sprul mchog shes rab bstan 'dzin ascends the golden throne"@en .
+    
+    bdr:P9326  a            :Person ;
+        skos:prefLabel      "shes rab bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT02A9B6A8A87F08D8 ;
+        :personEvent        bdr:EV4220775620D8861F , bdr:EVF6A54F2EF24ACF1A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB195E62CD0902BE7 , bdr:NMD869B9E50F9C179A .
+}

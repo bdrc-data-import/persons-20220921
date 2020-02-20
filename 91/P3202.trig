@@ -1,0 +1,63 @@
+@base          <bdg:P3202> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3202 {
+    bda:LG4EE9E46EA4CF5863
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-13T11:33:30.387Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher's p# agian"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB5AA0CBE682BF987
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-13T11:30:49.664Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3202  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3202 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "91/P3202.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3202 ;
+        adm:logEntry        bda:LG4EE9E46EA4CF5863 , bda:LGB5AA0CBE682BF987 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D55BCC7E630306D
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM08A7C938E69CFD80
+        a                   :PersonPersonalName ;
+        rdfs:label          "ra wandra/"@bo-x-ewts .
+    
+    bdr:NME47295599F66AD94
+        a                   :PersonPrimaryName ;
+        rdfs:label          "re wen+dra pra bha wa/"@bo-x-ewts .
+    
+    bdr:NTB9E98FC97419D233
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3202  a            :Person ;
+        skos:prefLabel      "re wen+dra pra bha wa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB9E98FC97419D233 ;
+        :personEvent        bdr:EV2D55BCC7E630306D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08A7C938E69CFD80 , bdr:NME47295599F66AD94 ;
+        :personStudentOf    bdr:P3203 ;
+        :personTeacherOf    bdr:P1025 .
+}

@@ -1,0 +1,72 @@
+@base          <bdg:P9544> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9544 {
+    bda:LG4E3A5F68A25C344A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T16:32:30.877Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9544  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9544 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "95/P9544.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9544 ;
+        adm:logEntry        bda:LG4E3A5F68A25C344A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14427BEFFF5EC370
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV4049F93A9DF9C857
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4646 .
+    
+    bdr:NM0061098C10242983
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gung ri mkha' 'gro 04 dkon mchog chos sgron/"@bo-x-ewts .
+    
+    bdr:NM322FA39797D4A5C7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gung ri mkha' 'gro 04"@bo-x-ewts .
+    
+    bdr:NMC0FB55D0DCA66126
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gungri Khandro 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF1DE16ED9A79A93D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog chos sgron/"@bo-x-ewts .
+    
+    bdr:NT7BF46302B21038AE
+        a                   :Note ;
+        :locationStatement  "pp. 8-10" ;
+        :noteSource         bdr:MW29131 ;
+        :noteText           "year of birth given here, 1811, is incorrect\nshe was a student of dkon mchog 'jigs med dbang po"@en .
+    
+    bdr:P9544  a            :Person ;
+        skos:prefLabel      "dkon mchog chos sgron/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9545 ;
+        :isRoot             true ;
+        :note               bdr:NT7BF46302B21038AE ;
+        :personEvent        bdr:EV14427BEFFF5EC370 , bdr:EV4049F93A9DF9C857 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM0061098C10242983 , bdr:NM322FA39797D4A5C7 , bdr:NMC0FB55D0DCA66126 , bdr:NMF1DE16ED9A79A93D ;
+        :personStudentOf    bdr:P169 .
+}

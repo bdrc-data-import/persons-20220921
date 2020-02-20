@@ -1,0 +1,52 @@
+@base          <bdg:P10499> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10499 {
+    bda:LG1CB1B13273E200E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-10T12:01:22.365Z"^^xsd:dateTime ;
+        adm:logMessage      "changed date of birth and annotation"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P10499  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10499 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b3/P10499.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10499 ;
+        adm:logEntry        bda:LG1CB1B13273E200E3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A4F33411198E975
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMF31174110A43CC58
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma bkra shis/"@bo-x-ewts .
+    
+    bdr:NT3C1EB7183EFABFB4
+        a                   :Note ;
+        :noteText           "rnying ma master of the bdud 'joms gling pa tradition; probably a student of bdud 'joms gling pa himself"@en .
+    
+    bdr:P10499  a           :Person ;
+        skos:prefLabel      "pad+ma bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C1EB7183EFABFB4 ;
+        :personEvent        bdr:EV2A4F33411198E975 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMF31174110A43CC58 .
+}

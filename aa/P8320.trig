@@ -1,0 +1,50 @@
+@base          <bdg:P8320> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8320 {
+    bda:P8320  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8320 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "aa/P8320.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8320 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0CA11B04C12E44F2
+        a                   :PersonBirth ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NM8A69823586116603
+        a                   :PersonTitle ;
+        rdfs:label          "rdo rams pa sbyin pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME779F673A1ED60E7
+        a                   :PersonPersonalName ;
+        rdfs:label          "sbyin pa rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT4D5D28ECEB9EF80D
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW26006 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P8320  a            :Person ;
+        skos:prefLabel      "sbyin pa rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4D5D28ECEB9EF80D ;
+        :personEvent        bdr:EV0CA11B04C12E44F2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8A69823586116603 , bdr:NME779F673A1ED60E7 .
+}

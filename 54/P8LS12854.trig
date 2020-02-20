@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12854> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12854 {
+    bda:LG33098E4C4DCE8E92
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T14:15:52.384Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12854  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12854 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "54/P8LS12854.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12854 ;
+        adm:logEntry        bda:LG33098E4C4DCE8E92 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV48FF868ED1BAF734
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1962 .
+    
+    bdr:EVF3E3B13B32344CB9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1962 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMD3CF57BBD3B7D2CC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "a mchog mtshan nyid dgon gyi gdan rabs 07"@bo-x-ewts .
+    
+    bdr:NME57398F9C82D7936
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khri rnying tshang /"@bo-x-ewts .
+    
+    bdr:NTD6E3C42B60EA8AA9
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 21" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:P8LS12854  a        :Person ;
+        skos:prefLabel      "khri rnying tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD6E3C42B60EA8AA9 ;
+        :personEvent        bdr:EV48FF868ED1BAF734 , bdr:EVF3E3B13B32344CB9 ;
+        :personName         bdr:NMD3CF57BBD3B7D2CC , bdr:NME57398F9C82D7936 .
+}

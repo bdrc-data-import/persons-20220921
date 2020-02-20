@@ -1,0 +1,67 @@
+@base          <bdg:P475> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P475 {
+    bda:LG4958FA192642CE56
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-02T12:03:29.339Z"^^xsd:dateTime ;
+        adm:logMessage      "corrections made"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG88743B67DCAB7177
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-10T10:37:22.444Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P475  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P475 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6d/P475.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P475 ;
+        adm:logEntry        bda:LG4958FA192642CE56 , bda:LG88743B67DCAB7177 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4984ABDDD3E1C330
+        a                   :PersonDeath ;
+        :onYear             "1553"^^xsd:gYear .
+    
+    bdr:EVB9CE2B720DCC73FD
+        a                   :PersonBirth ;
+        :onYear             "1475"^^xsd:gYear .
+    
+    bdr:NM3D5FE4362428627A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'ba' ra ba nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM3F9E83A6B885BF50
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTD25BD50F951A380B
+        a                   :Note ;
+        :noteText           "according to the brgyud yig to the gdams ngag mdzod, a major figure in the transmission lineage of the 'ba' ra ba phyag rgya chen po\n \t\nthere exists in the 'ba' ra dkar brgyud gser 'phreng a biography of nam mkha' rgyal mtshan by his student nam mkha' rdo rje (v. 2, pp. 394-521).\n\nanother date is : \nbirth 1475\ndeath 1530"@en .
+    
+    bdr:P475  a             :Person ;
+        skos:prefLabel      "nam mkha' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD25BD50F951A380B ;
+        :personEvent        bdr:EV4984ABDDD3E1C330 , bdr:EVB9CE2B720DCC73FD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3D5FE4362428627A , bdr:NM3F9E83A6B885BF50 ;
+        :personStudentOf    bdr:P6186 , bdr:P9796 ;
+        :personTeacherOf    bdr:P463 , bdr:P6187 .
+}

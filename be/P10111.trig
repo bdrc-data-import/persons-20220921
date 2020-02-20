@@ -1,0 +1,53 @@
+@base          <bdg:P10111> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10111 {
+    bda:P10111  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10111 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "be/P10111.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10111 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV983B46AA35B871F9
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM5FBD4F40FA674D5F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang sems kun dga' nyi ma/"@bo-x-ewts .
+    
+    bdr:NM88E75AF5014416E3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' nyi ma/"@bo-x-ewts .
+    
+    bdr:NT1E7A5ACB33AF4A38
+        a                   :Note ;
+        :locationStatement  "v. 3, p. 251" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "direct disciple of thang stong rgyal po who transmitted his revelations on the byang gter precepts"@en .
+    
+    bdr:P10111  a           :Person ;
+        skos:prefLabel      "kun dga' nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E7A5ACB33AF4A38 ;
+        :personEvent        bdr:EV983B46AA35B871F9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5FBD4F40FA674D5F , bdr:NM88E75AF5014416E3 ;
+        :personStudentOf    bdr:P2778 ;
+        :personTeacherOf    bdr:P10112 .
+}

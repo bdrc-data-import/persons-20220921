@@ -1,0 +1,50 @@
+@base          <bdg:P8680> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8680 {
+    bda:P8680  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8680 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c7/P8680.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8680 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV93B256719B15BD5A
+        a                   :PersonBirth ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:NM0A1118B5AE67EC99
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'brug sgra rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM14D54269D5E98BAD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mchog sprul 'brug sgra rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT60883D75C5506D78
+        a                   :Note ;
+        :locationStatement  "p. 65" ;
+        :noteSource         bdr:MW27322 ;
+        :noteText           "rnying ma teacher; succeeds his master sangs rgyas tshe 'phel in 1996"@en .
+    
+    bdr:P8680  a            :Person ;
+        skos:prefLabel      "'brug sgra rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60883D75C5506D78 ;
+        :personEvent        bdr:EV93B256719B15BD5A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A1118B5AE67EC99 , bdr:NM14D54269D5E98BAD .
+}

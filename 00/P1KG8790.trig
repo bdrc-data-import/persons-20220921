@@ -1,0 +1,71 @@
+@base          <bdg:P1KG8790> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG8790 {
+    bda:LG2F47443358BA4DFE
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-23T09:50:58.899Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed and released"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG45E55487C870A23F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-18T07:23:35.37Z"^^xsd:dateTime ;
+        adm:logMessage      "nonActor"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGFB70C4D069F99619
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-02-16T10:12:09.739Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG8790  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG8790 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "00/P1KG8790.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG8790 ;
+        adm:logEntry        bda:LG2F47443358BA4DFE , bda:LG45E55487C870A23F , bda:LGFB70C4D069F99619 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV941BA8F1C38481D3
+        a                   :PersonDeath ;
+        :onYear             "1963"^^xsd:gYear .
+    
+    bdr:EVDDC7AC1EAD404E04
+        a                   :PersonBirth ;
+        :onYear             "1885"^^xsd:gYear .
+    
+    bdr:NM090B258276D93488
+        a                   :PersonPrimaryName ;
+        rdfs:label          "edgerton, franklin"@en .
+    
+    bdr:NM12474B74AF0E5781
+        a                   :PersonPersonalName ;
+        rdfs:label          "franklin edgerton"@en .
+    
+    bdr:NT0D2387B062DB5547
+        a                   :Note ;
+        :noteText           "sterling professor of sanskrit and comparative philology, yale university"@en .
+    
+    bdr:P1KG8790  a         :Person ;
+        skos:prefLabel      "edgerton, franklin"@en ;
+        :isRoot             true ;
+        :note               bdr:NT0D2387B062DB5547 ;
+        :personEvent        bdr:EV941BA8F1C38481D3 , bdr:EVDDC7AC1EAD404E04 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM090B258276D93488 , bdr:NM12474B74AF0E5781 .
+}

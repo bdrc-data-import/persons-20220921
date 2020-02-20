@@ -1,0 +1,98 @@
+@base          <bdg:P7731> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7731 {
+    bda:LG6107CD9194C6796F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-17T09:17:53.536Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, date of birth and death, note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7B81C42C738DB606
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-17T17:30:21.087Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG7EE8EC76D204CDE0
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T14:58:15.245Z"^^xsd:dateTime ;
+        adm:logMessage      "arranged title and added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9D368DCB3C2EF8AD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T16:32:15.952Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDAB3060D99C3DB67
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-21T16:27:49.113Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P7731  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7731 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d8/P7731.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7731 ;
+        adm:logEntry        bda:LG6107CD9194C6796F , bda:LG7B81C42C738DB606 , bda:LG7EE8EC76D204CDE0 , bda:LG9D368DCB3C2EF8AD , bda:LGDAB3060D99C3DB67 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CFA7990B41F547A
+        a                   :PersonDeath ;
+        :onYear             "1727"^^xsd:gYear .
+    
+    bdr:EV8B914E9E4EE8B1FA
+        a                   :PersonBirth ;
+        :onYear             "1701"^^xsd:gYear .
+    
+    bdr:NM33785514493BC9C8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyi grags rgyal sras o rgyan bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM7AD242D0638CD512
+        a                   :PersonPersonalName ;
+        rdfs:label          "gu ru bsod nams bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMAA93C9E1E4CE7007
+        a                   :PersonPersonalName ;
+        rdfs:label          "o rgyan bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT09FECDD72B76D81F
+        a                   :Note ;
+        :locationStatement  "p. 506-509" ;
+        :noteSource         bdr:MW27401 .
+    
+    bdr:NTC9ACA31B1A26C7E9
+        a                   :Note ;
+        :locationStatement  "p. 22" ;
+        :noteSource         bdr:MW23686 ;
+        :noteText           "the first chag ri nyi grags rgyal sras, the son of nyi ma grags pa"@en .
+    
+    bdr:P7731  a            :Person ;
+        skos:prefLabel      "o rgyan bstan 'dzin/"@bo-x-ewts ;
+        :hasFather          bdr:P425 ;
+        :hasMother          bdr:P2JM441 ;
+        :isRoot             true ;
+        :note               bdr:NT09FECDD72B76D81F , bdr:NTC9ACA31B1A26C7E9 ;
+        :personEvent        bdr:EV5CFA7990B41F547A , bdr:EV8B914E9E4EE8B1FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM33785514493BC9C8 , bdr:NM7AD242D0638CD512 , bdr:NMAA93C9E1E4CE7007 ;
+        :personStudentOf    bdr:P6 , bdr:P667 , bdr:P677 , bdr:P8137 , bdr:P8783 , bdr:P923 ;
+        :personTeacherOf    bdr:P677 .
+}

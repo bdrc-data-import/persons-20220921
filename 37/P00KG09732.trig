@@ -1,0 +1,91 @@
+@base          <bdg:P00KG09732> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG09732 {
+    bda:LG16CCF24ED25647C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-26T12:53:57.682Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of death, title and notes"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2C4F40ECE60182DC
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-08T12:06:13.844Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG6D17D3DA6FA5D9FA
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-09T12:30:29.311Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG09732  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG09732 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "37/P00KG09732.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG09732 ;
+        adm:logEntry        bda:LG16CCF24ED25647C7 , bda:LG2C4F40ECE60182DC , bda:LG6D17D3DA6FA5D9FA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV738EF8FDE8A361FB
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1927"^^xsd:gYear .
+    
+    bdr:EVD7D07DD7DFDCD4E1
+        a                   :PersonDeath ;
+        :onYear             "2003"^^xsd:gYear .
+    
+    bdr:NM39E3DD4BD66D697D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha rnam rgyal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5F42B5B184AAAE97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEC61D0E9414D0415
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "e lha rgya ri'i khri thog 17"@bo-x-ewts .
+    
+    bdr:NTA9EABB5028BD4CDA
+        a                   :Note ;
+        :locationStatement  "p. 202-207" ;
+        :noteText           "dpal ldan bka' blon khri zur 'ju chen thub bstan rnam rgyal mchog gi sku tshe'i lo rgyus dang 'brel ba'i nye rabs bod kyi byung ba brjod pa'i gtam tshogs srid pa'i me long / deb phreng nyi shu pa/"@bo-x-ewts .
+    
+    bdr:NTD6898E6045BAA595
+        a                   :Note ;
+        :locationStatement  "p. 36-40, 67-108" ;
+        :noteSource         bdr:MW00KG09731 ;
+        :noteText           "accordig to this source he was born in 1927"@en .
+    
+    bdr:NTD975FA4AE68FEC3F
+        a                   :Note ;
+        :locationStatement  "vol. 7, p. 289-294" ;
+        :noteSource         bdr:MW1PD96945 ;
+        :noteText           "according to this source he was born in 1928"@en .
+    
+    bdr:P00KG09732  a       :Person ;
+        skos:prefLabel      "rnam rgyal rgya mtsho/"@bo-x-ewts ;
+        :hasChild           bdr:P8LS4350 ;
+        :hasWife            bdr:P1TD25 ;
+        :isRoot             true ;
+        :note               bdr:NTA9EABB5028BD4CDA , bdr:NTD6898E6045BAA595 , bdr:NTD975FA4AE68FEC3F ;
+        :personEvent        bdr:EV738EF8FDE8A361FB , bdr:EVD7D07DD7DFDCD4E1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39E3DD4BD66D697D , bdr:NM5F42B5B184AAAE97 , bdr:NMEC61D0E9414D0415 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Namgyel-Gyatso/276"^^xsd:anyURI .
+}

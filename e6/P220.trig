@@ -1,0 +1,71 @@
+@base          <bdg:P220> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P220 {
+    bda:LGC5282D5C6F2EA1FC
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-06T00:30:38.171Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P220  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P220 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e6/P220.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P220 ;
+        adm:logEntry        bda:LGC5282D5C6F2EA1FC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08E1F1073925AA00
+        a                   :PersonDeath ;
+        :onYear             "1988"^^xsd:gYear .
+    
+    bdr:EV88BF6A434E09ADFC
+        a                   :PersonBirth ;
+        :onYear             "1900"^^xsd:gYear .
+    
+    bdr:NM776AE071AD6D0FC6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMA4114E91962EADA0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang dkon mchog 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT91C9488B8F2844B2
+        a                   :Note ;
+        :noteText           "famed yogi of the drigung kagyu tradition"@en .
+    
+    bdr:NTAC7D0C72DE76A936
+        a                   :Note ;
+        :locationStatement  "p. 22" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates: 1900 (15 lcags byi)-1988 (17 sa 'brug)"@en .
+    
+    bdr:NTADFA8B7D0CA92910
+        a                   :Note ;
+        :locationStatement  "p. 1010" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source includes biography; dates: 1900-1988."@en .
+    
+    bdr:P220  a             :Person ;
+        skos:prefLabel      "dkon mchog 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT91C9488B8F2844B2 , bdr:NTAC7D0C72DE76A936 , bdr:NTADFA8B7D0CA92910 ;
+        :personEvent        bdr:EV08E1F1073925AA00 , bdr:EV88BF6A434E09ADFC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM776AE071AD6D0FC6 , bdr:NMA4114E91962EADA0 ;
+        :personTeacherOf    bdr:P00KG09672 , bdr:P4CZ10506 .
+}

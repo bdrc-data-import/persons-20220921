@@ -1,0 +1,73 @@
+@base          <bdg:P10646> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10646 {
+    bda:LG631A00571C04DC3B
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-14T17:02:20.563Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG6AE16FD5093F7DD9
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-14T16:56:22.003Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE4503A271DEF5A81
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T15:15:14.485Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P10646  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10646 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "57/P10646.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10646 ;
+        adm:logEntry        bda:LG631A00571C04DC3B , bda:LG6AE16FD5093F7DD9 , bda:LGE4503A271DEF5A81 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV97D542D8088FCF8E
+        a                   :PersonBirth ;
+        :onYear             "1396"^^xsd:gYear .
+    
+    bdr:EVA43BF12A56E62943
+        a                   :PersonDeath ;
+        :onYear             "1477"^^xsd:gYear .
+    
+    bdr:NMBD38C2C0C9D7F283
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun skyong gling pa/"@bo-x-ewts .
+    
+    bdr:NMCAD8C720D993CDCA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter chen kun skyong gling pa/"@bo-x-ewts .
+    
+    bdr:NTC52DC252A1080C28
+        a                   :Note ;
+        :locationStatement  "p. 57" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "rnying ma rediscoverer of concealed teachings\ndates: 1396-1477"@en .
+    
+    bdr:P10646  a           :Person ;
+        skos:prefLabel      "kun skyong gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC52DC252A1080C28 ;
+        :personEvent        bdr:EV97D542D8088FCF8E , bdr:EVA43BF12A56E62943 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBD38C2C0C9D7F283 , bdr:NMCAD8C720D993CDCA ;
+        :personTeacherOf    bdr:P208 , bdr:P318 , bdr:P4293 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Kunkyong-Lingpa/2232"^^xsd:anyURI .
+}

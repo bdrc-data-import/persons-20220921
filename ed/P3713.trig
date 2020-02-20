@@ -1,0 +1,54 @@
+@base          <bdg:P3713> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3713 {
+    bda:P3713  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3713 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ed/P3713.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3713 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB40535266EEED0EC
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVFBE53BA2F39CB1D6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM92878444FA9F852D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdo ba dka' bcu brtson 'grus bzang po/"@bo-x-ewts .
+    
+    bdr:NMCB59D76B8227E76A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brtson 'grus bzang po/"@bo-x-ewts .
+    
+    bdr:NT5DA5019C8ACF94CC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3713  a            :Person ;
+        skos:prefLabel      "brtson 'grus bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5DA5019C8ACF94CC ;
+        :personEvent        bdr:EVB40535266EEED0EC , bdr:EVFBE53BA2F39CB1D6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM92878444FA9F852D , bdr:NMCB59D76B8227E76A ;
+        :personTeacherOf    bdr:P3710 .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12330> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12330 {
+    bda:LG2899FF064F46E031
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T10:51:47.921Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12330  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12330 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "31/P8LS12330.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12330 ;
+        adm:logEntry        bda:LG2899FF064F46E031 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV40C0155EEDD60547
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EVE581D1CD0E37F1BC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM047E0F5E2A742CC5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "reb gong dkon mchog rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM0F2F5EAFB5E6E858
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 09"@bo-x-ewts .
+    
+    bdr:NM758269BE0CEF4007
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rgya mthso/"@bo-x-ewts .
+    
+    bdr:NTB078C9FB242162F9
+        a                   :Note ;
+        :locationStatement  "p. 343" ;
+        :noteSource         bdr:MW19255 .
+    
+    bdr:P8LS12330  a        :Person ;
+        skos:prefLabel      "dkon mchog rgya mthso/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB078C9FB242162F9 ;
+        :personEvent        bdr:EV40C0155EEDD60547 , bdr:EVE581D1CD0E37F1BC ;
+        :personName         bdr:NM047E0F5E2A742CC5 , bdr:NM0F2F5EAFB5E6E858 , bdr:NM758269BE0CEF4007 .
+}

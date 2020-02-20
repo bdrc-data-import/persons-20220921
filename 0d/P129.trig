@@ -1,0 +1,65 @@
+@base          <bdg:P129> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P129 {
+    bda:LG0B33701A5DF550B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T11:52:45.487Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG6207EF0EEC5FD416
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:53:12.738Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGF62B7BF234374794
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T12:40:50.923Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher of P1AG15"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P129  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P129 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "0d/P129.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P129 ;
+        adm:logEntry        bda:LG0B33701A5DF550B5 , bda:LG6207EF0EEC5FD416 , bda:LGF62B7BF234374794 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAA797A06F654FAF7
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM8495B1E61CD4111C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon rtsi lung pa/"@bo-x-ewts .
+    
+    bdr:NM9F4887EE46E6B535
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rtsi lung pa/"@bo-x-ewts .
+    
+    bdr:P129  a             :Person ;
+        skos:prefLabel      "rtsi lung pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVAA797A06F654FAF7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8495B1E61CD4111C , bdr:NM9F4887EE46E6B535 ;
+        :personStudentOf    bdr:P127 ;
+        :personTeacherOf    bdr:P16 , bdr:P1AG15 .
+}

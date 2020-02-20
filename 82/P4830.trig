@@ -1,0 +1,89 @@
+@base          <bdg:P4830> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4830 {
+    bda:LGAC63E070C51D95BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-07T11:41:20.955Z"^^xsd:dateTime ;
+        adm:logMessage      "edited cent."@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGEDECE1F01F46A6E5
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-07T11:40:08.889Z"^^xsd:dateTime ;
+        adm:logMessage      "added event info"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGF7D667B3C18AABCE
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-07T15:49:53.909Z"^^xsd:dateTime ;
+        adm:logMessage      "added kinship, P11MS148"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P4830  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4830 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "82/P4830.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4830 ;
+        adm:logEntry        bda:LGAC63E070C51D95BB , bda:LGEDECE1F01F46A6E5 , bda:LGF7D667B3C18AABCE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C4457340D840861
+        a                   :PersonInResidence ;
+        :eventWhere         bdr:G556 ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVC807A30635F2BF5E
+        a                   :PersonBirth ;
+        :onYear             "1432"^^xsd:gYear .
+    
+    bdr:EVD1EA8D6F52A3BCC3
+        a                   :PersonAffiliation ;
+        :eventWhere         bdr:G11MS147 ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVFD9DA919D1CFECFA
+        a                   :PersonDeath ;
+        :onYear             "1481"^^xsd:gYear .
+    
+    bdr:NM1EB95897949FC746
+        a                   :PersonPersonalName ;
+        rdfs:label          "sreg ston kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM7DEAB7F4F8E24801
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sreg ston/"@bo-x-ewts .
+    
+    bdr:NMF6AD9C6688D0CBE0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT36025C8C9945D555
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Shangs-pa Bka'-brgyud-pa transmissions"@en .
+    
+    bdr:P4830  a            :Person ;
+        skos:prefLabel      "kun dga' rgyal mtshan/"@bo-x-ewts ;
+        :hasGrandfather     bdr:P11MS148 ;
+        :hasSon             bdr:P84 ;
+        :isRoot             true ;
+        :note               bdr:NT36025C8C9945D555 ;
+        :personEvent        bdr:EV3C4457340D840861 , bdr:EVC807A30635F2BF5E , bdr:EVD1EA8D6F52A3BCC3 , bdr:EVFD9DA919D1CFECFA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1EB95897949FC746 , bdr:NM7DEAB7F4F8E24801 , bdr:NMF6AD9C6688D0CBE0 .
+}

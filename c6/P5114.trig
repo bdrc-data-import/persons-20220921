@@ -1,0 +1,66 @@
+@base          <bdg:P5114> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5114 {
+    bda:LGDE8DBCBDDBEC144E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-19T10:37:31.803Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5114  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5114 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c6/P5114.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5114 ;
+        adm:logEntry        bda:LGDE8DBCBDDBEC144E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F1BE76B96CCFD7B
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM24B25EB30B11E597
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NME5FE8858280AD06D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag bla ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NT8F96081AEFBC7188
+        a                   :Note ;
+        :locationStatement  "p. 141" .
+    
+    bdr:NT99748287E6BA8BE8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Nyag-bla Padma-bdud-'dul revelations"@en .
+    
+    bdr:NTDC0607254BA0435B
+        a                   :Note ;
+        :locationStatement  "p. 112" .
+    
+    bdr:P5114  a            :Person ;
+        skos:prefLabel      "ye shes rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8F96081AEFBC7188 , bdr:NT99748287E6BA8BE8 , bdr:NTDC0607254BA0435B ;
+        :personEvent        bdr:EV1F1BE76B96CCFD7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM24B25EB30B11E597 , bdr:NME5FE8858280AD06D ;
+        :personStudentOf    bdr:P2424 ;
+        :personTeacherOf    bdr:P4782 , bdr:P8850 .
+}

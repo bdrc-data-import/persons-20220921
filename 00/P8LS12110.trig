@@ -1,0 +1,93 @@
+@base          <bdg:P8LS12110> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12110 {
+    bda:LG0422DE9BB3A7CE41
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T10:03:05.216Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG1DE6AD2E3646342F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-17T10:56:28.979Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12110  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12110 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "00/P8LS12110.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12110 ;
+        adm:logEntry        bda:LG0422DE9BB3A7CE41 , bda:LG1DE6AD2E3646342F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1366FB9870AFB65C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EV17175CD6835EAA59
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV344665418576FA57
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1715 .
+    
+    bdr:EV3F4FD3647D5799B0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV526503663941CC8D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G398 .
+    
+    bdr:NM29A69F796F0884AE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang yon ran rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM433C0421EACAF868
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 63"@bo-x-ewts .
+    
+    bdr:NM8625546EF37C56D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'ja' mo zhabs drung blo bzang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBF51B1AB7D1EB743
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 26"@bo-x-ewts .
+    
+    bdr:NT73AA1C876D5C1B50
+        a                   :Note ;
+        :locationStatement  "p. 281" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "He was also dus 'khor dpon slob and after retirement he went to Mongolia. Detail biography is not known"@en .
+    
+    bdr:NTF7FB332B0EA4FAE4
+        a                   :Note ;
+        :locationStatement  "p. 357" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12110  a        :Person ;
+        skos:prefLabel      "blo bzang yon ran rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT73AA1C876D5C1B50 , bdr:NTF7FB332B0EA4FAE4 ;
+        :personEvent        bdr:EV1366FB9870AFB65C , bdr:EV17175CD6835EAA59 , bdr:EV344665418576FA57 , bdr:EV3F4FD3647D5799B0 , bdr:EV526503663941CC8D ;
+        :personName         bdr:NM29A69F796F0884AE , bdr:NM433C0421EACAF868 , bdr:NM8625546EF37C56D6 , bdr:NMBF51B1AB7D1EB743 .
+}

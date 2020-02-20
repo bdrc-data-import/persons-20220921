@@ -1,0 +1,108 @@
+@base          <bdg:P511> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P511 {
+    bda:LGAF400937E507FFAC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T12:57:02.771Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGC1F562F96E81A4F0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T12:22:43.319Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGC5043721BBD0B01B
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-06T16:43:16.657Z"^^xsd:dateTime ;
+        adm:logMessage      "added office dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGF124070D8D8132DE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T10:57:59.758Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and seat"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P511  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P511 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "db/P511.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P511 ;
+        adm:logEntry        bda:LGAF400937E507FFAC , bda:LGC1F562F96E81A4F0 , bda:LGC5043721BBD0B01B , bda:LGF124070D8D8132DE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F0206B5DB98DBDC
+        a                   :PersonAssumesOffice ;
+        :onYear             "1689"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV50A0395C982DD321
+        a                   :PersonLeavesOffice ;
+        :onYear             "1697"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV59735D8E7471A5D4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV60C0061AA08DADB2
+        a                   :PersonDeath ;
+        :onYear             "1699"^^xsd:gYear .
+    
+    bdr:EVD573622A618487BF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G733 ;
+        :onYear             "1640"^^xsd:gYear .
+    
+    bdr:EVEB2C0265E9400E37
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G348 .
+    
+    bdr:NM9C6EA9DCD3BF9DD1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad dkar lhun grub/"@bo-x-ewts .
+    
+    bdr:NMA7CED88AA8AB067B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 03"@bo-x-ewts .
+    
+    bdr:NMAD1CCE1BE1300F32
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 03 pad dkar lhun grub/"@bo-x-ewts .
+    
+    bdr:NT0F02034391601C70
+        a                   :Note ;
+        :locationStatement  "ff. 139v-140v" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "bhutanese cleric who became the 3rd rje mkhan po\nbecame a monk at the age of 11\nbecame the stag tshang 'dren pa (the administrator of the spa gro stag tshang hermitage\nserved as the 3rd rje mkhan po from 1689-1697\nafter his tenure as rje mkhan po he retired to spus mo bde chen chos 'khor, a hermitage which was founded by ngag dbang chos rgyal and restored by pad dkar lhun grub"@en .
+    
+    bdr:NT654623B1207F7F67
+        a                   :Note ;
+        :noteText           "according to imaeda, p. 216 assumes office 1690 and leaves office 1696"@en .
+    
+    bdr:P511  a             :Person ;
+        skos:prefLabel      "pad dkar lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0F02034391601C70 , bdr:NT654623B1207F7F67 ;
+        :personEvent        bdr:EV2F0206B5DB98DBDC , bdr:EV50A0395C982DD321 , bdr:EV59735D8E7471A5D4 , bdr:EV60C0061AA08DADB2 , bdr:EVD573622A618487BF , bdr:EVEB2C0265E9400E37 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9C6EA9DCD3BF9DD1 , bdr:NMA7CED88AA8AB067B , bdr:NMAD1CCE1BE1300F32 ;
+        :personStudentOf    bdr:P14 , bdr:P1KG4602 , bdr:P509 , bdr:P510 , bdr:P512 , bdr:P513 , bdr:P514 , bdr:P515 , bdr:P516 ;
+        :personTeacherOf    bdr:P527 .
+}

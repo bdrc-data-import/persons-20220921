@@ -1,0 +1,66 @@
+@base          <bdg:P8591> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8591 {
+    bda:LG51825AF0CB4B187B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-06T15:55:49.411Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8591  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8591 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e1/P8591.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8591 ;
+        adm:logEntry        bda:LG51825AF0CB4B187B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM62D8BD01CB285DF5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin skye snga chos kyi nyi ma phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8A5A081D371DDBBD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub brgyud dkon mchog bstan 'dzin skye snga chos kyi nyi ma phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8F200F0C890F54FF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubgyu 09"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM9DE82ECF4EB7DB92
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sgrub brgyud 09"@bo-x-ewts .
+    
+    bdr:NT2269778BFFF0F946
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:NT45A38C0019DAF387
+        a                   :Note ;
+        :locationStatement  "p. 90-104" ;
+        :noteSource         bdr:MW00EGS1017048 .
+    
+    bdr:P8591  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin skye snga chos kyi nyi ma phrin las rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8590 ;
+        :isRoot             true ;
+        :note               bdr:NT2269778BFFF0F946 , bdr:NT45A38C0019DAF387 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM62D8BD01CB285DF5 , bdr:NM8A5A081D371DDBBD , bdr:NM8F200F0C890F54FF , bdr:NM9DE82ECF4EB7DB92 .
+}

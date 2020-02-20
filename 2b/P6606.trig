@@ -1,0 +1,74 @@
+@base          <bdg:P6606> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6606 {
+    bda:LG065744BE90A43D83
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-16T15:57:36.393Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG089C8BA014541171
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-16T12:03:16.749Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG3D1D6EE0105D4811
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-16T16:08:11.771Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG5646333C449EC5A8
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-24T10:48:07.401Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6606  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6606 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "2b/P6606.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6606 ;
+        adm:logEntry        bda:LG065744BE90A43D83 , bda:LG089C8BA014541171 , bda:LG3D1D6EE0105D4811 , bda:LG5646333C449EC5A8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF62F7D417A425194
+        a                   :PersonBirth ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:NM5AFF9B380FB7E238
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NTEE5EC5D5DA23FF5D
+        a                   :Note ;
+        :noteSource         bdr:MW1KG6009 ;
+        :noteText           "short introduction of author is on french flaps of the text dpal ldan glang nag dgon pa'i rdo rje slob dpon chen mo 'jam dbyangs kun dga' rin chen mchog gi mdzad rnam rags tsam brjod pa dri med gangs ri'i rang mdangs /"@en .
+    
+    bdr:NTFACDBB26D3B47FA7
+        a                   :Note ;
+        :noteText           "from dkar mdzes rdzong; teacher at the dar mdo mi rigs dge 'os mtho rim ched sbyong slob grwa"@en .
+    
+    bdr:P6606  a            :Person ;
+        skos:prefLabel      "tshe ring dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEE5EC5D5DA23FF5D , bdr:NTFACDBB26D3B47FA7 ;
+        :personEvent        bdr:EVF62F7D417A425194 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5AFF9B380FB7E238 ;
+        :personStudentOf    bdr:P1KG6010 .
+}

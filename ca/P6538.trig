@@ -1,0 +1,79 @@
+@base          <bdg:P6538> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6538 {
+    bda:LGEAF07C4A3A65B591
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T16:42:52.843Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6538  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6538 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ca/P6538.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6538 ;
+        adm:logEntry        bda:LGEAF07C4A3A65B591 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38C92586491ECB6A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4646 .
+    
+    bdr:EVFFCF842E2634B82D
+        a                   :PersonBirth ;
+        :notAfter           "1895"^^xsd:gYear ;
+        :notBefore          "1892"^^xsd:gYear .
+    
+    bdr:NM34B172EE259BAB49
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gung ri mkha' 'gro 06 dkon mchog bstan pa'i dbang mo/"@bo-x-ewts .
+    
+    bdr:NM36926E4037FA97B6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan pa'i dbang mo/"@bo-x-ewts .
+    
+    bdr:NM3AB378C62277F8BC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gung ri mkha' 'gro 06"@bo-x-ewts .
+    
+    bdr:NM752618F105D44295
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gungri Khandro 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT3BE225F4E707B866
+        a                   :Note ;
+        :locationStatement  "p. 596" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source notes that the first incarnation of the gung ri mkha' 'gro ma was recognized and names by a khu thabs mkhas bstan pa rgya mtsho in 1895"@en .
+    
+    bdr:NT7ADE349182BCA5DC
+        a                   :Note ;
+        :locationStatement  "pp. 8-10" ;
+        :noteSource         bdr:MW29131 ;
+        :noteText           "noted in this source as the 6th incarnation of the gung ri mkha' 'gro\ndate of birth: 1892\nteacher not recorded: bsod grags rin po che"@en .
+    
+    bdr:P6538  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan pa'i dbang mo/"@bo-x-ewts ;
+        :incarnationOf      bdr:P392 ;
+        :isRoot             true ;
+        :note               bdr:NT3BE225F4E707B866 , bdr:NT7ADE349182BCA5DC ;
+        :personEvent        bdr:EV38C92586491ECB6A , bdr:EVFFCF842E2634B82D ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM34B172EE259BAB49 , bdr:NM36926E4037FA97B6 , bdr:NM3AB378C62277F8BC , bdr:NM752618F105D44295 ;
+        :personStudentOf    bdr:P31 ;
+        :personTeacherOf    bdr:P9543 .
+}

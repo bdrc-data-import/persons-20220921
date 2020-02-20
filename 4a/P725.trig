@@ -1,0 +1,48 @@
+@base          <bdg:P725> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P725 {
+    bda:P725  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P725 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "4a/P725.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P725 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV27CFECF737A59531
+        a                   :PersonDeath ;
+        :onYear             "1938"^^xsd:gYear .
+    
+    bdr:EVA6E2B1C44DFBABB7
+        a                   :PersonBirth ;
+        :onYear             "1880"^^xsd:gYear .
+    
+    bdr:NM609A2F0C4F0372AC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig pa'i ba dz+ra/"@bo-x-ewts .
+    
+    bdr:NT3046F18EEC8D2FDA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P725  a             :Person ;
+        skos:prefLabel      "rig pa'i ba dz+ra/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3046F18EEC8D2FDA ;
+        :personEvent        bdr:EV27CFECF737A59531 , bdr:EVA6E2B1C44DFBABB7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM609A2F0C4F0372AC .
+}

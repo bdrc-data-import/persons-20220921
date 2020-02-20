@@ -1,0 +1,82 @@
+@base          <bdg:P2631> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2631 {
+    bda:LG0D44968DE159F78A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:41:08.381Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG5893FF933BE5874D
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T16:17:20.806Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury of lives link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2631  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2631 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d5/P2631.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2631 ;
+        adm:logEntry        bda:LG0D44968DE159F78A , bda:LG5893FF933BE5874D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3680C837EC7B6916
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EV77E6C8602EF5A8BE
+        a                   :PersonBirth ;
+        :onYear             "1398"^^xsd:gYear .
+    
+    bdr:EVD2E468D3D9BF15E5
+        a                   :PersonDeath ;
+        :onYear             "1425"^^xsd:gYear .
+    
+    bdr:NM20880B844478388B
+        a                   :PersonTitle ;
+        rdfs:label          "'brug pa nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM2D8E83A03BD24D3E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsang bdag nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM43648A7BDB78646E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM6707BBCDF26C29EA
+        a                   :PersonTitle ;
+        rdfs:label          "rwa smyon nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NTB34786912A3CB0CF
+        a                   :Note ;
+        :noteText           "hierarch of the 'brug pa dkar brgyud tradition of the house of rwa lung"@en .
+    
+    bdr:P2631  a            :Person ;
+        skos:prefLabel      "nam mkha' dpal bzang /"@bo-x-ewts ;
+        :hasFather          bdr:P2632 ;
+        :hasYoungerBrother  bdr:P2630 ;
+        :isRoot             true ;
+        :note               bdr:NTB34786912A3CB0CF ;
+        :personEvent        bdr:EV3680C837EC7B6916 , bdr:EV77E6C8602EF5A8BE , bdr:EVD2E468D3D9BF15E5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM20880B844478388B , bdr:NM2D8E83A03BD24D3E , bdr:NM43648A7BDB78646E , bdr:NM6707BBCDF26C29EA ;
+        :personStudentOf    bdr:P2632 , bdr:P2633 ;
+        :personTeacherOf    bdr:P2630 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Namkha-Pelzang/4349"^^xsd:anyURI .
+}

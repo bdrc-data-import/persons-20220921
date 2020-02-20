@@ -1,0 +1,65 @@
+@base          <bdg:P5032> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5032 {
+    bda:LGF3EDD6AB92EC8DA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:02:21.093Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5032  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5032 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fc/P5032.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5032 ;
+        adm:logEntry        bda:LGF3EDD6AB92EC8DA7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA01C63D3AF4AB8CD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G104 .
+    
+    bdr:EVC65D2094B7887ED9
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM010FFE4812B72F28
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM497A8752D5FB6E58
+        a                   :PersonTitle ;
+        rdfs:label          "bkra shis lhun po mkhan chen ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM52CE47EB410E0069
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8421F5B4A0E3F401
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5032  a            :Person ;
+        skos:prefLabel      "ye shes rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8421F5B4A0E3F401 ;
+        :personEvent        bdr:EVA01C63D3AF4AB8CD , bdr:EVC65D2094B7887ED9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM010FFE4812B72F28 , bdr:NM497A8752D5FB6E58 , bdr:NM52CE47EB410E0069 ;
+        :personTeacherOf    bdr:P308 .
+}

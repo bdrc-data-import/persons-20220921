@@ -1,0 +1,72 @@
+@base          <bdg:P3CN10672> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3CN10672 {
+    bda:LG4A931615AB99EED6
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-09-28T12:06:30.215Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGCBBE2CF9EAA4A4B8
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-09-28T11:57:02.55Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3CN10672  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3CN10672 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b3/P3CN10672.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3CN10672 ;
+        adm:logEntry        bda:LG4A931615AB99EED6 , bda:LGCBBE2CF9EAA4A4B8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BB2B38CC64B13ED
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G898 ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:EV6C6A3A3707AE6F1B
+        a                   :PersonDeath ;
+        :onYear             "2007"^^xsd:gYear .
+    
+    bdr:EVB8B9BE76B9AE33B5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NM43AB457349C7544C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang dkon mchog nor bu/"@bo-x-ewts .
+    
+    bdr:NMFD22DCE4CC25DAB2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog nor bu/"@bo-x-ewts .
+    
+    bdr:NT751C4DCE56217F03
+        a                   :Note ;
+        :locationStatement  "p. 1" ;
+        :noteSource         bdr:MW3CN10671 ;
+        :noteText           "also is student of dpa' chung rin po che (not recorded yet)."@en .
+    
+    bdr:P3CN10672  a        :Person ;
+        skos:prefLabel      "dkon mchog nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT751C4DCE56217F03 ;
+        :personEvent        bdr:EV1BB2B38CC64B13ED , bdr:EV6C6A3A3707AE6F1B , bdr:EVB8B9BE76B9AE33B5 ;
+        :personName         bdr:NM43AB457349C7544C , bdr:NMFD22DCE4CC25DAB2 ;
+        :personStudentOf    bdr:P6954 .
+}

@@ -1,0 +1,77 @@
+@base          <bdg:P2947> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2947 {
+    bda:LG6D5C76C605A8697B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T15:33:49.691Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB0A26A8D7E79449C
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-07-02T12:51:37.217Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected settings"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2947  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2947 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c5/P2947.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2947 ;
+        adm:logEntry        bda:LG6D5C76C605A8697B , bda:LGB0A26A8D7E79449C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFE011D0587EFD3D2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2361 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM3A2DDF00BA708753
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang phun tshogs lhun grub/"@bo-x-ewts .
+    
+    bdr:NM7A69FA66322CF302
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dar pa lo tsA ba ngag dbang phun tshogs lhun grub/"@bo-x-ewts .
+    
+    bdr:NM93978731792C4727
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dbang rab brtan rdo rje/"@bo-x-ewts .
+    
+    bdr:NT5DF03DAE71D9FB11
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 14r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "important master in the transmission of the grammatical and literary teachings, chiefly the sarasvativyakarana"@en .
+    
+    bdr:NTAC1BA07E0624C6B0
+        a                   :Note ;
+        :locationStatement  "p. 885" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "according to ming mdzod: b. at the end of the 16th cent.\naccording to the colophon to his translation of anubhuti's own commentary to the sarasvativyakarana, 'dar-pa lo tsA ba was from the se lineage and hailed from 'dar in upper gtsang"@en .
+    
+    bdr:P2947  a            :Person ;
+        skos:prefLabel      "ngag dbang phun tshogs lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5DF03DAE71D9FB11 , bdr:NTAC1BA07E0624C6B0 ;
+        :personEvent        bdr:EVFE011D0587EFD3D2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3A2DDF00BA708753 , bdr:NM7A69FA66322CF302 , bdr:NM93978731792C4727 ;
+        :personStudentOf    bdr:P2948 , bdr:P2949 ;
+        :personTeacherOf    bdr:P2950 , bdr:P417 .
+}

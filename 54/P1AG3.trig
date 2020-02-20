@@ -1,0 +1,88 @@
+@base          <bdg:P1AG3> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG3 {
+    bda:LG4C8B3FAFDADD153B
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-28T14:50:28.343Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed name description for P1AG1 and P1AG3"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG56B8AE1F032AF012
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-28T14:44:12.127Z"^^xsd:dateTime ;
+        adm:logMessage      "added link to Treasury of Lives"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG81278A58391CB6C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-29T14:55:32.783Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1AG3  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG3 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "54/P1AG3.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG3 ;
+        adm:logEntry        bda:LG4C8B3FAFDADD153B , bda:LG56B8AE1F032AF012 , bda:LG81278A58391CB6C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV157BA620061E6BF9
+        a                   :PersonDeath ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EV745FB9F679B21E2F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EV8A47D88AE003843D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM08A7A8271340449E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spyan snga rin chen 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NM586E0076A7DA72EB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMB040DD1C0CB70749
+        a                   :PersonOtherName ;
+        rdfs:label          "Chennga Rinchen Jungne"@en .
+    
+    bdr:NMEC2D0734E4932767
+        a                   :PersonOtherName ;
+        rdfs:label          "Rinchen Jungne"@en .
+    
+    bdr:NTCCA98473BE418A56
+        a                   :Note ;
+        :locationStatement  "p. 341" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "served as scribe to 'jig rten mgon po and grags pa 'byung gnas"@en .
+    
+    bdr:P1AG3  a            :Person ;
+        skos:prefLabel      "rin chen 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCCA98473BE418A56 ;
+        :personEvent        bdr:EV157BA620061E6BF9 , bdr:EV745FB9F679B21E2F , bdr:EV8A47D88AE003843D ;
+        :personName         bdr:NM08A7A8271340449E , bdr:NM586E0076A7DA72EB , bdr:NMB040DD1C0CB70749 , bdr:NMEC2D0734E4932767 ;
+        :personStudentOf    bdr:P132 , bdr:P16 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Chennga-Rinchen-Jungne/13430"^^xsd:anyURI .
+}

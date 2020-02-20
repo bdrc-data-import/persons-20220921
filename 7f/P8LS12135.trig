@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12135> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12135 {
+    bda:LG74D5D595375A0771
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T09:04:35.441Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12135  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12135 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7f/P8LS12135.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12135 ;
+        adm:logEntry        bda:LG74D5D595375A0771 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV05F72CAB5ED7CEC9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EV8412D7358EB91362
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM11D0F76778B2FADC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 51"@bo-x-ewts .
+    
+    bdr:NMC8272489C3D893C8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME0CECC75465C9D5F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a ra hor chen 'jam dbyangs bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE3058DAD730DB53B
+        a                   :Note ;
+        :locationStatement  "p. 331" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12135  a        :Person ;
+        skos:prefLabel      "'jam dbyangs bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE3058DAD730DB53B ;
+        :personEvent        bdr:EV05F72CAB5ED7CEC9 , bdr:EV8412D7358EB91362 ;
+        :personName         bdr:NM11D0F76778B2FADC , bdr:NMC8272489C3D893C8 , bdr:NME0CECC75465C9D5F .
+}

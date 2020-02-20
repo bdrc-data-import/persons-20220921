@@ -1,0 +1,81 @@
+@base          <bdg:P4244> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4244 {
+    bda:LGDD15076A66640189
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-05T10:39:56.847Z"^^xsd:dateTime ;
+        adm:logMessage      "added office info"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P4244  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4244 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "19/P4244.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4244 ;
+        adm:logEntry        bda:LGDD15076A66640189 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV34753E15CA0CD3C8
+        a                   :PersonDeath ;
+        :onYear             "1310"^^xsd:gYear .
+    
+    bdr:EV6DC7F09E00E9DA5A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G30 .
+    
+    bdr:EVECA36F09CAB61B85
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G30 ;
+        :onYear             "1301"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVF0309E200EA51677
+        a                   :PersonBirth ;
+        :onYear             "1263"^^xsd:gYear .
+    
+    bdr:NM195E18EBAC165BA1
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshal gung thang khri rabs 10 shAky 'bum/"@bo-x-ewts .
+    
+    bdr:NMC2D4CEBC3C700EBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya 'bum/"@bo-x-ewts .
+    
+    bdr:NT5AF060600DDB69CC
+        a                   :Note ;
+        :locationStatement  "pp. 2289-2290" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "biography\n1263. tshal pa'i sprul sku shAkya 'bum 'khrungs"@en .
+    
+    bdr:NT6983E3CB0FBA7FF8
+        a                   :Note ;
+        :locationStatement  "p. 1720" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTBC211C99565CDA3B
+        a                   :Note ;
+        :noteText           "1301. Came to the see of Tshal Gung-thang"@en .
+    
+    bdr:P4244  a            :Person ;
+        skos:prefLabel      "shAkya 'bum/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5AF060600DDB69CC , bdr:NT6983E3CB0FBA7FF8 , bdr:NTBC211C99565CDA3B ;
+        :personEvent        bdr:EV34753E15CA0CD3C8 , bdr:EV6DC7F09E00E9DA5A , bdr:EVECA36F09CAB61B85 , bdr:EVF0309E200EA51677 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM195E18EBAC165BA1 , bdr:NMC2D4CEBC3C700EBD .
+}

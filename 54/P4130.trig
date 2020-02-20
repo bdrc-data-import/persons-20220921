@@ -1,0 +1,84 @@
+@base          <bdg:P4130> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4130 {
+    bda:LG57D3E7A8D7770576
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-22T16:17:41.305Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE8031046651B97CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:19:55.507Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title to office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4130  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4130 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "54/P4130.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4130 ;
+        adm:logEntry        bda:LG57D3E7A8D7770576 , bda:LGE8031046651B97CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0761EEEE70AEAFB1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV2A472A4497AC535D
+        a                   :PersonDeath ;
+        :onYear             "1763"^^xsd:gYear .
+    
+    bdr:EVAD7FCB496C4417A9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVCF10393A5C396C01
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3155 ;
+        :onYear             "1697"^^xsd:gYear .
+    
+    bdr:NM4A33234071553C25
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 10"@bo-x-ewts .
+    
+    bdr:NMA273E1BA498DA0DC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rab brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME3CFBC73A6D6F2F3
+        a                   :PersonTitle ;
+        rdfs:label          "hor rab brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT02E23C23C9BF2485
+        a                   :Note ;
+        :locationStatement  "p. 1839" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT0A0EF17A6A19FC00
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4130  a            :Person ;
+        skos:prefLabel      "rab brtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT02E23C23C9BF2485 , bdr:NT0A0EF17A6A19FC00 ;
+        :personEvent        bdr:EV0761EEEE70AEAFB1 , bdr:EV2A472A4497AC535D , bdr:EVAD7FCB496C4417A9 , bdr:EVCF10393A5C396C01 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4A33234071553C25 , bdr:NMA273E1BA498DA0DC , bdr:NME3CFBC73A6D6F2F3 .
+}

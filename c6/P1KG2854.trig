@@ -1,0 +1,61 @@
+@base          <bdg:P1KG2854> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG2854 {
+    bda:LGA9F3DDE99833958A
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-17T14:36:58.627Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG2854  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG2854 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c6/P1KG2854.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG2854 ;
+        adm:logEntry        bda:LGA9F3DDE99833958A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV55700C70AE03497E
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM60E38A41BCBEC8EA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros kun spangs/"@bo-x-ewts .
+    
+    bdr:NMD7BBFAD7195F9CA4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "slob dpon kun spangs/"@bo-x-ewts .
+    
+    bdr:NT2B0917D4903CCB6C
+        a                   :Note ;
+        :noteText           "existed other name slob dpon kun spangs in W1KG2855"@en .
+    
+    bdr:NT782C86C3EF488FEB
+        a                   :Note ;
+        :noteSource         bdr:MW1KG2852 ;
+        :noteText           "cowriter of"@en .
+    
+    bdr:P1KG2854  a         :Person ;
+        skos:prefLabel      "blo gros kun spangs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B0917D4903CCB6C , bdr:NT782C86C3EF488FEB ;
+        :personEvent        bdr:EV55700C70AE03497E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM60E38A41BCBEC8EA , bdr:NMD7BBFAD7195F9CA4 .
+}

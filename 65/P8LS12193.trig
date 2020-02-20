@@ -1,0 +1,73 @@
+@base          <bdg:P8LS12193> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12193 {
+    bda:LGFA0ABD303EA0585E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-03T09:04:21.623Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12193  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12193 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "65/P8LS12193.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12193 ;
+        adm:logEntry        bda:LGFA0ABD303EA0585E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A37065868573790
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVBF86289A79A3CEC0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM220C248D5BE4568A
+        a                   :PersonTitle ;
+        rdfs:label          "zil gnon mkhan chen/"@bo-x-ewts .
+    
+    bdr:NM63ADF9E84776DF97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gsang sngags bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM9A5409A29D002F25
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen gsang sngags bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMC8E200BFD41AEA54
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling mkhan chen 04"@bo-x-ewts .
+    
+    bdr:NT558967510D80D9AD
+        a                   :Note ;
+        :locationStatement  "p. 170" ;
+        :noteSource         bdr:MW1CZ2290 .
+    
+    bdr:NT9FA7A0F6B0A4C47D
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:P8LS12193  a        :Person ;
+        skos:prefLabel      "gsang sngags bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT558967510D80D9AD , bdr:NT9FA7A0F6B0A4C47D ;
+        :personEvent        bdr:EV8A37065868573790 , bdr:EVBF86289A79A3CEC0 ;
+        :personName         bdr:NM220C248D5BE4568A , bdr:NM63ADF9E84776DF97 , bdr:NM9A5409A29D002F25 , bdr:NMC8E200BFD41AEA54 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P1076> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1076 {
+    bda:P1076  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1076 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2d/P1076.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1076 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B660DA066EFFFDA
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMCECAEB762639C3BE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snang gsal ngag dbang ye shes grub pa/"@bo-x-ewts .
+    
+    bdr:NMD437A23499627DFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang ye shes grub pa/"@bo-x-ewts .
+    
+    bdr:NT7DA515106D79293C
+        a                   :Note ;
+        :noteText           "rnying ma master; he was the teacher of zur ston chos dbyings rang grol"@en .
+    
+    bdr:P1076  a            :Person ;
+        skos:prefLabel      "ngag dbang ye shes grub pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7DA515106D79293C ;
+        :personEvent        bdr:EV4B660DA066EFFFDA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCECAEB762639C3BE , bdr:NMD437A23499627DFD ;
+        :personTeacherOf    bdr:P650 .
+}

@@ -1,0 +1,91 @@
+@base          <bdg:P1889> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1889 {
+    bda:LG2F490BD0E2415AAE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-17T12:13:24.984Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1889  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1889 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "07/P1889.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1889 ;
+        adm:logEntry        bda:LG2F490BD0E2415AAE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AF3F3AD21450C2A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV541CB05455AF7750
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVADA2636BB7EA1226
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1023 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE969FC3876151F26
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2033C6EE17E9243F
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 36 ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NM586F9DF4297CE524
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdo ba ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NMCCE614A361063819
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NMD2A7575D1BF72B66
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 36"@bo-x-ewts .
+    
+    bdr:NT35DCA86398AF9DDD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT7A35D5700C10602B
+        a                   :Note ;
+        :locationStatement  "p. 875" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTFBEA5EDB7BCB4A53
+        a                   :Note ;
+        :locationStatement  "p. 164-165" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "passed away at the age of 77 and his later incarnation is known as mdo ba be si tshang"@en .
+    
+    bdr:P1889  a            :Person ;
+        skos:prefLabel      "ngag dbang don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT35DCA86398AF9DDD , bdr:NT7A35D5700C10602B , bdr:NTFBEA5EDB7BCB4A53 ;
+        :personEvent        bdr:EV0AF3F3AD21450C2A , bdr:EV541CB05455AF7750 , bdr:EVADA2636BB7EA1226 , bdr:EVE969FC3876151F26 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2033C6EE17E9243F , bdr:NM586F9DF4297CE524 , bdr:NMCCE614A361063819 , bdr:NMD2A7575D1BF72B66 ;
+        :personStudentOf    bdr:P350 , bdr:P412 ;
+        :personTeacherOf    bdr:P310 , bdr:P4082 .
+}

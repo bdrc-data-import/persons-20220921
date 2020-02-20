@@ -1,0 +1,53 @@
+@base          <bdg:P3JM11> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JM11 {
+    bda:LG04F2A5D9CC029DC6
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-16T11:26:56.856Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student and reincarnation relations"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA178053CE60A9CDA
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-30T17:21:49.607Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P3JM11  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JM11 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ef/P3JM11.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JM11 ;
+        adm:logEntry        bda:LG04F2A5D9CC029DC6 , bda:LGA178053CE60A9CDA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68E54FCE6E2062BA
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM2A2C4DC7CC85195C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgar ba'i mkhan po 'jigs 'od/"@bo-x-ewts .
+    
+    bdr:P3JM11  a           :Person ;
+        skos:prefLabel      "mgar ba'i mkhan po 'jigs 'od/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV68E54FCE6E2062BA ;
+        :personName         bdr:NM2A2C4DC7CC85195C ;
+        :personStudentOf    bdr:P248 , bdr:P3JM9 .
+}

@@ -1,0 +1,53 @@
+@base          <bdg:P3831> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3831 {
+    bda:P3831  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3831 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "4b/P3831.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3831 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7A821C3C6C52B905
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM764FDCCA4AFB4804
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shangs pa grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NM96C461A5EE54F2BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NTEFB8DD2CAC0AE303
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 34r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in a prajnaparamita transmission lineage"@en .
+    
+    bdr:P3831  a            :Person ;
+        skos:prefLabel      "grags pa seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEFB8DD2CAC0AE303 ;
+        :personEvent        bdr:EV7A821C3C6C52B905 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM764FDCCA4AFB4804 , bdr:NM96C461A5EE54F2BE ;
+        :personStudentOf    bdr:P3830 , bdr:P3838 , bdr:P5298 ;
+        :personTeacherOf    bdr:P0RK955 , bdr:P3832 , bdr:P3839 .
+}

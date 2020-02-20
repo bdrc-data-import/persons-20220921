@@ -1,0 +1,70 @@
+@base          <bdg:P3942> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3942 {
+    bda:LG017E6DCB128D82C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-15T15:13:27.778Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3942  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3942 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "97/P3942.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3942 ;
+        adm:logEntry        bda:LG017E6DCB128D82C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5ABB4D771A7F252D
+        a                   :PersonBirth ;
+        :onYear             "1889"^^xsd:gYear .
+    
+    bdr:EVB8E99E8B6F6EFD4A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EVD090732256DB23DD
+        a                   :PersonDeath ;
+        :onYear             "1937"^^xsd:gYear .
+    
+    bdr:NM2ACC8145D8D20C19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 18 blo bzang bstan 'dzin rnam rgyal 'phrin las rdo rje/"@bo-x-ewts .
+    
+    bdr:NM46B4A0AAFC02323F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin rnam rgyal 'phrin las rdo rje/"@bo-x-ewts .
+    
+    bdr:NT2E5F9AE9C26C75FE
+        a                   :Note ;
+        :noteText           "On throne: 1902-1937"@en .
+    
+    bdr:NT351EC2E460733BCB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3942  a            :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin rnam rgyal 'phrin las rdo rje/"@bo-x-ewts ;
+        :hasFather          bdr:P3943 ;
+        :hasSon             bdr:P3941 ;
+        :isRoot             true ;
+        :note               bdr:NT2E5F9AE9C26C75FE , bdr:NT351EC2E460733BCB ;
+        :personEvent        bdr:EV5ABB4D771A7F252D , bdr:EVB8E99E8B6F6EFD4A , bdr:EVD090732256DB23DD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2ACC8145D8D20C19 , bdr:NM46B4A0AAFC02323F ;
+        adm:seeOtherToL     "httpss://www.treasuryoflives.org/biographies/view/Lobzang-Tendzin-Namgyel-Trinle-Dorje/6332"^^xsd:anyURI .
+}

@@ -1,0 +1,69 @@
+@base          <bdg:P6301> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6301 {
+    bda:LG163FDA4FDAA23AD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-04T14:50:11.795Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG364F451C5705AEB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-04T15:25:44.678Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher's name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG512A31BEDCC03716
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-04T14:34:57.164Z"^^xsd:dateTime ;
+        adm:logMessage      "added 1964"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6301  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6301 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0a/P6301.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6301 ;
+        adm:logEntry        bda:LG163FDA4FDAA23AD6 , bda:LG364F451C5705AEB1 , bda:LG512A31BEDCC03716 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA49C3B65F48B6D93
+        a                   :PersonBirth ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NM981EDADDC9E5E20A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NMAF941E655DE85D9A
+        a                   :PersonPersonalName ;
+        rdfs:label          "thub bstan 'phrin las bzang po/"@bo-x-ewts .
+    
+    bdr:NTDB905D9F6C4F829F
+        a                   :Note ;
+        :locationStatement  "biography pp. 1-3" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "biography source from"@en .
+    
+    bdr:P6301  a            :Person ;
+        skos:prefLabel      "o rgyan brtson 'grus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDB905D9F6C4F829F ;
+        :personEvent        bdr:EVA49C3B65F48B6D93 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM981EDADDC9E5E20A , bdr:NMAF941E655DE85D9A ;
+        :personStudentOf    bdr:P6334 , bdr:P6335 , bdr:P6342 , bdr:P6388 , bdr:P7774 , bdr:P8288 , bdr:P9519 .
+}

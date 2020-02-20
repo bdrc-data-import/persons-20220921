@@ -1,0 +1,50 @@
+@base          <bdg:P8LS13688> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13688 {
+    bda:LGA7AE10F3D54A1D90
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-08T10:10:12.274Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13688  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13688 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ef/P8LS13688.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13688 ;
+        adm:logEntry        bda:LGA7AE10F3D54A1D90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0CB0BCF227DBE2AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'od 'gro ba/"@bo-x-ewts .
+    
+    bdr:NMB06D473AD289A38A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnas brtan 'od 'gro ba/"@bo-x-ewts .
+    
+    bdr:NTA842BF0F2FEBE1CC
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 76" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13688  a        :Person ;
+        skos:prefLabel      "'od 'gro ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA842BF0F2FEBE1CC ;
+        :personName         bdr:NM0CB0BCF227DBE2AF , bdr:NMB06D473AD289A38A .
+}

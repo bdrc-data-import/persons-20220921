@@ -1,0 +1,50 @@
+@base          <bdg:P6288> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6288 {
+    bda:P6288  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6288 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "25/P6288.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6288 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06CA4EE2D6AA1A75
+        a                   :PersonBirth ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NM490D68F302DA44E8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub tshe ring /"@bo-x-ewts .
+    
+    bdr:NM87E4519753C70033
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sum pa don grub tshe ring /"@bo-x-ewts .
+    
+    bdr:NTD1E653E6A086DEEF
+        a                   :Note ;
+        :locationStatement  "french flap of cover" ;
+        :noteSource         bdr:MW25052 ;
+        :noteText           "brief biography\nb. in mdo smad khri ka sum pa sde ba"@en .
+    
+    bdr:P6288  a            :Person ;
+        skos:prefLabel      "don grub tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD1E653E6A086DEEF ;
+        :personEvent        bdr:EV06CA4EE2D6AA1A75 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM490D68F302DA44E8 , bdr:NM87E4519753C70033 .
+}

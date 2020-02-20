@@ -1,0 +1,74 @@
+@base          <bdg:P1KG22025> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG22025 {
+    bda:LG37393F235ABFFC9C
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-04T16:51:39.172Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG5739DBC52340490B
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-05T12:13:45.328Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG6900639F914CC212
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-06T11:28:45.222Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG22025  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG22025 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3a/P1KG22025.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG22025 ;
+        adm:logEntry        bda:LG37393F235ABFFC9C , bda:LG5739DBC52340490B , bda:LG6900639F914CC212 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCA41B4E4017F7048
+        a                   :PersonBirth ;
+        :onYear             "1937"^^xsd:gYear .
+    
+    bdr:NM18F5DA371D4E16C6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NM76878C0C02E2968E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung 'tsho shes rab 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NMA33A1C17A46BF030
+        a                   :PersonTitle ;
+        rdfs:label          "sman pa shes rab 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NMB7B572087775E8A7
+        a                   :PersonTitle ;
+        rdfs:label          "lho brag em chi shes rab 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NT1E9E1CF83A60C057
+        a                   :Note ;
+        :noteSource         bdr:MW1KG21998 .
+    
+    bdr:P1KG22025  a        :Person ;
+        skos:prefLabel      "shes rab 'byor ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E9E1CF83A60C057 ;
+        :personEvent        bdr:EVCA41B4E4017F7048 ;
+        :personName         bdr:NM18F5DA371D4E16C6 , bdr:NM76878C0C02E2968E , bdr:NMA33A1C17A46BF030 , bdr:NMB7B572087775E8A7 .
+}

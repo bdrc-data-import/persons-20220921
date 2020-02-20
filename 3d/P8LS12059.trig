@@ -1,0 +1,74 @@
+@base          <bdg:P8LS12059> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12059 {
+    bda:LGC926F97FDD09FA1F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T14:16:17.299Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFCCA118E995F6521
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-13T10:33:42.622Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12059  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12059 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3d/P8LS12059.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12059 ;
+        adm:logEntry        bda:LGC926F97FDD09FA1F , bda:LGFCCA118E995F6521 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1E182E2CF76F0F7F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G108 .
+    
+    bdr:EV76257D516B439424
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1300 .
+    
+    bdr:EVC4065C188E4F3523
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G108 .
+    
+    bdr:NM12C3B72D20DF1AF1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM55E7BBA4F122771E
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs khri pa/"@bo-x-ewts .
+    
+    bdr:NM9D91B40EBA696833
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs tshogs chen gyi khri pa 09"@bo-x-ewts .
+    
+    bdr:NT358877E216AB80E1
+        a                   :Note ;
+        :locationStatement  "p. 146" ;
+        :noteSource         bdr:MW2CZ8087 ;
+        :noteText           "He was born in the lower part of gstang area"@en .
+    
+    bdr:P8LS12059  a        :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT358877E216AB80E1 ;
+        :personEvent        bdr:EV1E182E2CF76F0F7F , bdr:EV76257D516B439424 , bdr:EVC4065C188E4F3523 ;
+        :personName         bdr:NM12C3B72D20DF1AF1 , bdr:NM55E7BBA4F122771E , bdr:NM9D91B40EBA696833 .
+}

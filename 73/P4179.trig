@@ -1,0 +1,95 @@
+@base          <bdg:P4179> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4179 {
+    bda:LG0024407946A07CF9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:59:30.022Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG130EE2EF3622C92B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T17:00:24.362Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD0ED1613985F62B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-03T18:19:17.403Z"^^xsd:dateTime ;
+        adm:logMessage      "seeAlso rid changed from G1293 to G1202"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4179  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4179 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "73/P4179.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4179 ;
+        adm:logEntry        bda:LG0024407946A07CF9 , bda:LG130EE2EF3622C92B , bda:LGD0ED1613985F62B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07FDD25439AF13E6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1202 ;
+        :onYear             "1785"^^xsd:gYear .
+    
+    bdr:EV79CB13AE36382940
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVC06FB0D336BC2092
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1716 ;
+        :onYear             "1841"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCDBDBD615F30E59B
+        a                   :PersonDeath ;
+        :onYear             "1845"^^xsd:gYear .
+    
+    bdr:NM33456FC8FD72774B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bsod nams/"@bo-x-ewts .
+    
+    bdr:NM334F25A0669C337C
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang sman pa khri 15 dkon mchog bsod nams/"@bo-x-ewts .
+    
+    bdr:NMCA745CDDCC4537ED
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang sman pa khri 15"@bo-x-ewts .
+    
+    bdr:NMCFE0ECCE9BB91731
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "se chang dkon mchog bsod nams/"@bo-x-ewts .
+    
+    bdr:NTE1B8E39B04D1E099
+        a                   :Note ;
+        :locationStatement  "p. 1770" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTE55076CA24F3CFCB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4179  a            :Person ;
+        skos:prefLabel      "dkon mchog bsod nams/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE1B8E39B04D1E099 , bdr:NTE55076CA24F3CFCB ;
+        :personEvent        bdr:EV07FDD25439AF13E6 , bdr:EV79CB13AE36382940 , bdr:EVC06FB0D336BC2092 , bdr:EVCDBDBD615F30E59B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM33456FC8FD72774B , bdr:NM334F25A0669C337C , bdr:NMCA745CDDCC4537ED , bdr:NMCFE0ECCE9BB91731 .
+}

@@ -1,0 +1,68 @@
+@base          <bdg:P3448> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3448 {
+    bda:P3448  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3448 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5d/P3448.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3448 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C287236DFAF3304
+        a                   :PersonBirth ;
+        :onYear             "1121"^^xsd:gYear .
+    
+    bdr:EV1DB0D4E1DED468BE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G228 .
+    
+    bdr:EV894DB72697105D17
+        a                   :PersonDeath ;
+        :onYear             "1189"^^xsd:gYear .
+    
+    bdr:NM30F7C056FDDE4AF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spyil bu pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD5D8667495BCCD00
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDC85D14D719078A4
+        a                   :PersonTitle ;
+        rdfs:label          "se spyil bu pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT7CDC0F800AFAFCE2
+        a                   :Note ;
+        :locationStatement  "p. 1773" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NT9479D37CDFC2EDCC
+        a                   :Note ;
+        :noteText           "important bka' gdams master"@en .
+    
+    bdr:P3448  a            :Person ;
+        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7CDC0F800AFAFCE2 , bdr:NT9479D37CDFC2EDCC ;
+        :personEvent        bdr:EV0C287236DFAF3304 , bdr:EV1DB0D4E1DED468BE , bdr:EV894DB72697105D17 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM30F7C056FDDE4AF3 , bdr:NMD5D8667495BCCD00 , bdr:NMDC85D14D719078A4 ;
+        :personStudentOf    bdr:P3447 ;
+        :personTeacherOf    bdr:P3449 , bdr:P3491 , bdr:P3988 .
+}

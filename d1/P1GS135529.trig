@@ -1,0 +1,73 @@
+@base          <bdg:P1GS135529> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1GS135529 {
+    bda:LG1C7CDA7F444A2559
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-07T10:58:38.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added death date and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC46AE4622D743125
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-21T11:13:02.796Z"^^xsd:dateTime ;
+        adm:logMessage      "date of birth added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGC8DFE75A3323AE28
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-21T10:10:11.986Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1GS135529  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1GS135529 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d1/P1GS135529.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1GS135529 ;
+        adm:logEntry        bda:LG1C7CDA7F444A2559 , bda:LGC46AE4622D743125 , bda:LGC8DFE75A3323AE28 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DA4ABF8F7CA90D3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G186 .
+    
+    bdr:EV6F88B18DDCCAEE83
+        a                   :PersonDeath .
+    
+    bdr:EV9BC1AA7063E609A8
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:EVED68EE8866E96FE8
+        a                   :PersonDeath ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:NM13B737E274E82DE6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'khrul zhig kun bzang mthong grol rdo rje/"@bo-x-ewts .
+    
+    bdr:NM29C3FB89D1A6355B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang mthong grol rdo rje/"@bo-x-ewts .
+    
+    bdr:P1GS135529  a       :Person ;
+        skos:prefLabel      "kun bzang mthong grol rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0DA4ABF8F7CA90D3 , bdr:EV6F88B18DDCCAEE83 , bdr:EV9BC1AA7063E609A8 , bdr:EVED68EE8866E96FE8 ;
+        :personName         bdr:NM13B737E274E82DE6 , bdr:NM29C3FB89D1A6355B ;
+        :personTeacherOf    bdr:P708 .
+}

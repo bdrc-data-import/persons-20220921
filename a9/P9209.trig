@@ -1,0 +1,50 @@
+@base          <bdg:P9209> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9209 {
+    bda:P9209  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9209 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a9/P9209.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9209 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E852DE4090CAD7F
+        a                   :PersonBirth ;
+        :onYear             "1904"^^xsd:gYear .
+    
+    bdr:EVED4044B75548FB91
+        a                   :PersonDeath ;
+        :onYear             "1998"^^xsd:gYear .
+    
+    bdr:NMD0FFE8A8265AF5B9
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang chos 'phel/"@bo-x-ewts .
+    
+    bdr:NTF681FCEF31604BAA
+        a                   :Note ;
+        :noteSource         bdr:MW28737 ;
+        :noteText           "biography\n\na teacher of the sa skya tradition from eastern tibet"@en .
+    
+    bdr:P9209  a            :Person ;
+        skos:prefLabel      "ngag dbang chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF681FCEF31604BAA ;
+        :personEvent        bdr:EV2E852DE4090CAD7F , bdr:EVED4044B75548FB91 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD0FFE8A8265AF5B9 ;
+        :personTeacherOf    bdr:P8121 .
+}

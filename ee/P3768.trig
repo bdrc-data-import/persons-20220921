@@ -1,0 +1,65 @@
+@base          <bdg:P3768> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3768 {
+    bda:P3768  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3768 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ee/P3768.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3768 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA58EB69F946FA2A0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G104 ;
+        :onYear             "1569"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVAFD2263504B293AD
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVB7AB16E784DD6D27
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G457 .
+    
+    bdr:NM7159DCDE9F437944
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnas rnying pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC61594B4BD2204DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT427F3EFE6F31926E
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1569. gnas rnying pa chos kyi rgyal mtshan bkra shis lhun po'i khrir phebs"@en .
+    
+    bdr:NTE9A66483ADE102E9
+        a                   :Note ;
+        :noteText           "1569. Ascended the abbatial throne of Bkra-shis-lhun-po"@en .
+    
+    bdr:P3768  a            :Person ;
+        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT427F3EFE6F31926E , bdr:NTE9A66483ADE102E9 ;
+        :personEvent        bdr:EVA58EB69F946FA2A0 , bdr:EVAFD2263504B293AD , bdr:EVB7AB16E784DD6D27 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7159DCDE9F437944 , bdr:NMC61594B4BD2204DE .
+}

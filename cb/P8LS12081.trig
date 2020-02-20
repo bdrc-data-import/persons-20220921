@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12081> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12081 {
+    bda:LG6A0D65FB85C7EC8A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-02T09:23:55.348Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12081  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12081 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "cb/P8LS12081.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12081 ;
+        adm:logEntry        bda:LG6A0D65FB85C7EC8A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A4E47D16B881AB3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1828"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM17032D40BB8DD0E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bkra shis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM2EB443540BEC1BE2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri/"@bo-x-ewts .
+    
+    bdr:NMA86825EE1174D729
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gro tshang rgyud pa skal bzang bkra shis rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB672F12E8391D819
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum khri chen 50"@bo-x-ewts .
+    
+    bdr:NTD3A9C90CBF98953C
+        a                   :Note ;
+        :locationStatement  "p. 79" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12081  a        :Person ;
+        skos:prefLabel      "skal bzang bkra shis rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD3A9C90CBF98953C ;
+        :personEvent        bdr:EV2A4E47D16B881AB3 ;
+        :personName         bdr:NM17032D40BB8DD0E9 , bdr:NM2EB443540BEC1BE2 , bdr:NMA86825EE1174D729 , bdr:NMB672F12E8391D819 .
+}

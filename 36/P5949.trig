@@ -1,0 +1,74 @@
+@base          <bdg:P5949> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5949 {
+    bda:LG2122770EEC3ACDBB
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-14T10:47:26.679Z"^^xsd:dateTime ;
+        adm:logMessage      "added date and correction"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF4D94228056C3F79
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-01-04T10:58:37.659Z"^^xsd:dateTime ;
+        adm:logMessage      "added date"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5949  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5949 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "36/P5949.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5949 ;
+        adm:logEntry        bda:LG2122770EEC3ACDBB , bda:LGF4D94228056C3F79 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7B0133228D78DCF9
+        a                   :PersonDeath ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:EV8F1BA32865D07680
+        a                   :PersonBirth ;
+        :onYear             "1927"^^xsd:gYear .
+    
+    bdr:EV9FB298FCFC5098AA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G515 .
+    
+    bdr:NM5AC9FE6D588CA20B
+        a                   :PersonPersonalName ;
+        rdfs:label          "a pad, mkhan po/"@bo-x-ewts .
+    
+    bdr:NM7BEC91F495E4399A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan bzang po/"@bo-x-ewts .
+    
+    bdr:NMF8B20B7F1501A815
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po a pad/"@bo-x-ewts .
+    
+    bdr:NT00B70D92B04D76AB
+        a                   :Note ;
+        :noteText           "prominent sa skya teacher from the ku se gser ljongs lineage"@en .
+    
+    bdr:P5949  a            :Person ;
+        skos:prefLabel      "yon tan bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00B70D92B04D76AB ;
+        :personEvent        bdr:EV7B0133228D78DCF9 , bdr:EV8F1BA32865D07680 , bdr:EV9FB298FCFC5098AA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5AC9FE6D588CA20B , bdr:NM7BEC91F495E4399A , bdr:NMF8B20B7F1501A815 ;
+        :personStudentOf    bdr:P967 .
+}

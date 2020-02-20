@@ -1,0 +1,57 @@
+@base          <bdg:P1KG15445> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15445 {
+    bda:LG0A62AFE981A2CE65
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-08T10:42:49.671Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15445  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15445 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "78/P1KG15445.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15445 ;
+        adm:logEntry        bda:LG0A62AFE981A2CE65 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV85492C4843CB63E2
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1890"^^xsd:gYear .
+    
+    bdr:EVD9F291EC44EA0722
+        a                   :PersonDeath ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM85AC72AE1FDC9357
+        a                   :PersonPersonalName ;
+        rdfs:label          "m. lalou"@en .
+    
+    bdr:NMBDBB562154A3FE73
+        a                   :PersonPersonalName ;
+        rdfs:label          "marcelle lalou"@en .
+    
+    bdr:NME85AF7803E496500
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lalou, marcelle"@en .
+    
+    bdr:P1KG15445  a        :Person ;
+        skos:prefLabel      "lalou, marcelle"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV85492C4843CB63E2 , bdr:EVD9F291EC44EA0722 ;
+        :personName         bdr:NM85AC72AE1FDC9357 , bdr:NMBDBB562154A3FE73 , bdr:NME85AF7803E496500 .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P8092> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8092 {
+    bda:LGDAE24473BA7D259C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-12-17T14:30:22.206Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P8092  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8092 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b8/P8092.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8092 ;
+        adm:logEntry        bda:LGDAE24473BA7D259C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4942FDBE141B427C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3778 ;
+        :onYear             "1918"^^xsd:gYear .
+    
+    bdr:NM3F4A6652A8A1D0E6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smad sog ba dz+ra/"@bo-x-ewts .
+    
+    bdr:NM74AC49D16C6C4EC7
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NMC6DE93AABAD2114F
+        a                   :PersonGrammatical ;
+        rdfs:label          "tshangs sras bzhad pa'i blo gros/"@bo-x-ewts .
+    
+    bdr:NT3D07B8AB25C15DAF
+        a                   :Note ;
+        :locationStatement  "v, 1, pp. 1-8 (2d group)" ;
+        :noteSource         bdr:MW25151 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8092  a            :Person ;
+        skos:prefLabel      "blo bzang sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3D07B8AB25C15DAF ;
+        :personEvent        bdr:EV4942FDBE141B427C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3F4A6652A8A1D0E6 , bdr:NM74AC49D16C6C4EC7 , bdr:NMC6DE93AABAD2114F ;
+        :personTeacherOf    bdr:P1PD96266 .
+}

@@ -1,0 +1,89 @@
+@base          <bdg:P7724> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7724 {
+    bda:LGA63D2695FE9F2B9B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:30:28.769Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE92C6B85FF985819
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T12:57:50.81Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFC801626C9C3F406
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-27T10:03:38.913Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P7724  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7724 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a4/P7724.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7724 ;
+        adm:logEntry        bda:LGA63D2695FE9F2B9B , bda:LGE92C6B85FF985819 , bda:LGFC801626C9C3F406 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV173122F3B081DA58
+        a                   :PersonBirth ;
+        :onYear             "1472"^^xsd:gYear .
+    
+    bdr:EV6C4D7C961C504D22
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV92F3DF326928DE17
+        a                   :PersonDeath ;
+        :onYear             "1520"^^xsd:gYear .
+    
+    bdr:EVB26623F001A1AF68
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:NM3F525F571E263623
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams ye shes dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM81D3272AA76D7AC3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje bsod nams ye shes dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM8565D72504F46E1A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 14"@bo-x-ewts .
+    
+    bdr:NT11384D286D1EEB24
+        a                   :Note ;
+        :noteText           "b. 1472; d, 1520; on see 19 years.\nstyled stag lung khri 16 and chos rje bsod nams ye shes dpal bzang (gcung po)"@en .
+    
+    bdr:NTF4158372C012FB36
+        a                   :Note ;
+        :locationStatement  "p. 487-499" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:P7724  a            :Person ;
+        skos:prefLabel      "bsod nams ye shes dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT11384D286D1EEB24 , bdr:NTF4158372C012FB36 ;
+        :personEvent        bdr:EV173122F3B081DA58 , bdr:EV6C4D7C961C504D22 , bdr:EV92F3DF326928DE17 , bdr:EVB26623F001A1AF68 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3F525F571E263623 , bdr:NM81D3272AA76D7AC3 , bdr:NM8565D72504F46E1A .
+}

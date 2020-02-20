@@ -1,0 +1,45 @@
+@base          <bdg:P532> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P532 {
+    bda:P532  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P532 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "05/P532.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P532 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8F6A5239C315E789
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM3272D6F1C47AB503
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bstan pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMD9B90F0D546B5387
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bshes gnyen bstan pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P532  a             :Person ;
+        skos:prefLabel      "bstan pa rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV8F6A5239C315E789 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3272D6F1C47AB503 , bdr:NMD9B90F0D546B5387 ;
+        :personTeacherOf    bdr:P530 .
+}

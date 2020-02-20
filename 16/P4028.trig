@@ -1,0 +1,72 @@
+@base          <bdg:P4028> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4028 {
+    bda:LG2388617877E2C5DD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T16:01:45.585Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG434B97BB47069ED3
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-14T09:20:03.81Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher Shakchok and names"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4028  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4028 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "16/P4028.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4028 ;
+        adm:logEntry        bda:LG2388617877E2C5DD , bda:LG434B97BB47069ED3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCE0948FD431B8F9B
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM25CD132753CDAB22
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' tshe 'phel/"@bo-x-ewts .
+    
+    bdr:NMCA9FB469107745D5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dmar ba kun dga' tshe 'phel/"@bo-x-ewts .
+    
+    bdr:NMD12D656CE5503E52
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'om phug brag dmar gyi btsun pa kun dga' tshe 'phel/"@bo-x-ewts .
+    
+    bdr:NT3AA7684C9BBD791B
+        a                   :Note ;
+        :noteText           "Teacher (not recorded): PaN-chen Chos-rje"@en .
+    
+    bdr:NT982270700EFB4F05
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P4028  a            :Person ;
+        skos:prefLabel      "kun dga' tshe 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3AA7684C9BBD791B , bdr:NT982270700EFB4F05 ;
+        :personEvent        bdr:EVCE0948FD431B8F9B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM25CD132753CDAB22 , bdr:NMCA9FB469107745D5 , bdr:NMD12D656CE5503E52 ;
+        :personStudentOf    bdr:P396 ;
+        :personTeacherOf    bdr:P0RK1572 , bdr:P4029 .
+}

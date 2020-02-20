@@ -1,0 +1,73 @@
+@base          <bdg:P8LS12335> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12335 {
+    bda:LG08AD0C7D2997E6A1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T11:33:21.244Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12335  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12335 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "cc/P8LS12335.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12335 ;
+        adm:logEntry        bda:LG08AD0C7D2997E6A1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B3A562986CF3820
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV3E2488908052AC2C
+        a                   :PersonBirth ;
+        :onYear             "1855"^^xsd:gYear .
+    
+    bdr:EV9A4A9568F569A181
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EVD9E9506F0846B9BD
+        a                   :PersonDeath ;
+        :onYear             "1903"^^xsd:gYear .
+    
+    bdr:NM54B4BACC7F8E4BE4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 19"@bo-x-ewts .
+    
+    bdr:NMB8347A168B9C8FD1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ra rgya sprul sku blo bzang bstan pa'i rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBADC5E823D98CDBC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa'i rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTD8A8E4C7186D8687
+        a                   :Note ;
+        :locationStatement  "p. 382-387" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "He served as khri of rgyud pa and sman pa grwa tshang, also served khri of dmu dge bkra shis 'khor lo and a mchog dga' ldan chos 'khor gling\nThe successive incarnate lama were byams pa 'od srung rgya mtsho, ra rgya 04 dkon mchog bstan pa rgya mtsho and ra rgya 05 'jam dbyangs bstan pa'i rgyal mtshan"@en .
+    
+    bdr:P8LS12335  a        :Person ;
+        skos:prefLabel      "blo bzang bstan pa'i rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD8A8E4C7186D8687 ;
+        :personEvent        bdr:EV3B3A562986CF3820 , bdr:EV3E2488908052AC2C , bdr:EV9A4A9568F569A181 , bdr:EVD9E9506F0846B9BD ;
+        :personName         bdr:NM54B4BACC7F8E4BE4 , bdr:NMB8347A168B9C8FD1 , bdr:NMBADC5E823D98CDBC .
+}

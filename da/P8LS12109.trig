@@ -1,0 +1,82 @@
+@base          <bdg:P8LS12109> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12109 {
+    bda:LG8BFB45C3E202317F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-17T08:57:10.891Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC9CBBC5B6AB42537
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T09:00:25.631Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12109  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12109 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "da/P8LS12109.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12109 ;
+        adm:logEntry        bda:LG8BFB45C3E202317F , bda:LGC9CBBC5B6AB42537 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8915CA2DBA8E0DCE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1872"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EVFED5A7589D0AC91F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM12516132BD6E7B4F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 60"@bo-x-ewts .
+    
+    bdr:NMBCC4EA01302F97D2
+        a                   :PersonTitle ;
+        rdfs:label          "gru kyA dge bshes byams pa bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NME1F72666950F25A9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 23"@bo-x-ewts .
+    
+    bdr:NME27E712CE9527178
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT2DBF732EC629C65B
+        a                   :Note ;
+        :locationStatement  "p. 356" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:NTB069DDCD431B9107
+        a                   :Note ;
+        :locationStatement  "p. 278" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "He was ma Ni bla ma, dbu mdzad of rgyud pa and later became the khri of rgyud pa"@en .
+    
+    bdr:P8LS12109  a        :Person ;
+        skos:prefLabel      "byams pa bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2DBF732EC629C65B , bdr:NTB069DDCD431B9107 ;
+        :personEvent        bdr:EV8915CA2DBA8E0DCE , bdr:EVFED5A7589D0AC91F ;
+        :personName         bdr:NM12516132BD6E7B4F , bdr:NMBCC4EA01302F97D2 , bdr:NME1F72666950F25A9 , bdr:NME27E712CE9527178 .
+}

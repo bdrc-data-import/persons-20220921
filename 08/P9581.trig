@@ -1,0 +1,54 @@
+@base          <bdg:P9581> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9581 {
+    bda:P9581  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9581 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "08/P9581.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9581 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B0489418ABC5340
+        a                   :PersonBirth ;
+        :onYear             "1707"^^xsd:gYear .
+    
+    bdr:EV85D0F351E5618CF3
+        a                   :PersonDeath ;
+        :onYear             "1733"^^xsd:gYear .
+    
+    bdr:NM2CBA9D57A8280985
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bras ljongs rgyal po 04 'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM9267CBC8914FF221
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTB8C891A9B26A886E
+        a                   :Note ;
+        :locationStatement  "p. 84" ;
+        :noteSource         bdr:MW29205 ;
+        :noteText           "born me phag (1707); died 1733"@en .
+    
+    bdr:P9581  a            :Person ;
+        skos:prefLabel      "'gyur med rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB8C891A9B26A886E ;
+        :personEvent        bdr:EV4B0489418ABC5340 , bdr:EV85D0F351E5618CF3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2CBA9D57A8280985 , bdr:NM9267CBC8914FF221 .
+}

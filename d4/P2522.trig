@@ -1,0 +1,82 @@
+@base          <bdg:P2522> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2522 {
+    bda:LG4EF93AACE9913670
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T11:22:39.208Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2522  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2522 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d4/P2522.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2522 ;
+        adm:logEntry        bda:LG4EF93AACE9913670 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4D1910CA32E56D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVA62511274FAF166D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1821"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVD306F68E21A1E095
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM59A4EB89620F2D9F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 48 ngag dbang blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NMCD7C6D31E55E4E61
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 48"@bo-x-ewts .
+    
+    bdr:NME9D47303B2A046FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NMF00998AA50C668BD
+        a                   :PersonTitle ;
+        rdfs:label          "khang gsar ngag dbang blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NT172A2C26FC6ED1DC
+        a                   :Note ;
+        :locationStatement  "p. 109-110" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NTEA6B7DBE1789098E
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography\nborn in the khang sar lineage as the nephew of ngag dbang chos skyong bzang po"@en .
+    
+    bdr:P2522  a            :Person ;
+        skos:prefLabel      "ngag dbang blo gros bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT172A2C26FC6ED1DC , bdr:NTEA6B7DBE1789098E ;
+        :personEvent        bdr:EVA4D1910CA32E56D7 , bdr:EVA62511274FAF166D , bdr:EVD306F68E21A1E095 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM59A4EB89620F2D9F , bdr:NMCD7C6D31E55E4E61 , bdr:NME9D47303B2A046FB , bdr:NMF00998AA50C668BD ;
+        :personTeacherOf    bdr:P1PD110760 .
+}

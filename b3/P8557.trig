@@ -1,0 +1,80 @@
+@base          <bdg:P8557> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8557 {
+    bda:LGD3BC9E64A1CD4098
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-01T14:25:54.569Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDFB2C1315AE59273
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-13T11:00:46.282Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8557  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8557 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b3/P8557.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8557 ;
+        adm:logEntry        bda:LGD3BC9E64A1CD4098 , bda:LGDFB2C1315AE59273 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV02E9C481E997E72D
+        a                   :PersonDeath ;
+        :onYear             "1932"^^xsd:gYear .
+    
+    bdr:EV4C6590AD94239DD1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:NM31097BCC1B1E534D
+        a                   :PersonTitle ;
+        rdfs:label          "gya kha dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8217F17515FD7216
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyangkhang 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMAC7DDB5E04CF37F6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gyang khang 03"@bo-x-ewts .
+    
+    bdr:NMAFB8C023F6C5B0D4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC1E62EC8EEBA063D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gyang khang dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTFF3B1FEF9B5523DA
+        a                   :Note ;
+        :locationStatement  "pp. 212-213" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8557  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6316 ;
+        :isRoot             true ;
+        :note               bdr:NTFF3B1FEF9B5523DA ;
+        :personEvent        bdr:EV02E9C481E997E72D , bdr:EV4C6590AD94239DD1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM31097BCC1B1E534D , bdr:NM8217F17515FD7216 , bdr:NMAC7DDB5E04CF37F6 , bdr:NMAFB8C023F6C5B0D4 , bdr:NMC1E62EC8EEBA063D ;
+        :personStudentOf    bdr:P7359 , bdr:P7698 .
+}

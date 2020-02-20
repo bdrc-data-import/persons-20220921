@@ -1,0 +1,51 @@
+@base          <bdg:P1599> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1599 {
+    bda:P1599  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1599 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "eb/P1599.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1599 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV460D8AC9479E55ED
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM949598286FD2179C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dngos grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMFC030DCA4DC412E1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thang sag pa dngos grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT783100425BC18DEF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1599  a            :Person ;
+        skos:prefLabel      "dngos grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT783100425BC18DEF ;
+        :personEvent        bdr:EV460D8AC9479E55ED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM949598286FD2179C , bdr:NMFC030DCA4DC412E1 ;
+        :personStudentOf    bdr:P2865 , bdr:P423 , bdr:P6144 ;
+        :personTeacherOf    bdr:P345 , bdr:P5314 .
+}

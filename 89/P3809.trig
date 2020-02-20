@@ -1,0 +1,59 @@
+@base          <bdg:P3809> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3809 {
+    bda:P3809  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3809 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "89/P3809.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3809 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8CE13579C6549533
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVA2B3EB2F71017597
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM799117F44F658EA8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chu dmar blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB36C0EE88994A453
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3A7A3DD2AC3A1D5A
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 513" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NTD208FD83BC3099F2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3809  a            :Person ;
+        skos:prefLabel      "blo bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3A7A3DD2AC3A1D5A , bdr:NTD208FD83BC3099F2 ;
+        :personEvent        bdr:EV8CE13579C6549533 , bdr:EVA2B3EB2F71017597 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM799117F44F658EA8 , bdr:NMB36C0EE88994A453 ;
+        :personTeacherOf    bdr:P3808 .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P6807> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6807 {
+    bda:LG8DDD8CD2978F9B60
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGB731BF3EB1F9D28E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T16:54:17.657Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEBB5AE69F6DC5AD7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T16:47:28.812Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6807  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6807 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ee/P6807.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6807 ;
+        adm:logEntry        bda:LG8DDD8CD2978F9B60 , bda:LGB731BF3EB1F9D28E , bda:LGEBB5AE69F6DC5AD7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D0792E5AEC4E440
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2525 .
+    
+    bdr:EV35821F5F8A820589
+        a                   :PersonDeath ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:EV6570E6543E417449
+        a                   :PersonBirth ;
+        :onYear             "1868"^^xsd:gYear .
+    
+    bdr:NM1F7BD066710A8EE6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dawon 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM5101E8BB0E210DA7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dbu se ba/"@bo-x-ewts .
+    
+    bdr:NM61A03423ACDE9808
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tA dbon 04"@bo-x-ewts .
+    
+    bdr:NM9A2A354C35C7FB46
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tA dbon 04 dbu se ba/"@bo-x-ewts .
+    
+    bdr:NTD1B399EA65335681
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 18" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "bio"@en .
+    
+    bdr:P6807  a            :Person ;
+        skos:prefLabel      "dbu se ba/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6806 ;
+        :isRoot             true ;
+        :note               bdr:NTD1B399EA65335681 ;
+        :personEvent        bdr:EV2D0792E5AEC4E440 , bdr:EV35821F5F8A820589 , bdr:EV6570E6543E417449 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1F7BD066710A8EE6 , bdr:NM5101E8BB0E210DA7 , bdr:NM61A03423ACDE9808 , bdr:NM9A2A354C35C7FB46 .
+}

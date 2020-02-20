@@ -1,0 +1,57 @@
+@base          <bdg:P6970> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6970 {
+    bda:P6970  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6970 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "7e/P6970.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6970 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV251364278918CB11
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3004 ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:NM409D1EEC4C3BF890
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nywa nag pa ba res/"@bo-x-ewts .
+    
+    bdr:NMF6D049B4DBFA9434
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ba res/"@bo-x-ewts .
+    
+    bdr:NTBA318CC408FD19FA
+        a                   :Note ;
+        :locationStatement  "p. 97" ;
+        :noteSource         bdr:MW30454 ;
+        :noteText           "contemporary tibetan poet"@en .
+    
+    bdr:NTDA752F55581DF723
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW20852 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6970  a            :Person ;
+        skos:prefLabel      "ba res/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBA318CC408FD19FA , bdr:NTDA752F55581DF723 ;
+        :personEvent        bdr:EV251364278918CB11 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM409D1EEC4C3BF890 , bdr:NMF6D049B4DBFA9434 .
+}

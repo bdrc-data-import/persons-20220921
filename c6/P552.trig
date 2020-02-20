@@ -1,0 +1,101 @@
+@base          <bdg:P552> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P552 {
+    bda:LG05855D60635AC057
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T12:57:52.249Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG7631C0FB4338EFEF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T12:49:44.245Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P552  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P552 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "c6/P552.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P552 ;
+        adm:logEntry        bda:LG05855D60635AC057 , bda:LG7631C0FB4338EFEF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV32DEAD8355B94811
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV4B54292C4FD478BD
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G749 ;
+        :onYear             "1743"^^xsd:gYear .
+    
+    bdr:EV79CB4DEDDAE109EE
+        a                   :PersonDeath ;
+        :onYear             "1803"^^xsd:gYear .
+    
+    bdr:EVAD72F176CFB9CE0A
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1803"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVC4F7C7ADD10A88CF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1797"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM8F9C1E32AE853151
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM9BD957CFBB92AFA9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 18 'jam dbyangs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA122E6332F06C444
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 18"@bo-x-ewts .
+    
+    bdr:NT161437B8D122D10D
+        a                   :Note ;
+        :locationStatement  "p. 153" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NT451474A04C2C3DFC
+        a                   :Note ;
+        :noteText           "according to imaeda, p. 216 death 1802\nleaves office 1802"@en .
+    
+    bdr:NT709E6FA184B34265
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTCC2E7A6C7030F5E4
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1797-1803.\nServed first as Dkyil-'khor Slob-dpon, then as Rdo-rje Slob-dpon.\n1797. 2nd Great Fire of Punakha.\n1803. Dies on the throne."@en .
+    
+    bdr:P552  a             :Person ;
+        skos:prefLabel      "'jam dbyangs rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT161437B8D122D10D , bdr:NT451474A04C2C3DFC , bdr:NT709E6FA184B34265 , bdr:NTCC2E7A6C7030F5E4 ;
+        :personEvent        bdr:EV32DEAD8355B94811 , bdr:EV4B54292C4FD478BD , bdr:EV79CB4DEDDAE109EE , bdr:EVAD72F176CFB9CE0A , bdr:EVC4F7C7ADD10A88CF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8F9C1E32AE853151 , bdr:NM9BD957CFBB92AFA9 , bdr:NMA122E6332F06C444 ;
+        :personStudentOf    bdr:P530 , bdr:P550 ;
+        :personTeacherOf    bdr:P566 , bdr:P567 , bdr:P568 , bdr:P569 , bdr:P570 , bdr:P571 , bdr:P572 , bdr:P574 , bdr:P578 , bdr:P579 , bdr:P844 .
+}

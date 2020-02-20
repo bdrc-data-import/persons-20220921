@@ -1,0 +1,46 @@
+@base          <bdg:P1986> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1986 {
+    bda:P1986  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1986 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "6e/P1986.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1986 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBBC4DED1AD2EFEDE
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM5EF0EE6FD25D2ADC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma sgron/"@bo-x-ewts .
+    
+    bdr:NM6C84448C0EA55768
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'be mo pad+ma sgron/"@bo-x-ewts .
+    
+    bdr:P1986  a            :Person ;
+        skos:prefLabel      "pad+ma sgron/"@bo-x-ewts ;
+        :hasHusband         bdr:P1985 ;
+        :hasSon             bdr:P1984 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVBBC4DED1AD2EFEDE ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM5EF0EE6FD25D2ADC , bdr:NM6C84448C0EA55768 .
+}

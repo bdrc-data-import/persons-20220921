@@ -1,0 +1,52 @@
+@base          <bdg:P10308> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10308 {
+    bda:P10308  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10308 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9f/P10308.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10308 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDDE61198A7CF8CCA
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NME0264C14A32ED3E5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMFC01DCE5AC2E7C54
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhar bla kun dga' dar rgyas/"@bo-x-ewts .
+    
+    bdr:NTEC0885B2B27E0C29
+        a                   :Note ;
+        :locationStatement  "pp. 521-523" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "transmitter of teachings of the jo nang tradition\nhe was a student of 'brog dge kun dga' dpal bzang"@en .
+    
+    bdr:P10308  a           :Person ;
+        skos:prefLabel      "kun dga' dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEC0885B2B27E0C29 ;
+        :personEvent        bdr:EVDDE61198A7CF8CCA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME0264C14A32ED3E5 , bdr:NMFC01DCE5AC2E7C54 ;
+        :personStudentOf    bdr:P8963 .
+}

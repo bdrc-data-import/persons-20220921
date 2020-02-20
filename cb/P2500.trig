@@ -1,0 +1,75 @@
+@base          <bdg:P2500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2500 {
+    bda:LGC2B5AABCCBDA9745
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-10T14:51:43.2Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2500  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2500 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "cb/P2500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2500 ;
+        adm:logEntry        bda:LGC2B5AABCCBDA9745 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB1841D57C68725A1
+        a                   :PersonDeath ;
+        :onYear             "1854"^^xsd:gYear .
+    
+    bdr:EVB96B53768CF4FE0D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1132 ;
+        :onYear             "1794"^^xsd:gYear .
+    
+    bdr:EVEE0D84B65A2F3624
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4851 .
+    
+    bdr:NM93852E6C48F36DE8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya dkar 03 dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMAF69F1CCF47D8A55
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT534F2BABB38CDF3D
+        a                   :Note ;
+        :noteText           "1801. recognized as the rebirth of rgya mkhar blo bzang bstan pa'i rgyal mtshan\nbrought to his monastery of rgya mkhar dgon bshad sgrub dar rgyas gling\n1819. travelled to dbus and enters 'bras spungs sgo mang\n1823. receives title of dge ldan bstan pa'i gsal byed nom ci mkhan po from ngag dbang tshul khrims, regent of Tibet\n1831. moves rgya mkhar dgon and newly erects the temples and images\nreckoned as the 3rd rgya mkhar sprul sku"@en .
+    
+    bdr:NT60B7B2919E1EF70F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTF72ABCDFFEBFEC57
+        a                   :Note ;
+        :locationStatement  "p. 359" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P2500  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT534F2BABB38CDF3D , bdr:NT60B7B2919E1EF70F , bdr:NTF72ABCDFFEBFEC57 ;
+        :personEvent        bdr:EVB1841D57C68725A1 , bdr:EVB96B53768CF4FE0D , bdr:EVEE0D84B65A2F3624 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93852E6C48F36DE8 , bdr:NMAF69F1CCF47D8A55 ;
+        :personStudentOf    bdr:P1105 , bdr:P1280 , bdr:P2501 , bdr:P2502 , bdr:P2503 , bdr:P260 , bdr:P285 , bdr:P298 ;
+        :personTeacherOf    bdr:P3624 .
+}

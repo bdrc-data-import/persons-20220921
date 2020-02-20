@@ -1,0 +1,90 @@
+@base          <bdg:P4176> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4176 {
+    bda:LG2321765DC05EE02C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T16:53:17.124Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG5E214852EF4847CF
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-03T15:53:19.768Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4176  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4176 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "82/P4176.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4176 ;
+        adm:logEntry        bda:LG2321765DC05EE02C , bda:LG5E214852EF4847CF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A2613B0F6909C3A
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV6AFB87D7C763AEB2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G165 ;
+        :onYear             "1729"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA4CA4FE67871F06E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G165 .
+    
+    bdr:EVFDBF74B02EA5CBB1
+        a                   :PersonDeath ;
+        :eventWhere         bdr:G1949 ;
+        :onYear             "1702"^^xsd:gYear .
+    
+    bdr:NMDE678A643EE1363B
+        a                   :PersonTitle ;
+        rdfs:label          "sum pa zhabs drung phun tshogs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NME963A0E8433E2C11
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMEE0D82188D379E31
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dgon lung khri 27 phun tshogs rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT9843E5ADF41B2B9C
+        a                   :Note ;
+        :locationStatement  "p. 1764" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTB48F672D4D688E9D
+        a                   :Note ;
+        :locationStatement  "p. 366" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1702 dies in pe cin"@en .
+    
+    bdr:P4176  a            :Person ;
+        skos:prefLabel      "phun tshogs rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9843E5ADF41B2B9C , bdr:NTB48F672D4D688E9D ;
+        :personEvent        bdr:EV3A2613B0F6909C3A , bdr:EV6AFB87D7C763AEB2 , bdr:EVA4CA4FE67871F06E , bdr:EVFDBF74B02EA5CBB1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDE678A643EE1363B , bdr:NME963A0E8433E2C11 , bdr:NMEE0D82188D379E31 ;
+        :personStudentOf    bdr:P1KG4602 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Puntsok-Namgyel/6586"^^xsd:anyURI .
+}

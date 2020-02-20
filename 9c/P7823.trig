@@ -1,0 +1,66 @@
+@base          <bdg:P7823> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7823 {
+    bda:LG00672C45307C898B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-10T16:21:20.154Z"^^xsd:dateTime ;
+        adm:logMessage      "added name & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P7823  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7823 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9c/P7823.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7823 ;
+        adm:logEntry        bda:LG00672C45307C898B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV195635308FCA0910
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:EV3A60B2F7AA271CC4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR1540 .
+    
+    bdr:EVB77F5C61A79F4426
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3533 .
+    
+    bdr:NM36E91D8560DF51A3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhu yas legs po/"@bo-x-ewts .
+    
+    bdr:NMBC6F5AC9A969FA24
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhu g.yas legs po/"@bo-x-ewts .
+    
+    bdr:NT98F2B9307A40F3E2
+        a                   :Note ;
+        :locationStatement  "p. 38" ;
+        :noteSource         bdr:MW23886 ;
+        :noteText           "bonpo lama of the zhu lineage; founds ri zhing monastery in rgyal rtse rdzong in the 11th century"@en .
+    
+    bdr:P7823  a            :Person ;
+        skos:prefLabel      "zhu yas legs po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT98F2B9307A40F3E2 ;
+        :personEvent        bdr:EV195635308FCA0910 , bdr:EV3A60B2F7AA271CC4 , bdr:EVB77F5C61A79F4426 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM36E91D8560DF51A3 , bdr:NMBC6F5AC9A969FA24 .
+}

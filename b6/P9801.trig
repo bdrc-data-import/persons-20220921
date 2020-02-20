@@ -1,0 +1,54 @@
+@base          <bdg:P9801> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9801 {
+    bda:P9801  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9801 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b6/P9801.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9801 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV973A62E6789C9030
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVFB1583541ED182AB
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM69FC36614B5986A7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bkra shis/"@bo-x-ewts .
+    
+    bdr:NM71885FA5619EC1C9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang gling pa 'jam dpal bkra shis/"@bo-x-ewts .
+    
+    bdr:NT8FFB401B3F1877F3
+        a                   :Note ;
+        :noteText           "important teacher in the transmission of the 'od zer dri med lha drug, 4th mandala of the rgyud sde kun btus; he received the teachings and transmitted them through the zhwa lu tradition"@en .
+    
+    bdr:P9801  a            :Person ;
+        skos:prefLabel      "'jam dpal bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8FFB401B3F1877F3 ;
+        :personEvent        bdr:EV973A62E6789C9030 , bdr:EVFB1583541ED182AB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM69FC36614B5986A7 , bdr:NM71885FA5619EC1C9 ;
+        :personTeacherOf    bdr:P7031 .
+}

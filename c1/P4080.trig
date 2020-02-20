@@ -1,0 +1,74 @@
+@base          <bdg:P4080> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4080 {
+    bda:LGCB69FE6A85CD57CB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-04T15:29:16.121Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4080  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4080 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c1/P4080.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4080 ;
+        adm:logEntry        bda:LGCB69FE6A85CD57CB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA09B3D161A9A792D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1265 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVA89A6ACA7F40B151
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G165 .
+    
+    bdr:NM39B99C21BBF6B25D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NMC92316071FAACA93
+        a                   :PersonPersonalName ;
+        rdfs:label          "dgon lung khri 23 blo bzang bstan pa chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NMFE9AA8C3D681103B
+        a                   :PersonPersonalName ;
+        rdfs:label          "mdo ba blo bzang bstan pa chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NT8DF6E0B145EF0F08
+        a                   :Note ;
+        :locationStatement  "p. 878" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTA692B7C68B85A115
+        a                   :Note ;
+        :noteText           "1901. Ascends khri of Dgon-lung."@en .
+    
+    bdr:NTF3CC170841B3D0E4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4080  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa chos kyi nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8DF6E0B145EF0F08 , bdr:NTA692B7C68B85A115 , bdr:NTF3CC170841B3D0E4 ;
+        :personEvent        bdr:EVA09B3D161A9A792D , bdr:EVA89A6ACA7F40B151 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39B99C21BBF6B25D , bdr:NMC92316071FAACA93 , bdr:NMFE9AA8C3D681103B .
+}

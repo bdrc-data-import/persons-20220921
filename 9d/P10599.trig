@@ -1,0 +1,60 @@
+@base          <bdg:P10599> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10599 {
+    bda:LGC093BDDD50419C2C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T10:28:57.074Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and teacher relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P10599  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10599 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9d/P10599.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10599 ;
+        adm:logEntry        bda:LGC093BDDD50419C2C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV527B98745E925D9A
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM69388A19F68F217F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag kha ba grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NMFEF01480D9DB3AB5
+        a                   :PersonPersonalName ;
+        rdfs:label          "grags pa seng+ge"@bo-x-ewts .
+    
+    bdr:NT8BB8ACCC9A980242
+        a                   :Note ;
+        :locationStatement  "p. 265" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "sa skya teacher"@en .
+    
+    bdr:P10599  a           :Person ;
+        skos:prefLabel      "grags pa seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8BB8ACCC9A980242 ;
+        :personEvent        bdr:EV527B98745E925D9A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM69388A19F68F217F , bdr:NMFEF01480D9DB3AB5 ;
+        :personStudentOf    bdr:P0RK827 ;
+        :personTeacherOf    bdr:P1226 , bdr:P1865 .
+}

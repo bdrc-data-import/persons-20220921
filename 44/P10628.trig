@@ -1,0 +1,66 @@
+@base          <bdg:P10628> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10628 {
+    bda:LG731C370850380CC1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-31T14:29:26.837Z"^^xsd:dateTime ;
+        adm:logMessage      "birth and death dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG988EF8327B27220B
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-14T10:59:39.691Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn infavour of P1062"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10628  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10628 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "44/P10628.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10628 ;
+        adm:logEntry        bda:LG731C370850380CC1 , bda:LG988EF8327B27220B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV15185D90F2FB69AE
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1240"^^xsd:gYear .
+    
+    bdr:EV3CB4D04B7F190789
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EVCFEB7F3AD62B6670
+        a                   :PersonDeath ;
+        :onYear             "1307"^^xsd:gYear .
+    
+    bdr:NM0E3780860E8B15D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dpal/"@bo-x-ewts .
+    
+    bdr:NM2BCCED5047A9125E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang dkon mchog dpal/"@bo-x-ewts .
+    
+    bdr:P10628  a           :Person ;
+        skos:prefLabel      "dkon mchog dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV15185D90F2FB69AE , bdr:EV3CB4D04B7F190789 , bdr:EVCFEB7F3AD62B6670 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E3780860E8B15D8 , bdr:NM2BCCED5047A9125E ;
+        :personTeacherOf    bdr:P1048 .
+}

@@ -1,0 +1,96 @@
+@base          <bdg:P771> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P771 {
+    bda:LG1134FE4F3164E665
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-29T14:57:36.148Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG4F3E97644AB46A39
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T09:27:12.512Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG74E6D378848658A0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P771  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P771 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "a5/P771.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P771 ;
+        adm:logEntry        bda:LG1134FE4F3164E665 , bda:LG4F3E97644AB46A39 , bda:LG74E6D378848658A0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV55BEDD98E10A49B3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G824 ;
+        :onYear             "1905"^^xsd:gYear .
+    
+    bdr:EV6E22358D423CF213
+        a                   :PersonDeath ;
+        :onYear             "1931"^^xsd:gYear .
+    
+    bdr:EVB7F709B73FB93ED6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G189 .
+    
+    bdr:NM08FFA98A49589AFE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "zhabs drung thugs sprul 06"@bo-x-ewts .
+    
+    bdr:NM5E0C8719B3C8BD44
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM9824078836A8D298
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Zhabdrung Tuktrul 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMCED1A27E231E009E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhabs drung thugs sprul 06 'jigs med rdo rje/"@bo-x-ewts .
+    
+    bdr:NT36CA1E9640135CF6
+        a                   :Note ;
+        :locationStatement  "p. 250-251" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "also see Michael Aris's Bhutan, p. 270"@en .
+    
+    bdr:NTDF815EE18FB444AF
+        a                   :Note ;
+        :noteText           "Enthroned at an early age.\nRetinue causes trouble.\nDied 1931 because of political disturbances"@en .
+    
+    bdr:NTF2AEAF37E2932134
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P771  a             :Person ;
+        skos:prefLabel      "'jigs med rdo rje/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P760 ;
+        :isRoot             true ;
+        :note               bdr:NT36CA1E9640135CF6 , bdr:NTDF815EE18FB444AF , bdr:NTF2AEAF37E2932134 ;
+        :personEvent        bdr:EV55BEDD98E10A49B3 , bdr:EV6E22358D423CF213 , bdr:EVB7F709B73FB93ED6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08FFA98A49589AFE , bdr:NM5E0C8719B3C8BD44 , bdr:NM9824078836A8D298 , bdr:NMCED1A27E231E009E ;
+        :personStudentOf    bdr:P607 , bdr:P772 .
+}

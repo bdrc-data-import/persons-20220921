@@ -1,0 +1,64 @@
+@base          <bdg:P1175> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1175 {
+    bda:LG85FE92B1BEF8516F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-27T13:20:37.608Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury links"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1175  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1175 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "38/P1175.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1175 ;
+        adm:logEntry        bda:LG85FE92B1BEF8516F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV56DCF81E686FC1D0
+        a                   :PersonDeath ;
+        :onYear             "1551"^^xsd:gYear .
+    
+    bdr:EVBB665E84BAFA5D8B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G880 ;
+        :onYear             "1516"^^xsd:gYear .
+    
+    bdr:NM1776D256CDE14640
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sbur tsho slob dpon yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCC3BACAE03CEA52D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTB2DF3005D5825D07
+        a                   :Note ;
+        :locationStatement  "p. 248" ;
+        :noteSource         bdr:MW17722 ;
+        :noteText           "source contains a brief biography of this famed physician\nborn near sa skya (shab stod) into a famous medical family, phu gsum sbur tsho"@en .
+    
+    bdr:P1175  a            :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2DF3005D5825D07 ;
+        :personEvent        bdr:EV56DCF81E686FC1D0 , bdr:EVBB665E84BAFA5D8B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1776D256CDE14640 , bdr:NMCC3BACAE03CEA52D ;
+        :personTeacherOf    bdr:P1169 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Yonten-Gyatso/2434"^^xsd:anyURI .
+}

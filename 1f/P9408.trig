@@ -1,0 +1,71 @@
+@base          <bdg:P9408> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9408 {
+    bda:LGC53C326B5B355C1C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T09:44:42.249Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9408  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9408 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1f/P9408.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9408 ;
+        adm:logEntry        bda:LGC53C326B5B355C1C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD328E348B859EC38
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVE965447CB68BA4EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NM33724BCC098164BB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsegon Lama 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM92E6076F0E1DEB9B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshe mgon bla ma 03 blo bzang mkhyen rab/"@bo-x-ewts .
+    
+    bdr:NM988A597B375B9695
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang mkhyen rab/"@bo-x-ewts .
+    
+    bdr:NME8A5F515F89B7569
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mgon bla ma 03"@bo-x-ewts .
+    
+    bdr:NT409FBE98A6A30E6C
+        a                   :Note ;
+        :locationStatement  "p. 318" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "blo bzang mkhyen rab dpal ldan \nnyid kyis dgon chen du thugs gnyer dang/ hor tshang mchog sprul rin po che dang mnyam du dbus su phebs/ slob gnyer dang spyod pa gtsang/ chu stag (1842) la rang yul du phebs/ dpon slob gser khang pa bsten/ bka' chos mang du gsan/ dben gnas du mar yi dam gyi bsnyen chen sogs sgom sgrub pa la brtson/ lam rim chen mo dang sngags rim thugs la byang bar bzhugs pa rgyun du skyor/ dus 'khor dbang sogs kyang gnang/ gsung rtsom 'ga' zhig snang/ dgung lo so lnga pa la gshegs/ de'i sprul sku blo bzang mkhyen rab pa red/ skye rgyud rim byon la rong bo tshang zer/"@bo-x-ewts .
+    
+    bdr:P9408  a            :Person ;
+        skos:prefLabel      "blo bzang mkhyen rab/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9407 ;
+        :isRoot             true ;
+        :note               bdr:NT409FBE98A6A30E6C ;
+        :personEvent        bdr:EVD328E348B859EC38 , bdr:EVE965447CB68BA4EC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM33724BCC098164BB , bdr:NM92E6076F0E1DEB9B , bdr:NM988A597B375B9695 , bdr:NME8A5F515F89B7569 .
+}

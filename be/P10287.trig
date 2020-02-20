@@ -1,0 +1,65 @@
+@base          <bdg:P10287> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10287 {
+    bda:LG1BE6D78164F278EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-29T10:45:41.269Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGF80A469039292581
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-28T15:38:12.508Z"^^xsd:dateTime ;
+        adm:logMessage      "added a teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P10287  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10287 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "be/P10287.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10287 ;
+        adm:logEntry        bda:LG1BE6D78164F278EC , bda:LGF80A469039292581 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEC9F024F3EDA67B7
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM8413AB7FC600E60D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NMA5727D4D8CD8148F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spang ston kun bzang pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NT209645BEF92748FC
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 358r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "rnying ma teacher in the transmission lineage of the kun bzang thugs gter revelations of byang chub gling pa dpal gyi rgyal mtshan"@en .
+    
+    bdr:P10287  a           :Person ;
+        skos:prefLabel      "kun bzang pad+ma tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT209645BEF92748FC ;
+        :personEvent        bdr:EVEC9F024F3EDA67B7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8413AB7FC600E60D , bdr:NMA5727D4D8CD8148F ;
+        :personStudentOf    bdr:P10286 , bdr:P2691 , bdr:P2CN5 ;
+        :personTeacherOf    bdr:P10288 .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P6649> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6649 {
+    bda:P6649  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6649 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b3/P6649.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6649 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBB6C060BF7E142C3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3004 ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:NM0AB5212D23700086
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lcags mo 'tsho/"@bo-x-ewts .
+    
+    bdr:NM9A39C8587743B62B
+        a                   :PersonPenName ;
+        rdfs:label          "g.yu zhun/"@bo-x-ewts .
+    
+    bdr:NT98D3201F3380A05B
+        a                   :Note ;
+        :locationStatement  "p. 87" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography\nwoman who has reached 30 born on the banks of the mtsho sngon"@en .
+    
+    bdr:NTADAF64A3DB72F7FF
+        a                   :Note ;
+        :locationStatement  "p. 64" ;
+        :noteSource         bdr:MW29298 ;
+        :noteText           "biography\nborn in 1968 in mdo smad bong stag nag bza' sde pa"@en .
+    
+    bdr:P6649  a            :Person ;
+        skos:prefLabel      "lcags mo 'tsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT98D3201F3380A05B , bdr:NTADAF64A3DB72F7FF ;
+        :personEvent        bdr:EVBB6C060BF7E142C3 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM0AB5212D23700086 , bdr:NM9A39C8587743B62B .
+}

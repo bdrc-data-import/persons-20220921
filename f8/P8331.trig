@@ -1,0 +1,76 @@
+@base          <bdg:P8331> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8331 {
+    bda:LGC9DFD16F8C52D688
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-08T10:16:25.676Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place to G1272"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8331  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8331 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f8/P8331.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8331 ;
+        adm:logEntry        bda:LGC9DFD16F8C52D688 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA7F585F59CFA165F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVC2D0A300621CE9E8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:EVD1F34E222F6406EE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1272 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM23B14AE1CEA6A47C
+        a                   :PersonTitle ;
+        rdfs:label          "rnal 'byor rgyal mo rong pa/"@bo-x-ewts .
+    
+    bdr:NM428FE03968B1920A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' blo ldan/"@bo-x-ewts .
+    
+    bdr:NM930E5E8637A4A055
+        a                   :PersonTitle ;
+        rdfs:label          "rgyal rong grub chen kun dga' blo ldan/"@bo-x-ewts .
+    
+    bdr:NMDC1778B31F7CCC40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gra sgang mkhas grub kun dga' blo ldan/"@bo-x-ewts .
+    
+    bdr:NT56F567C042587B76
+        a                   :Note ;
+        :locationStatement  "p. 347" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "styled sde dge gra sgang mkhas grub kun dga' blo ldan"@en .
+    
+    bdr:P8331  a            :Person ;
+        skos:prefLabel      "kun dga' blo ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT56F567C042587B76 ;
+        :personEvent        bdr:EVA7F585F59CFA165F , bdr:EVC2D0A300621CE9E8 , bdr:EVD1F34E222F6406EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM23B14AE1CEA6A47C , bdr:NM428FE03968B1920A , bdr:NM930E5E8637A4A055 , bdr:NMDC1778B31F7CCC40 ;
+        :personStudentOf    bdr:P805 .
+}

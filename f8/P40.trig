@@ -1,0 +1,51 @@
+@base          <bdg:P40> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P40 {
+    bda:P40  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P40 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f8/P40.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P40 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFA866F06E79B42A4
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NMDAAB7074CB887A8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "g.yung drung rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTA32C9A16D93B0224
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bon"@en .
+    
+    bdr:NTC1122706FFF211A7
+        a                   :Note ;
+        :locationStatement  "p. 218" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P40  a              :Person ;
+        skos:prefLabel      "g.yung drung rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA32C9A16D93B0224 , bdr:NTC1122706FFF211A7 ;
+        :personEvent        bdr:EVFA866F06E79B42A4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDAAB7074CB887A8D ;
+        :personTeacherOf    bdr:P39 .
+}

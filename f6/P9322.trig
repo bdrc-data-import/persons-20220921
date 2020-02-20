@@ -1,0 +1,61 @@
+@base          <bdg:P9322> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9322 {
+    bda:P9322  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9322 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f6/P9322.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9322 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV668315E7B63EC8AC
+        a                   :PersonDeath ;
+        :onYear             "1757"^^xsd:gYear .
+    
+    bdr:EV902E82CF59026740
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVDD2FEC2DA6CA999D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1736"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM76F6FBF08680D91B
+        a                   :PersonPersonalName ;
+        rdfs:label          "gtsug 'od zer/"@bo-x-ewts .
+    
+    bdr:NMFC96CC73A9064110
+        a                   :PersonPersonalName ;
+        rdfs:label          "sman ri khri 'dzin gtsug 'od zer/"@bo-x-ewts .
+    
+    bdr:NT78225C619A65F424
+        a                   :Note ;
+        :locationStatement  "p. 296" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon master and occupant of the throne of sman ri\ngtsug sras rma'o thugs sprul gtsug 'od zer mnyam med sman ri'i gdan sar phebs\ndied in 1757"@en .
+    
+    bdr:P9322  a            :Person ;
+        skos:prefLabel      "gtsug 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT78225C619A65F424 ;
+        :personEvent        bdr:EV668315E7B63EC8AC , bdr:EV902E82CF59026740 , bdr:EVDD2FEC2DA6CA999D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76F6FBF08680D91B , bdr:NMFC96CC73A9064110 .
+}

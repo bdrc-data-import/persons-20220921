@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12575> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12575 {
+    bda:LG44E0998CF383E321
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T10:33:36.724Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5150010213AD13E6
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG608CB7B6810D4327
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-29T10:48:49.476Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12575  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12575 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "29/P8LS12575.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12575 ;
+        adm:logEntry        bda:LG44E0998CF383E321 , bda:LG5150010213AD13E6 , bda:LG608CB7B6810D4327 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFCBC6061E11CBB8F
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12821 .
+    
+    bdr:NM6645EE65EC3ED140
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bye rgyas sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM8B97BDDE280BA1CC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med grub pa/"@bo-x-ewts .
+    
+    bdr:NMD5AA0F90CCCBA4A0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Jegye Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT99AB16D98DAD4CC7
+        a                   :Note ;
+        :locationStatement  "p. 314" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "incarnation lineage of uncertain sectarian affilation\n\nrgya'i tang tser 'khod kyang gser snyan du mi 'gros\n1) dang po ni/ 'chi med grub pa/ gtsang rong du 'khrungs/ dgung lo drug cu par gshegs/"@en .
+    
+    bdr:P8LS12575  a        :Person ;
+        skos:prefLabel      "'chi med grub pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT99AB16D98DAD4CC7 ;
+        :personEvent        bdr:EVFCBC6061E11CBB8F ;
+        :personName         bdr:NM6645EE65EC3ED140 , bdr:NM8B97BDDE280BA1CC , bdr:NMD5AA0F90CCCBA4A0 .
+}

@@ -1,0 +1,65 @@
+@base          <bdg:P2JM2> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM2 {
+    bda:LG200D633617A9E4A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-27T15:50:28.415Z"^^xsd:dateTime ;
+        adm:logMessage      "entered thang pa dza"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG621B2597B0FE3949
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-27T11:58:12.054Z"^^xsd:dateTime ;
+        adm:logMessage      "added smin gling 'gyur med chos ldan, kdon mchog bstan 'dzin"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM2  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM2 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7e/P2JM2.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM2 ;
+        adm:logEntry        bda:LG200D633617A9E4A5 , bda:LG621B2597B0FE3949 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV894FD664D5A64A32
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM0F30CDA8284B5825
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med chos ldan/"@bo-x-ewts .
+    
+    bdr:NMA1A017A8ADE8D38A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling rdor 'dzin 'gyur med chos ldan/"@bo-x-ewts .
+    
+    bdr:NTB06DBD1C32448F74
+        a                   :Note ;
+        :locationStatement  "117" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n-Credited with preserving the teachings of smin-grol-gling in the face of the Mogol invasion."@en .
+    
+    bdr:P2JM2  a            :Person ;
+        skos:prefLabel      "'gyur med chos ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB06DBD1C32448F74 ;
+        :personEvent        bdr:EV894FD664D5A64A32 ;
+        :personName         bdr:NM0F30CDA8284B5825 , bdr:NMA1A017A8ADE8D38A ;
+        :personStudentOf    bdr:P5200 ;
+        :personTeacherOf    bdr:P683 .
+}

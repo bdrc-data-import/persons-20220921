@@ -1,0 +1,101 @@
+@base          <bdg:P10679> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10679 {
+    bda:LG8FB3C10F1482CC80
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-05T14:36:43.379Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG97C0848CFF561293
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-09T14:31:05.766Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE0B09505DADC8CDD
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGF8A8394E2A89B600
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T13:51:49.309Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10679  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10679 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "05/P10679.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10679 ;
+        adm:logEntry        bda:LG8FB3C10F1482CC80 , bda:LG97C0848CFF561293 , bda:LGE0B09505DADC8CDD , bda:LGF8A8394E2A89B600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV23CAD304A1769D47
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVC1D494B9CE8181E2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC59D8895CC696D50
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NM1526CE05D245D2CC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med mkhas btsun lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM68CE758882D30E07
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzongkar Chungwa 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM7579FEDCB437DF26
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rdzong dkar chung ba 06"@bo-x-ewts .
+    
+    bdr:NMD57C16E58F519968
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzong chung 'jigs med mkhas btsun lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMED53DCA9A13E6FE4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 73"@bo-x-ewts .
+    
+    bdr:NTF2E2CEAC3072EF5C
+        a                   :Note ;
+        :locationStatement  "p. 343-354, 453" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NTF8CFF267135C4413
+        a                   :Note ;
+        :noteText           "dge lugs teacher from a mdo"@en .
+    
+    bdr:P10679  a           :Person ;
+        skos:prefLabel      "'jigs med mkhas btsun lung rigs rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3799 ;
+        :isRoot             true ;
+        :note               bdr:NTF2E2CEAC3072EF5C , bdr:NTF8CFF267135C4413 ;
+        :personEvent        bdr:EV23CAD304A1769D47 , bdr:EVC1D494B9CE8181E2 , bdr:EVC59D8895CC696D50 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1526CE05D245D2CC , bdr:NM68CE758882D30E07 , bdr:NM7579FEDCB437DF26 , bdr:NMD57C16E58F519968 , bdr:NMED53DCA9A13E6FE4 ;
+        :personStudentOf    bdr:P6832 .
+}

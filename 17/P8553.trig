@@ -1,0 +1,82 @@
+@base          <bdg:P8553> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8553 {
+    bda:LG5D6FBF1361EABDC4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-08T12:06:16.941Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG7351953CA34DA8D9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-01T12:51:24.477Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8553  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8553 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "17/P8553.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8553 ;
+        adm:logEntry        bda:LG5D6FBF1361EABDC4 , bda:LG7351953CA34DA8D9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2B26C935F18C46D2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV7E5904EE0D8A9203
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM13AA37118ED43AF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khang nang 02 bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3F387FEBCDFFE7AB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM4BF6FFD06D303AE1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Khangnang 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM99F9C9A9C30F5BA5
+        a                   :PersonTitle ;
+        rdfs:label          "sga rje khang nang 02 bshad sgrub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD2AB8F36EB352779
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "khang nang 02"@bo-x-ewts .
+    
+    bdr:NTEC6032E1F0A8C495
+        a                   :Note ;
+        :locationStatement  "pp. 301-302" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographical sketch"@en .
+    
+    bdr:P8553  a            :Person ;
+        skos:prefLabel      "bshad sgrub rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8552 ;
+        :isRoot             true ;
+        :note               bdr:NTEC6032E1F0A8C495 ;
+        :personEvent        bdr:EV2B26C935F18C46D2 , bdr:EV7E5904EE0D8A9203 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM13AA37118ED43AF3 , bdr:NM3F387FEBCDFFE7AB , bdr:NM4BF6FFD06D303AE1 , bdr:NM99F9C9A9C30F5BA5 , bdr:NMD2AB8F36EB352779 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Shedrub-Gyatso/11278"^^xsd:anyURI .
+}

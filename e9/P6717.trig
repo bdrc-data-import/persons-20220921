@@ -1,0 +1,72 @@
+@base          <bdg:P6717> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6717 {
+    bda:LGB79A15DDFD675BCE
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-04-06T10:04:48.966Z"^^xsd:dateTime ;
+        adm:logMessage      "added year of death"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6717  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6717 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e9/P6717.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6717 ;
+        adm:logEntry        bda:LGB79A15DDFD675BCE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV477ED8B73EECC229
+        a                   :PersonDeath ;
+        :onYear             "2009"^^xsd:gYear .
+    
+    bdr:EV4FC89A60258EF269
+        a                   :PersonLeavesOffice ;
+        :onYear             "1959"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVB17D19DED8826B81
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVF09D0F2F1199522D
+        a                   :PersonAssumesOffice ;
+        :onYear             "1950"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM06049324B41C75FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nga phod ngag dbang 'jigs med/"@bo-x-ewts .
+    
+    bdr:NMA370BE0CE493D5D5
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang 'jigs med, nga phod/"@bo-x-ewts .
+    
+    bdr:NT27FE7A2143498037
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1950-1959"@en .
+    
+    bdr:P6717  a            :Person ;
+        skos:prefLabel      "nga phod ngag dbang 'jigs med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT27FE7A2143498037 ;
+        :personEvent        bdr:EV477ED8B73EECC229 , bdr:EV4FC89A60258EF269 , bdr:EVB17D19DED8826B81 , bdr:EVF09D0F2F1199522D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06049324B41C75FD , bdr:NMA370BE0CE493D5D5 .
+}

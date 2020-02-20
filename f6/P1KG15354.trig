@@ -1,0 +1,50 @@
+@base          <bdg:P1KG15354> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15354 {
+    bda:LGE1E232AB62CC3304
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-09-25T14:51:57.33Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15354  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15354 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f6/P1KG15354.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15354 ;
+        adm:logEntry        bda:LGE1E232AB62CC3304 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41B26B4BEB9BF928
+        a                   :PersonBirth ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:NM297A07ECAF5F44D0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lobsang palden"@en .
+    
+    bdr:NMC2035D3CF400A2E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dpal ldan/"@bo-x-ewts .
+    
+    bdr:P1KG15354  a        :Person ;
+        skos:prefLabel      "blo bzang dpal ldan/"@bo-x-ewts , "lobsang palden"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV41B26B4BEB9BF928 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM297A07ECAF5F44D0 , bdr:NMC2035D3CF400A2E9 .
+}

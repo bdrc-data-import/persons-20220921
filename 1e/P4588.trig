@@ -1,0 +1,103 @@
+@base          <bdg:P4588> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4588 {
+    bda:LG65D93CD1ACA3E7E8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T09:36:39.254Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG99246986E306FF70
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-01T09:29:26.321Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4588  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4588 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "1e/P4588.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4588 ;
+        adm:logEntry        bda:LG65D93CD1ACA3E7E8 , bda:LG99246986E306FF70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV83841FF7B5DA3C34
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EVA43AA8C4D3F10A93
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1469"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVB1F65821AE0967EB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1435"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVCEFDC453C074F78D
+        a                   :PersonDeath ;
+        :onYear             "1469"^^xsd:gYear .
+    
+    bdr:EVE29A0421684FF8C6
+        a                   :PersonBirth ;
+        :onYear             "1421"^^xsd:gYear .
+    
+    bdr:NM19C37B79C51CCD59
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'bri gung gdan rabs 14"@bo-x-ewts .
+    
+    bdr:NM82D31DF18B3B4EB2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rgyal rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM904F929B5CFE2367
+        a                   :PersonTitle ;
+        rdfs:label          "'bri gung pa rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMAC8C5C7115C9BBF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT945631A617ECA007
+        a                   :Note ;
+        :noteText           "GKM: On see 1428-1469.\nAnother source gives on the see: 1427-1469."@en .
+    
+    bdr:NT964634ECAD1BBE9A
+        a                   :Note ;
+        :locationStatement  "p. 147-153" ;
+        :noteSource         bdr:MW1KG6255 ;
+        :noteText           "according to this source he is the 13th throne holder of 'bri gung, however, in the official throne holder list he is the 14th. See http://www.drikung.org/index.php/drikung-kagyu-lineage/list-of-lineage-holders. Also see W26674"@en .
+    
+    bdr:NTBAA3426F38BC6C7D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Bri-gung Bka'-brgyud"@en .
+    
+    bdr:NTE103E8F2E872AE12
+        a                   :Note ;
+        :locationStatement  "p. 270" ;
+        :noteSource         bdr:MW19842 .
+    
+    bdr:P4588  a            :Person ;
+        skos:prefLabel      "rin chen dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT945631A617ECA007 , bdr:NT964634ECAD1BBE9A , bdr:NTBAA3426F38BC6C7D , bdr:NTE103E8F2E872AE12 ;
+        :personEvent        bdr:EV83841FF7B5DA3C34 , bdr:EVA43AA8C4D3F10A93 , bdr:EVB1F65821AE0967EB , bdr:EVCEFDC453C074F78D , bdr:EVE29A0421684FF8C6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19C37B79C51CCD59 , bdr:NM82D31DF18B3B4EB2 , bdr:NM904F929B5CFE2367 , bdr:NMAC8C5C7115C9BBF7 .
+}

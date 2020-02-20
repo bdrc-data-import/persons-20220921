@@ -1,0 +1,95 @@
+@base          <bdg:P612> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P612 {
+    bda:LGC1532DBA7FB70F08
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T12:25:31.229Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P612  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P612 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "10/P612.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P612 ;
+        adm:logEntry        bda:LGC1532DBA7FB70F08 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2BD5D0C80EEA52ED
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV3868E3C99E13E915
+        a                   :PersonDeath ;
+        :onYear             "1924"^^xsd:gYear .
+    
+    bdr:EV71D96A34475139B8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G787 ;
+        :onYear             "1864"^^xsd:gYear .
+    
+    bdr:EV751DFD42F84ED382
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1919"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV99E4BA3E30969A73
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1922"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM801B9549A567E722
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 56 mi pham dbang po/"@bo-x-ewts .
+    
+    bdr:NMBB231989319931E4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'brug rje mkhan po 56"@bo-x-ewts .
+    
+    bdr:NMC24D6BFAAF8C6402
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi pham dbang po/"@bo-x-ewts .
+    
+    bdr:NTAD0B8FD7A0EB773E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTB9844CB8C1109187
+        a                   :Note ;
+        :locationStatement  "p. 165" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NTDA43AB7DAEB8E5F2
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1919-1922.\nPrevious service as Mtshan-nyid Slob-dpon.\n1922. Retired to meditate at Chu-mo-phu, etc."@en .
+    
+    bdr:NTF818472371B59281
+        a                   :Note ;
+        :noteText           "spa gro hUM ral chos rje'i gdung rabs su 'khrungs"@en .
+    
+    bdr:P612  a             :Person ;
+        skos:prefLabel      "mi pham dbang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAD0B8FD7A0EB773E , bdr:NTB9844CB8C1109187 , bdr:NTDA43AB7DAEB8E5F2 , bdr:NTF818472371B59281 ;
+        :personEvent        bdr:EV2BD5D0C80EEA52ED , bdr:EV3868E3C99E13E915 , bdr:EV71D96A34475139B8 , bdr:EV751DFD42F84ED382 , bdr:EV99E4BA3E30969A73 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM801B9549A567E722 , bdr:NMBB231989319931E4 , bdr:NMC24D6BFAAF8C6402 ;
+        :personStudentOf    bdr:P593 , bdr:P613 ;
+        :personTeacherOf    bdr:P765 .
+}

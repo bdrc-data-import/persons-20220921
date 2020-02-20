@@ -1,0 +1,67 @@
+@base          <bdg:P478> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P478 {
+    bda:LGDCA561F22AE4A946
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T10:26:56.074Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P478  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P478 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4c/P478.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P478 ;
+        adm:logEntry        bda:LGDCA561F22AE4A946 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV049E5A92221D0526
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVF63962A654DACCDC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G457 .
+    
+    bdr:NM535E463A6B13D878
+        a                   :PersonPersonalName ;
+        rdfs:label          "gnas rnying pa kun dga' bde legs/"@bo-x-ewts .
+    
+    bdr:NM580B0103FD03DDA3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bde legs rin chen/"@bo-x-ewts .
+    
+    bdr:NT1ABB9ECB5BC7F309
+        a                   :Note ;
+        :locationStatement  "v.3, p.505" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NTBF4EFA49CE00DD53
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Esoteric lineages\n\n-- Gnas-rnying-pa (Gnas-snying-pa)"@en .
+    
+    bdr:P478  a             :Person ;
+        skos:prefLabel      "kun dga' bde legs rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1ABB9ECB5BC7F309 , bdr:NTBF4EFA49CE00DD53 ;
+        :personEvent        bdr:EV049E5A92221D0526 , bdr:EVF63962A654DACCDC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM535E463A6B13D878 , bdr:NM580B0103FD03DDA3 ;
+        :personStudentOf    bdr:P432 , bdr:P80 , bdr:P992 ;
+        :personTeacherOf    bdr:P2286 , bdr:P477 , bdr:P84 .
+}

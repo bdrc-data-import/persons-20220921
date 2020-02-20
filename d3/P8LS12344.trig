@@ -1,0 +1,76 @@
+@base          <bdg:P8LS12344> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12344 {
+    bda:LG3CD2BD6474B7D4B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T10:45:19.628Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12344  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12344 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d3/P8LS12344.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12344 ;
+        adm:logEntry        bda:LG3CD2BD6474B7D4B5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21F8C23D0B68AAB6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1787"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVB6E2B0A537A1B785
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1789"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVFC8F7B233592BE89
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:NM15FDBE6E22F82B31
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 04"@bo-x-ewts .
+    
+    bdr:NM1657D3E565AE07D7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsamkor Kabgen 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM507BFF2C396C1A14
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mtshams skor kab rgan/"@bo-x-ewts .
+    
+    bdr:NM8977E7BB201814FA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mtshams skor kab rgan 01"@bo-x-ewts .
+    
+    bdr:NT7DFE11759D45623A
+        a                   :Note ;
+        :locationStatement  "p. 168-169" ;
+        :noteSource         bdr:MW19871 ;
+        :noteText           "successive mtshams skor's are:\nmtshams skor byams pa bstan 'dzin \nmtshams skor ngag dbang bstan dar (d. 1905)\nmtshams skor blo bzang grags pa dar rgyas (1906-1959)"@en .
+    
+    bdr:P8LS12344  a        :Person ;
+        skos:prefLabel      "mtshams skor kab rgan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7DFE11759D45623A ;
+        :personEvent        bdr:EV21F8C23D0B68AAB6 , bdr:EVB6E2B0A537A1B785 , bdr:EVFC8F7B233592BE89 ;
+        :personName         bdr:NM15FDBE6E22F82B31 , bdr:NM1657D3E565AE07D7 , bdr:NM507BFF2C396C1A14 , bdr:NM8977E7BB201814FA .
+}

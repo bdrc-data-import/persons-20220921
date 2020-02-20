@@ -1,0 +1,60 @@
+@base          <bdg:P2021> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2021 {
+    bda:P2021  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2021 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "57/P2021.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2021 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6C94D89A698F9BFE
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVB67DCDDAC93D3326
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G326 .
+    
+    bdr:NM1EFFC6E39EF01372
+        a                   :PersonPersonalName ;
+        rdfs:label          "zur mang gar dbang sprul sku rin chen snying po/"@bo-x-ewts .
+    
+    bdr:NM9B937575DCED1FD5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zur mang gar dbang sprul sku/"@bo-x-ewts .
+    
+    bdr:NME97506C17E1E31B3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen snying po/"@bo-x-ewts .
+    
+    bdr:NTCABB88FEC879819C
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 175v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "teacher of the zur mang subschool of the kaM tshang bka' brgyud pa; he received initiations from karma pa chos dbyings rdo rje"@en .
+    
+    bdr:P2021  a            :Person ;
+        skos:prefLabel      "rin chen snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCABB88FEC879819C ;
+        :personEvent        bdr:EV6C94D89A698F9BFE , bdr:EVB67DCDDAC93D3326 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1EFFC6E39EF01372 , bdr:NM9B937575DCED1FD5 , bdr:NME97506C17E1E31B3 ;
+        :personStudentOf    bdr:P1382 .
+}

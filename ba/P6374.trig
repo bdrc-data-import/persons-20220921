@@ -1,0 +1,55 @@
+@base          <bdg:P6374> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6374 {
+    bda:P6374  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6374 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ba/P6374.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6374 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BD1B72E0795F8D3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EVEE0FF4ED5BB7B65B
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM64949848E85CC335
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal rong mkhan po mdo sngags/"@bo-x-ewts .
+    
+    bdr:NM8559E74A2E185E91
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mdo sngags/"@bo-x-ewts .
+    
+    bdr:NT94DBF058D9D78120
+        a                   :Note ;
+        :locationStatement  "p. 464" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch"@en .
+    
+    bdr:P6374  a            :Person ;
+        skos:prefLabel      "mdo sngags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT94DBF058D9D78120 ;
+        :personEvent        bdr:EV0BD1B72E0795F8D3 , bdr:EVEE0FF4ED5BB7B65B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM64949848E85CC335 , bdr:NM8559E74A2E185E91 .
+}

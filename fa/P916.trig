@@ -1,0 +1,76 @@
+@base          <bdg:P916> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P916 {
+    bda:LGBAAAD2F1821C5D66
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T11:49:52.132Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P916  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P916 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fa/P916.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P916 ;
+        adm:logEntry        bda:LGBAAAD2F1821C5D66 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV13B0A4199E879DFA
+        a                   :PersonDeath ;
+        :onYear             "1280"^^xsd:gYear .
+    
+    bdr:EV72ADF04B8D1EFC98
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G212 .
+    
+    bdr:EV85AF05FC9E80499D
+        a                   :PersonBirth ;
+        :notAfter           "1238"^^xsd:gYear ;
+        :notBefore          "1236"^^xsd:gYear .
+    
+    bdr:NM4A70727A39584D8C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng+ge shes rab/"@bo-x-ewts .
+    
+    bdr:NMA2CCC8CCB8B49C68
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo rje gling pa seng+ge shes rab/"@bo-x-ewts .
+    
+    bdr:NMEB0D3B8C72826F94
+        a                   :PersonTitle ;
+        rdfs:label          "'brug pa seng+ge shes rab/"@bo-x-ewts .
+    
+    bdr:NT3A23587148B6413F
+        a                   :Note ;
+        :noteText           "Sengge mtshan can 4\nNever came to the throne of Rwa-lung.\nServed as the gdan-sa of Bar 'Brog Rdo-rje-gling at the behest of O-rgyan-pa."@en .
+    
+    bdr:NTFD5CA9727848E399
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P916  a             :Person ;
+        skos:prefLabel      "seng+ge shes rab/"@bo-x-ewts ;
+        :hasFather          bdr:P917 ;
+        :isRoot             true ;
+        :note               bdr:NT3A23587148B6413F , bdr:NTFD5CA9727848E399 ;
+        :personEvent        bdr:EV13B0A4199E879DFA , bdr:EV72ADF04B8D1EFC98 , bdr:EV85AF05FC9E80499D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4A70727A39584D8C , bdr:NMA2CCC8CCB8B49C68 , bdr:NMEB0D3B8C72826F94 ;
+        :personStudentOf    bdr:P913 , bdr:P914 ;
+        :personTeacherOf    bdr:P918 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sengge-Sherab/11942"^^xsd:anyURI .
+}

@@ -1,0 +1,55 @@
+@base          <bdg:P6794> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6794 {
+    bda:P6794  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6794 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "3d/P6794.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6794 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD700114E84165325
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2748 .
+    
+    bdr:EVF7ADCCE656B0E5E3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2747 ;
+        :onYear             "1961"^^xsd:gYear .
+    
+    bdr:NM616A30CA5893A19F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC8BEBB08A9117667
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ra rtsa 06 bstan 'dzin 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTBE2CDF4F8B8E8DE8
+        a                   :Note ;
+        :locationStatement  "v. 1, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "recognized by the 6th 'jam dbyangs bzhad pa\nprefectural recognition\ninstalled at ra rtsa dgon in 1993"@en .
+    
+    bdr:P6794  a            :Person ;
+        skos:prefLabel      "bstan 'dzin 'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBE2CDF4F8B8E8DE8 ;
+        :personEvent        bdr:EVD700114E84165325 , bdr:EVF7ADCCE656B0E5E3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM616A30CA5893A19F , bdr:NMC8BEBB08A9117667 .
+}

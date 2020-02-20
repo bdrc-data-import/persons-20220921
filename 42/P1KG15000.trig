@@ -1,0 +1,50 @@
+@base          <bdg:P1KG15000> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15000 {
+    bda:LGD2431DCDB6829A23
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-29T15:23:42.214Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15000  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15000 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "42/P1KG15000.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15000 ;
+        adm:logEntry        bda:LGD2431DCDB6829A23 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAF23760D05ECCE4A
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:NM1EDB83E86ED8EEBD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sean gaffney"@en .
+    
+    bdr:NM247F6B05713A6EC5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sean, gaffney"@en .
+    
+    bdr:P1KG15000  a        :Person ;
+        skos:prefLabel      "sean, gaffney"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EVAF23760D05ECCE4A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1EDB83E86ED8EEBD , bdr:NM247F6B05713A6EC5 .
+}

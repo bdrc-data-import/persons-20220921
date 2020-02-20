@@ -1,0 +1,52 @@
+@base          <bdg:P7745> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7745 {
+    bda:P7745  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7745 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b4/P7745.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7745 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C271ADEFA19179D
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM4D62583973350137
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal grags pa/"@bo-x-ewts .
+    
+    bdr:NM65CB10011EDF3637
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung pa 'jam dpal grags pa/"@bo-x-ewts .
+    
+    bdr:NTCA50B9839B1479E7
+        a                   :Note ;
+        :locationStatement  "p. 98" ;
+        :noteSource         bdr:MW20396 ;
+        :noteText           "upholder of the kaH thog tradition of klong gsal snying po and khrom dge gter ston padma mkha' khyab dbang po"@en .
+    
+    bdr:P7745  a            :Person ;
+        skos:prefLabel      "'jam dpal grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCA50B9839B1479E7 ;
+        :personEvent        bdr:EV1C271ADEFA19179D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4D62583973350137 , bdr:NM65CB10011EDF3637 ;
+        :personStudentOf    bdr:P724 .
+}

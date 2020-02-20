@@ -1,0 +1,54 @@
+@base          <bdg:P320> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P320 {
+    bda:P320  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P320 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "70/P320.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P320 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB7F32AACB75B25B3
+        a                   :PersonBirth ;
+        :onYear             "1791"^^xsd:gYear .
+    
+    bdr:EVCE825347ABD30B81
+        a                   :PersonDeath ;
+        :onYear             "1841"^^xsd:gYear .
+    
+    bdr:NMCCE40EE84F04EA07
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa gsung rab/"@bo-x-ewts .
+    
+    bdr:NME22867A49E759064
+        a                   :PersonPersonalName ;
+        rdfs:label          "rwa rgya phyag mdzod byams pa gsung rab/"@bo-x-ewts .
+    
+    bdr:NTD06332D9B4143D94
+        a                   :Note ;
+        :locationStatement  "p. 126" ;
+        :noteSource         bdr:MW29146 ;
+        :noteText           "mentioned as a specialist in rtsis: phyag medod byams pa gsung rab (11791-1841)"@en .
+    
+    bdr:P320  a             :Person ;
+        skos:prefLabel      "byams pa gsung rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD06332D9B4143D94 ;
+        :personEvent        bdr:EVB7F32AACB75B25B3 , bdr:EVCE825347ABD30B81 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCCE40EE84F04EA07 , bdr:NME22867A49E759064 .
+}

@@ -1,0 +1,83 @@
+@base          <bdg:P8918> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8918 {
+    bda:LG20AD4C3F6D752BC9
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGA8D84723E1EEEABA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T11:27:48.155Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBE5747DB4392D243
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T15:28:01.876Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8918  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8918 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3f/P8918.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8918 ;
+        adm:logEntry        bda:LG20AD4C3F6D752BC9 , bda:LGA8D84723E1EEEABA , bda:LGBE5747DB4392D243 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6BC20559656F9682
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVA98DB9964AAB08FD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:NM17F750C3B6DB1599
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Arge Kutreng 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM3BC571500755F02C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang arge sku phreng 02"@bo-x-ewts .
+    
+    bdr:NM72CE0C7FF2156087
+        a                   :PersonPersonalName ;
+        rdfs:label          "nyi ma 'od zer dpal/"@bo-x-ewts .
+    
+    bdr:NMB63F6581CF6D2AA6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang arge sku phreng 02 nyi ma 'od zer dpal/"@bo-x-ewts .
+    
+    bdr:NT3F771BA1E4F10078
+        a                   :Note ;
+        :locationStatement  "pp. 166-167" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nhow could he have been the student of both rgyal ba sengge dpal 'byor bzang po and tA ra nA tha?"@en .
+    
+    bdr:P8918  a            :Person ;
+        skos:prefLabel      "nyi ma 'od zer dpal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8917 ;
+        :isRoot             true ;
+        :note               bdr:NT3F771BA1E4F10078 ;
+        :personEvent        bdr:EV6BC20559656F9682 , bdr:EVA98DB9964AAB08FD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM17F750C3B6DB1599 , bdr:NM3BC571500755F02C , bdr:NM72CE0C7FF2156087 , bdr:NMB63F6581CF6D2AA6 ;
+        :personStudentOf    bdr:P1428 , bdr:P8898 .
+}

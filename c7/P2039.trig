@@ -1,0 +1,57 @@
+@base          <bdg:P2039> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2039 {
+    bda:LGF86B94DF966E33B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T14:58:58.24Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2039  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2039 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c7/P2039.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2039 ;
+        adm:logEntry        bda:LGF86B94DF966E33B5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV707421B43B33DF3F
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NMAE1D961D7EED8E66
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ga ston bla ma/"@bo-x-ewts .
+    
+    bdr:NMF620871DF8EA72C4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen/"@bo-x-ewts .
+    
+    bdr:NTAF57524D6051BFB2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- Stag-lung Bka'-brgyud transmissions"@en .
+    
+    bdr:P2039  a            :Person ;
+        skos:prefLabel      "ga ston bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAF57524D6051BFB2 ;
+        :personEvent        bdr:EV707421B43B33DF3F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAE1D961D7EED8E66 , bdr:NMF620871DF8EA72C4 ;
+        :personTeacherOf    bdr:P1818 .
+}

@@ -1,0 +1,73 @@
+@base          <bdg:P6318> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6318 {
+    bda:LG77B9244B9EF8421B
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-19T18:02:13.442Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P6318  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6318 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "da/P6318.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6318 ;
+        adm:logEntry        bda:LG77B9244B9EF8421B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20A05B939C744478
+        a                   :PersonDeath ;
+        :onYear             "1945"^^xsd:gYear .
+    
+    bdr:EV55DC493542DBBAD6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1489 .
+    
+    bdr:EV6CA3C98D0C692E0C
+        a                   :PersonBirth ;
+        :onYear             "1830"^^xsd:gYear .
+    
+    bdr:NM38B91BEF66DC75F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NM97E0604696BA56D9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang pa grub chen byams pa chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NT6520D98EECDF17DA
+        a                   :Note ;
+        :locationStatement  "p. 382" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:NTE45CD56CA097D99A
+        a                   :Note ;
+        :locationStatement  "p. 127" ;
+        :noteSource         bdr:MW29146 ;
+        :noteText           "noted as a physician: 1830-1945!"@en .
+    
+    bdr:P6318  a            :Person ;
+        skos:prefLabel      "byams pa chos 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6520D98EECDF17DA , bdr:NTE45CD56CA097D99A ;
+        :personEvent        bdr:EV20A05B939C744478 , bdr:EV55DC493542DBBAD6 , bdr:EV6CA3C98D0C692E0C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM38B91BEF66DC75F6 , bdr:NM97E0604696BA56D9 ;
+        :personStudentOf    bdr:P6169 ;
+        :personTeacherOf    bdr:P745 .
+}

@@ -1,0 +1,52 @@
+@base          <bdg:P8909> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8909 {
+    bda:P8909  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8909 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "93/P8909.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8909 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66B2893099A9F659
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1E72308299B79781
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NM471DB71D02371570
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NTD6BB93487C48AD8E
+        a                   :Note ;
+        :locationStatement  "pp. 161-162" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "mentioned as a student of 'dzam thang tshes bcu 01 rin chen grags pa"@en .
+    
+    bdr:P8909  a            :Person ;
+        skos:prefLabel      "dpal 'byor bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD6BB93487C48AD8E ;
+        :personEvent        bdr:EV66B2893099A9F659 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E72308299B79781 , bdr:NM471DB71D02371570 ;
+        :personTeacherOf    bdr:P8910 , bdr:P8922 .
+}

@@ -1,0 +1,91 @@
+@base          <bdg:P4539> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4539 {
+    bda:LG600EBDA557496612
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-27T16:12:58.303Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4539  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4539 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "32/P4539.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4539 ;
+        adm:logEntry        bda:LG600EBDA557496612 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07E0FFB2386A5C18
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EV655764EA147B85C0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1752"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV81F7E018621B77B5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVCCE0BB1D420A5128
+        a                   :PersonBirth ;
+        :onYear             "1672"^^xsd:gYear .
+    
+    bdr:NM11BE592EBE547848
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM5BFA622F9A842570
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rong po dgon chen gdan rabs 11"@bo-x-ewts .
+    
+    bdr:NM6A4800657CCBFC64
+        a                   :PersonTitle ;
+        rdfs:label          "byams chen mkhan po tsho 'du blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMEF502F57DF88EA58
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tsho 'du blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT4097716E223A9FF8
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT87EFFE80D07F0DCD
+        a                   :Note ;
+        :locationStatement  "p. 1393" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTC114721C750F477B
+        a                   :Note ;
+        :locationStatement  "p. 212-214" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NTCF3D876978601EDA
+        a                   :Note ;
+        :noteText           "1752. Came to the khri of Rong-po Thos-bsam-gling."@en .
+    
+    bdr:P4539  a            :Person ;
+        skos:prefLabel      "blo bzang 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4097716E223A9FF8 , bdr:NT87EFFE80D07F0DCD , bdr:NTC114721C750F477B , bdr:NTCF3D876978601EDA ;
+        :personEvent        bdr:EV07E0FFB2386A5C18 , bdr:EV655764EA147B85C0 , bdr:EV81F7E018621B77B5 , bdr:EVCCE0BB1D420A5128 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11BE592EBE547848 , bdr:NM5BFA622F9A842570 , bdr:NM6A4800657CCBFC64 , bdr:NMEF502F57DF88EA58 .
+}

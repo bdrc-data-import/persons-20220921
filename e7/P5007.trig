@@ -1,0 +1,75 @@
+@base          <bdg:P5007> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5007 {
+    bda:LGBAA23FCEEC2CBDB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-21T09:32:13.223Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5007  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5007 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e7/P5007.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5007 ;
+        adm:logEntry        bda:LGBAA23FCEEC2CBDB1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD3341F43B2CE842B
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM0157D89A70A47B34
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes/"@bo-x-ewts .
+    
+    bdr:NM1FF51DF526EA758D
+        a                   :PersonTitle ;
+        rdfs:label          "'brom ye shes/"@bo-x-ewts .
+    
+    bdr:NM4AF98EB049139E06
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon tshang ye shes/"@bo-x-ewts .
+    
+    bdr:NT1EF3EF6D1A013B1C
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 16a6" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "'brom rigs sngags kyi rnal 'byor pa ye shes/"@bo-x-ewts .
+    
+    bdr:NT2B34C3DFBB30A5E0
+        a                   :Note ;
+        :locationStatement  "p. 157" ;
+        :noteSource         bdr:MW19835 ;
+        :noteText           "biobibliography"@en .
+    
+    bdr:NT947125E262CA7AF5
+        a                   :Note ;
+        :locationStatement  "p. 66" ;
+        :noteSource         bdr:MW19856 ;
+        :noteText           "a follower of the 'bri gung bka' brgyud tradition of medicine"@en .
+    
+    bdr:P5007  a            :Person ;
+        skos:prefLabel      "ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1EF3EF6D1A013B1C , bdr:NT2B34C3DFBB30A5E0 , bdr:NT947125E262CA7AF5 ;
+        :personEvent        bdr:EVD3341F43B2CE842B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0157D89A70A47B34 , bdr:NM1FF51DF526EA758D , bdr:NM4AF98EB049139E06 ;
+        :personStudentOf    bdr:P4107 .
+}

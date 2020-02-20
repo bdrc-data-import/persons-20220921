@@ -1,0 +1,57 @@
+@base          <bdg:P2012> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2012 {
+    bda:P2012  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2012 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "62/P2012.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2012 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV256CD04077C4A946
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVC69180807349F49D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4236 .
+    
+    bdr:NM40ADA5F1B8DCD3DF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa tham lha btsun karma rin chen/"@bo-x-ewts .
+    
+    bdr:NMA3ACABA04C2B1241
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma rin chen/"@bo-x-ewts .
+    
+    bdr:NT11284F28DF4EF7D3
+        a                   :Note ;
+        :locationStatement  "v. 2,  f. 173r" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "karma kaM tshang teacher born as the youngest son of the sa tham chos rgyal bsod nams rab brtan; one of the chief disciples of karma pa chos dbyings rdo rje"@en .
+    
+    bdr:P2012  a            :Person ;
+        skos:prefLabel      "karma rin chen/"@bo-x-ewts ;
+        :hasFather          bdr:P2013 ;
+        :isRoot             true ;
+        :note               bdr:NT11284F28DF4EF7D3 ;
+        :personEvent        bdr:EV256CD04077C4A946 , bdr:EVC69180807349F49D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM40ADA5F1B8DCD3DF , bdr:NMA3ACABA04C2B1241 ;
+        :personStudentOf    bdr:P1382 .
+}

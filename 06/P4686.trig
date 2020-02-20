@@ -1,0 +1,68 @@
+@base          <bdg:P4686> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4686 {
+    bda:LG015CD911254F27CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T12:23:57.66Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4686  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4686 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "06/P4686.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4686 ;
+        adm:logEntry        bda:LG015CD911254F27CA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D5EF18D382F1CEC
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVFAC67AD85DA06819
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G468 .
+    
+    bdr:NM66F7A956F1570058
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMBA4B6B135240AFDF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dkar chen kun dga' bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT600123299ADF29E5
+        a                   :Note ;
+        :locationStatement  "p. 98v" ;
+        :noteSource         bdr:MW19844 .
+    
+    bdr:NTF2F6EAF30FF8649C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P4686  a            :Person ;
+        skos:prefLabel      "kun dga' bstan 'dzin/"@bo-x-ewts ;
+        :hasFather          bdr:P4680 ;
+        :hasOlderBrother    bdr:P4684 , bdr:P4685 ;
+        :hasYoungerBrother  bdr:P4687 ;
+        :isRoot             true ;
+        :note               bdr:NT600123299ADF29E5 , bdr:NTF2F6EAF30FF8649C ;
+        :personEvent        bdr:EV3D5EF18D382F1CEC , bdr:EVFAC67AD85DA06819 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM66F7A956F1570058 , bdr:NMBA4B6B135240AFDF .
+}

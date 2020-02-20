@@ -1,0 +1,51 @@
+@base          <bdg:P1935> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1935 {
+    bda:P1935  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1935 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "31/P1935.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1935 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB385BD25ECFF006C
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM5063E1B786491328
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'byung gnas blo gros/"@bo-x-ewts .
+    
+    bdr:NM64AE1713D89A574D
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo gros 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NT1A92A1F1039D31E3
+        a                   :Note ;
+        :locationStatement  "p. 90" ;
+        :noteSource         bdr:MW19816 .
+    
+    bdr:P1935  a            :Person ;
+        skos:prefLabel      "'byung gnas blo gros/"@bo-x-ewts ;
+        :hasSon             bdr:P1856 ;
+        :isRoot             true ;
+        :note               bdr:NT1A92A1F1039D31E3 ;
+        :personEvent        bdr:EVB385BD25ECFF006C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5063E1B786491328 , bdr:NM64AE1713D89A574D .
+}

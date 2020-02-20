@@ -1,0 +1,61 @@
+@base          <bdg:P4248> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4248 {
+    bda:LGFC0F0B563CC09904
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-08-10T11:40:33.576Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year 1810 ?"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4248  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4248 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "8b/P4248.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4248 ;
+        adm:logEntry        bda:LGFC0F0B563CC09904 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBA0C553F17A4F749
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G269 .
+    
+    bdr:EVE738D197E1454A20
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM34F2AA4E89CDD060
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun chos skyong rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9E34381FEBB016E5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thar shul dge 'dun chos skyong rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT805CE50D4AB9EC25
+        a                   :Note ;
+        :noteText           "there are probably two lamas in the thar shul emanation lineage with the name dge 'dun chos skyong rgya mtsho, the first during the 17th century and the second during the 19th century; requires further research"@en .
+    
+    bdr:P4248  a            :Person ;
+        skos:prefLabel      "dge 'dun chos skyong rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT805CE50D4AB9EC25 ;
+        :personEvent        bdr:EVBA0C553F17A4F749 , bdr:EVE738D197E1454A20 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM34F2AA4E89CDD060 , bdr:NM9E34381FEBB016E5 ;
+        :personStudentOf    bdr:P424 , bdr:P8LS12022 .
+}

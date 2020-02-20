@@ -1,0 +1,50 @@
+@base          <bdg:P4250> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4250 {
+    bda:P4250  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4250 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "be/P4250.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4250 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15EEEA6544D56C0B
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM2100315FD5A96838
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ho lo chi/"@bo-x-ewts .
+    
+    bdr:NME2E6C343EEFD52B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thu med rgyal po ho lo chi/"@bo-x-ewts .
+    
+    bdr:NT8FB9208E8705E660
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P4250  a            :Person ;
+        skos:prefLabel      "ho lo chi/"@bo-x-ewts ;
+        :hasSon             bdr:P4249 ;
+        :isRoot             true ;
+        :note               bdr:NT8FB9208E8705E660 ;
+        :personEvent        bdr:EV15EEEA6544D56C0B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2100315FD5A96838 , bdr:NME2E6C343EEFD52B2 .
+}

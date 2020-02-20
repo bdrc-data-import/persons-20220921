@@ -1,0 +1,75 @@
+@base          <bdg:P1KG5004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5004 {
+    bda:LG10DF856079E4E1FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-25T16:42:54.261Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG5E5F938A1F8C070A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-05-05T12:23:40.387Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG958991C07DE6E781
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-30T11:58:06.61Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG5004  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5004 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ac/P1KG5004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5004 ;
+        adm:logEntry        bda:LG10DF856079E4E1FE , bda:LG5E5F938A1F8C070A , bda:LG958991C07DE6E781 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV283FAAD144159936
+        a                   :PersonDeath ;
+        :onYear             "2001"^^xsd:gYear .
+    
+    bdr:EV9BA0E9B0FBB1EFB3
+        a                   :PersonBirth ;
+        :onYear             "1956"^^xsd:gYear .
+    
+    bdr:NM89267CDB8548D631
+        a                   :PersonPersonalName ;
+        rdfs:label          "'gos pad+ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8EE44CE198A2E63C
+        a                   :PersonPersonalName ;
+        rdfs:label          "gzhi ka 'gos pad+ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB67B8AA77E7E695B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC9DC61CF60CE128C
+        a                   :PersonPenName ;
+        rdfs:label          "pad+ma dbang chen/"@bo-x-ewts .
+    
+    bdr:P1KG5004  a         :Person ;
+        skos:prefLabel      "pad+ma rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV283FAAD144159936 , bdr:EV9BA0E9B0FBB1EFB3 ;
+        :personName         bdr:NM89267CDB8548D631 , bdr:NM8EE44CE198A2E63C , bdr:NMB67B8AA77E7E695B , bdr:NMC9DC61CF60CE128C ;
+        :personStudentOf    bdr:P5640 ;
+        :personTeacherOf    bdr:P1KG5003 .
+}

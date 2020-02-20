@@ -1,0 +1,78 @@
+@base          <bdg:P8915> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8915 {
+    bda:LG1227E3CBE2438073
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T15:12:09.452Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGD15DC67D84E4917E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGD50A7AB1A4748632
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T10:21:17.613Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8915  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8915 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "11/P8915.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8915 ;
+        adm:logEntry        bda:LG1227E3CBE2438073 , bda:LGD15DC67D84E4917E , bda:LGD50A7AB1A4748632 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDDC63FB842734B95
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM20B4913325B547B9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Tsechu 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM5BB93DFAB9343353
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma nges don bstan 'phel/"@bo-x-ewts .
+    
+    bdr:NM8E03DE6D1DAC61A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang tshes bcu 07 karma nges don bstan 'phel/"@bo-x-ewts .
+    
+    bdr:NMA026AAE7BE344EE1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang tshes bcu 07"@bo-x-ewts .
+    
+    bdr:NT7B7EF7B3AF4D639B
+        a                   :Note ;
+        :locationStatement  "pp. 164-165" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\ndates: dgung grangs drug cu tsam bzhugs"@en .
+    
+    bdr:P8915  a            :Person ;
+        skos:prefLabel      "karma nges don bstan 'phel/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8914 ;
+        :isRoot             true ;
+        :note               bdr:NT7B7EF7B3AF4D639B ;
+        :personEvent        bdr:EVDDC63FB842734B95 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM20B4913325B547B9 , bdr:NM5BB93DFAB9343353 , bdr:NM8E03DE6D1DAC61A5 , bdr:NMA026AAE7BE344EE1 .
+}

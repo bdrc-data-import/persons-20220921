@@ -1,0 +1,61 @@
+@base          <bdg:P2032> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2032 {
+    bda:P2032  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2032 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "11/P2032.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2032 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV044F8FE353244878
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2608 .
+    
+    bdr:EVE6796D69187AF402
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM2D1588EDD25C3F55
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnas mdo o rgyan mthar phyin/"@bo-x-ewts .
+    
+    bdr:NMDD22C426A04237BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan mthar phyin/"@bo-x-ewts .
+    
+    bdr:NT1B44F5797ECB6967
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW29647 ;
+        :noteText           "noted as one of the four chief disciples of karma chags med; founded in 1657 the monastery of go che dge 'phel chos gling in nang chen"@en .
+    
+    bdr:NT70F724AE2545FAD6
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 173v" ;
+        :noteText           "mention"@en .
+    
+    bdr:P2032  a            :Person ;
+        skos:prefLabel      "o rgyan mthar phyin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1B44F5797ECB6967 , bdr:NT70F724AE2545FAD6 ;
+        :personEvent        bdr:EV044F8FE353244878 , bdr:EVE6796D69187AF402 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D1588EDD25C3F55 , bdr:NMDD22C426A04237BE ;
+        :personStudentOf    bdr:P649 .
+}

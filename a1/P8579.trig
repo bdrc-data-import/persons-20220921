@@ -1,0 +1,72 @@
+@base          <bdg:P8579> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8579 {
+    bda:LGB2D826766E491173
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-07T09:00:48.036Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8579  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8579 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a1/P8579.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8579 ;
+        adm:logEntry        bda:LGB2D826766E491173 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCB5A1AFAA40C7771
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM7B743109A6C47614
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgar chen 05"@bo-x-ewts .
+    
+    bdr:NMA2F28E0CB96C78E8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Garchen 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMA43C19B4D0CEC3CF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin byang chub dbang po/"@bo-x-ewts .
+    
+    bdr:NMD6F79F32743BFD0E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgar chen 05 dkon mchog bstan 'dzin byang chub dbang po/"@bo-x-ewts .
+    
+    bdr:NME1FFE0A1EA82C893
+        a                   :PersonPersonalName ;
+        rdfs:label          "byang chub dbang po/"@bo-x-ewts .
+    
+    bdr:NTB3618BA5A8C3E404
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud master"@en .
+    
+    bdr:P8579  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin byang chub dbang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8578 ;
+        :isRoot             true ;
+        :note               bdr:NTB3618BA5A8C3E404 ;
+        :personEvent        bdr:EVCB5A1AFAA40C7771 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7B743109A6C47614 , bdr:NMA2F28E0CB96C78E8 , bdr:NMA43C19B4D0CEC3CF , bdr:NMD6F79F32743BFD0E , bdr:NME1FFE0A1EA82C893 ;
+        :personTeacherOf    bdr:P2231 .
+}

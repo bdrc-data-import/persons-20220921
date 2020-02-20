@@ -1,0 +1,69 @@
+@base          <bdg:P00EGS1017613> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00EGS1017613 {
+    bda:LG31C9E000295AFD0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-14T12:20:24.555Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, birthplace & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG77188B5EF6FD9EA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T03:06:01.453Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P00EGS1017613
+        a                   adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00EGS1017613 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4b/P00EGS1017613.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00EGS1017613 ;
+        adm:logEntry        bda:LG31C9E000295AFD0A , bda:LG77188B5EF6FD9EA7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4A39309F4BD379E7
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G3170 ;
+        :notAfter           "0699"^^xsd:gYear ;
+        :notBefore          "0600"^^xsd:gYear .
+    
+    bdr:EV7CE0A879CF57FEDF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3170 .
+    
+    bdr:NM7DF5FCFD923EAAE0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lig mi rgya/"@bo-x-ewts .
+    
+    bdr:NMB96CA36497A0CE25
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang zhung rgyal po lig mi rgya/"@bo-x-ewts .
+    
+    bdr:NT21ECC3770E6B7955
+        a                   :Note ;
+        :locationStatement  "p. 134" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "according to this source he was a king of zhang zhung at the time of srong btsan sgam po"@en .
+    
+    bdr:P00EGS1017613
+        a                   :Person ;
+        skos:prefLabel      "lig mi rgya/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT21ECC3770E6B7955 ;
+        :personEvent        bdr:EV4A39309F4BD379E7 , bdr:EV7CE0A879CF57FEDF ;
+        :personName         bdr:NM7DF5FCFD923EAAE0 , bdr:NMB96CA36497A0CE25 .
+}

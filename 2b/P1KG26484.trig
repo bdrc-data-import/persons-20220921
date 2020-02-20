@@ -1,0 +1,51 @@
+@base          <bdg:P1KG26484> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG26484 {
+    bda:LG5889573CEFF3616B
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-01-10T09:40:42.085Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG26484  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG26484 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2b/P1KG26484.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG26484 ;
+        adm:logEntry        bda:LG5889573CEFF3616B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1F90041482BFD692
+        a                   :PersonBirth ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:NMAFDE4E1EA48BAEE8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje tshe dbang /"@bo-x-ewts .
+    
+    bdr:NT9A2170C8DED81DF1
+        a                   :Note ;
+        :noteSource         bdr:MW1KG26279 ;
+        :noteText           "a brief introduction of author available on beginning of the text."@en .
+    
+    bdr:P1KG26484  a        :Person ;
+        skos:prefLabel      "rdo rje tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9A2170C8DED81DF1 ;
+        :personEvent        bdr:EV1F90041482BFD692 ;
+        :personName         bdr:NMAFDE4E1EA48BAEE8 .
+}

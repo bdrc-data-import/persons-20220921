@@ -1,0 +1,110 @@
+@base          <bdg:P398> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P398 {
+    bda:LG0B9D1EB5069E3C79
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-10-09T16:20:42.179Z"^^xsd:dateTime ;
+        adm:logMessage      "Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG2CDE74A1AA1CA692
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-30T16:17:12.63Z"^^xsd:dateTime ;
+        adm:logMessage      "seat, abbot years"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGA80D0AEACF6B0E6B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-09T10:12:38.099Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P398  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P398 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "10/P398.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P398 ;
+        adm:logEntry        bda:LG0B9D1EB5069E3C79 , bda:LG2CDE74A1AA1CA692 , bda:LGA80D0AEACF6B0E6B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV47B786A8ED637711
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1471"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV4A8AECE6B077B998
+        a                   :PersonDeath ;
+        :onYear             "1507"^^xsd:gYear .
+    
+    bdr:EVB163A58F8F8CD2ED
+        a                   :PersonBirth ;
+        :onYear             "1427"^^xsd:gYear .
+    
+    bdr:EVBC79416BF4A509FC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:EVF681802549FFFF84
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1507"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM1CA81D075DC23D2E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab dpal brtsegs/"@bo-x-ewts .
+    
+    bdr:NM5986CF54ECB60B12
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "chab mdo byams pa gling gdan rabs 04"@bo-x-ewts .
+    
+    bdr:NMA288226E068DD68D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje drung shes rab dpal brtsegs/"@bo-x-ewts .
+    
+    bdr:NT79734839F15D2151
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTAFCB9EB4F608475A
+        a                   :Note ;
+        :locationStatement  "p. 291" ;
+        :noteSource         bdr:MW00KG01519 .
+    
+    bdr:NTD5C045CF0D32EED1
+        a                   :Note ;
+        :locationStatement  "p. 216" ;
+        :noteSource         bdr:MW19804 .
+    
+    bdr:NTE149851188637BC9
+        a                   :Note ;
+        :locationStatement  "p. 79-81" ;
+        :noteSource         bdr:MW1KG3372 ;
+        :noteText           "He served as abbot of chab mdo monastery for 37 years"@en .
+    
+    bdr:P398  a             :Person ;
+        skos:prefLabel      "shes rab dpal brtsegs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT79734839F15D2151 , bdr:NTAFCB9EB4F608475A , bdr:NTD5C045CF0D32EED1 , bdr:NTE149851188637BC9 ;
+        :personEvent        bdr:EV47B786A8ED637711 , bdr:EV4A8AECE6B077B998 , bdr:EVB163A58F8F8CD2ED , bdr:EVBC79416BF4A509FC , bdr:EVF681802549FFFF84 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1CA81D075DC23D2E , bdr:NM5986CF54ECB60B12 , bdr:NMA288226E068DD68D ;
+        :personStudentOf    bdr:P2CZ9156 ;
+        :personTeacherOf    bdr:P5552 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sherab-Peltsek/6373"^^xsd:anyURI .
+}

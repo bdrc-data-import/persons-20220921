@@ -1,0 +1,61 @@
+@base          <bdg:P6700> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6700 {
+    bda:P6700  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6700 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a5/P6700.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6700 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4875C15537D72EAA
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV56199EE902E97026
+        a                   :PersonLeavesOffice ;
+        :onYear             "1914"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV5924811491F742A1
+        a                   :PersonAssumesOffice ;
+        :onYear             "1904"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM1A6558A04A529AF6
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe brtan dbang phyug, gsar byung /"@bo-x-ewts .
+    
+    bdr:NMDCAB793EB4B8DE22
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gsar byung tshe brtan dbang phyug"@bo-x-ewts .
+    
+    bdr:NT4F881B54AC612A28
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1904-1914"@en .
+    
+    bdr:P6700  a            :Person ;
+        skos:prefLabel      "gsar byung tshe brtan dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F881B54AC612A28 ;
+        :personEvent        bdr:EV4875C15537D72EAA , bdr:EV56199EE902E97026 , bdr:EV5924811491F742A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1A6558A04A529AF6 , bdr:NMDCAB793EB4B8DE22 .
+}

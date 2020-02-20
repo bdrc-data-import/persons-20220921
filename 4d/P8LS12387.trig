@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12387> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12387 {
+    bda:LG2143C2A107697DAD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T11:05:18.165Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12387  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12387 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4d/P8LS12387.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12387 ;
+        adm:logEntry        bda:LG2143C2A107697DAD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB83900F80A6BE861
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVF2F649F9E18212F2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM3D759539D3025318
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nam mkha'"@bo-x-ewts .
+    
+    bdr:NMC68A715C17D1D90E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 27"@bo-x-ewts .
+    
+    bdr:NT6470EA06E355A12B
+        a                   :Note ;
+        :locationStatement  "p. 290" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12387  a        :Person ;
+        skos:prefLabel      "blo bzang nam mkha'"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6470EA06E355A12B ;
+        :personEvent        bdr:EVB83900F80A6BE861 , bdr:EVF2F649F9E18212F2 ;
+        :personName         bdr:NM3D759539D3025318 , bdr:NMC68A715C17D1D90E .
+}

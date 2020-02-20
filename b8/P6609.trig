@@ -1,0 +1,68 @@
+@base          <bdg:P6609> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6609 {
+    bda:LGB5AD1579E9D7FA81
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-10T15:30:26.08Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p707"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGE86F2CDD48E75474
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-21T10:36:04.983Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrew P6609 in favor of P707, changed relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6609  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6609 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b8/P6609.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6609 ;
+        adm:logEntry        bda:LGB5AD1579E9D7FA81 , bda:LGE86F2CDD48E75474 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P707 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV86AB601CC5640206
+        a                   :PersonDeath ;
+        :onYear             "1924"^^xsd:gYear .
+    
+    bdr:EVAC42D1DCD2F72A51
+        a                   :PersonBirth ;
+        :onYear             "1882"^^xsd:gYear .
+    
+    bdr:NM1108708326C9BDE6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bdud 'joms gter sras dri med 'od zer/"@bo-x-ewts .
+    
+    bdr:NM9F30A6E177EFEEF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dri med 'od zer/"@bo-x-ewts .
+    
+    bdr:NTB215774BE7C78E9C
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P707"@en .
+    
+    bdr:P6609  a            :Person ;
+        skos:prefLabel      "dri med 'od zer/"@bo-x-ewts ;
+        :hasFather          bdr:P705 ;
+        :isRoot             true ;
+        :note               bdr:NTB215774BE7C78E9C ;
+        :personEvent        bdr:EV86AB601CC5640206 , bdr:EVAC42D1DCD2F72A51 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1108708326C9BDE6 , bdr:NM9F30A6E177EFEEF7 ;
+        :personStudentOf    bdr:P705 .
+}

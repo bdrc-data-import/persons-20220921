@@ -1,0 +1,50 @@
+@base          <bdg:P4210> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4210 {
+    bda:P4210  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4210 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b2/P4210.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4210 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA2DA6D39EAAA315E
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM5B7009F853F88993
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT42D0011E92D3A152
+        a                   :Note ;
+        :locationStatement  "p. 1826" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTF5AFC2A176F7ECA0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Later Translators"@en .
+    
+    bdr:P4210  a            :Person ;
+        skos:prefLabel      "bsod nams rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT42D0011E92D3A152 , bdr:NTF5AFC2A176F7ECA0 ;
+        :personEvent        bdr:EVA2DA6D39EAAA315E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5B7009F853F88993 .
+}

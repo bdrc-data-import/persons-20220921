@@ -1,0 +1,95 @@
+@base          <bdg:P6610> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6610 {
+    bda:LG319F159A74A9C4B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-20T16:06:31.433Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG55469734439A2BE2
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-20T04:12:23.705Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG737481C2F2FAAE94
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-21T11:16:13.118Z"^^xsd:dateTime ;
+        adm:logMessage      "changed kin relation"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGDE8F750F8B45E8DD
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-07-21T10:48:55.018Z"^^xsd:dateTime ;
+        adm:logMessage      "cleanup incarnationOf"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGEBBA9CBC90BEBCD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-20T15:35:11.208Z"^^xsd:dateTime ;
+        adm:logMessage      "added relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6610  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6610 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "8c/P6610.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6610 ;
+        adm:logEntry        bda:LG319F159A74A9C4B0 , bda:LG55469734439A2BE2 , bda:LG737481C2F2FAAE94 , bda:LGDE8F750F8B45E8DD , bda:LGEBBA9CBC90BEBCD4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6B295F565100F3A8
+        a                   :PersonBirth ;
+        :onYear             "1904"^^xsd:gYear .
+    
+    bdr:EVE2E53E13773824A1
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:NM3943D0A0FA7E6B9A
+        a                   :PersonGterStonTitle ;
+        rdfs:label          "rig 'dzin nus ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NM501CE1CFB4433BDC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NMF4FA9DD834DA93C1
+        a                   :PersonPersonalName ;
+        rdfs:label          "nus ldan rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF982A0092C5FD97D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzong gter kun bzang nyi ma/"@bo-x-ewts .
+    
+    bdr:NT25A825D374E148AD
+        a                   :Note ;
+        :locationStatement  "p. 126" ;
+        :noteSource         bdr:MW29146 ;
+        :noteText           "rdzong kun bzang nyi ma (1904-1958)"@en .
+    
+    bdr:P6610  a            :Person ;
+        skos:prefLabel      "kun bzang nyi ma/"@bo-x-ewts ;
+        :hasGrandfather     bdr:P705 ;
+        :incarnationSpeech  bdr:P705 ;
+        :isRoot             true ;
+        :note               bdr:NT25A825D374E148AD ;
+        :personEvent        bdr:EV6B295F565100F3A8 , bdr:EVE2E53E13773824A1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3943D0A0FA7E6B9A , bdr:NM501CE1CFB4433BDC , bdr:NMF4FA9DD834DA93C1 , bdr:NMF982A0092C5FD97D ;
+        :personTeacherOf    bdr:P10653 , bdr:P2MS12422 .
+}

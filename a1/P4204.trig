@@ -1,0 +1,65 @@
+@base          <bdg:P4204> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4204 {
+    bda:P4204  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4204 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "a1/P4204.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4204 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D636E3AE68D1C49
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G436 .
+    
+    bdr:EV52BCCC07F707D0AE
+        a                   :PersonDeath ;
+        :onYear             "1407"^^xsd:gYear .
+    
+    bdr:EVAA3462869F8E24EE
+        a                   :PersonBirth ;
+        :onYear             "1352"^^xsd:gYear .
+    
+    bdr:NM3C71C87117EEAE19
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams bkra shis/"@bo-x-ewts .
+    
+    bdr:NMA4226CEA2A898DA7
+        a                   :PersonTitle ;
+        rdfs:label          "lha khang bla brang 03 bsod nams bkra shis/"@bo-x-ewts .
+    
+    bdr:NMD9BBCDF4600F85E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya slob dpon bsod nams bkra shis/"@bo-x-ewts .
+    
+    bdr:NT5C044BE7FE20B8BD
+        a                   :Note ;
+        :locationStatement  "p. 1805" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT6767A0FEB14DEA3A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P4204  a            :Person ;
+        skos:prefLabel      "bsod nams bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C044BE7FE20B8BD , bdr:NT6767A0FEB14DEA3A ;
+        :personEvent        bdr:EV1D636E3AE68D1C49 , bdr:EV52BCCC07F707D0AE , bdr:EVAA3462869F8E24EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3C71C87117EEAE19 , bdr:NMA4226CEA2A898DA7 , bdr:NMD9BBCDF4600F85E3 .
+}

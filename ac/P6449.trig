@@ -1,0 +1,80 @@
+@base          <bdg:P6449> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6449 {
+    bda:LG9FDA853BFAF4F641
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-05T10:01:43.737Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6449  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6449 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ac/P6449.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6449 ;
+        adm:logEntry        bda:LG9FDA853BFAF4F641 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5C92A7E01F4BFC52
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVE9F0777FF5D1E6FD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1709 .
+    
+    bdr:NM2252C3B8F99CCDA4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pa kru'u bla ma blo bzang 'od zer/"@bo-x-ewts .
+    
+    bdr:NM2708BB6ADBFF2EBE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'od zer/"@bo-x-ewts .
+    
+    bdr:NM36F7FCF365D77912
+        a                   :PersonPersonalName ;
+        rdfs:label          "many+dzu shrI blo bzang 'od zer/"@bo-x-ewts .
+    
+    bdr:NM7EA8205149E8065C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "ser dris ma Ni pa 02"@bo-x-ewts .
+    
+    bdr:NMB0E70E1D6AF96CE6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Serdrima Nipa 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT858F325E4C59B4A6
+        a                   :Note ;
+        :locationStatement  "p. 334" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "rdo bis sa char 'khrungs/ ba yan ser dris dgon par bzhugs nas bka' gdams gtsang mai rnam thar lhur bzhes gnang ba zhig yin/"@en .
+    
+    bdr:NTE13F2D0585D4072A
+        a                   :Note ;
+        :locationStatement  "p. 300" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:P6449  a            :Person ;
+        skos:prefLabel      "blo bzang 'od zer/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13186 ;
+        :isRoot             true ;
+        :note               bdr:NT858F325E4C59B4A6 , bdr:NTE13F2D0585D4072A ;
+        :personEvent        bdr:EV5C92A7E01F4BFC52 , bdr:EVE9F0777FF5D1E6FD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2252C3B8F99CCDA4 , bdr:NM2708BB6ADBFF2EBE , bdr:NM36F7FCF365D77912 , bdr:NM7EA8205149E8065C , bdr:NMB0E70E1D6AF96CE6 .
+}

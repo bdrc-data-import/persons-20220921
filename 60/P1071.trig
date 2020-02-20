@@ -1,0 +1,50 @@
+@base          <bdg:P1071> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1071 {
+    bda:P1071  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1071 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "60/P1071.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1071 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV43DB56A4CBE93DCE
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM001DA1D5FB4AC25C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM4C440D40177D0E3C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gnyan tshul khrims rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE402B846E99A2AE6
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1071  a            :Person ;
+        skos:prefLabel      "tshul khrims rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE402B846E99A2AE6 ;
+        :personEvent        bdr:EV43DB56A4CBE93DCE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM001DA1D5FB4AC25C , bdr:NM4C440D40177D0E3C ;
+        :personStudentOf    bdr:P1048 .
+}

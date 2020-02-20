@@ -1,0 +1,50 @@
+@base          <bdg:P4142> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4142 {
+    bda:P4142  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4142 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "61/P4142.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4142 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4D3C0804AECB887F
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM4CFBC5E37914E970
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas grub don yod dpal ba/"@bo-x-ewts .
+    
+    bdr:NME861CE828CF407F7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don yod dpal ba/"@bo-x-ewts .
+    
+    bdr:NT6319EAAC1638A46A
+        a                   :Note ;
+        :noteText           "tibetan scholar who wrote a lta khrid to madhyamika philosophy"@en .
+    
+    bdr:P4142  a            :Person ;
+        skos:prefLabel      "don yod dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6319EAAC1638A46A ;
+        :personEvent        bdr:EV4D3C0804AECB887F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4CFBC5E37914E970 , bdr:NME861CE828CF407F7 ;
+        :personTeacherOf    bdr:P4141 .
+}

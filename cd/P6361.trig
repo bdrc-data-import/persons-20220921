@@ -1,0 +1,59 @@
+@base          <bdg:P6361> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6361 {
+    bda:P6361  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6361 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "cd/P6361.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6361 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4627CD7D5E80382A
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV8FC1723E63C41FD4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM26640821FD44EBC7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brgya zhag bla ma po tsong blo gsal/"@bo-x-ewts .
+    
+    bdr:NM7786E8031F540C2E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gsal/"@bo-x-ewts .
+    
+    bdr:NMDBCD7E4DD59773D3
+        a                   :PersonTitle ;
+        rdfs:label          "po tsong blo gsal/"@bo-x-ewts .
+    
+    bdr:NT81EF10857E252A39
+        a                   :Note ;
+        :locationStatement  "p. 416" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "rnying ma teacher of the dpal yul tradition\nsource includes biographical sketch"@en .
+    
+    bdr:P6361  a            :Person ;
+        skos:prefLabel      "blo gsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT81EF10857E252A39 ;
+        :personEvent        bdr:EV4627CD7D5E80382A , bdr:EV8FC1723E63C41FD4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM26640821FD44EBC7 , bdr:NM7786E8031F540C2E , bdr:NMDBCD7E4DD59773D3 .
+}

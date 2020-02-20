@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12582> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12582 {
+    bda:LG1BD8D91CDBA0F224
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-29T12:17:32.32Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG1CDB1205FB581F4F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG3C03BA911E225386
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T10:42:43.044Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12582  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12582 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e1/P8LS12582.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12582 ;
+        adm:logEntry        bda:LG1BD8D91CDBA0F224 , bda:LG1CDB1205FB581F4F , bda:LG3C03BA911E225386 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1048240E70B311F4
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12822 .
+    
+    bdr:NM306871D3E2F9DCA9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsawor Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM8DC7C51D6AB6CC97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas 'od zer/"@bo-x-ewts .
+    
+    bdr:NMC7B26A1625FC2E6D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rtsa 'bor sprul sku 01"@bo-x-ewts .
+    
+    bdr:NT4D4EA074263ADCF2
+        a                   :Note ;
+        :locationStatement  "p. 314" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "incrnation lineage of uncertain sectarian affiliation, the seat of which seems to have been located in the gnyal region of central tibet\n\nrgya'i tang tser gsal yang gser snyan tu mi 'gro gras\nrtsa 'bor sprul sku'i skye phreng\n1) dang po ni/ sangs rgyas 'od zer/ lhun rtse khul skyabs smad du 'khrungs/ dgung lo nga drug la gshegs/"@en .
+    
+    bdr:P8LS12582  a        :Person ;
+        skos:prefLabel      "sangs rgyas 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4D4EA074263ADCF2 ;
+        :personEvent        bdr:EV1048240E70B311F4 ;
+        :personName         bdr:NM306871D3E2F9DCA9 , bdr:NM8DC7C51D6AB6CC97 , bdr:NMC7B26A1625FC2E6D .
+}

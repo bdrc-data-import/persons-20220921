@@ -1,0 +1,83 @@
+@base          <bdg:P5640> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5640 {
+    bda:LG047422FC5F55C823
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-04T13:55:56.386Z"^^xsd:dateTime ;
+        adm:logMessage      "added teachers and dates"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGABF64F5F197FCA16
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T12:06:35.541Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5640  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5640 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "b2/P5640.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5640 ;
+        adm:logEntry        bda:LG047422FC5F55C823 , bda:LGABF64F5F197FCA16 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3EEFEF85DE1BD6BF
+        a                   :PersonDeath ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:EV5BEA52EBE1FFAFC8
+        a                   :PersonBirth ;
+        :onYear             "1938"^^xsd:gYear .
+    
+    bdr:EVF5288EDB18524DD5
+        a                   :PersonOccupiesSeat .
+    
+    bdr:NM24D2B09B46005CEA
+        a                   :PersonPersonalName ;
+        rdfs:label          "khenchen palden sherab"@en .
+    
+    bdr:NM2C58B3F0E41A7EB0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan shes rab/"@bo-x-ewts .
+    
+    bdr:NM4BF8EFC084CA02A3
+        a                   :PersonTitle ;
+        rdfs:label          "mkhan chen dpal ldan shes rab/"@bo-x-ewts .
+    
+    bdr:NM595ABBA4B5EF1970
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgo chen mkhan po dpal ldan shes rab/"@bo-x-ewts .
+    
+    bdr:NT0521112EEE6AC507
+        a                   :Note ;
+        :noteText           "1941 is date of birth in records"@en .
+    
+    bdr:NT4248E48ED097C8D3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P5640  a            :Person ;
+        skos:prefLabel      "dpal ldan shes rab/"@bo-x-ewts ;
+        :hasYoungerBrother  bdr:P5639 ;
+        :isRoot             true ;
+        :note               bdr:NT0521112EEE6AC507 , bdr:NT4248E48ED097C8D3 ;
+        :personEvent        bdr:EV3EEFEF85DE1BD6BF , bdr:EV5BEA52EBE1FFAFC8 , bdr:EVF5288EDB18524DD5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM24D2B09B46005CEA , bdr:NM2C58B3F0E41A7EB0 , bdr:NM4BF8EFC084CA02A3 , bdr:NM595ABBA4B5EF1970 ;
+        :personStudentOf    bdr:P1KG5755 , bdr:P736 , bdr:P740 , bdr:P748 ;
+        :personTeacherOf    bdr:P1KG5004 .
+}

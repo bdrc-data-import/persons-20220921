@@ -1,0 +1,63 @@
+@base          <bdg:P8LS13237> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13237 {
+    bda:LG9D7170C7B769B39D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T14:23:53.375Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13237  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13237 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d3/P8LS13237.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13237 ;
+        adm:logEntry        bda:LG9D7170C7B769B39D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV575682AB8694BE86
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6311A473695E91D3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:NMB944CEC84F991CA7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bstan 'dzin nam mkha' bzang po/"@bo-x-ewts .
+    
+    bdr:NMC956446F047878E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' bzang po/"@bo-x-ewts .
+    
+    bdr:NMF9178CAFFBC30B6F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 22"@bo-x-ewts .
+    
+    bdr:NT6BFB2D7CD83A6BEB
+        a                   :Note ;
+        :noteText           "jo nang gnas bshad, f. 8v"@en .
+    
+    bdr:P8LS13237  a        :Person ;
+        skos:prefLabel      "nam mkha' bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6BFB2D7CD83A6BEB ;
+        :personEvent        bdr:EV575682AB8694BE86 , bdr:EV6311A473695E91D3 ;
+        :personName         bdr:NMB944CEC84F991CA7 , bdr:NMC956446F047878E9 , bdr:NMF9178CAFFBC30B6F .
+}

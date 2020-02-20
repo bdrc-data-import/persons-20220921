@@ -1,0 +1,55 @@
+@base          <bdg:P5742> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5742 {
+    bda:P5742  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5742 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9f/P5742.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5742 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV00D02D6A9489D55F
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVD081DB6008F760CA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G245 .
+    
+    bdr:NM35D46516DC8F4042
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha dbang blo gros/"@bo-x-ewts .
+    
+    bdr:NMF5E5B2022697A404
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyed tshal mkhan po lha dbang blo gros/"@bo-x-ewts .
+    
+    bdr:NT3AA4D49C95C36F4E
+        a                   :Note ;
+        :noteText           "sa skya scholar"@en .
+    
+    bdr:P5742  a            :Person ;
+        skos:prefLabel      "lha dbang blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3AA4D49C95C36F4E ;
+        :personEvent        bdr:EV00D02D6A9489D55F , bdr:EVD081DB6008F760CA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35D46516DC8F4042 , bdr:NMF5E5B2022697A404 ;
+        :personStudentOf    bdr:P815 ;
+        :personTeacherOf    bdr:P5743 .
+}

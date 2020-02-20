@@ -1,0 +1,71 @@
+@base          <bdg:P1KG863> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG863 {
+    bda:LG602BC155E497741F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T13:03:44.391Z"^^xsd:dateTime ;
+        adm:logMessage      "added brrth date and zhung wun pin, 熊文彬"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG96D21A9E291F260C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T13:14:46.403Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGD7D9A0DB8878EEB6
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T15:07:53.369Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG863  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG863 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b4/P1KG863.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG863 ;
+        adm:logEntry        bda:LG602BC155E497741F , bda:LG96D21A9E291F260C , bda:LGD7D9A0DB8878EEB6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF71EAA0F0D8EBE25
+        a                   :PersonBirth ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM0CC061D1E0636244
+        a                   :PersonPrimaryName ;
+        rdfs:label          "熊文彬"@zh-hans .
+    
+    bdr:NM8EF850297D657BE2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "xiong wen bin"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NMCA9C1EA3F3055D80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhung wun pin/"@bo-x-ewts .
+    
+    bdr:NT60118D5CEB7A537F
+        a                   :Note ;
+        :noteSource         bdr:MW1KG862 ;
+        :noteText           "author of bod ljongs kyi sgyu rtsal"@en .
+    
+    bdr:P1KG863  a          :Person ;
+        skos:prefLabel      "zhung wun pin/"@bo-x-ewts , "熊文彬"@zh-hans ;
+        :isRoot             true ;
+        :note               bdr:NT60118D5CEB7A537F ;
+        :personEvent        bdr:EVF71EAA0F0D8EBE25 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CC061D1E0636244 , bdr:NM8EF850297D657BE2 , bdr:NMCA9C1EA3F3055D80 .
+}

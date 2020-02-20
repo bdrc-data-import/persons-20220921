@@ -1,0 +1,68 @@
+@base          <bdg:P3723> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3723 {
+    bda:P3723  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3723 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8c/P3723.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3723 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07EA1A6A51C326DD
+        a                   :PersonDeath ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:EV5F9DE0B988808AD1
+        a                   :PersonBirth ;
+        :onYear             "1860"^^xsd:gYear .
+    
+    bdr:EV811EF36EA67310FA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G415 .
+    
+    bdr:NM7E2CF5AA29612069
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor chen pa ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB3A84D62348EF448
+        a                   :PersonTitle ;
+        rdfs:label          "a ru hor chen pa ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBBE0256355971951
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT334274EDD5D8C976
+        a                   :Note ;
+        :noteSource         bdr:MW25992 ;
+        :noteText           "vol. 1. contains a brief biography"@en .
+    
+    bdr:NT576BB7F89F09F4C1
+        a                   :Note ;
+        :locationStatement  "p. 116" ;
+        :noteSource         bdr:MW19830 ;
+        :noteText           "biography"@en .
+    
+    bdr:P3723  a            :Person ;
+        skos:prefLabel      "ye shes rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT334274EDD5D8C976 , bdr:NT576BB7F89F09F4C1 ;
+        :personEvent        bdr:EV07EA1A6A51C326DD , bdr:EV5F9DE0B988808AD1 , bdr:EV811EF36EA67310FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7E2CF5AA29612069 , bdr:NMB3A84D62348EF448 , bdr:NMBBE0256355971951 ;
+        :personTeacherOf    bdr:P2069 , bdr:P2071 .
+}

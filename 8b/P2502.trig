@@ -1,0 +1,50 @@
+@base          <bdg:P2502> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2502 {
+    bda:P2502  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2502 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "8b/P2502.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2502 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB39CF1EDA0B9DFB2
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM6B86DD5E1C32070B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NM750D07201E31FCAB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge slong dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NT12EBCB8164B736F4
+        a                   :Note ;
+        :noteText           "dge lugs teacher, probably from a mdo"@en .
+    
+    bdr:P2502  a            :Person ;
+        skos:prefLabel      "dkon mchog seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT12EBCB8164B736F4 ;
+        :personEvent        bdr:EVB39CF1EDA0B9DFB2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6B86DD5E1C32070B , bdr:NM750D07201E31FCAB ;
+        :personTeacherOf    bdr:P2500 .
+}

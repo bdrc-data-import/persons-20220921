@@ -1,0 +1,68 @@
+@base          <bdg:P2KG210033> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG210033 {
+    bda:LGC2116D4FDD41335C
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-05T12:52:29.08Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG210033  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG210033 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/P2KG210033.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG210033 ;
+        adm:logEntry        bda:LGC2116D4FDD41335C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3813A72131507368
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3278 .
+    
+    bdr:EV7D2D9016D983C517
+        a                   :PersonDeath .
+    
+    bdr:EVBA638C8CD02FA7D2
+        a                   :PersonBirth ;
+        :onYear             "1947"^^xsd:gYear .
+    
+    bdr:NM42E8D55B018C4212
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan dam chos bstan bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM49B2EF5D39D88885
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya nag pa 04 yon tan dam chos bstan bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NME13658027FE85FF1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rgya nag pa 04"@bo-x-ewts .
+    
+    bdr:NT9F2C8C7FD02B6A62
+        a                   :Note ;
+        :locationStatement  "pp. 146-211" ;
+        :noteSource         bdr:MW2KG209788 ;
+        :noteText           "Biography"@en .
+    
+    bdr:P2KG210033  a       :Person ;
+        skos:prefLabel      "yon tan dam chos bstan bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2KG210032 ;
+        :isRoot             true ;
+        :note               bdr:NT9F2C8C7FD02B6A62 ;
+        :personEvent        bdr:EV3813A72131507368 , bdr:EV7D2D9016D983C517 , bdr:EVBA638C8CD02FA7D2 ;
+        :personName         bdr:NM42E8D55B018C4212 , bdr:NM49B2EF5D39D88885 , bdr:NME13658027FE85FF1 .
+}

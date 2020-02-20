@@ -1,0 +1,91 @@
+@base          <bdg:P912> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P912 {
+    bda:LG3086554BDEC03518
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-21T16:26:06.897Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD65FE2B7C817D406
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T14:21:10.427Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P912  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P912 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "5c/P912.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P912 ;
+        adm:logEntry        bda:LG3086554BDEC03518 , bda:LGD65FE2B7C817D406 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusEditing .
+    
+    bdr:EV371CEF03638B833A
+        a                   :PersonBirth ;
+        :notAfter           "1178"^^xsd:gYear ;
+        :notBefore          "1177"^^xsd:gYear .
+    
+    bdr:EV84040B284E37CC88
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3582 ;
+        :onYear             "1211"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA6A3ED4738D53BF2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G44 .
+    
+    bdr:EVF37C036E4A6E0E7F
+        a                   :PersonDeath ;
+        :onYear             "1237"^^xsd:gYear .
+    
+    bdr:NM1E1B899F0D51FC64
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dar ma seng+ge"@bo-x-ewts .
+    
+    bdr:NM46352B436C8F1B77
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbon ras dar ma seng+ge"@bo-x-ewts .
+    
+    bdr:NM7BAD0928FA586785
+        a                   :PersonTitle ;
+        rdfs:label          "sangs rgyas dbon chen ras pa dar ma seng+ge"@bo-x-ewts .
+    
+    bdr:NT7098E508507117D6
+        a                   :Note ;
+        :locationStatement  "p. 2284, 2287" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1211. 'brug pa dbon ras dharma seng+ge ra lung gi gdan sar phebs\n1237. 'brug pa dbon ras dharma seng+ge gshegs"@en .
+    
+    bdr:NTAF3EEDF3ED802E4C
+        a                   :Note ;
+        :noteText           "'brug pa bka' brgyud kyi rtsa ba'i brgyud 'dzin/"@bo-x-ewts .
+    
+    bdr:P912  a             :Person ;
+        skos:prefLabel      "dar ma seng+ge"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P4473 ;
+        :hasUncle           bdr:P909 ;
+        :isRoot             true ;
+        :note               bdr:NT7098E508507117D6 , bdr:NTAF3EEDF3ED802E4C ;
+        :personEvent        bdr:EV371CEF03638B833A , bdr:EV84040B284E37CC88 , bdr:EVA6A3ED4738D53BF2 , bdr:EVF37C036E4A6E0E7F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E1B899F0D51FC64 , bdr:NM46352B436C8F1B77 , bdr:NM7BAD0928FA586785 ;
+        :personStudentOf    bdr:P909 ;
+        :personTeacherOf    bdr:P2090 , bdr:P913 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Wonre-Darma-Sengge/11898"^^xsd:anyURI .
+}

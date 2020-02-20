@@ -1,0 +1,78 @@
+@base          <bdg:P2710> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2710 {
+    bda:LG36D3FC4C7A259085
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-11-26T07:42:20.968Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year and info on writings"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG455D72B9C0FDF866
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-11-30T18:24:39.437Z"^^xsd:dateTime ;
+        adm:logMessage      "published after dragging from restore"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2710  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2710 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "4b/P2710.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2710 ;
+        adm:logEntry        bda:LG36D3FC4C7A259085 , bda:LG455D72B9C0FDF866 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B3C5F575F833D45
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G35 .
+    
+    bdr:EV67B0D405BC6A647C
+        a                   :PersonBirth ;
+        :onYear             "1835"^^xsd:gYear .
+    
+    bdr:NM1A41A2431AF1BEF9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "karma mkhan chen karma rat+na/"@bo-x-ewts .
+    
+    bdr:NM1DF5485ECE2E7B2F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM74E14B381B6AA56E
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma rat+na"@sa-x-ewts .
+    
+    bdr:NMDCB36E727432F6EC
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma rin chen dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT54FE229DB3FD5DE4
+        a                   :Note ;
+        :noteText           "there exists 5 more volumes of the collected works"@en .
+    
+    bdr:NTE48F379A2D41E609
+        a                   :Note ;
+        :noteText           "seat was lho karma dgon"@en .
+    
+    bdr:P2710  a            :Person ;
+        skos:prefLabel      "rin chen dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT54FE229DB3FD5DE4 , bdr:NTE48F379A2D41E609 ;
+        :personEvent        bdr:EV0B3C5F575F833D45 , bdr:EV67B0D405BC6A647C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1A41A2431AF1BEF9 , bdr:NM1DF5485ECE2E7B2F , bdr:NM74E14B381B6AA56E , bdr:NMDCB36E727432F6EC ;
+        :personTeacherOf    bdr:P2707 .
+}

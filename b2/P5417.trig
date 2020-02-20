@@ -1,0 +1,74 @@
+@base          <bdg:P5417> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5417 {
+    bda:LG2BCDACA48AD1EE4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T12:21:26.077Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5417  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5417 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b2/P5417.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5417 ;
+        adm:logEntry        bda:LG2BCDACA48AD1EE4C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV023E67F8E7F9CCD4
+        a                   :PersonBirth ;
+        :onYear             "1895"^^xsd:gYear .
+    
+    bdr:EV5169619CBC6040AF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:EV69357F02EAB08603
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVFDE93563DA21C3E7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM1A0FBDB6006B0954
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor sprul sku 05 'jam dbyangs mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM73D57EEE5DC8CA78
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 43"@bo-x-ewts .
+    
+    bdr:NMA4E8898D1E60B350
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTFCA195C201CC4F9B
+        a                   :Note ;
+        :locationStatement  "pp. 394, 440, 441" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "dge lugs  master from shis tshang in a mdo ; one of the hor sprul sku; 43rd abbot of shis tshang"@en .
+    
+    bdr:P5417  a            :Person ;
+        skos:prefLabel      "'jam dbyangs mkhas grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFCA195C201CC4F9B ;
+        :personEvent        bdr:EV023E67F8E7F9CCD4 , bdr:EV5169619CBC6040AF , bdr:EV69357F02EAB08603 , bdr:EVFDE93563DA21C3E7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1A0FBDB6006B0954 , bdr:NM73D57EEE5DC8CA78 , bdr:NMA4E8898D1E60B350 .
+}

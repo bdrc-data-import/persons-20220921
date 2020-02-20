@@ -1,0 +1,52 @@
+@base          <bdg:P10160> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10160 {
+    bda:P10160  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10160 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "48/P10160.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10160 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A15D2DF297A8CE5
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM2AE66206F194A8D6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "spal ston/"@bo-x-ewts .
+    
+    bdr:NMBAE0051E7A03FB16
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ne tshe spal ston/"@bo-x-ewts .
+    
+    bdr:NTE1C9C412FB93B47F
+        a                   :Note ;
+        :locationStatement  "p. 50" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "one of the students of sa chen kun dga' snying po; he belongs to the group \"phyogs kyi mkhas grub bzhi\""@en .
+    
+    bdr:P10160  a           :Person ;
+        skos:prefLabel      "ne tshe spal ston/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE1C9C412FB93B47F ;
+        :personEvent        bdr:EV0A15D2DF297A8CE5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2AE66206F194A8D6 , bdr:NMBAE0051E7A03FB16 ;
+        :personStudentOf    bdr:P1615 .
+}

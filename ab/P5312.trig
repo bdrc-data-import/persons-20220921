@@ -1,0 +1,61 @@
+@base          <bdg:P5312> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5312 {
+    bda:LGDAFF1E5F39A8F6CB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:03:40.315Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5312  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5312 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ab/P5312.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5312 ;
+        adm:logEntry        bda:LGDAFF1E5F39A8F6CB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDDB799DDA4828BC7
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM93BC1D4C4965B365
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NMAB62C0F258E1EA02
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sing ga la pa chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NT53F825798868A7FF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:NTC93D4BF420C003C3
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 513" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:P5312  a            :Person ;
+        skos:prefLabel      "chos kyi nyin byed/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT53F825798868A7FF , bdr:NTC93D4BF420C003C3 ;
+        :personEvent        bdr:EVDDB799DDA4828BC7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM93BC1D4C4965B365 , bdr:NMAB62C0F258E1EA02 .
+}

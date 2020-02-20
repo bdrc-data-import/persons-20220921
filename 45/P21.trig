@@ -1,0 +1,99 @@
+@base          <bdg:P21> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P21 {
+    bda:LG513CBF0DF5E6B225
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T15:22:42.105Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGDE5D51B4B4D08B32
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-21T11:42:53.913Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P21  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P21 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "45/P21.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P21 ;
+        adm:logEntry        bda:LG513CBF0DF5E6B225 , bda:LGDE5D51B4B4D08B32 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C842D2FBA743AED
+        a                   :PersonDeath ;
+        :onYear             "1833"^^xsd:gYear .
+    
+    bdr:EV0EA77F8D1BAE78BF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G162 ;
+        :onYear             "1809"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8CF500260986AEF1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVE4FCD63F06248E5E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G537 ;
+        :onYear             "1768"^^xsd:gYear .
+    
+    bdr:NM2D2C1FE79394D3E8
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang gdan rabs 25"@bo-x-ewts .
+    
+    bdr:NM36A5E822B5B5EBCC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NM6AA99BF2C8D8D168
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang khri 25"@bo-x-ewts .
+    
+    bdr:NMA6E4220D2DB4CF29
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snang ra dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NMEABB4DB32616D509
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang khri 25 dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NTD1FC69D39A45A276
+        a                   :Note ;
+        :locationStatement  "p. 854" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source includes a biographic sketch."@en .
+    
+    bdr:NTEC4041D8552F945A
+        a                   :Note ;
+        :locationStatement  "p. 456" ;
+        :noteSource         bdr:MW23670 ;
+        :noteText           "25th khri of bla brang bkra shis 'khyil."@en .
+    
+    bdr:P21  a              :Person ;
+        skos:prefLabel      "dkon mchog seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD1FC69D39A45A276 , bdr:NTEC4041D8552F945A ;
+        :personEvent        bdr:EV0C842D2FBA743AED , bdr:EV0EA77F8D1BAE78BF , bdr:EV8CF500260986AEF1 , bdr:EVE4FCD63F06248E5E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2D2C1FE79394D3E8 , bdr:NM36A5E822B5B5EBCC , bdr:NM6AA99BF2C8D8D168 , bdr:NMA6E4220D2DB4CF29 , bdr:NMEABB4DB32616D509 ;
+        :personStudentOf    bdr:P22 , bdr:P23 ;
+        :personTeacherOf    bdr:P8257 , bdr:P8986 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Konchok-Sengge/3769"^^xsd:anyURI .
+}

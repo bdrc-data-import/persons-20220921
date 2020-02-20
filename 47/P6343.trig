@@ -1,0 +1,76 @@
+@base          <bdg:P6343> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6343 {
+    bda:LG3B3FCBC0B2B8DCDD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-21T09:59:09.838Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG4A3042F07627956D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T12:20:55.481Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6343  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6343 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "47/P6343.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6343 ;
+        adm:logEntry        bda:LG3B3FCBC0B2B8DCDD , bda:LG4A3042F07627956D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62E7314B45E91629
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC72CFD2CFFF55E31
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EVFB59143E5DBF10A2
+        a                   :PersonBirth ;
+        :onYear             "1930"^^xsd:gYear .
+    
+    bdr:NM0E4DF94DA929EC94
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang mkhan rabs 09"@bo-x-ewts .
+    
+    bdr:NM8AED97087FD57438
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NMF3A8F2D4BF6D05A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a nya mkhan po blo bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT75E4C02F13E6CDD7
+        a                   :Note ;
+        :locationStatement  "p. 323-332" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:P6343  a            :Person ;
+        skos:prefLabel      "blo bzang tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT75E4C02F13E6CDD7 ;
+        :personEvent        bdr:EV62E7314B45E91629 , bdr:EVC72CFD2CFFF55E31 , bdr:EVFB59143E5DBF10A2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E4DF94DA929EC94 , bdr:NM8AED97087FD57438 , bdr:NMF3A8F2D4BF6D05A0 ;
+        :personStudentOf    bdr:P6338 , bdr:P9371 .
+}

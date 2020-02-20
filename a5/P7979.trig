@@ -1,0 +1,94 @@
+@base          <bdg:P7979> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7979 {
+    bda:LG1B04D56C557FED6E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-04T12:21:13.041Z"^^xsd:dateTime ;
+        adm:logMessage      "arranged titlte, added incarnate relation, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6045C693474568E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGD5067EACAA29C2E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T16:18:14.732Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P7979  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7979 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "a5/P7979.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7979 ;
+        adm:logEntry        bda:LG1B04D56C557FED6E , bda:LG6045C693474568E9 , bda:LGD5067EACAA29C2E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5353B02B58EBED18
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EV74FCFB9EBB5614AE
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EVFA466BEAC7D1CA5F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3704 .
+    
+    bdr:NM0541D7D303B1C256
+        a                   :PersonTitle ;
+        rdfs:label          "rig 'dzin pad+ma rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NM907C8A530B1B52C6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Maksar Pandita 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMA8E4C217B9754615
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mag sar paN+Di ta 04 pad+ma rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NMAB732DEBA7E00B11
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NMD186FC1802BB0D61
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mag sar paN+Di ta 04"@bo-x-ewts .
+    
+    bdr:NT0AED03DF752244BE
+        a                   :Note ;
+        :noteText           "rnying ma teacher; the fourth in the lineage of incarnations of the mag sar paN+Di ta  of reb gong"@en .
+    
+    bdr:NT4A141231BAD80F60
+        a                   :Note ;
+        :locationStatement  "p. 155-156" ;
+        :noteSource         bdr:MW20030 ;
+        :noteText           "rig 'dzin pad+ma rol pa'i rdo rje mchog ni/ bod rab byung bco lnga ba'i sa sprel (1908) lor sbyang lung 'bro tshang nas yab klu 'bum tshe ring gi sras su sku 'khrungs/\n\tsprul pa'i skyes chen du mas sku'i yang srid du ngos 'dzin gnang ste/ dgung lo drug gi steng rig 'dzin pad+ma rnam grol gling gi chos kyi khri 'phang mthon por mnga' gsol/ xxx\n\tdus dbang gis 'phrin las rgya cher 'phel ma thub par rab byung bcu drug pa'i lcags 'brug (1940) lor gzugs sku'i bkod pa bsdus pa'i tshul bstan to//"@en .
+    
+    bdr:P7979  a            :Person ;
+        skos:prefLabel      "pad+ma rol pa'i rdo rje/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P7978 ;
+        :isRoot             true ;
+        :note               bdr:NT0AED03DF752244BE , bdr:NT4A141231BAD80F60 ;
+        :personEvent        bdr:EV5353B02B58EBED18 , bdr:EV74FCFB9EBB5614AE , bdr:EVFA466BEAC7D1CA5F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0541D7D303B1C256 , bdr:NM907C8A530B1B52C6 , bdr:NMA8E4C217B9754615 , bdr:NMAB732DEBA7E00B11 , bdr:NMD186FC1802BB0D61 .
+}

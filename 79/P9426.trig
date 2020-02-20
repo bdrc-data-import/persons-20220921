@@ -1,0 +1,97 @@
+@base          <bdg:P9426> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9426 {
+    bda:LG324024AE0C29CE8B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T16:43:40.448Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG58769E072563B843
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGD22B7C1A5C470EBA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-30T10:24:40.217Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9426  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9426 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "79/P9426.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9426 ;
+        adm:logEntry        bda:LG324024AE0C29CE8B , bda:LG58769E072563B843 , bda:LGD22B7C1A5C470EBA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC13E70FD234DB988
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVD216B88D20BBC680
+        a                   :PersonBirth ;
+        :onYear             "1808"^^xsd:gYear .
+    
+    bdr:EVF00E2434F99DE935
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM23225CC3119782EA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "nang so sku skye 02"@bo-x-ewts .
+    
+    bdr:NM4A7942034F8F473B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nangso Kukye 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM7E984E114400CD26
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8313BAF4E879B775
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nang so sku skye 02 dge 'dun legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAF23751C46569466
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 37"@bo-x-ewts .
+    
+    bdr:NT55BFB73782511977
+        a                   :Note ;
+        :locationStatement  "p. 319" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "nang so sku skye dge 'dun mkhas mchog ... rong bo'i rigs su 'khrungs/ sngar reb gong shog bcu gnyis la cho 'phrul smon lam gtong 'jug mkhan gyi nang so grags can zhig byung ba'i skye bar grags/ bcu gsum pa la dgon chen chos rwar zhugs/ 'jam dbyangs zhi khro sbrags sgrub kyi bsnyen pa bgyis par byin rlabs kyi mtshan ma byung/ dus 'khor rgyud pa tshogs chen gsum gyi khrir rim par phebs/ ri khrod yid dga' chos 'dzin gyi bla ma yang gnang/ rab byung bcu bzhi ba'i me yos (1807) la gshegs/ de'i sprul sku dge 'dun legs bshad rgya mtsho ba red/"@bo-x-ewts .
+    
+    bdr:NT7D9354B8BBDF6EE3
+        a                   :Note ;
+        :locationStatement  "p. 255" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "visted wutaishan and rgya nag tsan dan jo bo"@en .
+    
+    bdr:P9426  a            :Person ;
+        skos:prefLabel      "dge 'dun legs bshad rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P4106 ;
+        :isRoot             true ;
+        :note               bdr:NT55BFB73782511977 , bdr:NT7D9354B8BBDF6EE3 ;
+        :personEvent        bdr:EVC13E70FD234DB988 , bdr:EVD216B88D20BBC680 , bdr:EVF00E2434F99DE935 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM23225CC3119782EA , bdr:NM4A7942034F8F473B , bdr:NM7E984E114400CD26 , bdr:NM8313BAF4E879B775 , bdr:NMAF23751C46569466 .
+}

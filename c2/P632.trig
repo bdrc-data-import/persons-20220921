@@ -1,0 +1,70 @@
+@base          <bdg:P632> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P632 {
+    bda:LG5B99CFFB59BA9799
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-08-17T11:58:21.046Z"^^xsd:dateTime ;
+        adm:logMessage      "added sprul sku zhig po and mtshur zhig po"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:P632  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P632 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "c2/P632.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P632 ;
+        adm:logEntry        bda:LG5B99CFFB59BA9799 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV36F1CE966BB074C4
+        a                   :PersonBirth ;
+        :onYear             "1149"^^xsd:gYear .
+    
+    bdr:EV47C47221A5F9CBC3
+        a                   :PersonDeath ;
+        :onYear             "1199"^^xsd:gYear .
+    
+    bdr:NM158BCDB6459AE8E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku zhig po/"@bo-x-ewts .
+    
+    bdr:NM89B19EEAEFC76227
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshur zhig po bdud rtsi/"@bo-x-ewts .
+    
+    bdr:NMB36EBE0B8F0CEAA2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhig po bdud rtsi/"@bo-x-ewts .
+    
+    bdr:NT2B4E73A9DB84DE16
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:NT91636EA866360E7D
+        a                   :Note ;
+        :locationStatement  "p. 1475" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P632  a             :Person ;
+        skos:prefLabel      "zhig po bdud rtsi/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B4E73A9DB84DE16 , bdr:NT91636EA866360E7D ;
+        :personEvent        bdr:EV36F1CE966BB074C4 , bdr:EV47C47221A5F9CBC3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM158BCDB6459AE8E3 , bdr:NM89B19EEAEFC76227 , bdr:NMB36EBE0B8F0CEAA2 ;
+        :personStudentOf    bdr:P364 ;
+        :personTeacherOf    bdr:P1771 , bdr:P4043 , bdr:P4322 .
+}

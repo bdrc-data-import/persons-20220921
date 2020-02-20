@@ -1,0 +1,57 @@
+@base          <bdg:P6745> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6745 {
+    bda:LGF19842177B81EB2B
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-18T13:54:26.21Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth date and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6745  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6745 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e8/P6745.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6745 ;
+        adm:logEntry        bda:LGF19842177B81EB2B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1CF45DE4FA334330
+        a                   :PersonBirth ;
+        :onYear             "1933"^^xsd:gYear .
+    
+    bdr:NM098ECCCE4D1BBE6F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor brang o rgyan/"@bo-x-ewts .
+    
+    bdr:NMB5DA53B73D6E617D
+        a                   :PersonPersonalName ;
+        rdfs:label          "o rgyan, nor brang /"@bo-x-ewts .
+    
+    bdr:NT9E4848B09449185C
+        a                   :Note ;
+        :locationStatement  "v. 3, pp. 4106-4110" ;
+        :noteSource         bdr:MW1KG2733 ;
+        :noteText           "short introduction of nor brang o rgyan"@en .
+    
+    bdr:P6745  a            :Person ;
+        skos:prefLabel      "nor brang o rgyan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9E4848B09449185C ;
+        :personEvent        bdr:EV1CF45DE4FA334330 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM098ECCCE4D1BBE6F , bdr:NMB5DA53B73D6E617D .
+}

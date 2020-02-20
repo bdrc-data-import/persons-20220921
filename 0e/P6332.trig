@@ -1,0 +1,80 @@
+@base          <bdg:P6332> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6332 {
+    bda:LG7CEC032150C44314
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-19T14:58:35.578Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEEA226A3439B9751
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-13T11:00:27.592Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6332  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6332 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "0e/P6332.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6332 ;
+        adm:logEntry        bda:LG7CEC032150C44314 , bda:LGEEA226A3439B9751 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D8B1A499F517B72
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV27BD885B64BF28A6
+        a                   :PersonDeath ;
+        :onYear             "1937"^^xsd:gYear .
+    
+    bdr:EV54FF0690D24A0619
+        a                   :PersonBirth ;
+        :onYear             "1887"^^xsd:gYear .
+    
+    bdr:EVB80D12400C8F2C29
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM551693B892A3EFA6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sba rod sku chen pad+ma bsam grub rdo rje/"@bo-x-ewts .
+    
+    bdr:NM95FF91C3E4C59241
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma bsam grub rdo rje/"@bo-x-ewts .
+    
+    bdr:NMD83E5D9EF2B59318
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang gdan rabs 06"@bo-x-ewts .
+    
+    bdr:NTF42FA9C7D667DB1A
+        a                   :Note ;
+        :locationStatement  "p. 183-187" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:P6332  a            :Person ;
+        skos:prefLabel      "pad+ma bsam grub rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF42FA9C7D667DB1A ;
+        :personEvent        bdr:EV1D8B1A499F517B72 , bdr:EV27BD885B64BF28A6 , bdr:EV54FF0690D24A0619 , bdr:EVB80D12400C8F2C29 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM551693B892A3EFA6 , bdr:NM95FF91C3E4C59241 , bdr:NMD83E5D9EF2B59318 ;
+        :personStudentOf    bdr:P248 , bdr:P6175 , bdr:P6313 , bdr:P7359 , bdr:P7698 .
+}

@@ -1,0 +1,81 @@
+@base          <bdg:P7147> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7147 {
+    bda:LGC0E006C1326123A4
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T14:19:11.539Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7147  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7147 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "38/P7147.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7147 ;
+        adm:logEntry        bda:LGC0E006C1326123A4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31E2735CB9108DC8
+        a                   :PersonDeath ;
+        :onYear             "1900"^^xsd:gYear .
+    
+    bdr:EV4AE93D72BC609DA9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVC5EA907ECF543529
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVFC7CBB0B6B1943FA
+        a                   :PersonBirth ;
+        :onYear             "1840"^^xsd:gYear .
+    
+    bdr:NM2F52E28E8E8ECF9E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 57 dpal ldan blo gros grags pa/"@bo-x-ewts .
+    
+    bdr:NM92C6593F4F811F01
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC43C3B27102B3CEC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 57"@bo-x-ewts .
+    
+    bdr:NT1ACC254DCE8AFF00
+        a                   :Note ;
+        :locationStatement  "p. 220" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT367800ED05983AD8
+        a                   :Note ;
+        :locationStatement  "p. 115-116" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P7147  a            :Person ;
+        skos:prefLabel      "dpal ldan blo gros rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1ACC254DCE8AFF00 , bdr:NT367800ED05983AD8 ;
+        :personEvent        bdr:EV31E2735CB9108DC8 , bdr:EV4AE93D72BC609DA9 , bdr:EVC5EA907ECF543529 , bdr:EVFC7CBB0B6B1943FA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F52E28E8E8ECF9E , bdr:NM92C6593F4F811F01 , bdr:NMC43C3B27102B3CEC ;
+        :personStudentOf    bdr:P7146 ;
+        :personTeacherOf    bdr:P7134 , bdr:P7535 .
+}

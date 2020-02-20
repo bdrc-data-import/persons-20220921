@@ -1,0 +1,51 @@
+@base          <bdg:P1KG21202> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG21202 {
+    bda:LG3779C9F02FE4D12C
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-02-17T16:00:09.808Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG21202  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG21202 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ce/P1KG21202.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG21202 ;
+        adm:logEntry        bda:LG3779C9F02FE4D12C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8467679A687119D2
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM6891A2A77307D2B5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang dgra 'dul/"@bo-x-ewts .
+    
+    bdr:NTA903F1DE0CC707F5
+        a                   :Note ;
+        :noteSource         bdr:MW1KG14603 .
+    
+    bdr:P1KG21202  a        :Person ;
+        skos:prefLabel      "skal bzang dgra 'dul/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA903F1DE0CC707F5 ;
+        :personEvent        bdr:EV8467679A687119D2 ;
+        :personName         bdr:NM6891A2A77307D2B5 .
+}

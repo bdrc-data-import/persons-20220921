@@ -1,0 +1,65 @@
+@base          <bdg:P8309> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8309 {
+    bda:LG828CCC891D9C3624
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T16:08:27.719Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P8309  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8309 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "82/P8309.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8309 ;
+        adm:logEntry        bda:LG828CCC891D9C3624 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV269DE339573C8177
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVB0BA05A106ABD350
+        a                   :PersonBirth ;
+        :onYear             "1891"^^xsd:gYear .
+    
+    bdr:NM131B5FE44281AC67
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje dgra 'dul/"@bo-x-ewts .
+    
+    bdr:NM613A96D65BAF8786
+        a                   :PersonTitle ;
+        rdfs:label          "bdud 'joms rigs sras rdo rje dgra 'dul/"@bo-x-ewts .
+    
+    bdr:NM70BDA1D2C9E0037E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter chen rdo rje dgra 'dul/"@bo-x-ewts .
+    
+    bdr:NTC6053B2233E78D4B
+        a                   :Note ;
+        :noteSource         bdr:MW25988 ;
+        :noteText           "important teacher in the transmission of the teachings of bdud 'joms gling pa; brief biography of the subject"@en .
+    
+    bdr:P8309  a            :Person ;
+        skos:prefLabel      "rdo rje dgra 'dul/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC6053B2233E78D4B ;
+        :personEvent        bdr:EV269DE339573C8177 , bdr:EVB0BA05A106ABD350 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM131B5FE44281AC67 , bdr:NM613A96D65BAF8786 , bdr:NM70BDA1D2C9E0037E ;
+        :personTeacherOf    bdr:P6036 , bdr:P8297 , bdr:P9883 .
+}

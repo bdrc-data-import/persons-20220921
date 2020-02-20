@@ -1,0 +1,58 @@
+@base          <bdg:P7947> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7947 {
+    bda:P7947  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7947 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "5b/P7947.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7947 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2CFA201B8A592AC3
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EV58EE5041E1868372
+        a                   :PersonBirth ;
+        :onYear             "1862"^^xsd:gYear .
+    
+    bdr:EVC2C79A5885DEF601
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3630 .
+    
+    bdr:NM0B282B0D78951625
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang sku bar pad+ma dbang chen/"@bo-x-ewts .
+    
+    bdr:NM2DC2A6CB381FE847
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma dbang chen/"@bo-x-ewts .
+    
+    bdr:NT4A1C68863F9C405D
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given and connection with dgon la kha"@en .
+    
+    bdr:P7947  a            :Person ;
+        skos:prefLabel      "pad+ma dbang chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A1C68863F9C405D ;
+        :personEvent        bdr:EV2CFA201B8A592AC3 , bdr:EV58EE5041E1868372 , bdr:EVC2C79A5885DEF601 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B282B0D78951625 , bdr:NM2DC2A6CB381FE847 .
+}

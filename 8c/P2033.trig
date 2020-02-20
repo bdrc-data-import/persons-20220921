@@ -1,0 +1,86 @@
+@base          <bdg:P2033> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2033 {
+    bda:LGF2D7A9BE0816A15A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T12:15:36.112Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF887DEC716855562
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T12:19:20.268Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2033  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2033 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "8c/P2033.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2033 ;
+        adm:logEntry        bda:LGF2D7A9BE0816A15A , bda:LGF887DEC716855562 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2C6629BABC4C3436
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1043 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV6B9271242AFA6FFB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM6BD09540A9E94CDA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 77"@bo-x-ewts .
+    
+    bdr:NM70797EB3FAAB2D79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMBD1A1B0CDA570575
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "cog tsha don grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT40891D0471C974E9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT5131FE1ABF1FA1C6
+        a                   :Note ;
+        :locationStatement  "p. 197" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "served three time khri of bya khyung"@en .
+    
+    bdr:NT5A3C12ED3EB42A37
+        a                   :Note ;
+        :locationStatement  "p. 505" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTB4FCD876F3F2C407
+        a                   :Note ;
+        :noteText           "Travelled to Dbus and studied at Se-ra Byes.\nReturned to Mdo-smad and Bya-khyung.\n1877. Became the 77th Bya-khyung Khri.\nRetired to contemplative life."@en .
+    
+    bdr:P2033  a            :Person ;
+        skos:prefLabel      "don grub rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT40891D0471C974E9 , bdr:NT5131FE1ABF1FA1C6 , bdr:NT5A3C12ED3EB42A37 , bdr:NTB4FCD876F3F2C407 ;
+        :personEvent        bdr:EV2C6629BABC4C3436 , bdr:EV6B9271242AFA6FFB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6BD09540A9E94CDA , bdr:NM70797EB3FAAB2D79 , bdr:NMBD1A1B0CDA570575 .
+}

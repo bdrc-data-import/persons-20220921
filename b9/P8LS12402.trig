@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12402> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12402 {
+    bda:LG7A1C53189E898FEB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T11:25:29.493Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12402  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12402 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b9/P8LS12402.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12402 ;
+        adm:logEntry        bda:LG7A1C53189E898FEB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30F6CD52FAA2855F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV9D965F20C029B923
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM2A581BB8A3392494
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 41"@bo-x-ewts .
+    
+    bdr:NMF7B7D868850E25F0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes zla grags/"@bo-x-ewts .
+    
+    bdr:NTE435835825CB89C8
+        a                   :Note ;
+        :locationStatement  "p. 291" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12402  a        :Person ;
+        skos:prefLabel      "ye shes zla grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE435835825CB89C8 ;
+        :personEvent        bdr:EV30F6CD52FAA2855F , bdr:EV9D965F20C029B923 ;
+        :personName         bdr:NM2A581BB8A3392494 , bdr:NMF7B7D868850E25F0 .
+}

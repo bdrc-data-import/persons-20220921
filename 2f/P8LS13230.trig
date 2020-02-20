@@ -1,0 +1,81 @@
+@base          <bdg:P8LS13230> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13230 {
+    bda:LG0E53DA4B40187C79
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T09:01:42.615Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2ACE8EFB0D76B9F3
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-21T12:32:24.744Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC09340BD921C75CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-18T15:59:21.737Z"^^xsd:dateTime ;
+        adm:logMessage      "edited title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8LS13230  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13230 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "2f/P8LS13230.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13230 ;
+        adm:logEntry        bda:LG0E53DA4B40187C79 , bda:LG2ACE8EFB0D76B9F3 , bda:LGC09340BD921C75CD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3EF6BF1B2E6460C2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5F06C57C7A5DAEA8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EVA282098B08731DDF
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM6B432E9EBC697A09
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos dpal mgon po/"@bo-x-ewts .
+    
+    bdr:NMAD5DDE541AF8EDD9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal sras chos dpal mgon po/"@bo-x-ewts .
+    
+    bdr:NMD2D6C853453974E8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 12"@bo-x-ewts .
+    
+    bdr:NTEB58A8AAFCE5C529
+        a                   :Note ;
+        :noteText           "Kalacakra master from yar lung lhud mo who has connection with bu ston rin chen grub\n\nSee also jo nang gnas bshad, f. 8r"@en .
+    
+    bdr:P8LS13230  a        :Person ;
+        skos:prefLabel      "chos dpal mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEB58A8AAFCE5C529 ;
+        :personEvent        bdr:EV3EF6BF1B2E6460C2 , bdr:EV5F06C57C7A5DAEA8 , bdr:EVA282098B08731DDF ;
+        :personName         bdr:NM6B432E9EBC697A09 , bdr:NMAD5DDE541AF8EDD9 , bdr:NMD2D6C853453974E8 ;
+        :personTeacherOf    bdr:P3CN19673 .
+}

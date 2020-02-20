@@ -1,0 +1,58 @@
+@base          <bdg:P3365> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3365 {
+    bda:LG1AC87C0EFA1EECD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T12:53:34.291Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3365  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3365 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ba/P3365.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3365 ;
+        adm:logEntry        bda:LG1AC87C0EFA1EECD6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D84BCD20A5EA275
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1461457548982B10
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD8261F5D0979CF66
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3F6132CD987481B1
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3365  a            :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3F6132CD987481B1 ;
+        :personEvent        bdr:EV3D84BCD20A5EA275 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1461457548982B10 , bdr:NMD8261F5D0979CF66 ;
+        :personStudentOf    bdr:P2311 ;
+        :personTeacherOf    bdr:P1550 .
+}

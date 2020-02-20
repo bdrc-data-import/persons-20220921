@@ -1,0 +1,55 @@
+@base          <bdg:P9591> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9591 {
+    bda:LG5FF820AA85E17CCA
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-08T16:49:45.468Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P9591  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9591 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "94/P9591.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9591 ;
+        adm:logEntry        bda:LG5FF820AA85E17CCA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV588515D59B699460
+        a                   :PersonBirth ;
+        :onYear             "1250"^^xsd:gYear .
+    
+    bdr:EVCE25CA7027DAE12A
+        a                   :PersonDeath ;
+        :onYear             "1310"^^xsd:gYear .
+    
+    bdr:NM37B4D7B085CE28A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rin chen/"@bo-x-ewts .
+    
+    bdr:NM99D53511DFBBF919
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nye gnas grags pa rin chen/"@bo-x-ewts .
+    
+    bdr:P9591  a            :Person ;
+        skos:prefLabel      "grags pa rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV588515D59B699460 , bdr:EVCE25CA7027DAE12A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37B4D7B085CE28A8 , bdr:NM99D53511DFBBF919 ;
+        :personStudentOf    bdr:P132 .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P1913> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1913 {
+    bda:LGECD27644E9685E3F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:48:28.59Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1913  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1913 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b2/P1913.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1913 ;
+        adm:logEntry        bda:LGECD27644E9685E3F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07DEDDB21A5E3091
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G318 .
+    
+    bdr:EV90356C1C62056836
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM45570141A81DE82A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha bdun mkhan po blo bzang bstan pa/"@bo-x-ewts .
+    
+    bdr:NM9FB08F822B748C79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan pa/"@bo-x-ewts .
+    
+    bdr:NTD39387FCD5FBD323
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma\n\n-- Mahayoga\n\n-- Ma-bdun-pa"@en .
+    
+    bdr:P1913  a            :Person ;
+        skos:prefLabel      "blo bzang bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD39387FCD5FBD323 ;
+        :personEvent        bdr:EV07DEDDB21A5E3091 , bdr:EV90356C1C62056836 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM45570141A81DE82A , bdr:NM9FB08F822B748C79 ;
+        :personStudentOf    bdr:P656 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P4PD2808> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4PD2808 {
+    bda:LGBCD53A4B6989ECAF
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-29T10:46:54.424Z"^^xsd:dateTime ;
+        adm:logMessage      "added name & teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC1F16947F0A81E6C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-09-12T15:59:57.106Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGE9CBF61CF999701E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-29T10:48:15.385Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth data & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4PD2808  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4PD2808 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "be/P4PD2808.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4PD2808 ;
+        adm:logEntry        bda:LGBCD53A4B6989ECAF , bda:LGC1F16947F0A81E6C , bda:LGE9CBF61CF999701E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB96C41DFFF9C97DD
+        a                   :PersonBirth ;
+        :onYear             "1889"^^xsd:gYear .
+    
+    bdr:EVD95E82880B16C946
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1641 .
+    
+    bdr:NM195B14A2B42E8161
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "a 'dzi mchog sprul nor bu dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM699F1258FB8D50B8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM96E1E1F980B0B971
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a 'dzi nor bu dbang rgyal/"@bo-x-ewts .
+    
+    bdr:P4PD2808  a         :Person ;
+        skos:prefLabel      "nor bu dbang rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVB96C41DFFF9C97DD , bdr:EVD95E82880B16C946 ;
+        :personName         bdr:NM195B14A2B42E8161 , bdr:NM699F1258FB8D50B8 , bdr:NM96E1E1F980B0B971 ;
+        :personStudentOf    bdr:P252 .
+}

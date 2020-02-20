@@ -1,0 +1,69 @@
+@base          <bdg:P1KG10741> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG10741 {
+    bda:LGA97259A023485FDA
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-18T10:58:11.563Z"^^xsd:dateTime ;
+        adm:logMessage      "linked to work, added name & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGF59C63AB961E44A9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-19T12:32:11.405Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG10741  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG10741 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "14/P1KG10741.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG10741 ;
+        adm:logEntry        bda:LGA97259A023485FDA , bda:LGF59C63AB961E44A9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD0854D5F4A23B65D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM07C51CB1E8C9A3F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kham brag pa/"@bo-x-ewts .
+    
+    bdr:NM2B49A65B88BFA807
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kham brag ngag dbang kun bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMF696580D2590DCBE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang kun bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT073A2140DCB0B9E2
+        a                   :Note ;
+        :locationStatement  "11 ff." ;
+        :noteSource         bdr:MW3CN1654 ;
+        :noteText           "གང་འདིའི་རིགས་བདག་དཔལ་ཅོག་གྲྭ་པ་ཡིན་པ་སོགས་གསལ།"@bo .
+    
+    bdr:P1KG10741  a        :Person ;
+        skos:prefLabel      "ngag dbang kun bzang rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT073A2140DCB0B9E2 ;
+        :personEvent        bdr:EVD0854D5F4A23B65D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07C51CB1E8C9A3F8 , bdr:NM2B49A65B88BFA807 , bdr:NMF696580D2590DCBE ;
+        :personStudentOf    bdr:P10660 .
+}

@@ -1,0 +1,54 @@
+@base          <bdg:P9766> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9766 {
+    bda:LGAF629DFE37DAD0A1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T14:20:51.173Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9766  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9766 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1b/P9766.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9766 ;
+        adm:logEntry        bda:LGAF629DFE37DAD0A1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV51D4978984E08776
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2800 ;
+        :onYear             "1963"^^xsd:gYear .
+    
+    bdr:NM68151F086A70181E
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dbang bkra shis/"@bo-x-ewts .
+    
+    bdr:NTBE964E89E76A33FC
+        a                   :Note ;
+        :locationStatement  "pp. 94-105" ;
+        :noteSource         bdr:MW29506 ;
+        :noteText           "contemporary tibetan painter"@en .
+    
+    bdr:P9766  a            :Person ;
+        skos:prefLabel      "tshe dbang bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBE964E89E76A33FC ;
+        :personEvent        bdr:EV51D4978984E08776 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM68151F086A70181E .
+}

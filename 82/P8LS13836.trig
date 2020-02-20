@@ -1,0 +1,50 @@
+@base          <bdg:P8LS13836> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13836 {
+    bda:LGDB9346A0740E9453
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-23T12:55:38.345Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13836  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13836 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "82/P8LS13836.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13836 ;
+        adm:logEntry        bda:LGDB9346A0740E9453 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM9AFDEDA7A09CE380
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng+ge"@bo-x-ewts .
+    
+    bdr:NM9DFC413FC3F8093C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon seng+ge"@bo-x-ewts .
+    
+    bdr:NTA00560970D486B20
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 119" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13836  a        :Person ;
+        skos:prefLabel      "seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA00560970D486B20 ;
+        :personName         bdr:NM9AFDEDA7A09CE380 , bdr:NM9DFC413FC3F8093C .
+}

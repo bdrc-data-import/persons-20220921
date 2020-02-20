@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12123> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12123 {
+    bda:LG62340E3797B9184D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-11T12:19:53.746Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12123  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12123 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4c/P8LS12123.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12123 ;
+        adm:logEntry        bda:LG62340E3797B9184D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68E968D15A61ED7B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EVC3A4FB1426CAD9D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM1156D4DB020703B8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 19"@bo-x-ewts .
+    
+    bdr:NM9B3B62B9C783DC23
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMAB69B1A6FD5CFCDC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzims khang gong ma'i phyag mdzod blo bzang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTD592066E0A3A5570
+        a                   :Note ;
+        :locationStatement  "p. 312" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "In 1818 newly built house for khri pa; renovated assembly hall and surrounding area of monastery"@en .
+    
+    bdr:P8LS12123  a        :Person ;
+        skos:prefLabel      "blo bzang rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD592066E0A3A5570 ;
+        :personEvent        bdr:EV68E968D15A61ED7B , bdr:EVC3A4FB1426CAD9D7 ;
+        :personName         bdr:NM1156D4DB020703B8 , bdr:NM9B3B62B9C783DC23 , bdr:NMAB69B1A6FD5CFCDC .
+}

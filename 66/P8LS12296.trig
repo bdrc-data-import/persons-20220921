@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12296> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12296 {
+    bda:LG52DAC1F91FA2937E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-05T09:21:01.187Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12296  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12296 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "66/P8LS12296.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12296 ;
+        adm:logEntry        bda:LG52DAC1F91FA2937E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6CA49EC52D84E8BC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVD79E7240024A3B5E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM996D7E5543C593FA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 66"@bo-x-ewts .
+    
+    bdr:NMB4FB080DC6F61D15
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC3421E92905927B6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong dpon sprul sku 'jigs med thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTBD58C4F78DBC151D
+        a                   :Note ;
+        :locationStatement  "p. 292-" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12296  a        :Person ;
+        skos:prefLabel      "'jigs med thub bstan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBD58C4F78DBC151D ;
+        :personEvent        bdr:EV6CA49EC52D84E8BC , bdr:EVD79E7240024A3B5E ;
+        :personName         bdr:NM996D7E5543C593FA , bdr:NMB4FB080DC6F61D15 , bdr:NMC3421E92905927B6 ;
+        :personStudentOf    bdr:P237 .
+}

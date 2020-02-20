@@ -1,0 +1,68 @@
+@base          <bdg:P8932> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8932 {
+    bda:LGB771CC1EE86A9366
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-30T17:24:25.598Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGC00F5BB8040E1935
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:37:54.526Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8932  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8932 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bb/P8932.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8932 ;
+        adm:logEntry        bda:LGB771CC1EE86A9366 , bda:LGC00F5BB8040E1935 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81FCF5329118CAF8
+        a                   :PersonBirth ;
+        :onYear             "1846"^^xsd:gYear .
+    
+    bdr:EV9AAC1B72E527F730
+        a                   :PersonDeath ;
+        :onYear             "1910"^^xsd:gYear .
+    
+    bdr:NMB9E26FBBFC3D6DB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCD148962000C7E75
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 04 ngag dbang chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT23E79D71995DB413
+        a                   :Note ;
+        :locationStatement  "pp. 201-207" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: 'dzi sribs khyi lo ma"@en .
+    
+    bdr:P8932  a            :Person ;
+        skos:prefLabel      "ngag dbang chos 'byor rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT23E79D71995DB413 ;
+        :personEvent        bdr:EV81FCF5329118CAF8 , bdr:EV9AAC1B72E527F730 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB9E26FBBFC3D6DB5 , bdr:NMCD148962000C7E75 ;
+        :personStudentOf    bdr:P4799 .
+}

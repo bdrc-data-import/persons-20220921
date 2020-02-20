@@ -1,0 +1,59 @@
+@base          <bdg:P2CZ6619> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2CZ6619 {
+    bda:LG0780DEED9DF5B113
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-23T10:42:35.412Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P2CZ6619  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2CZ6619 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a8/P2CZ6619.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2CZ6619 ;
+        adm:logEntry        bda:LG0780DEED9DF5B113 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE66F7770CE4DDB33
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1626 .
+    
+    bdr:EVF06785FA9B8C0E99
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM1F9445506AACD15C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7B63A499EA7931D5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtsho kha skal bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT0536B0373CE797D3
+        a                   :Note ;
+        :noteText           "as of 1990 he was living in mdzod dge lte phur ri khrod"@en .
+    
+    bdr:P2CZ6619  a         :Person ;
+        skos:prefLabel      "skal bzang bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0536B0373CE797D3 ;
+        :personEvent        bdr:EVE66F7770CE4DDB33 , bdr:EVF06785FA9B8C0E99 ;
+        :personName         bdr:NM1F9445506AACD15C , bdr:NM7B63A499EA7931D5 .
+}

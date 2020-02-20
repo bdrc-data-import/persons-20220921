@@ -1,0 +1,78 @@
+@base          <bdg:P8LS12064> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12064 {
+    bda:LGD3EE3F3B92673144
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T11:36:14.288Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12064  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12064 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1e/P8LS12064.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12064 ;
+        adm:logEntry        bda:LGD3EE3F3B92673144 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV208D50CBEED14869
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1814 ;
+        :onYear             "1932"^^xsd:gYear .
+    
+    bdr:EV5F8CCB3654355CB1
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1989"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV785ECA9AF8874410
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1986"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7D654339D3460EF1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:NM0AF72351C54AFCAF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB97A93CD56FFC6EC
+        a                   :PersonTitle ;
+        rdfs:label          "har gdong dge bshes bstan pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMC324AEF224D9327F
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 75"@bo-x-ewts .
+    
+    bdr:NT79E08AEE5BBAA9EB
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 224" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "obtained geshes lharam degree in 1967\n1969-1971 acharya degree from sarnath, varanasi"@en .
+    
+    bdr:P8LS12064  a        :Person ;
+        skos:prefLabel      "bstan pa rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT79E08AEE5BBAA9EB ;
+        :personEvent        bdr:EV208D50CBEED14869 , bdr:EV5F8CCB3654355CB1 , bdr:EV785ECA9AF8874410 , bdr:EV7D654339D3460EF1 ;
+        :personName         bdr:NM0AF72351C54AFCAF , bdr:NMB97A93CD56FFC6EC , bdr:NMC324AEF224D9327F ;
+        :personStudentOf    bdr:P8LS12060 .
+}

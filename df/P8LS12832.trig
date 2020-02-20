@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12832> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12832 {
+    bda:LG24DE80CFBFD75A64
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T12:05:15.172Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12832  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12832 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "df/P8LS12832.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12832 ;
+        adm:logEntry        bda:LG24DE80CFBFD75A64 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV663E0EF1FEBF8C7C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12773 ;
+        :onYear             "1982"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV839CAD765BF8267B
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G8LS12773 ;
+        :onYear             "1985"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA56CB149A4C153D5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12773 .
+    
+    bdr:EVDDBB6C65827935FF
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMA6D88F5ABED73EE3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku nus ldan/"@bo-x-ewts .
+    
+    bdr:NMC85F2C0531D7790E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "nyi ma lung mkhan rabs 08"@bo-x-ewts .
+    
+    bdr:NMDE953EBD7DBB18FC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nus ldan/"@bo-x-ewts .
+    
+    bdr:NT4627D3F6776C09EA
+        a                   :Note ;
+        :noteText           "The fourth Bhutanese king Jigme senge wangchuk became a sponsor of nyimalung monastery"@en .
+    
+    bdr:P8LS12832  a        :Person ;
+        skos:prefLabel      "nus ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4627D3F6776C09EA ;
+        :personEvent        bdr:EV663E0EF1FEBF8C7C , bdr:EV839CAD765BF8267B , bdr:EVA56CB149A4C153D5 , bdr:EVDDBB6C65827935FF ;
+        :personName         bdr:NMA6D88F5ABED73EE3 , bdr:NMC85F2C0531D7790E , bdr:NMDE953EBD7DBB18FC .
+}

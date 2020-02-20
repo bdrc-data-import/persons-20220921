@@ -1,0 +1,61 @@
+@base          <bdg:P6710> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6710 {
+    bda:P6710  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6710 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "14/P6710.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6710 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D5DB1D40040F3AF
+        a                   :PersonAssumesOffice ;
+        :onYear             "1934"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV37BDFE4BB750FC33
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV4E9B9E456677B5A3
+        a                   :PersonLeavesOffice ;
+        :onYear             "1945"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM0BA2E83316CE0E2F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bon grong tshe brtan rdo rje/"@bo-x-ewts .
+    
+    bdr:NMB2D5912C0B7CF1CD
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe brtan rdo rje, bon grong /"@bo-x-ewts .
+    
+    bdr:NT22082869196DB36F
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1934-1935"@en .
+    
+    bdr:P6710  a            :Person ;
+        skos:prefLabel      "bon grong tshe brtan rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22082869196DB36F ;
+        :personEvent        bdr:EV2D5DB1D40040F3AF , bdr:EV37BDFE4BB750FC33 , bdr:EV4E9B9E456677B5A3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0BA2E83316CE0E2F , bdr:NMB2D5912C0B7CF1CD .
+}

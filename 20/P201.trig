@@ -1,0 +1,50 @@
+@base          <bdg:P201> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P201 {
+    bda:P201  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P201 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "20/P201.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P201 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV467F8B6B1302569C
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM193A4587B00C6BC4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brtson 'grus bzang po/"@bo-x-ewts .
+    
+    bdr:NM88AB4AD82B9D0F40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ya phu dpon slob brtson 'grus bzang po/"@bo-x-ewts .
+    
+    bdr:NTEB98FF02F6F06737
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P201  a             :Person ;
+        skos:prefLabel      "brtson 'grus bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEB98FF02F6F06737 ;
+        :personEvent        bdr:EV467F8B6B1302569C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM193A4587B00C6BC4 , bdr:NM88AB4AD82B9D0F40 ;
+        :personTeacherOf    bdr:P199 , bdr:P2157 , bdr:P411 .
+}

@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13672> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13672 {
+    bda:LG2A893DB5E4209164
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-07T10:14:51.98Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13672  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13672 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "92/P8LS13672.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13672 ;
+        adm:logEntry        bda:LG2A893DB5E4209164 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3BD11D0CC1128F5D
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM701663A75169117C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rtse lde/"@bo-x-ewts .
+    
+    bdr:NM8202C2CD066C1514
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mnga' bdag rtse lde/"@bo-x-ewts .
+    
+    bdr:NT1C8EDF5EDF24EDD9
+        a                   :Note ;
+        :locationStatement  "p. 259" ;
+        :noteSource         bdr:MW00KG09729 .
+    
+    bdr:P8LS13672  a        :Person ;
+        skos:prefLabel      "rtse lde/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C8EDF5EDF24EDD9 ;
+        :personEvent        bdr:EV3BD11D0CC1128F5D ;
+        :personName         bdr:NM701663A75169117C , bdr:NM8202C2CD066C1514 .
+}

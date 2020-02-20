@@ -1,0 +1,57 @@
+@base          <bdg:P1KG18643> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG18643 {
+    bda:LG9D0E31C40A3EDE80
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-27T11:25:23.851Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG18643  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG18643 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "47/P1KG18643.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG18643 ;
+        adm:logEntry        bda:LG9D0E31C40A3EDE80 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1EE7934BEFBCE13B
+        a                   :PersonDeath ;
+        :onYear             "1946"^^xsd:gYear .
+    
+    bdr:EV9BA92A72F3D9E122
+        a                   :PersonBirth ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:NM0409A99626F3F104
+        a                   :PersonPrimaryName ;
+        rdfs:label          "wang ru'o h+phe/"@bo-x-ewts .
+    
+    bdr:NMD034BCAFBE214931
+        a                   :PersonPrimaryName ;
+        rdfs:label          "wang ruo fei"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NMFE034BCAD49188CF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "王若飞"@zh-hans .
+    
+    bdr:P1KG18643  a        :Person ;
+        skos:prefLabel      "wang ru'o h+phe/"@bo-x-ewts , "王若飞"@zh-hans ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1EE7934BEFBCE13B , bdr:EV9BA92A72F3D9E122 ;
+        :personName         bdr:NM0409A99626F3F104 , bdr:NMD034BCAFBE214931 , bdr:NMFE034BCAD49188CF .
+}

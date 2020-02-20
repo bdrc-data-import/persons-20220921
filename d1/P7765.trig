@@ -1,0 +1,96 @@
+@base          <bdg:P7765> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7765 {
+    bda:LG78884A8E8DFB4B30
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T12:18:12.468Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7765  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7765 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "d1/P7765.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7765 ;
+        adm:logEntry        bda:LG78884A8E8DFB4B30 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV202832801BD2AA97
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3504 ;
+        :onYear             "1789"^^xsd:gYear .
+    
+    bdr:EV24B1921925279C11
+        a                   :PersonDeath ;
+        :onYear             "1864"^^xsd:gYear .
+    
+    bdr:EV5713BA1D6C8DF87E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1835"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EV70C6907A63CF608C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVCCCAA4E87F165407
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1842"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM062183DB621AD8C3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 51"@bo-x-ewts .
+    
+    bdr:NM6FA1E73A7EE2DC70
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NMAFC468AABAE83E77
+        a                   :PersonTitle ;
+        rdfs:label          "thar rtse 'jam dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NMD9D2877322900915
+        a                   :PersonTitle ;
+        rdfs:label          "rnal 'byor 'jam dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NMF1673FB58307A5E1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 51 'jam dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NT6D5788FAFCC5061E
+        a                   :Note ;
+        :locationStatement  "p. 111-112" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NT8558817B7E3A3143
+        a                   :Note ;
+        :locationStatement  "p. 204" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "sa skya master of the lam 'bras slob bshad; belonged to the thar rtse lineage, one of the four abbatial lines of ngor\n\nbiography\nbecame abbot of ngor in 1835"@en .
+    
+    bdr:P7765  a            :Person ;
+        skos:prefLabel      "'jam dpal bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D5788FAFCC5061E , bdr:NT8558817B7E3A3143 ;
+        :personEvent        bdr:EV202832801BD2AA97 , bdr:EV24B1921925279C11 , bdr:EV5713BA1D6C8DF87E , bdr:EV70C6907A63CF608C , bdr:EVCCCAA4E87F165407 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM062183DB621AD8C3 , bdr:NM6FA1E73A7EE2DC70 , bdr:NMAFC468AABAE83E77 , bdr:NMD9D2877322900915 , bdr:NMF1673FB58307A5E1 ;
+        :personTeacherOf    bdr:P962 .
+}

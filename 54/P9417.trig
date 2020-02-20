@@ -1,0 +1,102 @@
+@base          <bdg:P9417> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9417 {
+    bda:LG2601B6CC9A8AE81D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-30T09:13:37.202Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE039BC54CA4973CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T11:24:11.447Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9417  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9417 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "54/P9417.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9417 ;
+        adm:logEntry        bda:LG2601B6CC9A8AE81D , bda:LGE039BC54CA4973CA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E32192B4F7BFCFB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:EV4C415F45D97A2461
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV751A72547F122E57
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1835"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV80A696BE40E13E5F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVA4FC79B640825598
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM028930E9AE8A1363
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 33"@bo-x-ewts .
+    
+    bdr:NM49EA4C39CD56BDF2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 23"@bo-x-ewts .
+    
+    bdr:NM9509958419C1D9EE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dan sprul sku blo bzang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NMB8033A4ED49F95D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NT3F85B82BF9862336
+        a                   :Note ;
+        :locationStatement  "p. 322" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "'dan sprul sku blo bzang mkhas mchog ... bse chu mar 'khrungs/ tsa yus zhal dro'i ri khrod du gdan sar bkod/ bkra shis 'khyil gyi chos grwar zhugs/ dgos dbang gis rong bor byon/ gzims khang phibs te gzhi chags/ chos grwar slob gnyer dang grwa tshang gsum gyi khri mdzad/ dgung lo bdun cu pa la gshegs/ de'i sprul sku chu mar nas 'khrungs/"@bo-x-ewts .
+    
+    bdr:NT8AB4E44C170172FE
+        a                   :Note ;
+        :locationStatement  "p. 251-252" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "fourth incarnation of 'dan sprul sku\nhe also served khri of both rgyud pa and dus 'khor grwa tshang"@en .
+    
+    bdr:NTEA6E263B586275CB
+        a                   :Note ;
+        :locationStatement  "p. 380" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P9417  a            :Person ;
+        skos:prefLabel      "blo bzang mkhas mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3F85B82BF9862336 , bdr:NT8AB4E44C170172FE , bdr:NTEA6E263B586275CB ;
+        :personEvent        bdr:EV2E32192B4F7BFCFB , bdr:EV4C415F45D97A2461 , bdr:EV751A72547F122E57 , bdr:EV80A696BE40E13E5F , bdr:EVA4FC79B640825598 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM028930E9AE8A1363 , bdr:NM49EA4C39CD56BDF2 , bdr:NM9509958419C1D9EE , bdr:NMB8033A4ED49F95D8 ;
+        :personStudentOf    bdr:P3800 .
+}

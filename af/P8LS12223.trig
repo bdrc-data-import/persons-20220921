@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12223> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12223 {
+    bda:LGC1BC56319CE5D5BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T09:23:53.094Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12223  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12223 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "af/P8LS12223.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12223 ;
+        adm:logEntry        bda:LGC1BC56319CE5D5BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7DDBAC83DA9FC3AD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVD38914B54C91A6CF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF6357C2A02A65141
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM2C4A368A30DC725A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs grags pa/"@bo-x-ewts .
+    
+    bdr:NM2EF9DE94C6A05A21
+        a                   :PersonTitle ;
+        rdfs:label          "kha sgang 'jam dbyangs grags pa/"@bo-x-ewts .
+    
+    bdr:NMB9FB03F108B5E906
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag lung 'jam dbyangs grags pa/"@bo-x-ewts .
+    
+    bdr:NMC9906E54C8A4B1EC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 45"@bo-x-ewts .
+    
+    bdr:NT1F58E2570FE1CDFF
+        a                   :Note ;
+        :locationStatement  "p. 177" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12223  a        :Person ;
+        skos:prefLabel      "'jam dbyangs grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1F58E2570FE1CDFF ;
+        :personEvent        bdr:EV7DDBAC83DA9FC3AD , bdr:EVD38914B54C91A6CF , bdr:EVF6357C2A02A65141 ;
+        :personName         bdr:NM2C4A368A30DC725A , bdr:NM2EF9DE94C6A05A21 , bdr:NMB9FB03F108B5E906 , bdr:NMC9906E54C8A4B1EC .
+}

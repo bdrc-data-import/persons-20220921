@@ -1,0 +1,58 @@
+@base          <bdg:P2896> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2896 {
+    bda:LGA61C4575A106B56B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T10:38:13.032Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2896  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2896 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fa/P2896.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2896 ;
+        adm:logEntry        bda:LGA61C4575A106B56B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD620782A85CCDE46
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM744E2A3B8975A491
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zung nge /"@bo-x-ewts .
+    
+    bdr:NMBD04C050EF69E757
+        a                   :PersonPersonalName ;
+        rdfs:label          "lce ston zung nge /"@bo-x-ewts .
+    
+    bdr:NTC5AD3854385BE3BC
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:P2896  a            :Person ;
+        skos:prefLabel      "zung nge /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC5AD3854385BE3BC ;
+        :personEvent        bdr:EVD620782A85CCDE46 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM744E2A3B8975A491 , bdr:NMBD04C050EF69E757 ;
+        :personStudentOf    bdr:P2895 ;
+        :personTeacherOf    bdr:P1212 .
+}

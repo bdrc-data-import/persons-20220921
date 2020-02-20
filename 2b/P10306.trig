@@ -1,0 +1,65 @@
+@base          <bdg:P10306> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10306 {
+    bda:LGAE0F9E0BDA174278
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-04T14:03:04.231Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn because its a duplicate"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGFD107FBBB9353D56
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-05T11:35:10.92Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn and revised"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P10306  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10306 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2b/P10306.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10306 ;
+        adm:logEntry        bda:LGAE0F9E0BDA174278 , bda:LGFD107FBBB9353D56 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV8BE935297E5AB213
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM14DDDCD3C8A43D0D
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' phrin las dbang mo/"@bo-x-ewts .
+    
+    bdr:NT5C971EFE69CC3BD0
+        a                   :Note ;
+        :locationStatement  "pp. 521-523" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "female master of the jo nang tradition"@en .
+    
+    bdr:NT6192BAE3F274EE6A
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P8464"@en .
+    
+    bdr:P10306  a           :Person ;
+        skos:prefLabel      "kun dga' phrin las dbang mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C971EFE69CC3BD0 , bdr:NT6192BAE3F274EE6A ;
+        :personEvent        bdr:EV8BE935297E5AB213 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM14DDDCD3C8A43D0D ;
+        :personTeacherOf    bdr:P8963 .
+}

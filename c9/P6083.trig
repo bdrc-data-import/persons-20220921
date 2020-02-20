@@ -1,0 +1,63 @@
+@base          <bdg:P6083> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6083 {
+    bda:LG11357CDACA62A175
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-09T11:37:42.941Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6083  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6083 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c9/P6083.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6083 ;
+        adm:logEntry        bda:LG11357CDACA62A175 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV47DAE279360D13D9
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1507 ;
+        :onYear             "1912"^^xsd:gYear .
+    
+    bdr:NM14DA169EDB0414F8
+        a                   :PersonPersonalName ;
+        rdfs:label          "thupten sangay"@en .
+    
+    bdr:NM3DDC3E4E86E51B48
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan sangs rgyas/"@bo-x-ewts .
+    
+    bdr:NTB0991CEC2B689163
+        a                   :Note ;
+        :locationStatement  "Vol. 1-2, p. 35" ;
+        :noteSource         bdr:MW19861 .
+    
+    bdr:NTE76D921ED7FB185C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Aristocracy"@en .
+    
+    bdr:P6083  a            :Person ;
+        skos:prefLabel      "thub bstan sangs rgyas/"@bo-x-ewts ;
+        :hasFather          bdr:P6084 ;
+        :hasMother          bdr:P6085 ;
+        :isRoot             true ;
+        :note               bdr:NTB0991CEC2B689163 , bdr:NTE76D921ED7FB185C ;
+        :personEvent        bdr:EV47DAE279360D13D9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14DA169EDB0414F8 , bdr:NM3DDC3E4E86E51B48 .
+}

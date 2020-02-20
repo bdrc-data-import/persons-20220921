@@ -1,0 +1,66 @@
+@base          <bdg:P8930> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8930 {
+    bda:LG3126044BF95DAFB6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T14:37:37.569Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8930  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8930 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4d/P8930.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8930 ;
+        adm:logEntry        bda:LG3126044BF95DAFB6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7C849561FF6129F5
+        a                   :PersonDeath ;
+        :onYear             "1865"^^xsd:gYear .
+    
+    bdr:EV8F816C1163300EA5
+        a                   :PersonBirth ;
+        :onYear             "1788"^^xsd:gYear .
+    
+    bdr:NM37101D9D054E448B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM4AC7C4E8214794A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang chen rdo rje slob dpon 01 ngag dbang chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMF7C7F438BC7F52CC
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dbang skyabs/"@bo-x-ewts .
+    
+    bdr:NTDEE5FBBD6742EFFB
+        a                   :Note ;
+        :locationStatement  "pp. 181-188" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nborn 'dzi yul rab kha"@en .
+    
+    bdr:P8930  a            :Person ;
+        skos:prefLabel      "ngag dbang chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDEE5FBBD6742EFFB ;
+        :personEvent        bdr:EV7C849561FF6129F5 , bdr:EV8F816C1163300EA5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37101D9D054E448B , bdr:NM4AC7C4E8214794A0 , bdr:NMF7C7F438BC7F52CC ;
+        :personStudentOf    bdr:P264 .
+}

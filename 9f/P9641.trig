@@ -1,0 +1,51 @@
+@base          <bdg:P9641> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9641 {
+    bda:P9641  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9641 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9f/P9641.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9641 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58287A377BFE325B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2167 ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:NM0B7961D38AB19E0B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chab spel tshe dpal/"@bo-x-ewts .
+    
+    bdr:NM1E24321E24234A9B
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dpal, chab spel/"@bo-x-ewts .
+    
+    bdr:NTDC147C09844387D2
+        a                   :Note ;
+        :locationStatement  "p. 80" ;
+        :noteSource         bdr:MW29298 ;
+        :noteText           "biography of the poetess"@en .
+    
+    bdr:P9641  a            :Person ;
+        skos:prefLabel      "chab spel tshe dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDC147C09844387D2 ;
+        :personEvent        bdr:EV58287A377BFE325B ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM0B7961D38AB19E0B , bdr:NM1E24321E24234A9B .
+}

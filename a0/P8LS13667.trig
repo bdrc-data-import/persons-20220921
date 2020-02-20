@@ -1,0 +1,74 @@
+@base          <bdg:P8LS13667> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13667 {
+    bda:LGA77B42645024C603
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-07T08:41:50.811Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBD74D54C2FCAF809
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-23T11:09:02.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P8LS13667  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13667 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a0/P8LS13667.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13667 ;
+        adm:logEntry        bda:LGA77B42645024C603 , bda:LGBD74D54C2FCAF809 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E8B51E63ACF9E30
+        a                   :PersonEventNotSpecified ;
+        :onYear             "0815"^^xsd:gYear .
+    
+    bdr:EVE21F00F0CDC6C26C
+        a                   :PersonBirth ;
+        :onYear             "0798"^^xsd:gYear .
+    
+    bdr:NM90DA642C0D98DF21
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mu tig btsan po/"@bo-x-ewts .
+    
+    bdr:NMCB750BDB50895085
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sad na legs mjing yon/"@bo-x-ewts .
+    
+    bdr:NMF157E5B8ED775C06
+        a                   :PersonOtherName ;
+        rdfs:label          "khri lde srong btsan/"@bo-x-ewts .
+    
+    bdr:NT8DEE83696C9E03C4
+        a                   :Note ;
+        :locationStatement  "p. 80" ;
+        :noteSource         bdr:MW11825 .
+    
+    bdr:NTEF208F8BE77D2765
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 71" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13667  a        :Person ;
+        skos:prefLabel      "sad na legs mjing yon/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8DEE83696C9E03C4 , bdr:NTEF208F8BE77D2765 ;
+        :personEvent        bdr:EV0E8B51E63ACF9E30 , bdr:EVE21F00F0CDC6C26C ;
+        :personName         bdr:NM90DA642C0D98DF21 , bdr:NMCB750BDB50895085 , bdr:NMF157E5B8ED775C06 .
+}

@@ -1,0 +1,55 @@
+@base          <bdg:P10068> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10068 {
+    bda:P10068  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10068 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "12/P10068.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10068 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV11FD973064230ADA
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM420B2B0C20B822FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dung zla/"@bo-x-ewts .
+    
+    bdr:NMA8F3C1CC7ACF44BB
+        a                   :PersonPersonalName ;
+        rdfs:label          "sbyin pa rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMC57100A3066A764B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gca' dung zla/"@bo-x-ewts .
+    
+    bdr:NTBD38E94EEDE54399
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW30053 ;
+        :noteText           "brief biography with no dates\nborn in the sman pa sbra chen tshang in an old rnying ma family"@en .
+    
+    bdr:P10068  a           :Person ;
+        skos:prefLabel      "dung zla/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTBD38E94EEDE54399 ;
+        :personEvent        bdr:EV11FD973064230ADA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM420B2B0C20B822FF , bdr:NMA8F3C1CC7ACF44BB , bdr:NMC57100A3066A764B .
+}

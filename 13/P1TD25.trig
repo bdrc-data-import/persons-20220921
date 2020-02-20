@@ -1,0 +1,64 @@
+@base          <bdg:P1TD25> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1TD25 {
+    bda:LG45FCDEA11D3A2F25
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-16T15:48:03.381Z"^^xsd:dateTime ;
+        adm:logMessage      "created entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGC62D0CD32CC48EA0
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-16T18:15:38.368Z"^^xsd:dateTime ;
+        adm:logMessage      "no changes"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P1TD25  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1TD25 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "13/P1TD25.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1TD25 ;
+        adm:logEntry        bda:LG45FCDEA11D3A2F25 , bda:LGC62D0CD32CC48EA0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07D541AD4FA03AC9
+        a                   :PersonMarriage ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:NM26C913341B7BC51D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha rgya ri phun tshogs sgrol dkar/"@bo-x-ewts .
+    
+    bdr:NM3052087F02A79AAE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs sgrol dkar/"@bo-x-ewts .
+    
+    bdr:NT518799BD09C5FAE8
+        a                   :Note ;
+        :locationStatement  "pg.106" ;
+        :noteSource         bdr:MW00KG09731 ;
+        :noteText           "married Lhagyari Namgyel Gyatso in 1985 in India"@en .
+    
+    bdr:P1TD25  a           :Person ;
+        skos:prefLabel      "phun tshogs sgrol dkar/"@bo-x-ewts ;
+        :hasHusband         bdr:P00KG09732 ;
+        :isRoot             true ;
+        :note               bdr:NT518799BD09C5FAE8 ;
+        :personEvent        bdr:EV07D541AD4FA03AC9 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM26C913341B7BC51D , bdr:NM3052087F02A79AAE .
+}

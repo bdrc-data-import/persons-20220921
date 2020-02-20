@@ -1,0 +1,102 @@
+@base          <bdg:P8LS12191> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12191 {
+    bda:LG40E1621B9E644D92
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-03T11:10:30.39Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFD205F54AEB34852
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T11:59:07.65Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12191  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12191 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "91/P8LS12191.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12191 ;
+        adm:logEntry        bda:LG40E1621B9E644D92 , bda:LGFD205F54AEB34852 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8CD0BF9F5BA67D90
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVA524DFEB82ACF0BD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD6241962D52282D6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R8LS12190 .
+    
+    bdr:NM0BB3B3CD3CED9638
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' tshul khrims rdo rje/"@bo-x-ewts .
+    
+    bdr:NMA7B268B3B9DAD012
+        a                   :PersonOtherName ;
+        rdfs:label          "'gyur med bde chen mchog grub/"@bo-x-ewts .
+    
+    bdr:NMB8EE7EBDB98BD229
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling khri chen 09"@bo-x-ewts .
+    
+    bdr:NMBDD84C535C7FE126
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling mkhan chen 07"@bo-x-ewts .
+    
+    bdr:NME1AD50498CD3267C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde chen mchog grub/"@bo-x-ewts .
+    
+    bdr:NT59A284131459565B
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW20250 ;
+        :noteText           "according to this source this smin gling lineage was the last to become the abbot of smin grol gling monastery"@en .
+    
+    bdr:NT5B7D8C1D8A295A5F
+        a                   :Note ;
+        :locationStatement  "p. 117-118" ;
+        :noteSource         bdr:MW1CZ2290 ;
+        :noteText           "The 8th smin gling khri chen yid bzhin dbang rgyal does not have any descendant boy, his younger brother kun dga' tshul khrims rdo rje after relieved from the monk vows became the khri of smin grol gling and named bde chen mchog grub"@en .
+    
+    bdr:NT903DECC2D6E4FF13
+        a                   :Note ;
+        :locationStatement  "p. 128-129" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:NT9BC85F373C22EF80
+        a                   :Note ;
+        :locationStatement  "p. 175" ;
+        :noteSource         bdr:MW1CZ2290 .
+    
+    bdr:P8LS12191  a        :Person ;
+        skos:prefLabel      "bde chen mchog grub/"@bo-x-ewts ;
+        :hasBrother         bdr:P2709 ;
+        :hasFather          bdr:P2698 ;
+        :isRoot             true ;
+        :note               bdr:NT59A284131459565B , bdr:NT5B7D8C1D8A295A5F , bdr:NT903DECC2D6E4FF13 , bdr:NT9BC85F373C22EF80 ;
+        :personEvent        bdr:EV8CD0BF9F5BA67D90 , bdr:EVA524DFEB82ACF0BD , bdr:EVD6241962D52282D6 ;
+        :personName         bdr:NM0BB3B3CD3CED9638 , bdr:NMA7B268B3B9DAD012 , bdr:NMB8EE7EBDB98BD229 , bdr:NMBDD84C535C7FE126 , bdr:NME1AD50498CD3267C .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P3774> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3774 {
+    bda:LG29F2AD082488EAA2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-19T11:27:12.381Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG62495D4E241B17A4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:26:53.765Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3774  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3774 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "32/P3774.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3774 ;
+        adm:logEntry        bda:LG29F2AD082488EAA2 , bda:LG62495D4E241B17A4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVED748AF39D844C03
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NMB58CEF81E22AC8C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzod pa/"@bo-x-ewts .
+    
+    bdr:NMC6A58FC5021DA4B5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po bzod pa/"@bo-x-ewts .
+    
+    bdr:NTAE39837BFFA955FD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Tshal-pa transmissions"@en .
+    
+    bdr:P3774  a            :Person ;
+        skos:prefLabel      "bzod pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE39837BFFA955FD ;
+        :personEvent        bdr:EVED748AF39D844C03 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB58CEF81E22AC8C3 , bdr:NMC6A58FC5021DA4B5 ;
+        :personStudentOf    bdr:P16 , bdr:P1857 ;
+        :personTeacherOf    bdr:P2470 , bdr:P3772 .
+}

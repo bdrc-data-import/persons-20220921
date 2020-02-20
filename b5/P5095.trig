@@ -1,0 +1,48 @@
+@base          <bdg:P5095> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5095 {
+    bda:P5095  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5095 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "b5/P5095.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5095 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6CC4851F460113A5
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMCD414D8D24257641
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smon lam rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6745F15087B50A27
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 323r" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "kaM tshang bka' brgyud master; a student of byar po rtogs ldan"@en .
+    
+    bdr:P5095  a            :Person ;
+        skos:prefLabel      "smon lam rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6745F15087B50A27 ;
+        :personEvent        bdr:EV6CC4851F460113A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCD414D8D24257641 ;
+        :personStudentOf    bdr:P5094 .
+}

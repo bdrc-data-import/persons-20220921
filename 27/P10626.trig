@@ -1,0 +1,52 @@
+@base          <bdg:P10626> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10626 {
+    bda:P10626  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10626 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "27/P10626.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10626 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB1B4003DA23B2C50
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM6A5B1FD2DE718C7F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes 'bras khud pa/"@bo-x-ewts .
+    
+    bdr:NM79DB0A3529DA879B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bras khud pa/"@bo-x-ewts .
+    
+    bdr:NT08B7D022BEF16F1B
+        a                   :Note ;
+        :locationStatement  "p. 175" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "scholar of undetermined sectarian affiliation who was one of the teachers of 'gro mgon 'phags pa"@en .
+    
+    bdr:P10626  a           :Person ;
+        skos:prefLabel      "'bras khud pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08B7D022BEF16F1B ;
+        :personEvent        bdr:EVB1B4003DA23B2C50 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6A5B1FD2DE718C7F , bdr:NM79DB0A3529DA879B ;
+        :personTeacherOf    bdr:P1048 .
+}

@@ -1,0 +1,105 @@
+@base          <bdg:P4161> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4161 {
+    bda:LG4B89F1A1F1A9B59F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T09:23:15.929Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7190744983B297AD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T10:13:46.809Z"^^xsd:dateTime ;
+        adm:logMessage      "changed office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF1A4219FAC568ED2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T11:45:19.812Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4161  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4161 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "62/P4161.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4161 ;
+        adm:logEntry        bda:LG4B89F1A1F1A9B59F , bda:LG7190744983B297AD , bda:LGF1A4219FAC568ED2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV37A274CCD4774A74
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV3D391DD75C36DF2A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV54408B1ECCBAA0CA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G226 .
+    
+    bdr:EV9E7B6E252B50AA5D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1179 ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM160B182FFC4E13B3
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 7 thar pa bzang po/"@bo-x-ewts .
+    
+    bdr:NMC3C68CEBC4187CF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thar pa bzang po/"@bo-x-ewts .
+    
+    bdr:NMF906FCB5657B2FF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lho brag thar pa bzang po/"@bo-x-ewts .
+    
+    bdr:NMFFCE1B7359CD8CF6
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 07"@bo-x-ewts .
+    
+    bdr:NT16D95BA5D86863A8
+        a                   :Note ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:NT8B85231E4E5FA425
+        a                   :Note ;
+        :locationStatement  "p. 112" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "During his abbotship the third dalai lama visited bya khyung monastery"@en .
+    
+    bdr:NT9A3DE0B36602AC5A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTFB0E7AE874B0A0D1
+        a                   :Note ;
+        :locationStatement  "p. 1883" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4161  a            :Person ;
+        skos:prefLabel      "thar pa bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16D95BA5D86863A8 , bdr:NT8B85231E4E5FA425 , bdr:NT9A3DE0B36602AC5A , bdr:NTFB0E7AE874B0A0D1 ;
+        :personEvent        bdr:EV37A274CCD4774A74 , bdr:EV3D391DD75C36DF2A , bdr:EV54408B1ECCBAA0CA , bdr:EV9E7B6E252B50AA5D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM160B182FFC4E13B3 , bdr:NMC3C68CEBC4187CF7 , bdr:NMF906FCB5657B2FF3 , bdr:NMFFCE1B7359CD8CF6 .
+}

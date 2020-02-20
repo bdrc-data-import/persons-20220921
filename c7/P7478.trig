@@ -1,0 +1,75 @@
+@base          <bdg:P7478> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7478 {
+    bda:LGA6B2DFF8564256B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-05T11:02:23.578Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGB0EDF0530E516166
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-28T15:51:21.876Z"^^xsd:dateTime ;
+        adm:logMessage      "added names"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P7478  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7478 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c7/P7478.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7478 ;
+        adm:logEntry        bda:LGA6B2DFF8564256B1 , bda:LGB0EDF0530E516166 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BD81A3F70F6856F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3207 ;
+        :onYear             "1808"^^xsd:gYear .
+    
+    bdr:EVCACA56D7E1C2CEE5
+        a                   :PersonDeath ;
+        :onYear             "1881"^^xsd:gYear .
+    
+    bdr:NM11B10BDD8CA2D570
+        a                   :PersonFamilyName ;
+        rdfs:label          "blo gros tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM85D4E1A4D18DB476
+        a                   :PersonPersonalName ;
+        rdfs:label          "gang shar rang grol/"@bo-x-ewts .
+    
+    bdr:NMAF89AA6F1B41C094
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "o rgyan chos dbang lhun grub/"@bo-x-ewts .
+    
+    bdr:NMD9C18B0396080E69
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las lhun grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTEB13CD331D72D84C
+        a                   :Note ;
+        :noteSource         bdr:MW22121 ;
+        :noteText           "Autobiography and collected songs of a Jangter master, Trinley Lhundup Gyaltsen"@en .
+    
+    bdr:P7478  a            :Person ;
+        skos:prefLabel      "'phrin las lhun grub rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEB13CD331D72D84C ;
+        :personEvent        bdr:EV0BD81A3F70F6856F , bdr:EVCACA56D7E1C2CEE5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11B10BDD8CA2D570 , bdr:NM85D4E1A4D18DB476 , bdr:NMAF89AA6F1B41C094 , bdr:NMD9C18B0396080E69 .
+}

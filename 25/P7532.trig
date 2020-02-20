@@ -1,0 +1,67 @@
+@base          <bdg:P7532> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7532 {
+    bda:LGE51D949ACECC25E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-08T14:59:19.936Z"^^xsd:dateTime ;
+        adm:logMessage      "added bio data, including seat and teachers"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGF301AB0ACF04F0C0
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T18:36:05.63Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P7532  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7532 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "25/P7532.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7532 ;
+        adm:logEntry        bda:LGE51D949ACECC25E9 , bda:LGF301AB0ACF04F0C0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D82788464D57D36
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EV43F183B7FB8A3EC4
+        a                   :PersonBirth ;
+        :onYear             "1505"^^xsd:gYear .
+    
+    bdr:EVF246C15FBE4899EA
+        a                   :PersonDeath ;
+        :onYear             "1573"^^xsd:gYear .
+    
+    bdr:NM4303584A7DE5C6A2
+        a                   :PersonPersonalName ;
+        rdfs:label          "shes rab rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT3AE69EA95F2E9E97
+        a                   :Note ;
+        :noteText           "briefly administered ngor dgon pa in 1569, having refused to serve as ngor chen."@en .
+    
+    bdr:P7532  a            :Person ;
+        skos:prefLabel      "shes rab rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3AE69EA95F2E9E97 ;
+        :personEvent        bdr:EV1D82788464D57D36 , bdr:EV43F183B7FB8A3EC4 , bdr:EVF246C15FBE4899EA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4303584A7DE5C6A2 ;
+        :personStudentOf    bdr:P1027 , bdr:P2509 , bdr:P2510 , bdr:P3897 , bdr:P461 , bdr:P986 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Khedrub-Sherab-Gyeltsen/10202"^^xsd:anyURI .
+}

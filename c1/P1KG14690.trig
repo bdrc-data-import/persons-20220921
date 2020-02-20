@@ -1,0 +1,56 @@
+@base          <bdg:P1KG14690> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14690 {
+    bda:LG06D6D1F8403C0035
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-20T11:15:37.109Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14690  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14690 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c1/P1KG14690.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14690 ;
+        adm:logEntry        bda:LG06D6D1F8403C0035 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV752971BC374E41EB
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM9AD07C9EFA20AB6D
+        a                   :PersonPersonalName ;
+        rdfs:label          "kaHthog pad+ma chos ldan/"@bo-x-ewts .
+    
+    bdr:NMD848A3CC172D950A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma chos ldan/"@bo-x-ewts .
+    
+    bdr:NME9C50431409CBA15
+        a                   :PersonPersonalName ;
+        rdfs:label          "kaHpad+ma chos ldan/"@bo-x-ewts .
+    
+    bdr:P1KG14690  a        :Person ;
+        skos:prefLabel      "pad+ma chos ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV752971BC374E41EB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9AD07C9EFA20AB6D , bdr:NMD848A3CC172D950A , bdr:NME9C50431409CBA15 ;
+        :personTeacherOf    bdr:P1KG14693 .
+}

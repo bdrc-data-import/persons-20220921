@@ -1,0 +1,75 @@
+@base          <bdg:P1KG5998> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5998 {
+    bda:LG0D3A61F7E073C4BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-22T14:55:15.23Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat to be G1720"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG7BA2550668D73C38
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-16T16:13:07.401Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGEB1C813E2CEEB89E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-28T11:12:11.564Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG5998  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5998 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3f/P1KG5998.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5998 ;
+        adm:logEntry        bda:LG0D3A61F7E073C4BB , bda:LG7BA2550668D73C38 , bda:LGEB1C813E2CEEB89E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV321DF8329C342793
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1720 .
+    
+    bdr:EV3DE94D93E5033CD2
+        a                   :PersonDeath ;
+        :onYear             "1987"^^xsd:gYear .
+    
+    bdr:EVF8077A390331D6EA
+        a                   :PersonBirth ;
+        :onYear             "1927"^^xsd:gYear .
+    
+    bdr:NM51EA63A2E835977D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bshad sgrub dpal/"@bo-x-ewts .
+    
+    bdr:NT747A456EF91A1B87
+        a                   :Note ;
+        :noteText           "Jonang master."@en .
+    
+    bdr:NTFA9CB188B4EB991E
+        a                   :Note ;
+        :noteText           "yab ngag dbang bstan 'dzin, yum ska za pan sgron/"@bo-x-ewts .
+    
+    bdr:P1KG5998  a         :Person ;
+        skos:prefLabel      "ngag dbang bshad sgrub dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT747A456EF91A1B87 , bdr:NTFA9CB188B4EB991E ;
+        :personEvent        bdr:EV321DF8329C342793 , bdr:EV3DE94D93E5033CD2 , bdr:EVF8077A390331D6EA ;
+        :personName         bdr:NM51EA63A2E835977D ;
+        :personTeacherOf    bdr:P1KG4252 .
+}

@@ -1,0 +1,51 @@
+@base          <bdg:P2598> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2598 {
+    bda:P2598  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2598 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e8/P2598.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2598 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA63A04579241C477
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMA14EB8758696224A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "snyan grags 'gyur med/"@bo-x-ewts .
+    
+    bdr:NTA0FB8045E0A0D112
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:NTFC10BD0ABFFF7BE9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Nalendra-pa"@en .
+    
+    bdr:P2598  a            :Person ;
+        skos:prefLabel      "snyan grags 'gyur med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA0FB8045E0A0D112 , bdr:NTFC10BD0ABFFF7BE9 ;
+        :personEvent        bdr:EVA63A04579241C477 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA14EB8758696224A ;
+        :personStudentOf    bdr:P963 ;
+        :personTeacherOf    bdr:P2597 .
+}

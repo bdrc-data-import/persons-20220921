@@ -1,0 +1,59 @@
+@base          <bdg:P1KG1575> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1575 {
+    bda:LG636B304EE1A7C300
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-22T16:28:13.117Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF94A3C05E3C2F010
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-22T15:38:34.694Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1575  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1575 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a9/P1KG1575.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1575 ;
+        adm:logEntry        bda:LG636B304EE1A7C300 , bda:LGF94A3C05E3C2F010 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFDF5D2F6D574850E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2A87E2C719F83DFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos dpal/"@bo-x-ewts .
+    
+    bdr:NTC1C82B73130D8615
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1574 ;
+        :noteText           "Tibetan thangka artist from 'dzam thang dgon"@en .
+    
+    bdr:P1KG1575  a         :Person ;
+        skos:prefLabel      "ngag dbang chos dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC1C82B73130D8615 ;
+        :personEvent        bdr:EVFDF5D2F6D574850E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A87E2C719F83DFD ;
+        :personStudentOf    bdr:P7279 .
+}

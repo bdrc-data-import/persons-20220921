@@ -1,0 +1,61 @@
+@base          <bdg:P4400> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4400 {
+    bda:P4400  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4400 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b6/P4400.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4400 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV97864C67410997C9
+        a                   :PersonDeath ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EVB773FBEA6AD0BE3B
+        a                   :PersonBirth ;
+        :onYear             "1826"^^xsd:gYear .
+    
+    bdr:EVC319B48CB62E9341
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM2CF33D307B7B0504
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzims khang 02 ngag dbang bstan 'dzin mchog grub/"@bo-x-ewts .
+    
+    bdr:NM3D7D31BFA29BCCB5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin mchog grub/"@bo-x-ewts .
+    
+    bdr:NT2264D86AF60B2EB2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT6FA5A8A5725693AA
+        a                   :Note ;
+        :locationStatement  "p. 1541" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4400  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin mchog grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2264D86AF60B2EB2 , bdr:NT6FA5A8A5725693AA ;
+        :personEvent        bdr:EV97864C67410997C9 , bdr:EVB773FBEA6AD0BE3B , bdr:EVC319B48CB62E9341 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2CF33D307B7B0504 , bdr:NM3D7D31BFA29BCCB5 .
+}

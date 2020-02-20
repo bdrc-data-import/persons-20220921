@@ -1,0 +1,56 @@
+@base          <bdg:P8LS13654> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13654 {
+    bda:LG46C8173B0796D116
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-03T15:48:18.606Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9F8DD24E8D695781
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-04T09:15:07.299Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13654  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13654 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "4a/P8LS13654.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13654 ;
+        adm:logEntry        bda:LG46C8173B0796D116 , bda:LG9F8DD24E8D695781 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM43560E4395D12E95
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan gro/"@bo-x-ewts .
+    
+    bdr:NM814B282EFC22C06A
+        a                   :PersonOtherName ;
+        rdfs:label          "dpal ldan gro mo che ba/"@bo-x-ewts .
+    
+    bdr:NT7E53D10478779788
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 60, vol. 2, p. 59" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS13654  a        :Person ;
+        skos:prefLabel      "dpal ldan gro/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7E53D10478779788 ;
+        :personName         bdr:NM43560E4395D12E95 , bdr:NM814B282EFC22C06A .
+}

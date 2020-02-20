@@ -1,0 +1,61 @@
+@base          <bdg:P8636> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8636 {
+    bda:LGDFFB7A48CC4419F7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T11:34:36.376Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8636  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8636 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "08/P8636.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8636 ;
+        adm:logEntry        bda:LGDFFB7A48CC4419F7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM0683DFEE0D067D55
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM4F6306759D1BDECF
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "hor chos mdzad 05"@bo-x-ewts .
+    
+    bdr:NM785E327B4BD02808
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor chos mdzad 05 'gyur med bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMB72657C1EDF4F417
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Horcho Ze 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT61C0FACBDA5F4CB0
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8636  a            :Person ;
+        skos:prefLabel      "'gyur med bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8635 ;
+        :isRoot             true ;
+        :note               bdr:NT61C0FACBDA5F4CB0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0683DFEE0D067D55 , bdr:NM4F6306759D1BDECF , bdr:NM785E327B4BD02808 , bdr:NMB72657C1EDF4F417 .
+}

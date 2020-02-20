@@ -1,0 +1,77 @@
+@base          <bdg:P8LS13135> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13135 {
+    bda:LG1C93E133963BFFA8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-22T10:39:35.978Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG93CECEF6DDA9AB91
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T10:49:37.212Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC641CFAAADC4A2B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS13135  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13135 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "64/P8LS13135.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13135 ;
+        adm:logEntry        bda:LG1C93E133963BFFA8 , bda:LG93CECEF6DDA9AB91 , bda:LGC641CFAAADC4A2B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEDF9F898D0C434CD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4368 .
+    
+    bdr:NM046360ADD2536369
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mu to sprul sku 03"@bo-x-ewts .
+    
+    bdr:NM1DCEEA17E54B8AE2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Muto Tulku 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM42364167B35B34FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog don ldan/"@bo-x-ewts .
+    
+    bdr:NT9BB0F55EA30AB945
+        a                   :Note ;
+        :locationStatement  "p. 142" ;
+        :noteSource         bdr:MW21017 .
+    
+    bdr:NTB25230D60FA9F7F5
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 312" ;
+        :noteSource         bdr:MW2CZ7959 .
+    
+    bdr:P8LS13135  a        :Person ;
+        skos:prefLabel      "dkon mchog don ldan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13134 ;
+        :isRoot             true ;
+        :note               bdr:NT9BB0F55EA30AB945 , bdr:NTB25230D60FA9F7F5 ;
+        :personEvent        bdr:EVEDF9F898D0C434CD ;
+        :personName         bdr:NM046360ADD2536369 , bdr:NM1DCEEA17E54B8AE2 , bdr:NM42364167B35B34FB .
+}

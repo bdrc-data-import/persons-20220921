@@ -1,0 +1,53 @@
+@base          <bdg:P3859> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3859 {
+    bda:LGA712242C284CAC15
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:05:21.476Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3859  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3859 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "55/P3859.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3859 ;
+        adm:logEntry        bda:LGA712242C284CAC15 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV019E049E05FD8DE4
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM1545B4790A13BA87
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhal snga nas kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM2245EDDF5D22390B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P3859  a            :Person ;
+        skos:prefLabel      "kun dga' rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV019E049E05FD8DE4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1545B4790A13BA87 , bdr:NM2245EDDF5D22390B ;
+        :personStudentOf    bdr:P3858 ;
+        :personTeacherOf    bdr:P3860 .
+}

@@ -1,0 +1,51 @@
+@base          <bdg:P8110> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8110 {
+    bda:P8110  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8110 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "6d/P8110.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8110 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEDEE17B846CC1CEE
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM132AC839CD9CD321
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzhon nu ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NME11DCC0A596CC706
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NT931C1BA576C78869
+        a                   :Note ;
+        :locationStatement  "p. 116" ;
+        :noteSource         bdr:MW25210 ;
+        :noteText           "this teacher describes himself as a disciple of skyabs rje grub dbang byang chub rdo rje"@en .
+    
+    bdr:P8110  a            :Person ;
+        skos:prefLabel      "ye shes rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT931C1BA576C78869 ;
+        :personEvent        bdr:EVEDEE17B846CC1CEE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM132AC839CD9CD321 , bdr:NME11DCC0A596CC706 .
+}

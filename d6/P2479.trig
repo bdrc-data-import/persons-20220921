@@ -1,0 +1,57 @@
+@base          <bdg:P2479> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2479 {
+    bda:LGB280D31C2E32AE52
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-20T12:09:14.704Z"^^xsd:dateTime ;
+        adm:logMessage      "added Incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2479  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2479 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d6/P2479.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2479 ;
+        adm:logEntry        bda:LGB280D31C2E32AE52 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD501EE76C2CEC1F7
+        a                   :PersonDeath ;
+        :onYear             "1708"^^xsd:gYear .
+    
+    bdr:NM0AF97CA29EA97CFE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khra leb 02 nyi ma 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMF6343F7C3E5C8FB1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma 'gyur med/"@bo-x-ewts .
+    
+    bdr:NTAD1D64BA211F4287
+        a                   :Note ;
+        :noteSource         bdr:MW26450 ;
+        :noteText           "met byang chub rdo rje and chos kyi 'byung gnas in 1707; d. 1/08/1708"@en .
+    
+    bdr:P2479  a            :Person ;
+        skos:prefLabel      "nyi ma 'gyur med/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2478 ;
+        :isRoot             true ;
+        :note               bdr:NTAD1D64BA211F4287 ;
+        :personEvent        bdr:EVD501EE76C2CEC1F7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0AF97CA29EA97CFE , bdr:NMF6343F7C3E5C8FB1 .
+}

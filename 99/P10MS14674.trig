@@ -1,0 +1,68 @@
+@base          <bdg:P10MS14674> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10MS14674 {
+    bda:LG68775A112B5B2D93
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-28T10:52:46.084Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGD0574DD6980A9A48
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T17:58:42.13Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P10MS14674  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10MS14674 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "99/P10MS14674.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10MS14674 ;
+        adm:logEntry        bda:LG68775A112B5B2D93 , bda:LGD0574DD6980A9A48 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV47720088EA898370
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1268"^^xsd:gYear .
+    
+    bdr:EV70C94D0A05AE3BB9
+        a                   :PersonDeath ;
+        :eventWhere         bdr:G3420 ;
+        :onYear             "1312"^^xsd:gYear .
+    
+    bdr:NM3E517388037E8075
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nam dpal 'dren/"@bo-x-ewts .
+    
+    bdr:NT5860D6FE2D16EA82
+        a                   :Note ;
+        :noteText           "possible dates are: 1268-1312 or 1328-1372"@en .
+    
+    bdr:NTD2B097807762F481
+        a                   :Note ;
+        :noteText           "An uneducated nomad woman who had visions. Her husband Rin chen dpal wrote a biography of her, Bsod nams dpal 'dren rnam thar."@en .
+    
+    bdr:P10MS14674  a       :Person ;
+        skos:prefLabel      "bsod nam dpal 'dren/"@bo-x-ewts ;
+        :hasHusband         bdr:P11MS236 ;
+        :isRoot             true ;
+        :note               bdr:NT5860D6FE2D16EA82 , bdr:NTD2B097807762F481 ;
+        :personEvent        bdr:EV47720088EA898370 , bdr:EV70C94D0A05AE3BB9 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM3E517388037E8075 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/bsod-nam-dpal-dren//13196"^^xsd:anyURI .
+}

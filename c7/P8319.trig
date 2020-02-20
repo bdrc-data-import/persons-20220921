@@ -1,0 +1,50 @@
+@base          <bdg:P8319> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8319 {
+    bda:P8319  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8319 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c7/P8319.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8319 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A7AA25745BB8C98
+        a                   :PersonBirth ;
+        :onYear             "1974"^^xsd:gYear .
+    
+    bdr:EV79816D0DFC65C4F6
+        a                   :PersonDeath ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:NM5A7A0C7D8A323415
+        a                   :PersonPersonalName ;
+        rdfs:label          "khri blo gros/"@bo-x-ewts .
+    
+    bdr:NTA17C5491CE06791E
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW26004 ;
+        :noteText           "brief biodata"@en .
+    
+    bdr:P8319  a            :Person ;
+        skos:prefLabel      "khri blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA17C5491CE06791E ;
+        :personEvent        bdr:EV6A7AA25745BB8C98 , bdr:EV79816D0DFC65C4F6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5A7A0C7D8A323415 .
+}

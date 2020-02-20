@@ -1,0 +1,108 @@
+@base          <bdg:P5214> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5214 {
+    bda:LG3801FD777C5631D1
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T12:38:26.878Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5D012D47B4D30A36
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T11:15:41.975Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates, teacher and student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG800D8269F784335E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T15:00:26.708Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9EB8C025BB6EB71C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T12:16:30.033Z"^^xsd:dateTime ;
+        adm:logMessage      "spelling corrected"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5214  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5214 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "55/P5214.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5214 ;
+        adm:logEntry        bda:LG3801FD777C5631D1 , bda:LG5D012D47B4D30A36 , bda:LG800D8269F784335E , bda:LG9EB8C025BB6EB71C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1945117D60DA8351
+        a                   :PersonBirth ;
+        :onYear             "1669"^^xsd:gYear .
+    
+    bdr:EV593CC960E892105B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1710"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVCDD274AC967B24B0
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G211 ;
+        :onYear             "1713"^^xsd:gYear ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVDD29DFD0F94318E9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVE68D5ADC599C2122
+        a                   :PersonDeath ;
+        :onYear             "1713"^^xsd:gYear .
+    
+    bdr:NM07F922F3536B38FE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM2A55A727F4601D30
+        a                   :PersonPersonalName ;
+        rdfs:label          "byams pa bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM7D2760D2A07B4B34
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 29"@bo-x-ewts .
+    
+    bdr:NMECE8B0EE96805535
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 29 bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NMF48AC030FEBAB9DD
+        a                   :PersonTitle ;
+        rdfs:label          "mtshungs med bsod nams dpal ldan/"@bo-x-ewts .
+    
+    bdr:NTEA42906A359749FA
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 147-150" ;
+        :noteSource         bdr:MW23724 .
+    
+    bdr:P5214  a            :Person ;
+        skos:prefLabel      "bsod nams dpal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEA42906A359749FA ;
+        :personEvent        bdr:EV1945117D60DA8351 , bdr:EV593CC960E892105B , bdr:EVCDD274AC967B24B0 , bdr:EVDD29DFD0F94318E9 , bdr:EVE68D5ADC599C2122 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07F922F3536B38FE , bdr:NM2A55A727F4601D30 , bdr:NM7D2760D2A07B4B34 , bdr:NMECE8B0EE96805535 , bdr:NMF48AC030FEBAB9DD ;
+        :personStudentOf    bdr:P2518 , bdr:P2519 , bdr:P5206 , bdr:P796 , bdr:P799 ;
+        :personTeacherOf    bdr:P2535 , bdr:P2536 , bdr:P5202 , bdr:P5215 , bdr:P800 , bdr:P802 .
+}

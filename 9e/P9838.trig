@@ -1,0 +1,67 @@
+@base          <bdg:P9838> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9838 {
+    bda:LG2C92592EB8C900E5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-26T10:11:10.792Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher P5994 & P258"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG48B63C77C6621F1C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-26T15:56:33.098Z"^^xsd:dateTime ;
+        adm:logMessage      "added note & birth pl."@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9838  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9838 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "9e/P9838.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9838 ;
+        adm:logEntry        bda:LG2C92592EB8C900E5 , bda:LG48B63C77C6621F1C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusProvisional .
+    
+    bdr:EVAB443334F4B0E2BB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1490 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2001E17828D44547
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang 'gyur med/"@bo-x-ewts .
+    
+    bdr:NME3F9692824CC1DB0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprang po bla ma kun bzang 'gyur med/"@bo-x-ewts .
+    
+    bdr:NT146FEFB0BB650FFC
+        a                   :Note ;
+        :locationStatement  "P. 632" ;
+        :noteSource         bdr:MW23921 ;
+        :noteText           "gang 'di ni 'gu log tu 'khrungs shing /kaH thog si tu chos kyi blo gros la sogs las kaH thog pa yi snyan brgyud gdams pa gsan cing / dpal sprul rin po che las spyod 'jug dang / khyad par 'jam dbyangs mkhyen brtse las gdams bcud thob pa zhig yin par/ kaH thog si tu chos kyi rgya mtshos kyang nyid kyi bla mar 'dzin cing brgyud 'debs mdzad 'dug par gzigs 'tshal/"@en .
+    
+    bdr:P9838  a            :Person ;
+        skos:prefLabel      "kun bzang 'gyur med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT146FEFB0BB650FFC ;
+        :personEvent        bdr:EVAB443334F4B0E2BB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2001E17828D44547 , bdr:NME3F9692824CC1DB0 ;
+        :personStudentOf    bdr:P258 , bdr:P5994 , bdr:P6007 ;
+        :personTeacherOf    bdr:P706 .
+}

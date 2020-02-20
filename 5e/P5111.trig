@@ -1,0 +1,49 @@
+@base          <bdg:P5111> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5111 {
+    bda:P5111  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5111 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5e/P5111.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5111 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD2C3B909A51A3544
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2C530ABC0C8EE473
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dar mdo bkra shis dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NM6E2CC8CF761D1F66
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NTB23F17F955527221
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Modern Writers"@en .
+    
+    bdr:P5111  a            :Person ;
+        skos:prefLabel      "bkra shis dbang 'dus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB23F17F955527221 ;
+        :personEvent        bdr:EVD2C3B909A51A3544 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2C530ABC0C8EE473 , bdr:NM6E2CC8CF761D1F66 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P8542> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8542 {
+    bda:LG260474E4AAC5F8D2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T14:55:57.709Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8542  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8542 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "45/P8542.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8542 ;
+        adm:logEntry        bda:LG260474E4AAC5F8D2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV11DBC4C9F0BA3FE8
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV808B8395B00AA621
+        a                   :PersonDeath ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:EVD57C2E285923E89B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVEFC11EFCC272337F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:NM1CD3C8E4613BF5F5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog"@bo-x-ewts .
+    
+    bdr:NM881C8D8C0A482CEC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 13"@bo-x-ewts .
+    
+    bdr:NMAA97DE7095940E40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan rin po che dkon mchog"@bo-x-ewts .
+    
+    bdr:NT055F02548CE87D48
+        a                   :Note ;
+        :locationStatement  "pp. 339-341" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographic sketch"@en .
+    
+    bdr:P8542  a            :Person ;
+        skos:prefLabel      "dkon mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT055F02548CE87D48 ;
+        :personEvent        bdr:EV11DBC4C9F0BA3FE8 , bdr:EV808B8395B00AA621 , bdr:EVD57C2E285923E89B , bdr:EVEFC11EFCC272337F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1CD3C8E4613BF5F5 , bdr:NM881C8D8C0A482CEC , bdr:NMAA97DE7095940E40 ;
+        :personStudentOf    bdr:P743 , bdr:P8538 .
+}

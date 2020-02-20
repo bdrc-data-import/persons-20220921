@@ -1,0 +1,60 @@
+@base          <bdg:P6363> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6363 {
+    bda:P6363  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6363 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e4/P6363.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6363 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01DBA006795E968B
+        a                   :PersonBirth ;
+        :onYear             "1892"^^xsd:gYear .
+    
+    bdr:EVC3BC6E1476678CC9
+        a                   :PersonDeath ;
+        :notAfter           "1959"^^xsd:gYear ;
+        :notBefore          "1958"^^xsd:gYear .
+    
+    bdr:EVC7F7CCB7D092C6D4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM490669CB9A18778A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal blo gros/"@bo-x-ewts .
+    
+    bdr:NM9DE86C6A6ED27F5E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phyag tsha mkhan po 'jam dpal blo gros/"@bo-x-ewts .
+    
+    bdr:NT37B961C182F830C9
+        a                   :Note ;
+        :locationStatement  "p. 423" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch\ndied in the prison at drug chen sum mdo"@en .
+    
+    bdr:P6363  a            :Person ;
+        skos:prefLabel      "'jam dpal blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT37B961C182F830C9 ;
+        :personEvent        bdr:EV01DBA006795E968B , bdr:EVC3BC6E1476678CC9 , bdr:EVC7F7CCB7D092C6D4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM490669CB9A18778A , bdr:NM9DE86C6A6ED27F5E ;
+        :personStudentOf    bdr:P6337 .
+}

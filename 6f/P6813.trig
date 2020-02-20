@@ -1,0 +1,87 @@
+@base          <bdg:P6813> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6813 {
+    bda:LG45CE1B64F6248D2B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T15:32:30.792Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB74DA585957B6D4A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-22T11:32:01.705Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE007B0B7D9730165
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P6813  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6813 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "6f/P6813.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6813 ;
+        adm:logEntry        bda:LG45CE1B64F6248D2B , bda:LGB74DA585957B6D4A , bda:LGE007B0B7D9730165 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03F5EFB8F746D5AC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2533 .
+    
+    bdr:EV6B616DCF2E0CD42F
+        a                   :PersonBirth ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:NM213D742E76E47D49
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rnam rgyal lung rigs seng+ge"@bo-x-ewts .
+    
+    bdr:NM5E458ED8068C7311
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tso Tritrul 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM65F5472F20D21E15
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsos khri sprul 05 blo bzang rnam rgyal lung rigs seng+ge"@bo-x-ewts .
+    
+    bdr:NM667CBE1ECFC6B722
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gtsos khri sprul 05"@bo-x-ewts .
+    
+    bdr:NT0E3C1B7A2D0EB6FC
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 40" ;
+        :noteSource         bdr:MW20379 .
+    
+    bdr:NT4142CBA688B50231
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 348" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "according to this source his name is blo bzang thub bstan dpal ldan seng+ge"@en .
+    
+    bdr:P6813  a            :Person ;
+        skos:prefLabel      "blo bzang rnam rgyal lung rigs seng+ge"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6812 ;
+        :isRoot             true ;
+        :note               bdr:NT0E3C1B7A2D0EB6FC , bdr:NT4142CBA688B50231 ;
+        :personEvent        bdr:EV03F5EFB8F746D5AC , bdr:EV6B616DCF2E0CD42F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM213D742E76E47D49 , bdr:NM5E458ED8068C7311 , bdr:NM65F5472F20D21E15 , bdr:NM667CBE1ECFC6B722 .
+}

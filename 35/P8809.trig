@@ -1,0 +1,67 @@
+@base          <bdg:P8809> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8809 {
+    bda:LG8C0523DE1CF15550
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-17T09:35:53.515Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p4580"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P8809  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8809 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "35/P8809.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8809 ;
+        adm:logEntry        bda:LG8C0523DE1CF15550 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P4580 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVAAF2ECE54814FD8F
+        a                   :PersonDeath ;
+        :onYear             "1602"^^xsd:gYear .
+    
+    bdr:EVAB3ABBA9691FC078
+        a                   :PersonBirth ;
+        :onYear             "1547"^^xsd:gYear .
+    
+    bdr:NM37D2EAB3A31D7EB3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs bkra shis/"@bo-x-ewts .
+    
+    bdr:NMA9D5AF522CE524AC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bri gung chos rje phun tshogs bkra shis/"@bo-x-ewts .
+    
+    bdr:NT4F1C5C9DDC2A2D23
+        a                   :Note ;
+        :noteText           "withdrawn in favor of p4580"@en .
+    
+    bdr:NT7BDC168FA278EBD6
+        a                   :Note ;
+        :locationStatement  "p. 2322, 2328" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1547. 'bri gung chos rje phun tshogs bkra shis 'khrungs\n1602. 'bri gung chos rje phun tshogs bkra shis gshegs"@en .
+    
+    bdr:P8809  a            :Person ;
+        skos:prefLabel      "phun tshogs bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F1C5C9DDC2A2D23 , bdr:NT7BDC168FA278EBD6 ;
+        :personEvent        bdr:EVAAF2ECE54814FD8F , bdr:EVAB3ABBA9691FC078 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM37D2EAB3A31D7EB3 , bdr:NMA9D5AF522CE524AC ;
+        :personTeacherOf    bdr:P2GS1109 .
+}

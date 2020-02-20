@@ -1,0 +1,58 @@
+@base          <bdg:P0RK500> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK500 {
+    bda:LG461B254A204B27CF
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T15:26:32.706Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG6F45C480585115F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:P0RK500  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK500 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c5/P0RK500.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK500 ;
+        adm:logEntry        bda:LG461B254A204B27CF , bda:LG6F45C480585115F1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM76A9A32899A97E1A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lo chung grags mchog"@bo-x-ewts .
+    
+    bdr:NMEDF4F848355E1079
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lo chung grags mchog shes rab/"@bo-x-ewts .
+    
+    bdr:NT847F563ECCA7AAB2
+        a                   :Note ;
+        :noteText           "Possible duplicate of TBRC =? P1245"@en .
+    
+    bdr:P0RK500  a          :Person ;
+        skos:prefLabel      "lo chung grags mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT847F563ECCA7AAB2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76A9A32899A97E1A , bdr:NMEDF4F848355E1079 ;
+        :personStudentOf    bdr:P0RK481 ;
+        :personTeacherOf    bdr:P3223 .
+}

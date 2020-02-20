@@ -1,0 +1,107 @@
+@base          <bdg:P0RK1482> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK1482 {
+    bda:LG8023616A8305779A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-04-29T11:03:11.598Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth century, changed teacher relations, deleted note"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG8502F6FA6C73A4C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T08:37:36.927Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA033387E6F0B9C1A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T08:40:46.611Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGABAD3F8782906816
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T14:41:11.741Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LGBC56B1C657188C7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:LGE2AC82157EBC463E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-04-29T11:31:59.526Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted note"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGFE047D872D09F57C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-04-29T11:33:12.092Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth cent."@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P0RK1482  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK1482 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "4e/P0RK1482.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK1482 ;
+        adm:logEntry        bda:LG8023616A8305779A , bda:LG8502F6FA6C73A4C7 , bda:LGA033387E6F0B9C1A , bda:LGABAD3F8782906816 , bda:LGBC56B1C657188C7F , bda:LGE2AC82157EBC463E , bda:LGFE047D872D09F57C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV54E975C84B9820C4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EVAD74E9CCB2DCD246
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVC0C1770D9C036B51
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM76F59EDE8FBFB8A7
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 11"@bo-x-ewts .
+    
+    bdr:NMCA033E9143FD9583
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal ba jo bzang /"@bo-x-ewts .
+    
+    bdr:NMFB365A0130ABCC7A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen rgyal ba jo bzang /"@bo-x-ewts .
+    
+    bdr:NT901B673A3A548B68
+        a                   :Note ;
+        :noteText           "jo nang gnas bshad, f. 8r"@en .
+    
+    bdr:P0RK1482  a         :Person ;
+        skos:prefLabel      "rgyal ba jo bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT901B673A3A548B68 ;
+        :personEvent        bdr:EV54E975C84B9820C4 , bdr:EVAD74E9CCB2DCD246 , bdr:EVC0C1770D9C036B51 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76F59EDE8FBFB8A7 , bdr:NMCA033E9143FD9583 , bdr:NMFB365A0130ABCC7A ;
+        :personStudentOf    bdr:P152 , bdr:P2460 ;
+        :personTeacherOf    bdr:P0RK1483 .
+}

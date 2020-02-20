@@ -1,0 +1,79 @@
+@base          <bdg:P8LS12010> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12010 {
+    bda:LG918E6F680DA73C9A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T13:02:37.168Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12010  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12010 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "05/P8LS12010.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12010 ;
+        adm:logEntry        bda:LG918E6F680DA73C9A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4FAC5F583F7F0B84
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV5CD04775B159D27D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC20BD8DB1629E955
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G247 .
+    
+    bdr:EVC575DAB94EEA1A8E
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM0D698E0860A5EE13
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang pa rab 'byams pa ye grags/"@bo-x-ewts .
+    
+    bdr:NM16B9E74370152B10
+        a                   :PersonTitle ;
+        rdfs:label          "byang pa rab 'byams pa ye shes grags pa/"@bo-x-ewts .
+    
+    bdr:NM887D994B3E3DD409
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 10"@bo-x-ewts .
+    
+    bdr:NM99404362C61E81A5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes grags pa/"@bo-x-ewts .
+    
+    bdr:NT1C9D15719573BB7F
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 30" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "he did not remained long at the seat of gomang abbot and left to the la stod byang area were became abbot of bsam grub dga' ldan, a branch monastery of ngam ring monastery. See also in baiser"@en .
+    
+    bdr:P8LS12010  a        :Person ;
+        skos:prefLabel      "ye shes grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C9D15719573BB7F ;
+        :personEvent        bdr:EV4FAC5F583F7F0B84 , bdr:EV5CD04775B159D27D , bdr:EVC20BD8DB1629E955 , bdr:EVC575DAB94EEA1A8E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D698E0860A5EE13 , bdr:NM16B9E74370152B10 , bdr:NM887D994B3E3DD409 , bdr:NM99404362C61E81A5 .
+}

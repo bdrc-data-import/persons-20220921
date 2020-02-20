@@ -1,0 +1,79 @@
+@base          <bdg:P5791> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5791 {
+    bda:LGDD6E0D128D8F5CBD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-03T14:56:37.396Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5791  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5791 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "6e/P5791.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5791 ;
+        adm:logEntry        bda:LGDD6E0D128D8F5CBD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E950387388A60D8
+        a                   :PersonBirth ;
+        :onYear             "1780"^^xsd:gYear .
+    
+    bdr:EVAAF7EF00B2CF2C18
+        a                   :PersonDeath ;
+        :onYear             "1815"^^xsd:gYear .
+    
+    bdr:NMADCBCB9799EA622A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sgrub khang 03"@bo-x-ewts .
+    
+    bdr:NMB63735C156A6577A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubkhang 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME9A796C75729C537
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dge legs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF847E7F55C2307A6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub khang blo bzang dge legs rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT508F677254833779
+        a                   :Note ;
+        :locationStatement  "p. 350" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ dge legs [p. 350] rgya mtsho/ mnga' ris su 'khrungs/ dgung lo bdun cu tham par gshegs/ <1641-1712>\n2) de'i skye ba sgrub khang ngag dbang 'jam dpal rgya mtsho/ stod lung du 'khrungs/ dgung lo drug cu tham par gshegs/ {?1719-?1778}\n3) de'i skye ba blo bzang dge legs rgyal mtshan/ 'phan yul du 'khrungs/ da lta dgung lo sum cu so lnga/ 'di shing phag zla 4 tshes 16 la gshegs/ da lta sprul sku dogs gnas ma rnyed/ [1780-1815]"@en .
+    
+    bdr:NTA5F5F9F186974303
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTF8BC6B95D2E58D56
+        a                   :Note ;
+        :noteText           "Called Rgyud-stod Bla-ma Dbu-mdzad in Blo-bzang-ye-shes-bstan-pa-rab-rgyas' gsung 'bum, v. 1, p. 41."@en .
+    
+    bdr:P5791  a            :Person ;
+        skos:prefLabel      "blo bzang dge legs rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12611 ;
+        :isRoot             true ;
+        :note               bdr:NT508F677254833779 , bdr:NTA5F5F9F186974303 , bdr:NTF8BC6B95D2E58D56 ;
+        :personEvent        bdr:EV0E950387388A60D8 , bdr:EVAAF7EF00B2CF2C18 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMADCBCB9799EA622A , bdr:NMB63735C156A6577A , bdr:NME9A796C75729C537 , bdr:NMF847E7F55C2307A6 ;
+        :personStudentOf    bdr:P304 .
+}

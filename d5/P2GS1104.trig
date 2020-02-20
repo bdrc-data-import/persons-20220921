@@ -1,0 +1,56 @@
+@base          <bdg:P2GS1104> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2GS1104 {
+    bda:LG55B12685BDA91F3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-14T12:24:50.787Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationship; dbu mdzad thub bstan created"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2GS1104  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2GS1104 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d5/P2GS1104.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2GS1104 ;
+        adm:logEntry        bda:LG55B12685BDA91F3E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV55603577ED3E6A3A
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMA1FE7ABC3C409950
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan/"@bo-x-ewts .
+    
+    bdr:NMC54A4D0E5F16808D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos mdzad thub bstan/"@bo-x-ewts .
+    
+    bdr:NTE8804807382E8186
+        a                   :Note ;
+        :noteText           "it was as the behest of chos mdzad thub bstan that mkhas dbang sangs rgyas rdo rje wrote his gtor ma brgya rtsa'i lag len 'dod dgu'i dpal gter"@en .
+    
+    bdr:P2GS1104  a         :Person ;
+        skos:prefLabel      "thub bstan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE8804807382E8186 ;
+        :personEvent        bdr:EV55603577ED3E6A3A ;
+        :personName         bdr:NMA1FE7ABC3C409950 , bdr:NMC54A4D0E5F16808D ;
+        :personStudentOf    bdr:P888 .
+}

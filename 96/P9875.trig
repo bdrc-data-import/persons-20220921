@@ -1,0 +1,56 @@
+@base          <bdg:P9875> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9875 {
+    bda:LGE98035652A1F2BF6
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-06-14T17:14:08.914Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth G# & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9875  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9875 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "96/P9875.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9875 ;
+        adm:logEntry        bda:LGE98035652A1F2BF6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBED7701AA51F9064
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2758 ;
+        :onYear             "1969"^^xsd:gYear .
+    
+    bdr:NM046CB1CD28BA944D
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe brtan rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1C9A0E973BCE2FAD
+        a                   :Note ;
+        :noteText           "དེང་རབས་རྩོམ་པ་པོ་དང་རྩེར་སྙེག་དུས་དེབ་ཀྱི་རྩོམ་སྒྲིག་པ།"@bo .
+    
+    bdr:NT2CABA98A42130ECD
+        a                   :Note ;
+        :noteText           "born on the banks of the 'ba' chu"@en .
+    
+    bdr:P9875  a            :Person ;
+        skos:prefLabel      "tshe brtan rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C9A0E973BCE2FAD , bdr:NT2CABA98A42130ECD ;
+        :personEvent        bdr:EVBED7701AA51F9064 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM046CB1CD28BA944D .
+}

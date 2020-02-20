@@ -1,0 +1,70 @@
+@base          <bdg:P4549> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4549 {
+    bda:LG5ADDAD0EB153B62C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T10:15:05.966Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4549  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4549 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "d0/P4549.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4549 ;
+        adm:logEntry        bda:LG5ADDAD0EB153B62C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A91B33780F45927
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1325 ;
+        :onYear             "1935"^^xsd:gYear .
+    
+    bdr:EV606BB7E22121BDF4
+        a                   :PersonDeath ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:NM6A7148327C7EDAF9
+        a                   :PersonPersonalName ;
+        rdfs:label          "bla ma ye shes/"@bo-x-ewts .
+    
+    bdr:NMC99FEDC020A22DCD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes thub bstan ye shes/"@bo-x-ewts .
+    
+    bdr:NMF80FFFEB6C5D77D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan ye shes/"@bo-x-ewts .
+    
+    bdr:NT7C57E6C0880DC038
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTD5FB3C55034464D9
+        a                   :Note ;
+        :noteText           "Other teachers (not recorded): Brag-ri, Gling, Zong, and Lha-btsun."@en .
+    
+    bdr:P4549  a            :Person ;
+        skos:prefLabel      "thub bstan ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7C57E6C0880DC038 , bdr:NTD5FB3C55034464D9 ;
+        :personEvent        bdr:EV0A91B33780F45927 , bdr:EV606BB7E22121BDF4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6A7148327C7EDAF9 , bdr:NMC99FEDC020A22DCD , bdr:NMF80FFFEB6C5D77D8 ;
+        :personStudentOf    bdr:P2596 ;
+        :personTeacherOf    bdr:P4548 .
+}

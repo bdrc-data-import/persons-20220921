@@ -1,0 +1,70 @@
+@base          <bdg:P6024> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6024 {
+    bda:LG3DDDB170EC3BCAB2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T14:32:57.622Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6024  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6024 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "2f/P6024.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6024 ;
+        adm:logEntry        bda:LG3DDDB170EC3BCAB2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCE1DDC6424D9E3D2
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2FBDBAF56D2063B8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzaka Choktul 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM4492FA879F20E189
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dzaH ka mchog sprul phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM719526837A5C2999
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dzaH ka mchog sprul 03"@bo-x-ewts .
+    
+    bdr:NM9C304733D5088508
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT04C11271D087DFCB
+        a                   :Note ;
+        :locationStatement  "p. 112" .
+    
+    bdr:NT7D533E9FA1D85E75
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:P6024  a            :Person ;
+        skos:prefLabel      "phyogs las rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5995 ;
+        :isRoot             true ;
+        :note               bdr:NT04C11271D087DFCB , bdr:NT7D533E9FA1D85E75 ;
+        :personEvent        bdr:EVCE1DDC6424D9E3D2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2FBDBAF56D2063B8 , bdr:NM4492FA879F20E189 , bdr:NM719526837A5C2999 , bdr:NM9C304733D5088508 ;
+        :personStudentOf    bdr:P4782 .
+}

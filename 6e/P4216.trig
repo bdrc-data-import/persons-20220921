@@ -1,0 +1,60 @@
+@base          <bdg:P4216> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4216 {
+    bda:LGB0614D2DD3889859
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-01-19T09:48:45.219Z"^^xsd:dateTime ;
+        adm:logMessage      "updated teacher"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4216  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4216 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "6e/P4216.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4216 ;
+        adm:logEntry        bda:LGB0614D2DD3889859 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV029FC8026130E97E
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:EV0FA5E84118099EE8
+        a                   :PersonDeath ;
+        :onYear             "1211"^^xsd:gYear .
+    
+    bdr:NMAB1C96246420093B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mal ka ba can pa/"@bo-x-ewts .
+    
+    bdr:NT4CEBA68CB50486A8
+        a                   :Note ;
+        :locationStatement  "p. 2284" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1211. mal ka ba can pa gshegs"@en .
+    
+    bdr:P4216  a            :Person ;
+        skos:prefLabel      "mal ka ba can pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4CEBA68CB50486A8 ;
+        :personEvent        bdr:EV029FC8026130E97E , bdr:EV0FA5E84118099EE8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAB1C96246420093B ;
+        :personStudentOf    bdr:P3707 ;
+        :personTeacherOf    bdr:P00AG02484 .
+}

@@ -1,0 +1,77 @@
+@base          <bdg:P8464> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8464 {
+    bda:LG2FDDDF7A29E03412
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-02-04T15:43:11.121Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG5EDFABBAC7E679BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-11-04T14:01:12.056Z"^^xsd:dateTime ;
+        adm:logMessage      "revised"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGCEA87934BC5BA38F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-05T12:18:37.241Z"^^xsd:dateTime ;
+        adm:logMessage      "edited student and alternative name"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8464  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8464 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "91/P8464.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8464 ;
+        adm:logEntry        bda:LG2FDDDF7A29E03412 , bda:LG5EDFABBAC7E679BE , bda:LGCEA87934BC5BA38F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8234A9831B922B1F
+        a                   :PersonBirth ;
+        :onYear             "1585"^^xsd:gYear .
+    
+    bdr:EVF9A7AA863101112F
+        a                   :PersonDeath ;
+        :onYear             "1668"^^xsd:gYear .
+    
+    bdr:NM21D84AFA7894215F
+        a                   :PersonTitle ;
+        rdfs:label          "rje btsun ma phrin las dbang mo/"@bo-x-ewts .
+    
+    bdr:NM63F5B58028F460EF
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' phrin las dbang mo/"@bo-x-ewts .
+    
+    bdr:NMF6E28A558E1EC09C
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen rdo rje ma/"@bo-x-ewts .
+    
+    bdr:NTA4035D0D386ABEDB
+        a                   :Note ;
+        :noteText           "female master of the jo nang tradition"@en .
+    
+    bdr:P8464  a            :Person ;
+        skos:prefLabel      "kun dga' phrin las dbang mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA4035D0D386ABEDB ;
+        :personEvent        bdr:EV8234A9831B922B1F , bdr:EVF9A7AA863101112F ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM21D84AFA7894215F , bdr:NM63F5B58028F460EF , bdr:NMF6E28A558E1EC09C ;
+        :personStudentOf    bdr:P1428 ;
+        :personTeacherOf    bdr:P2854 , bdr:P8963 .
+}

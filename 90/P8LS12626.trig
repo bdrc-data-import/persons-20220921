@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12626> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12626 {
+    bda:LG05F894E5783034C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-03T15:14:28.826Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG4BCD351A0AA7CB60
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG91C613FB73A1274F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-04T15:09:39.585Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12626  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12626 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "90/P8LS12626.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12626 ;
+        adm:logEntry        bda:LG05F894E5783034C5 , bda:LG4BCD351A0AA7CB60 , bda:LG91C613FB73A1274F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60A6C8F1E18A2AD3
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12864 .
+    
+    bdr:NM251A352EE65A6EFD
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "ras chung phug sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM6415CF48DC952454
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rechung Puk Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM680CFB074A5135C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhas grub chos rgyal rin chen/"@bo-x-ewts .
+    
+    bdr:NTFCB154546DB33AAD
+        a                   :Note ;
+        :locationStatement  "p. 310" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "rgya'i tang tser gsal yang gser snyan du mi 'gro gras\n\nsne gdong khul ras chung phug sprul sku'i skye phreng\n1) dang po ni/ mkhas grub chos rgyal rin chen/ 'phyong rgyas su 'khrungs/ dgung lo re brgyad par gshegs/"@bo-x-ewts .
+    
+    bdr:P8LS12626  a        :Person ;
+        skos:prefLabel      "mkhas grub chos rgyal rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFCB154546DB33AAD ;
+        :personEvent        bdr:EV60A6C8F1E18A2AD3 ;
+        :personName         bdr:NM251A352EE65A6EFD , bdr:NM6415CF48DC952454 , bdr:NM680CFB074A5135C3 .
+}

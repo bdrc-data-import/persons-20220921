@@ -1,0 +1,63 @@
+@base          <bdg:P9078> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9078 {
+    bda:LGA4B820CB7B444904
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-02T17:02:34.179Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P9078  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9078 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "22/P9078.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9078 ;
+        adm:logEntry        bda:LGA4B820CB7B444904 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0075E7FB2BC927C3
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV756707545F4F19A8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:NMB8E9585FB786167B
+        a                   :PersonPersonalName ;
+        rdfs:label          "sde dge bla ma sangs rgyas bzang po/"@bo-x-ewts .
+    
+    bdr:NMF7EB56218F7B483B
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas bzang po/"@bo-x-ewts .
+    
+    bdr:NT7CC43BCAE25D9900
+        a                   :Note ;
+        :locationStatement  "p. 348" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a student of gong ma kun dga' blo gros"@en .
+    
+    bdr:P9078  a            :Person ;
+        skos:prefLabel      "sangs rgyas bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7CC43BCAE25D9900 ;
+        :personEvent        bdr:EV0075E7FB2BC927C3 , bdr:EV756707545F4F19A8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB8E9585FB786167B , bdr:NMF7EB56218F7B483B ;
+        :personStudentOf    bdr:P314 , bdr:P805 .
+}

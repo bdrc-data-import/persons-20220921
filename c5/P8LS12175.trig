@@ -1,0 +1,67 @@
+@base          <bdg:P8LS12175> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12175 {
+    bda:LG8CC4BE03D8F670DE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T11:54:49.148Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12175  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12175 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c5/P8LS12175.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12175 ;
+        adm:logEntry        bda:LG8CC4BE03D8F670DE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5932BF5606F7AFC3
+        a                   :PersonBirth ;
+        :onYear             "1944"^^xsd:gYear .
+    
+    bdr:EV5F6B394389F6A8C0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVF25199C8CF72E179
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :onYear             "1998"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM563D89AED6A5FB0F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 46"@bo-x-ewts .
+    
+    bdr:NMB419F3D3289C62AC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTAC462743B216ED48
+        a                   :Note ;
+        :locationStatement  "p. 227-234" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "1949 entered bla brang bkra shis 'khyil\n1998 khri of sog po mda' tshan dgon"@en .
+    
+    bdr:P8LS12175  a        :Person ;
+        skos:prefLabel      "blo bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAC462743B216ED48 ;
+        :personEvent        bdr:EV5932BF5606F7AFC3 , bdr:EV5F6B394389F6A8C0 , bdr:EVF25199C8CF72E179 ;
+        :personName         bdr:NM563D89AED6A5FB0F , bdr:NMB419F3D3289C62AC ;
+        :personStudentOf    bdr:P1647 , bdr:P5591 , bdr:P6506 , bdr:P7549 .
+}

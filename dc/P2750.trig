@@ -1,0 +1,50 @@
+@base          <bdg:P2750> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2750 {
+    bda:P2750  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2750 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "dc/P2750.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2750 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBF9CBD029F3E89CE
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM60D433D56226B5F1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mchog ldan/"@bo-x-ewts .
+    
+    bdr:NME8A7160D3D9F6E1F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yongs 'dzin ngag dbang mchog ldan/"@bo-x-ewts .
+    
+    bdr:NT65EC04FAB183D037
+        a                   :Note ;
+        :noteText           "teacher of the rnying ma tradition"@en .
+    
+    bdr:P2750  a            :Person ;
+        skos:prefLabel      "ngag dbang mchog ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT65EC04FAB183D037 ;
+        :personEvent        bdr:EVBF9CBD029F3E89CE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM60D433D56226B5F1 , bdr:NME8A7160D3D9F6E1F ;
+        :personTeacherOf    bdr:P2749 .
+}

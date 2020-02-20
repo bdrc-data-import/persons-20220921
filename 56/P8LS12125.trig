@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12125> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12125 {
+    bda:LGF53B16F82613DD12
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-11T14:09:55.296Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12125  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12125 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "56/P8LS12125.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12125 ;
+        adm:logEntry        bda:LGF53B16F82613DD12 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72A318E95E4C19EC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVCC421B79967AC2C5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM4E28EDA79758A43D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 21"@bo-x-ewts .
+    
+    bdr:NM87FDAE0BEF1F35BD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mthu stobs nyi ma/"@bo-x-ewts .
+    
+    bdr:NMCEA3A83D4BCC84A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o thog a ba ka zhabs drung blo bzang mthu stobs nyi ma/"@bo-x-ewts .
+    
+    bdr:NT064124BB4F5A1DCB
+        a                   :Note ;
+        :locationStatement  "p. 312-313" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12125  a        :Person ;
+        skos:prefLabel      "blo bzang mthu stobs nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT064124BB4F5A1DCB ;
+        :personEvent        bdr:EV72A318E95E4C19EC , bdr:EVCC421B79967AC2C5 ;
+        :personName         bdr:NM4E28EDA79758A43D , bdr:NM87FDAE0BEF1F35BD , bdr:NMCEA3A83D4BCC84A4 .
+}

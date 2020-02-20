@@ -1,0 +1,76 @@
+@base          <bdg:P6966> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6966 {
+    bda:LGA37723C9361C4164
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-19T15:09:25.146Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6966  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6966 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "0a/P6966.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6966 ;
+        adm:logEntry        bda:LGA37723C9361C4164 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3316EA45D2BD017A
+        a                   :PersonOccupiesSeat .
+    
+    bdr:EV7B4415CBB21EDBB2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2738 ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM224851B2B4903284
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang thub bstan legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5DB5EF2D2F8E3F27
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag tsha 07 skal bzang thub bstan legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM979F989860F4A5B4
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "stag tsha 07"@bo-x-ewts .
+    
+    bdr:NMF2F6CDFA09F3ECF7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Taktsa 07"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT415E70BA77D62440
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 239" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "sku phreng bdu pa skal bzang thub bstan legs bshad rgya mtsho ni/ rab byung bcu drug pa'i me lug spyi lo 1967 lor 'khrungs/ rje dmu dge bsam gtan las rab tu byung / rgya bod kyi slob grwar 'grims te yig rigs gnyis mkhyen cing / da lta mdzad 'phrin skyong bzhin pa'i skabs so//\n\tdgon pa'i 'chad nyan kun spyod phal cher bla brang bkra shis 'khyil la bstun cing / kun mkhyen yab sras dang nang ma'i 'brel lam zab/ da lta'i rgya gzhung gi mdzod dge rdzong srid gzhung gi srid 'dzin lte gnas kyi grong brdal yang stag rtsa dgon 'dabs su chas yod/"@bo-x-ewts .
+    
+    bdr:NTF274526A6F7F1DBE
+        a                   :Note ;
+        :locationStatement  "v. 3, p. 2 of cover" ;
+        :noteSource         bdr:MW20822 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6966  a            :Person ;
+        skos:prefLabel      "skal bzang thub bstan legs bshad rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13301 ;
+        :isRoot             true ;
+        :note               bdr:NT415E70BA77D62440 , bdr:NTF274526A6F7F1DBE ;
+        :personEvent        bdr:EV3316EA45D2BD017A , bdr:EV7B4415CBB21EDBB2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM224851B2B4903284 , bdr:NM5DB5EF2D2F8E3F27 , bdr:NM979F989860F4A5B4 , bdr:NMF2F6CDFA09F3ECF7 .
+}

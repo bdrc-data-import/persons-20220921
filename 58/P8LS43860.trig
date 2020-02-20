@@ -1,0 +1,55 @@
+@base          <bdg:P8LS43860> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS43860 {
+    bda:LGEE59A7C263C6F95E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-19T12:40:34.941Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS43860  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS43860 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "58/P8LS43860.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS43860 ;
+        adm:logEntry        bda:LGEE59A7C263C6F95E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV167178D01CA6CEF7
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1000 ;
+        :onYear             "1931"^^xsd:gYear .
+    
+    bdr:NM4CE29EF0525A5FB2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla brang 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM59A93599D5C6E96F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8392C22BFDDDFDD8
+        a                   :Note ;
+        :noteText           "For detail biography see W8LS43859, p.310-348\nFormer member of exile parliament"@en .
+    
+    bdr:P8LS43860  a        :Person ;
+        skos:prefLabel      "'jigs med rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8392C22BFDDDFDD8 ;
+        :personEvent        bdr:EV167178D01CA6CEF7 ;
+        :personName         bdr:NM4CE29EF0525A5FB2 , bdr:NM59A93599D5C6E96F .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P757> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P757 {
+    bda:LGF5E2B2573742A916
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T12:07:30.062Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P757  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P757 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "12/P757.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P757 ;
+        adm:logEntry        bda:LGF5E2B2573742A916 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C972C8958D22273
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM4A81007FA952C45A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dngos grub/"@bo-x-ewts .
+    
+    bdr:NMB3E2CA29AF2B750D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mtshan nyid slob dpon dngos grub/"@bo-x-ewts .
+    
+    bdr:NT5E41871815D8C1AD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P757  a             :Person ;
+        skos:prefLabel      "dngos grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E41871815D8C1AD ;
+        :personEvent        bdr:EV9C972C8958D22273 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4A81007FA952C45A , bdr:NMB3E2CA29AF2B750D ;
+        :personTeacherOf    bdr:P755 .
+}

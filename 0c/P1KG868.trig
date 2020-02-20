@@ -1,0 +1,67 @@
+@base          <bdg:P1KG868> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG868 {
+    bda:LG3FB1BE8378F59285
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T12:04:01.532Z"^^xsd:dateTime ;
+        adm:logMessage      "nonactor"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG9FBA1C7B4714C97A
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T17:24:19.706Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG868  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG868 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "0c/P1KG868.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG868 ;
+        adm:logEntry        bda:LG3FB1BE8378F59285 , bda:LG9FBA1C7B4714C97A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB62D52E697B89688
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM8F1D0202C16E8E9F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "陈庆英"@zh-hans .
+    
+    bdr:NM927F6F7F2FA8633B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chen qing ying"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NME38817D3D43F2430
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khren chin dbyin/"@bo-x-ewts .
+    
+    bdr:NT6F07D98A7AEF3D60
+        a                   :Note ;
+        :noteSource         bdr:MW1KG866 ;
+        :noteText           "author of bod ljongs kyi lo rgyus"@en .
+    
+    bdr:P1KG868  a          :Person ;
+        skos:prefLabel      "khren chin dbyin/"@bo-x-ewts , "陈庆英"@zh-hans ;
+        :isRoot             true ;
+        :note               bdr:NT6F07D98A7AEF3D60 ;
+        :personEvent        bdr:EVB62D52E697B89688 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8F1D0202C16E8E9F , bdr:NM927F6F7F2FA8633B , bdr:NME38817D3D43F2430 .
+}

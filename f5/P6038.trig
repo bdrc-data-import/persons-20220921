@@ -1,0 +1,63 @@
+@base          <bdg:P6038> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6038 {
+    bda:LG707741E19EBECF60
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T11:41:09.396Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6038  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6038 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f5/P6038.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6038 ;
+        adm:logEntry        bda:LG707741E19EBECF60 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C9F6B789FE0DA97
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G304 .
+    
+    bdr:EVC07D47F835A2DBE5
+        a                   :PersonDeath ;
+        :onYear             "1899"^^xsd:gYear .
+    
+    bdr:EVC2085831E7B41ACB
+        a                   :PersonBirth ;
+        :onYear             "1836"^^xsd:gYear .
+    
+    bdr:NM87A0BFB1EBBB7B7E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMDAF7CE981D50C09C
+        a                   :PersonPersonalName ;
+        rdfs:label          "zong bstan pa chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT80B924CC59AE5E35
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P6038  a            :Person ;
+        skos:prefLabel      "bstan pa chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT80B924CC59AE5E35 ;
+        :personEvent        bdr:EV0C9F6B789FE0DA97 , bdr:EVC07D47F835A2DBE5 , bdr:EVC2085831E7B41ACB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM87A0BFB1EBBB7B7E , bdr:NMDAF7CE981D50C09C .
+}

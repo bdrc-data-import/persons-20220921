@@ -1,0 +1,65 @@
+@base          <bdg:P4521> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4521 {
+    bda:LG51A7D445BC1FD32D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T10:20:40.004Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4521  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4521 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "20/P4521.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4521 ;
+        adm:logEntry        bda:LG51A7D445BC1FD32D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6026A43825616CAD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G415 .
+    
+    bdr:EVEBEFBD247D9226EE
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM2E561AE1879DB49C
+        a                   :PersonTitle ;
+        rdfs:label          "lde tsha mkhan po/"@bo-x-ewts .
+    
+    bdr:NM6D65DE83DE49F149
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lde tsha mkhan po ngag dbang 'od zer/"@bo-x-ewts .
+    
+    bdr:NMC9936021B8C79D25
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'od zer/"@bo-x-ewts .
+    
+    bdr:NT72ADB1DEF42C9EF1
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4521  a            :Person ;
+        skos:prefLabel      "ngag dbang 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT72ADB1DEF42C9EF1 ;
+        :personEvent        bdr:EV6026A43825616CAD , bdr:EVEBEFBD247D9226EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2E561AE1879DB49C , bdr:NM6D65DE83DE49F149 , bdr:NMC9936021B8C79D25 ;
+        :personTeacherOf    bdr:P1168 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P8790> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8790 {
+    bda:LGAF3A854AA2F8F267
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-10T16:59:29.701Z"^^xsd:dateTime ;
+        adm:logMessage      "added records and notes"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8790  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8790 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "42/P8790.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8790 ;
+        adm:logEntry        bda:LGAF3A854AA2F8F267 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9949269C39A1167C
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM858903880A5106DD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM96088D9B264CED8B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman rtse ba blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT6D9B00463E459BBD
+        a                   :Note ;
+        :locationStatement  "p. 284" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "noted as a teacher of rdzogs chen pa bsod nams rin chen"@en .
+    
+    bdr:P8790  a            :Person ;
+        skos:prefLabel      "blo gros rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D9B00463E459BBD ;
+        :personEvent        bdr:EV9949269C39A1167C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM858903880A5106DD , bdr:NM96088D9B264CED8B ;
+        :personTeacherOf    bdr:P4682 .
+}

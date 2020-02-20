@@ -1,0 +1,51 @@
+@base          <bdg:P9004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9004 {
+    bda:P9004  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9004 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "88/P9004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9004 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB489C75BD39DD43E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM30D99E93449B5806
+        a                   :PersonPersonalName ;
+        rdfs:label          "shar chen bkra shis tshe ring /"@bo-x-ewts .
+    
+    bdr:NMCCF7F7DC1F7D5E35
+        a                   :PersonPersonalName ;
+        rdfs:label          "bkra shis tshe ring /"@bo-x-ewts .
+    
+    bdr:NT0490F0B2DD3A14D5
+        a                   :Note ;
+        :locationStatement  "v. 10 (19), p. 2 (1st group)" ;
+        :noteSource         bdr:MW19813 ;
+        :noteText           "shown as already deceased in 1996"@en .
+    
+    bdr:P9004  a            :Person ;
+        skos:prefLabel      "bkra shis tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0490F0B2DD3A14D5 ;
+        :personEvent        bdr:EVB489C75BD39DD43E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM30D99E93449B5806 , bdr:NMCCF7F7DC1F7D5E35 .
+}

@@ -1,0 +1,69 @@
+@base          <bdg:P8LS12028> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12028 {
+    bda:LG49762EEFA7C44A47
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:53:51.758Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12028  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12028 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "06/P8LS12028.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12028 ;
+        adm:logEntry        bda:LG49762EEFA7C44A47 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58581DCD8DBC9E91
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB9EC3582B60D12F1
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVBFA345463143B428
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:NM309989A01BD29322
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 37"@bo-x-ewts .
+    
+    bdr:NM48AA3E53DC85C2DA
+        a                   :PersonTitle ;
+        rdfs:label          "cun gar pa blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NM63ECEDFFA261E5B3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos grags/"@bo-x-ewts .
+    
+    bdr:NT9FF2925E90A7B614
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 90-" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P8LS12028  a        :Person ;
+        skos:prefLabel      "blo bzang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9FF2925E90A7B614 ;
+        :personEvent        bdr:EV58581DCD8DBC9E91 , bdr:EVB9EC3582B60D12F1 , bdr:EVBFA345463143B428 ;
+        :personName         bdr:NM309989A01BD29322 , bdr:NM48AA3E53DC85C2DA , bdr:NM63ECEDFFA261E5B3 .
+}

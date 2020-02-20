@@ -1,0 +1,52 @@
+@base          <bdg:P11MS257> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS257 {
+    bda:LGAE3125E14820CE50
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T13:29:02.254Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS257  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS257 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "78/P11MS257.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS257 ;
+        adm:logEntry        bda:LGAE3125E14820CE50 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD74F5A51E1479E94
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NMC0C40E0DDC3FD6FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen byang chub/"@bo-x-ewts .
+    
+    bdr:NME6BD38FEBFF8A1B7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Rinchen Jangchub"@bo-x-phon-en-m-tbrc .
+    
+    bdr:P11MS257  a         :Person ;
+        skos:prefLabel      "rin chen byang chub/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P131 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD74F5A51E1479E94 ;
+        :personName         bdr:NMC0C40E0DDC3FD6FD , bdr:NME6BD38FEBFF8A1B7 ;
+        :personStudentOf    bdr:P16 .
+}

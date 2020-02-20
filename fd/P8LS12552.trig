@@ -1,0 +1,55 @@
+@base          <bdg:P8LS12552> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12552 {
+    bda:LGD375BC2B824CB3FC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T15:42:56.501Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record with office title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12552  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12552 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fd/P8LS12552.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12552 ;
+        adm:logEntry        bda:LGD375BC2B824CB3FC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66B2FA467FB6AFE7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4106 .
+    
+    bdr:NMC129E5C88F592B19
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "brag thog dgon gdan rabs 04"@bo-x-ewts .
+    
+    bdr:NMFFAD09DD1229BFB2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT4DA8C9C199342D7D
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 583" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:P8LS12552  a        :Person ;
+        skos:prefLabel      "rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4DA8C9C199342D7D ;
+        :personEvent        bdr:EV66B2FA467FB6AFE7 ;
+        :personName         bdr:NMC129E5C88F592B19 , bdr:NMFFAD09DD1229BFB2 .
+}

@@ -1,0 +1,78 @@
+@base          <bdg:P5338> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5338 {
+    bda:LGF7918C5104D89584
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-21T15:52:35.33Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5338  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5338 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "87/P5338.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5338 ;
+        adm:logEntry        bda:LGF7918C5104D89584 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18A9F9A263ED090E
+        a                   :PersonBirth ;
+        :onYear             "1909"^^xsd:gYear .
+    
+    bdr:EV3697733FE07B7EF9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7428B92CF6BB31C6
+        a                   :PersonDeath ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:EV8B567D178E92D61A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NMA59ED662D252811B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA7262CB9315A46B0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dka' bcu pa shes rab rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF264996FF912A7ED
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang mkhan rabs 12"@bo-x-ewts .
+    
+    bdr:NT76D5240EBEBD8C43
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 15-16" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:NTEF1EBA14BF7D73DD
+        a                   :Note ;
+        :noteText           "dge lugs teacher from mongolia"@en .
+    
+    bdr:P5338  a            :Person ;
+        skos:prefLabel      "shes rab rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT76D5240EBEBD8C43 , bdr:NTEF1EBA14BF7D73DD ;
+        :personEvent        bdr:EV18A9F9A263ED090E , bdr:EV3697733FE07B7EF9 , bdr:EV7428B92CF6BB31C6 , bdr:EV8B567D178E92D61A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA59ED662D252811B , bdr:NMA7262CB9315A46B0 , bdr:NMF264996FF912A7ED ;
+        :personTeacherOf    bdr:P4944 .
+}

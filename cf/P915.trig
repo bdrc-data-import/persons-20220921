@@ -1,0 +1,62 @@
+@base          <bdg:P915> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P915 {
+    bda:LG2CE0F410C9842448
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:50:11.03Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat from G44 to G3582"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P915  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P915 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "cf/P915.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P915 ;
+        adm:logEntry        bda:LG2CE0F410C9842448 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV432D9BCDEACDE537
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:EV8AB561413BF7A0B6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:NM288454AE26B71B22
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa slob dpon rin chen dpal/"@bo-x-ewts .
+    
+    bdr:NM8740D85C498C55C9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen dpal/"@bo-x-ewts .
+    
+    bdr:NTDA427F597007A912
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P915  a             :Person ;
+        skos:prefLabel      "rin chen dpal/"@bo-x-ewts ;
+        :hasBrother         bdr:P913 ;
+        :hasSon             bdr:P914 ;
+        :isRoot             true ;
+        :note               bdr:NTDA427F597007A912 ;
+        :personEvent        bdr:EV432D9BCDEACDE537 , bdr:EV8AB561413BF7A0B6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM288454AE26B71B22 , bdr:NM8740D85C498C55C9 .
+}

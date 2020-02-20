@@ -1,0 +1,58 @@
+@base          <bdg:P7981> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7981 {
+    bda:P7981  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7981 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ec/P7981.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7981 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DDB7D651546CF81
+        a                   :PersonDeath ;
+        :onYear             "1944"^^xsd:gYear .
+    
+    bdr:EV4C84A035A56D8162
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3760 .
+    
+    bdr:EV98264724B91B371B
+        a                   :PersonBirth ;
+        :onYear             "1917"^^xsd:gYear .
+    
+    bdr:NM0CE4AA57C5B1D6ED
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ka ring rta mgrin 03 grags chen kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:NMED63292A2BCC2DCD
+        a                   :PersonPersonalName ;
+        rdfs:label          "grags chen kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:NTEFFD5A44F8CFB896
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "years of birth and death given"@en .
+    
+    bdr:P7981  a            :Person ;
+        skos:prefLabel      "grags chen kun dga' blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEFFD5A44F8CFB896 ;
+        :personEvent        bdr:EV0DDB7D651546CF81 , bdr:EV4C84A035A56D8162 , bdr:EV98264724B91B371B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CE4AA57C5B1D6ED , bdr:NMED63292A2BCC2DCD .
+}

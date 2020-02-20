@@ -1,0 +1,65 @@
+@base          <bdg:P4040> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4040 {
+    bda:P4040  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4040 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "51/P4040.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4040 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV09D025501DCF57CB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G880 .
+    
+    bdr:EV48D246ABE993F44A
+        a                   :PersonDeath ;
+        :notAfter           "1308"^^xsd:gYear ;
+        :notBefore          "1303"^^xsd:gYear .
+    
+    bdr:EV5AC33A8108AFCC9A
+        a                   :PersonBirth ;
+        :onYear             "1245"^^xsd:gYear .
+    
+    bdr:NM965CF678274EF60E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tI shrI 05 grags pa 'od zer/"@bo-x-ewts .
+    
+    bdr:NMF3D8867B7980854F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa 'od zer/"@bo-x-ewts .
+    
+    bdr:NTB816BCA12BEC5313
+        a                   :Note ;
+        :locationStatement  "p. 709" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTF3E12D50FC03F38F
+        a                   :Note ;
+        :locationStatement  "p. 57" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "sa skya hierarch\ndates: 1245-1303\ndid he pass away in 1303 or 1308?"@en .
+    
+    bdr:P4040  a            :Person ;
+        skos:prefLabel      "grags pa 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB816BCA12BEC5313 , bdr:NTF3E12D50FC03F38F ;
+        :personEvent        bdr:EV09D025501DCF57CB , bdr:EV48D246ABE993F44A , bdr:EV5AC33A8108AFCC9A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM965CF678274EF60E , bdr:NMF3D8867B7980854F .
+}

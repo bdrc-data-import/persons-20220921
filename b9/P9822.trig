@@ -1,0 +1,73 @@
+@base          <bdg:P9822> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9822 {
+    bda:LG19B04398BBD956E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-28T09:20:51.107Z"^^xsd:dateTime ;
+        adm:logMessage      "འཁྲུངས་འདས་ཀྱི་ལོ་ཚིགས་བསྣན།"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGE4DE60604C000126
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-15T16:38:30.84Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P9822  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9822 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "b9/P9822.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9822 ;
+        adm:logEntry        bda:LG19B04398BBD956E7 , bda:LGE4DE60604C000126 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV216DD42C1D7138AE
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EV622BDA5B63CF0ADB
+        a                   :PersonDeath ;
+        :onYear             "1980"^^xsd:gYear .
+    
+    bdr:EVF132A612F2D70756
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:NM5CC84F8A379B7F30
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling gcung ngag dbang chos grags/"@bo-x-ewts .
+    
+    bdr:NMC0A47357C7CADCC4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos grags/"@bo-x-ewts .
+    
+    bdr:NT2447B0D339F2E3C1
+        a                   :Note ;
+        :locationStatement  "p. 78" ;
+        :noteSource         bdr:MW1KG852 ;
+        :noteText           "འདིའི་འཁྲུངས་འདས་ཀྱི་ལོ་ཚིགས་གསལ།"@bo .
+    
+    bdr:P9822  a            :Person ;
+        skos:prefLabel      "ngag dbang chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2447B0D339F2E3C1 ;
+        :personEvent        bdr:EV216DD42C1D7138AE , bdr:EV622BDA5B63CF0ADB , bdr:EVF132A612F2D70756 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5CC84F8A379B7F30 , bdr:NMC0A47357C7CADCC4 ;
+        :personStudentOf    bdr:P6455 ;
+        :personTeacherOf    bdr:P1PD108566 , bdr:P1PD108569 , bdr:P6455 .
+}

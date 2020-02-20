@@ -1,0 +1,57 @@
+@base          <bdg:P1KG864> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG864 {
+    bda:LGC45E7E66632838CA
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-22T15:24:13.119Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG864  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG864 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fb/P1KG864.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG864 ;
+        adm:logEntry        bda:LGC45E7E66632838CA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV043F9D1220BC40CC
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM67E75E20736EBDD7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zhang xiao ming"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NM8A878030BF516663
+        a                   :PersonPrimaryName ;
+        rdfs:label          "krang zha'o ming /"@bo-x-ewts .
+    
+    bdr:NT299BBA0F714686C8
+        a                   :Note ;
+        :noteSource         bdr:MW1KG861 ;
+        :noteText           "author of bod ljong kyi gtam rgyud"@en .
+    
+    bdr:P1KG864  a          :Person ;
+        skos:prefLabel      "krang zha'o ming /"@bo-x-ewts , "zhang xiao ming"@zh-latn-pinyin-x-ndia ;
+        :isRoot             true ;
+        :note               bdr:NT299BBA0F714686C8 ;
+        :personEvent        bdr:EV043F9D1220BC40CC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM67E75E20736EBDD7 , bdr:NM8A878030BF516663 .
+}

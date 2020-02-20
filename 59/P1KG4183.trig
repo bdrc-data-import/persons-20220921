@@ -1,0 +1,91 @@
+@base          <bdg:P1KG4183> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG4183 {
+    bda:LG0054641353A3924F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T10:53:18.39Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG1B4ED66CF7ACAA6D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-07T12:03:56.293Z"^^xsd:dateTime ;
+        adm:logMessage      "created new record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG9968FD38075FB48E
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-27T15:21:26.079Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1KG4183  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG4183 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "59/P1KG4183.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG4183 ;
+        adm:logEntry        bda:LG0054641353A3924F , bda:LG1B4ED66CF7ACAA6D , bda:LG9968FD38075FB48E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4CB6510C82E2EBB0
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1913"^^xsd:gYear .
+    
+    bdr:EV5738EC65B7B75000
+        a                   :PersonDeath ;
+        :onYear             "1988"^^xsd:gYear .
+    
+    bdr:EV5E0B5DDE7FCB5AC8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVF13C22A7633FE2CB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM4F28DD4DDC49AE96
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhyen brtse thub bstan snying po/"@bo-x-ewts .
+    
+    bdr:NMAB8897F4145C432F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 73"@bo-x-ewts .
+    
+    bdr:NMC84407D7C528F252
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 73 ngag dbang mkhyen brtse thub bstan snying po/"@bo-x-ewts .
+    
+    bdr:NMD0FC58754F441A4F
+        a                   :PersonTitle ;
+        rdfs:label          "khang sar mkhan chen ngag dbang mkhyen brtse thub bstan snying po/"@bo-x-ewts .
+    
+    bdr:NTE74ECED865DFE04C
+        a                   :Note ;
+        :locationStatement  "p. 122-123" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P1KG4183  a         :Person ;
+        skos:prefLabel      "ngag dbang mkhyen brtse thub bstan snying po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9909 ;
+        :isRoot             true ;
+        :note               bdr:NTE74ECED865DFE04C ;
+        :personEvent        bdr:EV4CB6510C82E2EBB0 , bdr:EV5738EC65B7B75000 , bdr:EV5E0B5DDE7FCB5AC8 , bdr:EVF13C22A7633FE2CB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4F28DD4DDC49AE96 , bdr:NMAB8897F4145C432F , bdr:NMC84407D7C528F252 , bdr:NMD0FC58754F441A4F ;
+        :personTeacherOf    bdr:P1KG4181 .
+}

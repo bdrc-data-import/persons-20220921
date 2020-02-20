@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12271> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12271 {
+    bda:LGA36DE56041836504
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T14:30:29.541Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12271  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12271 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e3/P8LS12271.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12271 ;
+        adm:logEntry        bda:LGA36DE56041836504 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE1BB6DC6F9AFD352
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1948"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF80383B83F2EDD4C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM4D60FDBA4DA81B18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chag nang dka' bcu dge 'dun tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM7A488CE105FBAF71
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM8D06DF22D637746C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 118"@bo-x-ewts .
+    
+    bdr:NTF15E63E959F6A2E9
+        a                   :Note ;
+        :locationStatement  "p. 216" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12271  a        :Person ;
+        skos:prefLabel      "dge 'dun tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF15E63E959F6A2E9 ;
+        :personEvent        bdr:EVE1BB6DC6F9AFD352 , bdr:EVF80383B83F2EDD4C ;
+        :personName         bdr:NM4D60FDBA4DA81B18 , bdr:NM7A488CE105FBAF71 , bdr:NM8D06DF22D637746C .
+}

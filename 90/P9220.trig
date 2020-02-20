@@ -1,0 +1,61 @@
+@base          <bdg:P9220> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9220 {
+    bda:P9220  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9220 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "90/P9220.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9220 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV041BCCA15BA7AEC8
+        a                   :PersonBirth ;
+        :onYear             "1805"^^xsd:gYear .
+    
+    bdr:EVA210461452620AA6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVC1C5BDA6AF832B78
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1851"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM0B384F13A411492A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sku 'bum khri blo bzang dbang phyug skal bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBBD6636969BFCF3D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dbang phyug skal bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC98628CC3AA6132B
+        a                   :Note ;
+        :locationStatement  "p. 175" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "blo bzang dbang phyug skal bzang rgya mtsho/ nyid kyis sku 'bum du slob gnyer dang dben gnas du mar thugs dam 'phel/ bkra shis 'khyil du yang yang phebs te sde khri rin po che dang/ rje dhwa dza'i mtshan can las bka' chos gsan bzhes mang du mdzad/ yang rdzong du ma dros pa'i pho brang bzhengs/ zhe brgyad pa lcags phag (1851) la sku 'bum khrir phebs te gang ci'i mdzad sgo shin tu legs/ (p.175)"@en .
+    
+    bdr:P9220  a            :Person ;
+        skos:prefLabel      "blo bzang dbang phyug skal bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC98628CC3AA6132B ;
+        :personEvent        bdr:EV041BCCA15BA7AEC8 , bdr:EVA210461452620AA6 , bdr:EVC1C5BDA6AF832B78 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B384F13A411492A , bdr:NMBBD6636969BFCF3D ;
+        :personStudentOf    bdr:P176 , bdr:P382 .
+}

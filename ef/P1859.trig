@@ -1,0 +1,88 @@
+@base          <bdg:P1859> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1859 {
+    bda:LGE64B4AC38D07E061
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-12T12:50:45.089Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1859  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1859 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ef/P1859.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1859 ;
+        adm:logEntry        bda:LGE64B4AC38D07E061 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA9F4F87B53B66628
+        a                   :PersonDeath ;
+        :onYear             "1886"^^xsd:gYear .
+    
+    bdr:EVE369D743CC5AFE25
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1870"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EVF04CAA2966869D7D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM06F9112B2B113629
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM6B992D2E7FF1EA79
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dred khog dge bshes blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM80393D9630F62AC9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 46"@bo-x-ewts .
+    
+    bdr:NME91EC9E9E1F95C77
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum sman pa khri 46 blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NT069669A71B87C602
+        a                   :Note ;
+        :noteText           "Early studies at Sku-'bum Dpal-ldan-bshad-sgrub-gling\nLater studies at the Rgyud-pa Grwa-tshang.\nTeacher (not recorded): Grub-dbang Rdo-rje-'chang.\nSeveral years as Rgyud-pa Bla-ma Dbu-mdzad.\n1870. Ascends as the 46th khri of the Sku-'bum Sman-pa Dpon-slob."@en .
+    
+    bdr:NT7BB2860A1C3FAA34
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTA98DB5F2F175836A
+        a                   :Note ;
+        :locationStatement  "p. 329" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:NTBA57EBF661D64AEA
+        a                   :Note ;
+        :locationStatement  "p. 849" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1859  a            :Person ;
+        skos:prefLabel      "blo bzang sbyin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT069669A71B87C602 , bdr:NT7BB2860A1C3FAA34 , bdr:NTA98DB5F2F175836A , bdr:NTBA57EBF661D64AEA ;
+        :personEvent        bdr:EVA9F4F87B53B66628 , bdr:EVE369D743CC5AFE25 , bdr:EVF04CAA2966869D7D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06F9112B2B113629 , bdr:NM6B992D2E7FF1EA79 , bdr:NM80393D9630F62AC9 , bdr:NME91EC9E9E1F95C77 ;
+        :personTeacherOf    bdr:P2164 .
+}

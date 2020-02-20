@@ -1,0 +1,55 @@
+@base          <bdg:P6528> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6528 {
+    bda:LGED9E518154CA7893
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-26T14:32:32.015Z"^^xsd:dateTime ;
+        adm:logMessage      "changed date of birth to 1726"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6528  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6528 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "9f/P6528.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6528 ;
+        adm:logEntry        bda:LGED9E518154CA7893 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD6128EDE444D6A50
+        a                   :PersonBirth ;
+        :onYear             "1726"^^xsd:gYear .
+    
+    bdr:NM0493896789826ED7
+        a                   :PersonReversal ;
+        rdfs:label          "bkra shis 'bum, gling sman/"@bo-x-ewts .
+    
+    bdr:NMFBEB396C0413552D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gling sman bkra shis 'bum/"@bo-x-ewts .
+    
+    bdr:NTA674A43C29B28B56
+        a                   :Note ;
+        :noteText           "well known tibetan medical practitioner and writer, probably connected with the gling tshang principality; need more information on the dating and teachers of this doctor"@en .
+    
+    bdr:P6528  a            :Person ;
+        skos:prefLabel      "gling sman bkra shis 'bum/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA674A43C29B28B56 ;
+        :personEvent        bdr:EVD6128EDE444D6A50 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0493896789826ED7 , bdr:NMFBEB396C0413552D .
+}

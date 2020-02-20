@@ -1,0 +1,69 @@
+@base          <bdg:P0RK1705> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK1705 {
+    bda:LG51DF8C7B7BEC0F40
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T14:59:20.625Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG9628F621D08A0CEA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-16T12:31:43.999Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, sanskrit name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD4B5C0D47FB6DD30
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:P0RK1705  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK1705 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b7/P0RK1705.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK1705 ;
+        adm:logEntry        bda:LG51DF8C7B7BEC0F40 , bda:LG9628F621D08A0CEA , bda:LGD4B5C0D47FB6DD30 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM84500E1A0018CB73
+        a                   :PersonOtherName ;
+        rdfs:label          "samghashri"@sa-x-ndia .
+    
+    bdr:NME877C81352C11EF2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "saM gha shrI/"@bo-x-ewts .
+    
+    bdr:NMEF8E7AD5B15E09D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bal po saM gha shrI/"@bo-x-ewts .
+    
+    bdr:NT3BA4B2A24891C916
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 14b3" ;
+        :noteSource         bdr:MW29706 .
+    
+    bdr:P0RK1705  a         :Person ;
+        skos:prefLabel      "saM gha shrI/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3BA4B2A24891C916 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM84500E1A0018CB73 , bdr:NME877C81352C11EF2 , bdr:NMEF8E7AD5B15E09D6 ;
+        :personStudentOf    bdr:P0RK1704 ;
+        :personTeacherOf    bdr:P1056 , bdr:P3214 .
+}

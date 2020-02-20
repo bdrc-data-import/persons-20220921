@@ -1,0 +1,61 @@
+@base          <bdg:P4576> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4576 {
+    bda:P4576  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4576 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "53/P4576.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4576 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV729AD58ED45F99ED
+        a                   :PersonBirth ;
+        :onYear             "1924"^^xsd:gYear .
+    
+    bdr:EVE814A64FB7BC0CE6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G110 .
+    
+    bdr:EVEB46B507736B240C
+        a                   :PersonDeath ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:NM03B9AACC6AD2C7D4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes dge 'dun blo gros/"@bo-x-ewts .
+    
+    bdr:NM1F440E95CB00CA7C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun blo gros/"@bo-x-ewts .
+    
+    bdr:NT34BD12D5C4B4FAD2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTB2DFC44A9B3CB2DD
+        a                   :Note ;
+        :noteText           "1940. Basic examinations.\n1947. Final ordination.\n1961. Dge-bshes degree.\n1967. To Hamburg to teach."@en .
+    
+    bdr:P4576  a            :Person ;
+        skos:prefLabel      "dge 'dun blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT34BD12D5C4B4FAD2 , bdr:NTB2DFC44A9B3CB2DD ;
+        :personEvent        bdr:EV729AD58ED45F99ED , bdr:EVE814A64FB7BC0CE6 , bdr:EVEB46B507736B240C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03B9AACC6AD2C7D4 , bdr:NM1F440E95CB00CA7C ;
+        :personStudentOf    bdr:P4577 .
+}

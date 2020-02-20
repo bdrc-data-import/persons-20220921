@@ -1,0 +1,55 @@
+@base          <bdg:P9935> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9935 {
+    bda:P9935  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9935 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ed/P9935.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9935 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB5A9A7CD79D457E9
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM79F3D003CDC1E245
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NT2DEC1B58DE76881C
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 396v." ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in the transmission of the gter ma revelations of spa grol gter ston tshe ring rdo rje"@en .
+    
+    bdr:NTEDD14F29F798C26C
+        a                   :Note ;
+        :locationStatement  "v. 3, p. 251" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "master in the transmission lineage of thang stong rgyal po's amplification of the byang gter"@en .
+    
+    bdr:P9935  a            :Person ;
+        skos:prefLabel      "chos dbang grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2DEC1B58DE76881C , bdr:NTEDD14F29F798C26C ;
+        :personEvent        bdr:EVB5A9A7CD79D457E9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79F3D003CDC1E245 ;
+        :personStudentOf    bdr:P9934 ;
+        :personTeacherOf    bdr:P2718 .
+}

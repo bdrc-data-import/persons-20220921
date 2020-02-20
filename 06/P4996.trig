@@ -1,0 +1,50 @@
+@base          <bdg:P4996> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4996 {
+    bda:P4996  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4996 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "06/P4996.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4996 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV41E6A7D5E8E96837
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM00A9981E35F1EF62
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dpal/"@bo-x-ewts .
+    
+    bdr:NMA61E6ED43D9E0844
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen kun dga' dpal/"@bo-x-ewts .
+    
+    bdr:NT3CF5660C8EDEB479
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P4996  a            :Person ;
+        skos:prefLabel      "kun dga' dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3CF5660C8EDEB479 ;
+        :personEvent        bdr:EV41E6A7D5E8E96837 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00A9981E35F1EF62 , bdr:NMA61E6ED43D9E0844 ;
+        :personStudentOf    bdr:P252 .
+}

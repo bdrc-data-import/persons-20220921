@@ -1,0 +1,90 @@
+@base          <bdg:P868> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P868 {
+    bda:LG242EA924B40F43E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-16T11:21:27.427Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG63978E367AC84F5D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-31T09:52:20.154Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA8720A823192E155
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P868  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P868 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "d1/P868.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P868 ;
+        adm:logEntry        bda:LG242EA924B40F43E7 , bda:LG63978E367AC84F5D , bda:LGA8720A823192E155 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B69410E86E93CA6
+        a                   :PersonDeath ;
+        :onYear             "1991"^^xsd:gYear .
+    
+    bdr:EV4A9F72CB6012EFBB
+        a                   :PersonBirth ;
+        :onYear             "1912"^^xsd:gYear .
+    
+    bdr:EVBB38B75563D7FB4D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G194 .
+    
+    bdr:NM712F7ADC9A8ACCF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gtsug lag snang ba dbang phyug"@bo-x-ewts .
+    
+    bdr:NMCF057A44ABF54A07
+        a                   :PersonPersonalName ;
+        rdfs:label          "gtsug lag smra ba/"@bo-x-ewts .
+    
+    bdr:NMD204EA60CFE5F303
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dpa' bo 10"@bo-x-ewts .
+    
+    bdr:NMDC81D7E1AD47B09E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpa' bo 10 gtsug lag smra ba'i dbang phyug"@bo-x-ewts .
+    
+    bdr:NMEA0E88832D2FFC4D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Pawo 10"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT1301F243EFB9233E
+        a                   :Note ;
+        :noteText           "according to erwan temple from data provided by the 10th dpa' bo: 1912-1991"@en .
+    
+    bdr:P868  a             :Person ;
+        skos:prefLabel      "gtsug lag snang ba dbang phyug"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1376 ;
+        :isRoot             true ;
+        :note               bdr:NT1301F243EFB9233E ;
+        :personEvent        bdr:EV0B69410E86E93CA6 , bdr:EV4A9F72CB6012EFBB , bdr:EVBB38B75563D7FB4D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM712F7ADC9A8ACCF7 , bdr:NMCF057A44ABF54A07 , bdr:NMD204EA60CFE5F303 , bdr:NMDC81D7E1AD47B09E , bdr:NMEA0E88832D2FFC4D ;
+        :personStudentOf    bdr:P563 , bdr:P937 ;
+        :personTeacherOf    bdr:P10571 , bdr:P1541 , bdr:P9744 .
+}

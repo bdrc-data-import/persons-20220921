@@ -1,0 +1,56 @@
+@base          <bdg:P10622> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10622 {
+    bda:P10622  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10622 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "0c/P10622.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10622 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04DC3FEE09210BC8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4164 .
+    
+    bdr:EVA7984FF9442D3716
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM82776655FC9746FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NMFA94C1C78548D45C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyor mo lung pa'i mkhan po shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NT715096D409B351A1
+        a                   :Note ;
+        :locationStatement  "p. 173" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "scholar and abbot of skyor mo lung; listed as one of the teachers of 'gro mgon 'phags pa"@en .
+    
+    bdr:P10622  a           :Person ;
+        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT715096D409B351A1 ;
+        :personEvent        bdr:EV04DC3FEE09210BC8 , bdr:EVA7984FF9442D3716 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM82776655FC9746FB , bdr:NMFA94C1C78548D45C ;
+        :personTeacherOf    bdr:P1048 .
+}

@@ -1,0 +1,81 @@
+@base          <bdg:P8LS12754> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12754 {
+    bda:LG3C4BE448635C6110
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-18T09:32:28.117Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8AD54D8226D8A53D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGEC7D636C8812BB03
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-07T10:29:53.173Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEE347A1C3B1E48AB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-18T09:37:43.568Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12754  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12754 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "07/P8LS12754.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12754 ;
+        adm:logEntry        bda:LG3C4BE448635C6110 , bda:LG8AD54D8226D8A53D , bda:LGEC7D636C8812BB03 , bda:LGEE347A1C3B1E48AB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV252F69F5D30A167A
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12909 .
+    
+    bdr:EVD5AB9521D7D5CB8A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4744 .
+    
+    bdr:NM9B393CB0F53AC815
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "yang dgon zhwa dmar sprul sku 01"@bo-x-ewts .
+    
+    bdr:NMBFD476D736295EF2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Yang Gon Zhamar Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD66A3EA77D91E6E8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phags mchog ngag dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NTE0AECD89ED9E7631
+        a                   :Note ;
+        :locationStatement  "p. 367" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "an incarnation lineage bearing the title ho thog thu from ri bo che yang dgon\n\nthis source gives:\n1) ri bo che yang dgon zhwa dmar ho thog thu 'phags mchog ngag dbang grags pa/"@en .
+    
+    bdr:P8LS12754  a        :Person ;
+        skos:prefLabel      "'phags mchog ngag dbang grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE0AECD89ED9E7631 ;
+        :personEvent        bdr:EV252F69F5D30A167A , bdr:EVD5AB9521D7D5CB8A ;
+        :personName         bdr:NM9B393CB0F53AC815 , bdr:NMBFD476D736295EF2 , bdr:NMD66A3EA77D91E6E8 .
+}

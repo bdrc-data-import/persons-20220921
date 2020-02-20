@@ -1,0 +1,64 @@
+@base          <bdg:P3520> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3520 {
+    bda:LG6F890F1A05A8C1B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-14T10:38:21.709Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGA94DE19FF9EA0AAB
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-09T12:49:11.521Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3520  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3520 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e3/P3520.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3520 ;
+        adm:logEntry        bda:LG6F890F1A05A8C1B9 , bda:LGA94DE19FF9EA0AAB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA417DBD817DAF46E
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM94C0E54D3B4C28F9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan rgyal po/"@bo-x-ewts .
+    
+    bdr:NMD40179079CC4F3DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma dam pa dpal ldan rgyal po/"@bo-x-ewts .
+    
+    bdr:NT9E769A244AF5D835
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Slob-bshad transmissions"@en .
+    
+    bdr:P3520  a            :Person ;
+        skos:prefLabel      "dpal ldan rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9E769A244AF5D835 ;
+        :personEvent        bdr:EVA417DBD817DAF46E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM94C0E54D3B4C28F9 , bdr:NMD40179079CC4F3DE ;
+        :personStudentOf    bdr:P0RK442 , bdr:P487 ;
+        :personTeacherOf    bdr:P0RK472 , bdr:P0RK571 , bdr:P1027 , bdr:P9144 .
+}

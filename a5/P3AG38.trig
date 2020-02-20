@@ -1,0 +1,84 @@
+@base          <bdg:P3AG38> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG38 {
+    bda:LG090DB2D933A04CE4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-11T09:11:13.654Z"^^xsd:dateTime ;
+        adm:logMessage      "Added Treasury of Lives link"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:LG2CC40D2D634CEB2C
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-12-23T11:41:35.337Z"^^xsd:dateTime ;
+        adm:logMessage      "created, reincarnation relation"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG44E26B34F91B0060
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T11:51:49.804Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG4C73D30AF8C58FF0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T11:47:11.47Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P3JM110"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG92F9D41F02559234
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-12-23T11:53:48.575Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3AG38  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG38 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a5/P3AG38.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG38 ;
+        adm:logEntry        bda:LG090DB2D933A04CE4 , bda:LG2CC40D2D634CEB2C , bda:LG44E26B34F91B0060 , bda:LG4C73D30AF8C58FF0 , bda:LG92F9D41F02559234 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P3JM110 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV1DEE5F3BF6281691
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV666FFB51E36AF06E
+        a                   :PersonDeath ;
+        :notAfter           "2099"^^xsd:gYear ;
+        :notBefore          "2000"^^xsd:gYear .
+    
+    bdr:NM2A725B3C4312BFBC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM91EA9269581EE22D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzogs chen kong sprul 01"@bo-x-ewts .
+    
+    bdr:NT6BF720FAAE3B8724
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P3JM110"@en .
+    
+    bdr:P3AG38  a           :Person ;
+        skos:prefLabel      "dkon mchog bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6BF720FAAE3B8724 ;
+        :personEvent        bdr:EV1DEE5F3BF6281691 , bdr:EV666FFB51E36AF06E ;
+        :personName         bdr:NM2A725B3C4312BFBC , bdr:NM91EA9269581EE22D .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P8LS15705> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15705 {
+    bda:LGA375A8E6EC61FD77
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-03T08:43:06.709Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15705  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15705 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3e/P8LS15705.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15705 ;
+        adm:logEntry        bda:LGA375A8E6EC61FD77 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0482419883A32EA1
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM3DEBB5F4D113FBB2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pa ra he ta/"@bo-x-ewts .
+    
+    bdr:NMD068A7926EAB0650
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon pa ra he ta/"@bo-x-ewts .
+    
+    bdr:P8LS15705  a        :Person ;
+        skos:prefLabel      "pa ra he ta/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0482419883A32EA1 ;
+        :personName         bdr:NM3DEBB5F4D113FBB2 , bdr:NMD068A7926EAB0650 .
+}

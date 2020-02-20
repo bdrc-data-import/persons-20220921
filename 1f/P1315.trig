@@ -1,0 +1,48 @@
+@base          <bdg:P1315> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1315 {
+    bda:P1315  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1315 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1f/P1315.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1315 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV90B6923C520F992B
+        a                   :PersonBirth ;
+        :onYear             "1085"^^xsd:gYear .
+    
+    bdr:EVFB525958A9402610
+        a                   :PersonDeath ;
+        :onYear             "1171"^^xsd:gYear .
+    
+    bdr:NM4CB18820AA3B4928
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sha mi 'dul 'dzin chen po/"@bo-x-ewts .
+    
+    bdr:NM99622F42318DBFA5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smon lam tshul khrims/"@bo-x-ewts .
+    
+    bdr:P1315  a            :Person ;
+        skos:prefLabel      "smon lam tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV90B6923C520F992B , bdr:EVFB525958A9402610 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4CB18820AA3B4928 , bdr:NM99622F42318DBFA5 ;
+        :personTeacherOf    bdr:P136 .
+}

@@ -1,0 +1,53 @@
+@base          <bdg:P8208> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8208 {
+    bda:LG1700AF29A866DB1C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-27T17:02:39.825Z"^^xsd:dateTime ;
+        adm:logMessage      "new and added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGD67BE6471083A3D9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-04-02T14:57:03.601Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P8208  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8208 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "61/P8208.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8208 ;
+        adm:logEntry        bda:LG1700AF29A866DB1C , bda:LGD67BE6471083A3D9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NME1BC71BD79B5A4BE
+        a                   :PersonPersonalName ;
+        rdfs:label          "kumaravajra/"@bo-x-ewts .
+    
+    bdr:NT033C22DF124586DF
+        a                   :Note ;
+        :noteText           "styled: rgya gar gyi mkhan po ku mA ra badzra"@en .
+    
+    bdr:P8208  a            :Person ;
+        skos:prefLabel      "kumaravajra/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT033C22DF124586DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME1BC71BD79B5A4BE ;
+        :personTeacherOf    bdr:P4CZ15123 , bdr:P4CZ15124 .
+}

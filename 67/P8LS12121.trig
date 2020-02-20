@@ -1,0 +1,68 @@
+@base          <bdg:P8LS12121> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12121 {
+    bda:LG873464A4F6617334
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-11T11:21:58.067Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12121  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12121 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "67/P8LS12121.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12121 ;
+        adm:logEntry        bda:LG873464A4F6617334 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV16BB3CA28905A951
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVBF27C1DA844A31CC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM230F216FAADB9710
+        a                   :PersonOtherName ;
+        rdfs:label          "ngag dbang dam chos/"@bo-x-ewts .
+    
+    bdr:NM5ECF5C97083DD8A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dam chos/"@bo-x-ewts .
+    
+    bdr:NM6D848E618729BEA9
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 17"@bo-x-ewts .
+    
+    bdr:NMBE20D4A2E7E1FA99
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes blo bzang dam chos/"@bo-x-ewts .
+    
+    bdr:NTB3F6AE5C7DD6C897
+        a                   :Note ;
+        :locationStatement  "p. 311" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12121  a        :Person ;
+        skos:prefLabel      "blo bzang dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB3F6AE5C7DD6C897 ;
+        :personEvent        bdr:EV16BB3CA28905A951 , bdr:EVBF27C1DA844A31CC ;
+        :personName         bdr:NM230F216FAADB9710 , bdr:NM5ECF5C97083DD8A4 , bdr:NM6D848E618729BEA9 , bdr:NMBE20D4A2E7E1FA99 .
+}

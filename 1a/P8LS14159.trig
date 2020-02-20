@@ -1,0 +1,50 @@
+@base          <bdg:P8LS14159> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS14159 {
+    bda:LGEE243DF877F88381
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-07-22T16:04:02.242Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS14159  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS14159 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1a/P8LS14159.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS14159 ;
+        adm:logEntry        bda:LGEE243DF877F88381 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM340158CE32EA381F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NM7A4B14677B0FDFB1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khams pa lho tshad pa kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NT72B98F8C56D88769
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 248" ;
+        :noteSource         bdr:MW1PD107937 .
+    
+    bdr:P8LS14159  a        :Person ;
+        skos:prefLabel      "kun dga' rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT72B98F8C56D88769 ;
+        :personName         bdr:NM340158CE32EA381F , bdr:NM7A4B14677B0FDFB1 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P3159> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3159 {
+    bda:P3159  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3159 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "45/P3159.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3159 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAF2DF04132D94359
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EVC815D628E9B653BB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G394 .
+    
+    bdr:NM3E87E52B4B904622
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NM5553B42B22BE7C56
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyud chen shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NMB962ABFA24188158
+        a                   :PersonTitle ;
+        rdfs:label          "rtse ba shes rab bzang po/"@bo-x-ewts .
+    
+    bdr:NTF33A509775B3B585
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3159  a            :Person ;
+        skos:prefLabel      "shes rab bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF33A509775B3B585 ;
+        :personEvent        bdr:EVAF2DF04132D94359 , bdr:EVC815D628E9B653BB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3E87E52B4B904622 , bdr:NM5553B42B22BE7C56 , bdr:NMB962ABFA24188158 ;
+        :personStudentOf    bdr:P1789 , bdr:P457 ;
+        :personTeacherOf    bdr:P3160 .
+}

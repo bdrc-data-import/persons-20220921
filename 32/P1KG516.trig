@@ -1,0 +1,56 @@
+@base          <bdg:P1KG516> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG516 {
+    bda:LGF49F757534CEF7AB
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-08T14:08:29.236Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG516  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG516 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "32/P1KG516.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG516 ;
+        adm:logEntry        bda:LGF49F757534CEF7AB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV929152FAACC9A770
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM59B0A28658EDA858
+        a                   :PersonPersonalName ;
+        rdfs:label          "zla gsal/"@bo-x-ewts .
+    
+    bdr:NMD8176A291D111A69
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khri sems dpa'"@bo-x-ewts .
+    
+    bdr:NTF9D2E39CCC61CF63
+        a                   :Note ;
+        :noteSource         bdr:MW1KG515 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG516  a          :Person ;
+        skos:prefLabel      "khri sems dpa'"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF9D2E39CCC61CF63 ;
+        :personEvent        bdr:EV929152FAACC9A770 ;
+        :personName         bdr:NM59B0A28658EDA858 , bdr:NMD8176A291D111A69 .
+}

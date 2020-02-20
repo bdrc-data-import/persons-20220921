@@ -1,0 +1,60 @@
+@base          <bdg:P9144> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9144 {
+    bda:LGA2CAB99CD66F7E86
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-14T10:38:26.94Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P9144  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9144 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "28/P9144.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9144 ;
+        adm:logEntry        bda:LGA2CAB99CD66F7E86 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC213281AE99E0439
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM5EEBC80E30ABF038
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus chen nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMA16EBD17A1A3CD86
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT70BCE14BFAEED34B
+        a                   :Note ;
+        :locationStatement  "p. 67" ;
+        :noteSource         bdr:MW27309 ;
+        :noteText           "noted as a teacher of rtse gdong bdag chen kun dga' bsod nams"@en .
+    
+    bdr:P9144  a            :Person ;
+        skos:prefLabel      "nam mkha' dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT70BCE14BFAEED34B ;
+        :personEvent        bdr:EVC213281AE99E0439 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5EEBC80E30ABF038 , bdr:NMA16EBD17A1A3CD86 ;
+        :personStudentOf    bdr:P0RK570 , bdr:P1884 , bdr:P3520 ;
+        :personTeacherOf    bdr:P2511 , bdr:P783 .
+}

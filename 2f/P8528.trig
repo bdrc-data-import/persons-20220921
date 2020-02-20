@@ -1,0 +1,51 @@
+@base          <bdg:P8528> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8528 {
+    bda:P8528  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8528 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2f/P8528.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8528 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0AC8CB19171A1C7C
+        a                   :PersonBirth ;
+        :onYear             "1356"^^xsd:gYear .
+    
+    bdr:EV5F21427DE8F13697
+        a                   :PersonDeath ;
+        :onYear             "1409"^^xsd:gYear .
+    
+    bdr:NMD55660EFF1230466
+        a                   :PersonPersonalName ;
+        rdfs:label          "grags pa 'od zer/"@bo-x-ewts .
+    
+    bdr:NT6178A19012630582
+        a                   :Note ;
+        :noteText           "dates and linkages provided by stephane arguiller"@en .
+    
+    bdr:P8528  a            :Person ;
+        skos:prefLabel      "grags pa 'od zer/"@bo-x-ewts ;
+        :hasFather          bdr:P1583 ;
+        :isRoot             true ;
+        :note               bdr:NT6178A19012630582 ;
+        :personEvent        bdr:EV0AC8CB19171A1C7C , bdr:EV5F21427DE8F13697 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD55660EFF1230466 ;
+        :personStudentOf    bdr:P1583 ;
+        :personTeacherOf    bdr:P8529 .
+}

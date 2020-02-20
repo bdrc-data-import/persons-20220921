@@ -1,0 +1,72 @@
+@base          <bdg:P8LS13018> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13018 {
+    bda:LG22F3D902B9B2F9BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-14T14:10:13.039Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG734FAEE15E17F701
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T12:05:16.439Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE6960DC970EC195E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS13018  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13018 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8f/P8LS13018.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13018 ;
+        adm:logEntry        bda:LG22F3D902B9B2F9BA , bda:LG734FAEE15E17F701 , bda:LGE6960DC970EC195E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5FE178A5177D1A97
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13047 .
+    
+    bdr:NM318132C0F4CCD71C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "ri bo che yang dgon bla ma ho thog thu 01"@bo-x-ewts .
+    
+    bdr:NM611FD6F8ED3E4630
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa lhun grub/"@bo-x-ewts .
+    
+    bdr:NMA3123D3254B6D3A7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Riwoche Yang Gon Lama Hotoktu 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT0E7A8A53AF04846F
+        a                   :Note ;
+        :locationStatement  "p. 366" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "incarnation lineage at the ri bo che yang dgon monastery\n1) ri bo che yang dgon bla ma ho thog thu grags pa lhun grub/"@en .
+    
+    bdr:P8LS13018  a        :Person ;
+        skos:prefLabel      "grags pa lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0E7A8A53AF04846F ;
+        :personEvent        bdr:EV5FE178A5177D1A97 ;
+        :personName         bdr:NM318132C0F4CCD71C , bdr:NM611FD6F8ED3E4630 , bdr:NMA3123D3254B6D3A7 .
+}

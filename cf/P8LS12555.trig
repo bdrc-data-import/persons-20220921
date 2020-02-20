@@ -1,0 +1,55 @@
+@base          <bdg:P8LS12555> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12555 {
+    bda:LGBFDD8CB7CCA6373E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T16:06:08.027Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record with office title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12555  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12555 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "cf/P8LS12555.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12555 ;
+        adm:logEntry        bda:LGBFDD8CB7CCA6373E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA8382E38D29646BC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4106 .
+    
+    bdr:NMA44C8D7EACC2A6ED
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bla ma grags pa/"@bo-x-ewts .
+    
+    bdr:NMC00B53ABCA1A4712
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "brag thog dgon gdan rabs 07"@bo-x-ewts .
+    
+    bdr:NT52E44FD7B7FFB0B0
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 583" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:P8LS12555  a        :Person ;
+        skos:prefLabel      "bla ma grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT52E44FD7B7FFB0B0 ;
+        :personEvent        bdr:EVA8382E38D29646BC ;
+        :personName         bdr:NMA44C8D7EACC2A6ED , bdr:NMC00B53ABCA1A4712 .
+}

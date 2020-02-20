@@ -1,0 +1,79 @@
+@base          <bdg:P8LS12071> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12071 {
+    bda:LG583BF7795643D3D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:05:14.154Z"^^xsd:dateTime ;
+        adm:logMessage      "changes title to office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGADAC42506E12C15F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-22T14:40:50.673Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12071  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12071 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "4e/P8LS12071.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12071 ;
+        adm:logEntry        bda:LG583BF7795643D3D0 , bda:LGADAC42506E12C15F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B1E825B2A9BBB35
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA3715B6A82D61CC1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVFED77A824A4FAC66
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1000 .
+    
+    bdr:NMBC7CDD457AE718EF
+        a                   :PersonTitle ;
+        rdfs:label          "hor blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD87EA1902A507819
+        a                   :PersonTitle ;
+        rdfs:label          "rje hor glo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME301EF082825CCFB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME8EB7642C71FE8C8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 02"@bo-x-ewts .
+    
+    bdr:NT99A8D9C3CA8EF1F1
+        a                   :Note ;
+        :locationStatement  "p. 487" ;
+        :noteSource         bdr:MW00KG09686 ;
+        :noteText           "blo bzang don grub was his immediate incarnate lama"@en .
+    
+    bdr:P8LS12071  a        :Person ;
+        skos:prefLabel      "blo gsal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT99A8D9C3CA8EF1F1 ;
+        :personEvent        bdr:EV8B1E825B2A9BBB35 , bdr:EVA3715B6A82D61CC1 , bdr:EVFED77A824A4FAC66 ;
+        :personName         bdr:NMBC7CDD457AE718EF , bdr:NMD87EA1902A507819 , bdr:NME301EF082825CCFB , bdr:NME8EB7642C71FE8C8 .
+}

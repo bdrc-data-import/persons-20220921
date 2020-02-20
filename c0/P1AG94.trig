@@ -1,0 +1,60 @@
+@base          <bdg:P1AG94> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG94 {
+    bda:LGC2437691622B5522
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-08-02T12:14:48.925Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG94  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG94 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c0/P1AG94.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG94 ;
+        adm:logEntry        bda:LGC2437691622B5522 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66D630B7773F6397
+        a                   :PersonDeath ;
+        :onYear             "1642"^^xsd:gYear .
+    
+    bdr:EVE83104999D355CFA
+        a                   :PersonBirth ;
+        :notAfter           "1571"^^xsd:gYear ;
+        :notBefore          "1570"^^xsd:gYear .
+    
+    bdr:NMC66B43054ED1EB1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng ge rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NME2A9ACC39EC7D762
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal po seng ge rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT11A3B3D2A445ECD3
+        a                   :Note ;
+        :locationStatement  "pp. 52-56" ;
+        :noteSource         bdr:MW20844 ;
+        :noteText           "king of Ladakh and patron of the Drukpa Kagyu tradition"@en .
+    
+    bdr:P1AG94  a           :Person ;
+        skos:prefLabel      "seng ge rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT11A3B3D2A445ECD3 ;
+        :personEvent        bdr:EV66D630B7773F6397 , bdr:EVE83104999D355CFA ;
+        :personName         bdr:NMC66B43054ED1EB1E , bdr:NME2A9ACC39EC7D762 .
+}

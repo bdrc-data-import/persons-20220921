@@ -1,0 +1,65 @@
+@base          <bdg:P5402> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5402 {
+    bda:LGC225478FF171CFFD
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-14T16:07:58.955Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P5402  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5402 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "18/P5402.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5402 ;
+        adm:logEntry        bda:LGC225478FF171CFFD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B92AC8E17315EA2
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVC2BC78F5D04554E5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:NM748B3A70D4230D7A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NMB64E9E6E815BB8B1
+        a                   :PersonPersonalName ;
+        rdfs:label          "yongs 'dzin tshang skal bzang dpal 'byor bzang po/"@bo-x-ewts .
+    
+    bdr:NTE1382B5224B8C2C3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTE30773FE91005A32
+        a                   :Note ;
+        :locationStatement  "p. 494" .
+    
+    bdr:P5402  a            :Person ;
+        skos:prefLabel      "skal bzang dpal 'byor bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE1382B5224B8C2C3 , bdr:NTE30773FE91005A32 ;
+        :personEvent        bdr:EV3B92AC8E17315EA2 , bdr:EVC2BC78F5D04554E5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM748B3A70D4230D7A , bdr:NMB64E9E6E815BB8B1 ;
+        :personTeacherOf    bdr:P5401 .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P2JM401> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM401 {
+    bda:LG35C631C52059B4EF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-08T14:52:31.136Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9FFBDC08BA43378E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-08T16:02:54.529Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM401  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM401 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "07/P2JM401.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM401 ;
+        adm:logEntry        bda:LG35C631C52059B4EF , bda:LG9FFBDC08BA43378E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8F6C3B361A3FFB75
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NMCE040CED54BF6B60
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring chos 'byor/"@bo-x-ewts .
+    
+    bdr:NT032BD0C5465BA990
+        a                   :Note ;
+        :locationStatement  "pg. 476" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2JM401  a          :Person ;
+        skos:prefLabel      "tshe ring chos 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT032BD0C5465BA990 ;
+        :personEvent        bdr:EV8F6C3B361A3FFB75 ;
+        :personName         bdr:NMCE040CED54BF6B60 .
+}

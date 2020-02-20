@@ -1,0 +1,61 @@
+@base          <bdg:P8LS12549> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12549 {
+    bda:LGEECADC6F68FC0A36
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T15:17:09.396Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFAEC57251A9C5ACA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T15:14:59.801Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record with office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12549  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12549 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "dc/P8LS12549.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12549 ;
+        adm:logEntry        bda:LGEECADC6F68FC0A36 , bda:LGFAEC57251A9C5ACA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEC05D3E51D4F1922
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4106 .
+    
+    bdr:NM1A9F3114A124AB65
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "brag thog dgon gdan rabs 01"@bo-x-ewts .
+    
+    bdr:NMAD998C7634748936
+        a                   :PersonPrimaryName ;
+        rdfs:label          "u rgyan 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT012352E560AF66DE
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 583" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:P8LS12549  a        :Person ;
+        skos:prefLabel      "u rgyan 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT012352E560AF66DE ;
+        :personEvent        bdr:EVEC05D3E51D4F1922 ;
+        :personName         bdr:NM1A9F3114A124AB65 , bdr:NMAD998C7634748936 .
+}

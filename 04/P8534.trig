@@ -1,0 +1,72 @@
+@base          <bdg:P8534> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8534 {
+    bda:LG872C1D8D664CE3CE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-18T08:57:41.696Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8534  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8534 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "04/P8534.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8534 ;
+        adm:logEntry        bda:LG872C1D8D664CE3CE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3020AEBDD42153BF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV3AE63CE3945BCE46
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE8B4AEAA0B517E76
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1AF38770C0A9419E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khro skyabs dge bshes/"@bo-x-ewts .
+    
+    bdr:NM87BB339DEB926AB7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal rong khro skyabs dge bshes/"@bo-x-ewts .
+    
+    bdr:NMB0DB61F22F60A3D0
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 04"@bo-x-ewts .
+    
+    bdr:NT9AF42D7DCDF5DD64
+        a                   :Note ;
+        :locationStatement  "p. 330" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biographical sketch"@en .
+    
+    bdr:P8534  a            :Person ;
+        skos:prefLabel      "khro skyabs dge bshes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9AF42D7DCDF5DD64 ;
+        :personEvent        bdr:EV3020AEBDD42153BF , bdr:EV3AE63CE3945BCE46 , bdr:EVE8B4AEAA0B517E76 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AF38770C0A9419E , bdr:NM87BB339DEB926AB7 , bdr:NMB0DB61F22F60A3D0 ;
+        :personTeacherOf    bdr:P8539 .
+}

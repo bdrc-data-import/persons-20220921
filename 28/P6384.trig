@@ -1,0 +1,62 @@
+@base          <bdg:P6384> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6384 {
+    bda:LG8321137009F94F2E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-22T16:08:21.651Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P6384  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6384 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "28/P6384.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6384 ;
+        adm:logEntry        bda:LG8321137009F94F2E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV879EA7F1EB08C27F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EVAB066355E08735C1
+        a                   :PersonBirth ;
+        :onYear             "1935"^^xsd:gYear .
+    
+    bdr:NM08687B846E35247F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' dge legs ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NM3B12DE5EBE15D06D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dar thang sprul sku kun dga' dge legs ye shes rdo rje/"@bo-x-ewts .
+    
+    bdr:NT5A7586609812E8C2
+        a                   :Note ;
+        :locationStatement  "p. 514" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch"@en .
+    
+    bdr:P6384  a            :Person ;
+        skos:prefLabel      "kun dga' dge legs ye shes rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5A7586609812E8C2 ;
+        :personEvent        bdr:EV879EA7F1EB08C27F , bdr:EVAB066355E08735C1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08687B846E35247F , bdr:NM3B12DE5EBE15D06D ;
+        :personStudentOf    bdr:P8297 .
+}

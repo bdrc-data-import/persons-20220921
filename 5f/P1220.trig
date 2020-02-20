@@ -1,0 +1,67 @@
+@base          <bdg:P1220> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1220 {
+    bda:P1220  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1220 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "5f/P1220.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1220 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDBC4E19DF8F84F32
+        a                   :PersonDeath ;
+        :onYear             "1370"^^xsd:gYear .
+    
+    bdr:EVEAED87CEFC7D651E
+        a                   :PersonBirth ;
+        :onYear             "1310"^^xsd:gYear .
+    
+    bdr:NM442184C3715E995C
+        a                   :PersonPersonalName ;
+        rdfs:label          "bcu gnyis gsar ma grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NMFDB3E2556E7C7420
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bcu gnyis gsar ma/"@bo-x-ewts .
+    
+    bdr:NMFE7FBECF651F041E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NT2A8D4E072AB1744D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa"@en .
+    
+    bdr:NT824755C8C2EEF367
+        a                   :Note ;
+        :locationStatement  "p. 520" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT9B212109681E8785
+        a                   :Note ;
+        :noteText           "1360. Comes to the gdan-sa of Gdan-sa Thel with the title Spyan-snga.\nServes ten years\nRegarded as the 9th in the abbatial succession to Phag-mo-gru."@en .
+    
+    bdr:P1220  a            :Person ;
+        skos:prefLabel      "grags pa shes rab/"@bo-x-ewts ;
+        :hasFather          bdr:P1224 ;
+        :isRoot             true ;
+        :note               bdr:NT2A8D4E072AB1744D , bdr:NT824755C8C2EEF367 , bdr:NT9B212109681E8785 ;
+        :personEvent        bdr:EVDBC4E19DF8F84F32 , bdr:EVEAED87CEFC7D651E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM442184C3715E995C , bdr:NMFDB3E2556E7C7420 , bdr:NMFE7FBECF651F041E ;
+        :personStudentOf    bdr:P1221 , bdr:P1222 , bdr:P1223 , bdr:P1225 , bdr:P1226 , bdr:P155 .
+}

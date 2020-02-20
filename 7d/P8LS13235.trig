@@ -1,0 +1,69 @@
+@base          <bdg:P8LS13235> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13235 {
+    bda:LGAE46AB6D659F3DB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T14:05:30.572Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC8473629CE691AFA
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-22T11:15:33.099Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13235  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13235 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7d/P8LS13235.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13235 ;
+        adm:logEntry        bda:LGAE46AB6D659F3DB3 , bda:LGC8473629CE691AFA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4F7046B63B519191
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G201 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV63163C44512D96FF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:NM66A9F8799E8D1A5C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "jo nang gdan rabs 19"@bo-x-ewts .
+    
+    bdr:NMB8365BE71D08F8E6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan rin chen/"@bo-x-ewts .
+    
+    bdr:NMDFCB6086768793F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang sems dpal ldan rin chen/"@bo-x-ewts .
+    
+    bdr:NT1BE3C40BA5D7295C
+        a                   :Note ;
+        :noteText           "jo nang gnas bshad, f. 8r"@en .
+    
+    bdr:P8LS13235  a        :Person ;
+        skos:prefLabel      "dpal ldan rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1BE3C40BA5D7295C ;
+        :personEvent        bdr:EV4F7046B63B519191 , bdr:EV63163C44512D96FF ;
+        :personName         bdr:NM66A9F8799E8D1A5C , bdr:NMB8365BE71D08F8E6 , bdr:NMDFCB6086768793F8 ;
+        :personTeacherOf    bdr:P3507 .
+}

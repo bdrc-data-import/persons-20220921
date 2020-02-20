@@ -1,0 +1,66 @@
+@base          <bdg:P1KG918> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG918 {
+    bda:LG0330F52B8EC0C582
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-11-13T16:53:31.97Z"^^xsd:dateTime ;
+        adm:logMessage      "added chinese"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG7DF4B13A4BF7C6C9
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-27T16:44:45.058Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG918  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG918 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "6a/P1KG918.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG918 ;
+        adm:logEntry        bda:LG0330F52B8EC0C582 , bda:LG7DF4B13A4BF7C6C9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV37100560B9AC0DBA
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM00F01FCC67525BB3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "an cai dan"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NM26E880EFBD1710FA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "an tshe brtan/"@bo-x-ewts .
+    
+    bdr:NM2DBE846DDD863E5F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "安才旦"@zh-hans .
+    
+    bdr:NT95A9D515A21873F8
+        a                   :Note ;
+        :noteText           "author of bod ljongs yul skor"@en .
+    
+    bdr:P1KG918  a          :Person ;
+        skos:prefLabel      "an tshe brtan/"@bo-x-ewts , "安才旦"@zh-hans ;
+        :isRoot             true ;
+        :note               bdr:NT95A9D515A21873F8 ;
+        :personEvent        bdr:EV37100560B9AC0DBA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00F01FCC67525BB3 , bdr:NM26E880EFBD1710FA , bdr:NM2DBE846DDD863E5F .
+}

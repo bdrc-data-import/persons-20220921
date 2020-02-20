@@ -1,0 +1,52 @@
+@base          <bdg:P6834> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6834 {
+    bda:LG54344F953DDAAA21
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-04-18T11:44:38.465Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat & teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6834  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6834 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "98/P6834.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6834 ;
+        adm:logEntry        bda:LG54344F953DDAAA21 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2CDCC29C1992065A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3997 .
+    
+    bdr:EVB675FC1839E3938F
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM5D44AC2197E48E78
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med 'gro phan/"@bo-x-ewts .
+    
+    bdr:P6834  a            :Person ;
+        skos:prefLabel      "'jigs med 'gro phan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV2CDCC29C1992065A , bdr:EVB675FC1839E3938F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D44AC2197E48E78 ;
+        :personStudentOf    bdr:P7774 .
+}

@@ -1,0 +1,92 @@
+@base          <bdg:P3118> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3118 {
+    bda:LGBDB21E1AF556E009
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T16:42:22.982Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3118  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3118 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "f2/P3118.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3118 ;
+        adm:logEntry        bda:LGBDB21E1AF556E009 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV113D94BE8FDD7CDD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1494"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5C89840D10829B11
+        a                   :PersonDeath ;
+        :onYear             "1510"^^xsd:gYear .
+    
+    bdr:EV5CD3D6A86FADE1BC
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1507"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA76C08932CB64033
+        a                   :PersonBirth ;
+        :onYear             "1437"^^xsd:gYear .
+    
+    bdr:EVF1DF36C836564F31
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:NM237BFF070D2AEA77
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin rgyal po/"@bo-x-ewts .
+    
+    bdr:NM5D5D47BB0EBF016B
+        a                   :PersonTitle ;
+        rdfs:label          "zhwa lu mkhan chen 07 rig 'dzin rgyal po/"@bo-x-ewts .
+    
+    bdr:NM61B5DF2CA3D78ECC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyo ston rig 'dzin rgyal po/"@bo-x-ewts .
+    
+    bdr:NMD9BDD1FFB4CCF6AD
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 07"@bo-x-ewts .
+    
+    bdr:NTA8748568DAABA24C
+        a                   :Note ;
+        :locationStatement  "p. 383" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:NTF2F74B681B06A504
+        a                   :Note ;
+        :locationStatement  "p. 190" ;
+        :noteSource         bdr:MW19832 ;
+        :noteText           "biography"@en .
+    
+    bdr:P3118  a            :Person ;
+        skos:prefLabel      "rig 'dzin rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA8748568DAABA24C , bdr:NTF2F74B681B06A504 ;
+        :personEvent        bdr:EV113D94BE8FDD7CDD , bdr:EV5C89840D10829B11 , bdr:EV5CD3D6A86FADE1BC , bdr:EVA76C08932CB64033 , bdr:EVF1DF36C836564F31 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM237BFF070D2AEA77 , bdr:NM5D5D47BB0EBF016B , bdr:NM61B5DF2CA3D78ECC , bdr:NMD9BDD1FFB4CCF6AD ;
+        :personStudentOf    bdr:P3102 , bdr:P3425 ;
+        :personTeacherOf    bdr:P3119 , bdr:P3267 , bdr:P3426 , bdr:P3755 .
+}

@@ -1,0 +1,69 @@
+@base          <bdg:P1KG3369> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3369 {
+    bda:LG1F72ED4782A50773
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-20T13:37:53.42Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGD6B170CC40327905
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-02-23T16:53:18.351Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3369  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3369 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a0/P1KG3369.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3369 ;
+        adm:logEntry        bda:LG1F72ED4782A50773 , bda:LGD6B170CC40327905 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58C0F8B0264D5596
+        a                   :PersonDeath ;
+        :onYear             "1993"^^xsd:gYear .
+    
+    bdr:EVE042900EBCFFB0DF
+        a                   :PersonBirth ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:NM77E3C0A0BBDE44B6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs blo gsal bzang po/"@bo-x-ewts .
+    
+    bdr:NT78CFD8CDCC117363
+        a                   :Note ;
+        :locationStatement  "pp. 2-" ;
+        :noteSource         bdr:MW1KG4308 ;
+        :noteText           "brief biography in"@en .
+    
+    bdr:NTCC9BC4252EB76F0C
+        a                   :Note ;
+        :noteSource         bdr:MW1KG3365 ;
+        :noteText           "name exist on french flap of"@en .
+    
+    bdr:P1KG3369  a         :Person ;
+        skos:prefLabel      "'jam dbyangs blo gsal bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT78CFD8CDCC117363 , bdr:NTCC9BC4252EB76F0C ;
+        :personEvent        bdr:EV58C0F8B0264D5596 , bdr:EVE042900EBCFFB0DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM77E3C0A0BBDE44B6 ;
+        :personTeacherOf    bdr:P1KG3366 .
+}

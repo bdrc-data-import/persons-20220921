@@ -1,0 +1,71 @@
+@base          <bdg:P919> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P919 {
+    bda:P919  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P919 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "f9/P919.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P919 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24B60D12481D894A
+        a                   :PersonDeath ;
+        :onYear             "1542"^^xsd:gYear .
+    
+    bdr:EV67C583F517EDBF12
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G854 ;
+        :onYear             "1478"^^xsd:gYear .
+    
+    bdr:EVECD4D8AB770ED5A4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G205 .
+    
+    bdr:NM8BE75F1CEF1800AD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB1BFBE8134553BFF
+        a                   :PersonTitle ;
+        rdfs:label          "kun spangs shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD39DC93813FBBF49
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a wa dhU ti pa btsun mo can/"@bo-x-ewts .
+    
+    bdr:NMFBFB3284CF26EAD1
+        a                   :PersonTitle ;
+        rdfs:label          "rje btsun btsun mo can/"@bo-x-ewts .
+    
+    bdr:NT61008940C5D00F29
+        a                   :Note ;
+        :noteText           "Enjoyed the patronage of the Sde-pa Bstan-'dzin-nor-bu and his brothers and given title of ti-shrii"@en .
+    
+    bdr:NT8F67F0B4CD8CAA4C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P919  a             :Person ;
+        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT61008940C5D00F29 , bdr:NT8F67F0B4CD8CAA4C ;
+        :personEvent        bdr:EV24B60D12481D894A , bdr:EV67C583F517EDBF12 , bdr:EVECD4D8AB770ED5A4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8BE75F1CEF1800AD , bdr:NMB1BFBE8134553BFF , bdr:NMD39DC93813FBBF49 , bdr:NMFBFB3284CF26EAD1 ;
+        :personStudentOf    bdr:P870 ;
+        :personTeacherOf    bdr:P825 .
+}

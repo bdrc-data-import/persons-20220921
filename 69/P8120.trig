@@ -1,0 +1,47 @@
+@base          <bdg:P8120> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8120 {
+    bda:P8120  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8120 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "69/P8120.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8120 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31E5E076285A8644
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2133 ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:NMEE66BFDEFBBEB62E
+        a                   :PersonPersonalName ;
+        rdfs:label          "bsam gtan/"@bo-x-ewts .
+    
+    bdr:NT8F95EEFB16616499
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW25251 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P8120  a            :Person ;
+        skos:prefLabel      "bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8F95EEFB16616499 ;
+        :personEvent        bdr:EV31E5E076285A8644 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMEE66BFDEFBBEB62E .
+}

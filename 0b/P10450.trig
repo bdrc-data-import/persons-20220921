@@ -1,0 +1,58 @@
+@base          <bdg:P10450> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10450 {
+    bda:P10450  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10450 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "0b/P10450.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10450 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBAEB8231BCD89BCE
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM042F50CFCA3643AE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sku rab lha btsun don dam 'phags/"@bo-x-ewts .
+    
+    bdr:NM2A3EF6743FA5AC2A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don dam 'phags/"@bo-x-ewts .
+    
+    bdr:NT577601B6A748C32B
+        a                   :Note ;
+        :locationStatement  "f. 28r" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "adds name sku rab lha btsun don dam 'phags"@en .
+    
+    bdr:NT78AAB493D0633ABC
+        a                   :Note ;
+        :locationStatement  "f. 159v" ;
+        :noteSource         bdr:MW30161 ;
+        :noteText           "karma kaM tshang practitioner\ngives name as sku rab lha btsun don dam"@en .
+    
+    bdr:P10450  a           :Person ;
+        skos:prefLabel      "don dam 'phags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT577601B6A748C32B , bdr:NT78AAB493D0633ABC ;
+        :personEvent        bdr:EVBAEB8231BCD89BCE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM042F50CFCA3643AE , bdr:NM2A3EF6743FA5AC2A ;
+        :personStudentOf    bdr:P385 .
+}

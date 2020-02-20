@@ -1,0 +1,78 @@
+@base          <bdg:P6824> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6824 {
+    bda:LG15FFF7123178B67D
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-05-26T11:07:46.013Z"^^xsd:dateTime ;
+        adm:logMessage      "moved info from P1365 (dup.)"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG68EBD641B525E139
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-15T16:35:09.315Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P6824  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6824 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "37/P6824.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6824 ;
+        adm:logEntry        bda:LG15FFF7123178B67D , bda:LG68EBD641B525E139 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B27894689695667
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV755AC80EB229C768
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G261 .
+    
+    bdr:EVB4E91B46E8A9E09D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2796 .
+    
+    bdr:NM3ACBE9ECE41A718F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5BCA7380C8343BB8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "u rgyan bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF6367DE52A317E44
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla sman u rgyan bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT4F3411C2566284D1
+        a                   :Note ;
+        :locationStatement  "p. 410" ;
+        :noteSource         bdr:MW17722 ;
+        :noteText           "biography\nserved as the court physician to both the de mo regent and the 13th dalai lama\nresponsible for carving the lcags po ri edition of a number of medical texts\nexiled to bhutan"@en .
+    
+    bdr:P6824  a            :Person ;
+        skos:prefLabel      "o rgyan bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F3411C2566284D1 ;
+        :personEvent        bdr:EV0B27894689695667 , bdr:EV755AC80EB229C768 , bdr:EVB4E91B46E8A9E09D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3ACBE9ECE41A718F , bdr:NM5BCA7380C8343BB8 , bdr:NMF6367DE52A317E44 ;
+        :personStudentOf    bdr:P1017 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Orgyen-Tendzin-Gyatso/9442"^^xsd:anyURI .
+}

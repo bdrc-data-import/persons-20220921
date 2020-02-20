@@ -1,0 +1,74 @@
+@base          <bdg:P2KT5> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KT5 {
+    bda:LG869D019AB9CB944D
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-08T12:06:15.093Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGBF4287E2180D744C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-05-05T13:36:16.637Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en .
+    
+    bda:P2KT5  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KT5 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "57/P2KT5.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KT5 ;
+        adm:logEntry        bda:LG869D019AB9CB944D , bda:LGBF4287E2180D744C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusProvisional .
+    
+    bdr:EV323816520F7C3F3B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EV41A774D07C36AE90
+        a                   :PersonAssumesSeat ;
+        :eventWhere         bdr:G435 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVAFE473D6C4D9F7B2
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM21EBC08EC720E42E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8E9D59F094DE0C43
+        a                   :PersonOtherName ;
+        rdfs:label          "Lobzang Tenzin Trinle Gyatso"@en .
+    
+    bdr:NT4BB34F269C176120
+        a                   :Note ;
+        :locationStatement  "p. 62" ;
+        :noteSource         bdr:MW19834 .
+    
+    bdr:P2KT5  a            :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin 'phrin las rgya mtsho/"@bo-x-ewts ;
+        :hasBrother         bdr:P3941 ;
+        :isRoot             true ;
+        :note               bdr:NT4BB34F269C176120 ;
+        :personEvent        bdr:EV323816520F7C3F3B , bdr:EV41A774D07C36AE90 , bdr:EVAFE473D6C4D9F7B2 ;
+        :personName         bdr:NM21EBC08EC720E42E , bdr:NM8E9D59F094DE0C43 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lobzang-Tendzin-Trinle-Gyatso-Dondrub/13550"^^xsd:anyURI .
+}

@@ -1,0 +1,53 @@
+@base          <bdg:P7663> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7663 {
+    bda:LG04347DAB804D024D
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-20T11:54:34.696Z"^^xsd:dateTime ;
+        adm:logMessage      "linked kinship"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P7663  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7663 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "7d/P7663.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7663 ;
+        adm:logEntry        bda:LG04347DAB804D024D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA58F34154C7BEAE0
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NME793D94AEA94E100
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams 'od zer/"@bo-x-ewts .
+    
+    bdr:NT7907ADAD50E3AEB6
+        a                   :Note ;
+        :noteText           "father of gter chen rdo rje gling pa."@en .
+    
+    bdr:P7663  a            :Person ;
+        skos:prefLabel      "bsod nams 'od zer/"@bo-x-ewts ;
+        :hasFather          bdr:P6164 ;
+        :isRoot             true ;
+        :note               bdr:NT7907ADAD50E3AEB6 ;
+        :personEvent        bdr:EVA58F34154C7BEAE0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NME793D94AEA94E100 .
+}

@@ -1,0 +1,77 @@
+@base          <bdg:P5990> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5990 {
+    bda:LG5E232F5D6F68393D
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-04T00:30:32.499Z"^^xsd:dateTime ;
+        adm:logMessage      "note added; jann"@en ;
+        adm:logWho          bdr:U00011 .
+    
+    bda:LG73B811423FFF6A79
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-04-10T15:45:18.669Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher added; jann"@en ;
+        adm:logWho          bdr:U00011 .
+    
+    bda:LGD49D42A2DEA432A8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T15:52:17Z"^^xsd:dateTime ;
+        adm:logMessage      "mtsan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5990  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5990 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "03/P5990.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5990 ;
+        adm:logEntry        bda:LG5E232F5D6F68393D , bda:LG73B811423FFF6A79 , bda:LGD49D42A2DEA432A8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E04BFF667E95A55
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EV1652447AEF776994
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM236DEF31DF4E4B86
+        a                   :PersonVariantOrthography ;
+        rdfs:label          "nor bu rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF8EE6BB41E606810
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMFD9CA9E7C0254CA2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde cha rgyal sras nor bu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTE4F8910F1F495264
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Bdud-'dul-rdo-rje and Klong-gsal-snying-po revelations"@en .
+    
+    bdr:P5990  a            :Person ;
+        skos:prefLabel      "nor bu rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE4F8910F1F495264 ;
+        :personEvent        bdr:EV0E04BFF667E95A55 , bdr:EV1652447AEF776994 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM236DEF31DF4E4B86 , bdr:NMF8EE6BB41E606810 , bdr:NMFD9CA9E7C0254CA2 ;
+        :personStudentOf    bdr:P2943 , bdr:P5972 .
+}

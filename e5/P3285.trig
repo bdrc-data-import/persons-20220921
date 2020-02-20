@@ -1,0 +1,92 @@
+@base          <bdg:P3285> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3285 {
+    bda:LG200BA14A2DDAFA73
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T15:13:02.611Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG352942CF86AF0ADD
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-23T11:52:06.796Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG642AC0EDB0822941
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-18T12:06:22.28Z"^^xsd:dateTime ;
+        adm:logMessage      "added event & seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC7B940F9C0AD71AF
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-03-05T16:52:54.117Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3285  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3285 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e5/P3285.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3285 ;
+        adm:logEntry        bda:LG200BA14A2DDAFA73 , bda:LG352942CF86AF0ADD , bda:LG642AC0EDB0822941 , bda:LGC7B940F9C0AD71AF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CAA7B9004907B2E
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3CN71 ;
+        :notAfter           "0993"^^xsd:gYear ;
+        :notBefore          "0992"^^xsd:gYear .
+    
+    bdr:EVD2E5893608C30992
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2GS1264 .
+    
+    bdr:EVFCDFF03B468DDF7F
+        a                   :PersonDeath ;
+        :notAfter           "1072"^^xsd:gYear .
+    
+    bdr:NM1809D9E296E7FB63
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brog mi lo tsA ba shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NM4438A03F6508C665
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NT8374ACE9094E6C79
+        a                   :Note ;
+        :locationStatement  "p. 420" ;
+        :noteSource         bdr:MW27524 ;
+        :noteText           "mang mkhar mda' gtsang 'gram 'dir bla chen 'brog mi 'khrungs sa yin zhes gsal/"@bo-x-ewts .
+    
+    bdr:NTF04DC44A18D92406
+        a                   :Note ;
+        :noteText           "important translator involved in the transmission of the yogini tantras and the lam 'bras\n\ndates for the birth and death of 'brog mi vary"@en .
+    
+    bdr:P3285  a            :Person ;
+        skos:prefLabel      "shAkya ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8374ACE9094E6C79 , bdr:NTF04DC44A18D92406 ;
+        :personEvent        bdr:EV5CAA7B9004907B2E , bdr:EVD2E5893608C30992 , bdr:EVFCDFF03B468DDF7F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1809D9E296E7FB63 , bdr:NM4438A03F6508C665 ;
+        :personStudentOf    bdr:P0RK1037 , bdr:P0RK133 , bdr:P0RK155 , bdr:P0RK156 , bdr:P0RK164 , bdr:P0RK1685 , bdr:P3286 , bdr:P3302 , bdr:P8224 ;
+        :personTeacherOf    bdr:P0RK1158 , bdr:P0RK158 , bdr:P0RK159 , bdr:P3294 , bdr:P3730 , bdr:P406 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drokmi-sakya-Yeshe/5615"^^xsd:anyURI .
+}

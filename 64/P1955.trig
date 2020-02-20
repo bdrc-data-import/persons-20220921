@@ -1,0 +1,71 @@
+@base          <bdg:P1955> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1955 {
+    bda:LG467D2DE9DC0BE4F8
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-21T17:06:13.82Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG6CDEF3F8BBB5B092
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:16:45.847Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P1955  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1955 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "64/P1955.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1955 ;
+        adm:logEntry        bda:LG467D2DE9DC0BE4F8 , bda:LG6CDEF3F8BBB5B092 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91D3EF0C85129256
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G322 .
+    
+    bdr:EV9F7203AD70A5391B
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM5EF929C07E64DB48
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bras mo ba/"@bo-x-ewts .
+    
+    bdr:NMB6BA0804DDBD2813
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bras mo ba sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NT0B341C7030FF9DA5
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- mar pa bka' brgyud\n-- dwags po bka' brgyud\n-- phag mo gru pa\n-- 'brug pa bka' brgyud\n-- rwa lung transmissions"@en .
+    
+    bdr:NT86F20B2B7672C1CC
+        a                   :Note ;
+        :noteText           "bar 'brug bu chen gyi brgyud pa/"@bo-x-ewts .
+    
+    bdr:P1955  a            :Person ;
+        skos:prefLabel      "'bras mo ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0B341C7030FF9DA5 , bdr:NT86F20B2B7672C1CC ;
+        :personEvent        bdr:EV91D3EF0C85129256 , bdr:EV9F7203AD70A5391B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5EF929C07E64DB48 , bdr:NMB6BA0804DDBD2813 ;
+        :personStudentOf    bdr:P909 .
+}

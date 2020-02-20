@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12181> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12181 {
+    bda:LG5D86EBE68B1AC98E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T12:49:50.251Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12181  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12181 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9d/P8LS12181.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12181 ;
+        adm:logEntry        bda:LG5D86EBE68B1AC98E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F844D4DA58C8B4A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EV54226F9BB9B589C2
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1587"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA65B19A5AD6D8072
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :onYear             "1569"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM39DA2B95AAAFC290
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "jo gdan bsod name dbang po/"@bo-x-ewts .
+    
+    bdr:NMB7BFDBD537482730
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod name dbang po/"@bo-x-ewts .
+    
+    bdr:NMD7C5A4EC9C3687C5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 15"@bo-x-ewts .
+    
+    bdr:NT650363C50E00BA3F
+        a                   :Note ;
+        :locationStatement  "p. 385-386" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P8LS12181  a        :Person ;
+        skos:prefLabel      "bsod name dbang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT650363C50E00BA3F ;
+        :personEvent        bdr:EV0F844D4DA58C8B4A , bdr:EV54226F9BB9B589C2 , bdr:EVA65B19A5AD6D8072 ;
+        :personName         bdr:NM39DA2B95AAAFC290 , bdr:NMB7BFDBD537482730 , bdr:NMD7C5A4EC9C3687C5 .
+}

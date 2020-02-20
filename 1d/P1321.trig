@@ -1,0 +1,96 @@
+@base          <bdg:P1321> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1321 {
+    bda:LG13DE98C72C3F697F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T12:16:35.649Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGABD404AA90B37DE7
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-29T10:02:09.312Z"^^xsd:dateTime ;
+        adm:logMessage      "corectted info"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1321  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1321 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "1d/P1321.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1321 ;
+        adm:logEntry        bda:LG13DE98C72C3F697F , bda:LGABD404AA90B37DE7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20E74BE7D802AE0D
+        a                   :PersonDeath ;
+        :onYear             "1131"^^xsd:gYear .
+    
+    bdr:EV6541C3B365F66FC3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G927 ;
+        :onYear             "1057"^^xsd:gYear .
+    
+    bdr:EVAD8605E5D85689E7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2733 .
+    
+    bdr:NM06B97D147942D0CB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab 'od/"@bo-x-ewts .
+    
+    bdr:NM978270CCDCAE2CD8
+        a                   :PersonOtherName ;
+        rdfs:label          "zhang bu gcig pa/"@bo-x-ewts .
+    
+    bdr:NM98FBBC7E66B58AEA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ka ma pa shes rab 'od/"@bo-x-ewts .
+    
+    bdr:NMBFE2A015A2883DE3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ka ma ba shes rab 'od/"@bo-x-ewts .
+    
+    bdr:NME47257C87B611370
+        a                   :PersonTitle ;
+        rdfs:label          "zhang ka ma pa shes rab 'od/"@bo-x-ewts .
+    
+    bdr:NT36191032E2ADF5C5
+        a                   :Note ;
+        :noteText           "founder of kam dgon pa\none of the four major disciples of dgon pa ba"@en .
+    
+    bdr:NT38B43F5EDF51A0D8
+        a                   :Note ;
+        :locationStatement  "p.  2" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NTA17788A7D585CE29
+        a                   :Note ;
+        :locationStatement  "p. 220" ;
+        :noteSource         bdr:MW26009 ;
+        :noteText           "འདི་ན་ཀ་མ་བའི་རྣམ་ཐར་མདོར་བསྡུས་གསལ།"@bo .
+    
+    bdr:P1321  a            :Person ;
+        skos:prefLabel      "shes rab 'od/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT36191032E2ADF5C5 , bdr:NT38B43F5EDF51A0D8 , bdr:NTA17788A7D585CE29 ;
+        :personEvent        bdr:EV20E74BE7D802AE0D , bdr:EV6541C3B365F66FC3 , bdr:EVAD8605E5D85689E7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06B97D147942D0CB , bdr:NM978270CCDCAE2CD8 , bdr:NM98FBBC7E66B58AEA , bdr:NMBFE2A015A2883DE3 , bdr:NME47257C87B611370 ;
+        :personStudentOf    bdr:P1322 ;
+        :personTeacherOf    bdr:P4867 .
+}

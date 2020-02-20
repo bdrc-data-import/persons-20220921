@@ -1,0 +1,59 @@
+@base          <bdg:P10432> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10432 {
+    bda:LG9CA3A054A7D33E9C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-25T17:04:48.901Z"^^xsd:dateTime ;
+        adm:logMessage      "cleanup new names & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA631916E8E395748
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-21T15:14:28.091Z"^^xsd:dateTime ;
+        adm:logMessage      "added names & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P10432  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10432 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "3a/P10432.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10432 ;
+        adm:logEntry        bda:LG9CA3A054A7D33E9C , bda:LGA631916E8E395748 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV40EEF490795ED7FB
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM638B684E80918492
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phrin las legs grub/"@bo-x-ewts .
+    
+    bdr:NT4A9C702D908805E3
+        a                   :Note ;
+        :noteText           "teacher of the karma kaM tshang tradition"@en .
+    
+    bdr:P10432  a           :Person ;
+        skos:prefLabel      "phrin las legs grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4A9C702D908805E3 ;
+        :personEvent        bdr:EV40EEF490795ED7FB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM638B684E80918492 ;
+        :personStudentOf    bdr:P385 .
+}

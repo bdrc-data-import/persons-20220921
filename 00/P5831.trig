@@ -1,0 +1,61 @@
+@base          <bdg:P5831> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5831 {
+    bda:LGAD410BE4DB301D82
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T11:00:57.181Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5831  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5831 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "00/P5831.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5831 ;
+        adm:logEntry        bda:LGAD410BE4DB301D82 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B5609A0C7DE5F9D
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM85CF2328C1075857
+        a                   :PersonPersonalName ;
+        rdfs:label          "gar zhwa pa bsod nams rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMF2AB6B8AE36D9B6D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rab rgyas/"@bo-x-ewts .
+    
+    bdr:NT785839DFF7E254DF
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud"@en .
+    
+    bdr:NT7F8B38B5BEA1B54B
+        a                   :Note ;
+        :noteText           "Sent to Nepal and India by the 7th Rgyal-dbang 'Brug-chen."@en .
+    
+    bdr:P5831  a            :Person ;
+        skos:prefLabel      "bsod nams rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT785839DFF7E254DF , bdr:NT7F8B38B5BEA1B54B ;
+        :personEvent        bdr:EV3B5609A0C7DE5F9D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM85CF2328C1075857 , bdr:NMF2AB6B8AE36D9B6D ;
+        :personStudentOf    bdr:P842 .
+}

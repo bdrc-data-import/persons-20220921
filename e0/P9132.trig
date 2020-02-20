@@ -1,0 +1,56 @@
+@base          <bdg:P9132> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9132 {
+    bda:P9132  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9132 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e0/P9132.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9132 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4205B0B1AA0E4E8
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM619C1107CF1E0F21
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NM836EDED3E89F52B4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung rams pa grags pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NM8D4AF78CD66867EF
+        a                   :PersonTitle ;
+        rdfs:label          "dmigs sman grong pa grags pa rab rgyas/"@bo-x-ewts .
+    
+    bdr:NTA89C492B98EBAF28
+        a                   :Note ;
+        :locationStatement  "p. 705" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a teacher of sa skya kun dga' snying po"@en .
+    
+    bdr:P9132  a            :Person ;
+        skos:prefLabel      "grags pa rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA89C492B98EBAF28 ;
+        :personEvent        bdr:EVA4205B0B1AA0E4E8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM619C1107CF1E0F21 , bdr:NM836EDED3E89F52B4 , bdr:NM8D4AF78CD66867EF ;
+        :personTeacherOf    bdr:P976 .
+}

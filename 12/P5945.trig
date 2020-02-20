@@ -1,0 +1,55 @@
+@base          <bdg:P5945> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5945 {
+    bda:P5945  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5945 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "12/P5945.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5945 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV677C83872B60D9E5
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVA0A2ECB08F74F0C5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G506 .
+    
+    bdr:NM9312FECF3578020D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NME58C54F192C1BBB3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rta nag mkhan po chos rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT5E277DFB04650883
+        a                   :Note ;
+        :noteSource         bdr:MW19608 ;
+        :noteText           "important sa skya master connected with the monastery of rta nag thub bstan rnam rgyal\nthis source gives a listing of the collected works written by this author:\n\nbstan pa dang bstan 'dzin gyi lo rgyus yongs 'dus me tog gsar pa'i do shal\nsdom gsum kha skong gi TI ka\npod chen drug gi spyi don\ngtor ma'i rnam bshad\nngan song sbyong rgyud kyi rnam bshad\nrigs la che 'bring chung gsum gyi yig cha\nmany other works\n\na few were carved on blocks and have turned up"@en .
+    
+    bdr:P5945  a            :Person ;
+        skos:prefLabel      "chos rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E277DFB04650883 ;
+        :personEvent        bdr:EV677C83872B60D9E5 , bdr:EVA0A2ECB08F74F0C5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9312FECF3578020D , bdr:NME58C54F192C1BBB3 ;
+        :personStudentOf    bdr:P779 .
+}

@@ -1,0 +1,69 @@
+@base          <bdg:P9834> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9834 {
+    bda:LGB5030C1DC8A6C4EE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-04T10:28:22.824Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9834  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9834 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "04/P9834.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9834 ;
+        adm:logEntry        bda:LGB5030C1DC8A6C4EE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV680FCB8DA2C0C9B1
+        a                   :PersonBirth ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:EV9BE5162D7044F6B8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:NM2B1212E22FA3AD8F
+        a                   :PersonTitle ;
+        rdfs:label          "rdza mu ra sprul sku 'chi med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM53A47EEDE6FE561B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mu ra sprul sku 05"@bo-x-ewts .
+    
+    bdr:NM845E28E08B5083EA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mu ra sprul sku 05 chi med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM847EFA1984F6C9A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med rdo rje/"@bo-x-ewts .
+    
+    bdr:NMDE5397A07D4397A2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Mura Tulku 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:P9834  a            :Person ;
+        skos:prefLabel      "'chi med rdo rje/"@bo-x-ewts ;
+        :hasMaternalUncle   bdr:P6599 ;
+        :hasUncle           bdr:P6599 ;
+        :incarnationGeneral  bdr:P6965 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV680FCB8DA2C0C9B1 , bdr:EV9BE5162D7044F6B8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2B1212E22FA3AD8F , bdr:NM53A47EEDE6FE561B , bdr:NM845E28E08B5083EA , bdr:NM847EFA1984F6C9A4 , bdr:NMDE5397A07D4397A2 .
+}

@@ -1,0 +1,68 @@
+@base          <bdg:P6715> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6715 {
+    bda:LG8B9A71F66FEE1971
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-08T12:12:45.915Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6715  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6715 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "88/P6715.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6715 ;
+        adm:logEntry        bda:LG8B9A71F66FEE1971 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03657902D118EE61
+        a                   :PersonLeavesOffice ;
+        :onYear             "1952"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV3A4543444DFD10E0
+        a                   :PersonBirth ;
+        :onYear             "1914"^^xsd:gYear .
+    
+    bdr:EV9C1C6AC27A8D15B5
+        a                   :PersonAssumesOffice ;
+        :onYear             "1946"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM24C260A14BA3D28F
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshe dbang rdo rje, lha klu/"@bo-x-ewts .
+    
+    bdr:NME6B4C7679E6FC342
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha klu tshe dbang rdo rje/"@bo-x-ewts .
+    
+    bdr:NT5DB09541CCE6DDE9
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1946-1952"@en .
+    
+    bdr:P6715  a            :Person ;
+        skos:prefLabel      "lha klu tshe dbang rdo rje/"@bo-x-ewts ;
+        :hasChild           bdr:P8LS4263 ;
+        :isRoot             true ;
+        :note               bdr:NT5DB09541CCE6DDE9 ;
+        :personEvent        bdr:EV03657902D118EE61 , bdr:EV3A4543444DFD10E0 , bdr:EV9C1C6AC27A8D15B5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM24C260A14BA3D28F , bdr:NME6B4C7679E6FC342 .
+}

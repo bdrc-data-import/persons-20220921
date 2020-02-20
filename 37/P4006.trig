@@ -1,0 +1,96 @@
+@base          <bdg:P4006> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4006 {
+    bda:LG483A898747AFAFF7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-15T11:42:50.06Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7FF11717BBE89EA4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:00:45.565Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4006  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4006 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "37/P4006.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4006 ;
+        adm:logEntry        bda:LG483A898747AFAFF7 , bda:LG7FF11717BBE89EA4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV29552E92DC782350
+        a                   :PersonBirth ;
+        :onYear             "1401"^^xsd:gYear .
+    
+    bdr:EVB626899F651AEE54
+        a                   :PersonDeath ;
+        :onYear             "1470"^^xsd:gYear .
+    
+    bdr:EVC825E856D7D3DFA7
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1470"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF59647EC4FA07075
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1468"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM177BD36C22F6AA04
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bzod pa dpal grub/"@bo-x-ewts .
+    
+    bdr:NM92CFB8B9654C8829
+        a                   :PersonTitle ;
+        rdfs:label          "snar thang gdan rabs 17 bzod pa dpal grub/"@bo-x-ewts .
+    
+    bdr:NMC267849A9D03C8A5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 17"@bo-x-ewts .
+    
+    bdr:NMD6505F07A6859070
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen bzod pa dpal grub/"@bo-x-ewts .
+    
+    bdr:NT65E02E9A558A7C02
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:NT7D6270814BA0DF44
+        a                   :Note ;
+        :locationStatement  "p. 41-42" ;
+        :noteSource         bdr:MW1CZ2413 ;
+        :noteText           "belong to gro clan"@en .
+    
+    bdr:NT8803C10D5C858D2F
+        a                   :Note ;
+        :noteText           "Student (not recorded): Kun-dga'-rgyal-mtshan"@en .
+    
+    bdr:P4006  a            :Person ;
+        skos:prefLabel      "bzod pa dpal grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT65E02E9A558A7C02 , bdr:NT7D6270814BA0DF44 , bdr:NT8803C10D5C858D2F ;
+        :personEvent        bdr:EV29552E92DC782350 , bdr:EVB626899F651AEE54 , bdr:EVC825E856D7D3DFA7 , bdr:EVF59647EC4FA07075 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM177BD36C22F6AA04 , bdr:NM92CFB8B9654C8829 , bdr:NMC267849A9D03C8A5 , bdr:NMD6505F07A6859070 ;
+        :personStudentOf    bdr:P2093 , bdr:P55 , bdr:P56 , bdr:P80 .
+}

@@ -1,0 +1,81 @@
+@base          <bdg:P2255> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2255 {
+    bda:LG3DAE29E78C56BF83
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-03T13:56:22.501Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG7EA5B36DAA1BA889
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-31T16:57:48.846Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2255  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2255 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "cf/P2255.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2255 ;
+        adm:logEntry        bda:LG3DAE29E78C56BF83 , bda:LG7EA5B36DAA1BA889 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7F1D19E2F42E045A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G345 .
+    
+    bdr:EVDC0D2921FC52CEF2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1344 ;
+        :onYear             "1278"^^xsd:gYear .
+    
+    bdr:EVED67E08C9EFC9DDA
+        a                   :PersonDeath ;
+        :onYear             "1353"^^xsd:gYear .
+    
+    bdr:NM06476DF927AA2D17
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF8984582A7BDDE95
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sman chu kha pa blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT93E3F721B958B34B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:NT9C8F7B7EBFB24911
+        a                   :Note ;
+        :locationStatement  "p. 70" ;
+        :noteSource         bdr:MW19816 .
+    
+    bdr:NTAEDFF17905F31CA1
+        a                   :Note ;
+        :noteText           "Regarded as the emanation of 'Jam-dpal Sprul-sku.\nFamed for his studies over 33 years of the Tshad ma rnam nges.\nMet Dol-po-pa at Sa-skya.\n1325. Received teachings from Chos-grags-dpal and Blo-gros-dpal.\nAlso studied with Chos-rje Phyogs-las-rnam-rgyal.\nGiven Bkra-shis Sman-chu Ri-khrod by Dbon Lhun-dpal and builds up.\nReceived the Byams chos sde lnga from Sa-bzang Ma-ti PaN-chen at Sa-bzang."@en .
+    
+    bdr:P2255  a            :Person ;
+        skos:prefLabel      "blo gros rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT93E3F721B958B34B , bdr:NT9C8F7B7EBFB24911 , bdr:NTAEDFF17905F31CA1 ;
+        :personEvent        bdr:EV7F1D19E2F42E045A , bdr:EVDC0D2921FC52CEF2 , bdr:EVED67E08C9EFC9DDA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06476DF927AA2D17 , bdr:NMF8984582A7BDDE95 ;
+        :personStudentOf    bdr:P139 , bdr:P151 , bdr:P152 , bdr:P153 , bdr:P2251 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Menchukawa-Lodro-Gyeltsen/3939"^^xsd:anyURI .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P2CN11065> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2CN11065 {
+    bda:LG248679AA8F3D2612
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T16:25:16.26Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA1E6680C6F62BC97
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-30T16:17:23.227Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2CN11065  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2CN11065 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3f/P2CN11065.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2CN11065 ;
+        adm:logEntry        bda:LG248679AA8F3D2612 , bda:LGA1E6680C6F62BC97 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07BA0EC68254D124
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2CN11061 .
+    
+    bdr:EV7AE2A3FAF0D5B121
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM96CF82391ED8B8FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khra phu 'dul ba 'dzin pa/"@bo-x-ewts .
+    
+    bdr:NT73627F1234580040
+        a                   :Note ;
+        :locationStatement  "p. 474" ;
+        :noteSource         bdr:MW26009 .
+    
+    bdr:P2CN11065  a        :Person ;
+        skos:prefLabel      "khra phu 'dul ba 'dzin pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT73627F1234580040 ;
+        :personEvent        bdr:EV07BA0EC68254D124 , bdr:EV7AE2A3FAF0D5B121 ;
+        :personName         bdr:NM96CF82391ED8B8FD ;
+        :personStudentOf    bdr:P2CN11062 .
+}

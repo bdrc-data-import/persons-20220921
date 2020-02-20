@@ -1,0 +1,82 @@
+@base          <bdg:P8916> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8916 {
+    bda:LGAA34E5CC521102B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-18T10:25:14.057Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB56CAB2B9C18F726
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T15:12:13.75Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGFDD44E59D3F22C1E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8916  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8916 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9a/P8916.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8916 ;
+        adm:logEntry        bda:LGAA34E5CC521102B9 , bda:LGB56CAB2B9C18F726 , bda:LGFDD44E59D3F22C1E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FCFA70042BCF00C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G529 .
+    
+    bdr:EV756827CC4DBD55DE
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM6B440BA221269A4C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dzam thang tshes bcu 08"@bo-x-ewts .
+    
+    bdr:NM8F9D926861FB2A82
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rin chen grags pa/"@bo-x-ewts .
+    
+    bdr:NMBF965FD7436ADA7F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzamtang Tsechu 08"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMCACA81455AF07A36
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam thang tshes bcu 08 kun dga' rin chen grags pa/"@bo-x-ewts .
+    
+    bdr:NT44AE3CDE9A545321
+        a                   :Note ;
+        :locationStatement  "pp. 165-166" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography\nbirthplace: 'dzi gzhung\nartistic creations:\ntshes bcu'i pho brang gsar bzhengs nang byams chen gyis gtsos nye sras brgyad kyi lug ma zhig gsos dang gser khang rten gsum bcas gsar bskrun dang mchod rten bkra shis sgo mang phyi nang yongs rdzogs zhig gsos mdzad\n\nwritings:\nrgyal bstan spyi'i chos 'byung \njo nang chos 'byung \nrang nyid kyi rnam thar"@en .
+    
+    bdr:P8916  a            :Person ;
+        skos:prefLabel      "kun dga' rin chen grags pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8915 ;
+        :isRoot             true ;
+        :note               bdr:NT44AE3CDE9A545321 ;
+        :personEvent        bdr:EV0FCFA70042BCF00C , bdr:EV756827CC4DBD55DE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6B440BA221269A4C , bdr:NM8F9D926861FB2A82 , bdr:NMBF965FD7436ADA7F , bdr:NMCACA81455AF07A36 .
+}

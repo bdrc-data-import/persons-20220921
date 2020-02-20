@@ -1,0 +1,69 @@
+@base          <bdg:P7629> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7629 {
+    bda:LG19FD888AA0FE0FCF
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-10-30T13:01:06.654Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC1055957C0FE9C04
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-01T15:39:21.536Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P7629  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7629 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4b/P7629.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7629 ;
+        adm:logEntry        bda:LG19FD888AA0FE0FCF , bda:LGC1055957C0FE9C04 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDEED58D0738134DD
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM186774857E3B600F
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma chos rgyal/"@bo-x-ewts .
+    
+    bdr:NM3E4101D4DD61BDE4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bdud 'joms rol pa rtsal/"@bo-x-ewts .
+    
+    bdr:NM7479D303EBABDD01
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kun bzang chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NT42FCE5C5A6E82BF4
+        a                   :Note ;
+        :locationStatement  "636" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n-Lists teachers: sge'u steng rin po che blo bzang 'jam dbyangs who may be P229; yongs 'dzin dge bshes;"@en .
+    
+    bdr:P7629  a            :Person ;
+        skos:prefLabel      "bdud 'joms rol pa rtsal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT42FCE5C5A6E82BF4 ;
+        :personEvent        bdr:EVDEED58D0738134DD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM186774857E3B600F , bdr:NM3E4101D4DD61BDE4 , bdr:NM7479D303EBABDD01 ;
+        :personStudentOf    bdr:P6744 ;
+        :personTeacherOf    bdr:P00KG03800 , bdr:P706 .
+}

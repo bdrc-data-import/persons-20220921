@@ -1,0 +1,94 @@
+@base          <bdg:P523> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P523 {
+    bda:LG3FABDF5F5C7D2E7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-25T12:57:35.805Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG9485B19227F00B70
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T12:22:54.358Z"^^xsd:dateTime ;
+        adm:logMessage      "added pffice title and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P523  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P523 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "80/P523.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P523 ;
+        adm:logEntry        bda:LG3FABDF5F5C7D2E7F , bda:LG9485B19227F00B70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FB741116A51F150
+        a                   :PersonDeath ;
+        :onYear             "1730"^^xsd:gYear .
+    
+    bdr:EV16066A81B244E612
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV43F8A96DEC3376A9
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4705 ;
+        :onYear             "1670"^^xsd:gYear .
+    
+    bdr:EV4A3142C6F549BF4A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr: ;
+        :onYear             "1724"^^xsd:gYear ;
+        :personEventRole    bdr: .
+    
+    bdr:EVB9C21C52A09399E0
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1730"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM59D916526EC37228
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang lhun grub/"@bo-x-ewts .
+    
+    bdr:NM5C81C70727ABF61A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 06"@bo-x-ewts .
+    
+    bdr:NM80E28660667F0A52
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 06 ngag dbang lhun grub/"@bo-x-ewts .
+    
+    bdr:NTB0E11224E02E0E5C
+        a                   :Note ;
+        :locationStatement  "ff. 143r-143v" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "bhutanese teacher born at cang sgang kha in thim phu\nserved as rdo rje slob dpon or the state grwa tshang and ten as rta lang bla ma\nascended to the abbatial throne in 1724 and served until his death in 1730"@en .
+    
+    bdr:NTD85E24EA4B6360D5
+        a                   :Note ;
+        :noteText           "according to imaeda, p. 216 birth 1673"@en .
+    
+    bdr:P523  a             :Person ;
+        skos:prefLabel      "ngag dbang lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB0E11224E02E0E5C , bdr:NTD85E24EA4B6360D5 ;
+        :personEvent        bdr:EV0FB741116A51F150 , bdr:EV16066A81B244E612 , bdr:EV43F8A96DEC3376A9 , bdr:EV4A3142C6F549BF4A , bdr:EVB9C21C52A09399E0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM59D916526EC37228 , bdr:NM5C81C70727ABF61A , bdr:NM80E28660667F0A52 ;
+        :personStudentOf    bdr:P510 , bdr:P512 , bdr:P524 , bdr:P525 , bdr:P526 ;
+        :personTeacherOf    bdr:P541 .
+}

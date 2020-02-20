@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12187> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12187 {
+    bda:LGA072418A81DB11DC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-27T09:07:11.384Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12187  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12187 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a6/P8LS12187.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12187 ;
+        adm:logEntry        bda:LGA072418A81DB11DC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV382B7A69990E7FD1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G275 .
+    
+    bdr:EVE34F2177EF2F4030
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G275 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM0EC1C99101248F79
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "zhwa lu mkhan chen 30"@bo-x-ewts .
+    
+    bdr:NM45A4747167D334CD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhwa lu mkhan chen skal bzang tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM746C08258F188B1F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang tshe dbang /"@bo-x-ewts .
+    
+    bdr:NT1F30CC9CD09D9701
+        a                   :Note ;
+        :locationStatement  "p. 422-432" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P8LS12187  a        :Person ;
+        skos:prefLabel      "skal bzang tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1F30CC9CD09D9701 ;
+        :personEvent        bdr:EV382B7A69990E7FD1 , bdr:EVE34F2177EF2F4030 ;
+        :personName         bdr:NM0EC1C99101248F79 , bdr:NM45A4747167D334CD , bdr:NM746C08258F188B1F .
+}

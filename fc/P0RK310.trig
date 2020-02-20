@@ -1,0 +1,62 @@
+@base          <bdg:P0RK310> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P0RK310 {
+    bda:LG596642AF71721D3A
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-12T15:13:55.941Z"^^xsd:dateTime ;
+        adm:logMessage      "first post to dlms"@en ;
+        adm:logWho          bdr:U00012 .
+    
+    bda:LG92D4A722658B57E5
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-06-21T14:00:00Z"^^xsd:dateTime ;
+        adm:logMessage      "transformed from Ralf's XML by Jeff"@en ;
+        adm:logWho          bdr:U00023 .
+    
+    bda:P0RK310  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P0RK310 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fc/P0RK310.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P0RK310 ;
+        adm:logEntry        bda:LG596642AF71721D3A , bda:LG92D4A722658B57E5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM27BBA59D6BD185F9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bla ma shAkya gzhon nu/"@bo-x-ewts .
+    
+    bdr:NMB4E5BD9249B38625
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bla ma shak gzhon/"@bo-x-ewts .
+    
+    bdr:NMC43257DF779B0D12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grub ston shAkya gzhon nu/"@bo-x-ewts .
+    
+    bdr:NTD546AEF750006E37
+        a                   :Note ;
+        :noteText           "Possible duplicate of TBRC =? P5500"@en .
+    
+    bdr:P0RK310  a          :Person ;
+        skos:prefLabel      "bla ma shak gzhon/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD546AEF750006E37 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27BBA59D6BD185F9 , bdr:NMB4E5BD9249B38625 , bdr:NMC43257DF779B0D12 ;
+        :personStudentOf    bdr:P0RK309 , bdr:P0RK507 , bdr:P3422 ;
+        :personTeacherOf    bdr:P3423 .
+}

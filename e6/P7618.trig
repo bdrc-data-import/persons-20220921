@@ -1,0 +1,63 @@
+@base          <bdg:P7618> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7618 {
+    bda:LGA78CEF32FBAA5437
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-17T10:28:30.428Z"^^xsd:dateTime ;
+        adm:logMessage      "revision of note"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGB1433222EBCC859D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-03-06T10:44:47.874Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P7618  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7618 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e6/P7618.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7618 ;
+        adm:logEntry        bda:LGA78CEF32FBAA5437 , bda:LGB1433222EBCC859D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF0F00C819922CAC1
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM2921F6AC1047C333
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dung dkar ngag dbang chos grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM830F2CF4ED4377C1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT65DDEEDD6ACA1801
+        a                   :Note ;
+        :noteText           "connected with phur bu lcog ngag dbang byams pa, probably a student; it was at his behest that phur bu lcog wrote his sdom pa gsum gyi nyes ltung rags pa ngos bzung nas bshags sdom byed tshul zla ba'i 'od zer"@en .
+    
+    bdr:P7618  a            :Person ;
+        skos:prefLabel      "ngag dbang chos grags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT65DDEEDD6ACA1801 ;
+        :personEvent        bdr:EVF0F00C819922CAC1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2921F6AC1047C333 , bdr:NM830F2CF4ED4377C1 ;
+        :personTeacherOf    bdr:P2766 .
+}

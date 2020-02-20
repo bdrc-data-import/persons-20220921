@@ -1,0 +1,68 @@
+@base          <bdg:P8LS12855> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12855 {
+    bda:LG311BEDAD498D0AF2
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T14:33:24.213Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12855  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12855 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "da/P8LS12855.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12855 ;
+        adm:logEntry        bda:LG311BEDAD498D0AF2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV131019123A32ACB5
+        a                   :PersonBirth ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EV2669B4AA1C51A7DA
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:EVEBA06F2E9CAB1522
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1962 .
+    
+    bdr:EVEE2DDBA219D5BCC3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1962 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMA335C43C7439718E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gca' tshang /"@bo-x-ewts .
+    
+    bdr:NMF96995BB8F5BF785
+        a                   :PersonPrimaryName ;
+        rdfs:label          "a mchog mtshan nyid dgon gyi gdan rabs 08"@bo-x-ewts .
+    
+    bdr:NT870DE8468BCD4794
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 21-22" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:P8LS12855  a        :Person ;
+        skos:prefLabel      "gca' tshang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT870DE8468BCD4794 ;
+        :personEvent        bdr:EV131019123A32ACB5 , bdr:EV2669B4AA1C51A7DA , bdr:EVEBA06F2E9CAB1522 , bdr:EVEE2DDBA219D5BCC3 ;
+        :personName         bdr:NMA335C43C7439718E , bdr:NMF96995BB8F5BF785 .
+}

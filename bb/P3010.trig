@@ -1,0 +1,53 @@
+@base          <bdg:P3010> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3010 {
+    bda:P3010  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3010 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "bb/P3010.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3010 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03806DE9C8EA8DEF
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMA4DD35743413613D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rin chen/"@bo-x-ewts .
+    
+    bdr:NMFA3D90F0F971F479
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas pa don grub rin chen/"@bo-x-ewts .
+    
+    bdr:NTEAED4E5CF9BA6C29
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16r" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "important teacher in the transmission lineage of the rgyud bzhi, basic medical works of the tibetan tradition"@en .
+    
+    bdr:P3010  a            :Person ;
+        skos:prefLabel      "don grub rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEAED4E5CF9BA6C29 ;
+        :personEvent        bdr:EV03806DE9C8EA8DEF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA4DD35743413613D , bdr:NMFA3D90F0F971F479 ;
+        :personStudentOf    bdr:P3009 ;
+        :personTeacherOf    bdr:P3011 .
+}

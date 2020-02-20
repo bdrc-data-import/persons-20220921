@@ -1,0 +1,86 @@
+@base          <bdg:P1508> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1508 {
+    bda:LG671CEEA6F522D609
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-29T14:43:58.472Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGCF81A63A8DC74C2F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T13:40:30.965Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place with note C#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1508  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1508 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "06/P1508.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1508 ;
+        adm:logEntry        bda:LG671CEEA6F522D609 , bda:LGCF81A63A8DC74C2F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB65F8F0CDBF79996
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G279 .
+    
+    bdr:EVB797D2EE4366C9F1
+        a                   :PersonDeath ;
+        :onYear             "1195"^^xsd:gYear .
+    
+    bdr:EVC8D623C958AC9997
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G953 ;
+        :onYear             "1118"^^xsd:gYear .
+    
+    bdr:NM7993399EC0020860
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal tsha rin chen mgon/"@bo-x-ewts .
+    
+    bdr:NMB9A30DF3BDA0B23B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen mgon/"@bo-x-ewts .
+    
+    bdr:NT23E64F5A581E6213
+        a                   :Note ;
+        :noteText           "see corporetion C2CN11026"@en .
+    
+    bdr:NT3D84F0AAF7700D51
+        a                   :Note ;
+        :noteText           "1171. Ordination vows from Mkhan-po Zhang Zhi-mdzes (not recorded).\nFounded the monastery of Khro-phu."@en .
+    
+    bdr:NT4A240BB35416B3E0
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- Khro-phu Bka'-brgyud"@en .
+    
+    bdr:NTDBD391891166032E
+        a                   :Note ;
+        :locationStatement  "p. 406" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P1508  a            :Person ;
+        skos:prefLabel      "rin chen mgon/"@bo-x-ewts ;
+        :hasYoungerBrother  bdr:P1507 ;
+        :isRoot             true ;
+        :note               bdr:NT23E64F5A581E6213 , bdr:NT3D84F0AAF7700D51 , bdr:NT4A240BB35416B3E0 , bdr:NTDBD391891166032E ;
+        :personEvent        bdr:EVB65F8F0CDBF79996 , bdr:EVB797D2EE4366C9F1 , bdr:EVC8D623C958AC9997 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7993399EC0020860 , bdr:NMB9A30DF3BDA0B23B ;
+        :personStudentOf    bdr:P127 , bdr:P1845 , bdr:P2097 , bdr:P2098 , bdr:P2099 , bdr:P2101 , bdr:P2102 , bdr:P2103 , bdr:P909 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Tropu-Gyeltsa-Rinchen-Gon/2799"^^xsd:anyURI .
+}

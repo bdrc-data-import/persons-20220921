@@ -1,0 +1,50 @@
+@base          <bdg:P1KG14943> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG14943 {
+    bda:LG9A531B4EA171DC7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-08-19T11:02:20.867Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG14943  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG14943 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d9/P1KG14943.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG14943 ;
+        adm:logEntry        bda:LG9A531B4EA171DC7F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E5B9545E844B095
+        a                   :PersonBirth ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:NM3149783CC99E6FA5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes dga' ba/"@bo-x-ewts .
+    
+    bdr:NMA687A173CE0933A1
+        a                   :PersonPersonalName ;
+        rdfs:label          "'ba' ba ye shes dga' ba/"@bo-x-ewts .
+    
+    bdr:P1KG14943  a        :Person ;
+        skos:prefLabel      "ye shes dga' ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0E5B9545E844B095 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3149783CC99E6FA5 , bdr:NMA687A173CE0933A1 .
+}

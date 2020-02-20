@@ -1,0 +1,72 @@
+@base          <bdg:P8LS12670> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12670 {
+    bda:LGBDE6D7A921BA360A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-04T11:34:01.7Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDD4345A7EBE6B7FE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-07T12:37:18.987Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFDF9C02CEFC47BD2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS12670  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12670 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "65/P8LS12670.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12670 ;
+        adm:logEntry        bda:LGBDE6D7A921BA360A , bda:LGDD4345A7EBE6B7FE , bda:LGFDF9C02CEFC47BD2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC53961AFDB9722F9
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12880 .
+    
+    bdr:NM0E0A3BE64266680B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tenpa Dargye Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM7D744D8B067EDF66
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "bstan pa dar rgyas sprul sku 01"@bo-x-ewts .
+    
+    bdr:NM90D1A1D571C228E5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT7B2F65ABF41EC3E8
+        a                   :Note ;
+        :locationStatement  "p. 318" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "the successive incarnations of sngags grwa sprul sku bstan pa dar rgyas are given in the often unreliable source. the lhun rtse bya khong has been added:\nrgya'i tang tser gsal yang gser snyan du mi 'gro gras\nsngags grwa sprul sku bstan pa dar rgyas kyi skye phreng \n1) dang po ni/ bstan pa dar rgyas/ ser bdun dar khang du 'khrungs/ dgung lo re gsum la gshegs/"@en .
+    
+    bdr:P8LS12670  a        :Person ;
+        skos:prefLabel      "bstan pa dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B2F65ABF41EC3E8 ;
+        :personEvent        bdr:EVC53961AFDB9722F9 ;
+        :personName         bdr:NM0E0A3BE64266680B , bdr:NM7D744D8B067EDF66 , bdr:NM90D1A1D571C228E5 .
+}

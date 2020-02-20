@@ -1,0 +1,70 @@
+@base          <bdg:P401> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P401 {
+    bda:LG181D00323F5E089D
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-10-17T16:15:04.641Z"^^xsd:dateTime ;
+        adm:logMessage      "edited birth event"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG383B42A4E6640F17
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-08-06T16:30:27.081Z"^^xsd:dateTime ;
+        adm:logMessage      "created a preson"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC7CFB57C4A1A7FBF
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-07-18T15:48:05.344Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P401  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P401 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "da/P401.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P401 ;
+        adm:logEntry        bda:LG181D00323F5E089D , bda:LG383B42A4E6640F17 , bda:LGC7CFB57C4A1A7FBF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BAA1BE90BE5D6F4
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1956"^^xsd:gYear .
+    
+    bdr:EVCAB9A4DB59C9F77E
+        a                   :PersonDeath .
+    
+    bdr:NMD29E117FE0EF3FF9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul blo/"@bo-x-ewts .
+    
+    bdr:NT0737A1717424A629
+        a                   :Note ;
+        :noteText           "a short biography is existed in mgar rtse tsho bco brgyad kyi lo rgyus shel dkar me long, pages 366, 367"@en .
+    
+    bdr:NT80CDEEF4DB30E140
+        a                   :Note ;
+        :noteText           "born at skyong gnam rgyal tshang"@en .
+    
+    bdr:P401  a             :Person ;
+        skos:prefLabel      "tshul blo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0737A1717424A629 , bdr:NT80CDEEF4DB30E140 ;
+        :personEvent        bdr:EV0BAA1BE90BE5D6F4 , bdr:EVCAB9A4DB59C9F77E ;
+        :personName         bdr:NMD29E117FE0EF3FF9 ;
+        :personStudentOf    bdr:P1646 , bdr:P221 , bdr:P8036 , bdr:P8065 ;
+        :personTeacherOf    bdr:P4704 .
+}

@@ -1,0 +1,84 @@
+@base          <bdg:P10317> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10317 {
+    bda:LGCB14C87003CFAACF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T12:27:54.717Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10317  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10317 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "9d/P10317.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10317 ;
+        adm:logEntry        bda:LGCB14C87003CFAACF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV141C703B22E6E1CD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G108 .
+    
+    bdr:EV19242455D47A681D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV256427A0788E05C7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4790 .
+    
+    bdr:EVEFF0C7E2DFF1CA80
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM179B312C9C00EAD6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don yod rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM1D6780696CCE1D27
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan po don yod rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM44E84BF9439ACC22
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 16"@bo-x-ewts .
+    
+    bdr:NMB80164980F9D8888
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ra la no mon han don yod rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT924ECFF65802CC3E
+        a                   :Note ;
+        :locationStatement  "p. 51" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "dge lugs master who became an abbot of bya khyung and founded the ra la ri khrod\n\nra la ri khrod \n'di ni bya khyung mkhan po ra la no mon han don yod rgyal mtshan gyis btab zer/ (p. 51)"@en .
+    
+    bdr:NTFB37F94651FCF37D
+        a                   :Note ;
+        :locationStatement  "p. 123-125" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "highly acclaimed scholar and thus has a close relation with the 5th dalai lama"@en .
+    
+    bdr:P10317  a           :Person ;
+        skos:prefLabel      "don yod rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT924ECFF65802CC3E , bdr:NTFB37F94651FCF37D ;
+        :personEvent        bdr:EV141C703B22E6E1CD , bdr:EV19242455D47A681D , bdr:EV256427A0788E05C7 , bdr:EVEFF0C7E2DFF1CA80 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM179B312C9C00EAD6 , bdr:NM1D6780696CCE1D27 , bdr:NM44E84BF9439ACC22 , bdr:NMB80164980F9D8888 .
+}

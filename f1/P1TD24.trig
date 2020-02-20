@@ -1,0 +1,74 @@
+@base          <bdg:P1TD24> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1TD24 {
+    bda:LG7589FCD3089B81C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-10T12:09:40.529Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG89C7D2F8071BC31E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-06-10T12:12:01.594Z"^^xsd:dateTime ;
+        adm:logMessage      "no changes"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE225BF92480A085E
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-05-17T10:56:50.01Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P1TD24  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1TD24 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f1/P1TD24.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1TD24 ;
+        adm:logEntry        bda:LG7589FCD3089B81C5 , bda:LG89C7D2F8071BC31E , bda:LGE225BF92480A085E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CEF04E8385B7647
+        a                   :PersonDeath ;
+        :onYear             "1941"^^xsd:gYear .
+    
+    bdr:EVCAF1C3E3805907DA
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1889"^^xsd:gYear ;
+        :notBefore          "1880"^^xsd:gYear .
+    
+    bdr:NM737103D6B30DE030
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khang gsar rdo rje 'chang /"@bo-x-ewts .
+    
+    bdr:NMC9D29BD78B3DEC08
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang thub bstan chos kyi dbang phyug"@bo-x-ewts .
+    
+    bdr:NTE2948594178BA8EE
+        a                   :Note ;
+        :locationStatement  "vol. 2, pg 209-271" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "an important Geluk scholar of Drepung Monastery\n\nGlenn Mullin in Dalai Lamas on Tantra pg. 179 gives his dates as 1888-1941"@en .
+    
+    bdr:P1TD24  a           :Person ;
+        skos:prefLabel      "ngag dbang thub bstan chos kyi dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2948594178BA8EE ;
+        :personEvent        bdr:EV5CEF04E8385B7647 , bdr:EVCAF1C3E3805907DA ;
+        :personName         bdr:NM737103D6B30DE030 , bdr:NMC9D29BD78B3DEC08 ;
+        :personTeacherOf    bdr:P3CN15711 .
+}

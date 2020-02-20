@@ -1,0 +1,116 @@
+@base          <bdg:P8688> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8688 {
+    bda:LG164E51332D0346F1
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-04T15:32:51.402Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG3B42F2BEC0AF6CCA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-07T11:53:50.583Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6FA62DA58E1927B5
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-11T16:41:34.243Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGBBAFEE6A7C97157C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-04T13:16:58.422Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE2A939176B7507EA
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-01T17:16:37.565Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE8F5350DF528D9E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:09:57.295Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P8688  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8688 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "bd/P8688.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8688 ;
+        adm:logEntry        bda:LG164E51332D0346F1 , bda:LG3B42F2BEC0AF6CCA , bda:LG6FA62DA58E1927B5 , bda:LGBBAFEE6A7C97157C , bda:LGE2A939176B7507EA , bda:LGE8F5350DF528D9E3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A903F1EDA6820C3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EV8FBE28F56FB78771
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD3D90BCCF290AC05
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM276938058DC47A75
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 16"@bo-x-ewts .
+    
+    bdr:NM441211BC0A97A9BA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMC104A58D153BDBF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "o gro'i mkhen chen bsod nams chos 'phel/"@bo-x-ewts .
+    
+    bdr:NME93A5E0A7B4A9C99
+        a                   :PersonOtherName ;
+        rdfs:label          "bshad sgrub chos kyi snang ba/"@bo-x-ewts .
+    
+    bdr:NMEAB2A3ABA8EA0C3F
+        a                   :PersonTitle ;
+        rdfs:label          "mkhan chen bsod nams chos 'phel/"@bo-x-ewts .
+    
+    bdr:NT286DAE1F424D5B68
+        a                   :Note ;
+        :locationStatement  "p. 442-443" ;
+        :noteSource         bdr:MW27401 .
+    
+    bdr:NT508B759F81183744
+        a                   :Note ;
+        :locationStatement  "p. 676" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "noted as a teacher of glag bla"@en .
+    
+    bdr:P8688  a            :Person ;
+        skos:prefLabel      "bsod nams chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT286DAE1F424D5B68 , bdr:NT508B759F81183744 ;
+        :personEvent        bdr:EV6A903F1EDA6820C3 , bdr:EV8FBE28F56FB78771 , bdr:EVD3D90BCCF290AC05 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM276938058DC47A75 , bdr:NM441211BC0A97A9BA , bdr:NMC104A58D153BDBF3 , bdr:NME93A5E0A7B4A9C99 , bdr:NMEAB2A3ABA8EA0C3F ;
+        :personStudentOf    bdr:P235 , bdr:P5055 , bdr:P6067 , bdr:P701 , bdr:P8693 , bdr:P8702 , bdr:P8704 ;
+        :personTeacherOf    bdr:P5054 , bdr:P6965 , bdr:P724 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sonam-Chopel/11427"^^xsd:anyURI .
+}

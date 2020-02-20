@@ -1,0 +1,100 @@
+@base          <bdg:P4762> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4762 {
+    bda:LG1FE33ABBBCE9E0F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-07T14:36:26.194Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG68910B2BE1B40FB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T09:29:41.168Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8EBE7E0B7A0A3429
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-11T15:19:16.219Z"^^xsd:dateTime ;
+        adm:logMessage      "added found monastery"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4762  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4762 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "b2/P4762.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4762 ;
+        adm:logEntry        bda:LG1FE33ABBBCE9E0F5 , bda:LG68910B2BE1B40FB1 , bda:LG8EBE7E0B7A0A3429 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C8A54A9B1601F7B
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EV433C9E2A7E9DD9DC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV62CFEF7080982A50
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM1A1CEBF15275B167
+        a                   :PersonTitle ;
+        rdfs:label          "mus srad pa blo gros rin chen seng+ge"@bo-x-ewts .
+    
+    bdr:NM4B33DEBBEF500E5E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rin chen seng+ge"@bo-x-ewts .
+    
+    bdr:NM4D5142C4DD4B9289
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 01"@bo-x-ewts .
+    
+    bdr:NM5D38AE10B39C293D
+        a                   :PersonTitle ;
+        rdfs:label          "gtsang kun mkhyen blo gros rin chen seng+ge"@bo-x-ewts .
+    
+    bdr:NM6EE019A33CB0C8BB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kun mkhyen blo gros rin chen seng+ge"@bo-x-ewts .
+    
+    bdr:NT66190D273328E45C
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 48, 50" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "important master in the transmission lineage of the abhidharmakosa that passed through tsong kha pa to the 5th dalai lama\nmaster in the transmission lineage of the rngog lugs of the prajnaparamita"@en .
+    
+    bdr:NTCCDCB5453D3690C6
+        a                   :Note ;
+        :locationStatement  "p. 271, 299-305" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "Born in la stod byang area and belong to rnying ma family. He was one of the immediate disciple of tsong kha and also founder of se ra byes college"@en .
+    
+    bdr:P4762  a            :Person ;
+        skos:prefLabel      "blo gros rin chen seng+ge"@bo-x-ewts ;
+        :hasFather          bdr:P5698 ;
+        :isRoot             true ;
+        :note               bdr:NT66190D273328E45C , bdr:NTCCDCB5453D3690C6 ;
+        :personEvent        bdr:EV3C8A54A9B1601F7B , bdr:EV433C9E2A7E9DD9DC , bdr:EV62CFEF7080982A50 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1A1CEBF15275B167 , bdr:NM4B33DEBBEF500E5E , bdr:NM4D5142C4DD4B9289 , bdr:NM5D38AE10B39C293D , bdr:NM6EE019A33CB0C8BB ;
+        :personStudentOf    bdr:P35 , bdr:P5698 , bdr:P64 , bdr:P80 ;
+        :personTeacherOf    bdr:P1611 , bdr:P482 , bdr:P5546 , bdr:P8LS12008 .
+}

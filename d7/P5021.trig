@@ -1,0 +1,50 @@
+@base          <bdg:P5021> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5021 {
+    bda:P5021  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5021 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "d7/P5021.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5021 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV650223697850B843
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM27B7DC051151316F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpal spungs sman pa chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6BA448EC5C27E2D4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'byor rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTF731803001980D6D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:P5021  a            :Person ;
+        skos:prefLabel      "chos 'byor rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF731803001980D6D ;
+        :personEvent        bdr:EV650223697850B843 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27B7DC051151316F , bdr:NM6BA448EC5C27E2D4 ;
+        :personTeacherOf    bdr:P5020 .
+}

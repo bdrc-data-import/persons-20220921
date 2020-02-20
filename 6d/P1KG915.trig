@@ -1,0 +1,59 @@
+@base          <bdg:P1KG915> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG915 {
+    bda:LG1C4393301780EC5D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T10:57:31.889Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawed from P1217"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG8E277A9B58315AE5
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-27T16:33:16.453Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG915  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG915 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "6d/P1KG915.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG915 ;
+        adm:logEntry        bda:LG1C4393301780EC5D , bda:LG8E277A9B58315AE5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV238A31841ADBB044
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM033A1F06B69E50D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "jiang deng re zhi"@zh-latn-pinyin-x-ndia .
+    
+    bdr:NT7CA86473EC31CF1B
+        a                   :Note ;
+        :noteSource         bdr:MW1KG872 ;
+        :noteText           "co-author of klu rgyal 'jog po dang dge slong chen po'i zhus lan"@en .
+    
+    bdr:P1KG915  a          :Person ;
+        skos:prefLabel      "jiang deng re zhi"@zh-latn-pinyin-x-ndia ;
+        :isRoot             true ;
+        :note               bdr:NT7CA86473EC31CF1B ;
+        :personEvent        bdr:EV238A31841ADBB044 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM033A1F06B69E50D8 .
+}

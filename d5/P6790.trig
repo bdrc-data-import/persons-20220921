@@ -1,0 +1,55 @@
+@base          <bdg:P6790> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6790 {
+    bda:P6790  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6790 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d5/P6790.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6790 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6B91EE96DA0A84F4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4646 .
+    
+    bdr:EVEE9200F54603EAED
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2741 ;
+        :onYear             "1986"^^xsd:gYear .
+    
+    bdr:NMBA678BCD8D38A89E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD64652FBA6CCC190
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dkon seng 03 'jam dbyangs thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTED59BC0890D878D5
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "recognized by the 6th 'jam dbyangs bzhad pa\nprefectural recognition\ninstalled at brag dkar dgon in 1994"@en .
+    
+    bdr:P6790  a            :Person ;
+        skos:prefLabel      "'jam dbyangs thub bstan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTED59BC0890D878D5 ;
+        :personEvent        bdr:EV6B91EE96DA0A84F4 , bdr:EVEE9200F54603EAED ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBA678BCD8D38A89E , bdr:NMD64652FBA6CCC190 .
+}

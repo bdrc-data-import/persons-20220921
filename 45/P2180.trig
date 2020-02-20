@@ -1,0 +1,58 @@
+@base          <bdg:P2180> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2180 {
+    bda:P2180  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2180 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "45/P2180.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2180 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV032600E80172B666
+        a                   :PersonDeath ;
+        :onYear             "1322"^^xsd:gYear .
+    
+    bdr:NM11D9872544B13167
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.ya' bzang gdan rabs 05 bde legs 'od/"@bo-x-ewts .
+    
+    bdr:NM5F027AB764449470
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bde legs 'od/"@bo-x-ewts .
+    
+    bdr:NM5FDD6E951AAB9051
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zwa ra ba bde legs 'od/"@bo-x-ewts .
+    
+    bdr:NT420FE0839A465991
+        a                   :Note ;
+        :locationStatement  "p. 1537" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTC3646134259E690B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- G.ya'-bzang Bka'-brgyud transmissions"@en .
+    
+    bdr:P2180  a            :Person ;
+        skos:prefLabel      "bde legs 'od/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT420FE0839A465991 , bdr:NTC3646134259E690B ;
+        :personEvent        bdr:EV032600E80172B666 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11D9872544B13167 , bdr:NM5F027AB764449470 , bdr:NM5FDD6E951AAB9051 ;
+        :personTeacherOf    bdr:P2179 .
+}

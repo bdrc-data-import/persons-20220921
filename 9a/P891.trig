@@ -1,0 +1,81 @@
+@base          <bdg:P891> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P891 {
+    bda:LG86B799E9697E24E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-07T09:58:41.575Z"^^xsd:dateTime ;
+        adm:logMessage      "created incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGAF02029C58C01FA2
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-02-05T11:46:27.796Z"^^xsd:dateTime ;
+        adm:logMessage      "added name & birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P891  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P891 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9a/P891.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P891 ;
+        adm:logEntry        bda:LG86B799E9697E24E0 , bda:LGAF02029C58C01FA2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV35D883D4D7F16E9B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G851 ;
+        :onYear             "1608"^^xsd:gYear .
+    
+    bdr:EV36D663ECA8D853DC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:EV49D7A3F828B1D983
+        a                   :PersonDeath ;
+        :onYear             "1669"^^xsd:gYear .
+    
+    bdr:EV907A9D681E7AFD26
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG104 .
+    
+    bdr:NM870902BDE1498658
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzi sgar 01 bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMA0B5A273F428ECCB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF09B345CEDD83F16
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pu Nye sA ga ra/"@bo-x-ewts .
+    
+    bdr:NT84C8C605D36BC325
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P891  a             :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :hasMother          bdr:P896 ;
+        :isRoot             true ;
+        :note               bdr:NT84C8C605D36BC325 ;
+        :personEvent        bdr:EV35D883D4D7F16E9B , bdr:EV36D663ECA8D853DC , bdr:EV49D7A3F828B1D983 , bdr:EV907A9D681E7AFD26 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM870902BDE1498658 , bdr:NMA0B5A273F428ECCB , bdr:NMF09B345CEDD83F16 ;
+        :personStudentOf    bdr:P875 , bdr:P882 , bdr:P897 , bdr:P898 , bdr:P899 , bdr:P900 ;
+        :personTeacherOf    bdr:P901 , bdr:P902 , bdr:P903 , bdr:P904 , bdr:P905 .
+}

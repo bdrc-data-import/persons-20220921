@@ -1,0 +1,94 @@
+@base          <bdg:P6545> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6545 {
+    bda:LG46B01E0EECB89E68
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-01-16T12:02:51.12Z"^^xsd:dateTime ;
+        adm:logMessage      "Withdrawn in favor of P273"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG85F47A9A493C8185
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-08-17T14:33:59.462Z"^^xsd:dateTime ;
+        adm:logMessage      "added 3 names & 3 teacher-students & 2 places"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGD653CC47CD93ACEE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-15T11:07:33.639Z"^^xsd:dateTime ;
+        adm:logMessage      "shad 'then yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P6545  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6545 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "21/P6545.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6545 ;
+        adm:logEntry        bda:LG46B01E0EECB89E68 , bda:LG85F47A9A493C8185 , bda:LGD653CC47CD93ACEE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P273 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV555AE3F050582273
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G806 ;
+        :onYear             "1805"^^xsd:gYear .
+    
+    bdr:EV9FADE26B7018B291
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1968 .
+    
+    bdr:EVF3F144DC46674578
+        a                   :PersonDeath ;
+        :onYear             "1886"^^xsd:gYear .
+    
+    bdr:NM2F63FA81C0AB83CE
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "dge 'dun lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3021C1AFE5438A99
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a rol blo bzang lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM81E3CC0719BADA3D
+        a                   :PersonOtherName ;
+        rdfs:label          "阿若·洛桑隆日嘉措"@zh-hans .
+    
+    bdr:NMCA55BAFFDA500D03
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog tshe ring /"@bo-x-ewts .
+    
+    bdr:NME6DCB679A1C4FB3B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang lung rigs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTC20A9224A79AFAD0
+        a                   :Note ;
+        :locationStatement  "p. 600" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "source gives two accounts of lamas with similar names  (p. 599 and this page) born roughly in the same year\nthis page has a rol blo bzang lung rigs rgya mtsho with dates 1805-1886."@en .
+    
+    bdr:P6545  a            :Person ;
+        skos:prefLabel      "blo bzang lung rigs rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P4119 ;
+        :isRoot             true ;
+        :note               bdr:NTC20A9224A79AFAD0 ;
+        :personEvent        bdr:EV555AE3F050582273 , bdr:EV9FADE26B7018B291 , bdr:EVF3F144DC46674578 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2F63FA81C0AB83CE , bdr:NM3021C1AFE5438A99 , bdr:NM81E3CC0719BADA3D , bdr:NMCA55BAFFDA500D03 , bdr:NME6DCB679A1C4FB3B ;
+        :personStudentOf    bdr:P305 , bdr:P410 ;
+        :personTeacherOf    bdr:P324 .
+}

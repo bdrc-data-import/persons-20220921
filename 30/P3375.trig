@@ -1,0 +1,68 @@
+@base          <bdg:P3375> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3375 {
+    bda:LG7658E13A09E7919A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-29T12:50:06.749Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGD2490D4AA77375B2
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-02T08:29:02.852Z"^^xsd:dateTime ;
+        adm:logMessage      "name normalized"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3375  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3375 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "30/P3375.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3375 ;
+        adm:logEntry        bda:LG7658E13A09E7919A , bda:LGD2490D4AA77375B2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6AD890C9576F933C
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM14C57A51139994E4
+        a                   :PersonOtherName ;
+        rdfs:label          "pradznyAvalita"@sa-x-ndia .
+    
+    bdr:NM4F91BD28BC40A65B
+        a                   :PersonOtherName ;
+        rdfs:label          "pra dznyA wa li ta"@sa-x-ewts .
+    
+    bdr:NM5BDAA5074F5FF809
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab bskyangs/"@bo-x-ewts .
+    
+    bdr:NT86C67452D6CE9688
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3375  a            :Person ;
+        skos:prefLabel      "shes rab bskyangs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT86C67452D6CE9688 ;
+        :personEvent        bdr:EV6AD890C9576F933C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14C57A51139994E4 , bdr:NM4F91BD28BC40A65B , bdr:NM5BDAA5074F5FF809 ;
+        :personStudentOf    bdr:P3374 , bdr:P7166 ;
+        :personTeacherOf    bdr:P0RK615 , bdr:P3376 , bdr:P3397 .
+}

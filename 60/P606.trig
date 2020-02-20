@@ -1,0 +1,95 @@
+@base          <bdg:P606> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P606 {
+    bda:LG4E0C21FB5AEB0CF4
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T12:28:34.582Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE39EFD76AFC5CCD5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T10:39:12.26Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGFE1B76C15E19E87A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:50:10.204Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat from G44 to G3582"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P606  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P606 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "60/P606.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P606 ;
+        adm:logEntry        bda:LG4E0C21FB5AEB0CF4 , bda:LGE39EFD76AFC5CCD5 , bda:LGFE1B76C15E19E87A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV715EE4FFC5A2608D
+        a                   :PersonBirth ;
+        :notAfter           "1289"^^xsd:gYear ;
+        :notBefore          "1277"^^xsd:gYear .
+    
+    bdr:EVBAC6239BBEAE31F9
+        a                   :PersonDeath ;
+        :notAfter           "1325"^^xsd:gYear ;
+        :notBefore          "1314"^^xsd:gYear .
+    
+    bdr:EVDAE30D6B3788F7DA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:NM0A88E6A420D14A6F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bcu gsum pa seng+ge rgyal po/"@bo-x-ewts .
+    
+    bdr:NM4317DC1483CAC447
+        a                   :PersonPersonalName ;
+        rdfs:label          "'brug pa seng+ge rgyal po/"@bo-x-ewts .
+    
+    bdr:NM962835A84F5D4DEB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng+ge rgyal po/"@bo-x-ewts .
+    
+    bdr:NT0B8602269C148C89
+        a                   :Note ;
+        :locationStatement  "p. 521" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT7C544F3C6B2EBD26
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:NT8A25252A3CE45B4E
+        a                   :Note ;
+        :noteText           "1313. Comes to the gdan-sa of Rwa-lung as the 6th Gdan-rabs.\nActive in building."@en .
+    
+    bdr:P606  a             :Person ;
+        skos:prefLabel      "seng+ge rgyal po/"@bo-x-ewts ;
+        :hasFather          bdr:P918 ;
+        :hasSon             bdr:P2635 ;
+        :isRoot             true ;
+        :note               bdr:NT0B8602269C148C89 , bdr:NT7C544F3C6B2EBD26 , bdr:NT8A25252A3CE45B4E ;
+        :personEvent        bdr:EV715EE4FFC5A2608D , bdr:EVBAC6239BBEAE31F9 , bdr:EVDAE30D6B3788F7DA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A88E6A420D14A6F , bdr:NM4317DC1483CAC447 , bdr:NM962835A84F5D4DEB ;
+        :personStudentOf    bdr:P918 ;
+        :personTeacherOf    bdr:P2635 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sengge-Gyelpo/8637"^^xsd:anyURI .
+}

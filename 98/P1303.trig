@@ -1,0 +1,109 @@
+@base          <bdg:P1303> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1303 {
+    bda:LG497C516DF376D94E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-10T14:38:40.625Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG939C02215844A89C
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-15T08:56:42.461Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1303  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1303 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "98/P1303.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1303 ;
+        adm:logEntry        bda:LG497C516DF376D94E , bda:LG939C02215844A89C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B6F5C5D8A1CE4BE
+        a                   :PersonBirth ;
+        :onYear             "1259"^^xsd:gYear .
+    
+    bdr:EV68B34BA1D9E76F29
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1314"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV877014749B890439
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:EVE044065BABC856AC
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G225 ;
+        :onYear             "1325"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVEB2B884EFFC30607
+        a                   :PersonDeath ;
+        :onYear             "1325"^^xsd:gYear .
+    
+    bdr:NM13A921F797D1E115
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NM25016141105A5FC1
+        a                   :PersonTitle ;
+        rdfs:label          "snar thang gdan rabs 11 grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NM3ADECF6767041DCF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "snar thang gdan rabs 11"@bo-x-ewts .
+    
+    bdr:NM97172AD8D94C6DB7
+        a                   :PersonTitle ;
+        rdfs:label          "ze'u grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NMD09BA722DDA74336
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa shes rab/"@bo-x-ewts .
+    
+    bdr:NT10EFF4586F019138
+        a                   :Note ;
+        :locationStatement  "p. 199" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT26083AE96BEFD3F3
+        a                   :Note ;
+        :locationStatement  "p. 35-36" ;
+        :noteSource         bdr:MW1CZ2413 .
+    
+    bdr:NT3CABC3A872092D2E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- the Vinaya transmissions of the Smad-'dul"@en .
+    
+    bdr:NTC5C0194CE1D3CF64
+        a                   :Note ;
+        :noteText           "Served as mkhan-po of Snar-thang for lo-ngo bcu gcig.\nHis gdung-rten is located to the west of the Gdan-sa Gong-ma."@en .
+    
+    bdr:P1303  a            :Person ;
+        skos:prefLabel      "grags pa shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT10EFF4586F019138 , bdr:NT26083AE96BEFD3F3 , bdr:NT3CABC3A872092D2E , bdr:NTC5C0194CE1D3CF64 ;
+        :personEvent        bdr:EV5B6F5C5D8A1CE4BE , bdr:EV68B34BA1D9E76F29 , bdr:EV877014749B890439 , bdr:EVE044065BABC856AC , bdr:EVEB2B884EFFC30607 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM13A921F797D1E115 , bdr:NM25016141105A5FC1 , bdr:NM3ADECF6767041DCF , bdr:NM97172AD8D94C6DB7 , bdr:NMD09BA722DDA74336 ;
+        :personStudentOf    bdr:P1060 , bdr:P1304 ;
+        :personTeacherOf    bdr:P1298 .
+}

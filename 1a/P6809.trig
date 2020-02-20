@@ -1,0 +1,72 @@
+@base          <bdg:P6809> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6809 {
+    bda:LG13794AFBE0EE90AE
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T08:40:46.427Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6809  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6809 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1a/P6809.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6809 ;
+        adm:logEntry        bda:LG13794AFBE0EE90AE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2494753943249341
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2736 ;
+        :notAfter           "1991"^^xsd:gYear ;
+        :notBefore          "1990"^^xsd:gYear .
+    
+    bdr:EV939704BD9CF3DDE7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2525 .
+    
+    bdr:NM4173D0BF7749B464
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM4F6CFAE75421F976
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tA dbon 06 blo bzang 'phrin las dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM84778D276D6A931D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dawon 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM99321AC2200DA220
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tA dbon 06"@bo-x-ewts .
+    
+    bdr:NTBD8A67DCE55A4631
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout, p. 19" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "born either 1990 or 1991\nrecognized by the 6th 'jam dbyangs bzhad pa\nprefectural level recognition\ninstalled in 1995 at mdzod dge sgar rnying"@en .
+    
+    bdr:P6809  a            :Person ;
+        skos:prefLabel      "blo bzang 'phrin las dar rgyas/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6808 ;
+        :isRoot             true ;
+        :note               bdr:NTBD8A67DCE55A4631 ;
+        :personEvent        bdr:EV2494753943249341 , bdr:EV939704BD9CF3DDE7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4173D0BF7749B464 , bdr:NM4F6CFAE75421F976 , bdr:NM84778D276D6A931D , bdr:NM99321AC2200DA220 .
+}

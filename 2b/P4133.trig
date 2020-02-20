@@ -1,0 +1,101 @@
+@base          <bdg:P4133> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4133 {
+    bda:LG180BFFBEE35FD527
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T13:55:50.68Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG37AF114FB8EE7EE4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:47:08.29Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG4449DC117D8EE32D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-04T15:52:06.857Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGBF6800169C70C76C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P4133  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4133 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "2b/P4133.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4133 ;
+        adm:logEntry        bda:LG180BFFBEE35FD527 , bda:LG37AF114FB8EE7EE4 , bda:LG4449DC117D8EE32D , bda:LGBF6800169C70C76C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7D44095881F0D0E8
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G961 ;
+        :onYear             "1683"^^xsd:gYear .
+    
+    bdr:EV7E350608D16B24A1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV8D7BF6214130AE05
+        a                   :PersonDeath ;
+        :onYear             "1736"^^xsd:gYear .
+    
+    bdr:NM57D69965E910FA58
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lha khang lung pa 02"@bo-x-ewts .
+    
+    bdr:NM58AF12B4CD64A0B2
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lhakang Lungpa 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM65970C1ECD67FDCF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang byams pa/"@bo-x-ewts .
+    
+    bdr:NM924D1434996D5C73
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha khang lung pa 02 ngag dbang byams pa/"@bo-x-ewts .
+    
+    bdr:NT286E39B4440286D2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT89E037C170FFACC3
+        a                   :Note ;
+        :noteText           "Given title Hu-thog-thu Mergen Chos-rje\n1702. Traveled to Dbus and entered 'Bras-spungs Sgo-mang"@en .
+    
+    bdr:NTE480E878A71EFFEC
+        a                   :Note ;
+        :locationStatement  "p. 1841" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4133  a            :Person ;
+        skos:prefLabel      "ngag dbang byams pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P4131 ;
+        :isRoot             true ;
+        :note               bdr:NT286E39B4440286D2 , bdr:NT89E037C170FFACC3 , bdr:NTE480E878A71EFFEC ;
+        :personEvent        bdr:EV7D44095881F0D0E8 , bdr:EV7E350608D16B24A1 , bdr:EV8D7BF6214130AE05 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM57D69965E910FA58 , bdr:NM58AF12B4CD64A0B2 , bdr:NM65970C1ECD67FDCF , bdr:NM924D1434996D5C73 ;
+        :personStudentOf    bdr:P2277 , bdr:P37 , bdr:P647 , bdr:P675 ;
+        :personTeacherOf    bdr:P4134 .
+}

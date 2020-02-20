@@ -1,0 +1,102 @@
+@base          <bdg:P6463> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6463 {
+    bda:LG1E9E21C8FA363BAB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-11T11:38:21.33Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF1D13836492D525A
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-05T13:05:15.659Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6463  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6463 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "82/P6463.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6463 ;
+        adm:logEntry        bda:LG1E9E21C8FA363BAB , bda:LGF1D13836492D525A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FD56FF7C76E9859
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G394 .
+    
+    bdr:EV2A042E16E553C4D9
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1879"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV5859974B6176E127
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EV8092E9C2EBB96095
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G111 .
+    
+    bdr:EVC8CC0E464A27A5DF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1874"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EVE2E8B834C6B2BFE1
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM14B05D2A2D25514F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa don grub/"@bo-x-ewts .
+    
+    bdr:NM16322477A9918C11
+        a                   :PersonTitle ;
+        rdfs:label          "a mdo bsam blo ba grags pa don grub/"@bo-x-ewts .
+    
+    bdr:NM4D81744D6500A7DF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam blo ba grags pa don grub/"@bo-x-ewts .
+    
+    bdr:NMCAB23A942CF2F1F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dga' ldan khri pa 80"@bo-x-ewts .
+    
+    bdr:NMF1C99DC9DCC7E335
+        a                   :PersonTitle ;
+        rdfs:label          "khri 80 grags pa don grub/"@bo-x-ewts .
+    
+    bdr:NT1D79C1B272FC91E9
+        a                   :Note ;
+        :locationStatement  "p. 98" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "quotes krung go'i bod kyi shes rig, 1990-2, p. 83"@en .
+    
+    bdr:P6463  a            :Person ;
+        skos:prefLabel      "grags pa don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1D79C1B272FC91E9 ;
+        :personEvent        bdr:EV0FD56FF7C76E9859 , bdr:EV2A042E16E553C4D9 , bdr:EV5859974B6176E127 , bdr:EV8092E9C2EBB96095 , bdr:EVC8CC0E464A27A5DF , bdr:EVE2E8B834C6B2BFE1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14B05D2A2D25514F , bdr:NM16322477A9918C11 , bdr:NM4D81744D6500A7DF , bdr:NMCAB23A942CF2F1F6 , bdr:NMF1C99DC9DCC7E335 ;
+        :personTeacherOf    bdr:P244 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Trichen-80-Drakpa-Dondrub/9055"^^xsd:anyURI .
+}

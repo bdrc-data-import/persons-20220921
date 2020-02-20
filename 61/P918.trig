@@ -1,0 +1,97 @@
+@base          <bdg:P918> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P918 {
+    bda:LG0B0352F13DAF37D7
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-30T16:50:11.94Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat from G44 to G3582"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGC1405BBE9E13C9E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T16:06:31.542Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P918  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P918 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "61/P918.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P918 ;
+        adm:logEntry        bda:LG0B0352F13DAF37D7 , bda:LGC1405BBE9E13C9E7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E5EBBD3ED7FE36C
+        a                   :PersonBirth ;
+        :notAfter           "1258"^^xsd:gYear ;
+        :notBefore          "1242"^^xsd:gYear .
+    
+    bdr:EV66EE1D3384F32D7A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3582 .
+    
+    bdr:EVA628239FDAFEC1AE
+        a                   :PersonDeath ;
+        :notAfter           "1313"^^xsd:gYear ;
+        :notBefore          "1297"^^xsd:gYear .
+    
+    bdr:NM424F9E037878FCAA
+        a                   :PersonTitle ;
+        rdfs:label          "spos skya pa/"@bo-x-ewts .
+    
+    bdr:NM5F05B6ED409016A3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spos skya pa seng+ge rin chen/"@bo-x-ewts .
+    
+    bdr:NM990A9CDF4F57005B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng+ge rin chen/"@bo-x-ewts .
+    
+    bdr:NMA1726FDD5038C6A7
+        a                   :PersonTitle ;
+        rdfs:label          "rwa lung gdan rabs 05 seng+ge rin chen/"@bo-x-ewts .
+    
+    bdr:NT382906CF76D02C82
+        a                   :Note ;
+        :noteText           "Ming mdzod: 1258-1313\nRe'u-mig: 1258-\nteacher: Nyi-ma-sengge according to Ming mdzod\n1288. Comes to see of Rwa-lung and serves for 25 years\n5th in the series of Rwa-lung gdan-rabs"@en .
+    
+    bdr:NT5AB2E2C2EF146948
+        a                   :Note ;
+        :locationStatement  "p. 27" ;
+        :noteSource         bdr:MW19808 .
+    
+    bdr:NT6466CFC688EA69B0
+        a                   :Note ;
+        :locationStatement  "p. 1023" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT7B63821B2A9DC32E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P918  a             :Person ;
+        skos:prefLabel      "seng+ge rin chen/"@bo-x-ewts ;
+        :hasFather          bdr:P917 ;
+        :hasSon             bdr:P606 ;
+        :isRoot             true ;
+        :note               bdr:NT382906CF76D02C82 , bdr:NT5AB2E2C2EF146948 , bdr:NT6466CFC688EA69B0 , bdr:NT7B63821B2A9DC32E ;
+        :personEvent        bdr:EV2E5EBBD3ED7FE36C , bdr:EV66EE1D3384F32D7A , bdr:EVA628239FDAFEC1AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM424F9E037878FCAA , bdr:NM5F05B6ED409016A3 , bdr:NM990A9CDF4F57005B , bdr:NMA1726FDD5038C6A7 ;
+        :personStudentOf    bdr:P914 , bdr:P916 ;
+        :personTeacherOf    bdr:P606 .
+}

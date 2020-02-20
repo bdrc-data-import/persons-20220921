@@ -1,0 +1,54 @@
+@base          <bdg:P2140> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2140 {
+    bda:P2140  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2140 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "c1/P2140.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2140 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV240BAC020793CF7C
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM41F3F6F7A99E5186
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgyal po/"@bo-x-ewts .
+    
+    bdr:NM66F2D3BDC304F545
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ston pa kun dga' rgyal po/"@bo-x-ewts .
+    
+    bdr:NT078DFB40604516A0
+        a                   :Note ;
+        :noteText           "Ming mdzod, p. 83: Taught the Sbyor drug to Dka'-bzhi Grags-pa-gzhon-nu."@en .
+    
+    bdr:NT6E44ABEF1DDCFF8F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra"@en .
+    
+    bdr:P2140  a            :Person ;
+        skos:prefLabel      "kun dga' rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT078DFB40604516A0 , bdr:NT6E44ABEF1DDCFF8F ;
+        :personEvent        bdr:EV240BAC020793CF7C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM41F3F6F7A99E5186 , bdr:NM66F2D3BDC304F545 ;
+        :personTeacherOf    bdr:P2130 .
+}

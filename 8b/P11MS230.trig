@@ -1,0 +1,58 @@
+@base          <bdg:P11MS230> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS230 {
+    bda:LG6BAB9451E1B9F6C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-24T13:58:34.001Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS230  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS230 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "8b/P11MS230.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS230 ;
+        adm:logEntry        bda:LG6BAB9451E1B9F6C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV778834F53E5744E0
+        a                   :PersonDeath ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EVA38A8396628E7392
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:NMFC44805573DFDC91
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa blo gros/"@bo-x-ewts .
+    
+    bdr:NT8DF8D271F0430587
+        a                   :Note ;
+        :locationStatement  "pp. 413-417" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "biodata :"@en .
+    
+    bdr:P11MS230  a         :Person ;
+        skos:prefLabel      "grags pa blo gros/"@bo-x-ewts ;
+        :hasFather          bdr:P976 ;
+        :hasUnknownKinship  bdr:P979 ;
+        :isRoot             true ;
+        :note               bdr:NT8DF8D271F0430587 ;
+        :personEvent        bdr:EV778834F53E5744E0 , bdr:EVA38A8396628E7392 ;
+        :personName         bdr:NMFC44805573DFDC91 .
+}

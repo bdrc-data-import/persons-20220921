@@ -1,0 +1,68 @@
+@base          <bdg:P3203> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3203 {
+    bda:LGBFB9E92FDF037977
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-09-09T10:09:08.969Z"^^xsd:dateTime ;
+        adm:logMessage      "added sanskrit iats name and edited"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC96C2C32750E5B09
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-28T09:35:43.507Z"^^xsd:dateTime ;
+        adm:logMessage      "name normalized"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3203  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3203 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "1e/P3203.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3203 ;
+        adm:logEntry        bda:LGBFB9E92FDF037977 , bda:LGC96C2C32750E5B09 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE38EB2A06AC09A65
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM4663023EA380A028
+        a                   :PersonOtherName ;
+        rdfs:label          "niskalaMkadeva"@sa-x-ndia .
+    
+    bdr:NMA4AEDFB7C47CF1AA
+        a                   :PersonOtherName ;
+        rdfs:label          "niśkalaṅkadeva"@sa-x-ndia .
+    
+    bdr:NMFDE971BC13CEEF52
+        a                   :PersonPrimaryName ;
+        rdfs:label          "niska laM ka de ba/"@bo-x-ewts .
+    
+    bdr:NTDE1B9CE520716CC7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3203  a            :Person ;
+        skos:prefLabel      "niska laM ka de ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDE1B9CE520716CC7 ;
+        :personEvent        bdr:EVE38EB2A06AC09A65 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4663023EA380A028 , bdr:NMA4AEDFB7C47CF1AA , bdr:NMFDE971BC13CEEF52 ;
+        :personStudentOf    bdr:P0RK155 , bdr:P0RK328 , bdr:P43 ;
+        :personTeacherOf    bdr:P0RK330 , bdr:P3202 .
+}

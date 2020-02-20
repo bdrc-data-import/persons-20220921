@@ -1,0 +1,48 @@
+@base          <bdg:P8410> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8410 {
+    bda:LG939D65A73905D721
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T14:25:53.14Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P8410  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8410 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "24/P8410.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8410 ;
+        adm:logEntry        bda:LG939D65A73905D721 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20E544E9ABB007BD
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM35AE95708D36F6F4
+        a                   :PersonPersonalName ;
+        rdfs:label          "mgon po dpal/"@bo-x-ewts .
+    
+    bdr:P8410  a            :Person ;
+        skos:prefLabel      "mgon po dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV20E544E9ABB007BD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM35AE95708D36F6F4 ;
+        :personStudentOf    bdr:P155 .
+}

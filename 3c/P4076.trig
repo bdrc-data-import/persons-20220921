@@ -1,0 +1,94 @@
+@base          <bdg:P4076> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4076 {
+    bda:LGD749DFE0260BC3DD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T12:09:16.353Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4076  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4076 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "3c/P4076.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4076 ;
+        adm:logEntry        bda:LGD749DFE0260BC3DD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4F285EEC2EA84560
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV977E89487C9D25C0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1809"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC51EEC884DE269BF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1260 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE5394C9ED8104DBA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM229EE93E8AD270C6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM6F823A9C84302F37
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 52 grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM9BD3DAC6EEB3E07F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 52"@bo-x-ewts .
+    
+    bdr:NMBE6A5F3ECFED1A19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdo ba dka' bcu grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT00BDF954B21C97AA
+        a                   :Note ;
+        :locationStatement  "p. 873" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT43F33E8B41042112
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT45EC8128106F1FE1
+        a                   :Note ;
+        :noteText           "Age 26. Enrolled in Bya-khyung\nAge 27. To Dbus for studies at Se-ra Theg-chen-gling Byes.\nTeachers (not recorded): Dge-bshes Thogs-med, Bla-ma 'Jam-dbyangs-pa, Kong-ye Dka'-bcu\nTook title of Dka'-bcu.\nNamed Yongs-'dzin to Khri Rgya-nag-pa by 8th Dalai Lama.\nTravelled to Bei-cin\n1809. Became  Khri of Bya-khyung."@en .
+    
+    bdr:NT69BA4B4C28E0F246
+        a                   :Note ;
+        :locationStatement  "p. 183-186" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P4076  a            :Person ;
+        skos:prefLabel      "grags pa rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00BDF954B21C97AA , bdr:NT43F33E8B41042112 , bdr:NT45EC8128106F1FE1 , bdr:NT69BA4B4C28E0F246 ;
+        :personEvent        bdr:EV4F285EEC2EA84560 , bdr:EV977E89487C9D25C0 , bdr:EVC51EEC884DE269BF , bdr:EVE5394C9ED8104DBA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM229EE93E8AD270C6 , bdr:NM6F823A9C84302F37 , bdr:NM9BD3DAC6EEB3E07F , bdr:NMBE6A5F3ECFED1A19 ;
+        :personStudentOf    bdr:P105 , bdr:P168 .
+}

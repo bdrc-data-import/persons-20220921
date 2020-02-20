@@ -1,0 +1,58 @@
+@base          <bdg:P3CN363> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3CN363 {
+    bda:LG4E68778BAB4158DF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-30T14:23:45.73Z"^^xsd:dateTime ;
+        adm:logMessage      "created record, added event & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3CN363  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3CN363 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "4b/P3CN363.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3CN363 ;
+        adm:logEntry        bda:LG4E68778BAB4158DF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21D8D568D67BA883
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:EVCBD6C8DD1614FDF4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G518 .
+    
+    bdr:NM7FF3D8133E720793
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NT31B4313BE30A9489
+        a                   :Note ;
+        :locationStatement  "p. 122" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "མཁས་གྲུབ་ཁྱུང་པོ་རྣལ་འབྱོར་གྱི་སློབ་མ་ཆོས་ཀྱི་ཉི་མ་ཡིས་གྲ་ར་རིང་བྲག་དཀར་དགོན་ཞེས་པའི་བོན་དགོན་ཞིག་བཏབ་པ་ནི་ཕྱིས་ཀྱི་རྙིང་དགོན་དགེ་རྩེ་བཀྲ་ལེགས་དགོན་གྱི་རྩ་བ་ཡིན་པར་གསལ། འདི་ནི་ཁྱུང་པོའི་སློབ་མ་བོན་ལུགས་པ་ཡིན་ན་ཁྱུང་པོ་དགོང་ལོ་ལྔ་བཅུར་རྒྱ་གར་དུ་ཆོས་ཞུར་མ་ཕེབས་སྔོན་གྱི་སློབ་མ་ཡིན་སྲིད་པས། དུས་རབས་བཅུ་གཅིག་པའི་ནང་གི་ཁམས་ཕྱོགས་ཀྱི་བོན་གྱི་བླ་མ་ཞིག་ཡིན་ངེས་སྙམ།"@bo .
+    
+    bdr:P3CN363  a          :Person ;
+        skos:prefLabel      "chos kyi nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT31B4313BE30A9489 ;
+        :personEvent        bdr:EV21D8D568D67BA883 , bdr:EVCBD6C8DD1614FDF4 ;
+        :personName         bdr:NM7FF3D8133E720793 ;
+        :personStudentOf    bdr:P39 .
+}

@@ -1,0 +1,88 @@
+@base          <bdg:P8LS13128> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13128 {
+    bda:LG36B4FE5371B229BA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG539B656A2B711A00
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-25T09:29:10.012Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG85600BFF63FE9B10
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T09:07:09.425Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE207C4E294CF2E02
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T10:03:05.928Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13128  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13128 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ed/P8LS13128.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13128 ;
+        adm:logEntry        bda:LG36B4FE5371B229BA , bda:LG539B656A2B711A00 , bda:LG85600BFF63FE9B10 , bda:LGE207C4E294CF2E02 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B8C60402304FF16
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVD638C6D9516F5172
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13132 .
+    
+    bdr:NM06E8BC78045CFE44
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rnga rgod 01"@bo-x-ewts .
+    
+    bdr:NM3D4AF9DE4B2D21E9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ngagod 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME0C9AD4E8B3D826A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2D62DDD429B3596A
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 433-434" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "'di ba rnga rgod klu 'bum phyug gi rgyud du 'khrungs/ gcen mo rgan dka' bcu rdo rje rgyal mtshan gyis sku 'bum du slob gnyer mdzad/ mtsho sngon bstan 'dzin wang gis bla mar bkur/ gcung bka' bcu shes rab rgya mtsho 'di nyid 'bras sgo mang chos grwa zhugs gshis gling bsre bka' bcu thob/ rgyal dbang lnga ba chen po nas lo tsA bar bskos te me rgan cho lo gnang /"@en .
+    
+    bdr:NTE1B42DFF8D6B5FA1
+        a                   :Note ;
+        :locationStatement  "p. 143" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "rnga rgod klu 'bum phyug gi sras su 'khrungs shing sku 'bum du slo gner byas/ sog skad la mkhas pas kun gzigs lnga pa chen po'i lo tsA bar bskos te me rgan gyi lo lo gnang /"@en .
+    
+    bdr:P8LS13128  a        :Person ;
+        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2D62DDD429B3596A , bdr:NTE1B42DFF8D6B5FA1 ;
+        :personEvent        bdr:EV0B8C60402304FF16 , bdr:EVD638C6D9516F5172 ;
+        :personName         bdr:NM06E8BC78045CFE44 , bdr:NM3D4AF9DE4B2D21E9 , bdr:NME0C9AD4E8B3D826A .
+}

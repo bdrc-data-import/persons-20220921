@@ -1,0 +1,78 @@
+@base          <bdg:P9420> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9420 {
+    bda:LG7ED77F47367EE5A8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-29T11:29:34.943Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9420  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9420 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "09/P9420.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9420 ;
+        adm:logEntry        bda:LG7ED77F47367EE5A8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV308C9579B44E42AE
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV92F9FE5BF47199BD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVD849F1702969D300
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1811"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM09F0FC0ACED65D14
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang rtse mkhan sprul dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM1FBA1E0090E4CA56
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 25"@bo-x-ewts .
+    
+    bdr:NMF1BB1231387365FE
+        a                   :PersonPersonalName ;
+        rdfs:label          "dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT7E3DE8AF5FDB1CF9
+        a                   :Note ;
+        :locationStatement  "p. 235" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "after retirement from the throne of rong po dgon chen, he became bla ma of bkra shis 'khyil. Later on spend time in khri ka area and founded mo kyog monastery"@en .
+    
+    bdr:NTA7B05F1BC427E377
+        a                   :Note ;
+        :locationStatement  "p. 321" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "byang rtse mkhan sprul dge 'dun bstan 'dzin  ...  lcags lug (1811) la dgon chen gyi khri 'don gnang ba chu sprel lor zur bzhugs mdzad/ khri ka dang nye ba mo kyog bya bar dgon pa zhig btab/"@bo-x-ewts .
+    
+    bdr:P9420  a            :Person ;
+        skos:prefLabel      "dge 'dun bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7E3DE8AF5FDB1CF9 , bdr:NTA7B05F1BC427E377 ;
+        :personEvent        bdr:EV308C9579B44E42AE , bdr:EV92F9FE5BF47199BD , bdr:EVD849F1702969D300 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM09F0FC0ACED65D14 , bdr:NM1FBA1E0090E4CA56 , bdr:NMF1BB1231387365FE .
+}

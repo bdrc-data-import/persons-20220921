@@ -1,0 +1,73 @@
+@base          <bdg:P3450> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3450 {
+    bda:LG27A708C3F0B91ECC
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-11T15:17:14.492Z"^^xsd:dateTime ;
+        adm:logMessage      "added founding year of se ra monastery"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9B7F729D530EDB76
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-02-09T16:02:56.574Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3450  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3450 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "05/P3450.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3450 ;
+        adm:logEntry        bda:LG27A708C3F0B91ECC , bda:LG9B7F729D530EDB76 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31DBD399D44A95FF
+        a                   :PersonDeath ;
+        :onYear             "1435"^^xsd:gYear .
+    
+    bdr:EV70096A804E0F8F7E
+        a                   :PersonBirth ;
+        :onYear             "1354"^^xsd:gYear .
+    
+    bdr:EVE2DA19095EF7F1C8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G154 .
+    
+    bdr:NM94AD7D8BD5F1C345
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byams chen chos rje shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NMD892D3DF5B9D0D77
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NT2175C98B553F0A3D
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 131-138" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\ndates: 1352-1435"@en .
+    
+    bdr:P3450  a            :Person ;
+        skos:prefLabel      "shAkya ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2175C98B553F0A3D ;
+        :personEvent        bdr:EV31DBD399D44A95FF , bdr:EV70096A804E0F8F7E , bdr:EVE2DA19095EF7F1C8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM94AD7D8BD5F1C345 , bdr:NMD892D3DF5B9D0D77 ;
+        :personStudentOf    bdr:P64 ;
+        :personTeacherOf    bdr:P2CZ9156 , bdr:P4340 , bdr:P9727 .
+}

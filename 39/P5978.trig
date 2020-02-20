@@ -1,0 +1,76 @@
+@base          <bdg:P5978> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5978 {
+    bda:LG9BDB93DF3A36143E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-21T17:14:04.951Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE6033225D9B8B6F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-31T10:19:05.112Z"^^xsd:dateTime ;
+        adm:logMessage      "withdran Dup P2JM436"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P5978  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5978 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "39/P5978.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5978 ;
+        adm:logEntry        bda:LG9BDB93DF3A36143E , bda:LGE6033225D9B8B6F2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV7040A362AB9B8F9C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G20 .
+    
+    bdr:EVE8729EC970469768
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM258CCD68C96B984F
+        a                   :PersonPersonalName ;
+        rdfs:label          "zhe chen rab 'byams 03 blo bsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCD6B26867E8971FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1E7660079D43058D
+        a                   :Note ;
+        :locationStatement  "p. 105" .
+    
+    bdr:NT56E1F0363C6AAD67
+        a                   :Note ;
+        :locationStatement  "p. 110" .
+    
+    bdr:NT800C9B3C26B372EB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P5978  a            :Person ;
+        skos:prefLabel      "blo gsal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E7660079D43058D , bdr:NT56E1F0363C6AAD67 , bdr:NT800C9B3C26B372EB ;
+        :personEvent        bdr:EV7040A362AB9B8F9C , bdr:EVE8729EC970469768 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM258CCD68C96B984F , bdr:NMCD6B26867E8971FF ;
+        :personStudentOf    bdr:P2943 , bdr:P5972 , bdr:P8133 ;
+        :personTeacherOf    bdr:P1710 .
+}

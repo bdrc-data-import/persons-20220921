@@ -1,0 +1,96 @@
+@base          <bdg:P603> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P603 {
+    bda:LG75A2400E644A04E6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-02-07T13:47:43.392Z"^^xsd:dateTime ;
+        adm:logMessage      "added ple"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGED81F9034FAD9B69
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T10:37:45.87Z"^^xsd:dateTime ;
+        adm:logMessage      "added office and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P603  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P603 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "88/P603.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P603 ;
+        adm:logEntry        bda:LG75A2400E644A04E6 , bda:LGED81F9034FAD9B69 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30C8A65269D4DD3E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1901"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV3E35B8C1603CD62E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV7CEBD00CF34408C5
+        a                   :PersonDeath ;
+        :onYear             "1905"^^xsd:gYear .
+    
+    bdr:EV7D9008A12346D843
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G218 ;
+        :onYear             "1845"^^xsd:gYear .
+    
+    bdr:EVFA00B3B429124A15
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1903"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NMB64AFDF58BF59E0A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 48"@bo-x-ewts .
+    
+    bdr:NMDB6E16561AF43320
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rin chen/"@bo-x-ewts .
+    
+    bdr:NME67AB6A04E016C4A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 48 'jam dbyangs rin chen/"@bo-x-ewts .
+    
+    bdr:NT0F537806A997AC37
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1901-1903."@en .
+    
+    bdr:NT662E3A86C242223F
+        a                   :Note ;
+        :locationStatement  "p. 163" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NT8CDD51F59705693F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P603  a             :Person ;
+        skos:prefLabel      "'jam dbyangs rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0F537806A997AC37 , bdr:NT662E3A86C242223F , bdr:NT8CDD51F59705693F ;
+        :personEvent        bdr:EV30C8A65269D4DD3E , bdr:EV3E35B8C1603CD62E , bdr:EV7CEBD00CF34408C5 , bdr:EV7D9008A12346D843 , bdr:EVFA00B3B429124A15 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB64AFDF58BF59E0A , bdr:NMDB6E16561AF43320 , bdr:NME67AB6A04E016C4A ;
+        :personStudentOf    bdr:P585 .
+}

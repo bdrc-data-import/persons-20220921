@@ -1,0 +1,56 @@
+@base          <bdg:P00KG07596> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG07596 {
+    bda:LG12DFFE361B09E05A
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-06T16:14:04.39Z"^^xsd:dateTime ;
+        adm:logMessage      "create person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG347DAB7E246EAAEB
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-03-06T16:42:38.287Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG07596  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG07596 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "7d/P00KG07596.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG07596 ;
+        adm:logEntry        bda:LG12DFFE361B09E05A , bda:LG347DAB7E246EAAEB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV95AF3D321B2C890F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EVA663A77DE906AFAB
+        a                   :PersonBirth ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:NM5D2ABDAD2EE89E8B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang thub bstan/"@bo-x-ewts .
+    
+    bdr:P00KG07596  a       :Person ;
+        skos:prefLabel      "ngag dbang thub bstan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV95AF3D321B2C890F , bdr:EVA663A77DE906AFAB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D2ABDAD2EE89E8B ;
+        :personStudentOf    bdr:P9210 .
+}

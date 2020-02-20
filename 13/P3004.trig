@@ -1,0 +1,57 @@
+@base          <bdg:P3004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3004 {
+    bda:P3004  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3004 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "13/P3004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3004 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5646FC4F817587B5
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0D93D8A653B1BD68
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong po mer gen chos rje ngag dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD75FB5A4DA97BC94
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT73F65459856824DE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:NTD8C51230BD74B5DC
+        a                   :Note ;
+        :locationStatement  "p. 322" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "mergan chos rje ngag dbang rgya mtsho \nnyid ni rong bo sha bu nar du 'khrungs/ dbus su phebs/ mdo sngags rigs gnas la sbyangs/ phyir phebs nas u rge grwa tshang gi khri dang kun mkhyen bar ma'i rig gnas slob dpon mdzad/ de'i sprul sku ngag dbang dge 'dun don yod pa red/ dgon chen gyi khrir bzhugs"@en .
+    
+    bdr:P3004  a            :Person ;
+        skos:prefLabel      "ngag dbang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT73F65459856824DE , bdr:NTD8C51230BD74B5DC ;
+        :personEvent        bdr:EV5646FC4F817587B5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0D93D8A653B1BD68 , bdr:NMD75FB5A4DA97BC94 ;
+        :personStudentOf    bdr:P3003 ;
+        :personTeacherOf    bdr:P169 .
+}

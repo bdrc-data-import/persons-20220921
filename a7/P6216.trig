@@ -1,0 +1,63 @@
+@base          <bdg:P6216> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6216 {
+    bda:LGA37B5C0812E9CBFE
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-11-04T12:18:07.012Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6216  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6216 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a7/P6216.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6216 ;
+        adm:logEntry        bda:LGA37B5C0812E9CBFE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0780A0CF6D38DAAE
+        a                   :PersonBirth ;
+        :onYear             "1382"^^xsd:gYear .
+    
+    bdr:EV6FE6F72C0231BF29
+        a                   :PersonDeath ;
+        :onYear             "1445"^^xsd:gYear .
+    
+    bdr:NM46E15CF6604FADD5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snar thang mkhan po shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NM7490EEF0460BC904
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NM8E190A6EB6C7FAE8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje btsun shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NT54891686109ADD98
+        a                   :Note ;
+        :noteText           "Biography in W1AC40"@en .
+    
+    bdr:P6216  a            :Person ;
+        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT54891686109ADD98 ;
+        :personEvent        bdr:EV0780A0CF6D38DAAE , bdr:EV6FE6F72C0231BF29 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM46E15CF6604FADD5 , bdr:NM7490EEF0460BC904 , bdr:NM8E190A6EB6C7FAE8 .
+}

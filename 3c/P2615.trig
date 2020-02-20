@@ -1,0 +1,91 @@
+@base          <bdg:P2615> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2615 {
+    bda:LG453E10685973BF44
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-14T12:15:59.335Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG52D3E7DE8ADF39AA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-28T10:58:08.957Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationships"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2615  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2615 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "3c/P2615.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2615 ;
+        adm:logEntry        bda:LG453E10685973BF44 , bda:LG52D3E7DE8ADF39AA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV70647D5E3864A904
+        a                   :PersonBirth ;
+        :onYear             "1306"^^xsd:gYear .
+    
+    bdr:EV784E36F8492CD116
+        a                   :PersonDeath ;
+        :onYear             "1389"^^xsd:gYear .
+    
+    bdr:NM3C4A92E64A0E90F8
+        a                   :PersonTitle ;
+        rdfs:label          "sngags 'chang gzungs kyi dpal ba/"@bo-x-ewts .
+    
+    bdr:NM760CDC883374EE88
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzungs kyi dpal ba/"@bo-x-ewts .
+    
+    bdr:NM8729CF19466905AE
+        a                   :PersonOtherName ;
+        rdfs:label          "gzungs pa/"@bo-x-ewts .
+    
+    bdr:NMB4E75ABA8E188C3B
+        a                   :PersonTitle ;
+        rdfs:label          "sngags 'chang gzungs pa/"@bo-x-ewts .
+    
+    bdr:NMC2335CF679C2A0F0
+        a                   :PersonTitle ;
+        rdfs:label          "sngags 'chang gzungs kyi dpal/"@bo-x-ewts .
+    
+    bdr:NME1080896BE6011DC
+        a                   :PersonOtherName ;
+        rdfs:label          "gzungs dpal/"@bo-x-ewts .
+    
+    bdr:NME28460799C8C75F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzong pa gzungs kyi dpal ba/"@bo-x-ewts .
+    
+    bdr:NT87D11A1C364604EE
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i khrid kyi 'khor, Pha bong gsan yig, v. 1, pp..160"@en .
+    
+    bdr:NTD0C7A882C6CC306D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa\n\n-- Lam-'bras Rdzong-lugs transmissions"@en .
+    
+    bdr:P2615  a            :Person ;
+        skos:prefLabel      "gzungs kyi dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT87D11A1C364604EE , bdr:NTD0C7A882C6CC306D ;
+        :personEvent        bdr:EV70647D5E3864A904 , bdr:EV784E36F8492CD116 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3C4A92E64A0E90F8 , bdr:NM760CDC883374EE88 , bdr:NM8729CF19466905AE , bdr:NMB4E75ABA8E188C3B , bdr:NMC2335CF679C2A0F0 , bdr:NME1080896BE6011DC , bdr:NME28460799C8C75F8 ;
+        :personStudentOf    bdr:P0RK15 , bdr:P1226 , bdr:P7058 ;
+        :personTeacherOf    bdr:P0RK1251 , bdr:P0RK17 , bdr:P0RK18 , bdr:P2616 , bdr:P502 .
+}

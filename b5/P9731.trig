@@ -1,0 +1,83 @@
+@base          <bdg:P9731> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9731 {
+    bda:LG1F71F91AEB0918CD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-15T14:54:01.304Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7831E9EA85FA13A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T14:54:31.479Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGFCD49B25DE27CA18
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P9731  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9731 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b5/P9731.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9731 ;
+        adm:logEntry        bda:LG1F71F91AEB0918CD , bda:LG7831E9EA85FA13A5 , bda:LGFCD49B25DE27CA18 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58DB23369421989D
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV819E2023DABA854F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2562 .
+    
+    bdr:NM04DA180319E4FD3A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lab Kyabgon 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM13EBB17D3344018C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NMF22D6AA6F3006478
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lab skyabs mgon 06 ngag dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NMFBBC13631C0CD089
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lab skyabs mgon 06"@bo-x-ewts .
+    
+    bdr:NTF02D639429C6BA1F
+        a                   :Note ;
+        :locationStatement  "p. 398" ;
+        :noteSource         bdr:MW29401 ;
+        :noteText           "reckoned as the 6th lab skyabs mgon\naccording to this source is the author of a stotra to the 'jam dbyangs bzhad pa (kun mkhyen pa'i bstod pa dge legs 'bar ba sogs"@en .
+    
+    bdr:P9731  a            :Person ;
+        skos:prefLabel      "ngag dbang grags pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P715 ;
+        :isRoot             true ;
+        :note               bdr:NTF02D639429C6BA1F ;
+        :personEvent        bdr:EV58DB23369421989D , bdr:EV819E2023DABA854F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM04DA180319E4FD3A , bdr:NM13EBB17D3344018C , bdr:NMF22D6AA6F3006478 , bdr:NMFBBC13631C0CD089 .
+}

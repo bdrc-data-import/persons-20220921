@@ -1,0 +1,76 @@
+@base          <bdg:P8LS13354> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13354 {
+    bda:LG361CF2A5A8D8799C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-22T15:09:15.567Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGED5A92CC2B101F64
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGFE298FD454D26B03
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-22T14:14:10.995Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13354  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13354 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1d/P8LS13354.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13354 ;
+        adm:logEntry        bda:LG361CF2A5A8D8799C , bda:LGED5A92CC2B101F64 , bda:LGFE298FD454D26B03 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4605CFEAE81F19DF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4962 .
+    
+    bdr:EV627BA90E204F882B
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13356 .
+    
+    bdr:NM058EE088D4FFD75B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rebtsa Kagyur 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM238F5E91B8F7AC35
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "reb tsha bka' gyur 01"@bo-x-ewts .
+    
+    bdr:NM839FEFEB8B639ED7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge legs d+har+ma/"@bo-x-ewts .
+    
+    bdr:NT6E090C4BF6F4557A
+        a                   :Note ;
+        :locationStatement  "vol. 3, p. 396" ;
+        :noteSource         bdr:MW2CZ7959 ;
+        :noteText           "rnam thar ma rnyed pas zhib phra 'god thabs ma byung /"@bo-x-ewts .
+    
+    bdr:P8LS13354  a        :Person ;
+        skos:prefLabel      "dge legs d+har+ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6E090C4BF6F4557A ;
+        :personEvent        bdr:EV4605CFEAE81F19DF , bdr:EV627BA90E204F882B ;
+        :personName         bdr:NM058EE088D4FFD75B , bdr:NM238F5E91B8F7AC35 , bdr:NM839FEFEB8B639ED7 .
+}

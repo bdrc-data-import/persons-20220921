@@ -1,0 +1,92 @@
+@base          <bdg:P452> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P452 {
+    bda:LGF8F37AC0AF6F1EEE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T10:51:56.29Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGFAFD08CF2E6B0A55
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:25:58.399Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P452  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P452 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "2f/P452.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P452 ;
+        adm:logEntry        bda:LGF8F37AC0AF6F1EEE , bda:LGFAFD08CF2E6B0A55 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BB1088383D81092
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EV34E8605ECF238B38
+        a                   :PersonBirth ;
+        :onYear             "1418"^^xsd:gYear .
+    
+    bdr:EVA577BBA1177C1B29
+        a                   :PersonDeath ;
+        :onYear             "1496"^^xsd:gYear .
+    
+    bdr:EVFAC9787634E6106F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMAEE080634E40DAC0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang grags pa/"@bo-x-ewts .
+    
+    bdr:NMEB5696B43C29BB90
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 12"@bo-x-ewts .
+    
+    bdr:NT1A6F51F276AA270F
+        a                   :Note ;
+        :locationStatement  "p. 421-471" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:NT272E73C774B33216
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "b. 1418; d. 1496; on seat 35 years\nstyled stag lung khri 13.\nb. 'phan yul dar yul bye ma gzhis ka ga zi gdung rgyud."@en .
+    
+    bdr:NT3B62F2E70DB20FEC
+        a                   :Note ;
+        :noteText           "Teaches the Bo-dong-pa teachings to Mi-nyag Rdo-rje-sengge."@en .
+    
+    bdr:NT535EC76B378BA85A
+        a                   :Note ;
+        :locationStatement  "p. 758" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P452  a             :Person ;
+        skos:prefLabel      "ngag dbang grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1A6F51F276AA270F , bdr:NT272E73C774B33216 , bdr:NT3B62F2E70DB20FEC , bdr:NT535EC76B378BA85A ;
+        :personEvent        bdr:EV1BB1088383D81092 , bdr:EV34E8605ECF238B38 , bdr:EVA577BBA1177C1B29 , bdr:EVFAC9787634E6106F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAEE080634E40DAC0 , bdr:NMEB5696B43C29BB90 ;
+        :personStudentOf    bdr:P0RK1314 , bdr:P2627 , bdr:P5808 , bdr:P7159 ;
+        :personTeacherOf    bdr:P3045 , bdr:P4012 , bdr:P447 , bdr:P463 , bdr:P489 , bdr:P5096 , bdr:P5152 , bdr:P856 , bdr:P873 , bdr:P8LS12489 .
+}

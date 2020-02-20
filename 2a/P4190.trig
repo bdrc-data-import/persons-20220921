@@ -1,0 +1,64 @@
+@base          <bdg:P4190> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4190 {
+    bda:LG987B70FED82BCEDD
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:59:53.546Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4190  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4190 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2a/P4190.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4190 ;
+        adm:logEntry        bda:LG987B70FED82BCEDD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F3965AE306C1A7B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1296 ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM0CBA9A3DC32B03DB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rgyal po/"@bo-x-ewts .
+    
+    bdr:NMD5EDFBACC8C8CB2F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sru ba rdo rje rgyal po/"@bo-x-ewts .
+    
+    bdr:NT6F7686C9FB76D556
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Avalokitesvara Practice\n\n-- Dpal-mo Transmissions"@en .
+    
+    bdr:NT8E7FA214F31AA93F
+        a                   :Note ;
+        :locationStatement  "p. 1793" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4190  a            :Person ;
+        skos:prefLabel      "rdo rje rgyal po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F7686C9FB76D556 , bdr:NT8E7FA214F31AA93F ;
+        :personEvent        bdr:EV3F3965AE306C1A7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CBA9A3DC32B03DB , bdr:NMD5EDFBACC8C8CB2F ;
+        :personStudentOf    bdr:P4191 ;
+        :personTeacherOf    bdr:P4445 .
+}

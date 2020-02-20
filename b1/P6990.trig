@@ -1,0 +1,55 @@
+@base          <bdg:P6990> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6990 {
+    bda:LG3ADDAF278AA65747
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-29T11:36:10.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added teachings"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P6990  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6990 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b1/P6990.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6990 ;
+        adm:logEntry        bda:LG3ADDAF278AA65747 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV32276FE0DAF03BBB
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMFEA7784571FCEBBB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NTDEBE74754021E305
+        a                   :Note ;
+        :locationStatement  "f. 47r" ;
+        :noteSource         bdr:MW20915 ;
+        :noteText           "regarded as a reembodiment of ldan ma rtse mang, the secretary of khri srong lde'u btsan; he transmitted in 1717 the dbang and lung of the drag po ye shes rab 'bar of klong gsal snying po to kaH thog rig 'dzin tshe dbang nor bu"@en .
+    
+    bdr:P6990  a            :Person ;
+        skos:prefLabel      "kun bzang rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDEBE74754021E305 ;
+        :personEvent        bdr:EV32276FE0DAF03BBB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMFEA7784571FCEBBB ;
+        :personTeacherOf    bdr:P676 .
+}

@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12361> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12361 {
+    bda:LGC6C9E39FF67B8EF0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T09:30:52.456Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12361  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12361 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b0/P8LS12361.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12361 ;
+        adm:logEntry        bda:LGC6C9E39FF67B8EF0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3CBD713A66C6EF34
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EV579E8F40B46164CB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1909"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM7065C70E18E1ADBF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a khu lha phrug rin po che/"@bo-x-ewts .
+    
+    bdr:NMB39FB57D70076020
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 22"@bo-x-ewts .
+    
+    bdr:NME276FD3B5AF697CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha phrug"@bo-x-ewts .
+    
+    bdr:NTB849EDF02CCA0668
+        a                   :Note ;
+        :locationStatement  "p. 180-183" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12361  a        :Person ;
+        skos:prefLabel      "lha phrug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB849EDF02CCA0668 ;
+        :personEvent        bdr:EV3CBD713A66C6EF34 , bdr:EV579E8F40B46164CB ;
+        :personName         bdr:NM7065C70E18E1ADBF , bdr:NMB39FB57D70076020 , bdr:NME276FD3B5AF697CE .
+}

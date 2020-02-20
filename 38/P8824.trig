@@ -1,0 +1,58 @@
+@base          <bdg:P8824> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8824 {
+    bda:P8824  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8824 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "38/P8824.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8824 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1AFC8E8A91EADB9D
+        a                   :PersonDeath ;
+        :onYear             "1618"^^xsd:gYear .
+    
+    bdr:EVBEE45C0513DEEFB4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G197 .
+    
+    bdr:EVDBF372A76C4A7ACE
+        a                   :PersonBirth ;
+        :onYear             "1592"^^xsd:gYear .
+    
+    bdr:NM4C3B9BA0D2A0DC80
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rab brtan/"@bo-x-ewts .
+    
+    bdr:NMB9FDAE83594C74F2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgam po chos rje bsod nams rab brtan/"@bo-x-ewts .
+    
+    bdr:NT3DA72A7CF86A2DF3
+        a                   :Note ;
+        :locationStatement  "p. 2326, 2331" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1592. sgam po chos rje bsod nams rab brtan 'khrungs\n1618. sgam po chos rje bsod nams rab brtan gshegs"@en .
+    
+    bdr:P8824  a            :Person ;
+        skos:prefLabel      "bsod nams rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3DA72A7CF86A2DF3 ;
+        :personEvent        bdr:EV1AFC8E8A91EADB9D , bdr:EVBEE45C0513DEEFB4 , bdr:EVDBF372A76C4A7ACE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4C3B9BA0D2A0DC80 , bdr:NMB9FDAE83594C74F2 .
+}

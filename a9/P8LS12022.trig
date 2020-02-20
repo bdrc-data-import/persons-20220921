@@ -1,0 +1,96 @@
+@base          <bdg:P8LS12022> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12022 {
+    bda:LG727F905802838A3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-05-14T11:57:35.149Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG77C37001A91C0232
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-08T14:43:43.725Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7A6E936D4E116C11
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-13T14:54:08.017Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB920658B9497BB84
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-05-14T11:52:58.187Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12022  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12022 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "a9/P8LS12022.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12022 ;
+        adm:logEntry        bda:LG727F905802838A3D , bda:LG77C37001A91C0232 , bda:LG7A6E936D4E116C11 , bda:LGB920658B9497BB84 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV71135599C8AAD561
+        a                   :PersonDeath ;
+        :onYear             "1699"^^xsd:gYear .
+    
+    bdr:EV80FC8BCE699534B4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV85BBD5923E70A1B3
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1622"^^xsd:gYear .
+    
+    bdr:EV9364C101FFB71BBC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G294 .
+    
+    bdr:EVC977D871B9A2BAF1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1652"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM53EFE5A2B074D45A
+        a                   :PersonTitle ;
+        rdfs:label          "hor smin grol chos kyi rgyal po 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NM8DB688244D33D365
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 27"@bo-x-ewts .
+    
+    bdr:NM903A96BC17692FFF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NTC1D9C2F2AA46CEC9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P8LS12022  a        :Person ;
+        skos:prefLabel      "'phrin las lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC1D9C2F2AA46CEC9 ;
+        :personEvent        bdr:EV71135599C8AAD561 , bdr:EV80FC8BCE699534B4 , bdr:EV85BBD5923E70A1B3 , bdr:EV9364C101FFB71BBC , bdr:EVC977D871B9A2BAF1 ;
+        :personName         bdr:NM53EFE5A2B074D45A , bdr:NM8DB688244D33D365 , bdr:NM903A96BC17692FFF ;
+        :personStudentOf    bdr:P1727 ;
+        :personTeacherOf    bdr:P1574 , bdr:P209 , bdr:P4248 .
+}

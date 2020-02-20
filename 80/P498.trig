@@ -1,0 +1,50 @@
+@base          <bdg:P498> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P498 {
+    bda:P498  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P498 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "80/P498.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P498 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV37A7838EE67248BA
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMA0A471969B9C15C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan bkra shis/"@bo-x-ewts .
+    
+    bdr:NMD01C454596B4D4A7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'jam mgon dpal ldan bkra shis/"@bo-x-ewts .
+    
+    bdr:NT89D245CEA93F904C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P498  a             :Person ;
+        skos:prefLabel      "dpal ldan bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT89D245CEA93F904C ;
+        :personEvent        bdr:EV37A7838EE67248BA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA0A471969B9C15C0 , bdr:NMD01C454596B4D4A7 ;
+        :personStudentOf    bdr:P484 .
+}

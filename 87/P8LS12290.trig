@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12290> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12290 {
+    bda:LG83F56C809A943700
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T10:59:27.876Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12290  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12290 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "87/P8LS12290.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12290 ;
+        adm:logEntry        bda:LG83F56C809A943700 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV19702BF19AFE4CE5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV42F2BD7AB87DEB4E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NMAD5A67723F888D92
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NMD99EA60A26E1BC27
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 59"@bo-x-ewts .
+    
+    bdr:NMFC633738F921B370
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nang so sku skyes blo bzang mkhas mchog"@bo-x-ewts .
+    
+    bdr:NT7B62A16CA6F4AA34
+        a                   :Note ;
+        :locationStatement  "p. 282" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12290  a        :Person ;
+        skos:prefLabel      "blo bzang mkhas mchog"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B62A16CA6F4AA34 ;
+        :personEvent        bdr:EV19702BF19AFE4CE5 , bdr:EV42F2BD7AB87DEB4E ;
+        :personName         bdr:NMAD5A67723F888D92 , bdr:NMD99EA60A26E1BC27 , bdr:NMFC633738F921B370 .
+}

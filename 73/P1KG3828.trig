@@ -1,0 +1,65 @@
+@base          <bdg:P1KG3828> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3828 {
+    bda:LGA34A51FCE784DB66
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-11-02T14:17:35.187Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGB01F2E36703F2CA1
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-11-03T11:47:18.87Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3828  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3828 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "73/P1KG3828.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3828 ;
+        adm:logEntry        bda:LGA34A51FCE784DB66 , bda:LGB01F2E36703F2CA1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A19CD198944B963
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:EV7DDAB94AA7860DBF
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM18D1645F4A230C70
+        a                   :PersonPersonalName ;
+        rdfs:label          "dgyer gyi btsun pa zla ba grags pa bzang po/"@bo-x-ewts .
+    
+    bdr:NM9922BF3D3C834499
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba grags pa bzang po/"@bo-x-ewts .
+    
+    bdr:NMB3308B013371FE24
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba grags pa/"@bo-x-ewts .
+    
+    bdr:P1KG3828  a         :Person ;
+        skos:prefLabel      "zla ba grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV3A19CD198944B963 , bdr:EV7DDAB94AA7860DBF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18D1645F4A230C70 , bdr:NM9922BF3D3C834499 , bdr:NMB3308B013371FE24 ;
+        :personStudentOf    bdr:P874 .
+}

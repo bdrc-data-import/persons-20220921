@@ -1,0 +1,65 @@
+@base          <bdg:P3JT12060> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JT12060 {
+    bda:LGC3E87A479585CAD7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-01-11T12:29:21.435Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE55F7457D7A86F33
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-02-10T10:12:24.264Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P3JT12060  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JT12060 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "42/P3JT12060.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JT12060 ;
+        adm:logEntry        bda:LGC3E87A479585CAD7 , bda:LGE55F7457D7A86F33 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusProvisional .
+    
+    bdr:EV3D5BD5FE8ABCD808
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVA06B1A2C58578367
+        a                   :PersonBirth ;
+        :onYear             "1890"^^xsd:gYear .
+    
+    bdr:NM504B0EC79C1B3F4B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtogs ldan u rgyan bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NMAF12F68F4E468577
+        a                   :PersonPrimaryName ;
+        rdfs:label          "u rgyan bstan 'dzin nor bu/"@bo-x-ewts .
+    
+    bdr:NT41E391CB25CCF49A
+        a                   :Note ;
+        :locationStatement  "146-156" ;
+        :noteSource         bdr:MW1KG3386 .
+    
+    bdr:P3JT12060  a        :Person ;
+        skos:prefLabel      "u rgyan bstan 'dzin nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT41E391CB25CCF49A ;
+        :personEvent        bdr:EV3D5BD5FE8ABCD808 , bdr:EVA06B1A2C58578367 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM504B0EC79C1B3F4B , bdr:NMAF12F68F4E468577 ;
+        :personStudentOf    bdr:P6002 .
+}

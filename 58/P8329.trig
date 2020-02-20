@@ -1,0 +1,74 @@
+@base          <bdg:P8329> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8329 {
+    bda:LG26BD8B88578D7762
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T15:06:13.588Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnate relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8329  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8329 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "58/P8329.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8329 ;
+        adm:logEntry        bda:LG26BD8B88578D7762 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7ABE20F9F0794525
+        a                   :PersonBirth ;
+        :onYear             "1920"^^xsd:gYear .
+    
+    bdr:EVB890785D11616FF3
+        a                   :PersonDeath ;
+        :onYear             "1971"^^xsd:gYear .
+    
+    bdr:EVDFA6A3881F8FC051
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3953 .
+    
+    bdr:NM120DD971AA55C3FA
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gotsa Choktrul 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM13E8F9B6AAFF9430
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgo tsha mchog sprul 03 'jam dbyangs mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM386F5EE6C67F25BD
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgo tsha mchog sprul 03"@bo-x-ewts .
+    
+    bdr:NMAEDBDC91A8BE8859
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT7FBC5F0A5DEBDB2A
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 236" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "brief biodata\nborn in the 'bri klung pha ri in rab byung 15 lcags sprel\nwrote a commentary on the spyod 'jug and revealse a considerable amount of gter ma of which only a bit survives."@en .
+    
+    bdr:P8329  a            :Person ;
+        skos:prefLabel      "'jam dbyangs mkhyen rab rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8328 ;
+        :isRoot             true ;
+        :note               bdr:NT7FBC5F0A5DEBDB2A ;
+        :personEvent        bdr:EV7ABE20F9F0794525 , bdr:EVB890785D11616FF3 , bdr:EVDFA6A3881F8FC051 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM120DD971AA55C3FA , bdr:NM13E8F9B6AAFF9430 , bdr:NM386F5EE6C67F25BD , bdr:NMAEDBDC91A8BE8859 .
+}

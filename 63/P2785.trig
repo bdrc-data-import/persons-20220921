@@ -1,0 +1,77 @@
+@base          <bdg:P2785> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2785 {
+    bda:LG1700BCCA5B7780CF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-08-06T12:39:08.408Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA93EE930E15F15DA
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-26T11:54:22.753Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGE20D290BD288F090
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-04T12:09:12.95Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and primary title"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2785  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2785 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "63/P2785.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2785 ;
+        adm:logEntry        bda:LG1700BCCA5B7780CF , bda:LGA93EE930E15F15DA , bda:LGE20D290BD288F090 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C1575751B3DC6F8
+        a                   :PersonDeath ;
+        :onYear             "1465"^^xsd:gYear .
+    
+    bdr:EV933AEAC89E4ED5A5
+        a                   :PersonBirth ;
+        :onYear             "1398"^^xsd:gYear .
+    
+    bdr:NM4D2273D88EC82FA2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mnyam med sangs rgyas dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM67E8C1B6943C0AE2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lkug lung pa sangs rgyas dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMFB53A7C6108117D0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas dpal bzang /"@bo-x-ewts .
+    
+    bdr:NTCDBDD120174CEE65
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- shangs pa bka' brgyud pa transmissions"@en .
+    
+    bdr:P2785  a            :Person ;
+        skos:prefLabel      "sangs rgyas dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTCDBDD120174CEE65 ;
+        :personEvent        bdr:EV8C1575751B3DC6F8 , bdr:EV933AEAC89E4ED5A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4D2273D88EC82FA2 , bdr:NM67E8C1B6943C0AE2 , bdr:NMFB53A7C6108117D0 ;
+        :personStudentOf    bdr:P2784 ;
+        :personTeacherOf    bdr:P2786 .
+}

@@ -1,0 +1,44 @@
+@base          <bdg:P850> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P850 {
+    bda:P850  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P850 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "89/P850.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P850 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6FE213FDB4395FBC
+        a                   :PersonBirth ;
+        :onYear             "1932"^^xsd:gYear .
+    
+    bdr:NM2EA765698697DF4D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan dga' rin po che/"@bo-x-ewts .
+    
+    bdr:NTDC3605BE8E4D6541
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
+    
+    bdr:P850  a             :Person ;
+        skos:prefLabel      "bstan dga' rin po che/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDC3605BE8E4D6541 ;
+        :personEvent        bdr:EV6FE213FDB4395FBC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2EA765698697DF4D .
+}

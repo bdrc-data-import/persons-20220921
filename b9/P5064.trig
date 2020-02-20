@@ -1,0 +1,81 @@
+@base          <bdg:P5064> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5064 {
+    bda:LG365EAA2A6560A5F5
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-02-13T19:11:36.391Z"^^xsd:dateTime ;
+        adm:logMessage      "added kinship"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG3B419F073EE42C58
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T15:54:31.49Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P5064  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5064 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b9/P5064.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5064 ;
+        adm:logEntry        bda:LG365EAA2A6560A5F5 , bda:LG3B419F073EE42C58 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A6E64DBC1DDF126
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:EV6CE069DC24F7E52B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1366 ;
+        :onYear             "1786"^^xsd:gYear .
+    
+    bdr:NM4B7561E9139C5994
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "byams pa kun dga' sangs rgyas bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM72BA03B5D540B832
+        a                   :PersonTitle ;
+        rdfs:label          "sde dge yab chen tshe dbang rdo rje rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NMEBF93B1C3ED25318
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rdo rje rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NTEBB27EA985CBB2F2
+        a                   :Note ;
+        :locationStatement  "p. 106" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a teacher of sa skya gong ma kun dga' blo gros\nbyams pa kun dga' sangs rgyas (same?)"@en .
+    
+    bdr:NTFB100DD3AC2C4346
+        a                   :Note ;
+        :noteText           "Became a monk in 1826."@en .
+    
+    bdr:P5064  a            :Person ;
+        skos:prefLabel      "tshe dbang rdo rje rig 'dzin/"@bo-x-ewts ;
+        :hasFather          bdr:P5065 ;
+        :hasMother          bdr:P10MS14671 ;
+        :hasSister          bdr:P1TD46 ;
+        :isRoot             true ;
+        :note               bdr:NTEBB27EA985CBB2F2 , bdr:NTFB100DD3AC2C4346 ;
+        :personEvent        bdr:EV1A6E64DBC1DDF126 , bdr:EV6CE069DC24F7E52B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B7561E9139C5994 , bdr:NM72BA03B5D540B832 , bdr:NMEBF93B1C3ED25318 ;
+        :personStudentOf    bdr:P808 ;
+        :personTeacherOf    bdr:P805 .
+}

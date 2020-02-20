@@ -1,0 +1,65 @@
+@base          <bdg:P4298> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4298 {
+    bda:LG5E6071CF109A7881
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-08T16:58:02.143Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4298  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4298 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "20/P4298.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4298 ;
+        adm:logEntry        bda:LG5E6071CF109A7881 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA81F0F881E6055F7
+        a                   :PersonBirth ;
+        :onYear             "1171"^^xsd:gYear .
+    
+    bdr:EVF030188615BF294F
+        a                   :PersonDeath ;
+        :onYear             "1245"^^xsd:gYear .
+    
+    bdr:NM450DBAA80558D9CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen shes rab/"@bo-x-ewts .
+    
+    bdr:NM7C2BB22FE499C34D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rog zhig po rin chen shes rab/"@bo-x-ewts .
+    
+    bdr:NT8A2BD8B57F44A117
+        a                   :Note ;
+        :locationStatement  "p. 2288" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1245. zhig po rin chen shes rab gshegs"@en .
+    
+    bdr:P4298  a            :Person ;
+        skos:prefLabel      "rin chen shes rab/"@bo-x-ewts ;
+        :hasBrother         bdr:P3762 , bdr:P4301 ;
+        :hasFather          bdr:P4299 ;
+        :hasMother          bdr:P4300 ;
+        :isRoot             true ;
+        :note               bdr:NT8A2BD8B57F44A117 ;
+        :personEvent        bdr:EVA81F0F881E6055F7 , bdr:EVF030188615BF294F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM450DBAA80558D9CD , bdr:NM7C2BB22FE499C34D ;
+        :personStudentOf    bdr:P1243 , bdr:P2210 .
+}

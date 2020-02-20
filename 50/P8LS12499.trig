@@ -1,0 +1,77 @@
+@base          <bdg:P8LS12499> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12499 {
+    bda:LG013398D3A59600B0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T14:24:56.412Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG3F9A2569CEC4F28B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-28T14:19:52.882Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA1097238FDACE600
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGC2AAE17619193BA2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-20T15:57:46.67Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12499  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12499 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "50/P8LS12499.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12499 ;
+        adm:logEntry        bda:LG013398D3A59600B0 , bda:LG3F9A2569CEC4F28B , bda:LGA1097238FDACE600 , bda:LGC2AAE17619193BA2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD8712CAC91564859
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS12800 .
+    
+    bdr:NM2EA3AB53D360B6DB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Taklung Drakra Tulku 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB068A8648E1E5800
+        a                   :PersonPrimaryName ;
+        rdfs:label          "brag ra rat+na/"@bo-x-ewts .
+    
+    bdr:NMB69C01D2762EB92F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "stag lung brag ra sprul sku 01"@bo-x-ewts .
+    
+    bdr:NT9D5DFB8B0BE117D0
+        a                   :Note ;
+        :locationStatement  "p. 323" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "incarnation lineage, perhaps dge lugs pa located in the yar 'brog stag lung area\n\nrgya'i tang tser gsal yang gser snyan du mi 'gro gras\nstag lung brag ra sprul sku'i skye phreng\n1) dang po ni/ brag ra ratna/ yar 'brog spre gdong du 'khrungs/ dgung lo gya gcig la gshegs/"@en .
+    
+    bdr:P8LS12499  a        :Person ;
+        skos:prefLabel      "brag ra rat+na/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D5DFB8B0BE117D0 ;
+        :personEvent        bdr:EVD8712CAC91564859 ;
+        :personName         bdr:NM2EA3AB53D360B6DB , bdr:NMB068A8648E1E5800 , bdr:NMB69C01D2762EB92F .
+}

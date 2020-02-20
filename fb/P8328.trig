@@ -1,0 +1,74 @@
+@base          <bdg:P8328> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8328 {
+    bda:LGBC3A0A64334D9133
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T14:59:07.474Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8328  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8328 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "fb/P8328.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8328 ;
+        adm:logEntry        bda:LGBC3A0A64334D9133 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV33F158A8257B8796
+        a                   :PersonBirth ;
+        :onYear             "1861"^^xsd:gYear .
+    
+    bdr:EV3D414E4D32C2ED50
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3953 .
+    
+    bdr:EV3EBA977BB2E4CFA4
+        a                   :PersonDeath ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:NM19EB7261810173BE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgo tsha mchog sprul 02 lung rtogs bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM51AAF34269B00271
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lung rtogs bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NME03423FC1A0C1390
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gotsa Choktrul 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME2E5D9C8A5C9F2F1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgo tsha mchog sprul 02"@bo-x-ewts .
+    
+    bdr:NTAAB4F59D7C5C9B48
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 236" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "brief biography\nborn in the gad thog tshang\nthe author of a two volume gsung 'bum, only a bit of which survives"@en .
+    
+    bdr:P8328  a            :Person ;
+        skos:prefLabel      "lung rtogs bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8327 ;
+        :isRoot             true ;
+        :note               bdr:NTAAB4F59D7C5C9B48 ;
+        :personEvent        bdr:EV33F158A8257B8796 , bdr:EV3D414E4D32C2ED50 , bdr:EV3EBA977BB2E4CFA4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19EB7261810173BE , bdr:NM51AAF34269B00271 , bdr:NME03423FC1A0C1390 , bdr:NME2E5D9C8A5C9F2F1 .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P3241> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3241 {
+    bda:P3241  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3241 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ae/P3241.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3241 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DC53E807BD9AA1F
+        a                   :PersonDeath ;
+        :onYear             "1397"^^xsd:gYear .
+    
+    bdr:EV891DB9B3BC67C5E4
+        a                   :PersonBirth ;
+        :onYear             "1316"^^xsd:gYear .
+    
+    bdr:NM7EC7696ECA838370
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'jam dbyangs chos kyi dpal ba/"@bo-x-ewts .
+    
+    bdr:NMA495BC7532CB265A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi dpal ba/"@bo-x-ewts .
+    
+    bdr:NT1E90FED4C224BFD9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:NT47DB9103321DCB2C
+        a                   :Note ;
+        :noteText           "Bu-ston's disciple, learned in the Kalacakra"@en .
+    
+    bdr:NT758F2E6FCAD8BA97
+        a                   :Note ;
+        :locationStatement  "p. 80" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:P3241  a            :Person ;
+        skos:prefLabel      "chos kyi dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E90FED4C224BFD9 , bdr:NT47DB9103321DCB2C , bdr:NT758F2E6FCAD8BA97 ;
+        :personEvent        bdr:EV2DC53E807BD9AA1F , bdr:EV891DB9B3BC67C5E4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7EC7696ECA838370 , bdr:NMA495BC7532CB265A ;
+        :personStudentOf    bdr:P155 ;
+        :personTeacherOf    bdr:P64 .
+}

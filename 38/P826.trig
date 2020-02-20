@@ -1,0 +1,69 @@
+@base          <bdg:P826> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P826 {
+    bda:P826  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P826 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "38/P826.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P826 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV53C27B223B4B102F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G834 ;
+        :onYear             "1469"^^xsd:gYear .
+    
+    bdr:EV60E0004A9DBBF2B8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G361 .
+    
+    bdr:EVF88B4C95D2407844
+        a                   :PersonDeath ;
+        :onYear             "1531"^^xsd:gYear .
+    
+    bdr:NM27EC76330FC37D43
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grags pa mtha' yas/"@bo-x-ewts .
+    
+    bdr:NMA2D8DDE4271FB77C
+        a                   :PersonTitle ;
+        rdfs:label          "drung grags pa mtha' yas/"@bo-x-ewts .
+    
+    bdr:NMDC136CB43533EF13
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa grags pa mtha' yas/"@bo-x-ewts .
+    
+    bdr:NT51E1C3B752369A2E
+        a                   :Note ;
+        :noteText           "student chos sku nam mkha' rin chen"@en .
+    
+    bdr:NT9E92372EC4B8A5E2
+        a                   :Note ;
+        :noteText           "Biography written by Ma-pham-rdo-rje, his student, at Ha'u Dgon Zab-don-'brug-rgyas."@en .
+    
+    bdr:P826  a             :Person ;
+        skos:prefLabel      "grags pa mtha' yas/"@bo-x-ewts ;
+        :hasPaternalUncle   bdr:P2422 ;
+        :hasUncle           bdr:P2422 ;
+        :isRoot             true ;
+        :note               bdr:NT51E1C3B752369A2E , bdr:NT9E92372EC4B8A5E2 ;
+        :personEvent        bdr:EV53C27B223B4B102F , bdr:EV60E0004A9DBBF2B8 , bdr:EVF88B4C95D2407844 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27EC76330FC37D43 , bdr:NMA2D8DDE4271FB77C , bdr:NMDC136CB43533EF13 ;
+        :personStudentOf    bdr:P1013 , bdr:P1873 , bdr:P5096 , bdr:P5622 , bdr:P5623 , bdr:P5624 , bdr:P5625 ;
+        :personTeacherOf    bdr:P2419 , bdr:P8350 .
+}

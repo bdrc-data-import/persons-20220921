@@ -1,0 +1,60 @@
+@base          <bdg:P1641> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1641 {
+    bda:LGA6EF30D8D2973C92
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-15T13:55:17.763Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1641  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1641 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "05/P1641.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1641 ;
+        adm:logEntry        bda:LGA6EF30D8D2973C92 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV024FB6545D1F4E0E
+        a                   :PersonBirth ;
+        :onYear             "1892"^^xsd:gYear .
+    
+    bdr:EVE3CE6A18F1661DAE
+        a                   :PersonDeath ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:NM0921C4EF591ADFBA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rdo rje/"@bo-x-ewts .
+    
+    bdr:NMCF30B63E6DFF79FE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbang mda' gyang sprul don grub rdo rje/"@bo-x-ewts .
+    
+    bdr:NTB2E552C037AD8C55
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1641  a            :Person ;
+        skos:prefLabel      "don grub rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2E552C037AD8C55 ;
+        :personEvent        bdr:EV024FB6545D1F4E0E , bdr:EVE3CE6A18F1661DAE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0921C4EF591ADFBA , bdr:NMCF30B63E6DFF79FE ;
+        :personStudentOf    bdr:P5425 .
+}

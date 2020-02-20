@@ -1,0 +1,57 @@
+@base          <bdg:P756> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P756 {
+    bda:LG1ABE4A707F9A7FA0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:05:01.124Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P756  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P756 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f6/P756.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P756 ;
+        adm:logEntry        bda:LG1ABE4A707F9A7FA0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD700EDC9BA6DE1DA
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM16BA02FB3198F6C2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NM5FF0420931367EE0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NTF7062483E9D8895C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P756  a             :Person ;
+        skos:prefLabel      "dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF7062483E9D8895C ;
+        :personEvent        bdr:EVD700EDC9BA6DE1DA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM16BA02FB3198F6C2 , bdr:NM5FF0420931367EE0 ;
+        :personTeacherOf    bdr:P755 .
+}

@@ -1,0 +1,95 @@
+@base          <bdg:P1769> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1769 {
+    bda:LG2F4295137A3865D3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:10:13.963Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title to office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG381C0CAB01B064D5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-22T15:19:20.386Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1769  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1769 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "24/P1769.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1769 ;
+        adm:logEntry        bda:LG2F4295137A3865D3 , bda:LG381C0CAB01B064D5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV231A258E9581904A
+        a                   :PersonDeath ;
+        :onYear             "1730"^^xsd:gYear .
+    
+    bdr:EV413A77B0FEF74AE8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :onYear             "1728"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4AC2C85A538A0E76
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV6FB2189F8718EB88
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4607 .
+    
+    bdr:EVD10625F89AA4665F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVFAA82F98705DB00D
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM095A8673052E1701
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla brang rgyud pa dpon slob dge 'dun rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM7BAABF4E796923DA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB7F0241AC0F1B454
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 05"@bo-x-ewts .
+    
+    bdr:NME6A0DD6DD1EEA7AA
+        a                   :PersonTitle ;
+        rdfs:label          "tsho 'du bla ma dge 'dun rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT91C6B105AC869A8F
+        a                   :Note ;
+        :locationStatement  "pp. 10-44" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "dge lugs master of tantric practice who served as the rgyud pa bla ma of bla brang bkra shis 'khyil; he was replaced by the first sde khri blo bzang don grub as the rgyud pa khri pa in 1731; therefore he must have dief in 1730 or so."@en .
+    
+    bdr:P1769  a            :Person ;
+        skos:prefLabel      "dge 'dun rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT91C6B105AC869A8F ;
+        :personEvent        bdr:EV231A258E9581904A , bdr:EV413A77B0FEF74AE8 , bdr:EV4AC2C85A538A0E76 , bdr:EV6FB2189F8718EB88 , bdr:EVD10625F89AA4665F , bdr:EVFAA82F98705DB00D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM095A8673052E1701 , bdr:NM7BAABF4E796923DA , bdr:NMB7F0241AC0F1B454 , bdr:NME6A0DD6DD1EEA7AA ;
+        :personTeacherOf    bdr:P1768 .
+}

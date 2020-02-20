@@ -1,0 +1,51 @@
+@base          <bdg:P3385> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3385 {
+    bda:P3385  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3385 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ae/P3385.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3385 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA966B25F77095871
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM8F17403547AC585A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMED53362B4D70A5E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snur nyi ma rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT934E7C73DAFADD5D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P3385  a            :Person ;
+        skos:prefLabel      "nyi ma rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT934E7C73DAFADD5D ;
+        :personEvent        bdr:EVA966B25F77095871 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8F17403547AC585A , bdr:NMED53362B4D70A5E3 ;
+        :personStudentOf    bdr:P3384 ;
+        :personTeacherOf    bdr:P3386 .
+}

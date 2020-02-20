@@ -1,0 +1,58 @@
+@base          <bdg:P716> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P716 {
+    bda:P716  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P716 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "bd/P716.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P716 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV78DE94CB13559CC9
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV89DB9D65FA6DF75D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:NM9675B67F9BA1D449
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam gling pa 'jam dbyangs tshul khrims chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM96946CB0CE1A4D12
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs tshul khrims chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMFD0CE28030654053
+        a                   :PersonPersonalName ;
+        rdfs:label          "tshul khrims chos 'phel, bsam gling pa/"@bo-x-ewts .
+    
+    bdr:NT2046AE66A2F7E93A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P716  a             :Person ;
+        skos:prefLabel      "'jam dbyangs tshul khrims chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2046AE66A2F7E93A ;
+        :personEvent        bdr:EV78DE94CB13559CC9 , bdr:EV89DB9D65FA6DF75D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9675B67F9BA1D449 , bdr:NM96946CB0CE1A4D12 , bdr:NMFD0CE28030654053 ;
+        :personTeacherOf    bdr:P711 .
+}

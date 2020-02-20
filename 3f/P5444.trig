@@ -1,0 +1,90 @@
+@base          <bdg:P5444> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5444 {
+    bda:LG36B1D5EE5A35C9DB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-05T15:44:58.053Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG4376270AC075330A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGE0629601551F91E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T12:16:49.553Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5444  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5444 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "3f/P5444.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5444 ;
+        adm:logEntry        bda:LG36B1D5EE5A35C9DB , bda:LG4376270AC075330A , bda:LGE0629601551F91E3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV849D605C73AF883F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:NM5926DDFDECC5E02E
+        a                   :PersonTitle ;
+        rdfs:label          "shag lho 'brug bde chen sprul sku/"@bo-x-ewts .
+    
+    bdr:NM82A5F4D945DE5381
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug bde chen sprul sku 04"@bo-x-ewts .
+    
+    bdr:NM8DE6B6427DAE4D8C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Dechen Tulku 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC354AB577AD8B256
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shag lho 'brug bde chen sprul sku 04 bka' brgyud bstan 'dzin rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMCCBBD72A6DCA7210
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bka' brgyud bstan 'dzin rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT0FC06F6A2CDD879D
+        a                   :Note ;
+        :locationStatement  "p. 330" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ [p. 329] don grub ye shes/ e gong por 'khrungs/ dgung lo don gsum par gshegs/\n2) de'i skye ba bstan 'dzin 'phrin las/ e sman zlar 'khrungs/ dgung lo so bdun par gshegs/\n3) de'i skye ba bka' brgyud 'phrin las rgya mtsho/ e mtsho stod du 'khrungs/ dgung lo zhe gnyis par gshegs/\n4) de'i skye ba bka' brgyud bstan 'dzin rnam rgyal/ e ze dkar mdzes su 'khrungs/ dgung lo nyer dgu la gshegs/"@bo-x-ewts .
+    
+    bdr:NT14F01DD27AA1EC6B
+        a                   :Note ;
+        :noteText           "Bod kyi gal che'i lo rgyus: d. at the age of 29."@en .
+    
+    bdr:NT60BF6E511E0335FE
+        a                   :Note ;
+        :locationStatement  "p. 330" .
+    
+    bdr:P5444  a            :Person ;
+        skos:prefLabel      "bka' brgyud bstan 'dzin rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5443 ;
+        :isRoot             true ;
+        :note               bdr:NT0FC06F6A2CDD879D , bdr:NT14F01DD27AA1EC6B , bdr:NT60BF6E511E0335FE ;
+        :personEvent        bdr:EV849D605C73AF883F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5926DDFDECC5E02E , bdr:NM82A5F4D945DE5381 , bdr:NM8DE6B6427DAE4D8C , bdr:NMC354AB577AD8B256 , bdr:NMCCBBD72A6DCA7210 .
+}

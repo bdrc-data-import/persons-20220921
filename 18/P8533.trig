@@ -1,0 +1,83 @@
+@base          <bdg:P8533> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8533 {
+    bda:LG2E89155EDDD9CA51
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-17T15:50:00.854Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8D9DE9D66B429B65
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T14:42:19.595Z"^^xsd:dateTime ;
+        adm:logMessage      "changed office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF6DC605A27F1DC98
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-08T15:30:01.13Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8533  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8533 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "18/P8533.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8533 ;
+        adm:logEntry        bda:LG2E89155EDDD9CA51 , bda:LG8D9DE9D66B429B65 , bda:LGF6DC605A27F1DC98 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV40F671D6FA8A85C5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EVD07644906B8889B2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF4EED0330B4D350C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:NM6213F4BAB614AD53
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzogs chen mkhan po rig 'dzin 'od zer/"@bo-x-ewts .
+    
+    bdr:NM8FB809D499BF783C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul mkhan rabs 03"@bo-x-ewts .
+    
+    bdr:NME5A4586AC0D06ACD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin 'od zer/"@bo-x-ewts .
+    
+    bdr:NTB38AB131B0B7899D
+        a                   :Note ;
+        :locationStatement  "pp. 329-330, 329-330" ;
+        :noteSource         bdr:MW27022 ;
+        :noteText           "biography"@en .
+    
+    bdr:P8533  a            :Person ;
+        skos:prefLabel      "rig 'dzin 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB38AB131B0B7899D ;
+        :personEvent        bdr:EV40F671D6FA8A85C5 , bdr:EVD07644906B8889B2 , bdr:EVF4EED0330B4D350C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6213F4BAB614AD53 , bdr:NM8FB809D499BF783C , bdr:NME5A4586AC0D06ACD ;
+        :personStudentOf    bdr:P701 ;
+        :personTeacherOf    bdr:P8539 , bdr:P8LS12327 .
+}

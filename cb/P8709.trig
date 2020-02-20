@@ -1,0 +1,53 @@
+@base          <bdg:P8709> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8709 {
+    bda:LGDEC09A6641E5991A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-21T11:05:37.411Z"^^xsd:dateTime ;
+        adm:logMessage      "P8709 withdrawn in favor of P731"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8709  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8709 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cb/P8709.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8709 ;
+        adm:logEntry        bda:LGDEC09A6641E5991A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P731 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVE7728C249DAAC367
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3616B201E61B491A
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9D032432A6741372
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P8709"@en .
+    
+    bdr:P8709  a            :Person ;
+        skos:prefLabel      "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D032432A6741372 ;
+        :personEvent        bdr:EVE7728C249DAAC367 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3616B201E61B491A .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P2900> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2900 {
+    bda:LG1C074A85D63E5CC4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:41:31.906Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2900  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2900 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "36/P2900.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2900 ;
+        adm:logEntry        bda:LG1C074A85D63E5CC4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C87EC2A1C00ED56
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM52E44280A3CB3D52
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkha' 'gro dpal gyi ye shes/"@bo-x-ewts .
+    
+    bdr:NMCA34636A24628AA0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal gyi ye shes/"@bo-x-ewts .
+    
+    bdr:NT710AB00BE3382981
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:P2900  a            :Person ;
+        skos:prefLabel      "dpal gyi ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT710AB00BE3382981 ;
+        :personEvent        bdr:EV3C87EC2A1C00ED56 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM52E44280A3CB3D52 , bdr:NMCA34636A24628AA0 ;
+        :personStudentOf    bdr:P2899 ;
+        :personTeacherOf    bdr:P2901 .
+}

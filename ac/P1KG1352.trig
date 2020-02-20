@@ -1,0 +1,64 @@
+@base          <bdg:P1KG1352> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1352 {
+    bda:LGC10C7C8B46DDD593
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-08T11:57:10.115Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC39DBCA5C36ABE7F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T16:16:11.136Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1352  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1352 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ac/P1KG1352.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1352 ;
+        adm:logEntry        bda:LGC10C7C8B46DDD593 , bda:LGC39DBCA5C36ABE7F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAD5D3550EDD57922
+        a                   :PersonBirth .
+    
+    bdr:EVDB8DC8C51B3742B4
+        a                   :PersonDeath .
+    
+    bdr:NM75C18E28E082FE44
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang /"@bo-x-ewts .
+    
+    bdr:NMA98B6F2D0217BFC9
+        a                   :PersonPersonalName ;
+        rdfs:label          "ding ri ngag dbang /"@bo-x-ewts .
+    
+    bdr:NTEA81DD4BD7774219
+        a                   :Note ;
+        :noteSource         bdr:MW1KG1350 ;
+        :noteText           "biograph of dingri nawang"@en .
+    
+    bdr:P1KG1352  a         :Person ;
+        skos:prefLabel      "ngag dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEA81DD4BD7774219 ;
+        :personEvent        bdr:EVAD5D3550EDD57922 , bdr:EVDB8DC8C51B3742B4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM75C18E28E082FE44 , bdr:NMA98B6F2D0217BFC9 .
+}

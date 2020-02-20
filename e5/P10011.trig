@@ -1,0 +1,59 @@
+@base          <bdg:P10011> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10011 {
+    bda:P10011  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10011 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e5/P10011.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10011 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6712DE79105618C2
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM7F407C91D880EFBB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brang ti dar ma snying po/"@bo-x-ewts .
+    
+    bdr:NMCC00B2E8C592BEA7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dar ma snying po/"@bo-x-ewts .
+    
+    bdr:NT4EE400F50C46922B
+        a                   :Note ;
+        :locationStatement  "p. 28" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "teacher from the brang ti lineage who was one of the preceptors of sa chen kun dga' snying po"@en .
+    
+    bdr:NTF079C7EC0C6F4AD5
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 47" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the major abhidharmakosakarika transmission which passed through tsong kha pa and the 5th dalai lama"@en .
+    
+    bdr:P10011  a           :Person ;
+        skos:prefLabel      "dar ma snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4EE400F50C46922B , bdr:NTF079C7EC0C6F4AD5 ;
+        :personEvent        bdr:EV6712DE79105618C2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7F407C91D880EFBB , bdr:NMCC00B2E8C592BEA7 ;
+        :personStudentOf    bdr:P10010 ;
+        :personTeacherOf    bdr:P10012 , bdr:P10017 , bdr:P1615 .
+}

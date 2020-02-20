@@ -1,0 +1,60 @@
+@base          <bdg:P4430> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4430 {
+    bda:LGB30244E956F9B200
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-02T11:16:40.082Z"^^xsd:dateTime ;
+        adm:logMessage      "dates added and notes revised"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4430  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4430 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "29/P4430.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4430 ;
+        adm:logEntry        bda:LGB30244E956F9B200 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E54907A0E55E2E3
+        a                   :PersonDeath ;
+        :onYear             "1477"^^xsd:gYear .
+    
+    bdr:EVEA5B515E32A98595
+        a                   :PersonBirth ;
+        :onYear             "1403"^^xsd:gYear .
+    
+    bdr:NM2EE2880EB2C48FDD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nam mkha' blo gros/"@bo-x-ewts .
+    
+    bdr:NM9D91E6B456C9C461
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rgyal nam mkha' blo gros/"@bo-x-ewts .
+    
+    bdr:NT9603CB2A36277FFB
+        a                   :Note ;
+        :noteText           "bka' brgyud pa teacher with close relations to the phag mo gru court; the 4th zhwa dmar chos grags ye shes wrote a a biography of nam mkha' blo gros at the sne'u gdong palace"@en .
+    
+    bdr:P4430  a            :Person ;
+        skos:prefLabel      "nam mkha' blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9603CB2A36277FFB ;
+        :personEvent        bdr:EV4E54907A0E55E2E3 , bdr:EVEA5B515E32A98595 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2EE2880EB2C48FDD , bdr:NM9D91E6B456C9C461 ;
+        :personStudentOf    bdr:P1010 .
+}

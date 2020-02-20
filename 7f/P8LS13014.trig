@@ -1,0 +1,65 @@
+@base          <bdg:P8LS13014> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13014 {
+    bda:LGA12E13DCCA60C695
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-11T10:47:27.186Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCE6E7C5AC7322D1D
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-08T14:00:49.277Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13014  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13014 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "7f/P8LS13014.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13014 ;
+        adm:logEntry        bda:LGA12E13DCCA60C695 , bda:LGCE6E7C5AC7322D1D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV72275FACDEC2714A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G157 .
+    
+    bdr:NM02DFFAA1CCC66E06
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tshe mchog gling yongs 'dzin sprul sku 03"@bo-x-ewts .
+    
+    bdr:NM8E154224F5310A29
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tsechok Ling Yongzin Tulku 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMA6163779BBA40250
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe mchog gling sku phreng gsum pa/"@bo-x-ewts .
+    
+    bdr:NT07CDB0A11125DD61
+        a                   :Note ;
+        :noteText           "Among Tibetan Texts, p. 312\nPrimary name is not known"@en .
+    
+    bdr:P8LS13014  a        :Person ;
+        skos:prefLabel      "tshe mchog gling sku phreng gsum pa/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13013 ;
+        :isRoot             true ;
+        :note               bdr:NT07CDB0A11125DD61 ;
+        :personEvent        bdr:EV72275FACDEC2714A ;
+        :personName         bdr:NM02DFFAA1CCC66E06 , bdr:NM8E154224F5310A29 , bdr:NMA6163779BBA40250 .
+}

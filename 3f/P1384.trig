@@ -1,0 +1,51 @@
+@base          <bdg:P1384> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1384 {
+    bda:P1384  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1384 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3f/P1384.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1384 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A2DDF00898DAE25
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM6D879E324B910DBF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "a mtsho/"@bo-x-ewts .
+    
+    bdr:NMEFA99DE2B31C1BAE
+        a                   :PersonTitle ;
+        rdfs:label          "skyu ra bza' a mtsho/"@bo-x-ewts .
+    
+    bdr:NT6CD13947BF931F21
+        a                   :Note ;
+        :noteText           "according to the rnam thar by gling dpon rgya mtsho the subject's full name was kyu ra bza' a mtsho"@en .
+    
+    bdr:P1384  a            :Person ;
+        skos:prefLabel      "a mtsho/"@bo-x-ewts ;
+        :hasHusband         bdr:P1383 ;
+        :hasSon             bdr:P1382 ;
+        :isRoot             true ;
+        :note               bdr:NT6CD13947BF931F21 ;
+        :personEvent        bdr:EV2A2DDF00898DAE25 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM6D879E324B910DBF , bdr:NMEFA99DE2B31C1BAE .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P9183> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9183 {
+    bda:P9183  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9183 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f8/P9183.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9183 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0CF2B00E34A3B27D
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0B0602D1AA88DB88
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo gdan blo bzang tshe ring /"@bo-x-ewts .
+    
+    bdr:NM3588722BCB6E72A4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshe ring /"@bo-x-ewts .
+    
+    bdr:NT2CAAD3899EB9D44E
+        a                   :Note ;
+        :noteSource         bdr:MW28278 ;
+        :noteText           "the writer of this article was deceased when it was published in 1981"@en .
+    
+    bdr:P9183  a            :Person ;
+        skos:prefLabel      "blo bzang tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2CAAD3899EB9D44E ;
+        :personEvent        bdr:EV0CF2B00E34A3B27D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0B0602D1AA88DB88 , bdr:NM3588722BCB6E72A4 .
+}

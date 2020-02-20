@@ -1,0 +1,85 @@
+@base          <bdg:P5302> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5302 {
+    bda:LG53578B854BAF994C
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-10T10:55:53.559Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5302  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5302 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c0/P5302.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5302 ;
+        adm:logEntry        bda:LG53578B854BAF994C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15DEA221AB70FE87
+        a                   :PersonDeath ;
+        :onYear             "1498"^^xsd:gYear .
+    
+    bdr:EV92A17883BC8335E5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1324 ;
+        :onYear             "1424"^^xsd:gYear .
+    
+    bdr:NM940C999D04A9F508
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA751450AAF666379
+        a                   :PersonPersonalName ;
+        rdfs:label          "byams pa rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMADD4A787F2F26F8E
+        a                   :PersonTitle ;
+        rdfs:label          "rdzong chung pa byams pa rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDF87E1421BB52ECA
+        a                   :PersonTitle ;
+        rdfs:label          "gtsang pa byams pa rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF405446F6A849C78
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus srad pa byams pa rdo rje rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT01FE739EE3538B76
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NT334FCE5C7F8CBD70
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 509" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NTDE2DFC174A247978
+        a                   :Note ;
+        :locationStatement  "p. 1403" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:P5302  a            :Person ;
+        skos:prefLabel      "rdo rje rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT01FE739EE3538B76 , bdr:NT334FCE5C7F8CBD70 , bdr:NTDE2DFC174A247978 ;
+        :personEvent        bdr:EV15DEA221AB70FE87 , bdr:EV92A17883BC8335E5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM940C999D04A9F508 , bdr:NMA751450AAF666379 , bdr:NMADD4A787F2F26F8E , bdr:NMDF87E1421BB52ECA , bdr:NMF405446F6A849C78 ;
+        :personStudentOf    bdr:P0RK1282 , bdr:P0RK1283 , bdr:P0RK1608 , bdr:P0RK18 , bdr:P0RK556 , bdr:P0RK997 , bdr:P318 , bdr:P4545 ;
+        :personTeacherOf    bdr:P0RK1609 , bdr:P5800 .
+}

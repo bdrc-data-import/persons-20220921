@@ -1,0 +1,50 @@
+@base          <bdg:P892> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P892 {
+    bda:P892  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P892 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cc/P892.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P892 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV89D0097473FFC898
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM14BB34AD718E7D01
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbon po dkon mchog rin chen/"@bo-x-ewts .
+    
+    bdr:NME573E82023705D54
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog rin chen/"@bo-x-ewts .
+    
+    bdr:NTD87BFCFA79CF1E21
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P892  a             :Person ;
+        skos:prefLabel      "dkon mchog rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD87BFCFA79CF1E21 ;
+        :personEvent        bdr:EV89D0097473FFC898 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14BB34AD718E7D01 , bdr:NME573E82023705D54 ;
+        :personStudentOf    bdr:P875 .
+}

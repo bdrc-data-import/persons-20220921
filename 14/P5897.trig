@@ -1,0 +1,67 @@
+@base          <bdg:P5897> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5897 {
+    bda:LG99C689EBAB34AF51
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T16:53:34.814Z"^^xsd:dateTime ;
+        adm:logMessage      "new and added more info"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LGA128CEE66C96AD5A
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-30T14:24:57.057Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5897  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5897 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "14/P5897.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5897 ;
+        adm:logEntry        bda:LG99C689EBAB34AF51 , bda:LGA128CEE66C96AD5A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE326F17424DA1B8
+        a                   :PersonBirth ;
+        :onYear             "1237"^^xsd:gYear .
+    
+    bdr:NM41B80C94F80B38A4
+        a                   :PersonPersonalName ;
+        rdfs:label          "byang chub 'od zer/"@bo-x-ewts .
+    
+    bdr:NMC82CB39FAD70CDEA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "grub pa dpal/"@bo-x-ewts .
+    
+    bdr:NMF5F0BFD6AE70B7E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang lo tsA ba grub pa dpal/"@bo-x-ewts .
+    
+    bdr:NTF0267C64A90681E7
+        a                   :Note ;
+        :noteText           "important master in the transmission lineage of the ras chung snyan brgyud; he received the teachings from three disciples of khyung tshang pa ye shes bla ma, i, e, thugs sras mar ston tshul khrims 'byung gnas, slob dpon star sgom, annd ma gcig ong jo"@en .
+    
+    bdr:P5897  a            :Person ;
+        skos:prefLabel      "grub pa dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF0267C64A90681E7 ;
+        :personEvent        bdr:EVAE326F17424DA1B8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM41B80C94F80B38A4 , bdr:NMC82CB39FAD70CDEA , bdr:NMF5F0BFD6AE70B7E3 ;
+        :personStudentOf    bdr:P0RK896 , bdr:P10545 , bdr:P10546 , bdr:P5898 , bdr:P8265 ;
+        :personTeacherOf    bdr:P0RK898 , bdr:P5896 , bdr:P7156 .
+}

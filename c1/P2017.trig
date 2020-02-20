@@ -1,0 +1,52 @@
+@base          <bdg:P2017> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2017 {
+    bda:P2017  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2017 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "c1/P2017.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2017 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV12E5FA902C8FAA77
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMB6F186DCF84260FA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon karma chos 'phags/"@bo-x-ewts .
+    
+    bdr:NMBDB20D1B5DE1895A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma chos 'phags/"@bo-x-ewts .
+    
+    bdr:NT79F70E757AD97418
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 173v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "karma kaM tshang bka' brgyud teacher who was a student of chos dbyings rdo rje"@en .
+    
+    bdr:P2017  a            :Person ;
+        skos:prefLabel      "karma chos 'phags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT79F70E757AD97418 ;
+        :personEvent        bdr:EV12E5FA902C8FAA77 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB6F186DCF84260FA , bdr:NMBDB20D1B5DE1895A ;
+        :personStudentOf    bdr:P1382 .
+}

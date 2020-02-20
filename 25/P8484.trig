@@ -1,0 +1,76 @@
+@base          <bdg:P8484> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8484 {
+    bda:LG778D42471EE7C3F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T10:31:12.896Z"^^xsd:dateTime ;
+        adm:logMessage      "add more info and lineage"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P8484  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8484 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "25/P8484.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8484 ;
+        adm:logEntry        bda:LG778D42471EE7C3F2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEC4E25A979035D65
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVF0C8D05F2B7FCDE5
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3090 ;
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:NM04FB97A1D078253D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo rams pa 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM491F54B8774E1E43
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 05"@bo-x-ewts .
+    
+    bdr:NM58DB9C9AC37B511D
+        a                   :PersonTitle ;
+        rdfs:label          "rnga ba sgo mang khri rabs 05 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM649AC5A021C8B384
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2322F8B9AC464259
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "no biography available to the author of this work"@en .
+    
+    bdr:NTBB0363F1F9A47BDD
+        a                   :Note ;
+        :locationStatement  "pp. 1-2 (1st group)" ;
+        :noteSource         bdr:MW27015 ;
+        :noteText           "contains biography of author"@en .
+    
+    bdr:P8484  a            :Person ;
+        skos:prefLabel      "'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2322F8B9AC464259 , bdr:NTBB0363F1F9A47BDD ;
+        :personEvent        bdr:EVEC4E25A979035D65 , bdr:EVF0C8D05F2B7FCDE5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM04FB97A1D078253D , bdr:NM491F54B8774E1E43 , bdr:NM58DB9C9AC37B511D , bdr:NM649AC5A021C8B384 .
+}

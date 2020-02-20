@@ -1,0 +1,112 @@
+@base          <bdg:P8845> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8845 {
+    bda:LG54B34B4E39BDE7E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-09-28T09:12:23.557Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, birth and death period, office and notes"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7F440F108914AEA8
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T17:00:30.993Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P8845  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8845 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "6a/P8845.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8845 ;
+        adm:logEntry        bda:LG54B34B4E39BDE7E7 , bda:LG7F440F108914AEA8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A2623BFB360466A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:EV12251E907D374D4C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:EV1AE2FE87269AB70C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4144 ;
+        :onYear             "1502"^^xsd:gYear .
+    
+    bdr:EV239CD606540499EC
+        a                   :PersonDeath ;
+        :onYear             "1569"^^xsd:gYear .
+    
+    bdr:EVAE12F4E8E837FC7C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1566"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB245DD63DFF7A685
+        a                   :PersonDeath ;
+        :onYear             "1570"^^xsd:gYear .
+    
+    bdr:EVD75407CCB93AB2FD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G180 ;
+        :onYear             "1566"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVF9D30702FAB1AA31
+        a                   :PersonLeavesOffice ;
+        :onYear             "1569"^^xsd:gYear .
+    
+    bdr:NM50610A0641DA3A55
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje drung 'jam dbyangs bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NM51FEFF15A2B5CCB9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs bshes gnyen/"@bo-x-ewts .
+    
+    bdr:NMBC6BF6B25B498E7D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "chab mdo byams pa gling gdan rabs 11"@bo-x-ewts .
+    
+    bdr:NT429B31D79E84133C
+        a                   :Note ;
+        :locationStatement  "p. 96-97" ;
+        :noteSource         bdr:MW1KG3372 ;
+        :noteText           "studied 8 years at sa sgang\nserved chos rje of ka mda' for 4 years\n7 year dpon slob of chab mdo monastery\nfounded ru zo monasteery in earth-dragon year"@en .
+    
+    bdr:NT9247B97516ACA6A8
+        a                   :Note ;
+        :locationStatement  "p. 291-292" ;
+        :noteSource         bdr:MW00KG01519 .
+    
+    bdr:NTB3E75CCF929EDC38
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1566. rje drung 'jam dbyangs bshes gnyen chab mdo'i khrir phebs\n1569. chab mdo rje drung 'jam dbyangs bshes gnyen gshegs"@en .
+    
+    bdr:P8845  a            :Person ;
+        skos:prefLabel      "'jam dbyangs bshes gnyen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT429B31D79E84133C , bdr:NT9247B97516ACA6A8 , bdr:NTB3E75CCF929EDC38 ;
+        :personEvent        bdr:EV0A2623BFB360466A , bdr:EV12251E907D374D4C , bdr:EV1AE2FE87269AB70C , bdr:EV239CD606540499EC , bdr:EVAE12F4E8E837FC7C , bdr:EVB245DD63DFF7A685 , bdr:EVD75407CCB93AB2FD , bdr:EVF9D30702FAB1AA31 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM50610A0641DA3A55 , bdr:NM51FEFF15A2B5CCB9 , bdr:NMBC6BF6B25B498E7D ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jedrung-Jamyang-Shenyin/11597"^^xsd:anyURI .
+}

@@ -1,0 +1,86 @@
+@base          <bdg:P1062> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1062 {
+    bda:LG050A7C83C3B91C02
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-13T15:40:43.839Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG2B734FBD7F75DE0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-13T15:39:27.312Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of death and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG66460CEFC4E6983C
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T14:41:12.232Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P1062  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1062 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ba/P1062.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1062 ;
+        adm:logEntry        bda:LG050A7C83C3B91C02 , bda:LG2B734FBD7F75DE0A , bda:LG66460CEFC4E6983C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A02540862420894
+        a                   :PersonBirth ;
+        :notAfter           "1250"^^xsd:gYear ;
+        :notBefore          "1240"^^xsd:gYear .
+    
+    bdr:EVC783358E5E571C38
+        a                   :PersonDeath ;
+        :onYear             "1307"^^xsd:gYear .
+    
+    bdr:NM381F1B8DDA7630A5
+        a                   :PersonTitle ;
+        rdfs:label          "zhang dkon mchog dpal/"@bo-x-ewts .
+    
+    bdr:NM49E843F20EFC3AE1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zhang ston dkon mchog dpal/"@bo-x-ewts .
+    
+    bdr:NMEE321C2F355BC9FD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog dpal/"@bo-x-ewts .
+    
+    bdr:NT1AE7EB7DEA598FA4
+        a                   :Note ;
+        :locationStatement  "p. 2287, 2288" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1240. zhang ston dkon mchog dpal 'khrungs\n1250. 'ga' zhig gis zhang ston dkon mchog dpal 'khrungs par gsungs pa brtag"@en .
+    
+    bdr:NT56C0CA21291CF37C
+        a                   :Note ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "[p. 219] student of the sa skya hierarch 'gro mgon 'phags pa"@en .
+    
+    bdr:P1062  a            :Person ;
+        skos:prefLabel      "dkon mchog dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1AE7EB7DEA598FA4 , bdr:NT56C0CA21291CF37C ;
+        :personEvent        bdr:EV8A02540862420894 , bdr:EVC783358E5E571C38 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM381F1B8DDA7630A5 , bdr:NM49E843F20EFC3AE1 , bdr:NMEE321C2F355BC9FD ;
+        :personStudentOf    bdr:P0RK123 , bdr:P0RK1411 , bdr:P1048 ;
+        :personTeacherOf    bdr:P0RK1770 , bdr:P3092 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Zhangton-Konchok-Pel/2203"^^xsd:anyURI .
+}

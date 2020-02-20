@@ -1,0 +1,60 @@
+@base          <bdg:P9092> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9092 {
+    bda:LG229B6B5C7146A2A2
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:17.574Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P9092  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9092 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "04/P9092.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9092 ;
+        adm:logEntry        bda:LG229B6B5C7146A2A2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4DB045CF344F911C
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM0436A98F5B480B62
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma bu khrid/"@bo-x-ewts .
+    
+    bdr:NM47F5A00A29FC9A79
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snying ri ba pad+ma bu khrid/"@bo-x-ewts .
+    
+    bdr:NTAE7A55A4E797DA94
+        a                   :Note ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as one of the two consorts of sa skya pa padma bdud 'dul dbang phyug\n\nsnying ri pa padma bu khrid dang zhing skyong dbang mo zhes pa khab tu bzhes"@en .
+    
+    bdr:P9092  a            :Person ;
+        skos:prefLabel      "pad+ma bu khrid/"@bo-x-ewts ;
+        :hasHusband         bdr:P808 ;
+        :hasSon             bdr:P811 ;
+        :isRoot             true ;
+        :note               bdr:NTAE7A55A4E797DA94 ;
+        :personEvent        bdr:EV4DB045CF344F911C ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM0436A98F5B480B62 , bdr:NM47F5A00A29FC9A79 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Yuthok-Dorje-Yudon/11798"^^xsd:anyURI .
+}

@@ -1,0 +1,57 @@
+@base          <bdg:P2KG209846> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG209846 {
+    bda:LG7C44DE9E19E3DE7C
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-30T11:40:32.97Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG209846  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG209846 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "34/P2KG209846.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG209846 ;
+        adm:logEntry        bda:LG7C44DE9E19E3DE7C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV147AB5FBA4BB3D81
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3232 .
+    
+    bdr:EV85B356C1A667BB2B
+        a                   :PersonDeath ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:EVC208A7012AEAA3A1
+        a                   :PersonBirth ;
+        :onYear             "1925"^^xsd:gYear .
+    
+    bdr:NM0818E756C72E7777
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge ldan dam chos kun rgyas gling gyi gdan rabs 12 rje btsun skal bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM5B57856CC54B48E9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang tshul khrims/"@bo-x-ewts .
+    
+    bdr:P2KG209846  a       :Person ;
+        skos:prefLabel      "skal bzang tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV147AB5FBA4BB3D81 , bdr:EV85B356C1A667BB2B , bdr:EVC208A7012AEAA3A1 ;
+        :personName         bdr:NM0818E756C72E7777 , bdr:NM5B57856CC54B48E9 .
+}

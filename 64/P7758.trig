@@ -1,0 +1,56 @@
+@base          <bdg:P7758> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7758 {
+    bda:P7758  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7758 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "64/P7758.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7758 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA47DE63AB0098DD9
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVEDBA0CE9D4E45903
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3482 .
+    
+    bdr:NM1471FF58BB1161D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'phags/"@bo-x-ewts .
+    
+    bdr:NM2DF9E2F88DEA123A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang sems chos 'phags/"@bo-x-ewts .
+    
+    bdr:NT6984738459153E61
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 550" ;
+        :noteSource         bdr:MW22378 ;
+        :noteText           "founds the monasteries of nyang po sang sing sgang, gla ru pa, and dge 'dun sgang"@en .
+    
+    bdr:P7758  a            :Person ;
+        skos:prefLabel      "chos 'phags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6984738459153E61 ;
+        :personEvent        bdr:EVA47DE63AB0098DD9 , bdr:EVEDBA0CE9D4E45903 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1471FF58BB1161D8 , bdr:NM2DF9E2F88DEA123A ;
+        :personStudentOf    bdr:P64 .
+}

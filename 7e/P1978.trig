@@ -1,0 +1,58 @@
+@base          <bdg:P1978> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1978 {
+    bda:P1978  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1978 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7e/P1978.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1978 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20E3520738798775
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV6C0FDB2C0B8E7B7F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G325 .
+    
+    bdr:NM1A5FF070D9CBF924
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan/"@bo-x-ewts .
+    
+    bdr:NM57C21654F2420A8A
+        a                   :PersonPersonalName ;
+        rdfs:label          "gru kyA rab 'byams pa bsam gtan/"@bo-x-ewts .
+    
+    bdr:NMBF8E0BCAEF38CDE1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gru kyA rab 'byams pa/"@bo-x-ewts .
+    
+    bdr:NT413AAF65F89E8173
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1978  a            :Person ;
+        skos:prefLabel      "bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT413AAF65F89E8173 ;
+        :personEvent        bdr:EV20E3520738798775 , bdr:EV6C0FDB2C0B8E7B7F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1A5FF070D9CBF924 , bdr:NM57C21654F2420A8A , bdr:NMBF8E0BCAEF38CDE1 ;
+        :personTeacherOf    bdr:P1975 .
+}

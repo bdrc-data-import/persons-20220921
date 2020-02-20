@@ -1,0 +1,56 @@
+@base          <bdg:P6249> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6249 {
+    bda:LG23D83F86FB9A4CAD
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-02T15:40:08.121Z"^^xsd:dateTime ;
+        adm:logMessage      "added studend of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6249  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6249 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "46/P6249.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6249 ;
+        adm:logEntry        bda:LG23D83F86FB9A4CAD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV73980B4E0CE567AD
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM27D2260F468FDA91
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3EAAC0BCE1E791C2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM41D27F385383B211
+        a                   :PersonPersonalName ;
+        rdfs:label          "mkhan po rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P6249  a            :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV73980B4E0CE567AD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27D2260F468FDA91 , bdr:NM3EAAC0BCE1E791C2 , bdr:NM41D27F385383B211 ;
+        :personStudentOf    bdr:P1KG17545 .
+}

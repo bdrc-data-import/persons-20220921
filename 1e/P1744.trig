@@ -1,0 +1,59 @@
+@base          <bdg:P1744> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1744 {
+    bda:P1744  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1744 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "1e/P1744.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1744 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV401B2F4907D4765E
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV5220D77778DB3EE7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G299 .
+    
+    bdr:NM36CDCD9364E2A6EF
+        a                   :PersonPersonalName ;
+        rdfs:label          "mdzod dge mkhas btsun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM59D2363740A207D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdzod dge"@bo-x-ewts .
+    
+    bdr:NMEF272FB73DE9FAF5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhas btsun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTC8A14CBF4A6AC99F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1744  a            :Person ;
+        skos:prefLabel      "mkhas btsun bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC8A14CBF4A6AC99F ;
+        :personEvent        bdr:EV401B2F4907D4765E , bdr:EV5220D77778DB3EE7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM36CDCD9364E2A6EF , bdr:NM59D2363740A207D6 , bdr:NMEF272FB73DE9FAF5 ;
+        :personStudentOf    bdr:P199 ;
+        :personTeacherOf    bdr:P2212 .
+}

@@ -1,0 +1,77 @@
+@base          <bdg:P8LS12328> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12328 {
+    bda:LGDC1AA763181BEADF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-17T12:50:23.971Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12328  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12328 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b9/P8LS12328.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12328 ;
+        adm:logEntry        bda:LGDC1AA763181BEADF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2EC41CEC7790A842
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G18 .
+    
+    bdr:EV768AF72280E4A381
+        a                   :PersonBirth ;
+        :notAfter           "2099"^^xsd:gYear ;
+        :notBefore          "2000"^^xsd:gYear .
+    
+    bdr:EVACF199797683E528
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G18 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM776E32466B084639
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dpal yul gdan rabs 12"@bo-x-ewts .
+    
+    bdr:NM80DAF6F8C11C09BF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mchog sprul o rgyan/"@bo-x-ewts .
+    
+    bdr:NM8EB7D530C89FF990
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sku chen o rgyan/"@bo-x-ewts .
+    
+    bdr:NMAB63E717A124E20F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Kuchen Orgyan"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC15C603EC4016FFB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan/"@bo-x-ewts .
+    
+    bdr:NT3C0A256E62A8735A
+        a                   :Note ;
+        :locationStatement  "p. 131" ;
+        :noteSource         bdr:MW27022 .
+    
+    bdr:P8LS12328  a        :Person ;
+        skos:prefLabel      "o rgyan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C0A256E62A8735A ;
+        :personEvent        bdr:EV2EC41CEC7790A842 , bdr:EV768AF72280E4A381 , bdr:EVACF199797683E528 ;
+        :personName         bdr:NM776E32466B084639 , bdr:NM80DAF6F8C11C09BF , bdr:NM8EB7D530C89FF990 , bdr:NMAB63E717A124E20F , bdr:NMC15C603EC4016FFB .
+}

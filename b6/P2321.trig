@@ -1,0 +1,51 @@
+@base          <bdg:P2321> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2321 {
+    bda:P2321  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2321 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b6/P2321.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2321 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV869A8AF643F8B883
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM086BF5F0038E8F6D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dung dkar tshangs dbyangs rin chen/"@bo-x-ewts .
+    
+    bdr:NM81C8F78330F75F2C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshangs dbyangs rin chen/"@bo-x-ewts .
+    
+    bdr:NTE2805111C37F00D4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2321  a            :Person ;
+        skos:prefLabel      "tshangs dbyangs rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE2805111C37F00D4 ;
+        :personEvent        bdr:EV869A8AF643F8B883 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM086BF5F0038E8F6D , bdr:NM81C8F78330F75F2C ;
+        :personStudentOf    bdr:P107 ;
+        :personTeacherOf    bdr:P2315 .
+}

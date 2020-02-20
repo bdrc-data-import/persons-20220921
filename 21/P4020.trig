@@ -1,0 +1,57 @@
+@base          <bdg:P4020> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4020 {
+    bda:LGB6FE555F2B27CD1D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-02T14:56:19.582Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p3092"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P4020  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4020 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "21/P4020.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4020 ;
+        adm:logEntry        bda:LGB6FE555F2B27CD1D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P3092 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV5940C63A6E8AB079
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM438F3399E9C3F868
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag phug pa bsod nams dpal/"@bo-x-ewts .
+    
+    bdr:NM63D841966FE9C685
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dpal/"@bo-x-ewts .
+    
+    bdr:NTAB624689E7F8A891
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P3092"@en .
+    
+    bdr:P4020  a            :Person ;
+        skos:prefLabel      "bsod nams dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAB624689E7F8A891 ;
+        :personEvent        bdr:EV5940C63A6E8AB079 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM438F3399E9C3F868 , bdr:NM63D841966FE9C685 .
+}

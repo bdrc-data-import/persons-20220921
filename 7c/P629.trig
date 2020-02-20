@@ -1,0 +1,73 @@
+@base          <bdg:P629> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P629 {
+    bda:LG2DC9ADE03796210F
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-13T17:13:51.566Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG946B28976EE52B19
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-12-18T15:06:45.129Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P629  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P629 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7c/P629.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P629 ;
+        adm:logEntry        bda:LG2DC9ADE03796210F , bda:LG946B28976EE52B19 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV800EB48B7B43D937
+        a                   :PersonDeath ;
+        :onYear             "1283"^^xsd:gYear .
+    
+    bdr:EVEF8FE3D7168A6324
+        a                   :PersonBirth ;
+        :onYear             "1248"^^xsd:gYear .
+    
+    bdr:NM1E475931305DEBC7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "jo mo sman mo/"@bo-x-ewts .
+    
+    bdr:NMAB69B1C79332DD1C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skal ldan jo sman/"@bo-x-ewts .
+    
+    bdr:NT1395FD7C0C536A33
+        a                   :Note ;
+        :locationStatement  "f. 150v" ;
+        :noteSource         bdr:MW19708 ;
+        :noteText           "female revealer of treasures, both texts and blessing bestowing objects\nshe was the first to see a version of the bai ro 'dra 'bag chen mo\nit was first recovered by mi nyag 'byung grags who, having found none who was worthy to receive it, concealed it as a hidden treasure; it was eventually recovered by jo sras zhang chung who passed in on to zhang chung gnas gsar ba\nit was he who buried it at brag seng go kha gdangs where skal ldan jo sman recovered it\nthis life of bai ro tsa na has been passed on and treasured to  this day"@en .
+    
+    bdr:NT39BC80B7025F7A26
+        a                   :Note ;
+        :locationStatement  "p. 2288" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1248. jo mo sman mo 'khrungs"@en .
+    
+    bdr:P629  a             :Person ;
+        skos:prefLabel      "jo mo sman mo/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1395FD7C0C536A33 , bdr:NT39BC80B7025F7A26 ;
+        :personEvent        bdr:EV800EB48B7B43D937 , bdr:EVEF8FE3D7168A6324 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM1E475931305DEBC7 , bdr:NMAB69B1C79332DD1C ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Jomo-Menmo/8868"^^xsd:anyURI .
+}

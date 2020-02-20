@@ -1,0 +1,53 @@
+@base          <bdg:P1KG18834> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG18834 {
+    bda:LGFE3673E61D5058D4
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-11-04T12:00:42.421Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG18834  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG18834 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "81/P1KG18834.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG18834 ;
+        adm:logEntry        bda:LGFE3673E61D5058D4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD690CE4BB7F2BF6D
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:NM4EE0EAA95DB2355A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "eric grinstead"@en .
+    
+    bdr:NM9118838E68830E41
+        a                   :PersonPersonalName ;
+        rdfs:label          "eric douglas grinstead"@en .
+    
+    bdr:NME2CCFCD3B3B26A07
+        a                   :PersonReversal ;
+        rdfs:label          "grinstead, eric"@en .
+    
+    bdr:P1KG18834  a        :Person ;
+        skos:prefLabel      "eric grinstead"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EVD690CE4BB7F2BF6D ;
+        :personName         bdr:NM4EE0EAA95DB2355A , bdr:NM9118838E68830E41 , bdr:NME2CCFCD3B3B26A07 .
+}

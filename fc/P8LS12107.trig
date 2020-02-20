@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12107> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12107 {
+    bda:LGE1DAD4DF89331C1D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-09T09:43:30.914Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12107  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12107 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fc/P8LS12107.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12107 ;
+        adm:logEntry        bda:LGE1DAD4DF89331C1D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22744D98C1267393
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1825"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV4ECDBFFAF703D84C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV6EAD0119D0694016
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM8DCFA0C1059E21A7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "u ru su dge bshes bshad sgrub nyi ma/"@bo-x-ewts .
+    
+    bdr:NMCFC47DFD1C4377EC
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 43"@bo-x-ewts .
+    
+    bdr:NME0861CB27ADAD1A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bshad sgrub nyi ma/"@bo-x-ewts .
+    
+    bdr:NTA2412A5B3290C681
+        a                   :Note ;
+        :locationStatement  "p. 262-263" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12107  a        :Person ;
+        skos:prefLabel      "bshad sgrub nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA2412A5B3290C681 ;
+        :personEvent        bdr:EV22744D98C1267393 , bdr:EV4ECDBFFAF703D84C , bdr:EV6EAD0119D0694016 ;
+        :personName         bdr:NM8DCFA0C1059E21A7 , bdr:NMCFC47DFD1C4377EC , bdr:NME0861CB27ADAD1A9 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P2204> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2204 {
+    bda:LGC922459D1A5CD2FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T11:31:45.616Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGEAD96CD33470D169
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-01-21T17:53:08.099Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2204  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2204 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "2f/P2204.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2204 ;
+        adm:logEntry        bda:LGC922459D1A5CD2FD , bda:LGEAD96CD33470D169 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV22065A917B6A56E3
+        a                   :PersonDeath ;
+        :onYear             "1838"^^xsd:gYear .
+    
+    bdr:EV994E918592C28C98
+        a                   :PersonBirth ;
+        :onYear             "1786"^^xsd:gYear .
+    
+    bdr:NM7AFCA11A985960E2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NMA26033FE15E12FA5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rang grol/"@bo-x-ewts .
+    
+    bdr:NT62BD504BED27185A
+        a                   :Note ;
+        :locationStatement  "introd." ;
+        :noteSource         bdr:MW29284 ;
+        :noteText           "biography"@en .
+    
+    bdr:P2204  a            :Person ;
+        skos:prefLabel      "pad+ma rang grol/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT62BD504BED27185A ;
+        :personEvent        bdr:EV22065A917B6A56E3 , bdr:EV994E918592C28C98 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7AFCA11A985960E2 , bdr:NMA26033FE15E12FA5 ;
+        :personStudentOf    bdr:P287 , bdr:P2JM467 , bdr:P696 ;
+        :personTeacherOf    bdr:P3639 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Pema-Rangdol/3883"^^xsd:anyURI .
+}

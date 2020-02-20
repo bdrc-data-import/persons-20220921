@@ -1,0 +1,65 @@
+@base          <bdg:P5157> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5157 {
+    bda:LGD07A8CB5DD12A063
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-07T09:58:40.586Z"^^xsd:dateTime ;
+        adm:logMessage      "created incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5157  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5157 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b6/P5157.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5157 ;
+        adm:logEntry        bda:LGD07A8CB5DD12A063 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV21BF23D56CD22DF5
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG104 .
+    
+    bdr:EV2389C03584CF1753
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:EVC1BA4B062CD198B0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM4E1BBA69C7928FD6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM9A82B376EBF0D1D6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzi sgar 06 ngag dbang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT2A1F38F1F630E792
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P5157  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5156 ;
+        :isRoot             true ;
+        :note               bdr:NT2A1F38F1F630E792 ;
+        :personEvent        bdr:EV21BF23D56CD22DF5 , bdr:EV2389C03584CF1753 , bdr:EVC1BA4B062CD198B0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4E1BBA69C7928FD6 , bdr:NM9A82B376EBF0D1D6 .
+}

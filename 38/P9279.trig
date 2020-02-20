@@ -1,0 +1,50 @@
+@base          <bdg:P9279> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9279 {
+    bda:P9279  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9279 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "38/P9279.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9279 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA4A2B176F548152E
+        a                   :PersonBirth ;
+        :onYear             "1820"^^xsd:gYear .
+    
+    bdr:NMA699CF6ACEB87CC8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mi zhig g.yung drung 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMD290AB01A345D164
+        a                   :PersonPrimaryName ;
+        rdfs:label          "g.yung drung 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NTAC8A78E73EE2FAC8
+        a                   :Note ;
+        :locationStatement  "p. 298" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon po teacher\nbirth noted in 1820"@en .
+    
+    bdr:P9279  a            :Person ;
+        skos:prefLabel      "g.yung drung 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAC8A78E73EE2FAC8 ;
+        :personEvent        bdr:EVA4A2B176F548152E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA699CF6ACEB87CC8 , bdr:NMD290AB01A345D164 .
+}

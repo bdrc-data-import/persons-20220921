@@ -1,0 +1,55 @@
+@base          <bdg:P2389> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2389 {
+    bda:P2389  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2389 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "44/P2389.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2389 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7674A90AC8AEFF13
+        a                   :PersonBirth ;
+        :onYear             "1339"^^xsd:gYear .
+    
+    bdr:EVAFD02DD1AE235962
+        a                   :PersonDeath ;
+        :onYear             "1424"^^xsd:gYear .
+    
+    bdr:NM9C14FAB622329825
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rin chen/"@bo-x-ewts .
+    
+    bdr:NT13ABDC13B5FABCB3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:NT27A2DD3D79C1FF07
+        a                   :Note ;
+        :locationStatement  "p. 1745" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P2389  a            :Person ;
+        skos:prefLabel      "sangs rgyas rin chen/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT13ABDC13B5FABCB3 , bdr:NT27A2DD3D79C1FF07 ;
+        :personEvent        bdr:EV7674A90AC8AEFF13 , bdr:EVAFD02DD1AE235962 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9C14FAB622329825 ;
+        :personStudentOf    bdr:P152 ;
+        :personTeacherOf    bdr:P318 .
+}

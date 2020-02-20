@@ -1,0 +1,63 @@
+@base          <bdg:P1KG1876> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG1876 {
+    bda:LGCB86AD008AF56F3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-06T12:35:19.576Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG1876  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG1876 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "08/P1KG1876.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG1876 ;
+        adm:logEntry        bda:LGCB86AD008AF56F3D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3AF6378FB0C3B24F
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:EV3B17BD1CD18402BC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G257 .
+    
+    bdr:NM32611BA654361786
+        a                   :PersonPersonalName ;
+        rdfs:label          "bya btang ba pad+ma rdo rje/"@bo-x-ewts .
+    
+    bdr:NM990830F1E579F1A2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma rdo rje/"@bo-x-ewts .
+    
+    bdr:NTAE1C923387CF3C00
+        a                   :Note ;
+        :locationStatement  "118 p." ;
+        :noteSource         bdr:MW1KG1804 ;
+        :noteText           "sources in"@en .
+    
+    bdr:P1KG1876  a         :Person ;
+        skos:prefLabel      "pad+ma rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAE1C923387CF3C00 ;
+        :personEvent        bdr:EV3AF6378FB0C3B24F , bdr:EV3B17BD1CD18402BC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM32611BA654361786 , bdr:NM990830F1E579F1A2 ;
+        :personStudentOf    bdr:P1KG1877 .
+}

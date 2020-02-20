@@ -1,0 +1,50 @@
+@base          <bdg:P4609> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4609 {
+    bda:P4609  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4609 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "dc/P4609.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4609 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB2E1E7FB5CA1962B
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3698AFA91FAB6FC0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBB46537E2B73B2F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan sprul 'phrin las rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9975DCA22E2E4A93
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4609  a            :Person ;
+        skos:prefLabel      "'phrin las rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9975DCA22E2E4A93 ;
+        :personEvent        bdr:EVB2E1E7FB5CA1962B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3698AFA91FAB6FC0 , bdr:NMBB46537E2B73B2F8 ;
+        :personTeacherOf    bdr:P221 .
+}

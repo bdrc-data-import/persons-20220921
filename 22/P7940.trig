@@ -1,0 +1,62 @@
+@base          <bdg:P7940> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7940 {
+    bda:LG28F6BDAB70F57B09
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-12T10:24:08.615Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favoer of p9252"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P7940  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7940 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "22/P7940.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7940 ;
+        adm:logEntry        bda:LG28F6BDAB70F57B09 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P9252 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV25CC817E86A20EC3
+        a                   :PersonDeath ;
+        :onYear             "1936"^^xsd:gYear .
+    
+    bdr:EV6D90E28E291CE8B3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3702 .
+    
+    bdr:NM11A17FA4C6C510E8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzogs sprul 02 bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM90F86A74B1005906
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT50A35F7AB38CA3FC
+        a                   :Note ;
+        :locationStatement  "p. 72" ;
+        :noteSource         bdr:MW24572 ;
+        :noteText           "has incorrect year of birth: 1849 and what seems to be a correct year of death\nconnection with rdzogs chen rnam rgyal gling established"@en .
+    
+    bdr:P7940  a            :Person ;
+        skos:prefLabel      "bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT50A35F7AB38CA3FC ;
+        :personEvent        bdr:EV25CC817E86A20EC3 , bdr:EV6D90E28E291CE8B3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11A17FA4C6C510E8 , bdr:NM90F86A74B1005906 .
+}

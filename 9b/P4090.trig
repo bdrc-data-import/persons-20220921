@@ -1,0 +1,79 @@
+@base          <bdg:P4090> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4090 {
+    bda:LG1FA9A928176800CB
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-11-15T09:25:31.262Z"^^xsd:dateTime ;
+        adm:logMessage      "normalised name order, added mother and son"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4090  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4090 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9b/P4090.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4090 ;
+        adm:logEntry        bda:LG1FA9A928176800CB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV280C3605A2A4087F
+        a                   :PersonDeath ;
+        :onYear             "1792"^^xsd:gYear .
+    
+    bdr:EVC81B04DAA0DB3583
+        a                   :PersonBirth ;
+        :onYear             "1721"^^xsd:gYear .
+    
+    bdr:EVCE9BCD8FDA500FEA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2CN10930 .
+    
+    bdr:NM0DDDFAE99B7082B0
+        a                   :PersonTitle ;
+        rdfs:label          "gung paNDi ta dngos grub rab brtan/"@bo-x-ewts .
+    
+    bdr:NM7FD9C84705059F02
+        a                   :PersonOtherName ;
+        rdfs:label          "dngos grub rab brtan, rdo ring pa"@en .
+    
+    bdr:NM86E4948BA0A16A31
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po dngos grub rab brtan/"@bo-x-ewts .
+    
+    bdr:NME7443A6A46A3AAD6
+        a                   :PersonTitle ;
+        rdfs:label          "rdo ring pa dngos grub rab brtan/"@bo-x-ewts .
+    
+    bdr:NMF9D7C26D23F1ADA1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo ring paNDi ta dngos grub rab brtan/"@bo-x-ewts .
+    
+    bdr:NTB444276E120F334B
+        a                   :Note ;
+        :locationStatement  "p. 1165" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "biography\n1721-1792"@en .
+    
+    bdr:P4090  a            :Person ;
+        skos:prefLabel      "mgon po dngos grub rab brtan/"@bo-x-ewts ;
+        :hasMother          bdr:P2LS190 ;
+        :hasSon             bdr:P2LS191 ;
+        :isRoot             true ;
+        :note               bdr:NTB444276E120F334B ;
+        :personEvent        bdr:EV280C3605A2A4087F , bdr:EVC81B04DAA0DB3583 , bdr:EVCE9BCD8FDA500FEA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0DDDFAE99B7082B0 , bdr:NM7FD9C84705059F02 , bdr:NM86E4948BA0A16A31 , bdr:NME7443A6A46A3AAD6 , bdr:NMF9D7C26D23F1ADA1 .
+}

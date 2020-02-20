@@ -1,0 +1,50 @@
+@base          <bdg:P3625> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3625 {
+    bda:P3625  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3625 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cc/P3625.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3625 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5A5942D9D3201E14
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM79D31A112DE3E8FF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NM869334AF39C01719
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa dmar chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NT455AF36F0612581C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3625  a            :Person ;
+        skos:prefLabel      "chos 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT455AF36F0612581C ;
+        :personEvent        bdr:EV5A5942D9D3201E14 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79D31A112DE3E8FF , bdr:NM869334AF39C01719 ;
+        :personTeacherOf    bdr:P3624 .
+}

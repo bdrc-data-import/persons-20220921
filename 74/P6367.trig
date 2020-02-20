@@ -1,0 +1,59 @@
+@base          <bdg:P6367> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6367 {
+    bda:P6367  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6367 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "74/P6367.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6367 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24400F08C0AF7746
+        a                   :PersonBirth ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:EV468708EBCC6E8FEF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EVE2308C0BC7D4653B
+        a                   :PersonDeath ;
+        :onYear             "1957"^^xsd:gYear .
+    
+    bdr:NM03DF5E1E1B55738D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'od gsal snying po/"@bo-x-ewts .
+    
+    bdr:NM27A3A905A2F81E56
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gsa' sprul 'od gsal snying po/"@bo-x-ewts .
+    
+    bdr:NT5C92480E7197E847
+        a                   :Note ;
+        :locationStatement  "p. 439" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch"@en .
+    
+    bdr:P6367  a            :Person ;
+        skos:prefLabel      "'od gsal snying po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5C92480E7197E847 ;
+        :personEvent        bdr:EV24400F08C0AF7746 , bdr:EV468708EBCC6E8FEF , bdr:EVE2308C0BC7D4653B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03DF5E1E1B55738D , bdr:NM27A3A905A2F81E56 ;
+        :personStudentOf    bdr:P6313 .
+}

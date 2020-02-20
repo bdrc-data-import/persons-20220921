@@ -1,0 +1,62 @@
+@base          <bdg:P1KG911> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG911 {
+    bda:LG5F7E64E99262A823
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T14:19:53.594Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG77A8554BB8466138
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-27T12:56:18.723Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG911  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG911 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ac/P1KG911.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG911 ;
+        adm:logEntry        bda:LG5F7E64E99262A823 , bda:LG77A8554BB8466138 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C7E96108180A501
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMBCA5FB10A4375F44
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin blo gsal/"@bo-x-ewts .
+    
+    bdr:NMF1A69878FC784AF5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tenzin losel"@en .
+    
+    bdr:NT8F8B15BC4459468A
+        a                   :Note ;
+        :noteSource         bdr:MW1KG871 ;
+        :noteText           "translator of witness to tibet's hisotry"@en .
+    
+    bdr:P1KG911  a          :Person ;
+        skos:prefLabel      "bstan 'dzin blo gsal/"@bo-x-ewts , "tenzin losel"@en ;
+        :isRoot             true ;
+        :note               bdr:NT8F8B15BC4459468A ;
+        :personEvent        bdr:EV9C7E96108180A501 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBCA5FB10A4375F44 , bdr:NMF1A69878FC784AF5 .
+}

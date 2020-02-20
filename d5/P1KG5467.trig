@@ -1,0 +1,56 @@
+@base          <bdg:P1KG5467> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG5467 {
+    bda:LGD2CA010023D23581
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-23T11:42:43.802Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG5467  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG5467 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d5/P1KG5467.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG5467 ;
+        adm:logEntry        bda:LGD2CA010023D23581 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE5E2587E3346A1AE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1967"^^xsd:gYear .
+    
+    bdr:NM3E42F7CAE0705102
+        a                   :PersonPersonalName ;
+        rdfs:label          "reb gong pa mkhar rtse rgyal/"@bo-x-ewts .
+    
+    bdr:NMA574A82BD2D36F57
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhar rtse rgyal/"@bo-x-ewts .
+    
+    bdr:NT6826B589606AF2B6
+        a                   :Note ;
+        :noteText           "brief introduction of author is on french flaps of the book"@en .
+    
+    bdr:P1KG5467  a         :Person ;
+        skos:prefLabel      "mkhar rtse rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6826B589606AF2B6 ;
+        :personEvent        bdr:EVE5E2587E3346A1AE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3E42F7CAE0705102 , bdr:NMA574A82BD2D36F57 .
+}

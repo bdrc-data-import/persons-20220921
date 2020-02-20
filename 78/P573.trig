@@ -1,0 +1,100 @@
+@base          <bdg:P573> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P573 {
+    bda:LG6C5F33D589AB18DA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T14:36:22.618Z"^^xsd:dateTime ;
+        adm:logMessage      "added evnet"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA08FEC62F099D465
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T11:45:00.484Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P573  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P573 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "78/P573.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P573 ;
+        adm:logEntry        bda:LG6C5F33D589AB18DA , bda:LGA08FEC62F099D465 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5AC801485C2AC71A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV9F2F3F1896C9990E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1803"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVCBE4C87B88646BA7
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1807"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVDF8F16B2F04FE1EE
+        a                   :PersonDeath ;
+        :onYear             "1816"^^xsd:gYear .
+    
+    bdr:EVE06A0329F9429F3C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G760 ;
+        :onYear             "1756"^^xsd:gYear .
+    
+    bdr:NM1D5D2B1E24192614
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 19 ngag dbang chos rgyal/"@bo-x-ewts .
+    
+    bdr:NM522A10E1FD95D193
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 19"@bo-x-ewts .
+    
+    bdr:NMAC716B5733DD17D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang chos rgyal/"@bo-x-ewts .
+    
+    bdr:NT6F3FF4740185F06A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NT8F7ECAD2027FA4B1
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1803-1807.\nServed as the yongs-'dzin of Khri-sprul 3 Tshul-khrims-grags-pa.\nRetired in 1807 to Bkra-shis-sgang."@en .
+    
+    bdr:NTA86F64375121B9D7
+        a                   :Note ;
+        :locationStatement  "p. 154" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NTC0C97D31CDC34059
+        a                   :Note ;
+        :noteText           "stod pa phan bde kha, nephew of kun dga' rgya mtsho, rje mkhan po 12"@en .
+    
+    bdr:P573  a             :Person ;
+        skos:prefLabel      "ngag dbang chos rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6F3FF4740185F06A , bdr:NT8F7ECAD2027FA4B1 , bdr:NTA86F64375121B9D7 , bdr:NTC0C97D31CDC34059 ;
+        :personEvent        bdr:EV5AC801485C2AC71A , bdr:EV9F2F3F1896C9990E , bdr:EVCBE4C87B88646BA7 , bdr:EVDF8F16B2F04FE1EE , bdr:EVE06A0329F9429F3C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1D5D2B1E24192614 , bdr:NM522A10E1FD95D193 , bdr:NMAC716B5733DD17D3 ;
+        :personStudentOf    bdr:P538 , bdr:P550 ;
+        :personTeacherOf    bdr:P568 .
+}

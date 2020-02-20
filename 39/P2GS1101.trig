@@ -1,0 +1,63 @@
+@base          <bdg:P2GS1101> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2GS1101 {
+    bda:LG6C06FAD2E1343F1B
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-13T15:48:32.079Z"^^xsd:dateTime ;
+        adm:logMessage      "created; student of"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG77CE5CC02FA48FB7
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-06-14T12:04:14.893Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p2gs1103"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P2GS1101  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2GS1101 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "39/P2GS1101.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2GS1101 ;
+        adm:logEntry        bda:LG6C06FAD2E1343F1B , bda:LG77CE5CC02FA48FB7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P2GS1103 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV3C59028093012FD2
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM12BD21BB4EEFB4EA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kA la pA da/"@bo-x-ewts .
+    
+    bdr:NT68748E144A3CA9FB
+        a                   :Note ;
+        :noteText           "withdrawn in favor of p2gs1103"@en .
+    
+    bdr:NTFC8D9F98DF8F8CF6
+        a                   :Note ;
+        :noteText           "the author's tibetan name is unidentified as yet"@en .
+    
+    bdr:P2GS1101  a         :Person ;
+        skos:prefLabel      "kA la pA da/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT68748E144A3CA9FB , bdr:NTFC8D9F98DF8F8CF6 ;
+        :personEvent        bdr:EV3C59028093012FD2 ;
+        :personName         bdr:NM12BD21BB4EEFB4EA ;
+        :personStudentOf    bdr:P888 .
+}

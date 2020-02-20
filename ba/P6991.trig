@@ -1,0 +1,66 @@
+@base          <bdg:P6991> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6991 {
+    bda:LG00ED3948FEF7682E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-21T12:46:12.194Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place & teacher"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG45EFDAED96402206
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-08T11:28:56.001Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6991  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6991 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ba/P6991.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6991 ;
+        adm:logEntry        bda:LG00ED3948FEF7682E , bda:LG45EFDAED96402206 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE248C35E08FE4FD6
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G842 ;
+        :notAfter           "0899"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
+    
+    bdr:NM39EB38FB2F8534BC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ldan ma rtse mang /"@bo-x-ewts .
+    
+    bdr:NMA74440DB6F22C93A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo tsA ba ldan ma rtse mang /"@bo-x-ewts .
+    
+    bdr:NT961E3ED5E44A2E6F
+        a                   :Note ;
+        :noteText           "rje 'bangs nyer lnga'i gras shig"@bo-x-ewts .
+    
+    bdr:P6991  a            :Person ;
+        skos:prefLabel      "ldan ma rtse mang /"@bo-x-ewts ;
+        :hasIncarnation     bdr:P6990 ;
+        :isRoot             true ;
+        :note               bdr:NT961E3ED5E44A2E6F ;
+        :personEvent        bdr:EVE248C35E08FE4FD6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39EB38FB2F8534BC , bdr:NMA74440DB6F22C93A ;
+        :personStudentOf    bdr:P4956 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Denma-Tsemang/9624"^^xsd:anyURI .
+}

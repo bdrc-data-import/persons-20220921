@@ -1,0 +1,88 @@
+@base          <bdg:P4073> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4073 {
+    bda:LG395974F111920863
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-24T10:55:58.472Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4073  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4073 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "03/P4073.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4073 ;
+        adm:logEntry        bda:LG395974F111920863 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4DC6B5E79211C64A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1938"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVA41B9B2B82904A96
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVA5E7284273B14696
+        a                   :PersonDeath ;
+        :onYear             "1961"^^xsd:gYear .
+    
+    bdr:EVE7F7CD0A33BDFDD2
+        a                   :PersonBirth ;
+        :onYear             "1911"^^xsd:gYear .
+    
+    bdr:NM0F11F8F5E572A220
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 112"@bo-x-ewts .
+    
+    bdr:NM2F74732B90DB3DFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun thub bstan rab rgyas/"@bo-x-ewts .
+    
+    bdr:NM99BFF3E65DF10C39
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde yangs dge 'dun thub bstan rab rgyas/"@bo-x-ewts .
+    
+    bdr:NT113D6682623D2031
+        a                   :Note ;
+        :locationStatement  "p. 212-" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT2863CD772603FA75
+        a                   :Note ;
+        :noteText           "1938: Ascended throne of Bya-khyung"@en .
+    
+    bdr:NT471593CACAF0E0CE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT64D52AA58E669170
+        a                   :Note ;
+        :locationStatement  "p. 869" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4073  a            :Person ;
+        skos:prefLabel      "dge 'dun thub bstan rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT113D6682623D2031 , bdr:NT2863CD772603FA75 , bdr:NT471593CACAF0E0CE , bdr:NT64D52AA58E669170 ;
+        :personEvent        bdr:EV4DC6B5E79211C64A , bdr:EVA41B9B2B82904A96 , bdr:EVA5E7284273B14696 , bdr:EVE7F7CD0A33BDFDD2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0F11F8F5E572A220 , bdr:NM2F74732B90DB3DFD , bdr:NM99BFF3E65DF10C39 ;
+        :personStudentOf    bdr:P238 .
+}

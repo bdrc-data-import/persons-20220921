@@ -1,0 +1,56 @@
+@base          <bdg:P6968> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6968 {
+    bda:LGCBB88C1EA85C9160
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-07T11:52:06.895Z"^^xsd:dateTime ;
+        adm:logMessage      "edited date and added note about authorship"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6968  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6968 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "8e/P6968.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6968 ;
+        adm:logEntry        bda:LGCBB88C1EA85C9160 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA569F4FBEAED080B
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM65ED1D638CFA1ADF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lde'u jo sras/"@bo-x-ewts .
+    
+    bdr:NM98724CF0CD90325B
+        a                   :PersonCommonName ;
+        rdfs:label          "mkhas pa lde'u/"@bo-x-ewts .
+    
+    bdr:NTE18CCDF7366F72B0
+        a                   :Note ;
+        :noteText           "likely author of both the rgya bod kyi chos 'byung rgyas pa/ and the chos 'byung chen mo bstan pa'i rgyal mtshan/. both histories are dated to second half of the 13th century."@en .
+    
+    bdr:P6968  a            :Person ;
+        skos:prefLabel      "lde'u jo sras/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE18CCDF7366F72B0 ;
+        :personEvent        bdr:EVA569F4FBEAED080B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM65ED1D638CFA1ADF , bdr:NM98724CF0CD90325B .
+}

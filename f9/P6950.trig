@@ -1,0 +1,61 @@
+@base          <bdg:P6950> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6950 {
+    bda:LGF859B44C227612A0
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-11-18T13:56:12.317Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P1845"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6950  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6950 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f9/P6950.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6950 ;
+        adm:logEntry        bda:LGF859B44C227612A0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P1845 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVB07128DD8EE96593
+        a                   :PersonBirth ;
+        :onYear             "1116"^^xsd:gYear .
+    
+    bdr:EVC9EC7E2AA1BA2C48
+        a                   :PersonDeath ;
+        :onYear             "1169"^^xsd:gYear .
+    
+    bdr:NM15C52D999798A0B9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sgom tshul/"@bo-x-ewts .
+    
+    bdr:NM659D8E0C5BE98222
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po sgom tshul/"@bo-x-ewts .
+    
+    bdr:NT2095600E4CAAD49E
+        a                   :Note ;
+        :noteText           "withdrawn in favor of P1845"@en .
+    
+    bdr:P6950  a            :Person ;
+        skos:prefLabel      "sgom tshul/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2095600E4CAAD49E ;
+        :personEvent        bdr:EVB07128DD8EE96593 , bdr:EVC9EC7E2AA1BA2C48 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15C52D999798A0B9 , bdr:NM659D8E0C5BE98222 ;
+        :personStudentOf    bdr:P1844 .
+}

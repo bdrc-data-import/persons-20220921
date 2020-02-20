@@ -1,0 +1,105 @@
+@base          <bdg:P1956> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1956 {
+    bda:LG0E024642CEF904C8
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T10:18:03.819Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC1937DBBF0CC7F3B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-01T09:30:19.589Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1956  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1956 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "c1/P1956.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1956 ;
+        adm:logEntry        bda:LG0E024642CEF904C8 , bda:LGC1937DBBF0CC7F3B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV097F9DB4C1224F0D
+        a                   :PersonDeath ;
+        :onYear             "1484"^^xsd:gYear .
+    
+    bdr:EV0CE3646912DC133B
+        a                   :PersonBirth ;
+        :onYear             "1449"^^xsd:gYear .
+    
+    bdr:EV9FD8B779C2D8F27C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EVA8A8121D2DD3697E
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1484"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVF2D01D25D7D7D0C3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1469"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM2B43586319C94D91
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'bri gung gdan rabs 15"@bo-x-ewts .
+    
+    bdr:NM401D89813EC9F0F3
+        a                   :PersonTitle ;
+        rdfs:label          "chos rje rin chen chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMDCA4F7BA28478692
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'bri gung pa rin chen chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMF8FBF0F37A57F2EA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT7A99883707F43634
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Bri-gung Bka'-brgyud"@en .
+    
+    bdr:NT814A5DA208B83A32
+        a                   :Note ;
+        :locationStatement  "p. 154-162" ;
+        :noteSource         bdr:MW1KG6255 ;
+        :noteText           "according to this source he is the 14th throne holder of 'bri gung but in the official throne holder list of 'bri gung he is the 15th. See http://www.drikung.org/index.php/drikung-kagyu-lineage/list-of-lineage-holders. Also see W26674"@en .
+    
+    bdr:NT83338221BA9A11EB
+        a                   :Note ;
+        :locationStatement  "p. 270" ;
+        :noteSource         bdr:MW19842 .
+    
+    bdr:NTEACA3F4CCC3D6723
+        a                   :Note ;
+        :noteText           "GKM: On khri of 'Bri-gung 1469-1484"@en .
+    
+    bdr:P1956  a            :Person ;
+        skos:prefLabel      "rin chen chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :hasSon             bdr:P466 ;
+        :hasWife            bdr:P1957 ;
+        :isRoot             true ;
+        :note               bdr:NT7A99883707F43634 , bdr:NT814A5DA208B83A32 , bdr:NT83338221BA9A11EB , bdr:NTEACA3F4CCC3D6723 ;
+        :personEvent        bdr:EV097F9DB4C1224F0D , bdr:EV0CE3646912DC133B , bdr:EV9FD8B779C2D8F27C , bdr:EVA8A8121D2DD3697E , bdr:EVF2D01D25D7D7D0C3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2B43586319C94D91 , bdr:NM401D89813EC9F0F3 , bdr:NMDCA4F7BA28478692 , bdr:NMF8FBF0F37A57F2EA .
+}

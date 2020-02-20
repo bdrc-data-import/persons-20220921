@@ -1,0 +1,56 @@
+@base          <bdg:P1011> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1011 {
+    bda:P1011  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1011 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "69/P1011.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1011 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV92CB612D6C787697
+        a                   :PersonDeath ;
+        :onYear             "1460"^^xsd:gYear .
+    
+    bdr:EV9DE0DFBE5572801D
+        a                   :PersonBirth ;
+        :onYear             "1407"^^xsd:gYear .
+    
+    bdr:EVDC464A02E9E16A06
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:NMA6E9221D167C5218
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal/"@bo-x-ewts .
+    
+    bdr:NMB1C0C16B9B8A33E8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag lung pa bkra shis dpal/"@bo-x-ewts .
+    
+    bdr:NT9D1110394D812D3F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- Stag-lung Bka'-brgyud transmissions"@en .
+    
+    bdr:P1011  a            :Person ;
+        skos:prefLabel      "bkra shis dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D1110394D812D3F ;
+        :personEvent        bdr:EV92CB612D6C787697 , bdr:EV9DE0DFBE5572801D , bdr:EVDC464A02E9E16A06 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA6E9221D167C5218 , bdr:NMB1C0C16B9B8A33E8 .
+}

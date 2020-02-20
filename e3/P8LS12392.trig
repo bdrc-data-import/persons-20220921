@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12392> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12392 {
+    bda:LG2100D6D472E68C9F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T12:22:41.877Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12392  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12392 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e3/P8LS12392.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12392 ;
+        adm:logEntry        bda:LG2100D6D472E68C9F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14BD06D9D5DC1DE0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV2C9F9A4FE09FB5E3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM8D6B540F362583E0
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 32"@bo-x-ewts .
+    
+    bdr:NM96B0D152BE08F97E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa smon lam/"@bo-x-ewts .
+    
+    bdr:NMF6B45FF5AF830241
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam blo ke'u tshang byams pa smon lam/"@bo-x-ewts .
+    
+    bdr:NTF40AE20FB5716FD8
+        a                   :Note ;
+        :locationStatement  "p. 290-291" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12392  a        :Person ;
+        skos:prefLabel      "byams pa smon lam/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF40AE20FB5716FD8 ;
+        :personEvent        bdr:EV14BD06D9D5DC1DE0 , bdr:EV2C9F9A4FE09FB5E3 ;
+        :personName         bdr:NM8D6B540F362583E0 , bdr:NM96B0D152BE08F97E , bdr:NMF6B45FF5AF830241 ;
+        :personTeacherOf    bdr:P304 , bdr:P310 .
+}

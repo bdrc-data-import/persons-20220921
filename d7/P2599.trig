@@ -1,0 +1,57 @@
+@base          <bdg:P2599> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2599 {
+    bda:P2599  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2599 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "d7/P2599.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2599 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3FD1BD663FFE4F9D
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM2582C681895823A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khro shul bla ma ngag dbang smin grol rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB3D5ECC1C3B6357B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang smin grol rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3342E00C88FFA279
+        a                   :Note ;
+        :locationStatement  "p. 529, 582" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a teacher of sa skya pa padma bdud 'dul dbang phyug\nnoted as a teacher of ngag dbang kun dga' rin chen"@en .
+    
+    bdr:NT3AB5F5808A595403
+        a                   :Note ;
+        :noteText           "teacher/student lineage dpal mgon bran du gtad pa bram ze nag po 'i man ngag gi rjes gnang, Pha bong gsan yig, v. 1, pp..158"@en .
+    
+    bdr:P2599  a            :Person ;
+        skos:prefLabel      "ngag dbang smin grol rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3342E00C88FFA279 , bdr:NT3AB5F5808A595403 ;
+        :personEvent        bdr:EV3FD1BD663FFE4F9D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2582C681895823A0 , bdr:NMB3D5ECC1C3B6357B ;
+        :personStudentOf    bdr:P2600 ;
+        :personTeacherOf    bdr:P808 , bdr:P9102 , bdr:P9106 , bdr:P961 .
+}

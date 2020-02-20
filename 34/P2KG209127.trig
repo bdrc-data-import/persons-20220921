@@ -1,0 +1,63 @@
+@base          <bdg:P2KG209127> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG209127 {
+    bda:LG583B7CC4FB7AB424
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-11-08T11:13:39.171Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG209127  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG209127 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "34/P2KG209127.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG209127 ;
+        adm:logEntry        bda:LG583B7CC4FB7AB424 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC1001A88F5EAB0FE
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVCD695DF48AB84550
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2357 .
+    
+    bdr:NM3C70D63E66C249D4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin mkhas grub/"@bo-x-ewts .
+    
+    bdr:NM4502A0AAD4A52892
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bstan 'dzin mkhas grub/"@bo-x-ewts .
+    
+    bdr:NMEA5449996C7831D1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po grub dbang bstan 'dzin mkhas grub/"@bo-x-ewts .
+    
+    bdr:NMF2C04CF04E531748
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po skal bzang bstan 'dzin mkhas grub/"@bo-x-ewts .
+    
+    bdr:P2KG209127  a       :Person ;
+        skos:prefLabel      "bstan 'dzin mkhas grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC1001A88F5EAB0FE , bdr:EVCD695DF48AB84550 ;
+        :personName         bdr:NM3C70D63E66C249D4 , bdr:NM4502A0AAD4A52892 , bdr:NMEA5449996C7831D1 , bdr:NMF2C04CF04E531748 ;
+        :personStudentOf    bdr:P2KG209132 , bdr:P3041 , bdr:P5343 .
+}

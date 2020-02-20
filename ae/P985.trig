@@ -1,0 +1,62 @@
+@base          <bdg:P985> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P985 {
+    bda:LG4F1660E282B5C994
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-02-01T16:06:59.73Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P985  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P985 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ae/P985.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P985 ;
+        adm:logEntry        bda:LG4F1660E282B5C994 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV54B211D78F3A8CAB
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMA2ECB8CE6ED3C8B2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos rje kun dga' mchog ldan/"@bo-x-ewts .
+    
+    bdr:NMA868DB951864495A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' mchog ldan/"@bo-x-ewts .
+    
+    bdr:NT0A0506DDD65E6A23
+        a                   :Note ;
+        :noteText           "2nd half of the 15th century"@en .
+    
+    bdr:NT0EE98AA677F74761
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P985  a             :Person ;
+        skos:prefLabel      "kun dga' mchog ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A0506DDD65E6A23 , bdr:NT0EE98AA677F74761 ;
+        :personEvent        bdr:EV54B211D78F3A8CAB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA2ECB8CE6ED3C8B2 , bdr:NMA868DB951864495A ;
+        :personStudentOf    bdr:P0RK403 , bdr:P2387 , bdr:P2510 , bdr:P783 ;
+        :personTeacherOf    bdr:P777 , bdr:P784 , bdr:P9743 .
+}

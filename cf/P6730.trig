@@ -1,0 +1,52 @@
+@base          <bdg:P6730> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6730 {
+    bda:P6730  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6730 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "cf/P6730.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6730 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6219B1DE5784AEA3
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVF58D632069D68FB2
+        a                   :PersonLeavesOffice ;
+        :onYear             "1873"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NMEEF7602B350070B3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT213E45810AE3A948
+        a                   :Note ;
+        :locationStatement  "p. 232" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, ?-1873\n\"the only mention of this bka' blon is found in a chinese document dated 12 october 1873. he and the monk rim bzhi ye shes chos 'phel serious obstructed a political process about which details are missing. for this the emperor ordered their dismissal; mtsl, 356.27a-28a.\""@en .
+    
+    bdr:P6730  a            :Person ;
+        skos:prefLabel      "tshe dbang dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT213E45810AE3A948 ;
+        :personEvent        bdr:EV6219B1DE5784AEA3 , bdr:EVF58D632069D68FB2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMEEF7602B350070B3 .
+}

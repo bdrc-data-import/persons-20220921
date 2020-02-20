@@ -1,0 +1,71 @@
+@base          <bdg:P3AG8> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG8 {
+    bda:LG18DDE8403C1391D9
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-16T16:44:13.43Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG7206002E8EA34BD6
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T16:09:45.548Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3AG8  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG8 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "26/P3AG8.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG8 ;
+        adm:logEntry        bda:LG18DDE8403C1391D9 , bda:LG7206002E8EA34BD6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5F93D1CD23C2197C
+        a                   :PersonDeath ;
+        :onYear             "1263"^^xsd:gYear .
+    
+    bdr:EV6C47F2B559FFBE99
+        a                   :PersonBirth ;
+        :onYear             "1198"^^xsd:gYear .
+    
+    bdr:NM32C5EF8FD4CB553E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM471F7B9D6E50060F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'a zha blo gros rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM54FB5B1DBEF262D0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mtshan ldan blo gros/"@bo-x-ewts .
+    
+    bdr:NT6C74D4A9B5D97768
+        a                   :Note ;
+        :noteText           "the 7th holder of the bon a khrid rdzogs chen lineage"@en .
+    
+    bdr:P3AG8  a            :Person ;
+        skos:prefLabel      "blo gros rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6C74D4A9B5D97768 ;
+        :personEvent        bdr:EV5F93D1CD23C2197C , bdr:EV6C47F2B559FFBE99 ;
+        :personName         bdr:NM32C5EF8FD4CB553E , bdr:NM471F7B9D6E50060F , bdr:NM54FB5B1DBEF262D0 ;
+        :personStudentOf    bdr:P1668 , bdr:P1669 , bdr:P3AG7 ;
+        :personTeacherOf    bdr:P3AG9 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Azha-Lodro-Gyeltsen/13092"^^xsd:anyURI .
+}

@@ -1,0 +1,89 @@
+@base          <bdg:P1038> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1038 {
+    bda:LG5831C20347D3AD19
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-12-14T13:54:28.495Z"^^xsd:dateTime ;
+        adm:logMessage      "new and released"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG91D80ABCE0D33465
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-03T10:58:51.336Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1038  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1038 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "45/P1038.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1038 ;
+        adm:logEntry        bda:LG5831C20347D3AD19 , bda:LG91D80ABCE0D33465 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV20AA74671C9E7CBB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G873 ;
+        :onYear             "1433"^^xsd:gYear .
+    
+    bdr:EV4F1EAFBB9EB9A0D1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G245 .
+    
+    bdr:EV67DCE81BCD314380
+        a                   :PersonDeath ;
+        :onYear             "1503"^^xsd:gYear .
+    
+    bdr:NM0C3D5817B3A952CB
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' chos bzang, skyed tshal pa/"@bo-x-ewts .
+    
+    bdr:NM499928A31787FAFA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyed tshal mkhan po 'jam dbyangs kun dga' chos bzang /"@bo-x-ewts .
+    
+    bdr:NMBB2442A4D3E19040
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs kun dga' chos bzang /"@bo-x-ewts .
+    
+    bdr:NT2016E50EFB9EE08C
+        a                   :Note ;
+        :locationStatement  "p. 630" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT5CAC81CFD6D58011
+        a                   :Note ;
+        :locationStatement  "p. 1 (1st group)" ;
+        :noteSource         bdr:MW26179 ;
+        :noteText           "sa skya master\nbiography: author's year of brith: 1382\nthis must certainly be incorrect"@en .
+    
+    bdr:NTEF111C632210CE21
+        a                   :Note ;
+        :noteSource         bdr:MW19608 ;
+        :noteText           "important sa skya scholar, the student of byams chen rab 'byams pa sangs rgyas 'phel\nin1486, he ascended to the abbatial throne of 'bras yul skyed tshal where her served for 19 years until his death in 1503\ngsung 'bum includes:\ndbu ma'i skor mang po\nmngon pa mdzod kyi TI ka\ntshad ma rnam 'grel gyi TIk gzhung don rab gsal\n'dul ba'i spyi don lung rigs gter mdzod\nsdom gsum rab dbye'i spyi don"@en .
+    
+    bdr:P1038  a            :Person ;
+        skos:prefLabel      "'jam dbyangs kun dga' chos bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2016E50EFB9EE08C , bdr:NT5CAC81CFD6D58011 , bdr:NTEF111C632210CE21 ;
+        :personEvent        bdr:EV20AA74671C9E7CBB , bdr:EV4F1EAFBB9EB9A0D1 , bdr:EV67DCE81BCD314380 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0C3D5817B3A952CB , bdr:NM499928A31787FAFA , bdr:NMBB2442A4D3E19040 ;
+        :personStudentOf    bdr:P1039 , bdr:P1042 , bdr:P1130 , bdr:P1131 , bdr:P1132 , bdr:P1133 , bdr:P1134 ;
+        :personTeacherOf    bdr:P0RK1042 , bdr:P1135 , bdr:P1KG6253 , bdr:P4CZ301817 , bdr:P986 .
+}

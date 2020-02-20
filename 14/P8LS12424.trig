@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12424> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12424 {
+    bda:LG1FFCADF5295C7CBC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T12:15:56.249Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12424  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12424 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "14/P8LS12424.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12424 ;
+        adm:logEntry        bda:LG1FFCADF5295C7CBC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7BB8D88738DE62BF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC349E9FAB96310AC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM2BBDE89833FDA443
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam mkhan zur blo bzang bstan dar/"@bo-x-ewts .
+    
+    bdr:NM689F75566634744E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 63"@bo-x-ewts .
+    
+    bdr:NM8ABE7882962B8781
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan dar/"@bo-x-ewts .
+    
+    bdr:NTD95629CA4F975450
+        a                   :Note ;
+        :locationStatement  "p. 295" ;
+        :noteSource         bdr:MW1KG2757 ;
+        :noteText           "a mongolian scholar"@en .
+    
+    bdr:P8LS12424  a        :Person ;
+        skos:prefLabel      "blo bzang bstan dar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD95629CA4F975450 ;
+        :personEvent        bdr:EV7BB8D88738DE62BF , bdr:EVC349E9FAB96310AC ;
+        :personName         bdr:NM2BBDE89833FDA443 , bdr:NM689F75566634744E , bdr:NM8ABE7882962B8781 .
+}

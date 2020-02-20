@@ -1,0 +1,98 @@
+@base          <bdg:P864> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P864 {
+    bda:LG0B08048EACBD1D43
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-12-05T14:16:02.624Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG45761163FD0502C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-14T14:34:23.269Z"^^xsd:dateTime ;
+        adm:logMessage      "edited names"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGAE580AC39D101AA9
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-02T11:13:55.719Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected year of birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P864  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P864 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "e7/P864.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P864 ;
+        adm:logEntry        bda:LG0B08048EACBD1D43 , bda:LG45761163FD0502C5 , bda:LGAE580AC39D101AA9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV23514EF756D59A3A
+        a                   :PersonBirth ;
+        :onYear             "1917"^^xsd:gYear .
+    
+    bdr:EV5E4CBBD0F2820D8E
+        a                   :PersonDeath ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:EVB8F8C90341A4E13C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G46 .
+    
+    bdr:NM2E0BFF1979FADA0B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NM466C4E04B3B56EB3
+        a                   :PersonTitle ;
+        rdfs:label          "mi pham bshad sgrub chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NMA39C285A80419CDD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa gdung sras mi pham bshad sgrub chos kyi nyin byed/"@bo-x-ewts .
+    
+    bdr:NMA60C9942EEEA378C
+        a                   :PersonTitle ;
+        rdfs:label          "mi pham ngag dbang 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMA6B8E4C3707FA655
+        a                   :PersonTitle ;
+        rdfs:label          "'brug pa thugs sras tshe dbang 'gyur med/"@bo-x-ewts .
+    
+    bdr:NMC55C6EB7E5997E63
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang bde chen 'gyur med/"@bo-x-ewts .
+    
+    bdr:NT722B3BA3BC0E271E
+        a                   :Note ;
+        :noteText           "the year of birth was fire snake 1917"@en .
+    
+    bdr:NTD8428AB3171CC3FC
+        a                   :Note ;
+        :noteText           "important master in the lineage of the 'brug pa dkar brgyud; regarded as an incarnation of the stag lung ma sprul"@en .
+    
+    bdr:P864  a             :Person ;
+        skos:prefLabel      "chos kyi nyin byed/"@bo-x-ewts ;
+        :hasFather          bdr:P863 ;
+        :isRoot             true ;
+        :note               bdr:NT722B3BA3BC0E271E , bdr:NTD8428AB3171CC3FC ;
+        :personEvent        bdr:EV23514EF756D59A3A , bdr:EV5E4CBBD0F2820D8E , bdr:EVB8F8C90341A4E13C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2E0BFF1979FADA0B , bdr:NM466C4E04B3B56EB3 , bdr:NMA39C285A80419CDD , bdr:NMA60C9942EEEA378C , bdr:NMA6B8E4C3707FA655 , bdr:NMC55C6EB7E5997E63 ;
+        :personStudentOf    bdr:P4603 , bdr:P617 , bdr:P622 , bdr:P727 , bdr:P863 ;
+        :personTeacherOf    bdr:P1KG10060 , bdr:P5637 , bdr:P854 .
+}

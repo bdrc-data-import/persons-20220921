@@ -1,0 +1,72 @@
+@base          <bdg:P2753> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2753 {
+    bda:LG049BD04BDAADAAFA
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-05-15T16:38:42.723Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:LGDF225E758DBE25CE
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-08-08T17:00:14.77Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2753  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2753 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "8b/P2753.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2753 ;
+        adm:logEntry        bda:LG049BD04BDAADAAFA , bda:LGDF225E758DBE25CE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8C86455E55A02074
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EVEC213A27B2B46CB9
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM334DFA7A3C08E77B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhyen brtse nor bu/"@bo-x-ewts .
+    
+    bdr:NM84E492BFCE9FCDBB
+        a                   :PersonPersonalName ;
+        rdfs:label          "mkhyen brtse nor bu/"@bo-x-ewts .
+    
+    bdr:NMC07B1F8AE0508F2F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog mkhan po ngag dbang mkhyen brtse nor bu/"@bo-x-ewts .
+    
+    bdr:NT344D3E04DD86FEC3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P2753  a            :Person ;
+        skos:prefLabel      "ngag dbang mkhyen brtse nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT344D3E04DD86FEC3 ;
+        :personEvent        bdr:EV8C86455E55A02074 , bdr:EVEC213A27B2B46CB9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM334DFA7A3C08E77B , bdr:NM84E492BFCE9FCDBB , bdr:NMC07B1F8AE0508F2F ;
+        :personStudentOf    bdr:P699 ;
+        :personTeacherOf    bdr:P2749 , bdr:P8977 .
+}

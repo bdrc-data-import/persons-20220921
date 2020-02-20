@@ -1,0 +1,51 @@
+@base          <bdg:P1825> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1825 {
+    bda:LG462893F62F5B3F03
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:55:48.022Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1825  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1825 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "82/P1825.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1825 ;
+        adm:logEntry        bda:LG462893F62F5B3F03 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1007F593B6058B64
+        a                   :PersonDeath ;
+        :onYear             "1334"^^xsd:gYear .
+    
+    bdr:NM360257EDDCFDECCC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM795A6B4BFC07037F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:P1825  a            :Person ;
+        skos:prefLabel      "bsod nams rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV1007F593B6058B64 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM360257EDDCFDECCC , bdr:NM795A6B4BFC07037F ;
+        :personTeacherOf    bdr:P1824 .
+}

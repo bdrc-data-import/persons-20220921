@@ -1,0 +1,52 @@
+@base          <bdg:P1832> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1832 {
+    bda:LG6177B321E337D1D7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:49:02.535Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1832  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1832 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "88/P1832.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1832 ;
+        adm:logEntry        bda:LG6177B321E337D1D7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4862B403156BF762
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMCA1C9C9FB69278FE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'bar/"@bo-x-ewts .
+    
+    bdr:NMED99C96376A76682
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma dpal 'bar/"@bo-x-ewts .
+    
+    bdr:P1832  a            :Person ;
+        skos:prefLabel      "dpal 'bar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV4862B403156BF762 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCA1C9C9FB69278FE , bdr:NMED99C96376A76682 ;
+        :personTeacherOf    bdr:P1830 .
+}

@@ -1,0 +1,65 @@
+@base          <bdg:P1PD95753> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1PD95753 {
+    bda:LG3D305990F282F343
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T14:09:06.163Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth and death dates"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG3EA8AEB05F91B80C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-30T16:24:10.351Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGE975B153C8D2BD22
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-30T16:32:00.152Z"^^xsd:dateTime ;
+        adm:logMessage      "bcos"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P1PD95753  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1PD95753 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d2/P1PD95753.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1PD95753 ;
+        adm:logEntry        bda:LG3D305990F282F343 , bda:LG3EA8AEB05F91B80C , bda:LGE975B153C8D2BD22 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DB632FD1E0AA9CC
+        a                   :PersonBirth ;
+        :onYear             "1882"^^xsd:gYear .
+    
+    bdr:EV90A2F2165C22C506
+        a                   :PersonDeath ;
+        :onYear             "1963"^^xsd:gYear .
+    
+    bdr:NM77FE19DA08FD3868
+        a                   :PersonPrimaryName ;
+        rdfs:label          "宇井伯寿"@zh-hans .
+    
+    bdr:NM86245B8C4F15AEF7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Hakuju Ui"@en .
+    
+    bdr:P1PD95753  a        :Person ;
+        skos:prefLabel      "Hakuju Ui"@en , "宇井伯寿"@zh-hans ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0DB632FD1E0AA9CC , bdr:EV90A2F2165C22C506 ;
+        :personName         bdr:NM77FE19DA08FD3868 , bdr:NM86245B8C4F15AEF7 .
+}

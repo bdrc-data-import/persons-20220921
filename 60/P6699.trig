@@ -1,0 +1,57 @@
+@base          <bdg:P6699> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6699 {
+    bda:P6699  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6699 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "60/P6699.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6699 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3CAB65C573D212C0
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVD662BB063F95DCC4
+        a                   :PersonLeavesOffice ;
+        :onYear             "1910"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EVDAEBE8F4EA78FB0C
+        a                   :PersonAssumesOffice ;
+        :onYear             "1904"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:NM459EEB8C31A7B2F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NT6B08AF9F309AFB8C
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon bla ma, 1904-1910"@en .
+    
+    bdr:P6699  a            :Person ;
+        skos:prefLabel      "blo bzang 'phrin las, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6B08AF9F309AFB8C ;
+        :personEvent        bdr:EV3CAB65C573D212C0 , bdr:EVD662BB063F95DCC4 , bdr:EVDAEBE8F4EA78FB0C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM459EEB8C31A7B2F2 .
+}

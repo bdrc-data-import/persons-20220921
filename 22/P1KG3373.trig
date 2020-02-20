@@ -1,0 +1,74 @@
+@base          <bdg:P1KG3373> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG3373 {
+    bda:LG3CAA897BCD2372A8
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-14T11:35:41.392Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG75A24A6036CF700A
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-09T10:00:10.346Z"^^xsd:dateTime ;
+        adm:logMessage      "updated"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LG8739213E53EB9879
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-08-24T11:03:20.003Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG3373  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG3373 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "22/P1KG3373.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG3373 ;
+        adm:logEntry        bda:LG3CAA897BCD2372A8 , bda:LG75A24A6036CF700A , bda:LG8739213E53EB9879 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV390E7DBF14625FF4
+        a                   :PersonBirth ;
+        :onYear             "1932"^^xsd:gYear .
+    
+    bdr:EVAEC0BA1BCCE15FAF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G180 .
+    
+    bdr:NM5D10F3FF2BB83BAE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa chos grags/"@bo-x-ewts .
+    
+    bdr:NT9BF5E1E099F01B2B
+        a                   :Note ;
+        :noteSource         bdr:MW1KG5966 ;
+        :noteText           "a gelug master; brief biography exist in W1KG5866"@en .
+    
+    bdr:NTC5E6621225761BD9
+        a                   :Note ;
+        :locationStatement  "1-2" ;
+        :noteSource         bdr:MW1KG3372 ;
+        :noteText           "brief biography exist in the elucidation of publication"@en .
+    
+    bdr:P1KG3373  a         :Person ;
+        skos:prefLabel      "byams pa chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9BF5E1E099F01B2B , bdr:NTC5E6621225761BD9 ;
+        :personEvent        bdr:EV390E7DBF14625FF4 , bdr:EVAEC0BA1BCCE15FAF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D10F3FF2BB83BAE .
+}

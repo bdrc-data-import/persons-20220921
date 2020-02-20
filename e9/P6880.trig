@@ -1,0 +1,58 @@
+@base          <bdg:P6880> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6880 {
+    bda:LG83B46A50A6010C01
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-04-07T14:18:41.734Z"^^xsd:dateTime ;
+        adm:logMessage      "Added link to Treasury of Lives Biography"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P6880  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6880 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e9/P6880.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6880 ;
+        adm:logEntry        bda:LG83B46A50A6010C01 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCB1C484A3D360919
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2880 ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM89004872B04715C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dpal ldan bzang po/"@bo-x-ewts .
+    
+    bdr:NMBDAB74D3A3E39430
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hrab 'jam dbyangs dpal ldan bzang po/"@bo-x-ewts .
+    
+    bdr:NTD05AEC81029092BC
+        a                   :Note ;
+        :noteText           "rnying ma master connected with the tibeto-nepal borderlands"@en .
+    
+    bdr:P6880  a            :Person ;
+        skos:prefLabel      "'jam dbyangs dpal ldan bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD05AEC81029092BC ;
+        :personEvent        bdr:EVCB1C484A3D360919 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM89004872B04715C0 , bdr:NMBDAB74D3A3E39430 ;
+        :personTeacherOf    bdr:P6878 .
+}

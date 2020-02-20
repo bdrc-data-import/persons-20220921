@@ -1,0 +1,88 @@
+@base          <bdg:P208> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P208 {
+    bda:LG3446E87F796ECE9D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T14:26:17.321Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG51BD38D1ECD359BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-08-13T17:15:18.877Z"^^xsd:dateTime ;
+        adm:logMessage      "cleanup dup. names"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P208  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P208 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "b1/P208.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P208 ;
+        adm:logEntry        bda:LG3446E87F796ECE9D , bda:LG51BD38D1ECD359BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B5B591640D6FC64
+        a                   :PersonDeath ;
+        :onYear             "1482"^^xsd:gYear .
+    
+    bdr:EVB8F7B8C8896E468A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1145 ;
+        :onYear             "1424"^^xsd:gYear .
+    
+    bdr:NM22581DA96245343A
+        a                   :PersonOtherName ;
+        rdfs:label          "khrus khang lo tsA ba bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7AF8EFBEAAD20E2F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khrims khang lo tsA ba bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM92F2E619A8225793
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2270300EA89847D9
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 319v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "bka' brgyud master, scholar, and translator\nborn into the lineage of ngan lam rgyal ba mchog dbyangs as the son of rig 'dzin bsod nams 'od zer and the lady dpal ldan 'dzom\nreceived his first vows from brag nag pa mgon rgyal ba and the name bsod nams rgya mtsho'i sde\nreceived his rab byung vows from dwags po bkra shis rnam rgyal\nreceived the byams chos sde lnga, dbu rigs tshogs drug, dbu ma la 'jug pa, spyod 'jug, dbu ma bzhi brgya pa, and the mngon pa gong 'og from dpal 'byor rgya mtsho\nstudied the art of translation with 'gos lo tsA ba\nmet and received teachings from vanaratna and asked many questions regarding the kalacakra\nreceived teachings on the practice of the phyag chen and nA ro chos drug from the zhwa dmar\ntraveled to nepal with paN chen rin po che, presumably vanaratna\nreceived visions of shA wa ri pa at shAnta pu ri and mar pa at gro bo lung\nhis chief practice was the kalackra"@en .
+    
+    bdr:NTC5C49CD5C84749AE
+        a                   :Note ;
+        :locationStatement  "v. 3, p. 504" ;
+        :noteSource         bdr:MW19802 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:NTDEC846DC672D7850
+        a                   :Note ;
+        :locationStatement  "p. 188" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography\nspyi lo 1424 lor yar klung btsan thang gi khyams khang gsar du yab bsod nams 'od zer dang / yum dpal ldan 'dzoms pa gnyis kyi sras su sku 'khrungs/ gdung rus rog yin/"@en .
+    
+    bdr:P208  a             :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :hasFather          bdr:P5088 ;
+        :hasMother          bdr:P5089 ;
+        :isRoot             true ;
+        :note               bdr:NT2270300EA89847D9 , bdr:NTC5C49CD5C84749AE , bdr:NTDEC846DC672D7850 ;
+        :personEvent        bdr:EV8B5B591640D6FC64 , bdr:EVB8F7B8C8896E468A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM22581DA96245343A , bdr:NM7AF8EFBEAAD20E2F , bdr:NM92F2E619A8225793 ;
+        :personStudentOf    bdr:P1010 , bdr:P10646 , bdr:P1417 , bdr:P207 , bdr:P318 , bdr:P5090 , bdr:P5091 , bdr:P5092 ;
+        :personTeacherOf    bdr:P10725 , bdr:P206 , bdr:P3016 , bdr:P317 , bdr:P4141 , bdr:P463 .
+}

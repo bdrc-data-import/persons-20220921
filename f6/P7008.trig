@@ -1,0 +1,58 @@
+@base          <bdg:P7008> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7008 {
+    bda:LG6D1B364928DBACB2
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-17T17:30:12.169Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P7008  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7008 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f6/P7008.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7008 ;
+        adm:logEntry        bda:LG6D1B364928DBACB2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV50235559151459C1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3082 .
+    
+    bdr:NM037AD5B7893C6539
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gter chen kun bzang 'od zer/"@bo-x-ewts .
+    
+    bdr:NM30F93DD7E14CF325
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang 'od zer/"@bo-x-ewts .
+    
+    bdr:NTB9B0EA848BDEACEF
+        a                   :Note ;
+        :locationStatement  "p. 726" ;
+        :noteSource         bdr:MW20916 ;
+        :noteText           "a gter ston connected with lo ro sbyor ra monastery"@en .
+    
+    bdr:P7008  a            :Person ;
+        skos:prefLabel      "kun bzang 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB9B0EA848BDEACEF ;
+        :personEvent        bdr:EV50235559151459C1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM037AD5B7893C6539 , bdr:NM30F93DD7E14CF325 ;
+        :personTeacherOf    bdr:P677 .
+}

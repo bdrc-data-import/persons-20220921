@@ -1,0 +1,73 @@
+@base          <bdg:P10653> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10653 {
+    bda:LGA40F3B5BB622720C
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-08-21T14:55:36.949Z"^^xsd:dateTime ;
+        adm:logMessage      "add student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P10653  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10653 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "ad/P10653.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10653 ;
+        adm:logEntry        bda:LGA40F3B5BB622720C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV31D3DF9FB07E563C
+        a                   :PersonDeath ;
+        :onYear             "2018"^^xsd:gYear .
+    
+    bdr:EVEF3B7389757FA074
+        a                   :PersonBirth ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:NM0029909ED2C434A6
+        a                   :PersonSecretInitiatoryName ;
+        rdfs:label          "rta khyung rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NM1F6984D700D27382
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gar dbang rgyal mchog gling pa/"@bo-x-ewts .
+    
+    bdr:NM71DABD797D0B85D2
+        a                   :PersonTitle ;
+        rdfs:label          "rig 'dzin rol pa'i rdo rje/"@bo-x-ewts .
+    
+    bdr:NMB241A2B0AFF68600
+        a                   :PersonPersonalName ;
+        rdfs:label          "lha 'dus dbang chen/"@bo-x-ewts .
+    
+    bdr:NME8DDC7F3881F14D1
+        a                   :PersonGterStonTitle ;
+        rdfs:label          "khams gsum 'gro 'dul gling pa/"@bo-x-ewts .
+    
+    bdr:NTB16FF44BF2D9E015
+        a                   :Note ;
+        :noteText           "rnying ma rediscoverer of concealed teachings"@en .
+    
+    bdr:P10653  a           :Person ;
+        skos:prefLabel      "gar dbang rgyal mchog gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB16FF44BF2D9E015 ;
+        :personEvent        bdr:EV31D3DF9FB07E563C , bdr:EVEF3B7389757FA074 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0029909ED2C434A6 , bdr:NM1F6984D700D27382 , bdr:NM71DABD797D0B85D2 , bdr:NMB241A2B0AFF68600 , bdr:NME8DDC7F3881F14D1 ;
+        :personStudentOf    bdr:P6610 ;
+        :personTeacherOf    bdr:P1KG109147 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P3266> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3266 {
+    bda:P3266  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3266 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "c9/P3266.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3266 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1DEBF6804014BF3C
+        a                   :PersonBirth ;
+        :onYear             "1361"^^xsd:gYear .
+    
+    bdr:EVBE940EF7DBCAF6DF
+        a                   :PersonDeath ;
+        :onYear             "1438"^^xsd:gYear .
+    
+    bdr:NM5852FD0A1A89C4C3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams 'phel ba/"@bo-x-ewts .
+    
+    bdr:NMF049B3F8408EBED1
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen bsod nams 'phel ba/"@bo-x-ewts .
+    
+    bdr:NT9C32886012AC7E5C
+        a                   :Note ;
+        :locationStatement  "p. 107" ;
+        :noteSource         bdr:MW19832 .
+    
+    bdr:NTA067F4B94D28EBE7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P3266  a            :Person ;
+        skos:prefLabel      "bsod nams 'phel ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9C32886012AC7E5C , bdr:NTA067F4B94D28EBE7 ;
+        :personEvent        bdr:EV1DEBF6804014BF3C , bdr:EVBE940EF7DBCAF6DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5852FD0A1A89C4C3 , bdr:NMF049B3F8408EBED1 ;
+        :personStudentOf    bdr:P2915 ;
+        :personTeacherOf    bdr:P3102 .
+}

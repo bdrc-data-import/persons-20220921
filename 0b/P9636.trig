@@ -1,0 +1,50 @@
+@base          <bdg:P9636> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9636 {
+    bda:LG112F12DB91F28FFB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T13:52:44.934Z"^^xsd:dateTime ;
+        adm:logMessage      "edited name, added reversal"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P9636  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9636 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "0b/P9636.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9636 ;
+        adm:logEntry        bda:LG112F12DB91F28FFB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV46D4F89171DFE3B4
+        a                   :PersonBirth ;
+        :onYear             "1925"^^xsd:gYear .
+    
+    bdr:NM83707861BB80B265
+        a                   :PersonPersonalName ;
+        rdfs:label          "yuichi kajiyama"@en .
+    
+    bdr:NMC933C830A46FF9BA
+        a                   :PersonReversal ;
+        rdfs:label          "kajiyama, yuichi"@en .
+    
+    bdr:P9636  a            :Person ;
+        skos:prefLabel      "yuichi kajiyama"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV46D4F89171DFE3B4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM83707861BB80B265 , bdr:NMC933C830A46FF9BA .
+}

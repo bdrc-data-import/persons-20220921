@@ -1,0 +1,112 @@
+@base          <bdg:P811> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P811 {
+    bda:LG1BCEBEF8C0267D39
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-20T11:02:46.739Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG60EC7B3BFDFDA068
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-21T10:36:50.241Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P811  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P811 ;
+        adm:facetIndex      17 ;
+        adm:gitPath         "0b/P811.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P811 ;
+        adm:logEntry        bda:LG1BCEBEF8C0267D39 , bda:LG60EC7B3BFDFDA068 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV66A8771378C7606B
+        a                   :PersonBirth ;
+        :onYear             "1819"^^xsd:gYear .
+    
+    bdr:EV69D81290B6BD9166
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G880 .
+    
+    bdr:EV785DD020697C8CBA
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1845"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG23 .
+    
+    bdr:EVDF50C31203B70958
+        a                   :PersonDeath ;
+        :onYear             "1867"^^xsd:gYear .
+    
+    bdr:EVF848EA68A1B611CF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G210 ;
+        :onYear             "1843"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG23 .
+    
+    bdr:NM18B7E58EAF75C9AC
+        a                   :PersonTitle ;
+        rdfs:label          "'khon ston rdo rje rin chen/"@bo-x-ewts .
+    
+    bdr:NM3A4F21F03B039D83
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang rdo rje rin chen/"@bo-x-ewts .
+    
+    bdr:NM45EC6F55B3EB740F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sa skya khri 'dzin 34"@bo-x-ewts .
+    
+    bdr:NM8A5B47CAD4408DEB
+        a                   :PersonTitle ;
+        rdfs:label          "sa skya gong ma/"@bo-x-ewts .
+    
+    bdr:NM94BAF5C8E04731EF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya khri chen 35 rdo rje rin chen/"@bo-x-ewts .
+    
+    bdr:NM956C11F46734F4D8
+        a                   :PersonTitle ;
+        rdfs:label          "sa skya khri chen 34"@bo-x-ewts .
+    
+    bdr:NMB1193760610EA8CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje rin chen/"@bo-x-ewts .
+    
+    bdr:NT13E5789077F38F1E
+        a                   :Note ;
+        :locationStatement  "pp. 606-622" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "biography\nascended as bdag khri at the age of 25 and held the throne for 3 years"@en .
+    
+    bdr:NT78F35CA771602B69
+        a                   :Note ;
+        :noteText           "student (not identified): 'dren mchog ngag gi dbang po"@en .
+    
+    bdr:P811  a             :Person ;
+        skos:prefLabel      "rdo rje rin chen/"@bo-x-ewts ;
+        :hasFather          bdr:P808 ;
+        :hasMother          bdr:P9092 ;
+        :hasWife            bdr:P9112 ;
+        :isRoot             true ;
+        :note               bdr:NT13E5789077F38F1E , bdr:NT78F35CA771602B69 ;
+        :personEvent        bdr:EV66A8771378C7606B , bdr:EV69D81290B6BD9166 , bdr:EV785DD020697C8CBA , bdr:EVDF50C31203B70958 , bdr:EVF848EA68A1B611CF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM18B7E58EAF75C9AC , bdr:NM3A4F21F03B039D83 , bdr:NM45EC6F55B3EB740F , bdr:NM8A5B47CAD4408DEB , bdr:NM94BAF5C8E04731EF , bdr:NM956C11F46734F4D8 , bdr:NMB1193760610EA8CD ;
+        :personStudentOf    bdr:P7094 , bdr:P9090 , bdr:P9102 , bdr:P9111 , bdr:P981 ;
+        :personTeacherOf    bdr:P258 .
+}

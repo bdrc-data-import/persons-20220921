@@ -1,0 +1,66 @@
+@base          <bdg:P8889> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8889 {
+    bda:LGCA7194F82F24272D
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T04:01:27.265Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGEA22CCBC288875F4
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-05T09:51:29.814Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P8889  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8889 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "25/P8889.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8889 ;
+        adm:logEntry        bda:LGCA7194F82F24272D , bda:LGEA22CCBC288875F4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV17F2F070ADE16518
+        a                   :PersonBirth ;
+        :onYear             "1626"^^xsd:gYear .
+    
+    bdr:NM43E74022F8FDA81F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag re chos grags/"@bo-x-ewts .
+    
+    bdr:NM77ED5C028E635A72
+        a                   :PersonTitle ;
+        rdfs:label          "li thang mkhan chen nyag re chos grags/"@bo-x-ewts .
+    
+    bdr:NMBBCF137FFD3DE028
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos grags/"@bo-x-ewts .
+    
+    bdr:NTD0F220C7C1B331A2
+        a                   :Note ;
+        :locationStatement  "p. 2331" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1626. li thang mkhan chen nyag re chos grags 'khrungs"@en .
+    
+    bdr:P8889  a            :Person ;
+        skos:prefLabel      "chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD0F220C7C1B331A2 ;
+        :personEvent        bdr:EV17F2F070ADE16518 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM43E74022F8FDA81F , bdr:NM77ED5C028E635A72 , bdr:NMBBCF137FFD3DE028 .
+}

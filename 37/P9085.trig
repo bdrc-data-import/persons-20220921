@@ -1,0 +1,56 @@
+@base          <bdg:P9085> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9085 {
+    bda:P9085  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9085 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "37/P9085.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9085 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE04A04CDF5A19BF3
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVE9E3A13D31490A94
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3795 .
+    
+    bdr:NM85790C32148BF5DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams dbang phyug"@bo-x-ewts .
+    
+    bdr:NMB9158A2DE8944689
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri khud sprul sku bsod nams dbang phyug"@bo-x-ewts .
+    
+    bdr:NTAFEA1FE3CC0424FE
+        a                   :Note ;
+        :locationStatement  "p. 348" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a student of sa skya gong ma kun dga' blo gros"@en .
+    
+    bdr:P9085  a            :Person ;
+        skos:prefLabel      "bsod nams dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAFEA1FE3CC0424FE ;
+        :personEvent        bdr:EVE04A04CDF5A19BF3 , bdr:EVE9E3A13D31490A94 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM85790C32148BF5DE , bdr:NMB9158A2DE8944689 ;
+        :personStudentOf    bdr:P805 .
+}

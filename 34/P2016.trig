@@ -1,0 +1,56 @@
+@base          <bdg:P2016> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2016 {
+    bda:P2016  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2016 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "34/P2016.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2016 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD2D33394DEF521AC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4236 .
+    
+    bdr:EVEC7B045CD4AE774B
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM55E47A296C09875E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma bstan skyong /"@bo-x-ewts .
+    
+    bdr:NM7673F19726A7BEFD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chos blon karma bstan skyong /"@bo-x-ewts .
+    
+    bdr:NT35EBDF8B419283E9
+        a                   :Note ;
+        :locationStatement  "v. 2, f. 173v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "student of the 10th karma pa chos dbyings rdo rje. he was apparently a minister of the ruler of ljang sa tham"@en .
+    
+    bdr:P2016  a            :Person ;
+        skos:prefLabel      "karma bstan skyong /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT35EBDF8B419283E9 ;
+        :personEvent        bdr:EVD2D33394DEF521AC , bdr:EVEC7B045CD4AE774B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM55E47A296C09875E , bdr:NM7673F19726A7BEFD ;
+        :personStudentOf    bdr:P1382 .
+}

@@ -1,0 +1,85 @@
+@base          <bdg:P2JM398> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM398 {
+    bda:LG988EFDB73ECE0DBC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-08T14:43:03.466Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGCAC82284F8A7CE54
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-08T16:03:46.346Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2JM398  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM398 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "0a/P2JM398.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM398 ;
+        adm:logEntry        bda:LG988EFDB73ECE0DBC , bda:LGCAC82284F8A7CE54 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C8B0B0A8A54926A
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV6EE10595014C9BE8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:EV9B4EA2AB5A67AB6B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV9E19EB8398D58C42
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:NM82323948F0FAB2D8
+        a                   :PersonTitle ;
+        rdfs:label          "mkhas btsun dbang po mkhan po chos rnam/"@bo-x-ewts .
+    
+    bdr:NM9E1B259F30D4854B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po chos rnam/"@bo-x-ewts .
+    
+    bdr:NMC90C7B2BB93F277C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rnam/"@bo-x-ewts .
+    
+    bdr:NMF98770A999F700D2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 31"@bo-x-ewts .
+    
+    bdr:NT6595E620F016EEA3
+        a                   :Note ;
+        :locationStatement  "p. 474-475" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2JM398  a          :Person ;
+        skos:prefLabel      "chos rnam/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6595E620F016EEA3 ;
+        :personEvent        bdr:EV0C8B0B0A8A54926A , bdr:EV6EE10595014C9BE8 , bdr:EV9B4EA2AB5A67AB6B , bdr:EV9E19EB8398D58C42 ;
+        :personName         bdr:NM82323948F0FAB2D8 , bdr:NM9E1B259F30D4854B , bdr:NMC90C7B2BB93F277C , bdr:NMF98770A999F700D2 ;
+        :personStudentOf    bdr:P6955 , bdr:P6958 , bdr:P701 .
+}

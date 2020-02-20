@@ -1,0 +1,50 @@
+@base          <bdg:P1KG15992> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG15992 {
+    bda:LG264425B644B9EB68
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-11-20T12:23:26.316Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG15992  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG15992 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9c/P1KG15992.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG15992 ;
+        adm:logEntry        bda:LG264425B644B9EB68 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCCB67A389F23132F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3190 .
+    
+    bdr:NM0E8332C87E236DDB
+        a                   :PersonPersonalName ;
+        rdfs:label          "rong chen bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:NM8C3A64215E343D81
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i sgron me/"@bo-x-ewts .
+    
+    bdr:P1KG15992  a        :Person ;
+        skos:prefLabel      "bstan pa'i sgron me/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVCCB67A389F23132F ;
+        :personName         bdr:NM0E8332C87E236DDB , bdr:NM8C3A64215E343D81 ;
+        :personTeacherOf    bdr:P1KG15991 .
+}

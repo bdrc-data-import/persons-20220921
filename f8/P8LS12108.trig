@@ -1,0 +1,86 @@
+@base          <bdg:P8LS12108> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12108 {
+    bda:LG9155D6162D1D8D50
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-09T14:52:38.022Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBC1D16A1B9D760D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T16:28:11.371Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12108  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12108 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f8/P8LS12108.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12108 ;
+        adm:logEntry        bda:LG9155D6162D1D8D50 , bda:LGBC1D16A1B9D760D0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D189DD702A77AE3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV5BF9B11BA709C95A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1853"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV81B91532659726D6
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV98B01A3AA337852A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1710 ;
+        :onYear             "1850"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:NM102669A4445D6820
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum dus 'khor khri 13"@bo-x-ewts .
+    
+    bdr:NM5F14F980FE5E20CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bshad sgrub bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM9DD204309BD1C604
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "u cu mu chin zhabs drung bshad sgrub bstan 'dzin rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMFB162D9003016B90
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 52"@bo-x-ewts .
+    
+    bdr:NT8278E3632757EA7B
+        a                   :Note ;
+        :locationStatement  "p. 273-274, 353" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12108  a        :Person ;
+        skos:prefLabel      "bshad sgrub bstan 'dzin rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8278E3632757EA7B ;
+        :personEvent        bdr:EV1D189DD702A77AE3 , bdr:EV5BF9B11BA709C95A , bdr:EV81B91532659726D6 , bdr:EV98B01A3AA337852A ;
+        :personName         bdr:NM102669A4445D6820 , bdr:NM5F14F980FE5E20CE , bdr:NM9DD204309BD1C604 , bdr:NMFB162D9003016B90 .
+}

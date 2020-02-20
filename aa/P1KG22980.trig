@@ -1,0 +1,57 @@
+@base          <bdg:P1KG22980> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG22980 {
+    bda:LG862C418EC1F09663
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-25T12:34:48.99Z"^^xsd:dateTime ;
+        adm:logMessage      "new record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGCD48E74D6E41E3F9
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-07T11:36:37.654Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P1KG22980  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG22980 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "aa/P1KG22980.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG22980 ;
+        adm:logEntry        bda:LG862C418EC1F09663 , bda:LGCD48E74D6E41E3F9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCEE9C28C038BF626
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1149 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:NM08F594F3C37CC17C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "seng rdor/"@bo-x-ewts .
+    
+    bdr:NT9D6FA8894E57C50E
+        a                   :Note ;
+        :noteSource         bdr:MW1KG22950 .
+    
+    bdr:P1KG22980  a        :Person ;
+        skos:prefLabel      "seng rdor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D6FA8894E57C50E ;
+        :personEvent        bdr:EVCEE9C28C038BF626 ;
+        :personName         bdr:NM08F594F3C37CC17C .
+}

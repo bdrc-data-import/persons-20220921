@@ -1,0 +1,61 @@
+@base          <bdg:P8LS12363> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12363 {
+    bda:LGC77F62327903685B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T09:49:27.693Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12363  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12363 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4d/P8LS12363.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12363 ;
+        adm:logEntry        bda:LGC77F62327903685B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC9D510F9018305E0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EVDB5B2D5DDFA54DA1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1916"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM17FADFE308876BD9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gtsang skor brtsi gzhag"@bo-x-ewts .
+    
+    bdr:NM19CDC85DB2568167
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 24"@bo-x-ewts .
+    
+    bdr:NT142D847865E2177C
+        a                   :Note ;
+        :locationStatement  "p. 184" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12363  a        :Person ;
+        skos:prefLabel      "gtsang skor brtsi gzhag"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT142D847865E2177C ;
+        :personEvent        bdr:EVC9D510F9018305E0 , bdr:EVDB5B2D5DDFA54DA1 ;
+        :personName         bdr:NM17FADFE308876BD9 , bdr:NM19CDC85DB2568167 .
+}

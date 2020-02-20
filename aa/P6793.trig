@@ -1,0 +1,62 @@
+@base          <bdg:P6793> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6793 {
+    bda:LG8E0EC2C8E0722E2F
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-01-30T15:15:51.509Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6793  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6793 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "aa/P6793.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6793 ;
+        adm:logEntry        bda:LG8E0EC2C8E0722E2F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7C2F2430ED974B89
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2745 ;
+        :onYear             "1986"^^xsd:gYear .
+    
+    bdr:EV8930E256CB42862E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2530 .
+    
+    bdr:NM401D6A6549087938
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'gying rgan 07 dge legs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD1244014EC5DDB11
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge legs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT8FEAEB7F8895A2B5
+        a                   :Note ;
+        :locationStatement  "v. 2, foldout" ;
+        :noteSource         bdr:MW20379 ;
+        :noteText           "recognized by the 6th 'jam dbyangs bzhad pa, the sde ba tshang, and the bse tshang\nprovincial recognition\ninstalled at kha gya smad dgon in 1994"@en .
+    
+    bdr:P6793  a            :Person ;
+        skos:prefLabel      "dge legs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8FEAEB7F8895A2B5 ;
+        :personEvent        bdr:EV7C2F2430ED974B89 , bdr:EV8930E256CB42862E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM401D6A6549087938 , bdr:NMD1244014EC5DDB11 .
+}

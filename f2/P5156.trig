@@ -1,0 +1,64 @@
+@base          <bdg:P5156> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5156 {
+    bda:LGB12A30FBEDE5473E
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-03-07T09:58:40.397Z"^^xsd:dateTime ;
+        adm:logMessage      "created incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5156  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5156 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f2/P5156.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5156 ;
+        adm:logEntry        bda:LGB12A30FBEDE5473E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3218C0ABE4626F27
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
+    
+    bdr:EV4F57B162A078757B
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG104 .
+    
+    bdr:EV9E39482CDD73EAB3
+        a                   :PersonBirth ;
+        :onYear             "1799"^^xsd:gYear .
+    
+    bdr:NM442342BED4C388D0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NMD85050673979FC83
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzi sgar 05 chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NTCD24FE50BEA7C9E4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P5156  a            :Person ;
+        skos:prefLabel      "chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P691 ;
+        :isRoot             true ;
+        :note               bdr:NTCD24FE50BEA7C9E4 ;
+        :personEvent        bdr:EV3218C0ABE4626F27 , bdr:EV4F57B162A078757B , bdr:EV9E39482CDD73EAB3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM442342BED4C388D0 , bdr:NMD85050673979FC83 .
+}

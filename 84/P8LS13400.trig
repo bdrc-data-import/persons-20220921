@@ -1,0 +1,85 @@
+@base          <bdg:P8LS13400> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13400 {
+    bda:LG4783DEB36C13EC93
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-28T11:59:55.386Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG6D68D3785586C4D9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-28T09:33:42.082Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB2F1AF0411DC90EF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P8LS13400  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13400 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "84/P8LS13400.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13400 ;
+        adm:logEntry        bda:LG4783DEB36C13EC93 , bda:LG6D68D3785586C4D9 , bda:LGB2F1AF0411DC90EF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV35862E50C8371444
+        a                   :PersonBirth ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:EV5BB2AC201590F2DD
+        a                   :PersonDeath ;
+        :onYear             "1918"^^xsd:gYear .
+    
+    bdr:EVC8C50D8C161BD86D
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13403 .
+    
+    bdr:NM890130B1B4C820E1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin pad+ma 'od zer/"@bo-x-ewts .
+    
+    bdr:NMB584D0416218C9C4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mthong gling bstan 'dzin pad+ma 'od zer/"@bo-x-ewts .
+    
+    bdr:NMEC78D233D6049881
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Tongling 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMF91EF9882DE9D9C7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mthong gling 01"@bo-x-ewts .
+    
+    bdr:NT556B4DBE5EE3CC64
+        a                   :Note ;
+        :locationStatement  "p. 3-21" ;
+        :noteSource         bdr:MW00KG03888 ;
+        :noteText           "'bri gung bka' brgyud incarnate lama\n 1888 mthong grol bsam gtan chos gling dgon btab"@en .
+    
+    bdr:P8LS13400  a        :Person ;
+        skos:prefLabel      "bstan 'dzin pad+ma 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT556B4DBE5EE3CC64 ;
+        :personEvent        bdr:EV35862E50C8371444 , bdr:EV5BB2AC201590F2DD , bdr:EVC8C50D8C161BD86D ;
+        :personName         bdr:NM890130B1B4C820E1 , bdr:NMB584D0416218C9C4 , bdr:NMEC78D233D6049881 , bdr:NMF91EF9882DE9D9C7 ;
+        :personStudentOf    bdr:P2227 .
+}

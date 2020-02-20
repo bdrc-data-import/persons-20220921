@@ -1,0 +1,65 @@
+@base          <bdg:P6713> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6713 {
+    bda:P6713  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6713 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "ea/P6713.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6713 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV01B6FFEEA3F245C8
+        a                   :PersonAssumesOffice ;
+        :onYear             "1944"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EV4336A537BA096286
+        a                   :PersonLeavesOffice ;
+        :onYear             "1951"^^xsd:gYear ;
+        :personEventRole    bdr:R46 .
+    
+    bdr:EV75FC89F94D98EBAC
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3DEDECAF65E2E2B2
+        a                   :PersonTitle ;
+        rdfs:label          "bka' blon bla ma thub bstan kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NMCF430E41B5D1AD4E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan kun mkhyen, bka' blon bla ma/"@bo-x-ewts .
+    
+    bdr:NMD5A96FE67B00CF64
+        a                   :PersonTitle ;
+        rdfs:label          "ram pa thub bstan kun mkhyen/"@bo-x-ewts .
+    
+    bdr:NT519EA6A1EFF2D004
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "served as bka' blon bla ma, 1944-1951"@en .
+    
+    bdr:P6713  a            :Person ;
+        skos:prefLabel      "thub bstan kun mkhyen, bka' blon bla ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT519EA6A1EFF2D004 ;
+        :personEvent        bdr:EV01B6FFEEA3F245C8 , bdr:EV4336A537BA096286 , bdr:EV75FC89F94D98EBAC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3DEDECAF65E2E2B2 , bdr:NMCF430E41B5D1AD4E , bdr:NMD5A96FE67B00CF64 .
+}

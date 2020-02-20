@@ -1,0 +1,70 @@
+@base          <bdg:P731> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P731 {
+    bda:LG53C5BCE361E4E7F7
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-21T11:06:08.365Z"^^xsd:dateTime ;
+        adm:logMessage      "P8709 withdrawn in favor of P731"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGDF4FFA63D13A5B20
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-20T15:35:16.244Z"^^xsd:dateTime ;
+        adm:logMessage      "added relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGECDF65C200013E6C
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-04T16:03:31.325Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P731  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P731 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fd/P731.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P731 ;
+        adm:logEntry        bda:LG53C5BCE361E4E7F7 , bda:LGDF4FFA63D13A5B20 , bda:LGECDF65C200013E6C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV137626C9317825DE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1490 ;
+        :onYear             "1891"^^xsd:gYear .
+    
+    bdr:EVF0509DF57675C16A
+        a                   :PersonDeath ;
+        :onYear             "1964"^^xsd:gYear .
+    
+    bdr:NMB5BFA8FA9AC64504
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1B147CFBAAAF92D4
+        a                   :Note ;
+        :noteText           "rnying ma, gter ma, bdud 'joms revelations"@en .
+    
+    bdr:P731  a             :Person ;
+        skos:prefLabel      "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1B147CFBAAAF92D4 ;
+        :personEvent        bdr:EV137626C9317825DE , bdr:EVF0509DF57675C16A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB5BFA8FA9AC64504 ;
+        :personStudentOf    bdr:P705 ;
+        :personTeacherOf    bdr:P7495 .
+}

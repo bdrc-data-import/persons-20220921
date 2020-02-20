@@ -1,0 +1,70 @@
+@base          <bdg:P8LS12228> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12228 {
+    bda:LG0B4E89C92B4A32C2
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T16:18:02.193Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12228  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12228 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "88/P8LS12228.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12228 ;
+        adm:logEntry        bda:LG0B4E89C92B4A32C2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D5B699675F29384
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1840"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV2A645962F879C4FB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVB0CC2528DFA8A397
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1PD96140 .
+    
+    bdr:NM16A76B5B4D3CE585
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 62"@bo-x-ewts .
+    
+    bdr:NM8418369A83F83A19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khre dmar sprul sku ye shes bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMD023BA2789929482
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT4724CE9AC90ADC32
+        a                   :Note ;
+        :locationStatement  "p. 190-191" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12228  a        :Person ;
+        skos:prefLabel      "ye shes bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4724CE9AC90ADC32 ;
+        :personEvent        bdr:EV1D5B699675F29384 , bdr:EV2A645962F879C4FB , bdr:EVB0CC2528DFA8A397 ;
+        :personName         bdr:NM16A76B5B4D3CE585 , bdr:NM8418369A83F83A19 , bdr:NMD023BA2789929482 ;
+        :personTeacherOf    bdr:P8LS12237 .
+}

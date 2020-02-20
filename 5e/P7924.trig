@@ -1,0 +1,52 @@
+@base          <bdg:P7924> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7924 {
+    bda:P7924  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7924 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "5e/P7924.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7924 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8E86E955CFC87008
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMA669E415B5043A9F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skya rgya'i mkhan po dpal rgyal/"@bo-x-ewts .
+    
+    bdr:NMCB688C516A70259D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal rgyal/"@bo-x-ewts .
+    
+    bdr:NT6BA204F8773C1ED5
+        a                   :Note ;
+        :locationStatement  "p. 2 (1st group)" ;
+        :noteSource         bdr:MW24630 ;
+        :noteText           "listed as an important student of the teacher 'jigs med rdo rje dpa' bo"@en .
+    
+    bdr:P7924  a            :Person ;
+        skos:prefLabel      "dpal rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6BA204F8773C1ED5 ;
+        :personEvent        bdr:EV8E86E955CFC87008 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA669E415B5043A9F , bdr:NMCB688C516A70259D ;
+        :personStudentOf    bdr:P7914 .
+}

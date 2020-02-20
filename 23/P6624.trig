@@ -1,0 +1,52 @@
+@base          <bdg:P6624> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6624 {
+    bda:P6624  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6624 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "23/P6624.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6624 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV91DEB8383C580D27
+        a                   :PersonBirth ;
+        :onYear             "1963"^^xsd:gYear .
+    
+    bdr:NMDE6293BEEAF8260D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lcags thar rgyal/"@bo-x-ewts .
+    
+    bdr:NTA04317F1ADC5DA6A
+        a                   :Note ;
+        :locationStatement  "p. 50" ;
+        :noteSource         bdr:MW20213 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:NTEED59C741703AD34
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW20410 ;
+        :noteText           "author biodata"@en .
+    
+    bdr:P6624  a            :Person ;
+        skos:prefLabel      "lcags thar rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA04317F1ADC5DA6A , bdr:NTEED59C741703AD34 ;
+        :personEvent        bdr:EV91DEB8383C580D27 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMDE6293BEEAF8260D .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P419> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P419 {
+    bda:P419  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P419 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "50/P419.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P419 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B079D4CA5C370EB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3088 ;
+        :onYear             "1698"^^xsd:gYear ;
+        :personEventRole    bdr:R44 .
+    
+    bdr:EVFE2E2143933D919D
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM7115CF69CD4C745F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rab brtan/"@bo-x-ewts .
+    
+    bdr:NMF6D777A0A8E36B54
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "jun gar tshe dbang rab brtan/"@bo-x-ewts .
+    
+    bdr:NTB47A5F40CFFB20F1
+        a                   :Note ;
+        :locationStatement  "p. 707" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a biographical sketch"@en .
+    
+    bdr:NTD1DC34808EF51F72
+        a                   :Note ;
+        :locationStatement  "p. 365" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1698. date of ascension to throne of the dzungars"@en .
+    
+    bdr:P419  a             :Person ;
+        skos:prefLabel      "tshe dbang rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB47A5F40CFFB20F1 , bdr:NTD1DC34808EF51F72 ;
+        :personEvent        bdr:EV1B079D4CA5C370EB , bdr:EVFE2E2143933D919D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7115CF69CD4C745F , bdr:NMF6D777A0A8E36B54 .
+}

@@ -1,0 +1,85 @@
+@base          <bdg:P1648> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1648 {
+    bda:LG16DE34BE2D741032
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-19T15:31:27.526Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1648  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1648 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "e1/P1648.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1648 ;
+        adm:logEntry        bda:LG16DE34BE2D741032 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4BCE4B762C1CAD23
+        a                   :PersonDeath ;
+        :onYear             "2008"^^xsd:gYear .
+    
+    bdr:EV8172ECA2F27178D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVA6395799783F79C4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVEA073997F18DCFF5
+        a                   :PersonBirth ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:NM3B1D26FDF4EC59DB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "stag mtsher sprul sku 06"@bo-x-ewts .
+    
+    bdr:NM5354CC030B1E59A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan 'jigs med nor bu/"@bo-x-ewts .
+    
+    bdr:NM5457B7F25B9793F1
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Takser Tulku 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME3A0C68DF4F5247D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "stag mtsher thub bstan 'jigs med nor bu/"@bo-x-ewts .
+    
+    bdr:NTCB24520FAB4D55B3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTCD62946D8133B63A
+        a                   :Note ;
+        :locationStatement  "p. 57-" ;
+        :noteSource         bdr:MW28810 ;
+        :noteText           "1925 recognised by the 13th dalai lama\n1927 enthroned\n1945 took full ordained vows from stag brag rin po che"@en .
+    
+    bdr:P1648  a            :Person ;
+        skos:prefLabel      "thub bstan 'jigs med nor bu/"@bo-x-ewts ;
+        :hasSibling         bdr:P1TD9 ;
+        :hasYoungerBrother  bdr:P1649 ;
+        :incarnationGeneral  bdr:P1138 ;
+        :isRoot             true ;
+        :note               bdr:NTCB24520FAB4D55B3 , bdr:NTCD62946D8133B63A ;
+        :personEvent        bdr:EV4BCE4B762C1CAD23 , bdr:EV8172ECA2F27178D7 , bdr:EVA6395799783F79C4 , bdr:EVEA073997F18DCFF5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3B1D26FDF4EC59DB , bdr:NM5354CC030B1E59A8 , bdr:NM5457B7F25B9793F1 , bdr:NME3A0C68DF4F5247D ;
+        :personStudentOf    bdr:P4559 , bdr:P4796 .
+}

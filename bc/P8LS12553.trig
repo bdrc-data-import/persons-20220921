@@ -1,0 +1,55 @@
+@base          <bdg:P8LS12553> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12553 {
+    bda:LG21387C98C57153C7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T15:56:50.035Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record with office title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12553  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12553 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bc/P8LS12553.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12553 ;
+        adm:logEntry        bda:LG21387C98C57153C7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV579E3EFE9DE64440
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4106 .
+    
+    bdr:NM24660475FC6E43CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'phel/"@bo-x-ewts .
+    
+    bdr:NM2759251C1D65F4D3
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "brag thog dgon gdan rabs 05"@bo-x-ewts .
+    
+    bdr:NT60656B3D8396D0E8
+        a                   :Note ;
+        :locationStatement  "vol. 2, p. 583" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:P8LS12553  a        :Person ;
+        skos:prefLabel      "chos 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60656B3D8396D0E8 ;
+        :personEvent        bdr:EV579E3EFE9DE64440 ;
+        :personName         bdr:NM24660475FC6E43CE , bdr:NM2759251C1D65F4D3 .
+}

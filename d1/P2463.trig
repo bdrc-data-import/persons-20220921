@@ -1,0 +1,86 @@
+@base          <bdg:P2463> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2463 {
+    bda:LG451235B352DD9F6E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T17:20:47.571Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LG71965D2D1AD4EB33
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-05T15:36:37.555Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2463  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2463 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "d1/P2463.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2463 ;
+        adm:logEntry        bda:LG451235B352DD9F6E , bda:LG71965D2D1AD4EB33 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV81A0CBBBCBCDEF6F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G201 .
+    
+    bdr:EV9073848CF8F79587
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1988 ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM76E91E7A448E1874
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun blo, grub chen/"@bo-x-ewts .
+    
+    bdr:NM7F9AE26EBEE33C8A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen kun blo/"@bo-x-ewts .
+    
+    bdr:NM93DC454F3639A03E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' blo gros/"@bo-x-ewts .
+    
+    bdr:NT5BA97073112AF2A4
+        a                   :Note ;
+        :locationStatement  "p. 79" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT73ACBC52B631C800
+        a                   :Note ;
+        :noteText           "said to be the rebirth of bu ston rin chen grub (1290-1364)\nbecame abbot of jo nang in succession to his master nya dbon kun dga' dpal"@en .
+    
+    bdr:NT84011064AE6AEF35
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 7" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "kalacakra master; important figure in the the 'bro transmission of the kalacakra teachings;\nfrom the shar kha lineage, one of the princely families of rgyal rtse"@en .
+    
+    bdr:P2463  a            :Person ;
+        skos:prefLabel      "kun dga' blo gros/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5BA97073112AF2A4 , bdr:NT73ACBC52B631C800 , bdr:NT84011064AE6AEF35 ;
+        :personEvent        bdr:EV81A0CBBBCBCDEF6F , bdr:EV9073848CF8F79587 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM76E91E7A448E1874 , bdr:NM7F9AE26EBEE33C8A , bdr:NM93DC454F3639A03E ;
+        :personStudentOf    bdr:P0RK1104 , bdr:P2010 , bdr:P5291 ;
+        :personTeacherOf    bdr:P2464 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drubchen-Kunga-Lodro/4167"^^xsd:anyURI .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P3802> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3802 {
+    bda:LG5EA2B20D097FE548
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T16:52:00.698Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3802  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3802 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6e/P3802.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3802 ;
+        adm:logEntry        bda:LG5EA2B20D097FE548 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5B83E21F9FA371AF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVEF10F272748121C1
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMA1F85B367E9F522D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rigs pa smra ba chos dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMC1EC9A4EE9D65500
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT42C6F5B37BD91D97
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3802  a            :Person ;
+        skos:prefLabel      "chos dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT42C6F5B37BD91D97 ;
+        :personEvent        bdr:EV5B83E21F9FA371AF , bdr:EVEF10F272748121C1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA1F85B367E9F522D , bdr:NMC1EC9A4EE9D65500 ;
+        :personTeacherOf    bdr:P3800 .
+}

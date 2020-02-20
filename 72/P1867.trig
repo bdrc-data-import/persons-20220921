@@ -1,0 +1,63 @@
+@base          <bdg:P1867> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1867 {
+    bda:LG999B6A9511B30B87
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:55:26.971Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGE0BB678C89E91EC3
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-23T14:39:44.842Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P1867  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1867 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "72/P1867.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1867 ;
+        adm:logEntry        bda:LG999B6A9511B30B87 , bda:LGE0BB678C89E91EC3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV60BDEE2B802E8D9F
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM49BE7399DF278ED4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sa skya slob dpon mgon po rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM52CC8854780C5E41
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NTC36256B5C91D857E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P1867  a            :Person ;
+        skos:prefLabel      "mgon po rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC36256B5C91D857E ;
+        :personEvent        bdr:EV60BDEE2B802E8D9F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM49BE7399DF278ED4 , bdr:NM52CC8854780C5E41 ;
+        :personTeacherOf    bdr:P1862 .
+}

@@ -1,0 +1,49 @@
+@base          <bdg:P3828> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3828 {
+    bda:LGADDAC653A211B701
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T03:10:00.468Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P3828  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3828 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "5a/P3828.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3828 ;
+        adm:logEntry        bda:LGADDAC653A211B701 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVDF131CB779B597A5
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM6B050BE9B56BDFD3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lho pa thams cad mkhyen pa/"@bo-x-ewts .
+    
+    bdr:P3828  a            :Person ;
+        skos:prefLabel      "lho pa thams cad mkhyen pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVDF131CB779B597A5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6B050BE9B56BDFD3 ;
+        :personStudentOf    bdr:P3827 , bdr:P3852 ;
+        :personTeacherOf    bdr:P3829 , bdr:P3838 , bdr:P6777 .
+}

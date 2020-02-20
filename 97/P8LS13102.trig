@@ -1,0 +1,68 @@
+@base          <bdg:P8LS13102> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13102 {
+    bda:LG64721C74C4F2AB45
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T10:05:26.85Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13102  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13102 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "97/P8LS13102.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13102 ;
+        adm:logEntry        bda:LG64721C74C4F2AB45 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV598E5F3491AEEF2A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:EVA39DE467A01BFBDB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:NM01D1CDA50A5097CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa nam mkha' kun bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM4CDD4BB3EECED2FF
+        a                   :PersonTitle ;
+        rdfs:label          "thar rtse byams pa nam mkha' kun bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8E5A638835EF669C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 71"@bo-x-ewts .
+    
+    bdr:NMD485E64B5499CDA3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 71 byams pa nam mkha' kun bzang bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT47CB0C8FFAC77AB2
+        a                   :Note ;
+        :locationStatement  "p. 122" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:P8LS13102  a        :Person ;
+        skos:prefLabel      "byams pa nam mkha' kun bzang bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT47CB0C8FFAC77AB2 ;
+        :personEvent        bdr:EV598E5F3491AEEF2A , bdr:EVA39DE467A01BFBDB ;
+        :personName         bdr:NM01D1CDA50A5097CD , bdr:NM4CDD4BB3EECED2FF , bdr:NM8E5A638835EF669C , bdr:NMD485E64B5499CDA3 .
+}

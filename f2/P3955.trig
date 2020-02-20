@@ -1,0 +1,65 @@
+@base          <bdg:P3955> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3955 {
+    bda:LGA1B31FEAF527323F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-29T14:22:16.489Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3955  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3955 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f2/P3955.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3955 ;
+        adm:logEntry        bda:LGA1B31FEAF527323F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2547375320F0A6AF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:EV29AD39E5998D1911
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM08B2C6F1FB20823A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dmag zor mgon po/"@bo-x-ewts .
+    
+    bdr:NM522044EEB85871EB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne sa skyong 11 dmag zor mgon po/"@bo-x-ewts .
+    
+    bdr:NTC406493A75F0266F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3955  a            :Person ;
+        skos:prefLabel      "dmag zor mgon po/"@bo-x-ewts ;
+        :hasFather          bdr:P3954 ;
+        :hasSibling         bdr:P1KT12 ;
+        :hasSon             bdr:P1758 ;
+        :hasWife            bdr:P1KT8 ;
+        :isRoot             true ;
+        :note               bdr:NTC406493A75F0266F ;
+        :personEvent        bdr:EV2547375320F0A6AF , bdr:EV29AD39E5998D1911 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM08B2C6F1FB20823A , bdr:NM522044EEB85871EB ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Makzor-Gonpo/6346"^^xsd:anyURI .
+}

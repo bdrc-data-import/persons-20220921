@@ -1,0 +1,52 @@
+@base          <bdg:P7920> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7920 {
+    bda:P7920  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7920 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "58/P7920.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7920 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVED2946E0609ACAA1
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM380D99E94F25967C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a 'phar sprul sku pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM45259E9BB7DFBE79
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma tshe dbang /"@bo-x-ewts .
+    
+    bdr:NT975C4D7E6EE1ACD6
+        a                   :Note ;
+        :locationStatement  "p. 3 (1st group)" ;
+        :noteSource         bdr:MW24630 ;
+        :noteText           "listed as an important student of the gter ston"@en .
+    
+    bdr:P7920  a            :Person ;
+        skos:prefLabel      "pad+ma tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT975C4D7E6EE1ACD6 ;
+        :personEvent        bdr:EVED2946E0609ACAA1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM380D99E94F25967C , bdr:NM45259E9BB7DFBE79 ;
+        :personStudentOf    bdr:P7914 .
+}

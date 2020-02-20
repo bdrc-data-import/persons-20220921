@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12244> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12244 {
+    bda:LG5BA6EAB54616F838
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T09:44:25.909Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12244  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12244 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9d/P8LS12244.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12244 ;
+        adm:logEntry        bda:LG5BA6EAB54616F838 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8516167054278885
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVE07D22C3899B2DF9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2A646D906E420291
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzi lung dpon skor dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM87D44047C540495B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NMCEDA88B301B3487B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 86"@bo-x-ewts .
+    
+    bdr:NT8397EE4FF9856002
+        a                   :Note ;
+        :locationStatement  "p. 201" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "incarnate lama of gzi lung dpon skor lha rams pa dge 'dun snyan grags"@en .
+    
+    bdr:P8LS12244  a        :Person ;
+        skos:prefLabel      "dge 'dun bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8397EE4FF9856002 ;
+        :personEvent        bdr:EV8516167054278885 , bdr:EVE07D22C3899B2DF9 ;
+        :personName         bdr:NM2A646D906E420291 , bdr:NM87D44047C540495B , bdr:NMCEDA88B301B3487B .
+}

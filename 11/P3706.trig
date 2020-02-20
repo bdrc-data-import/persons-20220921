@@ -1,0 +1,50 @@
+@base          <bdg:P3706> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3706 {
+    bda:P3706  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3706 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "11/P3706.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3706 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5E0E1DB77E54820C
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM44F0FD7294CD0C4F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don yod rgyal/"@bo-x-ewts .
+    
+    bdr:NMAE9027CFE9066721
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "be ri rgyal po don yod rgyal/"@bo-x-ewts .
+    
+    bdr:NT06122346B11F62B2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3706  a            :Person ;
+        skos:prefLabel      "don yod rgyal/"@bo-x-ewts ;
+        :hasSon             bdr:P3705 ;
+        :isRoot             true ;
+        :note               bdr:NT06122346B11F62B2 ;
+        :personEvent        bdr:EV5E0E1DB77E54820C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM44F0FD7294CD0C4F , bdr:NMAE9027CFE9066721 .
+}

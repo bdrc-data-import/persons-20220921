@@ -1,0 +1,95 @@
+@base          <bdg:P591> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P591 {
+    bda:LG81D111F04FA14B71
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-27T15:54:23.041Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, and seat"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P591  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P591 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "cf/P591.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P591 ;
+        adm:logEntry        bda:LG81D111F04FA14B71 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1444F194CA14F8ED
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1869"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV65CF9A2B7FD90EDB
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1873"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV9E3DACFDB129C0C5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G57 .
+    
+    bdr:EVAA6DF1C2E60EF1F1
+        a                   :PersonDeath ;
+        :onYear             "1877"^^xsd:gYear .
+    
+    bdr:EVBC31075E018DA446
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G772 ;
+        :onYear             "1811"^^xsd:gYear .
+    
+    bdr:EVE5754D0F034BF09B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM064A265DFD2CB871
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 36 yon tan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMAB8DEB2D8DE4F609
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 36"@bo-x-ewts .
+    
+    bdr:NMF5730CB64A2AC704
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT8D72163915ABF3BD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTCB47C6858E643539
+        a                   :Note ;
+        :locationStatement  "p. 160" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NTF2BBF7AFDECAF7C8
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1869-1873.\n1873. Retired to Bkra-shis-sgang."@en .
+    
+    bdr:P591  a             :Person ;
+        skos:prefLabel      "yon tan dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8D72163915ABF3BD , bdr:NTCB47C6858E643539 , bdr:NTF2BBF7AFDECAF7C8 ;
+        :personEvent        bdr:EV1444F194CA14F8ED , bdr:EV65CF9A2B7FD90EDB , bdr:EV9E3DACFDB129C0C5 , bdr:EVAA6DF1C2E60EF1F1 , bdr:EVBC31075E018DA446 , bdr:EVE5754D0F034BF09B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM064A265DFD2CB871 , bdr:NMAB8DEB2D8DE4F609 , bdr:NMF5730CB64A2AC704 ;
+        :personStudentOf    bdr:P578 , bdr:P579 ;
+        :personTeacherOf    bdr:P592 , bdr:P605 , bdr:P760 .
+}

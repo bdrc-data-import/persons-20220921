@@ -1,0 +1,65 @@
+@base          <bdg:P3100> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3100 {
+    bda:LGAB74735F828776B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-28T10:51:21.31Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3100  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3100 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "0a/P3100.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3100 ;
+        adm:logEntry        bda:LGAB74735F828776B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF75B6B27B5F559D3
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM252AC5DB917FDD9A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhas grub nor bzang rin chen/"@bo-x-ewts .
+    
+    bdr:NMAF3022E79CD730A1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor bzang rin chen dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT2A0DAE7630644F41
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 15 v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "master of the kalacakra; lama in the transmission of the yogasataka"@en .
+    
+    bdr:NTEB6A63E131FE0844
+        a                   :Note ;
+        :locationStatement  "p. 166" ;
+        :noteSource         bdr:MW19832 ;
+        :noteText           "brief biography"@en .
+    
+    bdr:P3100  a            :Person ;
+        skos:prefLabel      "nor bzang rin chen dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2A0DAE7630644F41 , bdr:NTEB6A63E131FE0844 ;
+        :personEvent        bdr:EVF75B6B27B5F559D3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM252AC5DB917FDD9A , bdr:NMAF3022E79CD730A1 ;
+        :personStudentOf    bdr:P154 , bdr:P3079 , bdr:P64 ;
+        :personTeacherOf    bdr:P3101 , bdr:P3750 .
+}

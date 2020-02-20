@@ -1,0 +1,99 @@
+@base          <bdg:P8LS12086> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12086 {
+    bda:LG1FFCFCC4151C2E01
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T10:29:09.98Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9B9E08539C59BD5B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-13T10:30:44.508Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDB8C548EF0EC61F6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-03T15:40:42.693Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12086  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12086 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "da/P8LS12086.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12086 ;
+        adm:logEntry        bda:LG1FFCFCC4151C2E01 , bda:LG9B9E08539C59BD5B , bda:LGDB8C548EF0EC61F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1CAE1D47BDA3C3C3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1894"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV3DF121AA895C634C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV752634E29AFF8FC0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1945 ;
+        :onYear             "1890"^^xsd:gYear ;
+        :personEventRole    bdr:R38 .
+    
+    bdr:EVFD441AE52A5E32F1
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G977 ;
+        :onYear             "1869"^^xsd:gYear .
+    
+    bdr:NM14D9C5C41DBCE67F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB4984AA9D47A14D8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum khri chen 74"@bo-x-ewts .
+    
+    bdr:NMCD9BC1A9D3D89805
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum sman pa khri 58"@bo-x-ewts .
+    
+    bdr:NMF319E7FEAF445CDC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne mkhan chen ye shes tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT0CD95985E0E7F136
+        a                   :Note ;
+        :locationStatement  "p. 220" ;
+        :noteSource         bdr:MW19838 ;
+        :noteText           "1890 -khri of sman pa slob dpon"@en .
+    
+    bdr:NTA8D506B8839EB765
+        a                   :Note ;
+        :locationStatement  "p. 334" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12086  a        :Person ;
+        skos:prefLabel      "ye shes tshul khrims rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0CD95985E0E7F136 , bdr:NTA8D506B8839EB765 ;
+        :personEvent        bdr:EV1CAE1D47BDA3C3C3 , bdr:EV3DF121AA895C634C , bdr:EV752634E29AFF8FC0 , bdr:EVFD441AE52A5E32F1 ;
+        :personName         bdr:NM14D9C5C41DBCE67F , bdr:NMB4984AA9D47A14D8 , bdr:NMCD9BC1A9D3D89805 , bdr:NMF319E7FEAF445CDC ;
+        :personStudentOf    bdr:P196 , bdr:P251 , bdr:P8LS12084 .
+}

@@ -1,0 +1,84 @@
+@base          <bdg:P200> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P200 {
+    bda:LGB3A30C768A6DB8C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-01-10T16:21:08.033Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:LGDE882E30343EAE3B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-14T11:01:14.645Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P200  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P200 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "3a/P200.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P200 ;
+        adm:logEntry        bda:LGB3A30C768A6DB8C5 , bda:LGDE882E30343EAE3B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0FE220B5E4D1C87A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1164 ;
+        :onYear             "1664"^^xsd:gYear .
+    
+    bdr:EV478428C82915217C
+        a                   :PersonDeath ;
+        :onYear             "1740"^^xsd:gYear .
+    
+    bdr:NMB9AB78CFB27A254C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC83392D498959020
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khyar dge blo gros rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT019026B5388A39DD
+        a                   :Note ;
+        :noteText           "dge lugs polymath from a mdo; one of the chief disciples of 'jam dbyangs bzhad pa'i rdo rje"@en .
+    
+    bdr:NT3D4032CADD70A549
+        a                   :Note ;
+        :locationStatement  "p. 265" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:NT4C2D363315880010
+        a                   :Note ;
+        :noteText           "1674, first vows at the age of 11 from bla-ma ri-khrod-pa who gave him the name Blo-gros-rgya-mtsho.\nAccompanied co-ne chos-rje to Central Tibet.\nEntered 'bras-spungs sgo-mang.\nReceived final monastic ordination from pha-bong-kha-pa ngag-dbang-bstan-'dzin.\nStudied with 'jam-dbyangs-bzhad-pa'i-rdo-rje.\nReturned to a-mdo.\nEstablished a new monastery.\nTaught in most of the monasteries of a-mdo.\nLived the solitary life.\nGsung 'bum in one printed volume."@en .
+    
+    bdr:NT81B87F977ECD9144
+        a                   :Note ;
+        :locationStatement  "p. 720" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source contains a biographical sketch."@en .
+    
+    bdr:P200  a             :Person ;
+        skos:prefLabel      "blo gros rgya mtsho/"@bo-x-ewts ;
+        :hasFather          bdr:P4806 ;
+        :hasMother          bdr:P4807 ;
+        :isRoot             true ;
+        :note               bdr:NT019026B5388A39DD , bdr:NT3D4032CADD70A549 , bdr:NT4C2D363315880010 , bdr:NT81B87F977ECD9144 ;
+        :personEvent        bdr:EV0FE220B5E4D1C87A , bdr:EV478428C82915217C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB9AB78CFB27A254C , bdr:NMC83392D498959020 ;
+        :personStudentOf    bdr:P423 , bdr:P4808 ;
+        :personTeacherOf    bdr:P199 , bdr:P1PD117981 , bdr:P414 .
+}

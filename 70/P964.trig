@@ -1,0 +1,67 @@
+@base          <bdg:P964> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P964 {
+    bda:LG4C5FABE59C0E7AA2
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-10-27T12:40:29.333Z"^^xsd:dateTime ;
+        adm:logMessage      "added passing date and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGC2D4637E0CA99760
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-27T16:53:12.041Z"^^xsd:dateTime ;
+        adm:logMessage      "འཁྲུངས་ལོ་འི་མཆན་བཀོད"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P964  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P964 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "70/P964.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P964 ;
+        adm:logEntry        bda:LG4C5FABE59C0E7AA2 , bda:LGC2D4637E0CA99760 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10CAF8ACD992BE5B
+        a                   :PersonDeath ;
+        :onYear             "1986"^^xsd:gYear .
+    
+    bdr:EVA6721D58EAD5ED1B
+        a                   :PersonBirth ;
+        :onYear             "1924"^^xsd:gYear .
+    
+    bdr:NM5CDA7043EFB86FEB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NMF41E4CA6873D16EE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri tsho mkhan po blo gros bzang po/"@bo-x-ewts .
+    
+    bdr:NT478A11F29A86E3A6
+        a                   :Note ;
+        :locationStatement  "pp. 173-179" ;
+        :noteSource         bdr:MW1KG852 ;
+        :noteText           "འདིར་འཁྲུངས་ལོ་ཕྱི་ལོ་༡༩༢༣ལོ་འཁོད་འདུག"@bo .
+    
+    bdr:P964  a             :Person ;
+        skos:prefLabel      "blo gros bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT478A11F29A86E3A6 ;
+        :personEvent        bdr:EV10CAF8ACD992BE5B , bdr:EVA6721D58EAD5ED1B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5CDA7043EFB86FEB , bdr:NMF41E4CA6873D16EE .
+}

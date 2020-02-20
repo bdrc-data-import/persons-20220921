@@ -1,0 +1,66 @@
+@base          <bdg:P4820> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4820 {
+    bda:P4820  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4820 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0d/P4820.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4820 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6291FD9EB2864BED
+        a                   :PersonDeath ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:EVCDA6FC4518F625CC
+        a                   :PersonBirth ;
+        :onYear             "1781"^^xsd:gYear .
+    
+    bdr:NM1242A187B3632F80
+        a                   :PersonPersonalName ;
+        rdfs:label          "sgeg pa'i rdo rje, go shrI chos rje/"@bo-x-ewts .
+    
+    bdr:NM9A6D1D4B3DFAE536
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang lhun grub/"@bo-x-ewts .
+    
+    bdr:NMD2B047FCBB599E9A
+        a                   :PersonPersonalName ;
+        rdfs:label          "go shrI chos rje blo bzang lhun grub/"@bo-x-ewts .
+    
+    bdr:NME35B79398A8EB13D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "go shrI chos rje/"@bo-x-ewts .
+    
+    bdr:NT4579186EFB2F80CD
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT8EC837891054E850
+        a                   :Note ;
+        :locationStatement  "p. 385" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:P4820  a            :Person ;
+        skos:prefLabel      "blo bzang lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4579186EFB2F80CD , bdr:NT8EC837891054E850 ;
+        :personEvent        bdr:EV6291FD9EB2864BED , bdr:EVCDA6FC4518F625CC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1242A187B3632F80 , bdr:NM9A6D1D4B3DFAE536 , bdr:NMD2B047FCBB599E9A , bdr:NME35B79398A8EB13D ;
+        :personStudentOf    bdr:P339 .
+}

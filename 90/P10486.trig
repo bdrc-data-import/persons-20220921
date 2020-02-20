@@ -1,0 +1,64 @@
+@base          <bdg:P10486> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10486 {
+    bda:LGA9D332FDE38DE45B
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-02T17:02:28.973Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P10486  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10486 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "90/P10486.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10486 ;
+        adm:logEntry        bda:LGA9D332FDE38DE45B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV52E59532A5221B3D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G232 .
+    
+    bdr:EVE5E069DE99425690
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1E656693BEEC7C7C
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NM8610E26A62403463
+        a                   :PersonPersonalName ;
+        rdfs:label          "sa skya bdag chen 01 kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NT6A0F8ED44F989308
+        a                   :Note ;
+        :locationStatement  "p. 552" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "sa skya hierarch of the 'khon lineage; the founder of the phun tshogs pho brang"@en .
+    
+    bdr:P10486  a           :Person ;
+        skos:prefLabel      "kun dga' rin chen/"@bo-x-ewts ;
+        :hasSon             bdr:P975 ;
+        :isRoot             true ;
+        :note               bdr:NT6A0F8ED44F989308 ;
+        :personEvent        bdr:EV52E59532A5221B3D , bdr:EVE5E069DE99425690 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E656693BEEC7C7C , bdr:NM8610E26A62403463 ;
+        :personStudentOf    bdr:P314 .
+}

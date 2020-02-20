@@ -1,0 +1,93 @@
+@base          <bdg:P1815> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1815 {
+    bda:LG00A578C4D5CE995F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T09:52:35.334Z"^^xsd:dateTime ;
+        adm:logMessage      "yig nor bcos yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG22F79B6D0F8A8AA7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T10:50:31.852Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG8AA4D7D83B5E1B0A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T09:53:31.616Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1815  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1815 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "eb/P1815.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1815 ;
+        adm:logEntry        bda:LG00A578C4D5CE995F , bda:LG22F79B6D0F8A8AA7 , bda:LG8AA4D7D83B5E1B0A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAE7EDC8802E4A4CA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVD6F56AF28A451B7A
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM03094E3E69B904DD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'gyur med pad+ma dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NM6201D7137D2110FB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling khri chen 'gyur med pad+ma dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMABF35B7FC19CBDDD
+        a                   :PersonTitle ;
+        rdfs:label          "smin gling gdung sras pad+ma dbang rgyal/"@bo-x-ewts .
+    
+    bdr:NMAEE2D4AD51065216
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling khri chen 06"@bo-x-ewts .
+    
+    bdr:NT01C25470619C675E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Smin-grol-gling Lho-gter"@en .
+    
+    bdr:NT190656C70AE4FB3B
+        a                   :Note ;
+        :locationStatement  "p. 128" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:NTFCB6046B5F56C66D
+        a                   :Note ;
+        :locationStatement  "p. 109-110" ;
+        :noteSource         bdr:MW1CZ2290 .
+    
+    bdr:P1815  a            :Person ;
+        skos:prefLabel      "'gyur med pad+ma dbang rgyal/"@bo-x-ewts ;
+        :hasBrother         bdr:P10500 ;
+        :hasSon             bdr:P8742 ;
+        :isRoot             true ;
+        :note               bdr:NT01C25470619C675E , bdr:NT190656C70AE4FB3B , bdr:NTFCB6046B5F56C66D ;
+        :personEvent        bdr:EVAE7EDC8802E4A4CA , bdr:EVD6F56AF28A451B7A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03094E3E69B904DD , bdr:NM6201D7137D2110FB , bdr:NMABF35B7FC19CBDDD , bdr:NMAEE2D4AD51065216 ;
+        :personStudentOf    bdr:P2542 ;
+        :personTeacherOf    bdr:P2687 , bdr:P2912 , bdr:P331 .
+}

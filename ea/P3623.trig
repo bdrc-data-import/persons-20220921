@@ -1,0 +1,88 @@
+@base          <bdg:P3623> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3623 {
+    bda:LG669C9DBCA5A216DE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:59:24.705Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3623  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3623 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ea/P3623.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3623 ;
+        adm:logEntry        bda:LG669C9DBCA5A216DE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV012FB1A0298B4B8C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV215171A14421D99F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G299 .
+    
+    bdr:EV4E313B7E51B3F41C
+        a                   :PersonBirth ;
+        :onYear             "1731"^^xsd:gYear .
+    
+    bdr:EV8D28C76ACECD1AFC
+        a                   :PersonDeath ;
+        :onYear             "1809"^^xsd:gYear .
+    
+    bdr:EVF25658EAEB4C19FB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:NM2FE4B9AC26976DDA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla brang rgyud pa khri 22 dge 'dun dpal bzang /"@bo-x-ewts .
+    
+    bdr:NM478909A824BC88D2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 22"@bo-x-ewts .
+    
+    bdr:NM632FA10266B0299C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMF28ADEB601AEE7C0
+        a                   :PersonTitle ;
+        rdfs:label          "mdzod dge dge 'dun dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT5EA9FF73A6024794
+        a                   :Note ;
+        :noteText           "prominent dge lugs scholar connecte with bla brang bkra shis 'khyil; born in the zhag sdom dpon brgyud"@en .
+    
+    bdr:NT7CC575879CD5501E
+        a                   :Note ;
+        :locationStatement  "p. 1419" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography"@en .
+    
+    bdr:P3623  a            :Person ;
+        skos:prefLabel      "dge 'dun dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5EA9FF73A6024794 , bdr:NT7CC575879CD5501E ;
+        :personEvent        bdr:EV012FB1A0298B4B8C , bdr:EV215171A14421D99F , bdr:EV4E313B7E51B3F41C , bdr:EV8D28C76ACECD1AFC , bdr:EVF25658EAEB4C19FB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2FE4B9AC26976DDA , bdr:NM478909A824BC88D2 , bdr:NM632FA10266B0299C , bdr:NMF28ADEB601AEE7C0 ;
+        :personStudentOf    bdr:P22 ;
+        :personTeacherOf    bdr:P3622 .
+}

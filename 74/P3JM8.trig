@@ -1,0 +1,60 @@
+@base          <bdg:P3JM8> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JM8 {
+    bda:LG43280AF774A14848
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-01-20T15:35:09.867Z"^^xsd:dateTime ;
+        adm:logMessage      "added relations"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGEB51214F89DB2658
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-30T17:23:23.163Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P3JM8  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JM8 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "74/P3JM8.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JM8 ;
+        adm:logEntry        bda:LG43280AF774A14848 , bda:LGEB51214F89DB2658 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC9110E23B1362BF9
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM338E5C24D1D58F0F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams mtsho/"@bo-x-ewts .
+    
+    bdr:NM3726ABDC10BCDD72
+        a                   :PersonPersonalName ;
+        rdfs:label          "khra bza' bsod nams mtsho/"@bo-x-ewts .
+    
+    bdr:P3JM8  a            :Person ;
+        skos:prefLabel      "bsod nams mtsho/"@bo-x-ewts ;
+        :hasHusband         bdr:P705 ;
+        :hasSon             bdr:P248 ;
+        :isRoot             true ;
+        :personEvent        bdr:EVC9110E23B1362BF9 ;
+        :personGender       bdr:GenderFemale ;
+        :personHasConsort   bdr:P705 ;
+        :personName         bdr:NM338E5C24D1D58F0F , bdr:NM3726ABDC10BCDD72 .
+}

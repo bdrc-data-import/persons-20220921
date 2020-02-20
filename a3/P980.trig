@@ -1,0 +1,57 @@
+@base          <bdg:P980> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P980 {
+    bda:P980  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P980 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a3/P980.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P980 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV51BC77CFBC8C7385
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EV63BA972914F6E4CE
+        a                   :PersonDeath ;
+        :onYear             "1950"^^xsd:gYear .
+    
+    bdr:EV71CBC808F1AB1887
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G210 .
+    
+    bdr:NM167F2189BCC3F0C2
+        a                   :PersonPersonalName ;
+        rdfs:label          "sa skya bdag chen ngag dbang kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NM5200DED2A0349247
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang kun dga' rin chen/"@bo-x-ewts .
+    
+    bdr:NTF5328C8CEF9A9779
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P980  a             :Person ;
+        skos:prefLabel      "ngag dbang kun dga' rin chen/"@bo-x-ewts ;
+        :hasSon             bdr:P6063 ;
+        :isRoot             true ;
+        :note               bdr:NTF5328C8CEF9A9779 ;
+        :personEvent        bdr:EV51BC77CFBC8C7385 , bdr:EV63BA972914F6E4CE , bdr:EV71CBC808F1AB1887 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM167F2189BCC3F0C2 , bdr:NM5200DED2A0349247 .
+}

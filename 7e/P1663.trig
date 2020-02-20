@@ -1,0 +1,70 @@
+@base          <bdg:P1663> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1663 {
+    bda:LG296AD9D53221773C
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T14:52:00.629Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG35A23D8B68DD751C
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-09T15:58:45.049Z"^^xsd:dateTime ;
+        adm:logMessage      "added place"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1663  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1663 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7e/P1663.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1663 ;
+        adm:logEntry        bda:LG296AD9D53221773C , bda:LG35A23D8B68DD751C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV412D3AFF12D67992
+        a                   :PersonBirth ;
+        :onYear             "1859"^^xsd:gYear .
+    
+    bdr:EV962ECB4598FBBD9F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4660 .
+    
+    bdr:EVC8E1ABDCB9823E0E
+        a                   :PersonDeath ;
+        :onYear             "1935"^^xsd:gYear .
+    
+    bdr:NM7D8BD566F4E13E29
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NME2DFC9C0D34DDE06
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar rdza bkra shis rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8DA4A79EC68BF3F9
+        a                   :Note ;
+        :noteText           "important figure in the development of bon, particularly new bon, in the 19th and early 20th century. \n\nhe is the author of five treasuries including the legs bshad mdzod, a history of bon.\n\nhe was praised by 'jam dbyangs mkhyen brtse chos kyi blo gros as an authentic teacher."@en .
+    
+    bdr:P1663  a            :Person ;
+        skos:prefLabel      "bkra shis rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8DA4A79EC68BF3F9 ;
+        :personEvent        bdr:EV412D3AFF12D67992 , bdr:EV962ECB4598FBBD9F , bdr:EVC8E1ABDCB9823E0E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7D8BD566F4E13E29 , bdr:NME2DFC9C0D34DDE06 ;
+        :personStudentOf    bdr:P10MS14670 ;
+        :personTeacherOf    bdr:P1922 .
+}

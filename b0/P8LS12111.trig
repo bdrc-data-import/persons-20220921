@@ -1,0 +1,74 @@
+@base          <bdg:P8LS12111> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12111 {
+    bda:LGF392C2B724456667
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-10T12:24:23.211Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12111  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12111 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b0/P8LS12111.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12111 ;
+        adm:logEntry        bda:LGF392C2B724456667 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2DCBFC5E1C6DB1A8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EV45BF57E661021700
+        a                   :PersonDeath ;
+        :onYear             "1892"^^xsd:gYear .
+    
+    bdr:EV557025BEE82E9C06
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G977 ;
+        :onYear             "1873"^^xsd:gYear .
+    
+    bdr:EV88289394BD2AB3C9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1951 ;
+        :onYear             "1892"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM40275A58A481B37B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "sku 'bum rgyud pa khri 69"@bo-x-ewts .
+    
+    bdr:NM67C8EA9FFC780D49
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phun tshogs gling zhabs drung blo bzang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD77EC5722B2B2317
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTED8A8A9440A60FD4
+        a                   :Note ;
+        :locationStatement  "p. 288" ;
+        :noteSource         bdr:MW19838 .
+    
+    bdr:P8LS12111  a        :Person ;
+        skos:prefLabel      "blo bzang yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTED8A8A9440A60FD4 ;
+        :personEvent        bdr:EV2DCBFC5E1C6DB1A8 , bdr:EV45BF57E661021700 , bdr:EV557025BEE82E9C06 , bdr:EV88289394BD2AB3C9 ;
+        :personName         bdr:NM40275A58A481B37B , bdr:NM67C8EA9FFC780D49 , bdr:NMD77EC5722B2B2317 .
+}

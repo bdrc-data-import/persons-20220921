@@ -1,0 +1,76 @@
+@base          <bdg:P4206> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4206 {
+    bda:LG82A999844CE31316
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T11:21:33.227Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG988AAE89DB87D857
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T11:54:45.438Z"^^xsd:dateTime ;
+        adm:logMessage      "updated p1ag4"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGD650655A8654923E
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-04T11:17:01.575Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher of P1AG54"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4206  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4206 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "9b/P4206.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4206 ;
+        adm:logEntry        bda:LG82A999844CE31316 , bda:LG988AAE89DB87D857 , bda:LGD650655A8654923E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4688AA543CB96622
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1297 ;
+        :onYear             "1189"^^xsd:gYear .
+    
+    bdr:EVD4C41EDD84054BC7
+        a                   :PersonDeath ;
+        :onYear             "1260"^^xsd:gYear .
+    
+    bdr:NM6559088743079407
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gling pa/"@bo-x-ewts .
+    
+    bdr:NT136C8748177A9CE3
+        a                   :Note ;
+        :locationStatement  "p. 1817" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTD50D3CDB8255DAEA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud"@en .
+    
+    bdr:P4206  a            :Person ;
+        skos:prefLabel      "bsam gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT136C8748177A9CE3 , bdr:NTD50D3CDB8255DAEA ;
+        :personEvent        bdr:EV4688AA543CB96622 , bdr:EVD4C41EDD84054BC7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6559088743079407 ;
+        :personStudentOf    bdr:P1514 , bdr:P1AG4 , bdr:P1AG54 , bdr:P3939 ;
+        :personTeacherOf    bdr:P1448 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Samlingpa/6620"^^xsd:anyURI .
+}

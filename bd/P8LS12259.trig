@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12259> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12259 {
+    bda:LG29BAFBA0DE685727
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T16:27:13.337Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12259  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12259 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "bd/P8LS12259.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12259 ;
+        adm:logEntry        bda:LG29BAFBA0DE685727 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9E010E4AF04FA663
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVF98CE743C808DCBF
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2E6BB2E3EF9EBDB0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NM36217DFD00939AAA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 103"@bo-x-ewts .
+    
+    bdr:NM7F83848942E7CD38
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rtsa ring mo blo bzang bsam gtan/"@bo-x-ewts .
+    
+    bdr:NT29A3CD39E99EE601
+        a                   :Note ;
+        :locationStatement  "p. 206" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12259  a        :Person ;
+        skos:prefLabel      "blo bzang bsam gtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT29A3CD39E99EE601 ;
+        :personEvent        bdr:EV9E010E4AF04FA663 , bdr:EVF98CE743C808DCBF ;
+        :personName         bdr:NM2E6BB2E3EF9EBDB0 , bdr:NM36217DFD00939AAA , bdr:NM7F83848942E7CD38 .
+}

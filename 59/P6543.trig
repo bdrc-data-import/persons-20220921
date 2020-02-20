@@ -1,0 +1,74 @@
+@base          <bdg:P6543> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6543 {
+    bda:LG4FC6420BF2B65CD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-21T15:05:27.796Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG864E24D43F969C4D
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T16:01:33.775Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6543  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6543 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "59/P6543.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6543 ;
+        adm:logEntry        bda:LG4FC6420BF2B65CD4 , bda:LG864E24D43F969C4D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5EDEEDBE314499A8
+        a                   :PersonBirth ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:NM12A3E49F5CE28260
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sba mi ye shes dbyangs/"@bo-x-ewts .
+    
+    bdr:NM78FA618D4544545B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a tsar ye shes dbyangs/"@bo-x-ewts .
+    
+    bdr:NMFB2EBC85E4C782A8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes dbyangs/"@bo-x-ewts .
+    
+    bdr:NT9C762A389DA3C91D
+        a                   :Note ;
+        :noteText           "rje 'bangs nyer lnga'i gras shig"@bo-x-ewts .
+    
+    bdr:NT9FF0F856AF23E4E2
+        a                   :Note ;
+        :locationStatement  "p. 598" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "sources notes that ye was born in the middle of the 8th century"@en .
+    
+    bdr:P6543  a            :Person ;
+        skos:prefLabel      "ye shes dbyangs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9C762A389DA3C91D , bdr:NT9FF0F856AF23E4E2 ;
+        :personEvent        bdr:EV5EDEEDBE314499A8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12A3E49F5CE28260 , bdr:NM78FA618D4544545B , bdr:NMFB2EBC85E4C782A8 ;
+        :personStudentOf    bdr:P4956 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Yeshe-Yang/9141"^^xsd:anyURI .
+}

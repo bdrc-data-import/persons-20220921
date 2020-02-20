@@ -1,0 +1,86 @@
+@base          <bdg:P9411> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9411 {
+    bda:LG5B9CD112438D639F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T15:32:19.987Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and changed incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG604053C8F07D8603
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T09:19:01.038Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG6547D9712A055EE0
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P9411  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9411 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "3d/P9411.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9411 ;
+        adm:logEntry        bda:LG5B9CD112438D639F , bda:LG604053C8F07D8603 , bda:LG6547D9712A055EE0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV264DCAB96C9C34EB
+        a                   :PersonDeath ;
+        :onYear             "1731"^^xsd:gYear .
+    
+    bdr:EVCAB93F3F7034B643
+        a                   :PersonBirth ;
+        :onYear             "1705"^^xsd:gYear .
+    
+    bdr:EVF521045D726A78DC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4681 .
+    
+    bdr:NM01D5308A1421646F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM551F58CDA4C1C060
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yi ngogs mkhan sprul 02 sangs rgyas rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEA2C459687C70992
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Yingok Khentrul 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMFDE9A46A3E684578
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "yi ngogs mkhan sprul 02"@bo-x-ewts .
+    
+    bdr:NT0FEC95E0EF15CFA7
+        a                   :Note ;
+        :locationStatement  "p. 324" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "de'i sprul sku sangs rgyas rgya mtsho mkhan chen dge rgyam pa'i gcen sngags pa dpal 'bum rgyal gyi sras su shing bya (1705) lor 'khrungs/ dgon chen du phar tshad/ g.yer gshong gong ma'i bkas bis mdo'i grwa tshang du gzhung la sbyangs/ 'grel ba don gsal/ lam rim chung ngu gnyis thugs 'dzin mdzad/ dbus su phebs lam bkra shis 'khyil du byon/ mkhyen gter ngag dbang bkra shis pa dang mjal/ 'bo ra/ a mchog/ mgo log sogs brgyud de dbus su phebs/ mkhan chen dpal 'khor chos sder bzhugs pa la mjal te dam bca' bzhag/ sgo mang chos grwar dpon slob blo bzang dam chos pa'i drung nas brtsi bzhag gsan/ mog kyA mkhan chen dge rgan du bsten/ mergan chos rje dang 'dzin grwa gcig/ slob gnyer skabs lcags phag (1731) lor gshegs/"@en .
+    
+    bdr:P9411  a            :Person ;
+        skos:prefLabel      "sangs rgyas rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9410 ;
+        :isRoot             true ;
+        :note               bdr:NT0FEC95E0EF15CFA7 ;
+        :personEvent        bdr:EV264DCAB96C9C34EB , bdr:EVCAB93F3F7034B643 , bdr:EVF521045D726A78DC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01D5308A1421646F , bdr:NM551F58CDA4C1C060 , bdr:NMEA2C459687C70992 , bdr:NMFDE9A46A3E684578 .
+}

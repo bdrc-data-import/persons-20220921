@@ -1,0 +1,45 @@
+@base          <bdg:P8004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8004 {
+    bda:P8004  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8004 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "5a/P8004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8004 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDA287E7287D2B0A2
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM126A67F342D5B694
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM2797C8E0422FD009
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dra dge bshes tshul khrims rnam rgyal/"@bo-x-ewts .
+    
+    bdr:P8004  a            :Person ;
+        skos:prefLabel      "tshul khrims rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVDA287E7287D2B0A2 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM126A67F342D5B694 , bdr:NM2797C8E0422FD009 ;
+        :personTeacherOf    bdr:P270 .
+}

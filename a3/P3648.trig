@@ -1,0 +1,57 @@
+@base          <bdg:P3648> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3648 {
+    bda:LG42929E63128086E9
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T15:49:10.566Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshn gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3648  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3648 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "a3/P3648.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3648 ;
+        adm:logEntry        bda:LG42929E63128086E9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C039FF8F59EA991
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM946332BD7F150E4D
+        a                   :PersonPersonalName ;
+        rdfs:label          "sgro ston chos brtson/"@bo-x-ewts .
+    
+    bdr:NMBDD10BF1927BE63D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos brtson/"@bo-x-ewts .
+    
+    bdr:NT4E8D436672E5C843
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Zhi-byed-pa"@en .
+    
+    bdr:P3648  a            :Person ;
+        skos:prefLabel      "chos brtson/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4E8D436672E5C843 ;
+        :personEvent        bdr:EV9C039FF8F59EA991 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM946332BD7F150E4D , bdr:NMBDD10BF1927BE63D ;
+        :personTeacherOf    bdr:P3645 .
+}

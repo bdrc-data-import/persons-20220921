@@ -1,0 +1,52 @@
+@base          <bdg:P1998> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1998 {
+    bda:LG5E51B5A072922B24
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T16:49:47.858Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1998  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1998 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a6/P1998.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1998 ;
+        adm:logEntry        bda:LG5E51B5A072922B24 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9F3DA503B18FB8CC
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM68BED952FDB362EB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBC5799805E93690F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rab 'byams pa skal bzang rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P1998  a            :Person ;
+        skos:prefLabel      "skal bzang rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV9F3DA503B18FB8CC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM68BED952FDB362EB , bdr:NMBC5799805E93690F ;
+        :personTeacherOf    bdr:P1996 .
+}

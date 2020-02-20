@@ -1,0 +1,68 @@
+@base          <bdg:P494> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P494 {
+    bda:LG043297E2EFA7E055
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-10-08T15:15:39.951Z"^^xsd:dateTime ;
+        adm:logMessage      "link to g1ag63"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGC5E727842879F910
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-17T11:42:30.004Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student and seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P494  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P494 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "fc/P494.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P494 ;
+        adm:logEntry        bda:LG043297E2EFA7E055 , bda:LGC5E727842879F910 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBE29CFFA41BB8FE0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1AG63 .
+    
+    bdr:EVE4D8FCE7BA461765
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM4C9ED83BB90E48D2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs sangs rgyas rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM93B8F8AFA59147E2
+        a                   :PersonPersonalName ;
+        rdfs:label          "sangs rgyas rgyal mtshan, 'jam dbyangs/"@bo-x-ewts .
+    
+    bdr:NTA6AD8D1F5976C263
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P494  a             :Person ;
+        skos:prefLabel      "'jam dbyangs sangs rgyas rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA6AD8D1F5976C263 ;
+        :personEvent        bdr:EVBE29CFFA41BB8FE0 , bdr:EVE4D8FCE7BA461765 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4C9ED83BB90E48D2 , bdr:NM93B8F8AFA59147E2 ;
+        :personStudentOf    bdr:P484 ;
+        :personTeacherOf    bdr:P1090 .
+}

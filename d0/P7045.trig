@@ -1,0 +1,59 @@
+@base          <bdg:P7045> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7045 {
+    bda:P7045  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7045 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "d0/P7045.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7045 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1A63632D0808BD83
+        a                   :PersonDeath ;
+        :onYear             "1981"^^xsd:gYear .
+    
+    bdr:EV2FB8B2348C9B2FC5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3087 .
+    
+    bdr:EVA838666E2A41A74A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2971 ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:NM6328619568BCBFB4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med bstan 'dzin nyi ma/"@bo-x-ewts .
+    
+    bdr:NMA23632FDE349961C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dan sku phreng 05 'jigs med bstan 'dzin nyi ma/"@bo-x-ewts .
+    
+    bdr:NTA9B1EB87B98BFAC6
+        a                   :Note ;
+        :locationStatement  "p. 200" ;
+        :noteSource         bdr:MW20197 ;
+        :noteText           "one of the rong bo nang chen bco brgyad and the proprietor of reb gong gnyan thog dgon"@en .
+    
+    bdr:P7045  a            :Person ;
+        skos:prefLabel      "'jigs med bstan 'dzin nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA9B1EB87B98BFAC6 ;
+        :personEvent        bdr:EV1A63632D0808BD83 , bdr:EV2FB8B2348C9B2FC5 , bdr:EVA838666E2A41A74A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6328619568BCBFB4 , bdr:NMA23632FDE349961C .
+}

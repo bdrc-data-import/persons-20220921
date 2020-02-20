@@ -1,0 +1,92 @@
+@base          <bdg:P2528> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2528 {
+    bda:LG9C88878BF66BF8BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-22T10:01:29.946Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2528  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2528 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "a3/P2528.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2528 ;
+        adm:logEntry        bda:LG9C88878BF66BF8BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5E53A6DE6D5823CA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G211 .
+    
+    bdr:EV8D8818C0BFC4E0CB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3500 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVCDD3799BAA5EBC97
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G211 ;
+        :personEventRole    bdr:R10MS14292 .
+    
+    bdr:NM2411091D6F0653E1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phun tshogs don grub/"@bo-x-ewts .
+    
+    bdr:NM38797BD0FD1C7FDA
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ngor mkhan chen 42"@bo-x-ewts .
+    
+    bdr:NM6A901295F4710D96
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor mkhan chen 42 phun tshogs don grub/"@bo-x-ewts .
+    
+    bdr:NMEA40D58D85516B34
+        a                   :PersonTitle ;
+        rdfs:label          "khams pa mtshungs med phun tshogs don grub/"@bo-x-ewts .
+    
+    bdr:NMF5B6519072D3A04A
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang phun tshogs don grub/"@bo-x-ewts .
+    
+    bdr:NT20A4BA6F329E2BB9
+        a                   :Note ;
+        :locationStatement  "p. 105" ;
+        :noteSource         bdr:MW23441 ;
+        :noteText           "born in mi nyag rgyal bzang\nstudent of 'jam dbyangs dkon mchog grags pa"@en .
+    
+    bdr:NT97C46597BDA9BDB3
+        a                   :Note ;
+        :locationStatement  "p. 105" ;
+        :noteSource         bdr:MW28738 .
+    
+    bdr:NTE93F4685AB72B5A5
+        a                   :Note ;
+        :locationStatement  "p. 186" ;
+        :noteSource         bdr:MW23724 ;
+        :noteText           "born\nborn in mi nyag bzhag bra lha rtse in the rgyal bzang lineage as the nephew of 'jam dbyangs dkon mchog grags pa"@en .
+    
+    bdr:P2528  a            :Person ;
+        skos:prefLabel      "phun tshogs don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT20A4BA6F329E2BB9 , bdr:NT97C46597BDA9BDB3 , bdr:NTE93F4685AB72B5A5 ;
+        :personEvent        bdr:EV5E53A6DE6D5823CA , bdr:EV8D8818C0BFC4E0CB , bdr:EVCDD3799BAA5EBC97 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2411091D6F0653E1 , bdr:NM38797BD0FD1C7FDA , bdr:NM6A901295F4710D96 , bdr:NMEA40D58D85516B34 , bdr:NMF5B6519072D3A04A ;
+        :personStudentOf    bdr:P2531 .
+}

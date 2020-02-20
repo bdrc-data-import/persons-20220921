@@ -1,0 +1,79 @@
+@base          <bdg:P8LS12490> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12490 {
+    bda:LG2307243F647F408E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-21T09:34:34.712Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG829D6C3847AFEEEF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGE51909B3ADE2A0B9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T15:03:26.177Z"^^xsd:dateTime ;
+        adm:logMessage      "switched title to tulku title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8LS12490  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12490 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c9/P8LS12490.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12490 ;
+        adm:logEntry        bda:LG2307243F647F408E , bda:LG829D6C3847AFEEEF , bda:LGE51909B3ADE2A0B9 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC0723123876EF82D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1185 .
+    
+    bdr:NM0381A70AF5937911
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpag bsam dbang po/"@bo-x-ewts .
+    
+    bdr:NME51545619CB272B5
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "tre hor sprul sku 02"@bo-x-ewts .
+    
+    bdr:NMEAAF3BD216647CA7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Trehor Tulku 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT6456446E269E3DCE
+        a                   :Note ;
+        :locationStatement  "p. 154" ;
+        :noteSource         bdr:MW27303 .
+    
+    bdr:NTB93B6EC0669C35A1
+        a                   :Note ;
+        :locationStatement  "p. 324" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "1) dang po ni/ chos kyi rgya mtsho/ gting skyes su 'khrungs/ dgung lo lnga bcur gshegs/\n2) de'i skye ba dpal bzang dbang po/ rgyal rtser 'khrungs/ dgung lo zhe gsum par gshegs/"@bo-x-ewts .
+    
+    bdr:P8LS12490  a        :Person ;
+        skos:prefLabel      "dpag bsam dbang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS12489 ;
+        :isRoot             true ;
+        :note               bdr:NT6456446E269E3DCE , bdr:NTB93B6EC0669C35A1 ;
+        :personEvent        bdr:EVC0723123876EF82D ;
+        :personName         bdr:NM0381A70AF5937911 , bdr:NME51545619CB272B5 , bdr:NMEAAF3BD216647CA7 ;
+        :personStudentOf    bdr:P5684 , bdr:P889 .
+}

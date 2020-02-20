@@ -1,0 +1,71 @@
+@base          <bdg:P1705> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1705 {
+    bda:P1705  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1705 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "97/P1705.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1705 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV458345B41AF4FAE8
+        a                   :PersonBirth ;
+        :onYear             "1497"^^xsd:gYear .
+    
+    bdr:EVBF9B1B9358F97A2D
+        a                   :PersonDeath ;
+        :onYear             "1557"^^xsd:gYear .
+    
+    bdr:EVC1D393E8DEBE217F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4187 ;
+        :onYear             "1497"^^xsd:gYear .
+    
+    bdr:EVE28016BB74DE4D7C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4186 .
+    
+    bdr:NM435804B7B3FE7DC6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rig 'dzin mchog ldan mgon po/"@bo-x-ewts .
+    
+    bdr:NM6A287515DF23ED3E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mchog ldan mgon po/"@bo-x-ewts .
+    
+    bdr:NT1C818EEAD82D0900
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma"@en .
+    
+    bdr:NT3793B64549BCF930
+        a                   :Note ;
+        :noteText           "MR: Reembodiment of Kun-skyong-gling-pa."@en .
+    
+    bdr:NT435E9B60D3815FF4
+        a                   :Note ;
+        :locationStatement  "p. 134v" .
+    
+    bdr:P1705  a            :Person ;
+        skos:prefLabel      "mchog ldan mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C818EEAD82D0900 , bdr:NT3793B64549BCF930 , bdr:NT435E9B60D3815FF4 ;
+        :personEvent        bdr:EV458345B41AF4FAE8 , bdr:EVBF9B1B9358F97A2D , bdr:EVC1D393E8DEBE217F , bdr:EVE28016BB74DE4D7C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM435804B7B3FE7DC6 , bdr:NM6A287515DF23ED3E ;
+        :personStudentOf    bdr:P1693 , bdr:P1698 ;
+        :personTeacherOf    bdr:P2734 , bdr:P2736 , bdr:P4680 .
+}

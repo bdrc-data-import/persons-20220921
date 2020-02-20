@@ -1,0 +1,61 @@
+@base          <bdg:P8580> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8580 {
+    bda:LG336623561E98FB2B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-07T09:48:40.73Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8580  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8580 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "27/P8580.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8580 ;
+        adm:logEntry        bda:LG336623561E98FB2B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM103B51882DA9FFA5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgar chen 06 dkon mchog bstan 'dzin bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM1FD5205FDB889DF6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgar chen 06"@bo-x-ewts .
+    
+    bdr:NM5330F23325B1C4AC
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Garchen 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMC15FFE90DF84E45F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT17B4CF3DEB1AA4DE
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud master"@en .
+    
+    bdr:P8580  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8579 ;
+        :isRoot             true ;
+        :note               bdr:NT17B4CF3DEB1AA4DE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM103B51882DA9FFA5 , bdr:NM1FD5205FDB889DF6 , bdr:NM5330F23325B1C4AC , bdr:NMC15FFE90DF84E45F .
+}

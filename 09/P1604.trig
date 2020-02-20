@@ -1,0 +1,54 @@
+@base          <bdg:P1604> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1604 {
+    bda:P1604  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1604 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "09/P1604.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1604 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV444FFFB19AF95250
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVEA13749459B98A46
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NM6566CB34A6EC8200
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang chos dar/"@bo-x-ewts .
+    
+    bdr:NMF68B0E92D2CFD0DB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rong po blo bzang chos dar/"@bo-x-ewts .
+    
+    bdr:NT8F24C178FA5AD9FB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P1604  a            :Person ;
+        skos:prefLabel      "blo bzang chos dar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8F24C178FA5AD9FB ;
+        :personEvent        bdr:EV444FFFB19AF95250 , bdr:EVEA13749459B98A46 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6566CB34A6EC8200 , bdr:NMF68B0E92D2CFD0DB ;
+        :personTeacherOf    bdr:P263 .
+}

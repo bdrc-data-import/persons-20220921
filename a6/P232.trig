@@ -1,0 +1,79 @@
+@base          <bdg:P232> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P232 {
+    bda:LG1B651B6874A8CE5B
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-12-15T16:34:48.096Z"^^xsd:dateTime ;
+        adm:logMessage      "edited names, added office and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P232  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P232 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "a6/P232.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P232 ;
+        adm:logEntry        bda:LG1B651B6874A8CE5B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV27B50D174BF411AF
+        a                   :PersonBirth ;
+        :onYear             "1876"^^xsd:gYear .
+    
+    bdr:EV7DCA785BBE054E8C
+        a                   :PersonAssumesOffice ;
+        :onYear             "1912"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EV94F9F7568A214E47
+        a                   :PersonLeavesOffice ;
+        :onYear             "1913"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVBCFB35AD33571E0C
+        a                   :PersonDeath ;
+        :onYear             "1913"^^xsd:gYear .
+    
+    bdr:NM2EB2738C7F85AF0C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shel dkar gling pa mi 'gyur lhun grub/"@bo-x-ewts .
+    
+    bdr:NMA27269424888480D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi 'gyur lhun grub/"@bo-x-ewts .
+    
+    bdr:NMDBC221EB412D7C25
+        a                   :PersonTitle ;
+        rdfs:label          "bka' drung shel dkar gling pa/"@bo-x-ewts .
+    
+    bdr:NT37AB818F83B878B9
+        a                   :Note ;
+        :locationStatement  "p. 985" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "Source contains short biography;\ndates: 1876-1913."@en .
+    
+    bdr:NT44DA7BA083427735
+        a                   :Note ;
+        :noteText           "See Petech, p. 233"@en .
+    
+    bdr:P232  a             :Person ;
+        skos:prefLabel      "mi 'gyur lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT37AB818F83B878B9 , bdr:NT44DA7BA083427735 ;
+        :personEvent        bdr:EV27B50D174BF411AF , bdr:EV7DCA785BBE054E8C , bdr:EV94F9F7568A214E47 , bdr:EVBCFB35AD33571E0C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2EB2738C7F85AF0C , bdr:NMA27269424888480D , bdr:NMDBC221EB412D7C25 .
+}

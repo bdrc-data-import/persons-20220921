@@ -1,0 +1,81 @@
+@base          <bdg:P2JM397> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2JM397 {
+    bda:LG08A6DD7455C9E60B
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-10-08T16:03:48.042Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGB7D3DB790ED2F142
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-08T14:50:17.068Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2JM397  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2JM397 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "9e/P2JM397.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2JM397 ;
+        adm:logEntry        bda:LG08A6DD7455C9E60B , bda:LGB7D3DB790ED2F142 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5CD363C658BFE193
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G16 .
+    
+    bdr:EV61CBE5C777A91751
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV7B4543903795C81A
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3219 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB68AB31B1C9AE0ED
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3219 .
+    
+    bdr:NM06A45330C218E445
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po bstan 'dzin chos bzang /"@bo-x-ewts .
+    
+    bdr:NM430E913372206392
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos bzang /"@bo-x-ewts .
+    
+    bdr:NM5F278D0DF812B09F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rdzogs chen mkhan rabs 32"@bo-x-ewts .
+    
+    bdr:NTE695A24CB78F6ADD
+        a                   :Note ;
+        :locationStatement  "p. 475-" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata\n- Assumed the teaching throne at rdzogs chen around the age of 50."@en .
+    
+    bdr:P2JM397  a          :Person ;
+        skos:prefLabel      "bstan 'dzin chos bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE695A24CB78F6ADD ;
+        :personEvent        bdr:EV5CD363C658BFE193 , bdr:EV61CBE5C777A91751 , bdr:EV7B4543903795C81A , bdr:EVB68AB31B1C9AE0ED ;
+        :personName         bdr:NM06A45330C218E445 , bdr:NM430E913372206392 , bdr:NM5F278D0DF812B09F ;
+        :personStudentOf    bdr:P6955 , bdr:P6958 , bdr:P701 .
+}

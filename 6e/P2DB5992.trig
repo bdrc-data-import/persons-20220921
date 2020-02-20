@@ -1,0 +1,61 @@
+@base          <bdg:P2DB5992> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2DB5992 {
+    bda:LGB72572CA950FE2F3
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-08-16T16:46:33.859Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:LGECD45C9456ACBCD4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-19T10:07:30.548Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P2DB5992  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2DB5992 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6e/P2DB5992.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2DB5992 ;
+        adm:logEntry        bda:LGB72572CA950FE2F3 , bda:LGECD45C9456ACBCD4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV383D60328CCBE979
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3953 .
+    
+    bdr:EVE7FE96A60E77C6C7
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM14C67AC055DC3F82
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan thub bstan pad+ma rab rgyas/"@bo-x-ewts .
+    
+    bdr:NM87B5BEAD1ED6BF97
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan pad+ma rab rgyas/"@bo-x-ewts .
+    
+    bdr:P2DB5992  a         :Person ;
+        skos:prefLabel      "thub bstan pad+ma rab rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV383D60328CCBE979 , bdr:EVE7FE96A60E77C6C7 ;
+        :personName         bdr:NM14C67AC055DC3F82 , bdr:NM87B5BEAD1ED6BF97 ;
+        :personTeacherOf    bdr:P2DB5991 .
+}

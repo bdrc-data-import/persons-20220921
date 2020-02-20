@@ -1,0 +1,71 @@
+@base          <bdg:P8LS12349> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12349 {
+    bda:LG05DD82FE8A65A7B1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-28T11:54:59.82Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12349  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12349 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "59/P8LS12349.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12349 ;
+        adm:logEntry        bda:LG05DD82FE8A65A7B1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4DEC327BCE0EAB3D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1809"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV5FF86EE6E65E01C5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EVF13AAB07FCB04422
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1831"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM0162C99E85ABC43F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rje dge 'dun mkhyen rab/"@bo-x-ewts .
+    
+    bdr:NM36EDB7328AEA7137
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun mkhyen rab/"@bo-x-ewts .
+    
+    bdr:NMABEFD293B9CD3D0F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 10"@bo-x-ewts .
+    
+    bdr:NT186E69342E215FA3
+        a                   :Note ;
+        :locationStatement  "p. 171" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12349  a        :Person ;
+        skos:prefLabel      "dge 'dun mkhyen rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT186E69342E215FA3 ;
+        :personEvent        bdr:EV4DEC327BCE0EAB3D , bdr:EV5FF86EE6E65E01C5 , bdr:EVF13AAB07FCB04422 ;
+        :personName         bdr:NM0162C99E85ABC43F , bdr:NM36EDB7328AEA7137 , bdr:NMABEFD293B9CD3D0F .
+}

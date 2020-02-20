@@ -1,0 +1,47 @@
+@base          <bdg:P8311> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8311 {
+    bda:P8311  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8311 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "ae/P8311.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8311 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3CA6F614648C901A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2135 ;
+        :onYear             "1965"^^xsd:gYear .
+    
+    bdr:NM2860DF4FFFC70D14
+        a                   :PersonPersonalName ;
+        rdfs:label          "lhag pa tshe ring /"@bo-x-ewts .
+    
+    bdr:NTF6F69B629FBA6A11
+        a                   :Note ;
+        :locationStatement  "french flaps" ;
+        :noteSource         bdr:MW25990 ;
+        :noteText           "biodata on author"@en .
+    
+    bdr:P8311  a            :Person ;
+        skos:prefLabel      "lhag pa tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF6F69B629FBA6A11 ;
+        :personEvent        bdr:EV3CA6F614648C901A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2860DF4FFFC70D14 .
+}

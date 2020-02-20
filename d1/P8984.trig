@@ -1,0 +1,78 @@
+@base          <bdg:P8984> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8984 {
+    bda:LG3DCC03D8A51D69F6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-26T14:43:32.276Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGE9692EC35EAD332F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-25T12:35:16.32Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8984  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8984 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d1/P8984.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8984 ;
+        adm:logEntry        bda:LG3DCC03D8A51D69F6 , bda:LGE9692EC35EAD332F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4B025FF09733AB21
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV50DC6BB28577D943
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1967 .
+    
+    bdr:EV562C9A2953FDE07C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1967 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM5E30C5B7C601C729
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog lhun grub/"@bo-x-ewts .
+    
+    bdr:NMB43502053958CC63
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sum mthil rdo rams pa dkon mchog lhun grub/"@bo-x-ewts .
+    
+    bdr:NMD21E21F0CF29CEFF
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang rgyud pa khri 21"@bo-x-ewts .
+    
+    bdr:NT00DBF8F635AA3283
+        a                   :Note ;
+        :locationStatement  "pp. 84-85" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "dge lugs teacher from rnga ba\nnoted as the teacher of zam tsha 'jigs med nam mkha'"@en .
+    
+    bdr:P8984  a            :Person ;
+        skos:prefLabel      "dkon mchog lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00DBF8F635AA3283 ;
+        :personEvent        bdr:EV4B025FF09733AB21 , bdr:EV50DC6BB28577D943 , bdr:EV562C9A2953FDE07C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5E30C5B7C601C729 , bdr:NMB43502053958CC63 , bdr:NMD21E21F0CF29CEFF ;
+        :personTeacherOf    bdr:P6899 .
+}

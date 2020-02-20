@@ -1,0 +1,53 @@
+@base          <bdg:P9606> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9606 {
+    bda:LG22D185C9572F71E3
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-08-09T15:15:29.436Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P9606  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9606 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "05/P9606.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9606 ;
+        adm:logEntry        bda:LG22D185C9572F71E3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV825EA5CF0322FC56
+        a                   :PersonDeath ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:EVE7EB61036E584E95
+        a                   :PersonBirth ;
+        :onYear             "1929"^^xsd:gYear .
+    
+    bdr:NMBB068977AB12F6D5
+        a                   :PersonPersonalName ;
+        rdfs:label          "king, martin luther, jr."@en .
+    
+    bdr:NMC4DF175B55860F3C
+        a                   :PersonPersonalName ;
+        rdfs:label          "khin, mar tin lu thar/"@bo-x-ewts .
+    
+    bdr:P9606  a            :Person ;
+        skos:prefLabel      "khin, mar tin lu thar/"@bo-x-ewts , "king, martin luther, jr."@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV825EA5CF0322FC56 , bdr:EVE7EB61036E584E95 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBB068977AB12F6D5 , bdr:NMC4DF175B55860F3C .
+}

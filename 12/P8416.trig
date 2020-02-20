@@ -1,0 +1,94 @@
+@base          <bdg:P8416> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8416 {
+    bda:LG2B8EF763F7A045A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-16T16:49:05.925Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG42F44ABB059A141B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-14T11:21:04.512Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8416  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8416 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "12/P8416.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8416 ;
+        adm:logEntry        bda:LG2B8EF763F7A045A5 , bda:LG42F44ABB059A141B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B3DE65E73F8C849
+        a                   :PersonDeath ;
+        :notAfter           "1989"^^xsd:gYear ;
+        :notBefore          "1988"^^xsd:gYear .
+    
+    bdr:EV331BFFF2426654AE
+        a                   :PersonBirth ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EV3E226AB449B752B3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EV570FC76012EA1F24
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1989"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV95FC4B3FB3EB5316
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EVD29F65D36BD6C9CD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1984"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:NM569E0910D84C44DF
+        a                   :PersonTitle ;
+        rdfs:label          "dga' ldan khri pa 98"@bo-x-ewts .
+    
+    bdr:NM626D037EE8616D83
+        a                   :PersonPersonalName ;
+        rdfs:label          "blo bzang dbang sdud/"@bo-x-ewts .
+    
+    bdr:NM67374449FF9A0CEC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'jam dpal gzhan phan/"@bo-x-ewts .
+    
+    bdr:NM83853E7857BC7314
+        a                   :PersonPersonalName ;
+        rdfs:label          "khri 98 'jam dpal gzhan phan/"@bo-x-ewts .
+    
+    bdr:NTEC0C4CBC4A0F8751
+        a                   :Note ;
+        :noteText           "information on this occupant of the dga' ldan khri from paul hackett"@en .
+    
+    bdr:P8416  a            :Person ;
+        skos:prefLabel      "'jam dpal gzhan phan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEC0C4CBC4A0F8751 ;
+        :personEvent        bdr:EV1B3DE65E73F8C849 , bdr:EV331BFFF2426654AE , bdr:EV3E226AB449B752B3 , bdr:EV570FC76012EA1F24 , bdr:EV95FC4B3FB3EB5316 , bdr:EVD29F65D36BD6C9CD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM569E0910D84C44DF , bdr:NM626D037EE8616D83 , bdr:NM67374449FF9A0CEC , bdr:NM83853E7857BC7314 .
+}

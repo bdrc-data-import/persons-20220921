@@ -1,0 +1,58 @@
+@base          <bdg:P3251> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3251 {
+    bda:LG4A70BC0831AB3CB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:56:51.337Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3251  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3251 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "dc/P3251.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3251 ;
+        adm:logEntry        bda:LG4A70BC0831AB3CB3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV74818D805C5ACE62
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NM7B2BD04938611941
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos kyi 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NM8C511F6F37F521A1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon chos kyi 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NTFE82E1C93724D520
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
+    bdr:P3251  a            :Person ;
+        skos:prefLabel      "chos kyi 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTFE82E1C93724D520 ;
+        :personEvent        bdr:EV74818D805C5ACE62 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7B2BD04938611941 , bdr:NM8C511F6F37F521A1 ;
+        :personStudentOf    bdr:P3252 ;
+        :personTeacherOf    bdr:P3250 .
+}

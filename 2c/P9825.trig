@@ -1,0 +1,62 @@
+@base          <bdg:P9825> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9825 {
+    bda:LGF1A6ED2A775EA588
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-04T12:55:33.545Z"^^xsd:dateTime ;
+        adm:logMessage      "added kinship relation"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P9825  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9825 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "2c/P9825.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9825 ;
+        adm:logEntry        bda:LGF1A6ED2A775EA588 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D3801299551B16F
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM4D780AB2BE034674
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "tshal pa drung che smon lam rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC1A92F29AE0DB96F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "smon lam rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC8B9DCF9E93ACD09
+        a                   :PersonPersonalName ;
+        rdfs:label          "smon lam pa/"@bo-x-ewts .
+    
+    bdr:NTA376BAA4E747C874
+        a                   :Note ;
+        :noteText           "ruler of the tshal pa myriarchy"@en .
+    
+    bdr:P9825  a            :Person ;
+        skos:prefLabel      "smon lam rdo rje/"@bo-x-ewts ;
+        :hasSon             bdr:P4525 ;
+        :hasUnknownKinship  bdr:P4525 ;
+        :isRoot             true ;
+        :note               bdr:NTA376BAA4E747C874 ;
+        :personEvent        bdr:EV9D3801299551B16F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4D780AB2BE034674 , bdr:NMC1A92F29AE0DB96F , bdr:NMC8B9DCF9E93ACD09 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P2DB5981> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2DB5981 {
+    bda:LG80CAA86E6B01EEB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-19T12:02:54.579Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat info to be G1KR2688"@en .
+    
+    bda:LG95D029E266AA4677
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-19T10:02:43.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGCA438E55B781CF0B
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-14T16:22:11.921Z"^^xsd:dateTime ;
+        adm:logMessage      "gsar du bcug"@en ;
+        adm:logWho          bdr:U00003 .
+    
+    bda:P2DB5981  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2DB5981 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "11/P2DB5981.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2DB5981 ;
+        adm:logEntry        bda:LG80CAA86E6B01EEB3 , bda:LG95D029E266AA4677 , bda:LGCA438E55B781CF0B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18F8F64844FCA740
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR2688 .
+    
+    bdr:EVEB37F39B2D52E234
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1938BDC3F75429B2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dga'"@bo-x-ewts .
+    
+    bdr:NMDA3B87AC8AF6C1CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sga skye dgon mkhan po ngag dga'"@bo-x-ewts .
+    
+    bdr:P2DB5981  a         :Person ;
+        skos:prefLabel      "ngag dga'"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV18F8F64844FCA740 , bdr:EVEB37F39B2D52E234 ;
+        :personName         bdr:NM1938BDC3F75429B2 , bdr:NMDA3B87AC8AF6C1CA ;
+        :personTeacherOf    bdr:P2DB5979 .
+}

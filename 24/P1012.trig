@@ -1,0 +1,107 @@
+@base          <bdg:P1012> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1012 {
+    bda:LGAE40DDE93E131542
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T15:16:40.757Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC8D8B58BF9371AFC
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGCCEB4A07DB49B331
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-14T09:09:55.675Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGCD444CBC034F8C76
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-19T11:51:27.98Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE50684C556C3C400
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-04T14:18:04.667Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and changed title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P1012  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1012 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "24/P1012.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1012 ;
+        adm:logEntry        bda:LGAE40DDE93E131542 , bda:LGC8D8B58BF9371AFC , bda:LGCCEB4A07DB49B331 , bda:LGCD444CBC034F8C76 , bda:LGE50684C556C3C400 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0E9F466BA3B93781
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13088 .
+    
+    bdr:EV55512D8B5733B90E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4883 .
+    
+    bdr:EV862110089B1F6C5E
+        a                   :PersonDeath ;
+        :notAfter           "1525"^^xsd:gYear ;
+        :notBefore          "1510"^^xsd:gYear .
+    
+    bdr:EVE772B502F327F240
+        a                   :PersonBirth ;
+        :notAfter           "1457"^^xsd:gYear ;
+        :notBefore          "1445"^^xsd:gYear .
+    
+    bdr:NM1DA4777D78B7182E
+        a                   :PersonTitle ;
+        rdfs:label          "grub thob sangs rgyas mnyan pa/"@bo-x-ewts .
+    
+    bdr:NM2A7A2C905CD85209
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMA52ED31788FF2580
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sangs rgyas mnyan pa 01 bkra shis dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMB64C1A50538A3F37
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sangs rgyas mnyan pa 01"@bo-x-ewts .
+    
+    bdr:NMC2FB4EA49184A4E3
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Sanggye Nyenpa 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTF8FCAB6BD200A17A
+        a                   :Note ;
+        :noteText           "important teacher of the karma kaM tshang tradition; he was the main guru of the 8th karma pa mi bskyod rdo rje\naccording to the rangjung yeshe wiki his years are 1457-1525"@en .
+    
+    bdr:P1012  a            :Person ;
+        skos:prefLabel      "bkra shis dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF8FCAB6BD200A17A ;
+        :personEvent        bdr:EV0E9F466BA3B93781 , bdr:EV55512D8B5733B90E , bdr:EV862110089B1F6C5E , bdr:EVE772B502F327F240 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DA4777D78B7182E , bdr:NM2A7A2C905CD85209 , bdr:NMA52ED31788FF2580 , bdr:NMB64C1A50538A3F37 , bdr:NMC2FB4EA49184A4E3 ;
+        :personStudentOf    bdr:P821 ;
+        :personTeacherOf    bdr:P385 , bdr:P6690 .
+}

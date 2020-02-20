@@ -1,0 +1,100 @@
+@base          <bdg:P739> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P739 {
+    bda:LG06560EE8EE76BF7C
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-09-01T12:40:35.422Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG1E1EE3E97AB10865
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-17T14:58:35.64Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place G#"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG588AC3167D76B5BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-02-28T14:15:56.273Z"^^xsd:dateTime ;
+        adm:logMessage      "edited"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG69DD80112F372965
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-22T14:58:08.286Z"^^xsd:dateTime ;
+        adm:logMessage      "added office R1AG93"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGDE5E5A090D0A9F1E
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-27T09:31:09.229Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation, edited tulku title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGE5D55060C88BD81D
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-09-01T11:51:04.722Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P739  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P739 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "06/P739.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P739 ;
+        adm:logEntry        bda:LG06560EE8EE76BF7C , bda:LG1E1EE3E97AB10865 , bda:LG588AC3167D76B5BB , bda:LG69DD80112F372965 , bda:LGDE5E5A090D0A9F1E , bda:LGE5D55060C88BD81D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2F5487E8019BF3C9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G9 .
+    
+    bdr:EV333824CA9E8C5784
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1158 ;
+        :onYear             "1894"^^xsd:gYear .
+    
+    bdr:EVEC46172AE3BA86EE
+        a                   :PersonDeath ;
+        :onYear             "1925"^^xsd:gYear .
+    
+    bdr:EVFBE7F7BB664194BE
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG93 .
+    
+    bdr:NM995DF7068AF48A0D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "pad gling gsung sprul 09"@bo-x-ewts .
+    
+    bdr:NMDEA863BB3AF1E4E1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT6A22AD91A93E979B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Padma-gling-pa revelations"@en .
+    
+    bdr:P739  a             :Person ;
+        skos:prefLabel      "bstan 'dzin chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :incarnationSpeech  bdr:P2707 ;
+        :isRoot             true ;
+        :note               bdr:NT6A22AD91A93E979B ;
+        :personEvent        bdr:EV2F5487E8019BF3C9 , bdr:EV333824CA9E8C5784 , bdr:EVEC46172AE3BA86EE , bdr:EVFBE7F7BB664194BE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM995DF7068AF48A0D , bdr:NMDEA863BB3AF1E4E1 ;
+        :personStudentOf    bdr:P2712 , bdr:P2745 , bdr:P2746 , bdr:P2747 , bdr:P2748 ;
+        :personTeacherOf    bdr:P2748 , bdr:P2AG35 , bdr:P3AG28 .
+}

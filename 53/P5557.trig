@@ -1,0 +1,105 @@
+@base          <bdg:P5557> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5557 {
+    bda:LG0E65B9E4CFBF2C47
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:34:03.929Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG206F47C688140A84
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T12:59:43.846Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5557  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5557 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "53/P5557.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5557 ;
+        adm:logEntry        bda:LG0E65B9E4CFBF2C47 , bda:LG206F47C688140A84 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7FD3414EB82370CB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVCCD18C391F1545B3
+        a                   :PersonBirth ;
+        :onYear             "1524"^^xsd:gYear .
+    
+    bdr:EVE40A0621289D063F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVF88EA7F573A64CCD
+        a                   :PersonDeath ;
+        :onYear             "1563"^^xsd:gYear .
+    
+    bdr:NM0FA5F2FEADA9B8ED
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal dbang rnam rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NM5C581CBCB08A1A49
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal bkra shis/"@bo-x-ewts .
+    
+    bdr:NMAA111B7C180C38AB
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 15"@bo-x-ewts .
+    
+    bdr:NT6BE2415CABA4A9CD
+        a                   :Note ;
+        :locationStatement  "p. 198" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "b. 1524; d. 1563; 8 years on the see.\nstyled stag lung khri 17 and gcen che ba.\nb. 'phan yul ga zi gdung brgyud."@en .
+    
+    bdr:NT700665AF2A3D4DD9
+        a                   :Note ;
+        :locationStatement  "p. 56, 58" ;
+        :noteSource         bdr:MW19808 ;
+        :noteText           "dates"@en .
+    
+    bdr:NTB758F88BD5FFCB37
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1563. stag lung zhabs drung rnam rgyal bkra shis gshegs"@en .
+    
+    bdr:NTC23E2913DEE1802D
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in the bka' ma transmission of the rgyud bzhi.\nkun dga' grol mchog passed on the teachings to stag lung pa khu dbon (who was the khu?)"@en .
+    
+    bdr:NTF08E68B84D3A158F
+        a                   :Note ;
+        :locationStatement  "p. 500-530" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:P5557  a            :Person ;
+        skos:prefLabel      "rnam rgyal bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6BE2415CABA4A9CD , bdr:NT700665AF2A3D4DD9 , bdr:NTB758F88BD5FFCB37 , bdr:NTC23E2913DEE1802D , bdr:NTF08E68B84D3A158F ;
+        :personEvent        bdr:EV7FD3414EB82370CB , bdr:EVCCD18C391F1545B3 , bdr:EVE40A0621289D063F , bdr:EVF88EA7F573A64CCD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0FA5F2FEADA9B8ED , bdr:NM5C581CBCB08A1A49 , bdr:NMAA111B7C180C38AB ;
+        :personStudentOf    bdr:P7160 ;
+        :personTeacherOf    bdr:P1428 .
+}

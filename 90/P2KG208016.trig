@@ -1,0 +1,61 @@
+@base          <bdg:P2KG208016> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG208016 {
+    bda:LG256A02E247EA78C0
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-07-12T11:30:30.966Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG208016  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG208016 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "90/P2KG208016.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG208016 ;
+        adm:logEntry        bda:LG256A02E247EA78C0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA00FA49A5A6E5290
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1937"^^xsd:gYear .
+    
+    bdr:NM0005B5F8F7FDC6F6
+        a                   :PersonOtherName ;
+        rdfs:label          "yonten gyatso"@en .
+    
+    bdr:NM437FA8B721FE341F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ding sgang dwangs shar yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM79B196635937FF1C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbus gtsang spyi zur yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM801F725A655FAAF3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbus gtsang spyi zur ding sgang dwangs shar yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9FD718790AE33B15
+        a                   :PersonPrimaryName ;
+        rdfs:label          "yon tan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P2KG208016  a       :Person ;
+        skos:prefLabel      "yon tan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVA00FA49A5A6E5290 ;
+        :personName         bdr:NM0005B5F8F7FDC6F6 , bdr:NM437FA8B721FE341F , bdr:NM79B196635937FF1C , bdr:NM801F725A655FAAF3 , bdr:NM9FD718790AE33B15 .
+}

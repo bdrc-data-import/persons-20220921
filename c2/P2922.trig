@@ -1,0 +1,88 @@
+@base          <bdg:P2922> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2922 {
+    bda:LG36325FBC9A8EECE9
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-10T10:27:46.259Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9AF832F6B6D3AF76
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-01-10T10:20:53.374Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD6C5DE2D755BDCBF
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-18T10:16:10.649Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2922  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2922 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "c2/P2922.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2922 ;
+        adm:logEntry        bda:LG36325FBC9A8EECE9 , bda:LG9AF832F6B6D3AF76 , bda:LGD6C5DE2D755BDCBF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCFE6998A330B4552
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G244 .
+    
+    bdr:EVF5A4082BD4A4B4A9
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM1000380A741F6F54
+        a                   :PersonOtherName ;
+        rdfs:label          "thugs rje dpal bzang po/"@bo-x-ewts .
+    
+    bdr:NM10D52C345C66A8EE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo chen thugs rje dpal ba/"@bo-x-ewts .
+    
+    bdr:NMA248B4F983C57C17
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thugs rje dpal ba/"@bo-x-ewts .
+    
+    bdr:NT07900E752716181A
+        a                   :Note ;
+        :locationStatement  "p. 795" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT966487063D87410A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Grammatical transmissions"@en .
+    
+    bdr:NTF93DC0F31331E3DC
+        a                   :Note ;
+        :locationStatement  "p. 245" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:P2922  a            :Person ;
+        skos:prefLabel      "thugs rje dpal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT07900E752716181A , bdr:NT966487063D87410A , bdr:NTF93DC0F31331E3DC ;
+        :personEvent        bdr:EVCFE6998A330B4552 , bdr:EVF5A4082BD4A4B4A9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1000380A741F6F54 , bdr:NM10D52C345C66A8EE , bdr:NMA248B4F983C57C17 ;
+        :personStudentOf    bdr:P1560 , bdr:P2921 ;
+        :personTeacherOf    bdr:P2923 , bdr:P2934 , bdr:P79 .
+}

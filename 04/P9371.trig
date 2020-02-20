@@ -1,0 +1,106 @@
+@base          <bdg:P9371> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9371 {
+    bda:LG532163D5A479E206
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-04-24T11:49:05.287Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG71E879E445672C65
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T12:36:22.194Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC72EA16A0D02F18D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T12:33:25.836Z"^^xsd:dateTime ;
+        adm:logMessage      "added first ordination name, title, office title, 14 teachers and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9371  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9371 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "04/P9371.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9371 ;
+        adm:logEntry        bda:LG532163D5A479E206 , bda:LG71E879E445672C65 , bda:LGC72EA16A0D02F18D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B132DEF1D7FE080
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV3EE7C31CD1DB0ADE
+        a                   :PersonBirth ;
+        :onYear             "1893"^^xsd:gYear .
+    
+    bdr:EV75539FD60A15DEA8
+        a                   :PersonDeath ;
+        :onYear             "1983"^^xsd:gYear .
+    
+    bdr:EVD7401DA27A626294
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM19D158BA3501C3B6
+        a                   :PersonFinalOrdinationName ;
+        rdfs:label          "thub bstan 'gyur med 'phrin las rab brtan/"@bo-x-ewts .
+    
+    bdr:NM60258AE496A4A28B
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "kun bzang shes rab/"@bo-x-ewts .
+    
+    bdr:NM79DCD745CBC68BFF
+        a                   :PersonTitle ;
+        rdfs:label          "ar skung mkhan po thub bstan 'gyur med 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM8939083837C3BCD7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rdo rje/"@bo-x-ewts .
+    
+    bdr:NM8E054556B49ADE8E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang mkhan rabs 04"@bo-x-ewts .
+    
+    bdr:NMCD395E0A372A43E6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a skyong mkhan po blo bzang rdo rje/"@bo-x-ewts .
+    
+    bdr:NT1E9B5BC0C63B9ECF
+        a                   :Note ;
+        :locationStatement  "[p. 286-298]" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:NT600367379DFA4D93
+        a                   :Note ;
+        :locationStatement  "v. 1, pp. 11-21" ;
+        :noteSource         bdr:MW28898 ;
+        :noteText           "biography"@en .
+    
+    bdr:P9371  a            :Person ;
+        skos:prefLabel      "blo bzang rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E9B5BC0C63B9ECF , bdr:NT600367379DFA4D93 ;
+        :personEvent        bdr:EV0B132DEF1D7FE080 , bdr:EV3EE7C31CD1DB0ADE , bdr:EV75539FD60A15DEA8 , bdr:EVD7401DA27A626294 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19D158BA3501C3B6 , bdr:NM60258AE496A4A28B , bdr:NM79DCD745CBC68BFF , bdr:NM8939083837C3BCD7 , bdr:NM8E054556B49ADE8E , bdr:NMCD395E0A372A43E6 ;
+        :personStudentOf    bdr:P248 , bdr:P6347 ;
+        :personTeacherOf    bdr:P6335 , bdr:P6341 , bdr:P6342 , bdr:P6343 , bdr:P6344 , bdr:P6346 , bdr:P6373 , bdr:P8282 , bdr:P8283 , bdr:P8286 , bdr:P8287 , bdr:P8288 , bdr:P8289 , bdr:P8290 , bdr:P8291 , bdr:P8292 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P10012> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10012 {
+    bda:LG7EF9AB01DA5A42A6
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-30T09:48:53.738Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P10012  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10012 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "03/P10012.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10012 ;
+        adm:logEntry        bda:LG7EF9AB01DA5A42A6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM6017DD7D36FB99CD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NM73997F39DDC32D07
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ko ye shes 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMB1A3FFE71939F7D5
+        a                   :PersonOtherName ;
+        rdfs:label          "ko ye 'byung /"@bo-x-ewts .
+    
+    bdr:NT4B653F20ABA3D5E9
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 47" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "teacher in the major abhidharmakosakarika transmission which passed through tsong kha pa and the 5th dalai lama"@en .
+    
+    bdr:P10012  a           :Person ;
+        skos:prefLabel      "ye shes 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4B653F20ABA3D5E9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6017DD7D36FB99CD , bdr:NM73997F39DDC32D07 , bdr:NMB1A3FFE71939F7D5 ;
+        :personStudentOf    bdr:P10011 ;
+        :personTeacherOf    bdr:P10013 .
+}

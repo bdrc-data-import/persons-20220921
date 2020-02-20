@@ -1,0 +1,64 @@
+@base          <bdg:P3503> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3503 {
+    bda:LG93049F82ED00487D
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T12:30:24.997Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn infavour of P2574"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGEDBB70E3827B9293
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-02T15:53:39.566Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3503  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3503 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "71/P3503.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3503 ;
+        adm:logEntry        bda:LG93049F82ED00487D , bda:LGEDBB70E3827B9293 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EVA09B669DAE7F0B8C
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM3A2E29E8E8A8CF9F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dgon spyan snga gzhon nu/"@bo-x-ewts .
+    
+    bdr:NM73658498CB5D0829
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu/"@bo-x-ewts .
+    
+    bdr:NTC138BE2887CA9E1D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P3503  a            :Person ;
+        skos:prefLabel      "gzhon nu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC138BE2887CA9E1D ;
+        :personEvent        bdr:EVA09B669DAE7F0B8C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3A2E29E8E8A8CF9F , bdr:NM73658498CB5D0829 ;
+        :personStudentOf    bdr:P3502 ;
+        :personTeacherOf    bdr:P2574 .
+}

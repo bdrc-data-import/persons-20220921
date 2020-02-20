@@ -1,0 +1,79 @@
+@base          <bdg:P2412> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2412 {
+    bda:LGFA8EAC8E5E41C616
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-03T13:56:24.015Z"^^xsd:dateTime ;
+        adm:logMessage      "treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2412  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2412 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "75/P2412.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2412 ;
+        adm:logEntry        bda:LGFA8EAC8E5E41C616 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2837CD25506368F3
+        a                   :PersonDeath ;
+        :onYear             "1391"^^xsd:gYear .
+    
+    bdr:EV2C8D5EDC26911B2F
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1115 ;
+        :onYear             "1313"^^xsd:gYear .
+    
+    bdr:EVCDCA4BF403666503
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G346 .
+    
+    bdr:NM412532CDADA32D9F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros dpal/"@bo-x-ewts .
+    
+    bdr:NM4A2661A2AEA899EB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thang ston chung ba blo gros dpal/"@bo-x-ewts .
+    
+    bdr:NM5141CEFF5CBF36A0
+        a                   :PersonTitle ;
+        rdfs:label          "lo tsA ba blo gros dpal/"@bo-x-ewts .
+    
+    bdr:NT46B8FC2E0FAD7ABC
+        a                   :Note ;
+        :locationStatement  "p. 73" ;
+        :noteSource         bdr:MW19816 ;
+        :noteText           "regarded as a sprul pa of grub chen yu mo ba\nappointed as rgyal tshab at stod lung rnam rgyal\none of the thirteen major disciples of dol po pa"@en .
+    
+    bdr:NTB21C54BE694866ED
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 7" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "major figure in the transmission of the 'bro system of the kalacakra teachings\n\nno indication as the artistic representation"@en .
+    
+    bdr:P2412  a            :Person ;
+        skos:prefLabel      "blo gros dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT46B8FC2E0FAD7ABC , bdr:NTB21C54BE694866ED ;
+        :personEvent        bdr:EV2837CD25506368F3 , bdr:EV2C8D5EDC26911B2F , bdr:EVCDCA4BF403666503 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM412532CDADA32D9F , bdr:NM4A2661A2AEA899EB , bdr:NM5141CEFF5CBF36A0 ;
+        :personStudentOf    bdr:P139 , bdr:P151 , bdr:P152 , bdr:P153 , bdr:P2251 ;
+        :personTeacherOf    bdr:P152 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Tangpo-Chungwa-Lodro-Pel/4113"^^xsd:anyURI .
+}

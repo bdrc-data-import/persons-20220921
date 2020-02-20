@@ -1,0 +1,71 @@
+@base          <bdg:P11MS160> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS160 {
+    bda:LG0E2FA6699F1200D8
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-22T16:39:40.301Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG4CE45950E03E1A13
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-22T15:23:19.561Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS160  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS160 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b8/P11MS160.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS160 ;
+        adm:logEntry        bda:LG0E2FA6699F1200D8 , bda:LG4CE45950E03E1A13 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC032D625FF29480A
+        a                   :PersonBirth ;
+        :onYear             "1150"^^xsd:gYear .
+    
+    bdr:NM65122B4F1006F953
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Trulzhik Dombu"@en-x-mixed .
+    
+    bdr:NM8D7936AD33BCEFE3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khrul zhig ldom bu/"@bo-x-ewts .
+    
+    bdr:NT01DDC99D88169884
+        a                   :Note ;
+        :noteText           "Dpal ldan tshul khrims. 1988. G.yung drung bon gyi bstan 'byung phyogs btus. Beijing: Bod ljongs mi dmangs dpe skrun khang."@en .
+    
+    bdr:NT161709BA41A431C9
+        a                   :Note ;
+        :noteText           "Bon zhig khyung nag. 1972. Snyan rgyud rin po che rig pa gcer mthong gi gzhung. Delhi: Tibetan Bonpo Monastic Center."@en .
+    
+    bdr:NT6A7A2587A2CFA95B
+        a                   :Note ;
+        :noteText           "2nd lineage holder of the Nyengyu Rigpa Cherthong"@en .
+    
+    bdr:NTE8EB9E702AFD1672
+        a                   :Note ;
+        :noteText           "Achard Jean-Luc. 1998. “Bon zhig khyung nag and the Rig pa gcer mthong tradition of rDzogs chen.” The Tibet Journal, vol. XXIII, no. 4: 28-57."@en .
+    
+    bdr:P11MS160  a         :Person ;
+        skos:prefLabel      "khrul zhig ldom bu/"@bo-x-ewts , "Trulzhik Dombu"@en-x-mixed ;
+        :isRoot             true ;
+        :note               bdr:NT01DDC99D88169884 , bdr:NT161709BA41A431C9 , bdr:NT6A7A2587A2CFA95B , bdr:NTE8EB9E702AFD1672 ;
+        :personEvent        bdr:EVC032D625FF29480A ;
+        :personName         bdr:NM65122B4F1006F953 , bdr:NM8D7936AD33BCEFE3 .
+}

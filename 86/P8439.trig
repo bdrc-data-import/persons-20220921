@@ -1,0 +1,57 @@
+@base          <bdg:P8439> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8439 {
+    bda:P8439  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8439 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "86/P8439.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8439 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B0D0C6F67081166
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:EVC711E2867F97F575
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMBB605CEEC43DB779
+        a                   :PersonPersonalName ;
+        rdfs:label          "ye shes bla ma/"@bo-x-ewts .
+    
+    bdr:NME03FEF0746791F94
+        a                   :PersonPersonalName ;
+        rdfs:label          "stag lung bya bral ye shes bla ma/"@bo-x-ewts .
+    
+    bdr:NT23FB276045E88251
+        a                   :Note ;
+        :locationStatement  "f. 5r" ;
+        :noteSource         bdr:MW22715 ;
+        :noteText           "younger brother of bkra shis bla ma, the 4th khri of stag lung"@en .
+    
+    bdr:P8439  a            :Person ;
+        skos:prefLabel      "ye shes bla ma/"@bo-x-ewts ;
+        :hasOlderBrother    bdr:P8428 ;
+        :isRoot             true ;
+        :note               bdr:NT23FB276045E88251 ;
+        :personEvent        bdr:EV8B0D0C6F67081166 , bdr:EVC711E2867F97F575 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBB605CEEC43DB779 , bdr:NME03FEF0746791F94 ;
+        :personStudentOf    bdr:P8428 .
+}

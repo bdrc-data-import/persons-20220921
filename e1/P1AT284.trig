@@ -1,0 +1,70 @@
+@base          <bdg:P1AT284> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AT284 {
+    bda:LG07AADDB6DBDFE56B
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-02-20T10:04:06.884Z"^^xsd:dateTime ;
+        adm:logMessage      "added person"@en .
+    
+    bda:LG8897962CA2C09819
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:02:13.977Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGA2655FF8BD0DAC8F
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-17T16:47:03.804Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en .
+    
+    bda:P1AT284  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AT284 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e1/P1AT284.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AT284 ;
+        adm:logEntry        bda:LG07AADDB6DBDFE56B , bda:LG8897962CA2C09819 , bda:LGA2655FF8BD0DAC8F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV004003300C46106B
+        a                   :PersonDeath ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVD775E02708CE28C0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2884 .
+    
+    bdr:EVF2ABF4578A8CD488
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM3B2B9A0E2C975B98
+        a                   :PersonPersonalName ;
+        rdfs:label          "dge slong karma ngag dbang legs ldan/"@bo-x-ewts .
+    
+    bdr:NM82778197855A806D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma ngag dbang legs ldan/"@bo-x-ewts .
+    
+    bdr:P1AT284  a          :Person ;
+        skos:prefLabel      "karma ngag dbang legs ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV004003300C46106B , bdr:EVD775E02708CE28C0 , bdr:EVF2ABF4578A8CD488 ;
+        :personName         bdr:NM3B2B9A0E2C975B98 , bdr:NM82778197855A806D ;
+        :personStudentOf    bdr:P6897 .
+}

@@ -1,0 +1,78 @@
+@base          <bdg:P1KG8472> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG8472 {
+    bda:LGAEC26244F4D22C82
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-01-19T14:27:43.043Z"^^xsd:dateTime ;
+        adm:logMessage      "added grammarian name"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF0D10B1F156C8C6A
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-01-19T14:10:10.26Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF2D3C70ACC53FCD1
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-23T10:22:20.898Z"^^xsd:dateTime ;
+        adm:logMessage      "Reviewed and released"@en ;
+        adm:logWho          bdr:U00021 .
+    
+    bda:P1KG8472  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG8472 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "99/P1KG8472.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG8472 ;
+        adm:logEntry        bda:LGAEC26244F4D22C82 , bda:LGF0D10B1F156C8C6A , bda:LGF2D3C70ACC53FCD1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5DAA91982F2BD5F7
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3227 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV93BA0FE2BAD99039
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3232 .
+    
+    bdr:NM3973B19D05733AC1
+        a                   :PersonGrammatical ;
+        rdfs:label          "dbyangs ldan ngag gi snye ma/"@bo-x-ewts .
+    
+    bdr:NM4A2F293EF5B58375
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang bsod nams/"@bo-x-ewts .
+    
+    bdr:NM7449A90D883BAC40
+        a                   :PersonPersonalName ;
+        rdfs:label          "rma bsod/"@bo-x-ewts .
+    
+    bdr:NT36317B94D51A35AC
+        a                   :Note ;
+        :noteSource         bdr:MW1KG8471 ;
+        :noteText           "short introduction on french flaps of the text w1kg8471"@en .
+    
+    bdr:P1KG8472  a         :Person ;
+        skos:prefLabel      "skal bzang bsod nams/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT36317B94D51A35AC ;
+        :personEvent        bdr:EV5DAA91982F2BD5F7 , bdr:EV93BA0FE2BAD99039 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3973B19D05733AC1 , bdr:NM4A2F293EF5B58375 , bdr:NM7449A90D883BAC40 .
+}

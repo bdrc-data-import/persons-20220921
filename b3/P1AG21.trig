@@ -1,0 +1,63 @@
+@base          <bdg:P1AG21> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG21 {
+    bda:LG5ED7D863040DD975
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-19T12:14:44.474Z"^^xsd:dateTime ;
+        adm:logMessage      "reviewed by ls, cz, cn, kg"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG74C94E96EFFBA040
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-05T17:04:40.894Z"^^xsd:dateTime ;
+        adm:logMessage      "added treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG21  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG21 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "b3/P1AG21.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG21 ;
+        adm:logEntry        bda:LG5ED7D863040DD975 , bda:LG74C94E96EFFBA040 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM15EB443F4BE5109E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Yeshe Jangchub"@en .
+    
+    bdr:NME467BAAEF694F927
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon ye shes byang chub/"@bo-x-ewts .
+    
+    bdr:NMF77F99610DBBBD9F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes byang chub/"@bo-x-ewts .
+    
+    bdr:NTFB4D85D1D07AA3FF
+        a                   :Note ;
+        :locationStatement  "pp. 345-346" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG21  a           :Person ;
+        skos:prefLabel      "ye shes byang chub/"@bo-x-ewts , "Yeshe Jangchub"@en ;
+        :isRoot             true ;
+        :note               bdr:NTFB4D85D1D07AA3FF ;
+        :personName         bdr:NM15EB443F4BE5109E , bdr:NME467BAAEF694F927 , bdr:NMF77F99610DBBBD9F ;
+        :personStudentOf    bdr:P1AG20 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Lobpon-Yeshe-Jangchub/13448"^^xsd:anyURI .
+}

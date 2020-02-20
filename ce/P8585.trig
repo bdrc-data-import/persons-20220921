@@ -1,0 +1,88 @@
+@base          <bdg:P8585> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8585 {
+    bda:LG66B0005F55911C1F
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG97783ADBDA5888FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-06T10:10:39.596Z"^^xsd:dateTime ;
+        adm:logMessage      "tulku title changed"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGBCAB1DC30D764954
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-06T09:36:03.258Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, date of birth and death, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8585  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8585 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "ce/P8585.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8585 ;
+        adm:logEntry        bda:LG66B0005F55911C1F , bda:LG97783ADBDA5888FD , bda:LGBCAB1DC30D764954 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9212FDA08D44F259
+        a                   :PersonBirth ;
+        :onYear             "1789"^^xsd:gYear .
+    
+    bdr:EVCEDFBC021F4B6D12
+        a                   :PersonDeath ;
+        :onYear             "1824"^^xsd:gYear .
+    
+    bdr:NM01BA390AFD60948D
+        a                   :PersonPersonalName ;
+        rdfs:label          "dkon mchog thub bstan chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM2EFC8B7EF28D4983
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub brgyud dkon mchog thub bstan chos kyi nyi ma/"@bo-x-ewts .
+    
+    bdr:NM7F0CFA3E7B17B86A
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sgrub brgyud 04"@bo-x-ewts .
+    
+    bdr:NMD91B14D0AFCFAD04
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubgyu 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT732B995D7790EC53
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:NTFC9D8592720D51B5
+        a                   :Note ;
+        :locationStatement  "p. 23-24" ;
+        :noteSource         bdr:MW00EGS1017048 ;
+        :noteText           "de nas sku phreng bzhi pa ni rab byung bcu gsum pa'i sa mo bya yi lo spyi lo 1789 lor ser shul 'bul sdud dpon tshang du ngo mtshar ba'i ltas dang bcas pa sku 'khrungs/ gser khrir mnga' gsol te mtshan la dkon mchog thub bstan chos kyi nyi ma zhes gsol/ bstan pa dang sems can gyi don rgya chen po mdzad de dgung grangs sum cu bzhes pa'i shing pho sprel gyi lor 1824 lor sku gshegs nas gser gdung bzhengs so/"@bo-x-ewts .
+    
+    bdr:P8585  a            :Person ;
+        skos:prefLabel      "dkon mchog thub bstan chos kyi nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8LS13271 ;
+        :isRoot             true ;
+        :note               bdr:NT732B995D7790EC53 , bdr:NTFC9D8592720D51B5 ;
+        :personEvent        bdr:EV9212FDA08D44F259 , bdr:EVCEDFBC021F4B6D12 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01BA390AFD60948D , bdr:NM2EFC8B7EF28D4983 , bdr:NM7F0CFA3E7B17B86A , bdr:NMD91B14D0AFCFAD04 .
+}

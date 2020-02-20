@@ -1,0 +1,58 @@
+@base          <bdg:P1KG578> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG578 {
+    bda:LGE71956DE13DD7903
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-15T14:04:58.688Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF6D963A36FD18B20
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-09-15T10:31:38.597Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG578  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG578 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "90/P1KG578.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG578 ;
+        adm:logEntry        bda:LGE71956DE13DD7903 , bda:LGF6D963A36FD18B20 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA8D9BB25E042A135
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM1566F0FBBB1DE413
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sha bo don 'grub/"@bo-x-ewts .
+    
+    bdr:NT5E4897D96598EB00
+        a                   :Note ;
+        :noteSource         bdr:MW1KG577 ;
+        :noteText           "author of"@en .
+    
+    bdr:P1KG578  a          :Person ;
+        skos:prefLabel      "sha bo don 'grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5E4897D96598EB00 ;
+        :personEvent        bdr:EVA8D9BB25E042A135 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1566F0FBBB1DE413 .
+}

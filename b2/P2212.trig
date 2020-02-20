@@ -1,0 +1,101 @@
+@base          <bdg:P2212> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2212 {
+    bda:LG75DF09FCE05FAF13
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-21T15:34:33.371Z"^^xsd:dateTime ;
+        adm:logMessage      "added title, seat and office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2212  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2212 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "b2/P2212.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2212 ;
+        adm:logEntry        bda:LG75DF09FCE05FAF13 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3F856545FB189354
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G162 ;
+        :onYear             "1840"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6C50AAAFB517212C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV838220ED6DB44689
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G162 ;
+        :onYear             "1839"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV87DD4F55B6AF94A4
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1132 ;
+        :onYear             "1766"^^xsd:gYear .
+    
+    bdr:EV8C388A558E0B91B9
+        a                   :PersonDeath ;
+        :onYear             "1840"^^xsd:gYear .
+    
+    bdr:EVCB42929BFC2350BA
+        a                   :PersonBirth ;
+        :onYear             "1766"^^xsd:gYear .
+    
+    bdr:NM48E28361E08AD38F
+        a                   :PersonPersonalName ;
+        rdfs:label          "bla brang khri 38 dpal ldan grags pa/"@bo-x-ewts .
+    
+    bdr:NM9AA0E2B334331D48
+        a                   :PersonTitle ;
+        rdfs:label          "bla brang gdan rabs 38"@bo-x-ewts .
+    
+    bdr:NMDAFCD87BDB42AF92
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan grags pa/"@bo-x-ewts .
+    
+    bdr:NME0FA95A801201E59
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bla brang khri 38"@bo-x-ewts .
+    
+    bdr:NT0C766CC0A8B34E8F
+        a                   :Note ;
+        :locationStatement  "p. 456" ;
+        :noteSource         bdr:MW23670 ;
+        :noteText           "38th khri of bla brang bkra shis 'khyil"@en .
+    
+    bdr:NT98B0604B309BE636
+        a                   :Note ;
+        :locationStatement  "p. 1005" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTB6F2D832FD835902
+        a                   :Note ;
+        :noteText           "Teacher (not recorded): Rnga-rgod Ri-khrod-pa (first vows).\n1790. Entered Bla-brang for studies.\nTeacher (not recorded): Hor-tshang Rin-po-che.\nBecame the yongs-'dzin of the 4th Thu'u-bkwan.\n1826. Became the Khri of the Bla-brang Bkra-shis-'khyil Dus-'khor Grwa-tshang.\n1839. Becomes the 38th Khri of Bla-brang Bkra-shis-'khyil.\nServed one year and died."@en .
+    
+    bdr:P2212  a            :Person ;
+        skos:prefLabel      "dpal ldan grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0C766CC0A8B34E8F , bdr:NT98B0604B309BE636 , bdr:NTB6F2D832FD835902 ;
+        :personEvent        bdr:EV3F856545FB189354 , bdr:EV6C50AAAFB517212C , bdr:EV838220ED6DB44689 , bdr:EV87DD4F55B6AF94A4 , bdr:EV8C388A558E0B91B9 , bdr:EVCB42929BFC2350BA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM48E28361E08AD38F , bdr:NM9AA0E2B334331D48 , bdr:NMDAFCD87BDB42AF92 , bdr:NME0FA95A801201E59 ;
+        :personStudentOf    bdr:P169 , bdr:P1744 ;
+        :personTeacherOf    bdr:P327 .
+}

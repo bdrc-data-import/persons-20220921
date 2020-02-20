@@ -1,0 +1,51 @@
+@base          <bdg:P8380> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8380 {
+    bda:P8380  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8380 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "db/P8380.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8380 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA5B22C55AD891933
+        a                   :PersonBirth ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:NM91913F5E63B5F0E3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mchims rdo rje sprel chung /"@bo-x-ewts .
+    
+    bdr:NME4A2BB2A9E1A80C0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje sprel chung /"@bo-x-ewts .
+    
+    bdr:NT1442E04B45FDBA1F
+        a                   :Note ;
+        :locationStatement  "p. 503" ;
+        :noteSource         bdr:MW26009 ;
+        :noteText           "called a slob dpon of king khri srong lde btsan"@en .
+    
+    bdr:P8380  a            :Person ;
+        skos:prefLabel      "rdo rje sprel chung /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1442E04B45FDBA1F ;
+        :personEvent        bdr:EVA5B22C55AD891933 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM91913F5E63B5F0E3 , bdr:NME4A2BB2A9E1A80C0 .
+}

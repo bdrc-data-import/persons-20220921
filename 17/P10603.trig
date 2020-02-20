@@ -1,0 +1,52 @@
+@base          <bdg:P10603> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10603 {
+    bda:P10603  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10603 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "17/P10603.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10603 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5BC2BDE44FF4885A
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM6DDDF63F56C08831
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub grags pa/"@bo-x-ewts .
+    
+    bdr:NM9DC96F45272C2368
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smu che byang chub grags pa/"@bo-x-ewts .
+    
+    bdr:NT00EE5E5CC85F67FC
+        a                   :Note ;
+        :locationStatement  "p. 69" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "student of the 3rd patriarch of the sa skya tradition, rje btsun grags pa rgyal mtshan; probably a sa skya lam 'bras practitioner"@en .
+    
+    bdr:P10603  a           :Person ;
+        skos:prefLabel      "byang chub grags pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00EE5E5CC85F67FC ;
+        :personEvent        bdr:EV5BC2BDE44FF4885A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6DDDF63F56C08831 , bdr:NM9DC96F45272C2368 ;
+        :personStudentOf    bdr:P1614 .
+}

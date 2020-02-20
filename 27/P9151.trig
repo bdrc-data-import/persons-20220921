@@ -1,0 +1,61 @@
+@base          <bdg:P9151> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9151 {
+    bda:P9151  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9151 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "27/P9151.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9151 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV679347C6AC584191
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G506 .
+    
+    bdr:EV7BAB302A3D507CFB
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM1F7D79E131A71C0B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa rab brtan/"@bo-x-ewts .
+    
+    bdr:NM5D6D807202FE4749
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thub bstan mkhan chen byams pa rab brtan/"@bo-x-ewts .
+    
+    bdr:NT950020B67DFA881A
+        a                   :Note ;
+        :noteSource         bdr:MW27309 ;
+        :noteText           "noted as a student of rtse gdong bdag chen kun dga' bsod nams lhun grub"@en .
+    
+    bdr:NTB667406C0F5AEE9D
+        a                   :Note ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "sa skya teacher at the famous teaching college established by go rams pa; he is listed among the students of sa skya pa sngags 'chang kun dga' rin chen"@en .
+    
+    bdr:P9151  a            :Person ;
+        skos:prefLabel      "byams pa rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT950020B67DFA881A , bdr:NTB667406C0F5AEE9D ;
+        :personEvent        bdr:EV679347C6AC584191 , bdr:EV7BAB302A3D507CFB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1F7D79E131A71C0B , bdr:NM5D6D807202FE4749 ;
+        :personStudentOf    bdr:P2511 , bdr:P460 ;
+        :personTeacherOf    bdr:P8810 , bdr:P9155 .
+}

@@ -1,0 +1,73 @@
+@base          <bdg:P8590> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8590 {
+    bda:LG9678BF7C77BC3292
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-06T12:31:00.138Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8590  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8590 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "f4/P8590.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8590 ;
+        adm:logEntry        bda:LG9678BF7C77BC3292 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDCEFF73AAF86B8DB
+        a                   :PersonBirth ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:NM308AE2DDEC254216
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sgrub brgyud 08"@bo-x-ewts .
+    
+    bdr:NM682306A3FD687809
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub brgyud dkon mchog bstan 'dzin thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM9A6DD096FD133CC0
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubgyu 08"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMB672F8C711724394
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin thub bstan rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT71C146AFD99A7431
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:NTB16B785D1EDF92F0
+        a                   :Note ;
+        :locationStatement  "p. 53-90" ;
+        :noteSource         bdr:MW00EGS1017048 ;
+        :noteText           "de nas sku phreng brgyad pa ni/ sku gong ma dkon mchog bstan 'dzin kun khyab nyi mas brda yi sgo nas lung bstan pa bzhin du yab rong stod be cang dgra lha dbang 'dus dang / yum sman bza' tshe ring mtsho mo zer ba gnyis kyi sras su rab byung bcu drug pa'i chu mo lug gi lo spyi lo 1943 lor sku 'khrungs/ xxx de nas khams kyi skyu ra brag tu byon nas/ skyabs mgon mkha' khyab rdo rje dang / chos mdzad sku chen 'jigs med chos dbang blo gros/ gter chen 'od gsal rdo rje/ rtse sprul dkon mchog ngag dbang phrin las chos rgyal la sogs pa rnams kyi mdun nas rin chen gter mdzod chen mo'i dbang lung yongs rdzogs zhus/"@en .
+    
+    bdr:P8590  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin thub bstan rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8589 ;
+        :isRoot             true ;
+        :note               bdr:NT71C146AFD99A7431 , bdr:NTB16B785D1EDF92F0 ;
+        :personEvent        bdr:EVDCEFF73AAF86B8DB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM308AE2DDEC254216 , bdr:NM682306A3FD687809 , bdr:NM9A6DD096FD133CC0 , bdr:NMB672F8C711724394 ;
+        :personStudentOf    bdr:P3JM136 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P6391> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6391 {
+    bda:P6391  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6391 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6d/P6391.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6391 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3732C646E8D72030
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV46C34602FF590343
+        a                   :PersonBirth ;
+        :onYear             "1917"^^xsd:gYear .
+    
+    bdr:EVBC13A1B0F4B1C93F
+        a                   :PersonDeath ;
+        :notAfter           "1959"^^xsd:gYear ;
+        :notBefore          "1958"^^xsd:gYear .
+    
+    bdr:NM284FCBB154E4577C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bzang po/"@bo-x-ewts .
+    
+    bdr:NM52BC1F2A3DEAC37F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pe sprul sku tshul khrims bzang po/"@bo-x-ewts .
+    
+    bdr:NT4AE2F5746078F116
+        a                   :Note ;
+        :locationStatement  "p. 478" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes biographical sketch"@en .
+    
+    bdr:P6391  a            :Person ;
+        skos:prefLabel      "tshul khrims bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4AE2F5746078F116 ;
+        :personEvent        bdr:EV3732C646E8D72030 , bdr:EV46C34602FF590343 , bdr:EVBC13A1B0F4B1C93F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM284FCBB154E4577C , bdr:NM52BC1F2A3DEAC37F .
+}

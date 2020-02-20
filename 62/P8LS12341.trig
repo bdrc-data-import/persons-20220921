@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12341> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12341 {
+    bda:LGA5DA1F1272A06A14
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T11:43:23.763Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12341  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12341 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "62/P8LS12341.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12341 ;
+        adm:logEntry        bda:LGA5DA1F1272A06A14 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B73C307F61E991B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV5333BEA3E1E84F0C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:NM59CE16D2C5D87A18
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 30"@bo-x-ewts .
+    
+    bdr:NM632B50DCEE0FF82E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "phyag mdzod mkhan po sprul sku blo bzang snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBB8E5044648E9AE0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang snyan grags rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT2019F5BF1DF9920C
+        a                   :Note ;
+        :locationStatement  "p. 425-428" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "detail information is not available, it is assumed to be incarnation of phyag mdzod mkhan po"@en .
+    
+    bdr:P8LS12341  a        :Person ;
+        skos:prefLabel      "blo bzang snyan grags rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2019F5BF1DF9920C ;
+        :personEvent        bdr:EV1B73C307F61E991B , bdr:EV5333BEA3E1E84F0C ;
+        :personName         bdr:NM59CE16D2C5D87A18 , bdr:NM632B50DCEE0FF82E , bdr:NMBB8E5044648E9AE0 .
+}

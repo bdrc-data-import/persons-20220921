@@ -1,0 +1,88 @@
+@base          <bdg:P6467> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6467 {
+    bda:LG3BBDDC2219C18B4B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-11T11:04:54.771Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5EE9CDCB994CE91F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-05T12:57:11.31Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P6467  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6467 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "f0/P6467.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6467 ;
+        adm:logEntry        bda:LG3BBDDC2219C18B4B , bda:LG5EE9CDCB994CE91F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2AE97876E3AAB7FA
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1864"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV6722D1B86EAF9ED4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1859"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EVCDEF1F624350407E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EVDE049F68A60957E8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G236 .
+    
+    bdr:NM56DBAB8352806991
+        a                   :PersonTitle ;
+        rdfs:label          "khri 77 tshul khrims dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM613394BE3F90D2F2
+        a                   :PersonTitle ;
+        rdfs:label          "dga' ldan khri pa 77"@bo-x-ewts .
+    
+    bdr:NM921765BCD2F62660
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMA6ED442BA07F091C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spo 'bor tshul khrims dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT742539B6492B83D4
+        a                   :Note ;
+        :locationStatement  "p. 97" ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "cites krung go'i bod kyi shes rig, 1990-2, p. 83"@en .
+    
+    bdr:P6467  a            :Person ;
+        skos:prefLabel      "tshul khrims dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT742539B6492B83D4 ;
+        :personEvent        bdr:EV2AE97876E3AAB7FA , bdr:EV6722D1B86EAF9ED4 , bdr:EVCDEF1F624350407E , bdr:EVDE049F68A60957E8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM56DBAB8352806991 , bdr:NM613394BE3F90D2F2 , bdr:NM921765BCD2F62660 , bdr:NMA6ED442BA07F091C ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Trichen-77-Tsultrim-Dargye/9059"^^xsd:anyURI .
+}

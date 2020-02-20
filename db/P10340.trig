@@ -1,0 +1,48 @@
+@base          <bdg:P10340> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10340 {
+    bda:P10340  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10340 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "db/P10340.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10340 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV47CF465958AB3080
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM2A7876E18ACA9A15
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tsher lung drung pa/"@bo-x-ewts .
+    
+    bdr:NTF7645E4B1B8F6FE8
+        a                   :Note ;
+        :locationStatement  "v. 1, f.175v" ;
+        :noteSource         bdr:MW23435 ;
+        :noteText           "student of karma pa chos dbyings rdo rje; sectarian affiliation unknown; probably bka' brgyud;\nis this the same person as tsher lung ba?"@en .
+    
+    bdr:P10340  a           :Person ;
+        skos:prefLabel      "tsher lung drung pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF7645E4B1B8F6FE8 ;
+        :personEvent        bdr:EV47CF465958AB3080 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2A7876E18ACA9A15 ;
+        :personStudentOf    bdr:P1382 .
+}

@@ -1,0 +1,67 @@
+@base          <bdg:P822> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P822 {
+    bda:P822  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P822 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fb/P822.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P822 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV00928407B1C15057
+        a                   :PersonBirth ;
+        :onYear             "1449"^^xsd:gYear .
+    
+    bdr:EV028892E2387BF0E5
+        a                   :PersonDeath ;
+        :onYear             "1524"^^xsd:gYear .
+    
+    bdr:NM06E4DA002924B57C
+        a                   :PersonPersonalName ;
+        rdfs:label          "phyag chen klong yangs rab 'byams/"@bo-x-ewts .
+    
+    bdr:NM850EFF7537A9CF2A
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos rgyal bstan pa'i rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8A6575D0B799FE40
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags rams pa chos rgyal bstan pa/"@bo-x-ewts .
+    
+    bdr:NMDB2210DCDA6BDFA1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos rgyal bstan pa/"@bo-x-ewts .
+    
+    bdr:NT5D99302C678F91F1
+        a                   :Note ;
+        :locationStatement  "p. 56" ;
+        :noteSource         bdr:MW19808 ;
+        :noteText           "dates"@en .
+    
+    bdr:NT65AC212E6EC083A8
+        a                   :Note ;
+        :noteText           "prominent karma kaM tshang teacher associated with the 7th karma pa and karma 'phrin las pa"@en .
+    
+    bdr:P822  a             :Person ;
+        skos:prefLabel      "chos rgyal bstan pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5D99302C678F91F1 , bdr:NT65AC212E6EC083A8 ;
+        :personEvent        bdr:EV00928407B1C15057 , bdr:EV028892E2387BF0E5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06E4DA002924B57C , bdr:NM850EFF7537A9CF2A , bdr:NM8A6575D0B799FE40 , bdr:NMDB2210DCDA6BDFA1 ;
+        :personStudentOf    bdr:P815 , bdr:P821 .
+}

@@ -1,0 +1,71 @@
+@base          <bdg:P9318> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9318 {
+    bda:LG6480880E2EBDC849
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-02T10:59:48.885Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9318  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9318 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "21/P9318.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9318 ;
+        adm:logEntry        bda:LG6480880E2EBDC849 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAC94B612CF7F7212
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G4 ;
+        :onYear             "1758"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVACBC836D08504892
+        a                   :PersonBirth ;
+        :onYear             "1724"^^xsd:gYear .
+    
+    bdr:EVBBFA2A6A345F4D7B
+        a                   :PersonDeath ;
+        :onYear             "1783"^^xsd:gYear .
+    
+    bdr:NM1E9CA83599CE5392
+        a                   :PersonPrimaryName ;
+        rdfs:label          "g.yung drung tshul khrims/"@bo-x-ewts .
+    
+    bdr:NM475D9B161D17589B
+        a                   :PersonPersonalName ;
+        rdfs:label          "sman ri khri 'dzin g.yung drung tshul khrims/"@bo-x-ewts .
+    
+    bdr:NMD4DBEB75E763CF60
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gshen g.yung drung tshul khrims/"@bo-x-ewts .
+    
+    bdr:NT17531D1A1340CB85
+        a                   :Note ;
+        :locationStatement  "p. 296, 297" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "bon teacher\nascended as sman ri khri 'dzin in 1758"@en .
+    
+    bdr:P9318  a            :Person ;
+        skos:prefLabel      "g.yung drung tshul khrims/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT17531D1A1340CB85 ;
+        :personEvent        bdr:EVAC94B612CF7F7212 , bdr:EVACBC836D08504892 , bdr:EVBBFA2A6A345F4D7B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1E9CA83599CE5392 , bdr:NM475D9B161D17589B , bdr:NMD4DBEB75E763CF60 .
+}

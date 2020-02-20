@@ -1,0 +1,58 @@
+@base          <bdg:P9207> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9207 {
+    bda:LG42F1544D00351891
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-16T11:55:47.112Z"^^xsd:dateTime ;
+        adm:logMessage      "updated office place teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P9207  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9207 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "31/P9207.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9207 ;
+        adm:logEntry        bda:LG42F1544D00351891 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD2968801D660EEF0
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM1295AFE5DFF7C246
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen dbang phyug dpal bzang /"@bo-x-ewts .
+    
+    bdr:NMA992B97A8334E3A3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbang phyug dpal bzang /"@bo-x-ewts .
+    
+    bdr:NT0E6CC09C975332F5
+        a                   :Note ;
+        :noteText           "this sa skya scholar is often mentioned in colophons as a master of yongs 'dzin ngag dbang chos grags who wrote his biography"@en .
+    
+    bdr:P9207  a            :Person ;
+        skos:prefLabel      "dbang phyug dpal bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0E6CC09C975332F5 ;
+        :personEvent        bdr:EVD2968801D660EEF0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1295AFE5DFF7C246 , bdr:NMA992B97A8334E3A3 ;
+        :personStudentOf    bdr:P0RK1711 , bdr:P0RK1715 ;
+        :personTeacherOf    bdr:P787 .
+}

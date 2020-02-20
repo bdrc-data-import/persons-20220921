@@ -1,0 +1,70 @@
+@base          <bdg:P6004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6004 {
+    bda:LG97A3738EB19D42FD
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T16:34:20.037Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P6004  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6004 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "70/P6004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6004 ;
+        adm:logEntry        bda:LG97A3738EB19D42FD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV19864B2FFEED76B7
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1489 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM524E48E8FB459C36
+        a                   :PersonPersonalName ;
+        rdfs:label          "spo bo chos grags/"@bo-x-ewts .
+    
+    bdr:NM7EADC97C5A8A24AF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lcags la rgyal po spo bo/"@bo-x-ewts .
+    
+    bdr:NMC1D972CF03EAD63E
+        a                   :PersonPersonalName ;
+        rdfs:label          "lcags la rgyal po spo bo chos grags/"@bo-x-ewts .
+    
+    bdr:NME973B11A68F7ABC3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos grags/"@bo-x-ewts .
+    
+    bdr:NT8018D770D32D61EC
+        a                   :Note ;
+        :locationStatement  "p. 107" .
+    
+    bdr:NTD5C2B01813E132DE
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P6004  a            :Person ;
+        skos:prefLabel      "chos grags/"@bo-x-ewts ;
+        :hasSon             bdr:P6003 ;
+        :isRoot             true ;
+        :note               bdr:NT8018D770D32D61EC , bdr:NTD5C2B01813E132DE ;
+        :personEvent        bdr:EV19864B2FFEED76B7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM524E48E8FB459C36 , bdr:NM7EADC97C5A8A24AF , bdr:NMC1D972CF03EAD63E , bdr:NME973B11A68F7ABC3 .
+}

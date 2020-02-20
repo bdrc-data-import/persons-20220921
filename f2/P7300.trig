@@ -1,0 +1,44 @@
+@base          <bdg:P7300> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7300 {
+    bda:P7300  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7300 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "f2/P7300.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7300 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV78B44200F714F872
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2162 ;
+        :onYear             "1953"^^xsd:gYear .
+    
+    bdr:NM370539E90E17742B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgra snyan pa tshe dbang /"@bo-x-ewts .
+    
+    bdr:NM588A2D17593724E5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang /"@bo-x-ewts .
+    
+    bdr:P7300  a            :Person ;
+        skos:prefLabel      "tshe dbang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV78B44200F714F872 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM370539E90E17742B , bdr:NM588A2D17593724E5 .
+}

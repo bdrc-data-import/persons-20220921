@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12263> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12263 {
+    bda:LGC905E68E06206A71
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-23T15:14:07.681Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12263  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12263 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a6/P8LS12263.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12263 ;
+        adm:logEntry        bda:LGC905E68E06206A71 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV30044C8DF0AD37E8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV5D313691E8E09EC2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM24819DC6CB3E123B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM5AEEE97DB08B8749
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 109"@bo-x-ewts .
+    
+    bdr:NME370A52ED60E6AC3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pad+mo steng nags rked blo bzang legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT500771E5311C76F8
+        a                   :Note ;
+        :locationStatement  "p. 210-211" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "incarnate lama of padmo steng nags rked mkhan po shes rab bzang po\nduring his abbotship the panchen blo bzang thub bstan chos kyi nyi ma visited bya khyung monastery"@en .
+    
+    bdr:P8LS12263  a        :Person ;
+        skos:prefLabel      "blo bzang legs bshad rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT500771E5311C76F8 ;
+        :personEvent        bdr:EV30044C8DF0AD37E8 , bdr:EV5D313691E8E09EC2 ;
+        :personName         bdr:NM24819DC6CB3E123B , bdr:NM5AEEE97DB08B8749 , bdr:NME370A52ED60E6AC3 .
+}

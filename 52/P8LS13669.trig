@@ -1,0 +1,59 @@
+@base          <bdg:P8LS13669> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS13669 {
+    bda:LG0532EC3833215233
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-07T09:32:25.202Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS13669  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS13669 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "52/P8LS13669.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS13669 ;
+        adm:logEntry        bda:LG0532EC3833215233 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV319B80CAF8DCC1B0
+        a                   :PersonBirth ;
+        :onYear             "0893"^^xsd:gYear .
+    
+    bdr:EV44352C195F76E2FC
+        a                   :PersonDeath ;
+        :onYear             "0923"^^xsd:gYear .
+    
+    bdr:NM5055A93766E800A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mnga' bdag dpal 'khor btsan/"@bo-x-ewts .
+    
+    bdr:NMB22C877CBEFB744F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal 'khor btsan/"@bo-x-ewts .
+    
+    bdr:NT3FDD15071FB7F6D5
+        a                   :Note ;
+        :locationStatement  "p. 121, 157" ;
+        :noteSource         bdr:MW00KG09729 .
+    
+    bdr:P8LS13669  a        :Person ;
+        skos:prefLabel      "dpal 'khor btsan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3FDD15071FB7F6D5 ;
+        :personEvent        bdr:EV319B80CAF8DCC1B0 , bdr:EV44352C195F76E2FC ;
+        :personName         bdr:NM5055A93766E800A0 , bdr:NMB22C877CBEFB744F .
+}

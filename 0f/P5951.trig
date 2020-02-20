@@ -1,0 +1,78 @@
+@base          <bdg:P5951> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5951 {
+    bda:LG435334CB2E6F396D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-03T14:13:44.02Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG548EB615533BE1EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-12-23T16:01:59.993Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG5B8DC0B74C69BF12
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-05-01T04:30:38.046Z"^^xsd:dateTime ;
+        adm:logMessage      "review"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P5951  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5951 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "0f/P5951.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5951 ;
+        adm:logEntry        bda:LG435334CB2E6F396D , bda:LG548EB615533BE1EC , bda:LG5B8DC0B74C69BF12 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A15F202D6E67BD6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2844 .
+    
+    bdr:EVF567E087E47E6A08
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM298468D8AC69280F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spos khang pa rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM55F7D35AF799F5D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM777C6552803F9360
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "spos khang mkhan chen 'jam dbyangs rin chen rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT99447579669FD369
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P5951  a            :Person ;
+        skos:prefLabel      "rin chen rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT99447579669FD369 ;
+        :personEvent        bdr:EV8A15F202D6E67BD6 , bdr:EVF567E087E47E6A08 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM298468D8AC69280F , bdr:NM55F7D35AF799F5D3 , bdr:NM777C6552803F9360 ;
+        :personStudentOf    bdr:P0RK1168 , bdr:P1226 ;
+        :personTeacherOf    bdr:P1028 , bdr:P5952 .
+}

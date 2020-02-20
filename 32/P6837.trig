@@ -1,0 +1,94 @@
+@base          <bdg:P6837> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6837 {
+    bda:LGDC54183FC18051ED
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-17T12:26:16.233Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6837  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6837 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "32/P6837.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6837 ;
+        adm:logEntry        bda:LGDC54183FC18051ED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A22649B60BC2420
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV29876AA90511F641
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV3BCB465B29C17E6F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1748"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV84A344EC017AD13D
+        a                   :PersonBirth ;
+        :onYear             "1711"^^xsd:gYear .
+    
+    bdr:EVF780915852C6DE57
+        a                   :PersonDeath ;
+        :onYear             "1773"^^xsd:gYear .
+    
+    bdr:NM14D03E8D7700355E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 37"@bo-x-ewts .
+    
+    bdr:NM2F5240815DAFB539
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag lung ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM68AA46175894627B
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan po ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9C886861C1F852BC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT324EFE5DFAB4D5D8
+        a                   :Note ;
+        :locationStatement  "p. 165-166" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT535B646E2911B752
+        a                   :Note ;
+        :locationStatement  "p. 368" ;
+        :noteSource         bdr:MW20115 .
+    
+    bdr:NT8771BB5DD3A6BC9E
+        a                   :Note ;
+        :locationStatement  "p. 367" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "b. 1711"@en .
+    
+    bdr:P6837  a            :Person ;
+        skos:prefLabel      "ngag dbang mkhas grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT324EFE5DFAB4D5D8 , bdr:NT535B646E2911B752 , bdr:NT8771BB5DD3A6BC9E ;
+        :personEvent        bdr:EV0A22649B60BC2420 , bdr:EV29876AA90511F641 , bdr:EV3BCB465B29C17E6F , bdr:EV84A344EC017AD13D , bdr:EVF780915852C6DE57 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM14D03E8D7700355E , bdr:NM2F5240815DAFB539 , bdr:NM68AA46175894627B , bdr:NM9C886861C1F852BC ;
+        :personStudentOf    bdr:P179 , bdr:P412 .
+}

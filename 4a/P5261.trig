@@ -1,0 +1,60 @@
+@base          <bdg:P5261> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5261 {
+    bda:LGBC074C101057ED8E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T12:54:39.773Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5261  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5261 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4a/P5261.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5261 ;
+        adm:logEntry        bda:LGBC074C101057ED8E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC8FA86FB93DA028E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G308 .
+    
+    bdr:NM4E5D41BAEC591E3F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mkhas btsun/"@bo-x-ewts .
+    
+    bdr:NM7C5D099795C6BC04
+        a                   :PersonPersonalName ;
+        rdfs:label          "jo gdan blo bzang mkhas btsun/"@bo-x-ewts .
+    
+    bdr:NT0D4CCF22CDBEFDE2
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NTC50C621F09906A5B
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 511" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:P5261  a            :Person ;
+        skos:prefLabel      "blo bzang mkhas btsun/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0D4CCF22CDBEFDE2 , bdr:NTC50C621F09906A5B ;
+        :personEvent        bdr:EVC8FA86FB93DA028E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4E5D41BAEC591E3F , bdr:NM7C5D099795C6BC04 .
+}

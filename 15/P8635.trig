@@ -1,0 +1,65 @@
+@base          <bdg:P8635> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8635 {
+    bda:LGA254A06336FCDB81
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T11:21:55.686Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8635  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8635 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "15/P8635.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8635 ;
+        adm:logEntry        bda:LGA254A06336FCDB81 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM15A45DB6BCB8B848
+        a                   :PersonTitle ;
+        rdfs:label          "grub chen nyi ma bzang po/"@bo-x-ewts .
+    
+    bdr:NM3393F65A898B52A3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi ma bzang po/"@bo-x-ewts .
+    
+    bdr:NM33DEE010A953E7A3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "hor chos mdzad 04 nyi ma bzang po/"@bo-x-ewts .
+    
+    bdr:NM6A21BC380929ECE4
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Horcho Ze 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMD31879FD3D5E41A9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "hor chos mdzad 04"@bo-x-ewts .
+    
+    bdr:NT731465318482C85F
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8635  a            :Person ;
+        skos:prefLabel      "nyi ma bzang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8634 ;
+        :isRoot             true ;
+        :note               bdr:NT731465318482C85F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15A45DB6BCB8B848 , bdr:NM3393F65A898B52A3 , bdr:NM33DEE010A953E7A3 , bdr:NM6A21BC380929ECE4 , bdr:NMD31879FD3D5E41A9 .
+}

@@ -1,0 +1,59 @@
+@base          <bdg:P8438> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8438 {
+    bda:P8438  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8438 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "46/P8438.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8438 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1712EFC9CFECF614
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3217 .
+    
+    bdr:EV3680294E0FEDC97A
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EVB635284A63A31967
+        a                   :PersonDeath ;
+        :onYear             "1959"^^xsd:gYear .
+    
+    bdr:NM3556ECB1FCDEA3F6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bzang po/"@bo-x-ewts .
+    
+    bdr:NMD476D53B2265A7E4
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dbus bla tshul bzang /"@bo-x-ewts .
+    
+    bdr:NT415625F6C347441B
+        a                   :Note ;
+        :locationStatement  "f. 293v" ;
+        :noteSource         bdr:MW26629 ;
+        :noteText           "parents: dor zhi'i zhis kho and rgya bza' sangs rgyas 'tsho"@en .
+    
+    bdr:P8438  a            :Person ;
+        skos:prefLabel      "tshul khrims bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT415625F6C347441B ;
+        :personEvent        bdr:EV1712EFC9CFECF614 , bdr:EV3680294E0FEDC97A , bdr:EVB635284A63A31967 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3556ECB1FCDEA3F6 , bdr:NMD476D53B2265A7E4 ;
+        :personStudentOf    bdr:P699 .
+}

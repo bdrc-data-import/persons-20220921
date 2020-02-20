@@ -1,0 +1,77 @@
+@base          <bdg:P5955> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5955 {
+    bda:LG4122FA0C9EA3C5C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-06-23T16:24:26.661Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG5FC2F8552523F32C
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-28T09:34:31.147Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title and note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5955  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5955 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "53/P5955.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5955 ;
+        adm:logEntry        bda:LG4122FA0C9EA3C5C3 , bda:LG5FC2F8552523F32C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9AE6F55B203559C4
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM2754991AEDD9279C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin rdo rje/"@bo-x-ewts .
+    
+    bdr:NM3CC11443456E05B5
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jigs med dge ba'i dpal chen/"@bo-x-ewts .
+    
+    bdr:NM49C18BCF5F43933E
+        a                   :PersonPersonalName ;
+        rdfs:label          "'jigs med dge ba'i dpal/"@bo-x-ewts .
+    
+    bdr:NM53A87306E5BF3FF0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rwa ston ngag dbang bstan 'dzin rdo rje/"@bo-x-ewts .
+    
+    bdr:NTA32D748B3951266B
+        a                   :Note ;
+        :locationStatement  "p. 68" ;
+        :noteSource         bdr:MW19822 ;
+        :noteText           "teacher of the klong chen snying thig revelations of the rnying ma tradition"@en .
+    
+    bdr:NTFAF091F5BB53BB8D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Klong-chen-snying-thig revelations"@en .
+    
+    bdr:P5955  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA32D748B3951266B , bdr:NTFAF091F5BB53BB8D ;
+        :personEvent        bdr:EV9AE6F55B203559C4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2754991AEDD9279C , bdr:NM3CC11443456E05B5 , bdr:NM49C18BCF5F43933E , bdr:NM53A87306E5BF3FF0 ;
+        :personStudentOf    bdr:P314 .
+}

@@ -1,0 +1,73 @@
+@base          <bdg:P4279> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4279 {
+    bda:LGC4D6122CA458D0EA
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-28T10:58:09.866Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationships"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGE266677C6BF28B42
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-07-28T15:36:10.838Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher student relationship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P4279  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4279 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "05/P4279.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4279 ;
+        adm:logEntry        bda:LGC4D6122CA458D0EA , bda:LGE266677C6BF28B42 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BA155ECFD09D200
+        a                   :PersonDeath ;
+        :onYear             "1390"^^xsd:gYear .
+    
+    bdr:EV3D09AEEB6533256F
+        a                   :PersonBirth ;
+        :onYear             "1311"^^xsd:gYear .
+    
+    bdr:NM82ED45BF8863CDAD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri pa gzhon nu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM8B2ACD3B65D58F7B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gzhon nu rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT54F0DE378841E935
+        a                   :Note ;
+        :locationStatement  "p. 1602" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTE07FD03693C37470
+        a                   :Note ;
+        :noteText           "a master of the stod lineage of the 'brug pa dkar brgyud\nteacher not recorded: zur phug pa"@en .
+    
+    bdr:P4279  a            :Person ;
+        skos:prefLabel      "gzhon nu rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT54F0DE378841E935 , bdr:NTE07FD03693C37470 ;
+        :personEvent        bdr:EV1BA155ECFD09D200 , bdr:EV3D09AEEB6533256F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM82ED45BF8863CDAD , bdr:NM8B2ACD3B65D58F7B ;
+        :personStudentOf    bdr:P6180 ;
+        :personTeacherOf    bdr:P502 .
+}

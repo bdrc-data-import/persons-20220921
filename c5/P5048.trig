@@ -1,0 +1,75 @@
+@base          <bdg:P5048> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5048 {
+    bda:LGCA177A6166C7EC3D
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:33.557Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LGE245D9A99963F8E1
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:49:01.22Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5048  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5048 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "c5/P5048.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5048 ;
+        adm:logEntry        bda:LGCA177A6166C7EC3D , bda:LGE245D9A99963F8E1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1C6DFE8012CBA2D3
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV2DDEDEE61FD5874B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G479 .
+    
+    bdr:NMB6EAF7C78E2A94DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku o rgyan dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NMCD0389DCA1B42B28
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan dpal 'byor/"@bo-x-ewts .
+    
+    bdr:NT01C678208A4E562E
+        a                   :Note ;
+        :locationStatement  "p. 179v" .
+    
+    bdr:NT68677FFC112703DA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:NTC15123DC3AD17D7B
+        a                   :Note ;
+        :noteText           "1607. Confers first vows on Lha-btsun Nam-mkha'-'jigs-med."@en .
+    
+    bdr:P5048  a            :Person ;
+        skos:prefLabel      "o rgyan dpal 'byor/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT01C678208A4E562E , bdr:NT68677FFC112703DA , bdr:NTC15123DC3AD17D7B ;
+        :personEvent        bdr:EV1C6DFE8012CBA2D3 , bdr:EV2DDEDEE61FD5874B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB6EAF7C78E2A94DE , bdr:NMCD0389DCA1B42B28 ;
+        :personTeacherOf    bdr:P1691 , bdr:P9577 .
+}

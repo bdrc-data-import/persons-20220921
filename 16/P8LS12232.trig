@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12232> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12232 {
+    bda:LG6B74598EE772312D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-21T11:22:16.172Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12232  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12232 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "16/P8LS12232.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12232 ;
+        adm:logEntry        bda:LG6B74598EE772312D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV025636961ED98CC2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6753BE31D90B43F8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM0429577CAC5D1D64
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 70 skal ldan zla grags/"@bo-x-ewts .
+    
+    bdr:NM690A31C67B49AC72
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal ldan zla grags/"@bo-x-ewts .
+    
+    bdr:NMA4A5CC9F4BA6EE2F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 70"@bo-x-ewts .
+    
+    bdr:NT6BE03A4C32485F22
+        a                   :Note ;
+        :locationStatement  "p. 194" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "mongolian race, born near dgon lung in amdo\nrecognised as incarnate lama of gdong gzhug blo bzang chos grags\nlived untill the age of 80's"@en .
+    
+    bdr:P8LS12232  a        :Person ;
+        skos:prefLabel      "skal ldan zla grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6BE03A4C32485F22 ;
+        :personEvent        bdr:EV025636961ED98CC2 , bdr:EV6753BE31D90B43F8 ;
+        :personName         bdr:NM0429577CAC5D1D64 , bdr:NM690A31C67B49AC72 , bdr:NMA4A5CC9F4BA6EE2F .
+}

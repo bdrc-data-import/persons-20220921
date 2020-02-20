@@ -1,0 +1,101 @@
+@base          <bdg:P361> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P361 {
+    bda:LG18FD163F20553BCF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-02T15:23:17.188Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P361  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P361 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "85/P361.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P361 ;
+        adm:logEntry        bda:LG18FD163F20553BCF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV04CE6DAF6C4DB213
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EV335D3D8126AE0F9B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G12 .
+    
+    bdr:EV4D3C427072C5FA88
+        a                   :PersonDeath ;
+        :onYear             "1674"^^xsd:gYear .
+    
+    bdr:EV9BDAF682A6D37B5A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3379 ;
+        :onYear             "1648"^^xsd:gYear .
+    
+    bdr:EVA3F420F3B84ED01E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM3396CFAC7147C732
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM3E7BC4E042BA51C8
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling mkhan chen 01"@bo-x-ewts .
+    
+    bdr:NM66E1E2D09657B333
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal sras bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT406825C0FD20336F
+        a                   :Note ;
+        :noteText           "Younger brother of Gter-bdag-gling-pa 'Gyur-med-rdo-rje."@en .
+    
+    bdr:NT4A0AF1C02250353B
+        a                   :Note ;
+        :locationStatement  "p. 136-137" ;
+        :noteSource         bdr:MW1CZ2290 .
+    
+    bdr:NTAEE778DD7B093B33
+        a                   :Note ;
+        :locationStatement  "p. 29" ;
+        :noteSource         bdr:MW19806 .
+    
+    bdr:NTB1C2C2FA0FEC994E
+        a                   :Note ;
+        :locationStatement  "p. 130-131" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:NTF673947A20930F4C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P361  a             :Person ;
+        skos:prefLabel      "bstan pa'i nyi ma/"@bo-x-ewts ;
+        :hasFather          bdr:P359 ;
+        :hasOlderBrother    bdr:P7 ;
+        :hasYoungerBrother  bdr:P2538 ;
+        :isRoot             true ;
+        :note               bdr:NT406825C0FD20336F , bdr:NT4A0AF1C02250353B , bdr:NTAEE778DD7B093B33 , bdr:NTB1C2C2FA0FEC994E , bdr:NTF673947A20930F4C ;
+        :personEvent        bdr:EV04CE6DAF6C4DB213 , bdr:EV335D3D8126AE0F9B , bdr:EV4D3C427072C5FA88 , bdr:EV9BDAF682A6D37B5A , bdr:EVA3F420F3B84ED01E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3396CFAC7147C732 , bdr:NM3E7BC4E042BA51C8 , bdr:NM66E1E2D09657B333 ;
+        :personStudentOf    bdr:P37 , bdr:P7 ;
+        :personTeacherOf    bdr:P667 .
+}

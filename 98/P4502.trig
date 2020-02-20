@@ -1,0 +1,75 @@
+@base          <bdg:P4502> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4502 {
+    bda:LG6491206C35F91361
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-03T09:19:07.653Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4502  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4502 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "98/P4502.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4502 ;
+        adm:logEntry        bda:LG6491206C35F91361 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18D27B863494FB65
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV1CAF1494273B0DFC
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVE1CB8A73D495A660
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:NM25DD43DE23DB3764
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya bral 'jam dbyangs lhun grub/"@bo-x-ewts .
+    
+    bdr:NMB42042CA5CAF0998
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 20"@bo-x-ewts .
+    
+    bdr:NMBF30BE4765EA51D9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs lhun grub/"@bo-x-ewts .
+    
+    bdr:NT035E5C42FEB22658
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT5607325C97F968B8
+        a                   :Note ;
+        :locationStatement  "p. 288" ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P4502  a            :Person ;
+        skos:prefLabel      "'jam dbyangs lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT035E5C42FEB22658 , bdr:NT5607325C97F968B8 ;
+        :personEvent        bdr:EV18D27B863494FB65 , bdr:EV1CAF1494273B0DFC , bdr:EVE1CB8A73D495A660 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM25DD43DE23DB3764 , bdr:NMB42042CA5CAF0998 , bdr:NMBF30BE4765EA51D9 ;
+        :personTeacherOf    bdr:P417 .
+}

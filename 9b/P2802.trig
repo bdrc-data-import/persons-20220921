@@ -1,0 +1,46 @@
+@base          <bdg:P2802> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2802 {
+    bda:P2802  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2802 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "9b/P2802.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2802 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5D28077097039961
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0376B0A96E5E2F15
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mus chen chos nyid ye shes/"@bo-x-ewts .
+    
+    bdr:NM17141855AE7D316D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos nyid ye shes/"@bo-x-ewts .
+    
+    bdr:P2802  a            :Person ;
+        skos:prefLabel      "chos nyid ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV5D28077097039961 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0376B0A96E5E2F15 , bdr:NM17141855AE7D316D ;
+        :personStudentOf    bdr:P2803 , bdr:P2810 , bdr:P805 ;
+        :personTeacherOf    bdr:P2801 , bdr:P3138 , bdr:P807 , bdr:P9088 , bdr:P9090 .
+}

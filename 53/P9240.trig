@@ -1,0 +1,74 @@
+@base          <bdg:P9240> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9240 {
+    bda:LG758579A3B98910ED
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T14:17:14.468Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9240  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9240 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "53/P9240.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9240 ;
+        adm:logEntry        bda:LG758579A3B98910ED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24529271E485F086
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G172 .
+    
+    bdr:EV44C3DB4F0C2F08CA
+        a                   :PersonDeath ;
+        :onYear             "1773"^^xsd:gYear .
+    
+    bdr:EV913CEE81B975F428
+        a                   :PersonBirth ;
+        :onYear             "1727"^^xsd:gYear .
+    
+    bdr:NM6259A05841C4B60C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Denma Choje 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM86038F341201F7CF
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dan ma chos rje 03 ngag dbang mkhas grub nyi ma/"@bo-x-ewts .
+    
+    bdr:NM90A4E3500CED6A1F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'dan ma chos rje 03"@bo-x-ewts .
+    
+    bdr:NMCB3EB99391CF5C1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhas grub nyi ma/"@bo-x-ewts .
+    
+    bdr:NTC4B0DD4DE748C273
+        a                   :Note ;
+        :locationStatement  "p. 110" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "ngag dbang mkhas grub nyi ma \nnyid ni me lug (1727) lor 'khrungs/"@bo-x-ewts .
+    
+    bdr:P9240  a            :Person ;
+        skos:prefLabel      "ngag dbang mkhas grub nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P4083 ;
+        :isRoot             true ;
+        :note               bdr:NTC4B0DD4DE748C273 ;
+        :personEvent        bdr:EV24529271E485F086 , bdr:EV44C3DB4F0C2F08CA , bdr:EV913CEE81B975F428 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6259A05841C4B60C , bdr:NM86038F341201F7CF , bdr:NM90A4E3500CED6A1F , bdr:NMCB3EB99391CF5C1E .
+}

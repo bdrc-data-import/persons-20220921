@@ -1,0 +1,101 @@
+@base          <bdg:P531> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P531 {
+    bda:LG168078D47AEDD5EB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LG7A543A61A4480B33
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:03:26.682Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGAEB0873308DE81B3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-02T08:53:33.323Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, seat, incarnate relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P531  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P531 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "a6/P531.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P531 ;
+        adm:logEntry        bda:LG168078D47AEDD5EB , bda:LG7A543A61A4480B33 , bda:LGAEB0873308DE81B3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4F60D85B7A10FB5F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G218 .
+    
+    bdr:EVCFCC0565FDB3D993
+        a                   :PersonBirth ;
+        :onYear             "1709"^^xsd:gYear .
+    
+    bdr:EVF17E00F9F64FB964
+        a                   :PersonDeath ;
+        :onYear             "1738"^^xsd:gYear .
+    
+    bdr:EVFBF3536F22B2C216
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G183 .
+    
+    bdr:NM131E26008CCA4B8C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug bla ma khri pa 02 mi pham dbang po/"@bo-x-ewts .
+    
+    bdr:NM304BACA0A81EFF1E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi pham dbang po/"@bo-x-ewts .
+    
+    bdr:NM6C67B400B935324D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brug bla ma khri pa 02"@bo-x-ewts .
+    
+    bdr:NMAF85642FCB97AA39
+        a                   :PersonTitle ;
+        rdfs:label          "khri sprul mi pham dbang po/"@bo-x-ewts .
+    
+    bdr:NMF18668B7CF877012
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Druk Lama Tripa 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTD34A8285E95A2DA2
+        a                   :Note ;
+        :locationStatement  "p. 108" ;
+        :noteSource         bdr:MW1KG1680 ;
+        :noteText           "according to this source he is the second bla ma khri pa"@en .
+    
+    bdr:NTE818DF68B0054275
+        a                   :Note ;
+        :locationStatement  "p. 260-262" ;
+        :noteSource         bdr:MW19809 ;
+        :noteText           "according to this source he is the first bla ma khri pa"@en .
+    
+    bdr:P531  a             :Person ;
+        skos:prefLabel      "mi pham dbang po/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P512 ;
+        :isRoot             true ;
+        :note               bdr:NTD34A8285E95A2DA2 , bdr:NTE818DF68B0054275 ;
+        :personEvent        bdr:EV4F60D85B7A10FB5F , bdr:EVCFCC0565FDB3D993 , bdr:EVF17E00F9F64FB964 , bdr:EVFBF3536F22B2C216 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM131E26008CCA4B8C , bdr:NM304BACA0A81EFF1E , bdr:NM6C67B400B935324D , bdr:NMAF85642FCB97AA39 , bdr:NMF18668B7CF877012 ;
+        :personTeacherOf    bdr:P530 , bdr:P535 , bdr:P538 .
+}

@@ -1,0 +1,78 @@
+@base          <bdg:P1GS105233> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1GS105233 {
+    bda:LG57932D1B4DC7E031
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-23T16:37:53.082Z"^^xsd:dateTime ;
+        adm:logMessage      "checked dates"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LG687ED4D20B6B718E
+        a                   adm:LogEntry ;
+        adm:logDate         "2018-12-05T17:15:08.375Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG88B30BD7AA2DC394
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-23T16:34:03.403Z"^^xsd:dateTime ;
+        adm:logMessage      "record created"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P1GS105233  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1GS105233 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "2a/P1GS105233.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1GS105233 ;
+        adm:logEntry        bda:LG57932D1B4DC7E031 , bda:LG687ED4D20B6B718E , bda:LG88B30BD7AA2DC394 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV08DF382F7CD90271
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EV1670A77816427796
+        a                   :PersonDeath ;
+        :onYear             "1684"^^xsd:gYear .
+    
+    bdr:EVB5D1BB1E1981216F
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1623"^^xsd:gYear .
+    
+    bdr:NM0A873417A89FA1B5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM2B2EE8A04F12C79C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen dkon mchog bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTE21AAA3CD882002D
+        a                   :Note ;
+        :locationStatement  "p. 113" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P1GS105233  a       :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE21AAA3CD882002D ;
+        :personEvent        bdr:EV08DF382F7CD90271 , bdr:EV1670A77816427796 , bdr:EVB5D1BB1E1981216F ;
+        :personName         bdr:NM0A873417A89FA1B5 , bdr:NM2B2EE8A04F12C79C ;
+        :personStudentOf    bdr:P2565 , bdr:P37 , bdr:P5678 , bdr:P7 ;
+        :personTeacherOf    bdr:P667 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P8846> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8846 {
+    bda:P8846  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8846 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "32/P8846.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8846 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8B066D855FA75B9C
+        a                   :PersonBirth ;
+        :onYear             "1566"^^xsd:gYear .
+    
+    bdr:NM8233532F8C273D21
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya ra ba bkra shis phun tshogs/"@bo-x-ewts .
+    
+    bdr:NME1F869D688254795
+        a                   :PersonPersonalName ;
+        rdfs:label          "bkra shis phun tshogs/"@bo-x-ewts .
+    
+    bdr:NT1E819BB0D9FFCC3D
+        a                   :Note ;
+        :locationStatement  "p. 2323" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1566. rgya ra ba bkra shis phun tshogs 'khrungs"@en .
+    
+    bdr:P8846  a            :Person ;
+        skos:prefLabel      "bkra shis phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1E819BB0D9FFCC3D ;
+        :personEvent        bdr:EV8B066D855FA75B9C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8233532F8C273D21 , bdr:NME1F869D688254795 .
+}

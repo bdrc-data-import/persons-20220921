@@ -1,0 +1,58 @@
+@base          <bdg:P3660> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3660 {
+    bda:P3660  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3660 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "83/P3660.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3660 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7B4C3EA888D6602B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G407 .
+    
+    bdr:EV7FFF927042D7D536
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM84166F3B9C992783
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA59D2B314EE15FA9
+        a                   :PersonPersonalName ;
+        rdfs:label          "'phan po thang sag mkhas pa ye shes rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMFC276B7D39FF1F2C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'phan po thang sag mkhas pa/"@bo-x-ewts .
+    
+    bdr:NT3E60ED19C3307E05
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa"@en .
+    
+    bdr:P3660  a            :Person ;
+        skos:prefLabel      "ye shes rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3E60ED19C3307E05 ;
+        :personEvent        bdr:EV7B4C3EA888D6602B , bdr:EV7FFF927042D7D536 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM84166F3B9C992783 , bdr:NMA59D2B314EE15FA9 , bdr:NMFC276B7D39FF1F2C ;
+        :personTeacherOf    bdr:P318 .
+}

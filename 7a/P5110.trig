@@ -1,0 +1,72 @@
+@base          <bdg:P5110> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5110 {
+    bda:LGBAE5F4B13A20B62D
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-24T12:25:43.942Z"^^xsd:dateTime ;
+        adm:logMessage      "Treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P5110  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5110 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7a/P5110.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5110 ;
+        adm:logEntry        bda:LGBAE5F4B13A20B62D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV24587938305D6FEE
+        a                   :PersonDeath ;
+        :onYear             "1985"^^xsd:gYear .
+    
+    bdr:EVF618EB2295D01D3C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1371 ;
+        :notAfter           "1954"^^xsd:gYear ;
+        :notBefore          "1953"^^xsd:gYear .
+    
+    bdr:NM27C2EFF92A90ABD2
+        a                   :PersonPenName ;
+        rdfs:label          "rang grol/"@bo-x-ewts .
+    
+    bdr:NMD4A3F96AC9C84FFE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "don grub rgyal/"@bo-x-ewts .
+    
+    bdr:NT754B06A99D15DF7B
+        a                   :Note ;
+        :locationStatement  "p. 36" ;
+        :noteSource         bdr:MW20071 ;
+        :noteText           "this source gives his birth year as 1954 and death year as 30/11/1985"@en .
+    
+    bdr:NTE88863B439409322
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Modern Writers"@en .
+    
+    bdr:NTF09F9E53D9A4EA47
+        a                   :Note ;
+        :noteText           "Died 30/11/1985 at Mtsho sngon Mtsho lho Chab cha Grong."@en .
+    
+    bdr:P5110  a            :Person ;
+        skos:prefLabel      "don grub rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT754B06A99D15DF7B , bdr:NTE88863B439409322 , bdr:NTF09F9E53D9A4EA47 ;
+        :personEvent        bdr:EV24587938305D6FEE , bdr:EVF618EB2295D01D3C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM27C2EFF92A90ABD2 , bdr:NMD4A3F96AC9C84FFE ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dondrub-Gyel/7613"^^xsd:anyURI .
+}

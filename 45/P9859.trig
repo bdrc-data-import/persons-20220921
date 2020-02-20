@@ -1,0 +1,61 @@
+@base          <bdg:P9859> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9859 {
+    bda:LG9B678D62494DE065
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-06-11T10:05:27.635Z"^^xsd:dateTime ;
+        adm:logMessage      "added event"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P9859  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9859 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "45/P9859.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9859 ;
+        adm:logEntry        bda:LG9B678D62494DE065 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3D5905B7EDD2C0BC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G36 .
+    
+    bdr:EVABE621C3993C979C
+        a                   :PersonDeath ;
+        :onYear             "1946"^^xsd:gYear .
+    
+    bdr:EVB77321FA438ED5FF
+        a                   :PersonBirth ;
+        :onYear             "1890"^^xsd:gYear .
+    
+    bdr:NMD93043374E0F3EEE
+        a                   :PersonPersonalName ;
+        rdfs:label          "be ri mkhyen brtse/"@bo-x-ewts .
+    
+    bdr:NT36CD1D89D6C30267
+        a                   :Note ;
+        :locationStatement  "p. 1 (1st group)" ;
+        :noteSource         bdr:MW29631 ;
+        :noteText           "dates given; the creator of the illustrations for the zab mo nang don commentary of thub bstan phun tshogs"@en .
+    
+    bdr:P9859  a            :Person ;
+        skos:prefLabel      "be ri mkhyen brtse/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT36CD1D89D6C30267 ;
+        :personEvent        bdr:EV3D5905B7EDD2C0BC , bdr:EVABE621C3993C979C , bdr:EVB77321FA438ED5FF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD93043374E0F3EEE .
+}

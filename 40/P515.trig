@@ -1,0 +1,45 @@
+@base          <bdg:P515> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P515 {
+    bda:P515  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P515 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "40/P515.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P515 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D6C417EF3D40DAD
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMA182FAAFD98BB3F3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zla ba seng+ge"@bo-x-ewts .
+    
+    bdr:NME20285CBA1BE0414
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub chen zla ba seng+ge"@bo-x-ewts .
+    
+    bdr:P515  a             :Person ;
+        skos:prefLabel      "zla ba seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV9D6C417EF3D40DAD ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA182FAAFD98BB3F3 , bdr:NME20285CBA1BE0414 ;
+        :personTeacherOf    bdr:P511 .
+}

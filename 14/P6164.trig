@@ -1,0 +1,65 @@
+@base          <bdg:P6164> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6164 {
+    bda:LG933AD1CBE850992D
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-08-11T15:40:54.842Z"^^xsd:dateTime ;
+        adm:logMessage      "created link to Treasury of Lives"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGB3DCC801001C5F6F
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-01-20T11:53:09.426Z"^^xsd:dateTime ;
+        adm:logMessage      "linked kinship"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P6164  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6164 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "14/P6164.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6164 ;
+        adm:logEntry        bda:LG933AD1CBE850992D , bda:LGB3DCC801001C5F6F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV642FCAE5FA885EC1
+        a                   :PersonBirth ;
+        :onYear             "1346"^^xsd:gYear .
+    
+    bdr:EVAEE14A5F8CD91D20
+        a                   :PersonDeath ;
+        :onYear             "1405"^^xsd:gYear .
+    
+    bdr:NMFE7B8842AD7670E1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje gling pa/"@bo-x-ewts .
+    
+    bdr:NT7AF529E63768D3BA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Rdo-rje-gling-pa revelations"@en .
+    
+    bdr:P6164  a            :Person ;
+        skos:prefLabel      "rdo rje gling pa/"@bo-x-ewts ;
+        :hasSon             bdr:P7663 ;
+        :hasUnknownKinship  bdr:P7663 ;
+        :isRoot             true ;
+        :note               bdr:NT7AF529E63768D3BA ;
+        :personEvent        bdr:EV642FCAE5FA885EC1 , bdr:EVAEE14A5F8CD91D20 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMFE7B8842AD7670E1 ;
+        :personTeacherOf    bdr:P7662 , bdr:P7664 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Dorje-Lingpa/8750"^^xsd:anyURI .
+}

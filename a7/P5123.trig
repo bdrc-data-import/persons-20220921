@@ -1,0 +1,61 @@
+@base          <bdg:P5123> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5123 {
+    bda:LGD26DBC59A6CE6DB3
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-12-06T12:17:23.755Z"^^xsd:dateTime ;
+        adm:logMessage      "added student"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P5123  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5123 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "a7/P5123.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5123 ;
+        adm:logEntry        bda:LGD26DBC59A6CE6DB3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV085B83A758B14C0E
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVF64B3B1862EBD8DF
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM1AFD897CAD5BBBF0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha gya 'jam dbyangs dpal ldan/"@bo-x-ewts .
+    
+    bdr:NM889AB109D96B9D82
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs dpal ldan/"@bo-x-ewts .
+    
+    bdr:NT452BF16335295404
+        a                   :Note ;
+        :noteText           "dge lugs teacher connected with bya khyung monastery in a mdo"@en .
+    
+    bdr:P5123  a            :Person ;
+        skos:prefLabel      "'jam dbyangs dpal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT452BF16335295404 ;
+        :personEvent        bdr:EV085B83A758B14C0E , bdr:EVF64B3B1862EBD8DF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AFD897CAD5BBBF0 , bdr:NM889AB109D96B9D82 ;
+        :personTeacherOf    bdr:P2CZ8066 , bdr:P4704 .
+}

@@ -1,0 +1,78 @@
+@base          <bdg:P6816> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6816 {
+    bda:LG5B7E7A126DBA722D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T09:55:19.793Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6816  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6816 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "92/P6816.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6816 ;
+        adm:logEntry        bda:LG5B7E7A126DBA722D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV06D05F8E18006643
+        a                   :PersonBirth ;
+        :onYear             "1795"^^xsd:gYear .
+    
+    bdr:EV1F8670F7B19373DB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1936 .
+    
+    bdr:EVE85A6C79218041FC
+        a                   :PersonDeath ;
+        :onYear             "1807"^^xsd:gYear .
+    
+    bdr:NM07D64AF832D39439
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun yar 'phel/"@bo-x-ewts .
+    
+    bdr:NM48EE264644CBF8D5
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gser lag 03"@bo-x-ewts .
+    
+    bdr:NM60F9B48588A83585
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser lag 03 dge 'dun yar 'phel/"@bo-x-ewts .
+    
+    bdr:NM7DCFA0BEC54066A3
+        a                   :PersonTitle ;
+        rdfs:label          "rgya li 03 dge 'dun yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMFE211BDF5533B65B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Serlak 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NTAB78A4B0C4AE297A
+        a                   :Note ;
+        :locationStatement  "p. 703" ;
+        :noteSource         bdr:MW20214 ;
+        :noteText           "dge lugs teacher from a mdo"@en .
+    
+    bdr:P6816  a            :Person ;
+        skos:prefLabel      "dge 'dun yar 'phel/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6815 ;
+        :isRoot             true ;
+        :note               bdr:NTAB78A4B0C4AE297A ;
+        :personEvent        bdr:EV06D05F8E18006643 , bdr:EV1F8670F7B19373DB , bdr:EVE85A6C79218041FC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07D64AF832D39439 , bdr:NM48EE264644CBF8D5 , bdr:NM60F9B48588A83585 , bdr:NM7DCFA0BEC54066A3 , bdr:NMFE211BDF5533B65B .
+}

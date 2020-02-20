@@ -1,0 +1,74 @@
+@base          <bdg:P6105> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6105 {
+    bda:LG824BDCEF7755492E
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-12T11:58:57.781Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG831ED06D42EFF359
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-02-12T12:19:12.47Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P6105  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6105 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b6/P6105.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6105 ;
+        adm:logEntry        bda:LG824BDCEF7755492E , bda:LG831ED06D42EFF359 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV38EB131FF335BF3B
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV680EABE4A7DBCE25
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G00AG01623 .
+    
+    bdr:EVC43AD8B62377D1A6
+        a                   :PersonEventNotSpecified .
+    
+    bdr:NM215E24E8239EA644
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nub dgon pa byams pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM40BB969912195A6C
+        a                   :PersonPersonalName ;
+        rdfs:label          "gnubs dgon pa byams pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA3EFFBB9DA884E1A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa chos kyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT4F72A58D9BA813E1
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
+    bdr:P6105  a            :Person ;
+        skos:prefLabel      "byams pa chos kyi rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4F72A58D9BA813E1 ;
+        :personEvent        bdr:EV38EB131FF335BF3B , bdr:EV680EABE4A7DBCE25 , bdr:EVC43AD8B62377D1A6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM215E24E8239EA644 , bdr:NM40BB969912195A6C , bdr:NMA3EFFBB9DA884E1A ;
+        :personTeacherOf    bdr:P646 .
+}

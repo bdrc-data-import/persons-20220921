@@ -1,0 +1,70 @@
+@base          <bdg:P00KG09758> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG09758 {
+    bda:LG04708D64DA3549B8
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-12T14:59:48.999Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGA25D2D0637DF7699
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-18T11:57:40.487Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG09758  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG09758 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "fc/P00KG09758.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG09758 ;
+        adm:logEntry        bda:LG04708D64DA3549B8 , bda:LGA25D2D0637DF7699 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV452AC58725A119E8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G842 .
+    
+    bdr:EV98529895ED3FD945
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1978"^^xsd:gYear .
+    
+    bdr:NM61B2E1083B75CF8D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "den tsering wangchuk"@bo-x-ewts .
+    
+    bdr:NM9F09E76A757A72D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'dan tshe ring dbang phyug"@bo-x-ewts .
+    
+    bdr:NT3C398FBFF9184C5F
+        a                   :Note ;
+        :noteSource         bdr:MW00KG09757 ;
+        :noteText           "a brief biography of author is on french flap"@en .
+    
+    bdr:NT53F71EEC74D074E0
+        a                   :Note ;
+        :noteText           "modern tibetan scholar born in denkhok, sichuan prefecture"@en .
+    
+    bdr:P00KG09758  a       :Person ;
+        skos:prefLabel      "'dan tshe ring dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3C398FBFF9184C5F , bdr:NT53F71EEC74D074E0 ;
+        :personEvent        bdr:EV452AC58725A119E8 , bdr:EV98529895ED3FD945 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM61B2E1083B75CF8D , bdr:NM9F09E76A757A72D3 .
+}

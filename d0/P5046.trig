@@ -1,0 +1,65 @@
+@base          <bdg:P5046> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5046 {
+    bda:LGB23B3080E0533ABA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:04:05.166Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5046  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5046 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d0/P5046.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5046 ;
+        adm:logEntry        bda:LGB23B3080E0533ABA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV458456D4538F99C0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G478 .
+    
+    bdr:EV81D03BAE59456C10
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NMAC9438D1AA7C7BB8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMB938218BF53CFB50
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT191284ADE295E749
+        a                   :Note ;
+        :noteText           "Gso rig dkar chag: khong [dharma bhadra] gi dge rgan sku yon mi che yang tshul khrims gtsang ba..."@bo-x-ewts .
+    
+    bdr:NT2D8E49B3D8A9861D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5046  a            :Person ;
+        skos:prefLabel      "blo bzang rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT191284ADE295E749 , bdr:NT2D8E49B3D8A9861D ;
+        :personEvent        bdr:EV458456D4538F99C0 , bdr:EV81D03BAE59456C10 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMAC9438D1AA7C7BB8 , bdr:NMB938218BF53CFB50 ;
+        :personTeacherOf    bdr:P289 .
+}

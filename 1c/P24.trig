@@ -1,0 +1,71 @@
+@base          <bdg:P24> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P24 {
+    bda:P24  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P24 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1c/P24.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P24 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV609FA411B6B0D816
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G132 .
+    
+    bdr:EV9B01431DD03DF40A
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G539 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM5D983BC7F2BFAB14
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang skal ldan/"@bo-x-ewts .
+    
+    bdr:NM821835BFD006CAAC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mi nyag mkhan sprul blo bzang skal ldan/"@bo-x-ewts .
+    
+    bdr:NMD9D3BFCB928E0D8C
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs mi nyag mkhan sprul/"@bo-x-ewts .
+    
+    bdr:NT16CDEA67C1E06E75
+        a                   :Note ;
+        :noteText           "dge lugs teacher born in mi nyag\nin his youth he studied at mi nyag skyid legs dgon.\nwent to dbus and entered 'bras spungs for higher studies.\ngsung 'bum in two volumes."@en .
+    
+    bdr:NTA1CF2D4DBEB747CE
+        a                   :Note ;
+        :locationStatement  "p. 798" ;
+        :noteSource         bdr:MW19836 ;
+        :noteText           "bibliography"@en .
+    
+    bdr:NTE8C03AAC67E54A7B
+        a                   :Note ;
+        :locationStatement  "p. 940" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains brief biography\nno dates in source"@en .
+    
+    bdr:P24  a              :Person ;
+        skos:prefLabel      "blo bzang skal ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16CDEA67C1E06E75 , bdr:NTA1CF2D4DBEB747CE , bdr:NTE8C03AAC67E54A7B ;
+        :personEvent        bdr:EV609FA411B6B0D816 , bdr:EV9B01431DD03DF40A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5D983BC7F2BFAB14 , bdr:NM821835BFD006CAAC , bdr:NMD9D3BFCB928E0D8C ;
+        :personStudentOf    bdr:P25 , bdr:P26 , bdr:P27 .
+}

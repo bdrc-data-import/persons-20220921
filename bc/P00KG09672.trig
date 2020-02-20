@@ -1,0 +1,57 @@
+@base          <bdg:P00KG09672> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG09672 {
+    bda:LG0324A99B1E2C84C0
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-04-26T11:21:21.139Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG59F20131A0083B94
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-06-05T12:29:52.312Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG09672  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG09672 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "bc/P00KG09672.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG09672 ;
+        adm:logEntry        bda:LG0324A99B1E2C84C0 , bda:LG59F20131A0083B94 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB40601C6F752C868
+        a                   :PersonBirth ;
+        :onYear             "1943"^^xsd:gYear .
+    
+    bdr:EVF167D41B7EBB9446
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:NM924764813AE35DD1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog 'phel rgyas/"@bo-x-ewts .
+    
+    bdr:P00KG09672  a       :Person ;
+        skos:prefLabel      "dkon mchog 'phel rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVB40601C6F752C868 , bdr:EVF167D41B7EBB9446 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM924764813AE35DD1 ;
+        :personStudentOf    bdr:P220 .
+}

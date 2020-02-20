@@ -1,0 +1,101 @@
+@base          <bdg:P6334> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6334 {
+    bda:LG60155D6890C1DD5A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-27T16:24:28.299Z"^^xsd:dateTime ;
+        adm:logMessage      "changed title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LG720064B624D9924B
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-12-04T15:44:07.256Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG95BC9514F964C715
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-20T09:12:03.999Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF3AA7100DB0CB80E
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T11:37:24.874Z"^^xsd:dateTime ;
+        adm:logMessage      "added ordination name, title and teacher"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6334  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6334 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "ba/P6334.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6334 ;
+        adm:logEntry        bda:LG60155D6890C1DD5A , bda:LG720064B624D9924B , bda:LG95BC9514F964C715 , bda:LGF3AA7100DB0CB80E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV10E7149DC5DC4845
+        a                   :PersonBirth ;
+        :onYear             "1915"^^xsd:gYear .
+    
+    bdr:EV4C7D25AD90D20576
+        a                   :PersonDeath ;
+        :onYear             "1994"^^xsd:gYear .
+    
+    bdr:EVE87E5ECBFC72BAF2
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVF3457E2E2B9A62B4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:NM39351992AA3673B7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma bde chen mkha' klong yangs pa/"@bo-x-ewts .
+    
+    bdr:NM8094B9FC49E615B7
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang gdan rabs 08"@bo-x-ewts .
+    
+    bdr:NMB30FF7058779224D
+        a                   :PersonTitle ;
+        rdfs:label          "mgar klong gter sprul 'jam dpal chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NMBA944218DD4BD248
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgar klong pad+ma bde chen mkha' klong yangs pa/"@bo-x-ewts .
+    
+    bdr:NMCDFA8597B370038E
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "'jam dpal chos kyi grags pa/"@bo-x-ewts .
+    
+    bdr:NT9C8FA25F0777EFF9
+        a                   :Note ;
+        :locationStatement  "p. 223-243" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:P6334  a            :Person ;
+        skos:prefLabel      "pad+ma bde chen mkha' klong yangs pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9C8FA25F0777EFF9 ;
+        :personEvent        bdr:EV10E7149DC5DC4845 , bdr:EV4C7D25AD90D20576 , bdr:EVE87E5ECBFC72BAF2 , bdr:EVF3457E2E2B9A62B4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM39351992AA3673B7 , bdr:NM8094B9FC49E615B7 , bdr:NMB30FF7058779224D , bdr:NMBA944218DD4BD248 , bdr:NMCDFA8597B370038E ;
+        :personStudentOf    bdr:P6337 , bdr:P6489 ;
+        :personTeacherOf    bdr:P6301 , bdr:P6335 , bdr:P9827 .
+}

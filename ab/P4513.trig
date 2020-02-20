@@ -1,0 +1,64 @@
+@base          <bdg:P4513> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4513 {
+    bda:LGADDB9B751449D88A
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-16T09:31:27.738Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGDDCF06AC9D6B69BF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:46:47.54Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4513  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4513 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ab/P4513.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4513 ;
+        adm:logEntry        bda:LGADDB9B751449D88A , bda:LGDDCF06AC9D6B69BF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3569E38008E04189
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G210 ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM120EE90343BF68AF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nor 'phel/"@bo-x-ewts .
+    
+    bdr:NM2DE38D549FF2EA80
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon po nor 'phel/"@bo-x-ewts .
+    
+    bdr:NT518185C466B3459E
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Aristocracy"@en .
+    
+    bdr:P4513  a            :Person ;
+        skos:prefLabel      "nor 'phel/"@bo-x-ewts ;
+        :hasSon             bdr:P4512 ;
+        :isRoot             true ;
+        :note               bdr:NT518185C466B3459E ;
+        :personEvent        bdr:EV3569E38008E04189 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM120EE90343BF68AF , bdr:NM2DE38D549FF2EA80 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P8587> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8587 {
+    bda:LGCA9973F618933760
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-06T10:03:40.643Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, date of birth and death, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8587  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8587 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "d5/P8587.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8587 ;
+        adm:logEntry        bda:LGCA9973F618933760 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV656345F1E5589C52
+        a                   :PersonBirth ;
+        :onYear             "1826"^^xsd:gYear .
+    
+    bdr:EV6F16CCD70430917F
+        a                   :PersonDeath ;
+        :onYear             "1912"^^xsd:gYear .
+    
+    bdr:NM1EB95778E5CE8F0A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog bstan 'dzin blo gsal rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMA4D5A08920856175
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub brgyud dkon mchog bstan 'dzin blo gsal rab rgyas/"@bo-x-ewts .
+    
+    bdr:NMC03B35F719636F6D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "sgrub brgyud 05"@bo-x-ewts .
+    
+    bdr:NMD72B66BA2197577B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Drubgyu 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT5BE880BC3F9E191B
+        a                   :Note ;
+        :locationStatement  "p. 24-32" ;
+        :noteSource         bdr:MW00EGS1017048 ;
+        :noteText           "de nas sku phreng lnga pa ni/ nya mthso'i dpon po phul byung tshang du rab byung bcu bzhi pa'i me pho khyi yi lo spyi lo 1826 lor ngo mtshar ba'i ltas khyad par can dang bcas sku 'khrungs/ 'bri gung skyabs mgon bstan pa'i pad ma'i rgyal mtshan gyis sgrub brgyud chos kyi nyi ma'i yang srid du ngos 'dzin cing / gser khrir mnga' gsol gyi cho ga gzab rgyas phun sum tshogs pa'i ngang bstan pa'i bdag por bzhugs/ mtshan la dkon mchog bstan 'dzin blo gsal rab rgyas phyogs las rnam par rgyal ba'i sde zhes gsol/ xxx de ltar sku tshe hril po bstan 'gro'i don rlabs po che mdzad nas mthar dgung grangs bdun bcu bzhes pa rab byung bco lnga pa'i chu pho byi ba'i lo 1912 lor gzugs sku'i bkod pa chos dbyings su bsdu ba'i tshul bstan/"@en .
+    
+    bdr:NTF549F5A10AED1AA0
+        a                   :Note ;
+        :locationStatement  "p. 718" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incanation"@en .
+    
+    bdr:P8587  a            :Person ;
+        skos:prefLabel      "dkon mchog bstan 'dzin blo gsal rab rgyas/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8585 ;
+        :isRoot             true ;
+        :note               bdr:NT5BE880BC3F9E191B , bdr:NTF549F5A10AED1AA0 ;
+        :personEvent        bdr:EV656345F1E5589C52 , bdr:EV6F16CCD70430917F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1EB95778E5CE8F0A , bdr:NMA4D5A08920856175 , bdr:NMC03B35F719636F6D , bdr:NMD72B66BA2197577B .
+}

@@ -1,0 +1,95 @@
+@base          <bdg:P3772> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3772 {
+    bda:LG58C14A78D85CB60E
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T14:56:22.822Z"^^xsd:dateTime ;
+        adm:logMessage      "added death date and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3772  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3772 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "79/P3772.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3772 ;
+        adm:logEntry        bda:LG58C14A78D85CB60E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV18021B3D02187651
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1243 ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:EV9A936EF2082C4C2B
+        a                   :PersonDeath ;
+        :onYear             "1215"^^xsd:gYear .
+    
+    bdr:EVC2C22DA16BBF688D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G30 .
+    
+    bdr:EVC48B63769EEB27EE
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G30 ;
+        :onYear             "1214"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM11BA611992B8CD78
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NM20F8EBAB57EBF00B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NMD034ABB508DC91C6
+        a                   :PersonTitle ;
+        rdfs:label          "tshal gung thang khri rabs 5 sangs rgyas 'bum/"@bo-x-ewts .
+    
+    bdr:NT0FECAFB456923C62
+        a                   :Note ;
+        :locationStatement  "p. 2284" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1215. year of death"@en .
+    
+    bdr:NT680E0E3F98AEA9D6
+        a                   :Note ;
+        :locationStatement  "p. 2284" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1214. comes to the throne of tshal gung thang (sprul sku sangs rgyas 'bum pa tshal gung thang gi gdan sar phebs)"@en .
+    
+    bdr:NTA2488E2F99CF63F6
+        a                   :Note ;
+        :locationStatement  "p. 1045" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTC92A3BC70A4EBBE5
+        a                   :Note ;
+        :noteText           "Teacher (unrecorded): Lha Phyugs-mkhar-pa\n1214. Came to the throne of Tshal Gung-thang\nServed 8 years\nRestored the Lha-sa dikes and made peace between the Stag-lung-pa and 'Bri-gung-pa\n\nDeposed as khri by the Sgom-pa Ye-shes-ldan\nDisciples (unrecorded): Bla-ma Ba-lam-pa, Spyan-snga-ba Phyugs-pa'i Rtogs-ldan 'Dag-char-ba, Jo-btsun Sras-pa, Lha-rje Dge-'bum Lcam-sring, Grwa-pa Dge-slong, Slob-dpon Ngar-phug-pa 'Bri-ra-ba, Rtogs-ldan Byang-phyi-ba, Spos-kha-pa, Lha-spyil-pa Zhang-sgom"@en .
+    
+    bdr:P3772  a            :Person ;
+        skos:prefLabel      "sangs rgyas 'bum/"@bo-x-ewts ;
+        :hasFather          bdr:P3773 ;
+        :isRoot             true ;
+        :note               bdr:NT0FECAFB456923C62 , bdr:NT680E0E3F98AEA9D6 , bdr:NTA2488E2F99CF63F6 , bdr:NTC92A3BC70A4EBBE5 ;
+        :personEvent        bdr:EV18021B3D02187651 , bdr:EV9A936EF2082C4C2B , bdr:EVC2C22DA16BBF688D , bdr:EVC48B63769EEB27EE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11BA611992B8CD78 , bdr:NM20F8EBAB57EBF00B , bdr:NMD034ABB508DC91C6 ;
+        :personStudentOf    bdr:P1857 , bdr:P3774 .
+}

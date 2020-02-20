@@ -1,0 +1,89 @@
+@base          <bdg:P4075> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4075 {
+    bda:LGF0AA3E53B3D9B640
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T14:01:08.118Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4075  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4075 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "f0/P4075.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4075 ;
+        adm:logEntry        bda:LGF0AA3E53B3D9B640 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV58A19ACD8D409C0C
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD9441C9731C097D8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1819"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVEFDE62AD6DA1D9F7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM078E89178D30C42E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde yangs zhabs drung blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM2165137F30BC6906
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM2D975C3BE4B68B93
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 56 blo bzang nor bu/"@bo-x-ewts .
+    
+    bdr:NM7F9267614DB2E331
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 56"@bo-x-ewts .
+    
+    bdr:NT08528AB5914B10BF
+        a                   :Note ;
+        :noteText           "prominent dge lugs prelate from a mdo"@en .
+    
+    bdr:NT27E53978A28CCA97
+        a                   :Note ;
+        :locationStatement  "p. 187" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT9F3364CDD85F08F5
+        a                   :Note ;
+        :locationStatement  "p. 871" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "bio"@en .
+    
+    bdr:NTB7BF2B4379D669BD
+        a                   :Note ;
+        :noteText           "1819. Came to throne of Bya-khyung."@en .
+    
+    bdr:P4075  a            :Person ;
+        skos:prefLabel      "blo bzang nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08528AB5914B10BF , bdr:NT27E53978A28CCA97 , bdr:NT9F3364CDD85F08F5 , bdr:NTB7BF2B4379D669BD ;
+        :personEvent        bdr:EV58A19ACD8D409C0C , bdr:EVD9441C9731C097D8 , bdr:EVEFDE62AD6DA1D9F7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM078E89178D30C42E , bdr:NM2165137F30BC6906 , bdr:NM2D975C3BE4B68B93 , bdr:NM7F9267614DB2E331 .
+}

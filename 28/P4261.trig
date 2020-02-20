@@ -1,0 +1,88 @@
+@base          <bdg:P4261> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4261 {
+    bda:LG090F4840304E7FF8
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T17:42:55.899Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGE6978DB59F0A4FBB
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-02T13:12:49.584Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGFFB6FFA877DB3AE6
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-10-02T13:03:23.063Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat & note"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P4261  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4261 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "28/P4261.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4261 ;
+        adm:logEntry        bda:LG090F4840304E7FF8 , bda:LGE6978DB59F0A4FBB , bda:LGFFB6FFA877DB3AE6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV104F3B142B52298E
+        a                   :PersonBirth ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:EV347BC657CD3C0F01
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2262 .
+    
+    bdr:NM5E2B790EADEA9B50
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dran pa nam mkha'"@bo-x-ewts .
+    
+    bdr:NMB48AF521213B16EA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo tsA ba dran pa nam mkha'"@bo-x-ewts .
+    
+    bdr:NME77258FC7820BFE8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gshen chen dran pa nam mkha'"@bo-x-ewts .
+    
+    bdr:NT1A5D054D24D74485
+        a                   :Note ;
+        :locationStatement  "p. 1677" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT5132283A4A4F386C
+        a                   :Note ;
+        :noteText           "adept and translator of texts revered by both buddhist and bon traditions;\nthe bon po regard him as the brother of their adept tshe dbang rig 'dzin"@en .
+    
+    bdr:NTAB080C4BF48B099F
+        a                   :Note ;
+        :locationStatement  "p. 267" ;
+        :noteSource         bdr:MW25095 ;
+        :noteText           "གཤེན་ཆེན་དྲན་པ་ནམ་མཁའ་ནི་མི་ལོ་སུམ་སྟོང་ཙམ་གྱི་སྔ་རོལ་དུ་བྱོན་ཞིང་། གུ་རུ་གྱམ་དགོན་གྱི་བསྟན་བདག་ཆེན་པོ་ཡིན་པ་སོགས་གསལ་ཏེ། དེ་དང་ལོ་ཙཱ་བ་དྲན་པ་ནམ་མཁའ་གཉིས་མི་གཅིག་ཡིན་པར་དྭོགས་པ་མུ་མཐུད་དཔྱད་རྒྱུའི་བརྗེད་ཐོར།"@bo .
+    
+    bdr:P4261  a            :Person ;
+        skos:prefLabel      "dran pa nam mkha'"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1A5D054D24D74485 , bdr:NT5132283A4A4F386C , bdr:NTAB080C4BF48B099F ;
+        :personEvent        bdr:EV104F3B142B52298E , bdr:EV347BC657CD3C0F01 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5E2B790EADEA9B50 , bdr:NMB48AF521213B16EA , bdr:NME77258FC7820BFE8 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drenpa-Namkha/6681"^^xsd:anyURI .
+}

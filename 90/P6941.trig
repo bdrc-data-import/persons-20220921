@@ -1,0 +1,52 @@
+@base          <bdg:P6941> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6941 {
+    bda:P6941  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6941 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "90/P6941.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6941 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1749167ED69AF5D0
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2967 ;
+        :onYear             "1931"^^xsd:gYear .
+    
+    bdr:NMA4A2F0D864E58A46
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skal ldan 05 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEA809326A0F8071F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT652C43ADE1A21190
+        a                   :Note ;
+        :locationStatement  "p. 178" ;
+        :noteSource         bdr:MW20197 ;
+        :noteText           "born in 1931 in khri ka'i ske ba klu bug tsho ba\nimprisoned in 1958 for 20 years\ndgon bdag of sa tho dgon pa, sgo me tang rgya dgon pa, and dpon tshang gong ma'i dgon pa, all monasteries of the zhol ma"@en .
+    
+    bdr:P6941  a            :Person ;
+        skos:prefLabel      "'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT652C43ADE1A21190 ;
+        :personEvent        bdr:EV1749167ED69AF5D0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA4A2F0D864E58A46 , bdr:NMEA809326A0F8071F ;
+        :personTeacherOf    bdr:P1KG4862 .
+}

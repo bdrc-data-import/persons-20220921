@@ -1,0 +1,71 @@
+@base          <bdg:P3662> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3662 {
+    bda:LG7B9F516A0EC4C065
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-07-23T10:42:50.109Z"^^xsd:dateTime ;
+        adm:logMessage      "turned into extended Wylie"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGDD34C6417E9F4C79
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-06-21T17:35:30.165Z"^^xsd:dateTime ;
+        adm:logMessage      "normalized language settings"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P3662  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3662 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "1d/P3662.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3662 ;
+        adm:logEntry        bda:LG7B9F516A0EC4C065 , bda:LGDD34C6417E9F4C79 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB0C5240B803451B8
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVD2FF3781D091E602
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G225 .
+    
+    bdr:NM06B2B14CB05E00EE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun dpal/"@bo-x-ewts .
+    
+    bdr:NMA921D594371AA10F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sang+g+ha shrI/"@bo-x-ewts .
+    
+    bdr:NMCF9C9B84F9364E76
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "snar thang lo tsA ba sang+g+ha shrI/"@bo-x-ewts .
+    
+    bdr:NT2710E89B01810483
+        a                   :Note ;
+        :noteText           "An early translator of the Narthang tradition"@en .
+    
+    bdr:P3662  a            :Person ;
+        skos:prefLabel      "dge 'dun dpal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2710E89B01810483 ;
+        :personEvent        bdr:EVB0C5240B803451B8 , bdr:EVD2FF3781D091E602 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM06B2B14CB05E00EE , bdr:NMA921D594371AA10F , bdr:NMCF9C9B84F9364E76 ;
+        :personTeacherOf    bdr:P3158 , bdr:P318 .
+}

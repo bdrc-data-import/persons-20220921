@@ -1,0 +1,51 @@
+@base          <bdg:P3270> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3270 {
+    bda:P3270  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3270 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "1b/P3270.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3270 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV131B093D3BCEFD1B
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM28AC72C3ADAFCFC8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCEA7219C944A964A
+        a                   :PersonPersonalName ;
+        rdfs:label          "chen po bsod nams rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTEA7CB5B2B2ABF76A
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Zhwa-lu-pa"@en .
+    
+    bdr:P3270  a            :Person ;
+        skos:prefLabel      "bsod nams rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEA7CB5B2B2ABF76A ;
+        :personEvent        bdr:EV131B093D3BCEFD1B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM28AC72C3ADAFCFC8 , bdr:NMCEA7219C944A964A ;
+        :personStudentOf    bdr:P784 ;
+        :personTeacherOf    bdr:P3107 .
+}

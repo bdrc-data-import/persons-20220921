@@ -1,0 +1,63 @@
+@base          <bdg:P2011> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2011 {
+    bda:LG72CA82E328AEB6DF
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T16:00:23.534Z"^^xsd:dateTime ;
+        adm:logMessage      "edited title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2011  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2011 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "4f/P2011.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2011 ;
+        adm:logEntry        bda:LG72CA82E328AEB6DF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE2BF8E00CE1915C8
+        a                   :PersonBirth ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM383CF9A2E137B4BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma bzang po/"@bo-x-ewts .
+    
+    bdr:NM49CD8CF86200C0DE
+        a                   :PersonTitle ;
+        rdfs:label          "dka' bcu pa pad+ma bzang po/"@bo-x-ewts .
+    
+    bdr:NT0817B03BFB7935E5
+        a                   :Note ;
+        :locationStatement  "p. 1330" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT789AD581AFFD50D0
+        a                   :Note ;
+        :noteText           "Works: Rgyud 'grel gyi Tiik chen brtsams."@en .
+    
+    bdr:P2011  a            :Person ;
+        skos:prefLabel      "pad+ma bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0817B03BFB7935E5 , bdr:NT789AD581AFFD50D0 ;
+        :personEvent        bdr:EVE2BF8E00CE1915C8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM383CF9A2E137B4BE , bdr:NM49CD8CF86200C0DE ;
+        :personStudentOf    bdr:P2460 ;
+        :personTeacherOf    bdr:P0RK1671 .
+}

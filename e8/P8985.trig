@@ -1,0 +1,72 @@
+@base          <bdg:P8985> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8985 {
+    bda:LG245E6463971B0E56
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-18T14:14:28.23Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGF0B15FC445A618D4
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-07T10:32:26.652Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn due to dup"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P8985  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8985 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e8/P8985.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8985 ;
+        adm:logEntry        bda:LG245E6463971B0E56 , bda:LGF0B15FC445A618D4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV3B0B29F1E4643C32
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM11606F030436A7DD
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 05"@bo-x-ewts .
+    
+    bdr:NM5583830E7375BE31
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdo rams pa 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM78D5AC43451D419A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMB9DDCFD2B3B05927
+        a                   :PersonTitle ;
+        rdfs:label          "rnga ba sgo mang khri rabs 05 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT9CCCC6D5988AFFD1
+        a                   :Note ;
+        :locationStatement  "p. 89" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "no biography available to the author of this work"@en .
+    
+    bdr:P8985  a            :Person ;
+        skos:prefLabel      "'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9CCCC6D5988AFFD1 ;
+        :personEvent        bdr:EV3B0B29F1E4643C32 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM11606F030436A7DD , bdr:NM5583830E7375BE31 , bdr:NM78D5AC43451D419A , bdr:NMB9DDCFD2B3B05927 .
+}

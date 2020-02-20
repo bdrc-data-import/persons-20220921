@@ -1,0 +1,54 @@
+@base          <bdg:P8139> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8139 {
+    bda:P8139  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8139 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "ef/P8139.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8139 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCFA79E65B9E3AA8C
+        a                   :PersonBirth ;
+        :onYear             "1715"^^xsd:gYear .
+    
+    bdr:EVD0FD54FD21BED30D
+        a                   :PersonDeath ;
+        :onYear             "1788"^^xsd:gYear .
+    
+    bdr:NMCA2A7C4AD3729500
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sngags 'chang dpal ldan mgon po/"@bo-x-ewts .
+    
+    bdr:NMDD29E9B6CB2CA924
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dpal ldan mgon po/"@bo-x-ewts .
+    
+    bdr:NT7B9A347555768000
+        a                   :Note ;
+        :locationStatement  "v. 2, pp. 205-208" ;
+        :noteSource         bdr:MW25268 ;
+        :noteText           "biography\ndates: 1715-1788"@en .
+    
+    bdr:P8139  a            :Person ;
+        skos:prefLabel      "dpal ldan mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7B9A347555768000 ;
+        :personEvent        bdr:EVCFA79E65B9E3AA8C , bdr:EVD0FD54FD21BED30D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMCA2A7C4AD3729500 , bdr:NMDD29E9B6CB2CA924 .
+}

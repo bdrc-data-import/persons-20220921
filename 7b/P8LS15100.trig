@@ -1,0 +1,60 @@
+@base          <bdg:P8LS15100> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15100 {
+    bda:LG049C99BCFE677391
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-28T14:14:34.847Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary name and other name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB0A2231BE7B4F600
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-28T09:26:26.744Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15100  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15100 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "7b/P8LS15100.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15100 ;
+        adm:logEntry        bda:LG049C99BCFE677391 , bda:LGB0A2231BE7B4F600 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM6827FDCB492C4475
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyor mo lung gi mkhan po sngon dga' ba rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:NM7DE4532D8CD7F870
+        a                   :PersonOtherName ;
+        rdfs:label          "mngon pa pa rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:NM84003D2617D5A62D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rin chen 'od zer/"@bo-x-ewts .
+    
+    bdr:NT188D370A3D68C17E
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 30a3" ;
+        :noteSource         bdr:MW29706 .
+    
+    bdr:P8LS15100  a        :Person ;
+        skos:prefLabel      "rin chen 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT188D370A3D68C17E ;
+        :personName         bdr:NM6827FDCB492C4475 , bdr:NM7DE4532D8CD7F870 , bdr:NM84003D2617D5A62D .
+}

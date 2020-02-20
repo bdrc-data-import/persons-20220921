@@ -1,0 +1,94 @@
+@base          <bdg:P9427> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9427 {
+    bda:LG0B7304B46E6EBB93
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-28T14:08:33.135Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9427  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9427 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "be/P9427.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9427 ;
+        adm:logEntry        bda:LG0B7304B46E6EBB93 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BE6D2BE61AA213C
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1787"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV55BC4D0006E260C3
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EV84353EE56B74B51C
+        a                   :PersonDeath ;
+        :onYear             "1791"^^xsd:gYear .
+    
+    bdr:EVD17100153D126176
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EVEF167739A0F0D297
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G77 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM34A330D14E131D68
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM6D6D8AC073F593FE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 18"@bo-x-ewts .
+    
+    bdr:NM81E5B94F729497AA
+        a                   :PersonTitle ;
+        rdfs:label          "dkar rtse gdong ba blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM999962E7A2C2F318
+        a                   :PersonTitle ;
+        rdfs:label          "gar rtse gdong ba blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NME0F9BADF985306C5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "byang rtse mkhan po blo bzang 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT7670549EC5A74D7C
+        a                   :Note ;
+        :locationStatement  "pp. 318-319" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "gar rtse gdong ba blo bzang 'phrin las ...\nnyid ni dbus kyi dge bshes red/ klong rdol bla ma dang/ yongs 'dzin ye shes rgyal mtshan/ kun mkhyen bar ma sogs la snga phyir chos bka' mang du gsan/ lha rams pa thon/ byang rtse mkhan po mdzad/ rgyal ba 'jam dpal rgya mtsho dga' ldan du phebs dus bgro gleng ngo mtshar can phul bas dgyes gzigs che ba byung/ bkra shis 'khyil du phebs bzhed kyis byon pa shar sprul ba'i sku dbus phebs dang mjal/ gsung nan che bas rong bor byon/ me lug la khrir bzhugs/ lcags phag (1791) lor gshegs/"@bo-x-ewts .
+    
+    bdr:NT9B686C220855EA4F
+        a                   :Note ;
+        :locationStatement  "p. 224-225" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P9427  a            :Person ;
+        skos:prefLabel      "blo bzang 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7670549EC5A74D7C , bdr:NT9B686C220855EA4F ;
+        :personEvent        bdr:EV1BE6D2BE61AA213C , bdr:EV55BC4D0006E260C3 , bdr:EV84353EE56B74B51C , bdr:EVD17100153D126176 , bdr:EVEF167739A0F0D297 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM34A330D14E131D68 , bdr:NM6D6D8AC073F593FE , bdr:NM81E5B94F729497AA , bdr:NM999962E7A2C2F318 , bdr:NME0F9BADF985306C5 ;
+        :personStudentOf    bdr:P105 , bdr:P169 , bdr:P22 .
+}

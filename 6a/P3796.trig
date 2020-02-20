@@ -1,0 +1,89 @@
+@base          <bdg:P3796> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3796 {
+    bda:LGC56D24F265F177AA
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-04T09:00:39Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P3796  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3796 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "6a/P3796.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3796 ;
+        adm:logEntry        bda:LGC56D24F265F177AA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV360DBEAF0B6F1BAA
+        a                   :PersonDeath ;
+        :onYear             "1913"^^xsd:gYear .
+    
+    bdr:EV56914FDDB009C6AD
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1246 ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EVB164A13A25FDAA43
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G431 .
+    
+    bdr:NM03A364E75B7C3C0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang lung rtogs dpal ldan 'jigs med thub bstan/"@bo-x-ewts .
+    
+    bdr:NM1AC6DE7DD8CD6C11
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "nags gtsang sprul sku 04"@bo-x-ewts .
+    
+    bdr:NM741BD0FF15A8F92E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ngaktsang Tulku 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM8F0FB17B0481116E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nags gtsang 04 ngag dbang lung rtogs dpal ldan 'jigs med thub bstan/"@bo-x-ewts .
+    
+    bdr:NT21C6C93A23176A62
+        a                   :Note ;
+        :noteText           "1904. Taken to Nag-gtsang Dben-gnas\n1907. Began studies at Dkar-mdzes Dgon"@en .
+    
+    bdr:NT3B9098EFAED2A3C9
+        a                   :Note ;
+        :locationStatement  "p. 7" ;
+        :noteSource         bdr:MW19833 ;
+        :noteText           "bio"@en .
+    
+    bdr:NT44CC9F3404D168AE
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 94" ;
+        :noteSource         bdr:MW19997 .
+    
+    bdr:NT8A3E72A5A0DF8D0C
+        a                   :Note ;
+        :noteText           "young dge lugs incarnation from nag gtsang dben gnas and dkar mdzes dgon"@en .
+    
+    bdr:P3796  a            :Person ;
+        skos:prefLabel      "ngag dbang lung rtogs dpal ldan 'jigs med thub bstan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P3795 ;
+        :isRoot             true ;
+        :note               bdr:NT21C6C93A23176A62 , bdr:NT3B9098EFAED2A3C9 , bdr:NT44CC9F3404D168AE , bdr:NT8A3E72A5A0DF8D0C ;
+        :personEvent        bdr:EV360DBEAF0B6F1BAA , bdr:EV56914FDDB009C6AD , bdr:EVB164A13A25FDAA43 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM03A364E75B7C3C0E , bdr:NM1AC6DE7DD8CD6C11 , bdr:NM741BD0FF15A8F92E , bdr:NM8F0FB17B0481116E ;
+        :personStudentOf    bdr:P3797 .
+}

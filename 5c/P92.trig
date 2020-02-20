@@ -1,0 +1,47 @@
+@base          <bdg:P92> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P92 {
+    bda:P92  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P92 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "5c/P92.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P92 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5E977BB9442BFF56
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM30F0C32B58543BA2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya 'bum/"@bo-x-ewts .
+    
+    bdr:NT0A9F4C2B8B62BD1C
+        a                   :Note ;
+        :locationStatement  "p. 225" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P92  a              :Person ;
+        skos:prefLabel      "shAkya 'bum/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0A9F4C2B8B62BD1C ;
+        :personEvent        bdr:EV5E977BB9442BFF56 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM30F0C32B58543BA2 ;
+        :personTeacherOf    bdr:P88 .
+}

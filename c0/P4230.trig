@@ -1,0 +1,100 @@
+@base          <bdg:P4230> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4230 {
+    bda:LG257070F05E4AA867
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T15:20:31.12Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG407599D2252A1772
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-30T11:58:21.574Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG77EE2869CE03A026
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-09-09T14:27:12.203Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGC01C272CC36D7401
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P4230  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4230 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "c0/P4230.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4230 ;
+        adm:logEntry        bda:LG257070F05E4AA867 , bda:LG407599D2252A1772 , bda:LG77EE2869CE03A026 , bda:LGC01C272CC36D7401 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV088A6DA9440D8E1D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV6F490F8C0F2CD6A1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G224 .
+    
+    bdr:EV986D10C6DD84911F
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EV9D88817AA733EA01
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R8LS13154 .
+    
+    bdr:NM478118EA55E841CE
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rdzong dkar chung ba 01"@bo-x-ewts .
+    
+    bdr:NM74E0BB9A3D14EA5D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NMB6D020B2779BE51C
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Dzongkar Chungwa 01"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMEED71A7E2B5568DC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzong dkar chung ba tshul khrims bkra shis/"@bo-x-ewts .
+    
+    bdr:NT0340ADA65F3F7996
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT1BF15E0728FF37FC
+        a                   :Note ;
+        :locationStatement  "p. 448-449" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P4230  a            :Person ;
+        skos:prefLabel      "tshul khrims bkra shis/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0340ADA65F3F7996 , bdr:NT1BF15E0728FF37FC ;
+        :personEvent        bdr:EV088A6DA9440D8E1D , bdr:EV6F490F8C0F2CD6A1 , bdr:EV986D10C6DD84911F , bdr:EV9D88817AA733EA01 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM478118EA55E841CE , bdr:NM74E0BB9A3D14EA5D , bdr:NMB6D020B2779BE51C , bdr:NMEED71A7E2B5568DC ;
+        :personStudentOf    bdr:P209 ;
+        :personTeacherOf    bdr:P409 , bdr:P422 .
+}

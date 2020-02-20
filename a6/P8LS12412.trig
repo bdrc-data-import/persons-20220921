@@ -1,0 +1,63 @@
+@base          <bdg:P8LS12412> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12412 {
+    bda:LGFF977FA4B281E574
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T15:19:40.015Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12412  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12412 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "a6/P8LS12412.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12412 ;
+        adm:logEntry        bda:LGFF977FA4B281E574 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B13C773F8A6388D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV7622150082C9C6D0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G155 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM5DC47D6BB501D800
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lA ba thub bstan phun tshogs/"@bo-x-ewts .
+    
+    bdr:NM8C7FB04293BE301F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ser byes mkhan rabs 51"@bo-x-ewts .
+    
+    bdr:NMBF1383AF26DFBB2E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thub bstan phun tshogs/"@bo-x-ewts .
+    
+    bdr:NT31ACCC1406A0C4FF
+        a                   :Note ;
+        :noteSource         bdr:MW1KG2757 .
+    
+    bdr:P8LS12412  a        :Person ;
+        skos:prefLabel      "thub bstan phun tshogs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT31ACCC1406A0C4FF ;
+        :personEvent        bdr:EV3B13C773F8A6388D , bdr:EV7622150082C9C6D0 ;
+        :personName         bdr:NM5DC47D6BB501D800 , bdr:NM8C7FB04293BE301F , bdr:NMBF1383AF26DFBB2E .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P4223> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4223 {
+    bda:P4223  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4223 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "29/P4223.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4223 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB75736896D4D91E9
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G112 .
+    
+    bdr:EVCE89330F2BD59C21
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM6F47C1FD248BCE78
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM8BE88F82E59B77BE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "klu 'bum lha rams pa/"@bo-x-ewts .
+    
+    bdr:NMF82A3F8338B0150B
+        a                   :PersonPersonalName ;
+        rdfs:label          "klu 'bum lha rams pa mkhyen rab rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT21B6330CF58132F3
+        a                   :Note ;
+        :noteText           "Appointed yongs 'dzin of the 5th Rong-po Grub-chen"@en .
+    
+    bdr:NT5EA27F0275EBCAD1
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4223  a            :Person ;
+        skos:prefLabel      "mkhyen rab rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT21B6330CF58132F3 , bdr:NT5EA27F0275EBCAD1 ;
+        :personEvent        bdr:EVB75736896D4D91E9 , bdr:EVCE89330F2BD59C21 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6F47C1FD248BCE78 , bdr:NM8BE88F82E59B77BE , bdr:NMF82A3F8338B0150B ;
+        :personTeacherOf    bdr:P4219 .
+}

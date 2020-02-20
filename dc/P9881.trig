@@ -1,0 +1,74 @@
+@base          <bdg:P9881> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9881 {
+    bda:LGACED2D2EE7D2BCED
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T14:52:59.184Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9881  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9881 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "dc/P9881.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9881 ;
+        adm:logEntry        bda:LGACED2D2EE7D2BCED ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0B6A2429E70411CB
+        a                   :PersonDeath ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:EVC72CFAAE0F6AD83B
+        a                   :PersonBirth ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EVFC8B747E760CC38D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4652 .
+    
+    bdr:NM12CA2CB0E20C0EF8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dpon bla 04"@bo-x-ewts .
+    
+    bdr:NM2BD08C381FB01A70
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon bla 04 blo bzang 'jigs med bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NM42B4340D2ED40557
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ponla 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM4997B2617F35FC81
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'jigs med bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NTAB175A1BF08863C4
+        a                   :Note ;
+        :locationStatement  "pp. 263-274" ;
+        :noteSource         bdr:MW29636 ;
+        :noteText           "a ma 'das sprul sku: his predecessor died in 1941; he was born in 1940"@en .
+    
+    bdr:P9881  a            :Person ;
+        skos:prefLabel      "blo bzang 'jigs med bstan pa'i nyi ma/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9880 ;
+        :isRoot             true ;
+        :note               bdr:NTAB175A1BF08863C4 ;
+        :personEvent        bdr:EV0B6A2429E70411CB , bdr:EVC72CFAAE0F6AD83B , bdr:EVFC8B747E760CC38D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM12CA2CB0E20C0EF8 , bdr:NM2BD08C381FB01A70 , bdr:NM42B4340D2ED40557 , bdr:NM4997B2617F35FC81 .
+}

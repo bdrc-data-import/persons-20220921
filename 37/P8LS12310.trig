@@ -1,0 +1,86 @@
+@base          <bdg:P8LS12310> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12310 {
+    bda:LG0070CE638AB45C71
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T12:13:34.586Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG7C7F017E79E39998
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-07T10:04:19.438Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12310  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12310 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "37/P8LS12310.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12310 ;
+        adm:logEntry        bda:LG0070CE638AB45C71 , bda:LG7C7F017E79E39998 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6D49DF3C2328886B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12302 .
+    
+    bdr:EV96E97A2A3DBBFD26
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:EVC86A26FB08F74EDC
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12302 ;
+        :onYear             "1807"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE40B757FEEA8E195
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM4B6D1E7AB193527C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 10"@bo-x-ewts .
+    
+    bdr:NMAE7749581782CE7C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun blo bzang /"@bo-x-ewts .
+    
+    bdr:NME117C4BF1B8AFB11
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po rgyud pa khri 19"@bo-x-ewts .
+    
+    bdr:NT0FA5304A9EBE5EBF
+        a                   :Note ;
+        :locationStatement  "p. 380" ;
+        :noteSource         bdr:MW27315 ;
+        :noteText           "born in g.yon ru rdzi dkar and received ordination from mkhan chen don yod rgya mtsho"@en .
+    
+    bdr:NT1CD6FB4565EDBFC2
+        a                   :Note ;
+        :locationStatement  "p. 396" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12310  a        :Person ;
+        skos:prefLabel      "dge 'dun blo bzang /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0FA5304A9EBE5EBF , bdr:NT1CD6FB4565EDBFC2 ;
+        :personEvent        bdr:EV6D49DF3C2328886B , bdr:EV96E97A2A3DBBFD26 , bdr:EVC86A26FB08F74EDC , bdr:EVE40B757FEEA8E195 ;
+        :personName         bdr:NM4B6D1E7AB193527C , bdr:NMAE7749581782CE7C , bdr:NME117C4BF1B8AFB11 .
+}

@@ -1,0 +1,64 @@
+@base          <bdg:P8LS12252> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12252 {
+    bda:LG4F5484351FDF3274
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-22T14:45:05.442Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12252  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12252 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "c0/P8LS12252.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12252 ;
+        adm:logEntry        bda:LG4F5484351FDF3274 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2E01473E19C5A89D
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV61D23B8805B317E6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM50BBF9B874EF71C0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gzhi ma nang dge bshes thabs mkhas bzang po/"@bo-x-ewts .
+    
+    bdr:NM6E844C4851785560
+        a                   :PersonPrimaryName ;
+        rdfs:label          "thabs mkhas bzang po/"@bo-x-ewts .
+    
+    bdr:NME0E2B1559FC65B68
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 96"@bo-x-ewts .
+    
+    bdr:NT8A95BD38A19D1E47
+        a                   :Note ;
+        :locationStatement  "p. 205" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:P8LS12252  a        :Person ;
+        skos:prefLabel      "thabs mkhas bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT8A95BD38A19D1E47 ;
+        :personEvent        bdr:EV2E01473E19C5A89D , bdr:EV61D23B8805B317E6 ;
+        :personName         bdr:NM50BBF9B874EF71C0 , bdr:NM6E844C4851785560 , bdr:NME0E2B1559FC65B68 .
+}

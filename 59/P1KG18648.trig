@@ -1,0 +1,54 @@
+@base          <bdg:P1KG18648> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG18648 {
+    bda:LGDFF79F7D61E818BB
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-10-27T15:30:39.995Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG18648  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG18648 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "59/P1KG18648.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG18648 ;
+        adm:logEntry        bda:LGDFF79F7D61E818BB ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCCE80B7B39B247A6
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM13C91D23B71AB9C5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "li'u yus ching /"@bo-x-ewts .
+    
+    bdr:NM37D1368CD2D7076C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "刘玉琴"@zh-hans .
+    
+    bdr:NMB8227D989269FFFA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "liu yu qin"@zh-latn-pinyin-x-ndia .
+    
+    bdr:P1KG18648  a        :Person ;
+        skos:prefLabel      "li'u yus ching /"@bo-x-ewts , "刘玉琴"@zh-hans ;
+        :isRoot             true ;
+        :personEvent        bdr:EVCCE80B7B39B247A6 ;
+        :personName         bdr:NM13C91D23B71AB9C5 , bdr:NM37D1368CD2D7076C , bdr:NMB8227D989269FFFA .
+}

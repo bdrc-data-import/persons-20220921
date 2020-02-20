@@ -1,0 +1,88 @@
+@base          <bdg:P769> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P769 {
+    bda:LGF4B84A724EE25FE3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T16:23:21.084Z"^^xsd:dateTime ;
+        adm:logMessage      "added name, title, seat, event and note"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P769  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P769 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "68/P769.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P769 ;
+        adm:logEntry        bda:LGF4B84A724EE25FE3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV37B71FF64A7E9518
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV49CFD062D107306E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV7830041F7C432076
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1986"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVB0F679F26F5ED5F1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1971"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM260686B8990B5038
+        a                   :PersonPrimaryName ;
+        rdfs:label          "nyi zer sgang sprul sku 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NM4FD99569AFDCE6C9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NM5ACEBE21BCDA770E
+        a                   :PersonOtherName ;
+        rdfs:label          "yon tan 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM5EB87D89456A6957
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 67 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NMD98EEBF8A0834391
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 67"@bo-x-ewts .
+    
+    bdr:NT7EC288AB2E88F0F2
+        a                   :Note ;
+        :noteText           "rje mkhan po of 'bhutan\na number of years on the abbatial throne; wrote very little"@en .
+    
+    bdr:NTED06EA91BA255E95
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P769  a             :Person ;
+        skos:prefLabel      "'phrin las lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7EC288AB2E88F0F2 , bdr:NTED06EA91BA255E95 ;
+        :personEvent        bdr:EV37B71FF64A7E9518 , bdr:EV49CFD062D107306E , bdr:EV7830041F7C432076 , bdr:EVB0F679F26F5ED5F1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM260686B8990B5038 , bdr:NM4FD99569AFDCE6C9 , bdr:NM5ACEBE21BCDA770E , bdr:NM5EB87D89456A6957 , bdr:NMD98EEBF8A0834391 .
+}

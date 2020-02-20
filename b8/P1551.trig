@@ -1,0 +1,76 @@
+@base          <bdg:P1551> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1551 {
+    bda:LG824E9213B1249310
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-06T15:21:03.23Z"^^xsd:dateTime ;
+        adm:logMessage      "edited title and added abbot number"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P1551  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1551 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "b8/P1551.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1551 ;
+        adm:logEntry        bda:LG824E9213B1249310 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV302B9043A810F1B8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EV65F0814B0AA54E50
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EVB1724D27360397A7
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM239666E10E2449C9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "chu bzang byams pa lhun grub/"@bo-x-ewts .
+    
+    bdr:NM73E4F88C46D3EC4D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa lhun grub/"@bo-x-ewts .
+    
+    bdr:NME9C04B9E86BCF116
+        a                   :PersonTitle ;
+        rdfs:label          "'bras spungs sgo mang grwa tshang gi mkhan thog 18"@bo-x-ewts .
+    
+    bdr:NT50AB9C1945F6EFE9
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT7895681FAAB00DD4
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 39" ;
+        :noteSource         bdr:MW28810 .
+    
+    bdr:P1551  a            :Person ;
+        skos:prefLabel      "byams pa lhun grub/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P0RK656 ;
+        :isRoot             true ;
+        :note               bdr:NT50AB9C1945F6EFE9 , bdr:NT7895681FAAB00DD4 ;
+        :personEvent        bdr:EV302B9043A810F1B8 , bdr:EV65F0814B0AA54E50 , bdr:EVB1724D27360397A7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM239666E10E2449C9 , bdr:NM73E4F88C46D3EC4D , bdr:NME9C04B9E86BCF116 ;
+        :personTeacherOf    bdr:P1001 , bdr:P1182 .
+}

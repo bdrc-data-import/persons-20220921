@@ -1,0 +1,87 @@
+@base          <bdg:P6510> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6510 {
+    bda:LG37488A1EF2ED3DFB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-14T15:08:59.08Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG622B7B82F166C96F
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:10:01.172Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6510  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6510 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "47/P6510.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6510 ;
+        adm:logEntry        bda:LG37488A1EF2ED3DFB , bda:LG622B7B82F166C96F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV39B810E50F5CE426
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G67 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC1D9C02E484E8479
+        a                   :PersonBirth ;
+        :onYear             "1300"^^xsd:gYear .
+    
+    bdr:EVC8E76D1DD6D7C889
+        a                   :PersonDeath ;
+        :onYear             "1361"^^xsd:gYear .
+    
+    bdr:EVD27E9D2EC1CBC9A4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G67 .
+    
+    bdr:NM07751AABD82549F4
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "stag lung khri 07"@bo-x-ewts .
+    
+    bdr:NM541E098A80A7F720
+        a                   :PersonOtherName ;
+        rdfs:label          "rin chen 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NMB91982B263496C8A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rat+na ka ra/"@bo-x-ewts .
+    
+    bdr:NT5F67B9D90CF1221C
+        a                   :Note ;
+        :locationStatement  "p. 344-354" ;
+        :noteSource         bdr:MW17276 .
+    
+    bdr:NT79306BE133BA1CE6
+        a                   :Note ;
+        :locationStatement  "p. 197" ;
+        :noteSource         bdr:MW23664 ;
+        :noteText           "styled stag lung khri rabs 8 ratna ka ra\nb. 1300; d. 1361; 34 years on seat\nb. g.yang shod bong ra steng."@en .
+    
+    bdr:P6510  a            :Person ;
+        skos:prefLabel      "rat+na ka ra/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5F67B9D90CF1221C , bdr:NT79306BE133BA1CE6 ;
+        :personEvent        bdr:EV39B810E50F5CE426 , bdr:EVC1D9C02E484E8479 , bdr:EVC8E76D1DD6D7C889 , bdr:EVD27E9D2EC1CBC9A4 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM07751AABD82549F4 , bdr:NM541E098A80A7F720 , bdr:NMB91982B263496C8A ;
+        :personStudentOf    bdr:P0RK1054 , bdr:P0RK1060 ;
+        :personTeacherOf    bdr:P0RK1056 , bdr:P0RK1061 .
+}

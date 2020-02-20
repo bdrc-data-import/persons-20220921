@@ -1,0 +1,100 @@
+@base          <bdg:P340> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P340 {
+    bda:LG1D41F671C233C790
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-04T11:16:37.027Z"^^xsd:dateTime ;
+        adm:logMessage      "changed student dup P# to P340"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LGE759FF8C2EE93D55
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-17T15:25:10.332Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P340  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P340 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "02/P340.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P340 ;
+        adm:logEntry        bda:LG1D41F671C233C790 , bda:LGE759FF8C2EE93D55 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4A0DD3DBB8CF9807
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EV5947E54B109658DC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EV7F64C134643CBA12
+        a                   :PersonBirth ;
+        :onYear             "1700"^^xsd:gYear .
+    
+    bdr:EV8DA4F2EAFABC0437
+        a                   :PersonDeath ;
+        :onYear             "1785"^^xsd:gYear .
+    
+    bdr:EVB1BB5679E0B1AC4B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :onYear             "1760"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM10E21F12D6A8D882
+        a                   :PersonTitle ;
+        rdfs:label          "rtsa ba blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM33FF7095F82ED8EC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM3AAC077FCFF19B58
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 38"@bo-x-ewts .
+    
+    bdr:NM831820FB0D6F8D45
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung gdan rabs blo bzang rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT1BA7BD8A6660DF2F
+        a                   :Note ;
+        :locationStatement  "p. 166-168" ;
+        :noteSource         bdr:MW20846 .
+    
+    bdr:NT3B58D2B88F87509C
+        a                   :Note ;
+        :locationStatement  "p. 761" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains biographic sketch"@en .
+    
+    bdr:NT6C685B060D087688
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P340  a             :Person ;
+        skos:prefLabel      "blo bzang rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1BA7BD8A6660DF2F , bdr:NT3B58D2B88F87509C , bdr:NT6C685B060D087688 ;
+        :personEvent        bdr:EV4A0DD3DBB8CF9807 , bdr:EV5947E54B109658DC , bdr:EV7F64C134643CBA12 , bdr:EV8DA4F2EAFABC0437 , bdr:EVB1BB5679E0B1AC4B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM10E21F12D6A8D882 , bdr:NM33FF7095F82ED8EC , bdr:NM3AAC077FCFF19B58 , bdr:NM831820FB0D6F8D45 ;
+        :personStudentOf    bdr:P108 , bdr:P412 ;
+        :personTeacherOf    bdr:P166 , bdr:P4124 .
+}

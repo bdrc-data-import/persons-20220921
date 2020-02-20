@@ -1,0 +1,82 @@
+@base          <bdg:P6497> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6497 {
+    bda:LG306E42EE79088F0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-23T16:30:21.777Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6497  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6497 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "a3/P6497.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6497 ;
+        adm:logEntry        bda:LG306E42EE79088F0D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV02E14C3AA5F7C710
+        a                   :PersonBirth ;
+        :onYear             "1902"^^xsd:gYear .
+    
+    bdr:EVB203453259F8C882
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:EVC3F3EA29A999A86F
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVE3DE4A5E8F2B235F
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G160 ;
+        :onYear             "1958"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:NM2C1F9350EEAD3646
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mi nyag 04"@bo-x-ewts .
+    
+    bdr:NM5A9113FC90722A05
+        a                   :PersonTitle ;
+        rdfs:label          "sku 'bum khri ngag dbang legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM6F8DA498631F2B53
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM900A829F508DF328
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mi nyag 04 ngag dbang legs bshad rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9EC5F2EED4EB443D
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Minyak 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT2C75134C5A243D22
+        a                   :Note ;
+        :noteText           "brief biography in mtsho lho bod rig rang skyong khul gyi dgon sde khag gi lo rgyus, p. 17"@en .
+    
+    bdr:P6497  a            :Person ;
+        skos:prefLabel      "ngag dbang legs bshad rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P388 ;
+        :isRoot             true ;
+        :note               bdr:NT2C75134C5A243D22 ;
+        :personEvent        bdr:EV02E14C3AA5F7C710 , bdr:EVB203453259F8C882 , bdr:EVC3F3EA29A999A86F , bdr:EVE3DE4A5E8F2B235F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2C1F9350EEAD3646 , bdr:NM5A9113FC90722A05 , bdr:NM6F8DA498631F2B53 , bdr:NM900A829F508DF328 , bdr:NM9EC5F2EED4EB443D .
+}

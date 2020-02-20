@@ -1,0 +1,63 @@
+@base          <bdg:P3956> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3956 {
+    bda:LG8BA660656A3898D4
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-03-01T11:34:03.767Z"^^xsd:dateTime ;
+        adm:logMessage      "Added kinship relation: mother Rinchen Peldzom"@en ;
+        adm:logWho          bdr:U00004 .
+    
+    bda:P3956  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3956 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6f/P3956.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3956 ;
+        adm:logEntry        bda:LG8BA660656A3898D4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9AEFE96007A9B635
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVAA9D7BD52FB141D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G435 .
+    
+    bdr:NM83BD949E595574CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams chos 'phel/"@bo-x-ewts .
+    
+    bdr:NMF3F4B84456E08575
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "co ne rgyal sras bsod nams chos 'phel/"@bo-x-ewts .
+    
+    bdr:NTBACFBD5ECCB8B679
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Ruler"@en .
+    
+    bdr:P3956  a            :Person ;
+        skos:prefLabel      "bsod nams chos 'phel/"@bo-x-ewts ;
+        :hasFather          bdr:P1758 ;
+        :hasMother          bdr:P1KT6 ;
+        :hasSon             bdr:P3957 ;
+        :isRoot             true ;
+        :note               bdr:NTBACFBD5ECCB8B679 ;
+        :personEvent        bdr:EV9AEFE96007A9B635 , bdr:EVAA9D7BD52FB141D7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM83BD949E595574CE , bdr:NMF3F4B84456E08575 .
+}

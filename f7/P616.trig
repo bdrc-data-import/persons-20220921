@@ -1,0 +1,58 @@
+@base          <bdg:P616> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P616 {
+    bda:P616  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P616 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "f7/P616.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P616 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV40552A0EA91AFC1F
+        a                   :PersonDeath ;
+        :onYear             "1838"^^xsd:gYear .
+    
+    bdr:EVD8AB52CE0DA49BF9
+        a                   :PersonBirth ;
+        :onYear             "1772"^^xsd:gYear .
+    
+    bdr:NM17ED5435AE7F916C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bya bral rig 'dzin chos dbyings rdo rje/"@bo-x-ewts .
+    
+    bdr:NM591334466C89E0BC
+        a                   :PersonPersonalName ;
+        rdfs:label          "mi 'gyur nam mkha' tshe dbang 'jigs med rdo rje/"@bo-x-ewts .
+    
+    bdr:NM5B668DA965D69194
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos dbyings rdo rje/"@bo-x-ewts .
+    
+    bdr:NTD6088F819A087C03
+        a                   :Note ;
+        :noteText           "teacher of the 'ba' ra bka' brgyud pa tradition\ndates from the source\n\naccording to the brgyud yig to the gdams ngag mdzod, a major figure in the transmission lineage of the 'ba' ra ba phyag rgya chen po"@en .
+    
+    bdr:P616  a             :Person ;
+        skos:prefLabel      "chos dbyings rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD6088F819A087C03 ;
+        :personEvent        bdr:EV40552A0EA91AFC1F , bdr:EVD8AB52CE0DA49BF9 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM17ED5435AE7F916C , bdr:NM591334466C89E0BC , bdr:NM5B668DA965D69194 ;
+        :personStudentOf    bdr:P5879 , bdr:P9799 ;
+        :personTeacherOf    bdr:P857 .
+}

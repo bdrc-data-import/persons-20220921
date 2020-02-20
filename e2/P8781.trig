@@ -1,0 +1,73 @@
+@base          <bdg:P8781> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8781 {
+    bda:LG5842E8BF90BD9E12
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-17T17:30:18.963Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG7703ECB16F972FCC
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:30.594Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8781  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8781 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "e2/P8781.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8781 ;
+        adm:logEntry        bda:LG5842E8BF90BD9E12 , bda:LG7703ECB16F972FCC ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62423D7AFBE74798
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM4F7E8CF1DCF8CF81
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klong rdzogs mtha' bral/"@bo-x-ewts .
+    
+    bdr:NMB8BED8A49B5F3026
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzogs chen pa klong rdzogs mtha' bral/"@bo-x-ewts .
+    
+    bdr:NT0F885565D40DEE0E
+        a                   :Note ;
+        :locationStatement  "p. 281" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biography\na nephew of lha btsun nam mkha' 'jigs med"@en .
+    
+    bdr:NT12C29A3FB935068D
+        a                   :Note ;
+        :locationStatement  "281" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P8781  a            :Person ;
+        skos:prefLabel      "klong rdzogs mtha' bral/"@bo-x-ewts ;
+        :hasUncle           bdr:P1691 ;
+        :isRoot             true ;
+        :note               bdr:NT0F885565D40DEE0E , bdr:NT12C29A3FB935068D ;
+        :personEvent        bdr:EV62423D7AFBE74798 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4F7E8CF1DCF8CF81 , bdr:NMB8BED8A49B5F3026 ;
+        :personStudentOf    bdr:P653 , bdr:P9577 ;
+        :personTeacherOf    bdr:P653 .
+}

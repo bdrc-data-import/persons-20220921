@@ -1,0 +1,45 @@
+@base          <bdg:P8300> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8300 {
+    bda:P8300  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8300 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "8e/P8300.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8300 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3B3CB0B5E9579832
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMB4CC906EA3B433D9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin dpal sgrub/"@bo-x-ewts .
+    
+    bdr:NME46C5F13B1C483EE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ra 'ob sprul sku rig 'dzin dpal sgrub/"@bo-x-ewts .
+    
+    bdr:P8300  a            :Person ;
+        skos:prefLabel      "rig 'dzin dpal sgrub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV3B3CB0B5E9579832 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB4CC906EA3B433D9 , bdr:NME46C5F13B1C483EE ;
+        :personStudentOf    bdr:P6339 .
+}

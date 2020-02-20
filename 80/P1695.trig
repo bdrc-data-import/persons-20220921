@@ -1,0 +1,64 @@
+@base          <bdg:P1695> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1695 {
+    bda:LGAF9A55C9A9553F16
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-09-01T11:59:02.234Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of p7637"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1695  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1695 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "80/P1695.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1695 ;
+        adm:logEntry        bda:LGAF9A55C9A9553F16 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P7637 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV244B0CE8D8542F1C
+        a                   :PersonBirth ;
+        :onYear             "1466"^^xsd:gYear .
+    
+    bdr:EV6C93C7036B883456
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:EVD62AE35812565291
+        a                   :PersonDeath ;
+        :onYear             "1540"^^xsd:gYear .
+    
+    bdr:NM733C2F6A58BAAB48
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kaH thog bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM9DE366FEB4173A88
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT031616ED1C3DBC65
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:P1695  a            :Person ;
+        skos:prefLabel      "bsod nams rgyal mtshan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT031616ED1C3DBC65 ;
+        :personEvent        bdr:EV244B0CE8D8542F1C , bdr:EV6C93C7036B883456 , bdr:EVD62AE35812565291 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM733C2F6A58BAAB48 , bdr:NM9DE366FEB4173A88 .
+}

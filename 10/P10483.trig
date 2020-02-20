@@ -1,0 +1,56 @@
+@base          <bdg:P10483> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10483 {
+    bda:P10483  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10483 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "10/P10483.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10483 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2714225933716F70
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:EV85829080E79692FC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G287 .
+    
+    bdr:NM6DC191E0D6BAC523
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bsam yas rgyal po btsad po tshe dbang rdo rje/"@bo-x-ewts .
+    
+    bdr:NMF38F81F47629F2D3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rdo rje/"@bo-x-ewts .
+    
+    bdr:NT2BF62451D587DD70
+        a                   :Note ;
+        :locationStatement  "pp. 406-467" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "one of the royal dynasty descendants that reigned at bsam yas; a student of sa skya sngags 'chang kun dga' rin chen"@en .
+    
+    bdr:P10483  a           :Person ;
+        skos:prefLabel      "tshe dbang rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2BF62451D587DD70 ;
+        :personEvent        bdr:EV2714225933716F70 , bdr:EV85829080E79692FC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6DC191E0D6BAC523 , bdr:NMF38F81F47629F2D3 ;
+        :personStudentOf    bdr:P460 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P933> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P933 {
+    bda:LG19A13ADA8533F103
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-07-20T15:57:35.723Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:LG4C2759CA1CE355A5
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-13T15:00:38.729Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P933  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P933 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "02/P933.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P933 ;
+        adm:logEntry        bda:LG19A13ADA8533F103 , bda:LG4C2759CA1CE355A5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV344D81F74A4E78C3
+        a                   :PersonBirth ;
+        :onYear             "1896"^^xsd:gYear .
+    
+    bdr:EV8C5B665452C7DED6
+        a                   :PersonDeath ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:NM64DF11DD51DA3C79
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khu nu bla ma tshe dbang rnam rgyal"@sa-x-ewts .
+    
+    bdr:NM87A8AD1585FFEDCD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMFA1D54CD94FBA892
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang blo bzang mtha' yas/"@bo-x-ewts .
+    
+    bdr:NTA59BFD67B8BAA1B3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\nMar-pa Bka'-brgyud\n\nDwags-po Bka'-brgyud\n\nPhag-mo-gru-pa\n\n'Brug-pa Bka'-brgyud\n\nRwa-lung transmissions"@en .
+    
+    bdr:P933  a             :Person ;
+        skos:prefLabel      "tshe dbang rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA59BFD67B8BAA1B3 ;
+        :personEvent        bdr:EV344D81F74A4E78C3 , bdr:EV8C5B665452C7DED6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM64DF11DD51DA3C79 , bdr:NM87A8AD1585FFEDCD , bdr:NMFA1D54CD94FBA892 ;
+        :personTeacherOf    bdr:P7800 .
+}

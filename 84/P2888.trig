@@ -1,0 +1,70 @@
+@base          <bdg:P2888> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2888 {
+    bda:LG2C9F28A14692D232
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-30T15:35:03.562Z"^^xsd:dateTime ;
+        adm:logMessage      "added multiple records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:LG36428F761DB47A9A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-27T14:49:38.045Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2888  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2888 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "84/P2888.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2888 ;
+        adm:logEntry        bda:LG2C9F28A14692D232 , bda:LG36428F761DB47A9A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA54D8D6628BB2DC6
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
+    
+    bdr:NM171FCEE50AEE4E4C
+        a                   :PersonPersonalName ;
+        rdfs:label          "nyang ye shes 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NM97BFC05CE2236FD6
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes 'byung gnas/"@bo-x-ewts .
+    
+    bdr:NT5193FCBA68B2B2A1
+        a                   :Note ;
+        :noteText           "Master in the transmission of the rnying ma bka' ma"@en .
+    
+    bdr:NTA138868779AB7B7D
+        a                   :Note ;
+        :locationStatement  "153" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "biodata"@en .
+    
+    bdr:P2888  a            :Person ;
+        skos:prefLabel      "ye shes 'byung gnas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT5193FCBA68B2B2A1 , bdr:NTA138868779AB7B7D ;
+        :personEvent        bdr:EVA54D8D6628BB2DC6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM171FCEE50AEE4E4C , bdr:NM97BFC05CE2236FD6 ;
+        :personStudentOf    bdr:P2887 ;
+        :personTeacherOf    bdr:P2889 .
+}

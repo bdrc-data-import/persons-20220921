@@ -1,0 +1,66 @@
+@base          <bdg:P7040> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P7040 {
+    bda:LG4740A864E536B80F
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T11:01:28.779Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P7040  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P7040 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "d3/P7040.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P7040 ;
+        adm:logEntry        bda:LG4740A864E536B80F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6A47F0C16CAA8729
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2990 ;
+        :onYear             "1946"^^xsd:gYear .
+    
+    bdr:NM067DD41795649781
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rnye grub chen 06"@bo-x-ewts .
+    
+    bdr:NM8D7A186AF0872DA3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang mkhas grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NMA89BD1B9574704B9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Nye Drubchen 06"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMEFE9A67114914B66
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnye grub chen 06 blo bzang mkhas grub rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8859A4E0972D9A49
+        a                   :Note ;
+        :locationStatement  "p. 189" ;
+        :noteSource         bdr:MW20197 .
+    
+    bdr:P7040  a            :Person ;
+        skos:prefLabel      "blo bzang mkhas grub rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P7041 ;
+        :isRoot             true ;
+        :note               bdr:NT8859A4E0972D9A49 ;
+        :personEvent        bdr:EV6A47F0C16CAA8729 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM067DD41795649781 , bdr:NM8D7A186AF0872DA3 , bdr:NMA89BD1B9574704B9 , bdr:NMEFE9A67114914B66 .
+}

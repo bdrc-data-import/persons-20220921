@@ -1,0 +1,58 @@
+@base          <bdg:P3438> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3438 {
+    bda:LG409372DAA8E11199
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-05-25T16:05:06.313Z"^^xsd:dateTime ;
+        adm:logMessage      "teacher of"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3438  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3438 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "fa/P3438.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3438 ;
+        adm:logEntry        bda:LG409372DAA8E11199 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF4AA8F002959FAEB
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM7E233067F4812977
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NM8F34B192C4C7BC36
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ba ri dpon slob ngag dbang don grub/"@bo-x-ewts .
+    
+    bdr:NTD8906E29962CF9E5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3438  a            :Person ;
+        skos:prefLabel      "ngag dbang don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD8906E29962CF9E5 ;
+        :personEvent        bdr:EVF4AA8F002959FAEB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7E233067F4812977 , bdr:NM8F34B192C4C7BC36 ;
+        :personStudentOf    bdr:P3437 ;
+        :personTeacherOf    bdr:P169 , bdr:P4122 .
+}

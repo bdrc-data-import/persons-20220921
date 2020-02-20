@@ -1,0 +1,69 @@
+@base          <bdg:P8LS12226> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12226 {
+    bda:LG70E6A60CD63A879E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T12:35:41.338Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12226  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12226 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "48/P8LS12226.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12226 ;
+        adm:logEntry        bda:LG70E6A60CD63A879E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F81DD36387097E0
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVC7C6C081BEA6E062
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G109 .
+    
+    bdr:EVCE754BE5623F5460
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM06508662934F9DE2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 54"@bo-x-ewts .
+    
+    bdr:NM7B4635EBBD941A85
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lde tsha'i dge bshes ngag dbang 'od zer/"@bo-x-ewts .
+    
+    bdr:NMB7FCAC4795728C6D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang 'od zer/"@bo-x-ewts .
+    
+    bdr:NT91866214169F0B57
+        a                   :Note ;
+        :locationStatement  "p. 186" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "during his tenure as khri of bya khyung he built byams pa temple and seng+ge sgra temple of lde tsha monastery"@en .
+    
+    bdr:P8LS12226  a        :Person ;
+        skos:prefLabel      "ngag dbang 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT91866214169F0B57 ;
+        :personEvent        bdr:EV0F81DD36387097E0 , bdr:EVC7C6C081BEA6E062 , bdr:EVCE754BE5623F5460 ;
+        :personName         bdr:NM06508662934F9DE2 , bdr:NM7B4635EBBD941A85 , bdr:NMB7FCAC4795728C6D .
+}

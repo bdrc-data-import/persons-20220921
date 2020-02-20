@@ -1,0 +1,52 @@
+@base          <bdg:P10256> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P10256 {
+    bda:P10256  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P10256 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "9d/P10256.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P10256 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC4C99FBABEEFB74C
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM1DA7C19F1777D8AE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NMB1AA6CCCF9B525F1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen byang chub brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NT200E2B169065561C
+        a                   :Note ;
+        :locationStatement  "p. 348" ;
+        :noteSource         bdr:MW30192 ;
+        :noteText           "one of the teachers of gong dkar rdo rje gdan pa. it was from this mkhan chen that gong dkar received the ba ri lo tsA sgrub thabs"@en .
+    
+    bdr:P10256  a           :Person ;
+        skos:prefLabel      "byang chub brtson 'grus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT200E2B169065561C ;
+        :personEvent        bdr:EVC4C99FBABEEFB74C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1DA7C19F1777D8AE , bdr:NMB1AA6CCCF9B525F1 ;
+        :personTeacherOf    bdr:P3183 .
+}

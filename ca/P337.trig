@@ -1,0 +1,82 @@
+@base          <bdg:P337> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P337 {
+    bda:LG170B844B07A4C137
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T16:29:03.104Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place to G1300"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:P337  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P337 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "ca/P337.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P337 ;
+        adm:logEntry        bda:LG170B844B07A4C137 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7826D7D0859FC5FE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EVBEFCF2F46324D1E3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1300 ;
+        :onYear             "1707"^^xsd:gYear .
+    
+    bdr:NM6774BE497F316234
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes bzang po/"@bo-x-ewts .
+    
+    bdr:NM754E7C57EDB6395F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gtsang sman ye shes bzang po/"@bo-x-ewts .
+    
+    bdr:NT0B81CA4D06A8F567
+        a                   :Note ;
+        :noteText           "1724. Enrolled in the Lcags-po-ri College\nStudied with Bla-sman Thabs-mkhas (not recorded)\n1743. Sent to Mtsho-sngon to become physician of Ching-wang Bstan-'dzin-dbang-phyug\nTaught medicine at Bla-brang, Bya-khyung, and Rong-po Dgon-chen\n1784. Died shortly after the fonding of the Gso-rig Gzhan-phan-gling medical school at Bla-brang.\nGsung 'bum in one volume (more than 46 sections)."@en .
+    
+    bdr:NT2375FBF13B43E08B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Other transmissions\n\n-- Specialized Exoteric lineages\n\n-- Medicine"@en .
+    
+    bdr:NT4B43C87EAAAC3ED6
+        a                   :Note ;
+        :locationStatement  "p. 774" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains biographic sketch"@en .
+    
+    bdr:NT5118CB9CC54AF489
+        a                   :Note ;
+        :locationStatement  "p. 216" ;
+        :noteSource         bdr:MW19835 .
+    
+    bdr:NTFF387D56E047ED2A
+        a                   :Note ;
+        :locationStatement  "p. 1345" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P337  a             :Person ;
+        skos:prefLabel      "ye shes bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0B81CA4D06A8F567 , bdr:NT2375FBF13B43E08B , bdr:NT4B43C87EAAAC3ED6 , bdr:NT5118CB9CC54AF489 , bdr:NTFF387D56E047ED2A ;
+        :personEvent        bdr:EV7826D7D0859FC5FE , bdr:EVBEFCF2F46324D1E3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6774BE497F316234 , bdr:NM754E7C57EDB6395F ;
+        :personStudentOf    bdr:P4988 ;
+        :personTeacherOf    bdr:P4640 , bdr:P4641 .
+}

@@ -1,0 +1,76 @@
+@base          <bdg:P1KG13163> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG13163 {
+    bda:LG0C439E760FB20E7B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-12-10T11:40:33.465Z"^^xsd:dateTime ;
+        adm:logMessage      "created person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG531BF40D8858B767
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T12:42:35Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG97829E876F30DF52
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:P1KG13163  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG13163 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "4c/P1KG13163.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG13163 ;
+        adm:logEntry        bda:LG0C439E760FB20E7B , bda:LG531BF40D8858B767 , bda:LG97829E876F30DF52 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0BF42EE06C35E00E
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV6838381100870E21
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1541 .
+    
+    bdr:NM79FFEE794A9FA04B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgyal bstan 02 blo bzang thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9B6C7BB4AA97B7D9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rgyal bstan mchog sprul 02"@bo-x-ewts .
+    
+    bdr:NMAB0A145E0F72A07E
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gyelten Choktrul 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NME69484938324987E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang thub bstan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:P1KG13163  a        :Person ;
+        skos:prefLabel      "blo bzang thub bstan rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1KG13162 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0BF42EE06C35E00E , bdr:EV6838381100870E21 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM79FFEE794A9FA04B , bdr:NM9B6C7BB4AA97B7D9 , bdr:NMAB0A145E0F72A07E , bdr:NME69484938324987E .
+}

@@ -1,0 +1,62 @@
+@base          <bdg:P11MS255> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P11MS255 {
+    bda:LGD7110B09AB812AB1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-12-01T13:18:17.496Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P11MS255  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P11MS255 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ec/P11MS255.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P11MS255 ;
+        adm:logEntry        bda:LGD7110B09AB812AB1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF9A05A04087AB0C6
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM5E4F13488BFAD135
+        a                   :PersonPrimaryName ;
+        rdfs:label          "slob dpon gtsang pa 'jam seng /"@bo-x-ewts .
+    
+    bdr:NMC2A6563668D4F4B1
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Lobpon Tsangpa Jamseng"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NT4255E6F567552AF9
+        a                   :Note ;
+        :locationStatement  "p. 326" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biodata"@en .
+    
+    bdr:NTC9C1C1D678BEF861
+        a                   :Note ;
+        :noteText           "one of the eight primary disciples of chos kyi seng+ge"@en .
+    
+    bdr:P11MS255  a         :Person ;
+        skos:prefLabel      "slob dpon gtsang pa 'jam seng /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4255E6F567552AF9 , bdr:NTC9C1C1D678BEF861 ;
+        :personEvent        bdr:EVF9A05A04087AB0C6 ;
+        :personName         bdr:NM5E4F13488BFAD135 , bdr:NMC2A6563668D4F4B1 ;
+        :personStudentOf    bdr:P1404 , bdr:P16 .
+}

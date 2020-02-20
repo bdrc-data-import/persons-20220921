@@ -1,0 +1,72 @@
+@base          <bdg:P6694> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6694 {
+    bda:P6694  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6694 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "21/P6694.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6694 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C84B764710765B5
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EV736E168FCACCBE3F
+        a                   :PersonDeath ;
+        :notAfter           "1920"^^xsd:gYear ;
+        :notBefore          "1919"^^xsd:gYear .
+    
+    bdr:EVC482B9120F09B0C3
+        a                   :PersonLeavesOffice ;
+        :onYear             "1903"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:EVD2D253AA60168F4B
+        a                   :PersonAssumesOffice ;
+        :onYear             "1893"^^xsd:gYear ;
+        :personEventRole    bdr:R45 .
+    
+    bdr:NM4397B6B64DE32B61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bshad sgra dpal 'byor rdo rje/"@bo-x-ewts .
+    
+    bdr:NMC2C8FE7C3A035610
+        a                   :PersonPersonalName ;
+        rdfs:label          "dpal 'byor rdo rje, bshad sgra/"@bo-x-ewts .
+    
+    bdr:NTA252BA8114F2382B
+        a                   :Note ;
+        :locationStatement  "p. 233" ;
+        :noteSource         bdr:MW20167 ;
+        :noteText           "bka' blon, 1893-1903"@en .
+    
+    bdr:NTC38F6B2EF1F37980
+        a                   :Note ;
+        :locationStatement  "p. 430" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "d. 1920 (bka' blon bshad sgra ba dang chang khyim pa bgrongs)"@en .
+    
+    bdr:P6694  a            :Person ;
+        skos:prefLabel      "bshad sgra dpal 'byor rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA252BA8114F2382B , bdr:NTC38F6B2EF1F37980 ;
+        :personEvent        bdr:EV0C84B764710765B5 , bdr:EV736E168FCACCBE3F , bdr:EVC482B9120F09B0C3 , bdr:EVD2D253AA60168F4B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4397B6B64DE32B61 , bdr:NMC2C8FE7C3A035610 .
+}

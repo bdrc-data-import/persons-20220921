@@ -1,0 +1,62 @@
+@base          <bdg:P3489> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3489 {
+    bda:LG258E216D9C08B673
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-12T09:49:35.505Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3489  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3489 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "ce/P3489.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3489 ;
+        adm:logEntry        bda:LG258E216D9C08B673 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB8CAB37F9CFE2A62
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVF66056DB61911572
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G104 .
+    
+    bdr:NMC227FA840756B958
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NME60CEA8591E0AFE6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lho pa yongs 'dzin blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT6FF031664DF460F7
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3489  a            :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6FF031664DF460F7 ;
+        :personEvent        bdr:EVB8CAB37F9CFE2A62 , bdr:EVF66056DB61911572 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC227FA840756B958 , bdr:NME60CEA8591E0AFE6 ;
+        :personStudentOf    bdr:P285 ;
+        :personTeacherOf    bdr:P3490 .
+}

@@ -1,0 +1,66 @@
+@base          <bdg:P00KG03804> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P00KG03804 {
+    bda:LG80D3890E20ECB1EB
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-15T15:32:30.687Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LG92280227E1749AF8
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-04-05T09:42:46.832Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LGF48C88BC6888AB5C
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-10-30T16:27:50.027Z"^^xsd:dateTime ;
+        adm:logMessage      "created person and published"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P00KG03804  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P00KG03804 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "f1/P00KG03804.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P00KG03804 ;
+        adm:logEntry        bda:LG80D3890E20ECB1EB , bda:LG92280227E1749AF8 , bda:LGF48C88BC6888AB5C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB062D7079557B8D0
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVF0BB8A97CEB1C423
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4336 .
+    
+    bdr:NME9FF93965FCE9850
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' bsod nams rdo rje/"@bo-x-ewts .
+    
+    bdr:NT179CA03CD0B1817E
+        a                   :Note ;
+        :noteText           "author of mdo smad rnag yul rsti nang dgon dpal mi 'gyur nges don bde chen gling"@en .
+    
+    bdr:P00KG03804  a       :Person ;
+        skos:prefLabel      "kun dga' bsod nams rdo rje/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT179CA03CD0B1817E ;
+        :personEvent        bdr:EVB062D7079557B8D0 , bdr:EVF0BB8A97CEB1C423 ;
+        :personName         bdr:NME9FF93965FCE9850 .
+}

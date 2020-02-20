@@ -1,0 +1,51 @@
+@base          <bdg:P6567> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6567 {
+    bda:P6567  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6567 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3a/P6567.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6567 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0A8BBF5CEFA6B439
+        a                   :PersonAssumesOffice ;
+        :onYear             "1249"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:EV36F4FEA7C1D4BE04
+        a                   :PersonLeavesOffice ;
+        :onYear             "1251"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:EV418490C370D8B804
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NMB7298FE06386B743
+        a                   :PersonPrimaryName ;
+        rdfs:label          "he min hri/"@bo-x-ewts .
+    
+    bdr:P6567  a            :Person ;
+        skos:prefLabel      "he min hri/"@bo-x-ewts ;
+        :hasHusband         bdr:P6566 ;
+        :isRoot             true ;
+        :personEvent        bdr:EV0A8BBF5CEFA6B439 , bdr:EV36F4FEA7C1D4BE04 , bdr:EV418490C370D8B804 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMB7298FE06386B743 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P1KG24319> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG24319 {
+    bda:LG971641B3E748EC4E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-08-12T13:01:03.985Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG24319  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG24319 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "9c/P1KG24319.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG24319 ;
+        adm:logEntry        bda:LG971641B3E748EC4E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4BFB5F412A7E494E
+        a                   :PersonDeath ;
+        :onYear             "1955"^^xsd:gYear .
+    
+    bdr:EV61C9BE2C4F7802AA
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1879"^^xsd:gYear .
+    
+    bdr:NM9A25C4B5EC3CFA98
+        a                   :PersonPrimaryName ;
+        rdfs:label          "al b+har kri a yan si TaN/"@bo-x-ewts .
+    
+    bdr:NMA43050C20B2FEB2A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "albert einstein"@en .
+    
+    bdr:NT402560EE4B6A72EA
+        a                   :Note ;
+        :noteSource         bdr:MW1KG24308 .
+    
+    bdr:P1KG24319  a        :Person ;
+        skos:prefLabel      "al b+har kri a yan si TaN/"@bo-x-ewts , "albert einstein"@en ;
+        :isRoot             true ;
+        :note               bdr:NT402560EE4B6A72EA ;
+        :personEvent        bdr:EV4BFB5F412A7E494E , bdr:EV61C9BE2C4F7802AA ;
+        :personName         bdr:NM9A25C4B5EC3CFA98 , bdr:NMA43050C20B2FEB2A .
+}

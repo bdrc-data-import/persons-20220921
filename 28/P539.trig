@@ -1,0 +1,86 @@
+@base          <bdg:P539> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P539 {
+    bda:LG4E34F8FFC931125B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T11:30:20.507Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P539  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P539 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "28/P539.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P539 ;
+        adm:logEntry        bda:LG4E34F8FFC931125B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV508DC634530A9F12
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1775"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EV5586E33A8B0EF5E6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G742 ;
+        :onYear             "1733"^^xsd:gYear .
+    
+    bdr:EV82DF2082FD10A1C9
+        a                   :PersonDeath ;
+        :onYear             "1781"^^xsd:gYear .
+    
+    bdr:EV8689FE9E9808B22F
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1781"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVB66150FA794EDE9B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:NM15249953D7512BEB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM822772AADAF3994F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 14 bstan 'dzin rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMB3FDD39CA131EA06
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 14"@bo-x-ewts .
+    
+    bdr:NT3A8B705E2E329C9E
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1775-1781.\nServed as dgon-'dzin of Gdong-dkar Kun-bzang-chos-gling.\nMeditated at Spa-gro Chu-mo-phu.\n1780. Great fire of Spungs-thang when he was on the throne."@en .
+    
+    bdr:NTDCFB4496721B5CA4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions"@en .
+    
+    bdr:P539  a             :Person ;
+        skos:prefLabel      "bstan 'dzin rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3A8B705E2E329C9E , bdr:NTDCFB4496721B5CA4 ;
+        :personEvent        bdr:EV508DC634530A9F12 , bdr:EV5586E33A8B0EF5E6 , bdr:EV82DF2082FD10A1C9 , bdr:EV8689FE9E9808B22F , bdr:EVB66150FA794EDE9B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM15249953D7512BEB , bdr:NM822772AADAF3994F , bdr:NMB3FDD39CA131EA06 ;
+        :personStudentOf    bdr:P528 , bdr:P530 , bdr:P538 ;
+        :personTeacherOf    bdr:P553 , bdr:P554 .
+}

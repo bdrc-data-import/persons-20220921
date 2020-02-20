@@ -1,0 +1,58 @@
+@base          <bdg:P2891> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2891 {
+    bda:LGEB9E1BF73A43C8E0
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-05-30T15:32:44.999Z"^^xsd:dateTime ;
+        adm:logMessage      "added multiple records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P2891  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2891 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "42/P2891.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2891 ;
+        adm:logEntry        bda:LGEB9E1BF73A43C8E0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV62DEF62153098AC7
+        a                   :PersonBirth ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
+    bdr:NMC1C8BC8E78CD643D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NMDB4CE1D377DC49F8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyo ston shAkya ye shes/"@bo-x-ewts .
+    
+    bdr:NT7D1B03BD815B33E4
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Bka'-ma"@en .
+    
+    bdr:P2891  a            :Person ;
+        skos:prefLabel      "shAkya ye shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7D1B03BD815B33E4 ;
+        :personEvent        bdr:EV62DEF62153098AC7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMC1C8BC8E78CD643D , bdr:NMDB4CE1D377DC49F8 ;
+        :personStudentOf    bdr:P2890 ;
+        :personTeacherOf    bdr:P2892 .
+}

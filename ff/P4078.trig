@@ -1,0 +1,89 @@
+@base          <bdg:P4078> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4078 {
+    bda:LG6E6D6A12B085CDFE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-20T11:36:51.673Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event, seat and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P4078  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4078 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "ff/P4078.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4078 ;
+        adm:logEntry        bda:LG6E6D6A12B085CDFE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV63062711707BABA4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVB09AC2D283ABFBAF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVC227866D1FBCB43B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1023 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD2FB863E1000BC4D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:NM49B716A0C7320F17
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mdo ba ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NM5CE304808E180323
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 50"@bo-x-ewts .
+    
+    bdr:NM66709AFA1400E487
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NMF1946E7FCDB65B18
+        a                   :PersonTitle ;
+        rdfs:label          "bya khyung mkhan rabs 50 ngag dbang bsod nams/"@bo-x-ewts .
+    
+    bdr:NT26E812B86DB14488
+        a                   :Note ;
+        :locationStatement  "p. 182-183" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "he was khri for nine months, left to his birth place and passed away"@en .
+    
+    bdr:NTBF02515748B58988
+        a                   :Note ;
+        :locationStatement  "p. 876" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTC8D516581264E11F
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P4078  a            :Person ;
+        skos:prefLabel      "ngag dbang bsod nams/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT26E812B86DB14488 , bdr:NTBF02515748B58988 , bdr:NTC8D516581264E11F ;
+        :personEvent        bdr:EV63062711707BABA4 , bdr:EVB09AC2D283ABFBAF , bdr:EVC227866D1FBCB43B , bdr:EVD2FB863E1000BC4D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM49B716A0C7320F17 , bdr:NM5CE304808E180323 , bdr:NM66709AFA1400E487 , bdr:NMF1946E7FCDB65B18 .
+}

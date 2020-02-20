@@ -1,0 +1,61 @@
+@base          <bdg:P8646> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8646 {
+    bda:LG43BB78D7842A3B14
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-03-11T16:20:22.105Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8646  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8646 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "49/P8646.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8646 ;
+        adm:logEntry        bda:LG43BB78D7842A3B14 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:NM1AB96FDA8550D2D8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "rang grol 02"@bo-x-ewts .
+    
+    bdr:NM8E2ACC4162FA9FCB
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Rangdrol 02"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NMA0A683F8A9D06DDC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rang grol/"@bo-x-ewts .
+    
+    bdr:NME0EC946C1C4ED41D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rang grol 02 'phrin las rang grol/"@bo-x-ewts .
+    
+    bdr:NT73CF67E77F578E96
+        a                   :Note ;
+        :locationStatement  "p. 719" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "'bri gung bka' brgyud incarnation"@en .
+    
+    bdr:P8646  a            :Person ;
+        skos:prefLabel      "'phrin las rang grol/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8645 ;
+        :isRoot             true ;
+        :note               bdr:NT73CF67E77F578E96 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AB96FDA8550D2D8 , bdr:NM8E2ACC4162FA9FCB , bdr:NMA0A683F8A9D06DDC , bdr:NME0EC946C1C4ED41D .
+}

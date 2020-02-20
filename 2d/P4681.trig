@@ -1,0 +1,50 @@
+@base          <bdg:P4681> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4681 {
+    bda:P4681  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4681 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "2d/P4681.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4681 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF5CE25F3A030A274
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM19A34106E572E7E8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "las 'phro gling pa/"@bo-x-ewts .
+    
+    bdr:NM889B33638B0B5C41
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dol las 'phro gling pa/"@bo-x-ewts .
+    
+    bdr:NTD36E972DF4AF594D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma"@en .
+    
+    bdr:P4681  a            :Person ;
+        skos:prefLabel      "las 'phro gling pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD36E972DF4AF594D ;
+        :personEvent        bdr:EVF5CE25F3A030A274 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM19A34106E572E7E8 , bdr:NM889B33638B0B5C41 ;
+        :personTeacherOf    bdr:P4680 .
+}

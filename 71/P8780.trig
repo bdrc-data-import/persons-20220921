@@ -1,0 +1,60 @@
+@base          <bdg:P8780> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8780 {
+    bda:LGE37AF471904CFE9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-07-03T16:56:31.692Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00015 .
+    
+    bda:P8780  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8780 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "71/P8780.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8780 ;
+        adm:logEntry        bda:LGE37AF471904CFE9E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV52834241CB9CC0DE
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM6DFD3EA005FB179F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMCF8C1B59233B1005
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sprul sku 'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTB4ACFC5466D0A3A3
+        a                   :Note ;
+        :locationStatement  "p. 281" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "noted as a teacher of lha btsun nam mkha' 'jigs med"@en .
+    
+    bdr:P8780  a            :Person ;
+        skos:prefLabel      "'phrin las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB4ACFC5466D0A3A3 ;
+        :personEvent        bdr:EV52834241CB9CC0DE ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6DFD3EA005FB179F , bdr:NMCF8C1B59233B1005 ;
+        :personStudentOf    bdr:P9577 ;
+        :personTeacherOf    bdr:P1691 .
+}

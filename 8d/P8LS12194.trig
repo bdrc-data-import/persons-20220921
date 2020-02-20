@@ -1,0 +1,80 @@
+@base          <bdg:P8LS12194> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12194 {
+    bda:LG7C7B4251091B66C5
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-03T12:09:21.956Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12194  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12194 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "8d/P8LS12194.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12194 ;
+        adm:logEntry        bda:LG7C7B4251091B66C5 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV451C9D41F5B48E24
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G14 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV460A8D1F3EE0818E
+        a                   :PersonDeath ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:EV67F29D3213F80DCD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G14 .
+    
+    bdr:EVD09BA20C419298FB
+        a                   :PersonBirth ;
+        :onYear             "1905"^^xsd:gYear .
+    
+    bdr:NM3DB411A34D765C78
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smin gling mkhan chen ngag dbang mkhyen brtse'i nor bu/"@bo-x-ewts .
+    
+    bdr:NME38E2256A6E9606C
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "smin gling mkhan chen 08"@bo-x-ewts .
+    
+    bdr:NMECAEFDD6FEEC378E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang mkhyen brtse'i nor bu/"@bo-x-ewts .
+    
+    bdr:NT60AB78CF811E25A8
+        a                   :Note ;
+        :locationStatement  "p. 180-184" ;
+        :noteSource         bdr:MW1CZ2290 ;
+        :noteText           "according to this source, his father was khri tshab padma dbang chen and mother sras mo bag gro or 'chi med bde ldan sgrom ma. Born in wood-snake year at smin grol gling. Took final ordination vows from rdor 'dzin ngag dbang nor bu. Also recieved empowerment and oral transmission of bka 'gter and rdzogs chen teachings from his younger brother mkhan chen 'jam dpal bde ba'i nyi ma. Became the supreme teacher of nyag rong klu rab monastery and spread his religious activities. Moved to go 'jo area owing to life threat from thugs and resided at rtse rong brag nag, a branch monastery of smin grol gling. He resided 3 years at mkho khyim monastery. He became well known and active in religious activities in the above area"@en .
+    
+    bdr:NT9253D66BFD486B37
+        a                   :Note ;
+        :locationStatement  "p. 132" ;
+        :noteSource         bdr:MW20250 .
+    
+    bdr:P8LS12194  a        :Person ;
+        skos:prefLabel      "ngag dbang mkhyen brtse'i nor bu/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT60AB78CF811E25A8 , bdr:NT9253D66BFD486B37 ;
+        :personEvent        bdr:EV451C9D41F5B48E24 , bdr:EV460A8D1F3EE0818E , bdr:EV67F29D3213F80DCD , bdr:EVD09BA20C419298FB ;
+        :personName         bdr:NM3DB411A34D765C78 , bdr:NME38E2256A6E9606C , bdr:NMECAEFDD6FEEC378E ;
+        :personStudentOf    bdr:P258 , bdr:P744 , bdr:P745 ;
+        :personTeacherOf    bdr:P3JM58 , bdr:P6178 , bdr:P626 .
+}

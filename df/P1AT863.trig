@@ -1,0 +1,79 @@
+@base          <bdg:P1AT863> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AT863 {
+    bda:LG38BF8D227163EBE6
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:40:08.704Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG89CC4E3136D8986C
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-19T11:40:54.004Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en .
+    
+    bda:LGDCDAEE606C84F42A
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-03-02T15:49:45.825Z"^^xsd:dateTime .
+    
+    bda:P1AT863  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AT863 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "df/P1AT863.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AT863 ;
+        adm:logEntry        bda:LG38BF8D227163EBE6 , bda:LG89CC4E3136D8986C , bda:LGDCDAEE606C84F42A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5611589696715A72
+        a                   :PersonDeath ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EV99885585738037E5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2884 .
+    
+    bdr:EVFAAA3F8859403ABD
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM1798EDF995EF938A
+        a                   :PersonTitle ;
+        rdfs:label          "gter sras pad+ma tshe dbang rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NM47497D8CA7C10E25
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NM5D9C35A7C04F49E7
+        a                   :PersonPersonalName ;
+        rdfs:label          "pad+ma tshe dbang rig 'dzin/"@bo-x-ewts .
+    
+    bdr:NT74B1B1BB85E200CE
+        a                   :Note ;
+        :noteText           "scribe of some of Kunzang Drodul's texts"@en .
+    
+    bdr:P1AT863  a          :Person ;
+        skos:prefLabel      "tshe dbang rig 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT74B1B1BB85E200CE ;
+        :personEvent        bdr:EV5611589696715A72 , bdr:EV99885585738037E5 , bdr:EVFAAA3F8859403ABD ;
+        :personName         bdr:NM1798EDF995EF938A , bdr:NM47497D8CA7C10E25 , bdr:NM5D9C35A7C04F49E7 ;
+        :personOfSect       bdr: ;
+        :personStudentOf    bdr:P6897 .
+}

@@ -1,0 +1,50 @@
+@base          <bdg:P4030> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4030 {
+    bda:P4030  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4030 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ef/P4030.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4030 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCC37BA8B7B5914E7
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM5E954C6146E02FEB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "g.yang 'bar/"@bo-x-ewts .
+    
+    bdr:NM9EF21D9E0BC90643
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mar ston g.yang 'bar/"@bo-x-ewts .
+    
+    bdr:NT3291E820704F93A7
+        a                   :Note ;
+        :noteText           "13th century master of the jo nang tradition"@en .
+    
+    bdr:P4030  a            :Person ;
+        skos:prefLabel      "g.yang 'bar/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3291E820704F93A7 ;
+        :personEvent        bdr:EVCC37BA8B7B5914E7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM5E954C6146E02FEB , bdr:NM9EF21D9E0BC90643 ;
+        :personTeacherOf    bdr:P858 .
+}

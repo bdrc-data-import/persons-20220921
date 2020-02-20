@@ -1,0 +1,59 @@
+@base          <bdg:P76> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P76 {
+    bda:P76  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P76 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "99/P76.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P76 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1B432595D44921D5
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM075EC0E308F7CFC6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dmar chos sdings chos rje blo gros mgon po/"@bo-x-ewts .
+    
+    bdr:NM4F65A07FF8D06997
+        a                   :PersonTitle ;
+        rdfs:label          "brag dmar chos sdings chos rje/"@bo-x-ewts .
+    
+    bdr:NM75226969C23D0442
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gros mgon po/"@bo-x-ewts .
+    
+    bdr:NT0F0308E3F9D51CB1
+        a                   :Note ;
+        :locationStatement  "p. 222" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT2EF9CE0B28F2096A
+        a                   :Note ;
+        :noteText           "associated with brag dmar chos sdings\n1435. taught nor bzang rgya mtsho."@en .
+    
+    bdr:P76  a              :Person ;
+        skos:prefLabel      "blo gros mgon po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT0F0308E3F9D51CB1 , bdr:NT2EF9CE0B28F2096A ;
+        :personEvent        bdr:EV1B432595D44921D5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM075EC0E308F7CFC6 , bdr:NM4F65A07FF8D06997 , bdr:NM75226969C23D0442 ;
+        :personTeacherOf    bdr:P75 .
+}

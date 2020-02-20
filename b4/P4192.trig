@@ -1,0 +1,66 @@
+@base          <bdg:P4192> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4192 {
+    bda:LGB69911642D0041E4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T16:00:04.128Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas man yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P4192  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4192 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "b4/P4192.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4192 ;
+        adm:logEntry        bda:LGB69911642D0041E4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2A01A8A190BAFD50
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM0CABAC95AA14E3C9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sron pa kun dga' rgyal ba/"@bo-x-ewts .
+    
+    bdr:NMD141D2B0648954CE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun dga' rgyal ba/"@bo-x-ewts .
+    
+    bdr:NT08D11BCA43DB961C
+        a                   :Note ;
+        :noteText           "Origin of the Sron-lugs"@en .
+    
+    bdr:NT10FC9BF527009A40
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Kalacakra\n\n-- Jo-nang-pa"@en .
+    
+    bdr:NT63CDE83BFCFD86AE
+        a                   :Note ;
+        :locationStatement  "p. 1797" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4192  a            :Person ;
+        skos:prefLabel      "kun dga' rgyal ba/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT08D11BCA43DB961C , bdr:NT10FC9BF527009A40 , bdr:NT63CDE83BFCFD86AE ;
+        :personEvent        bdr:EV2A01A8A190BAFD50 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0CABAC95AA14E3C9 , bdr:NMD141D2B0648954CE ;
+        :personStudentOf    bdr:P1048 , bdr:P858 .
+}

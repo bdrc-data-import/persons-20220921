@@ -1,0 +1,75 @@
+@base          <bdg:P8LS12208> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12208 {
+    bda:LG649E13E35F05AC23
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-16T10:55:36.853Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12208  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12208 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "dc/P8LS12208.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12208 ;
+        adm:logEntry        bda:LG649E13E35F05AC23 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV03B6681565833AAD
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G4164 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV15EAEB249D7C1050
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4607 .
+    
+    bdr:EV86E85300FE300A80
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G161 .
+    
+    bdr:EVF502747D4A6D2A2F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G161 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM2E2231DD6C82D9BF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM39163E9EEEBDF015
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khu yug pa chos rje byams pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM9E0BD2C90DBD7E5E
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "bya khyung mkhan rabs 10"@bo-x-ewts .
+    
+    bdr:NTF01D0EBA02D44E2D
+        a                   :Note ;
+        :locationStatement  "p. 114-115" ;
+        :noteSource         bdr:MW20846 ;
+        :noteText           "1627 he gave kalacakra initiation for the first time at bya khyung monastery, empowerment of body mandala of bde mchog dril bu, oral transmission of sngags rim chen mo"@en .
+    
+    bdr:P8LS12208  a        :Person ;
+        skos:prefLabel      "byams pa dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF01D0EBA02D44E2D ;
+        :personEvent        bdr:EV03B6681565833AAD , bdr:EV15EAEB249D7C1050 , bdr:EV86E85300FE300A80 , bdr:EVF502747D4A6D2A2F ;
+        :personName         bdr:NM2E2231DD6C82D9BF , bdr:NM39163E9EEEBDF015 , bdr:NM9E0BD2C90DBD7E5E .
+}

@@ -1,0 +1,63 @@
+@base          <bdg:P2LS311> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2LS311 {
+    bda:LG5F8947BC3860B32D
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-03-18T13:08:44.312Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDE32E64EF2A1FCE4
+        a                   adm:LogEntry ;
+        adm:logDate         "2010-10-25T16:17:51.705Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2LS311  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2LS311 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "04/P2LS311.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2LS311 ;
+        adm:logEntry        bda:LG5F8947BC3860B32D , bda:LGDE32E64EF2A1FCE4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2D0273F6137F7C40
+        a                   :PersonDeath ;
+        :onYear             "1951"^^xsd:gYear .
+    
+    bdr:EV44AD86B73F2AF37E
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1921"^^xsd:gYear .
+    
+    bdr:EV4886642D476640C1
+        a                   :PersonOccupiesSeat ;
+        :onOrAbout          "tsharong" .
+    
+    bdr:NME292C09079FA1C0D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje dbang phyug"@bo-x-ewts .
+    
+    bdr:NT45B5063BB5E452BE
+        a                   :Note ;
+        :noteText           "Killed by stray bullet. Married to Yeshey Wangmo, daughter of Kunsangtse Zazak."@en .
+    
+    bdr:P2LS311  a          :Person ;
+        skos:prefLabel      "rdo rje dbang phyug"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT45B5063BB5E452BE ;
+        :personEvent        bdr:EV2D0273F6137F7C40 , bdr:EV44AD86B73F2AF37E , bdr:EV4886642D476640C1 ;
+        :personName         bdr:NME292C09079FA1C0D .
+}

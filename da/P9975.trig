@@ -1,0 +1,48 @@
+@base          <bdg:P9975> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9975 {
+    bda:P9975  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9975 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "da/P9975.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9975 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB7A10A7B74861B0E
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM101A706092FAC17A
+        a                   :PersonPersonalName ;
+        rdfs:label          "kun dga' chos bsam/"@bo-x-ewts .
+    
+    bdr:NTC9FE42BA4FB0E87D
+        a                   :Note ;
+        :locationStatement  "v. 1, f. 16v" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "teacher in the bka' ma transmission lineage of the rgyud bzhi; probably connected with the jo nang lineage in eastern tibet\nhe received the teachings from one rin chen rgya mtsho, a student of tA ra nA tha"@en .
+    
+    bdr:P9975  a            :Person ;
+        skos:prefLabel      "kun dga' chos bsam/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC9FE42BA4FB0E87D ;
+        :personEvent        bdr:EVB7A10A7B74861B0E ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM101A706092FAC17A ;
+        :personTeacherOf    bdr:P5714 .
+}

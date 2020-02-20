@@ -1,0 +1,76 @@
+@base          <bdg:P2755> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2755 {
+    bda:LG820ABCBD933CA883
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-27T09:32:10.712Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA74EF63809571B88
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-06-27T09:30:55.606Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation, edited tulku title"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGB3E4AD38C3EAB564
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-22T14:58:07.523Z"^^xsd:dateTime ;
+        adm:logMessage      "added office R1AG93"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P2755  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2755 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "07/P2755.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2755 ;
+        adm:logEntry        bda:LG820ABCBD933CA883 , bda:LGA74EF63809571B88 , bda:LGB3E4AD38C3EAB564 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV388C494BD8436531
+        a                   :PersonAssumesOffice ;
+        :personEventRole    bdr:R1AG93 .
+    
+    bdr:EV7946C716B9F4A19C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G9 .
+    
+    bdr:EVD3884FEB1517762D
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1161 ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:NM0E954B33335BF139
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "pad gling gsung sprul 11"@bo-x-ewts .
+    
+    bdr:NMF316DE41F06F79F2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang pad+ma rin chen rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT7FE04C7C48E7967B
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma\n\n-- Padma-gling-pa revelations"@en .
+    
+    bdr:P2755  a            :Person ;
+        skos:prefLabel      "kun bzang pad+ma rin chen rnam rgyal/"@bo-x-ewts ;
+        :incarnationSpeech  bdr:P2749 ;
+        :isRoot             true ;
+        :note               bdr:NT7FE04C7C48E7967B ;
+        :personEvent        bdr:EV388C494BD8436531 , bdr:EV7946C716B9F4A19C , bdr:EVD3884FEB1517762D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0E954B33335BF139 , bdr:NMF316DE41F06F79F2 .
+}

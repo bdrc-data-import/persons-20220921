@@ -1,0 +1,58 @@
+@base          <bdg:P3177> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3177 {
+    bda:LGAA3B4F8F6AEADA7B
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-01-27T12:15:03.057Z"^^xsd:dateTime ;
+        adm:logMessage      "added student of and teacher of"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P3177  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3177 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "10/P3177.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3177 ;
+        adm:logEntry        bda:LGAA3B4F8F6AEADA7B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBDBF417819A255D0
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM34B72F469C006C9A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgyal mtshan bzang po/"@bo-x-ewts .
+    
+    bdr:NM8C65E95BCA1E9CFC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "shar gling pa rgyal mtshan bzang po/"@bo-x-ewts .
+    
+    bdr:NTF27C098FD85C8FD3
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P3177  a            :Person ;
+        skos:prefLabel      "rgyal mtshan bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF27C098FD85C8FD3 ;
+        :personEvent        bdr:EVBDBF417819A255D0 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM34B72F469C006C9A , bdr:NM8C65E95BCA1E9CFC ;
+        :personStudentOf    bdr:P0RK695 , bdr:P1048 ;
+        :personTeacherOf    bdr:P3178 , bdr:P4026 .
+}

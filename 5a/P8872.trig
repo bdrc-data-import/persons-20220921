@@ -1,0 +1,110 @@
+@base          <bdg:P8872> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8872 {
+    bda:LG51DA329E19981D0D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-01T09:35:49.992Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG67FCDE678F6BEB53
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T14:03:02.828Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDA1A6D0F5416F7B3
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T16:27:09.501Z"^^xsd:dateTime ;
+        adm:logMessage      "changed seat to be G340"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P8872  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8872 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "5a/P8872.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8872 ;
+        adm:logEntry        bda:LG51DA329E19981D0D , bda:LG67FCDE678F6BEB53 , bda:LGDA1A6D0F5416F7B3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV151A6374878A8995
+        a                   :PersonBirth ;
+        :notAfter           "1557"^^xsd:gYear ;
+        :notBefore          "1551"^^xsd:gYear .
+    
+    bdr:EV310326D0117EAC4C
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1579"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV402661CC60E99311
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G340 .
+    
+    bdr:EV4988FAA8D013B377
+        a                   :PersonDeath ;
+        :notAfter           "1579"^^xsd:gYear ;
+        :notBefore          "1573"^^xsd:gYear .
+    
+    bdr:EVCF1B9B4CB9D3ED2F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G340 ;
+        :onYear             "1570"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM01963116E119B9F4
+        a                   :PersonPrimaryName ;
+        rdfs:label          "phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM0B930E7FAF2EC751
+        a                   :PersonTitle ;
+        rdfs:label          "'bri gung gdan rabs 20 phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM571AD34CD6C47690
+        a                   :PersonPersonalName ;
+        rdfs:label          "rin chen phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM64D1A2738A731E21
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'bri gung gdan rabs 20"@bo-x-ewts .
+    
+    bdr:NT395BBBB573ED3E9D
+        a                   :Note ;
+        :locationStatement  "pp. 451-456" ;
+        :noteSource         bdr:MW27020 ;
+        :noteText           "biography"@en .
+    
+    bdr:NT9EC1AC8F5699A8BB
+        a                   :Note ;
+        :locationStatement  "p. 217-219" ;
+        :noteSource         bdr:MW1KG6255 ;
+        :noteText           "according to this source he is the 19th throne holder of 'bri gung but in the official list of drikung kagyu throne holder he is the 20th. See http://www.drikung.org/index.php/drikung-kagyu-lineage/list-of-lineage-holders. Also see W26674"@en .
+    
+    bdr:NTD356A8BC2029F99A
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1570. 'bri gung chos rje phyogs las rnam rgyal 'bri gung gi khrir phebs"@en .
+    
+    bdr:P8872  a            :Person ;
+        skos:prefLabel      "phyogs las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT395BBBB573ED3E9D , bdr:NT9EC1AC8F5699A8BB , bdr:NTD356A8BC2029F99A ;
+        :personEvent        bdr:EV151A6374878A8995 , bdr:EV310326D0117EAC4C , bdr:EV402661CC60E99311 , bdr:EV4988FAA8D013B377 , bdr:EVCF1B9B4CB9D3ED2F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM01963116E119B9F4 , bdr:NM0B930E7FAF2EC751 , bdr:NM571AD34CD6C47690 , bdr:NM64D1A2738A731E21 .
+}

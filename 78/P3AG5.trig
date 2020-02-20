@@ -1,0 +1,64 @@
+@base          <bdg:P3AG5> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3AG5 {
+    bda:LG4D301D2DEFD115CC
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-16T17:34:20.457Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:LGD860F6878A3B3E3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2011-03-02T16:08:43.859Z"^^xsd:dateTime ;
+        adm:logMessage      "created"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P3AG5  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3AG5 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "78/P3AG5.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3AG5 ;
+        adm:logEntry        bda:LG4D301D2DEFD115CC , bda:LGD860F6878A3B3E3E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV33A7C0B083DBC897
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM169ADA06D8202D42
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bri lung pa tshul khrims shes rab/"@bo-x-ewts .
+    
+    bdr:NM521EE502417CD2AE
+        a                   :PersonPersonalName ;
+        rdfs:label          "dam pa tshul shes/"@bo-x-ewts .
+    
+    bdr:NT696D8641D5489D1A
+        a                   :Note ;
+        :noteText           "the fourth holder of the bon a khrid rdzogs chen lineage"@en .
+    
+    bdr:P3AG5  a            :Person ;
+        skos:prefLabel      "'bri lung pa tshul khrims shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT696D8641D5489D1A ;
+        :personEvent        bdr:EV33A7C0B083DBC897 ;
+        :personName         bdr:NM169ADA06D8202D42 , bdr:NM521EE502417CD2AE ;
+        :personStudentOf    bdr:P3AG4 ;
+        :personTeacherOf    bdr:P3AG6 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Drilungpa-Tsultrim-Sherab/13089"^^xsd:anyURI .
+}

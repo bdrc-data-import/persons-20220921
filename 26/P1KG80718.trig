@@ -1,0 +1,50 @@
+@base          <bdg:P1KG80718> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1KG80718 {
+    bda:LG5F615FD469F6A516
+        a                   adm:LogEntry ;
+        adm:logDate         "2017-09-18T11:20:23.323Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P1KG80718  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1KG80718 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "26/P1KG80718.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1KG80718 ;
+        adm:logEntry        bda:LG5F615FD469F6A516 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCEDD471A37AB16A4
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM45227A34826F8D99
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM7EFDB7B337FDD79E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:P1KG80718  a        :Person ;
+        skos:prefLabel      "blo bzang dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVCEDD471A37AB16A4 ;
+        :personName         bdr:NM45227A34826F8D99 , bdr:NM7EFDB7B337FDD79E .
+}

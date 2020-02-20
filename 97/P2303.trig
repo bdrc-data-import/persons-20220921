@@ -1,0 +1,58 @@
+@base          <bdg:P2303> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2303 {
+    bda:LGF4D5F28BDD9A29B3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-26T10:53:17.776Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P2303  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2303 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "97/P2303.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2303 ;
+        adm:logEntry        bda:LGF4D5F28BDD9A29B3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVEE6BF8BFF883D2EA
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM57D52FBBE3979180
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsam gtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9920B94160806248
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge slong bsam gtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTAF14656D82016C93
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P2303  a            :Person ;
+        skos:prefLabel      "bsam gtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAF14656D82016C93 ;
+        :personEvent        bdr:EVEE6BF8BFF883D2EA ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM57D52FBBE3979180 , bdr:NM9920B94160806248 ;
+        :personStudentOf    bdr:P106 ;
+        :personTeacherOf    bdr:P2304 .
+}

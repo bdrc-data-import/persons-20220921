@@ -1,0 +1,51 @@
+@base          <bdg:P3071> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3071 {
+    bda:P3071  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3071 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e5/P3071.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3071 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9C2363BA6940543B
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM2E753EB26B037B50
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "thos bsam gling slob dpon dge 'dun yar 'phel/"@bo-x-ewts .
+    
+    bdr:NMB7E3D3B1A52B3680
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun yar 'phel/"@bo-x-ewts .
+    
+    bdr:NTDD06397C509AB63D
+        a                   :Note ;
+        :noteText           "dge lugs teacher connected with the thos bsam gling tradition"@en .
+    
+    bdr:P3071  a            :Person ;
+        skos:prefLabel      "dge 'dun yar 'phel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDD06397C509AB63D ;
+        :personEvent        bdr:EV9C2363BA6940543B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM2E753EB26B037B50 , bdr:NMB7E3D3B1A52B3680 ;
+        :personStudentOf    bdr:P3070 ;
+        :personTeacherOf    bdr:P162 .
+}

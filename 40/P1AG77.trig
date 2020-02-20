@@ -1,0 +1,87 @@
+@base          <bdg:P1AG77> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG77 {
+    bda:LG1A5049B9A0C36C8B
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-12T15:27:30.073Z"^^xsd:dateTime ;
+        adm:logMessage      "kinship"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG72ED71CF056AC82E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-11T10:46:03.702Z"^^xsd:dateTime ;
+        adm:logMessage      "notes and treasury link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG9D5FA33D596648F2
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-10T15:39:00.154Z"^^xsd:dateTime ;
+        adm:logMessage      "kinship relations"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGEA42AA6EB29E9836
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-10T15:44:31.995Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG77  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG77 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "40/P1AG77.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG77 ;
+        adm:logEntry        bda:LG1A5049B9A0C36C8B , bda:LG72ED71CF056AC82E , bda:LG9D5FA33D596648F2 , bda:LGEA42AA6EB29E9836 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV71A6EEA90EA91F35
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G193 .
+    
+    bdr:NM270A2E29734C782F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde dge rgyal rabs 08"@bo-x-ewts .
+    
+    bdr:NM72938E3048017063
+        a                   :PersonPrimaryName ;
+        rdfs:label          "o rgyan bkra shis/"@bo-x-ewts .
+    
+    bdr:NT57474A4814BCBF31
+        a                   :Note ;
+        :locationStatement  "pp. 12-20" ;
+        :noteSource         bdr:MW1KG15407 ;
+        :noteText           "bio data"@en .
+    
+    bdr:NT9BC63608976E4C37
+        a                   :Note ;
+        :locationStatement  "chapter 3" ;
+        :noteSource         bdr:MW1KG17456 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG77  a           :Person ;
+        skos:prefLabel      "o rgyan bkra shis/"@bo-x-ewts ;
+        :hasChild           bdr:P1AG79 ;
+        :hasFather          bdr:P1AG75 ;
+        :hasParent          bdr:P1AG75 ;
+        :hasParentSibling   bdr:P1AG76 ;
+        :hasSibling         bdr:P1AG72 ;
+        :hasUnknownKinship  bdr:P1AG79 ;
+        :isRoot             true ;
+        :note               bdr:NT57474A4814BCBF31 , bdr:NT9BC63608976E4C37 ;
+        :personEvent        bdr:EV71A6EEA90EA91F35 ;
+        :personName         bdr:NM270A2E29734C782F , bdr:NM72938E3048017063 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Orgyen-Tashi/13515"^^xsd:anyURI .
+}

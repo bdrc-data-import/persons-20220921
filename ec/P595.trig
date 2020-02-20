@@ -1,0 +1,95 @@
+@base          <bdg:P595> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P595 {
+    bda:LG567B3954C05F35BE
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T09:21:19.942Z"^^xsd:dateTime ;
+        adm:logMessage      "added office and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGFA54CC3F598B962B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-30T09:24:39.233Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P595  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P595 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "ec/P595.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P595 ;
+        adm:logEntry        bda:LG567B3954C05F35BE , bda:LGFA54CC3F598B962B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14D6BAABEE6653E5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV1F63972C506316E4
+        a                   :PersonDeath ;
+        :onYear             "1881"^^xsd:gYear .
+    
+    bdr:EV2DAE9CA68B10D2E6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G775 ;
+        :onYear             "1833"^^xsd:gYear .
+    
+    bdr:EV4E255FBB585C75E0
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1881"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVD8F54D53E4CEFD9F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1878"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM4E5640290BB3BC62
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 40 pad dkar 'od zer/"@bo-x-ewts .
+    
+    bdr:NM673FD8B00C3B89A7
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 40"@bo-x-ewts .
+    
+    bdr:NM9A461227BFD43CDE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad dkar 'od zer/"@bo-x-ewts .
+    
+    bdr:NT22F678F94C2FCCC3
+        a                   :Note ;
+        :locationStatement  "p. 161" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:NT245339BBD2645238
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1878-1881.\nAscends to throne after service as Mtshan-nyid Slob-dpon.\n1881. Dies in office in great lpain."@en .
+    
+    bdr:NTD60462A8ECBA4DBA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P595  a             :Person ;
+        skos:prefLabel      "pad dkar 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT22F678F94C2FCCC3 , bdr:NT245339BBD2645238 , bdr:NTD60462A8ECBA4DBA ;
+        :personEvent        bdr:EV14D6BAABEE6653E5 , bdr:EV1F63972C506316E4 , bdr:EV2DAE9CA68B10D2E6 , bdr:EV4E255FBB585C75E0 , bdr:EVD8F54D53E4CEFD9F ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4E5640290BB3BC62 , bdr:NM673FD8B00C3B89A7 , bdr:NM9A461227BFD43CDE ;
+        :personStudentOf    bdr:P569 , bdr:P575 .
+}

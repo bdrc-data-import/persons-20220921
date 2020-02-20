@@ -1,0 +1,74 @@
+@base          <bdg:P5276> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5276 {
+    bda:LGA91CAF961586605F
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-10T14:19:14.218Z"^^xsd:dateTime ;
+        adm:logMessage      "testing"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGB31F42C9C40B75F0
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-11T10:57:18.375Z"^^xsd:dateTime ;
+        adm:logMessage      "note added"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:LGFD1EBFAAF990103D
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-06-11T11:08:13.968Z"^^xsd:dateTime ;
+        adm:logMessage      "connection of teacher-student"@en ;
+        adm:logWho          bdr:U00001 .
+    
+    bda:P5276  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5276 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "31/P5276.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5276 ;
+        adm:logEntry        bda:LGA91CAF961586605F , bda:LGB31F42C9C40B75F0 , bda:LGFD1EBFAAF990103D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV42E5DB97C76FD47A
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM89AE2526FC17B46D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sna nam btsun pa skal bzang chos kyi rgya mtsho bsod nams dbang po/"@bo-x-ewts .
+    
+    bdr:NMF3F168F13007B742
+        a                   :PersonPrimaryName ;
+        rdfs:label          "skal bzang chos kyi rgya mtsho bsod nams dbang po/"@bo-x-ewts .
+    
+    bdr:NT3D3DFF2C416D230A
+        a                   :Note ;
+        :locationStatement  "Vol. 3, p. 504" ;
+        :noteSource         bdr:MW19802 .
+    
+    bdr:NT5A9C10F1374B6608
+        a                   :Note ;
+        :noteText           "colleague and contemporary of gser mdog paN chen shAkya mchog ldan at whose behest shakya mchog ldan wrote his shing rta chen po'i srol gnyis kyi rnam par dbye ba bshad nas nges don gcig bsgrub pa'i bstan bcos kyi rgyas 'grel"@en .
+    
+    bdr:P5276  a            :Person ;
+        skos:prefLabel      "skal bzang chos kyi rgya mtsho bsod nams dbang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3D3DFF2C416D230A , bdr:NT5A9C10F1374B6608 ;
+        :personEvent        bdr:EV42E5DB97C76FD47A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM89AE2526FC17B46D , bdr:NMF3F168F13007B742 ;
+        :personStudentOf    bdr:P396 , bdr:P5277 .
+}

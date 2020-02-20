@@ -1,0 +1,65 @@
+@base          <bdg:P2333> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2333 {
+    bda:LGBBEF19B13A6E91A1
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T09:40:10.713Z"^^xsd:dateTime ;
+        adm:logMessage      "added 2 biodata notes"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P2333  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2333 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "82/P2333.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2333 ;
+        adm:logEntry        bda:LGBBEF19B13A6E91A1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV36EE739B1C513264
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr: .
+    
+    bdr:EV4F3729109EF243EA
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1515 ;
+        :onYear             "1924"^^xsd:gYear ;
+        :personEventRole    bdr:R33 .
+    
+    bdr:EV7F6C47701CC77253
+        a                   :PersonBirth ;
+        :onYear             "1877"^^xsd:gYear .
+    
+    bdr:EVD6B5E270C693F202
+        a                   :PersonAssumesOffice ;
+        :onYear             "1894"^^xsd:gYear ;
+        :personEventRole    bdr:R10 .
+    
+    bdr:NM1AC3F294169F2A39
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sgog mkhar ba skal bzang don grub/"@bo-x-ewts .
+    
+    bdr:NMC513980A97647473
+        a                   :PersonPersonalName ;
+        rdfs:label          "skal bzang don grub, sgog mkhar ba/"@bo-x-ewts .
+    
+    bdr:P2333  a            :Person ;
+        skos:prefLabel      "sgog mkhar ba skal bzang don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EV36EE739B1C513264 , bdr:EV4F3729109EF243EA , bdr:EV7F6C47701CC77253 , bdr:EVD6B5E270C693F202 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1AC3F294169F2A39 , bdr:NMC513980A97647473 .
+}

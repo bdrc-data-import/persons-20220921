@@ -1,0 +1,72 @@
+@base          <bdg:P9141> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9141 {
+    bda:LG2832F4CC227AE825
+        a                   adm:LogEntry ;
+        adm:logDate         "2006-10-26T14:41:39.491Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGD42ECE4DA4A6B20A
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:10:27.197Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P9141  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9141 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "05/P9141.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9141 ;
+        adm:logEntry        bda:LG2832F4CC227AE825 , bda:LGD42ECE4DA4A6B20A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV072A08744403464C
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4240 .
+    
+    bdr:EV681CD7F313F449EF
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM32D71957ADC50971
+        a                   :PersonPersonalName ;
+        rdfs:label          "chos kyi 'byung gnas phrin las rnam par rgyal ba/"@bo-x-ewts .
+    
+    bdr:NM43A1679443456A05
+        a                   :PersonPersonalName ;
+        rdfs:label          "stag lung ma sprul ngag dbang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NMB09CFEF22B5690EA
+        a                   :PersonPersonalName ;
+        rdfs:label          "ngag dbang bstan pa'i nyi ma/"@bo-x-ewts .
+    
+    bdr:NT33ABB8FE97435119
+        a                   :Note ;
+        :locationStatement  "p. 839" ;
+        :noteSource         bdr:MW27310 ;
+        :noteText           "noted as a teacher of drag shul 'phrin las rin chen"@en .
+    
+    bdr:P9141  a            :Person ;
+        skos:prefLabel      "ngag dbang bstan pa'i nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT33ABB8FE97435119 ;
+        :personEvent        bdr:EV072A08744403464C , bdr:EV681CD7F313F449EF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM32D71957ADC50971 , bdr:NM43A1679443456A05 , bdr:NMB09CFEF22B5690EA ;
+        :personTeacherOf    bdr:P6067 , bdr:P979 .
+}

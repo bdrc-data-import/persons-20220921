@@ -1,0 +1,71 @@
+@base          <bdg:P6240> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6240 {
+    bda:LGBF1418462C90CE4E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T15:42:19.616Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6240  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6240 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "7b/P6240.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6240 ;
+        adm:logEntry        bda:LGBF1418462C90CE4E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0802CFA0578C05FD
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1983"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EV8D5B99518E0A0B07
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EVE023AECE1462CF25
+        a                   :PersonBirth ;
+        :onYear             "1938"^^xsd:gYear .
+    
+    bdr:NMA05CA77E3275115A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 40"@bo-x-ewts .
+    
+    bdr:NMAA584D52D3785B41
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "a rig gtsang dkar chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMF021805F3B1F7528
+        a                   :PersonPrimaryName ;
+        rdfs:label          "chos 'phel rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT16E5936A95982B16
+        a                   :Note ;
+        :locationStatement  "p. 9 (prelims.), p. 193" ;
+        :noteSource         bdr:MW19871 ;
+        :noteText           "biographical sketch of author,the 40th gdan rabs of gtsang dgon psa"@en .
+    
+    bdr:P6240  a            :Person ;
+        skos:prefLabel      "chos 'phel rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT16E5936A95982B16 ;
+        :personEvent        bdr:EV0802CFA0578C05FD , bdr:EV8D5B99518E0A0B07 , bdr:EVE023AECE1462CF25 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMA05CA77E3275115A , bdr:NMAA584D52D3785B41 , bdr:NMF021805F3B1F7528 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P3JM50> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3JM50 {
+    bda:LG147CBA0F7E064D4C
+        a                   adm:LogEntry ;
+        adm:logDate         "2009-04-17T15:05:55.998Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdr:U00014 .
+    
+    bda:P3JM50  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3JM50 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b5/P3JM50.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3JM50 ;
+        adm:logEntry        bda:LG147CBA0F7E064D4C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV981F8632C1042644
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NMA27DB56AE9204F7D
+        a                   :PersonTitle ;
+        rdfs:label          "khyung po kar+ma 'od zer/"@bo-x-ewts .
+    
+    bdr:NMF8129D4308B048FB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kar+ma 'od zer/"@bo-x-ewts .
+    
+    bdr:NTECD34BD77887EFE6
+        a                   :Note ;
+        :locationStatement  "668" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "gave monastic ordination to the dpal spung si tu 11"@en .
+    
+    bdr:P3JM50  a           :Person ;
+        skos:prefLabel      "kar+ma 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTECD34BD77887EFE6 ;
+        :personEvent        bdr:EV981F8632C1042644 ;
+        :personName         bdr:NMA27DB56AE9204F7D , bdr:NMF8129D4308B048FB ;
+        :personTeacherOf    bdr:P925 .
+}

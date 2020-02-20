@@ -1,0 +1,81 @@
+@base          <bdg:P9907> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9907 {
+    bda:P9907  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9907 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "68/P9907.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9907 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1BC80FCAC4AA69C3
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EV298ABD1CB47D14C9
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G213 ;
+        :onYear             "1951"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV6B6A7A7C4429776F
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G213 ;
+        :onYear             "1955"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV792ADC96502C4641
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4874 .
+    
+    bdr:EVA3EC6E17A7B1DD49
+        a                   :PersonDeath ;
+        :notAfter           "1969"^^xsd:gYear ;
+        :notBefore          "1960"^^xsd:gYear .
+    
+    bdr:NM506859D918FE7C4B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mi nyag dam chos/"@bo-x-ewts .
+    
+    bdr:NM9DD6F1C3BF4B2137
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dam chos/"@bo-x-ewts .
+    
+    bdr:NME770B2FF59409E87
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rdzong sar mkhan rabs 08 dam chos/"@bo-x-ewts .
+    
+    bdr:NT3BF952E8E21C0024
+        a                   :Note ;
+        :locationStatement  "v. 1, p. 480" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "sa skya teacher; the 8th in the abbatial succession of the khams bye teaching college of rdzong sar monastery"@en .
+    
+    bdr:NT9602C2DC42CC9DF5
+        a                   :Note ;
+        :locationStatement  "p. 592" ;
+        :noteSource         bdr:MW29659 ;
+        :noteText           "the 8th in the abbatial succession of the khams bye teaching college of rdzong sar monastery"@en .
+    
+    bdr:P9907  a            :Person ;
+        skos:prefLabel      "dam chos/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3BF952E8E21C0024 , bdr:NT9602C2DC42CC9DF5 ;
+        :personEvent        bdr:EV1BC80FCAC4AA69C3 , bdr:EV298ABD1CB47D14C9 , bdr:EV6B6A7A7C4429776F , bdr:EV792ADC96502C4641 , bdr:EVA3EC6E17A7B1DD49 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM506859D918FE7C4B , bdr:NM9DD6F1C3BF4B2137 , bdr:NME770B2FF59409E87 .
+}

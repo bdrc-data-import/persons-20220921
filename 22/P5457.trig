@@ -1,0 +1,79 @@
+@base          <bdg:P5457> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5457 {
+    bda:LG96FB28F9FB153498
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-15T10:59:30.357Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation relation and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P5457  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5457 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "22/P5457.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5457 ;
+        adm:logEntry        bda:LG96FB28F9FB153498 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2FCBF088E5BE4CAF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1443 ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NM3286B8CAFCA15EF9
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Demo 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM47B5B3EFFB02095B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "de mo 03 lha dbang phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM8C28C9DAD450206B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha dbang phyogs las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NMB3A8A7331BEAE4A7
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "de mo 03"@bo-x-ewts .
+    
+    bdr:NT17D733BB14E45B27
+        a                   :Note ;
+        :locationStatement  "p. 283" ;
+        :noteSource         bdr:MW19220 ;
+        :noteText           "born in kong po gnya' khri grong chen; died at the age of 96\n1) de mo rin po che'i skye phreng dang po gdan sa rim byon gyi thog ma sprul sku dkon mchog 'byung gnas/ mdo stod du 'khrungs/ dgung lo brgyad cu par gshegs/\n2) de'i sprul sku dpal 'byor bkra shis/ kong po sa dkar chos khang du 'khrungs/ dgung lo don gsum par gshegs/"@en .
+    
+    bdr:NT98FAA35A2B939383
+        a                   :Note ;
+        :noteText           "met the 1st paN chen in 1609 and 1615 according to the history of the vajrabhairava practice by the 1st 'jam dbyangs bzhad pa\ndied at the age of 57"@en .
+    
+    bdr:NTB64F9B36464823A8
+        a                   :Note ;
+        :locationStatement  "p. 293" ;
+        :noteSource         bdr:MW2GS1123 ;
+        :noteText           "1) dkon mchog 'byung gnas ('khrungs yul mdo stod lbig) ('tsho bzhugs dgung grangs 80); \n2) dpal 'byor bkra shis ('khrungs yul kong po dkar chos khang)('tsho bzhugs dgung grangs 73); "@en .
+    
+    bdr:P5457  a            :Person ;
+        skos:prefLabel      "lha dbang phyogs las rnam rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P5456 ;
+        :isRoot             true ;
+        :note               bdr:NT17D733BB14E45B27 , bdr:NT98FAA35A2B939383 , bdr:NTB64F9B36464823A8 ;
+        :personEvent        bdr:EV2FCBF088E5BE4CAF ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3286B8CAFCA15EF9 , bdr:NM47B5B3EFFB02095B , bdr:NM8C28C9DAD450206B , bdr:NMB3A8A7331BEAE4A7 ;
+        :personStudentOf    bdr:P177 , bdr:P2108 .
+}

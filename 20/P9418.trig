@@ -1,0 +1,106 @@
+@base          <bdg:P9418> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9418 {
+    bda:LG14F61597A5AF04D0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-08-29T15:02:29.552Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title, event and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGA3429703933A477B
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-10T11:49:47.349Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9418  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9418 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "20/P9418.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9418 ;
+        adm:logEntry        bda:LG14F61597A5AF04D0 , bda:LGA3429703933A477B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV079DBD94B7EB0C74
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EV3218104445606DAC
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EV632F598B29917702
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:EV856F8ED456AA4784
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV8AFE83AF606C6552
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G163 ;
+        :onYear             "1827"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM0645171C9F69B271
+        a                   :PersonPersonalName ;
+        rdfs:label          "dge 'dun bsam 'grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM37351A061036FF2A
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 09"@bo-x-ewts .
+    
+    bdr:NM4C25AEE5A7E27CF1
+        a                   :PersonCommonName ;
+        rdfs:label          "bla ma bsam grub tshang /"@bo-x-ewts .
+    
+    bdr:NM8B2638E59F63471F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dgon chen gdan rabs 30"@bo-x-ewts .
+    
+    bdr:NMA1AF8CFE7126DDFE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yongs 'dzin dge 'dun bsam grub rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT1C4DBF1C2B39ABAA
+        a                   :Note ;
+        :locationStatement  "p. 322" ;
+        :noteSource         bdr:MW28064 ;
+        :noteText           "dge 'dun bsam 'grub rgya mtsho \nnyid ni shar dge 'dun 'phrin las rab rgyas kyi yongs 'dzin mdzad pa mdo ba'i 'jam dbyangs kyi skye bar ngos bzung/ dgon chen du thugs gnyer mdzad/ rgyud pa dang tshogs chen khrir bzhugs/ grwa tshang la rgyun ja'i thebs bzhag/ khri khur spos nas kyang tA 'gyed lan du mar phul ba sogs dge 'dun gyi bsnyen bkur gzab/ rnam thar gyi yi ge yod snang"@en .
+    
+    bdr:NT713A854943AB467A
+        a                   :Note ;
+        :locationStatement  "p. 396" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:NTE3E8BC7CCF6625E5
+        a                   :Note ;
+        :locationStatement  "p. 244-245" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P9418  a            :Person ;
+        skos:prefLabel      "dge 'dun bsam 'grub rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C4DBF1C2B39ABAA , bdr:NT713A854943AB467A , bdr:NTE3E8BC7CCF6625E5 ;
+        :personEvent        bdr:EV079DBD94B7EB0C74 , bdr:EV3218104445606DAC , bdr:EV632F598B29917702 , bdr:EV856F8ED456AA4784 , bdr:EV8AFE83AF606C6552 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0645171C9F69B271 , bdr:NM37351A061036FF2A , bdr:NM4C25AEE5A7E27CF1 , bdr:NM8B2638E59F63471F , bdr:NMA1AF8CFE7126DDFE ;
+        :personTeacherOf    bdr:P312 .
+}

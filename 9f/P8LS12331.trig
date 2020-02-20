@@ -1,0 +1,65 @@
+@base          <bdg:P8LS12331> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12331 {
+    bda:LG4C1A89CEA8E52766
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-24T15:33:54.654Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12331  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12331 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "9f/P8LS12331.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12331 ;
+        adm:logEntry        bda:LG4C1A89CEA8E52766 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV144A1F7757652BDB
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G301 ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVB57D1E637780DF2F
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G301 .
+    
+    bdr:NM1250C707BF874C83
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog nyi ma/"@bo-x-ewts .
+    
+    bdr:NM3BE4B5231D6042D1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ko'u dge sprul dkon mchog nyi ma/"@bo-x-ewts .
+    
+    bdr:NMD4AE2688D021E5F5
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "shis tshang gdan rabs 15"@bo-x-ewts .
+    
+    bdr:NT68D355646475B9EE
+        a                   :Note ;
+        :locationStatement  "p. 354-360" ;
+        :noteSource         bdr:MW19255 ;
+        :noteText           "born in a famous medical practioner family"@en .
+    
+    bdr:P8LS12331  a        :Person ;
+        skos:prefLabel      "dkon mchog nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT68D355646475B9EE ;
+        :personEvent        bdr:EV144A1F7757652BDB , bdr:EVB57D1E637780DF2F ;
+        :personName         bdr:NM1250C707BF874C83 , bdr:NM3BE4B5231D6042D1 , bdr:NMD4AE2688D021E5F5 .
+}

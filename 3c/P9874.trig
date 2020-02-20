@@ -1,0 +1,70 @@
+@base          <bdg:P9874> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9874 {
+    bda:LGBB65E82550B5D32B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-25T14:55:51.765Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P9874  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9874 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "3c/P9874.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9874 ;
+        adm:logEntry        bda:LGBB65E82550B5D32B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0441F6F671529868
+        a                   :PersonBirth ;
+        :onYear             "1971"^^xsd:gYear .
+    
+    bdr:EV4ECCE10008CADFAC
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4652 .
+    
+    bdr:NM351FA65D5AE562CE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dpon bla 05 blo bzang 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM3E46E5529C72B060
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Ponla 05"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM63F4A8079B916002
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "dpon bla 05"@bo-x-ewts .
+    
+    bdr:NM7E195822C77AB20A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT658F82953686089B
+        a                   :Note ;
+        :locationStatement  "p. 274" ;
+        :noteSource         bdr:MW29636 ;
+        :noteText           "biography"@en .
+    
+    bdr:P9874  a            :Person ;
+        skos:prefLabel      "blo bzang 'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P9881 ;
+        :isRoot             true ;
+        :note               bdr:NT658F82953686089B ;
+        :personEvent        bdr:EV0441F6F671529868 , bdr:EV4ECCE10008CADFAC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM351FA65D5AE562CE , bdr:NM3E46E5529C72B060 , bdr:NM63F4A8079B916002 , bdr:NM7E195822C77AB20A .
+}

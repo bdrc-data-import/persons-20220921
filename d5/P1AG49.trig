@@ -1,0 +1,90 @@
+@base          <bdg:P1AG49> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AG49 {
+    bda:LG3A150B2E378682E7
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:40:05.424Z"^^xsd:dateTime ;
+        adm:logMessage      "added incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LG411D52C8E8DA1288
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:47:44.41Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:LGEDECCCBA63BD991C
+        a                   adm:LogEntry ;
+        adm:logDate         "2015-09-03T12:46:39.686Z"^^xsd:dateTime ;
+        adm:logMessage      "incarnation link"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P1AG49  a           adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AG49 ;
+        adm:facetIndex      12 ;
+        adm:gitPath         "d5/P1AG49.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AG49 ;
+        adm:logEntry        bda:LG3A150B2E378682E7 , bda:LG411D52C8E8DA1288 , bda:LGEDECCCBA63BD991C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6D6EE4094F2E5B23
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G70 .
+    
+    bdr:EVD489CDDC38D7CEB3
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:EVD74CFB9589E8F6E1
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G70 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVE55DF8762CEF213B
+        a                   :PersonDeath ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM14B986516B9EC090
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis grags pa rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM21031EA31B19BFD5
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'phags mchog 02"@bo-x-ewts .
+    
+    bdr:NM609695B324557210
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "ri bo che gdan rab 15"@bo-x-ewts .
+    
+    bdr:NTF476F6B51B128BB1
+        a                   :Note ;
+        :locationStatement  "vol. 9, p. 665" ;
+        :noteSource         bdr:MW1KG10294 ;
+        :noteText           "bio data"@en .
+    
+    bdr:P1AG49  a           :Person ;
+        skos:prefLabel      "bkra shis grags pa rgyal mtshan/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P1AG48 ;
+        :isRoot             true ;
+        :note               bdr:NTF476F6B51B128BB1 ;
+        :personEvent        bdr:EV6D6EE4094F2E5B23 , bdr:EVD489CDDC38D7CEB3 , bdr:EVD74CFB9589E8F6E1 , bdr:EVE55DF8762CEF213B ;
+        :personName         bdr:NM14B986516B9EC090 , bdr:NM21031EA31B19BFD5 , bdr:NM609695B324557210 ;
+        :personStudentOf    bdr:P3AG48 .
+}

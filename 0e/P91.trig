@@ -1,0 +1,62 @@
+@base          <bdg:P91> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P91 {
+    bda:LGAE118C781E9001D7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-25T09:28:26.21Z"^^xsd:dateTime ;
+        adm:logMessage      "added title"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P91  a              adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P91 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "0e/P91.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P91 ;
+        adm:logEntry        bda:LGAE118C781E9001D7 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5F20081A0C7E9D1A
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM1C4549A927335A75
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po tshul khrims shes rab/"@bo-x-ewts .
+    
+    bdr:NM569A1996D0E3EA32
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshul khrims shes rab/"@bo-x-ewts .
+    
+    bdr:NT1CA441CE42E0B025
+        a                   :Note ;
+        :noteText           "Master of the various gzhung."@en .
+    
+    bdr:NT8893CCAC9EDC9C1D
+        a                   :Note ;
+        :locationStatement  "p. 225" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P91  a              :Person ;
+        skos:prefLabel      "tshul khrims shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1CA441CE42E0B025 , bdr:NT8893CCAC9EDC9C1D ;
+        :personEvent        bdr:EV5F20081A0C7E9D1A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1C4549A927335A75 , bdr:NM569A1996D0E3EA32 ;
+        :personTeacherOf    bdr:P88 .
+}

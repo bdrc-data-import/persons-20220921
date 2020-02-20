@@ -1,0 +1,73 @@
+@base          <bdg:P420> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P420 {
+    bda:LGA4FBEC91A7011E70
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-05T15:50:48.577Z"^^xsd:dateTime ;
+        adm:logMessage      "sa skya bdag nyid chen po"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P420  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P420 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "52/P420.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P420 ;
+        adm:logEntry        bda:LGA4FBEC91A7011E70 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5F689B468D08A4E9
+        a                   :PersonAssumesOffice ;
+        :onYear             "1703"^^xsd:gYear ;
+        :personEventRole    bdr:R44 .
+    
+    bdr:EV721152A79073D261
+        a                   :PersonDeath ;
+        :onYear             "1717"^^xsd:gYear .
+    
+    bdr:NM140456E11B797B9A
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha bzang klu dpal/"@bo-x-ewts .
+    
+    bdr:NMC80D720D8B11310E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha bzang khAng /"@bo-x-ewts .
+    
+    bdr:NMFDEF39C2EB5DEF21
+        a                   :PersonTitle ;
+        rdfs:label          "sog po lha bzang /"@bo-x-ewts .
+    
+    bdr:NT068D530391B6EA00
+        a                   :Note ;
+        :locationStatement  "p. 704" ;
+        :noteSource         bdr:MW19803 ;
+        :noteText           "source contains a biographical sketch"@en .
+    
+    bdr:NTC6359BEF9B9B1F66
+        a                   :Note ;
+        :locationStatement  "p. 366, 367" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1705. kills sde srid sangs rgyas rgya mtsho\n1707. becomes ruler (sde srid) of tibet"@en .
+    
+    bdr:P420  a             :Person ;
+        skos:prefLabel      "lha bzang khAng /"@bo-x-ewts ;
+        :hasFather          bdr:P7053 ;
+        :isRoot             true ;
+        :note               bdr:NT068D530391B6EA00 , bdr:NTC6359BEF9B9B1F66 ;
+        :personEvent        bdr:EV5F689B468D08A4E9 , bdr:EV721152A79073D261 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM140456E11B797B9A , bdr:NMC80D720D8B11310E , bdr:NMFDEF39C2EB5DEF21 .
+}

@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12326> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12326 {
+    bda:LG9EDC53325F46C4F4
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-11T11:29:55.905Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12326  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12326 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "da/P8LS12326.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12326 ;
+        adm:logEntry        bda:LG9EDC53325F46C4F4 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVE044895D18074395
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G8LS12318 .
+    
+    bdr:EVF00FF0EAF5D547E8
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G8LS12318 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NMA2B58E02A2179C0E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo gsal rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMAAE5908937A8FE0F
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rong po dus 'khor khri 19"@bo-x-ewts .
+    
+    bdr:NTA6CF34E47B3ACC0B
+        a                   :Note ;
+        :locationStatement  "p. 396" ;
+        :noteSource         bdr:MW27315 .
+    
+    bdr:P8LS12326  a        :Person ;
+        skos:prefLabel      "blo gsal rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA6CF34E47B3ACC0B ;
+        :personEvent        bdr:EVE044895D18074395 , bdr:EVF00FF0EAF5D547E8 ;
+        :personName         bdr:NMA2B58E02A2179C0E , bdr:NMAAE5908937A8FE0F .
+}

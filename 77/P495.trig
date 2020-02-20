@@ -1,0 +1,58 @@
+@base          <bdg:P495> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P495 {
+    bda:LG109FE13BFE6FFA96
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-22T11:15:39.967Z"^^xsd:dateTime ;
+        adm:logMessage      "office dates, teacher and student"@en ;
+        adm:logWho          bdr:U00002 .
+    
+    bda:P495  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P495 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "77/P495.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P495 ;
+        adm:logEntry        bda:LG109FE13BFE6FFA96 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVAA24758E7E8B62B8
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NMBB271CDF2B1E2B18
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas lhun grub/"@bo-x-ewts .
+    
+    bdr:NMF44ABD8110F58047
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'dzam gling rab 'byams pa/"@bo-x-ewts .
+    
+    bdr:NTE887F6E3A49CF939
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:P495  a             :Person ;
+        skos:prefLabel      "sangs rgyas lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE887F6E3A49CF939 ;
+        :personEvent        bdr:EVAA24758E7E8B62B8 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMBB271CDF2B1E2B18 , bdr:NMF44ABD8110F58047 ;
+        :personStudentOf    bdr:P484 ;
+        :personTeacherOf    bdr:P796 .
+}

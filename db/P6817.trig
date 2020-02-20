@@ -1,0 +1,78 @@
+@base          <bdg:P6817> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6817 {
+    bda:LG91217C29F0641410
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-17T09:59:15.692Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P6817  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6817 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "db/P6817.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6817 ;
+        adm:logEntry        bda:LG91217C29F0641410 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0F465B45B3ACB902
+        a                   :PersonBirth ;
+        :onYear             "1809"^^xsd:gYear .
+    
+    bdr:EV2025852CC8950B1B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1936 .
+    
+    bdr:EV742EB4730481E43A
+        a                   :PersonDeath ;
+        :onYear             "1879"^^xsd:gYear .
+    
+    bdr:NM0A285F6C7F32C8A8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "gser lag 04"@bo-x-ewts .
+    
+    bdr:NM0A9A664400D4B62F
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Serlak 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM356967AC53AF5F77
+        a                   :PersonTitle ;
+        rdfs:label          "rgya li 04 blo bzang ye shes thub bstan dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMB815C3A9155A576D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gser lag 04 blo bzang ye shes thub bstan dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMCAAE90AD3F426A3A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang ye shes thub bstan dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT26092BEC36D12EE6
+        a                   :Note ;
+        :locationStatement  "p. 703" ;
+        :noteSource         bdr:MW20214 ;
+        :noteText           "biography"@en .
+    
+    bdr:P6817  a            :Person ;
+        skos:prefLabel      "blo bzang ye shes thub bstan dar rgyas/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P6816 ;
+        :isRoot             true ;
+        :note               bdr:NT26092BEC36D12EE6 ;
+        :personEvent        bdr:EV0F465B45B3ACB902 , bdr:EV2025852CC8950B1B , bdr:EV742EB4730481E43A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM0A285F6C7F32C8A8 , bdr:NM0A9A664400D4B62F , bdr:NM356967AC53AF5F77 , bdr:NMB815C3A9155A576D , bdr:NMCAAE90AD3F426A3A .
+}

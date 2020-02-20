@@ -1,0 +1,81 @@
+@base          <bdg:P8LS12171> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12171 {
+    bda:LG455E89CB5E145497
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T15:48:02.549Z"^^xsd:dateTime ;
+        adm:logMessage      "year of death edited"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDD231EBB37403E79
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-23T15:45:27.258Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12171  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12171 ;
+        adm:facetIndex      11 ;
+        adm:gitPath         "51/P8LS12171.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12171 ;
+        adm:logEntry        bda:LG455E89CB5E145497 , bda:LGDD231EBB37403E79 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7E0E035BED698031
+        a                   :PersonDeath ;
+        :onYear             "1990"^^xsd:gYear .
+    
+    bdr:EVC287592E513E06A4
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EVD244738022D90300
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G1196 ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:EVE37D8D03DDFEB8E4
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NM8469B8C7E65EF76C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'bras spungs rab brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBD031C3DB5C3BA6F
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rab brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMBD8F6FE1F1143590
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang khri 40"@bo-x-ewts .
+    
+    bdr:NT979024BC96826D64
+        a                   :Note ;
+        :locationStatement  "p. 160-167" ;
+        :noteSource         bdr:MW21017 ;
+        :noteText           "He was recognised as the incarnation of hwar ba dge bshes chen mo\n1987\tagain became khri of rnga yul sgo mang\nAlso became khri of gnyan rtse, zi'i dgon dga' ldan bkra shis chos gling and mchod rten lcog theg chen byams pa gling monastery"@en .
+    
+    bdr:P8LS12171  a        :Person ;
+        skos:prefLabel      "rab brtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT979024BC96826D64 ;
+        :personEvent        bdr:EV7E0E035BED698031 , bdr:EVC287592E513E06A4 , bdr:EVD244738022D90300 , bdr:EVE37D8D03DDFEB8E4 ;
+        :personName         bdr:NM8469B8C7E65EF76C , bdr:NMBD031C3DB5C3BA6F , bdr:NMBD8F6FE1F1143590 ;
+        :personStudentOf    bdr:P1647 , bdr:P8983 .
+}

@@ -1,0 +1,70 @@
+@base          <bdg:P4403> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P4403 {
+    bda:LG8BD2212C54736B7E
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T13:41:47.036Z"^^xsd:dateTime ;
+        adm:logMessage      "deleted misname"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P4403  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P4403 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "0b/P4403.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P4403 ;
+        adm:logEntry        bda:LG8BD2212C54736B7E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1D3395ACCA4D190A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G312 .
+    
+    bdr:EV8688E9A37E33344E
+        a                   :PersonBirth ;
+        :onYear             "1408"^^xsd:gYear .
+    
+    bdr:EVE919241086B8D5E5
+        a                   :PersonDeath ;
+        :onYear             "1450"^^xsd:gYear .
+    
+    bdr:NM00B230A1FBC9BA66
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM62CE6529EDA174CD
+        a                   :PersonPersonalName ;
+        rdfs:label          "zhwa lu bsod nams rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NT8A0EE22446406638
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Sa-skya-pa"@en .
+    
+    bdr:NTEBE04BF5B0FBEDBA
+        a                   :Note ;
+        :locationStatement  "p. 1437" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:P4403  a            :Person ;
+        skos:prefLabel      "bsod nams rgyal mtshan/"@bo-x-ewts ;
+        :hasFather          bdr:P4404 ;
+        :hasMother          bdr:P4405 ;
+        :isRoot             true ;
+        :note               bdr:NT8A0EE22446406638 , bdr:NTEBE04BF5B0FBEDBA ;
+        :personEvent        bdr:EV1D3395ACCA4D190A , bdr:EV8688E9A37E33344E , bdr:EVE919241086B8D5E5 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM00B230A1FBC9BA66 , bdr:NM62CE6529EDA174CD .
+}

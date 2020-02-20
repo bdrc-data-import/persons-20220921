@@ -1,0 +1,51 @@
+@base          <bdg:P3967> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3967 {
+    bda:P3967  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3967 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "f8/P3967.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3967 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A1D98FCC55DFCD6
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM54DE96E536510BD2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan chen bkra shis rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM6D0466DA34B1DA60
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra shis rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTEE0650FB2A34339C
+        a                   :Note ;
+        :noteText           "teacher from central tibet, probably a sa skya master"@en .
+    
+    bdr:P3967  a            :Person ;
+        skos:prefLabel      "bkra shis rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTEE0650FB2A34339C ;
+        :personEvent        bdr:EV3A1D98FCC55DFCD6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM54DE96E536510BD2 , bdr:NM6D0466DA34B1DA60 ;
+        :personStudentOf    bdr:P3966 ;
+        :personTeacherOf    bdr:P2387 .
+}

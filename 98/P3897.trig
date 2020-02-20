@@ -1,0 +1,58 @@
+@base          <bdg:P3897> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3897 {
+    bda:LGA9F979C214511CCF
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-02-12T09:40:12.595Z"^^xsd:dateTime ;
+        adm:logMessage      "added 2 biodata notes"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P3897  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3897 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "98/P3897.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3897 ;
+        adm:logEntry        bda:LGA9F979C214511CCF ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDBAC7D04FBF5F5AC
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM6EBB2FCE28CF7A61
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NM717E69170B18F8A2
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngor pa dkon mchog seng+ge"@bo-x-ewts .
+    
+    bdr:NT6DCB89E0AE594EB8
+        a                   :Note ;
+        :noteText           "teacher of the ngor pa subsect of the sa skya; teacher in the lineage of the lam 'bras tshogs bshad"@en .
+    
+    bdr:P3897  a            :Person ;
+        skos:prefLabel      "dkon mchog seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6DCB89E0AE594EB8 ;
+        :personEvent        bdr:EVDBAC7D04FBF5F5AC ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6EBB2FCE28CF7A61 , bdr:NM717E69170B18F8A2 ;
+        :personStudentOf    bdr:P1037 ;
+        :personTeacherOf    bdr:P2509 , bdr:P7532 .
+}

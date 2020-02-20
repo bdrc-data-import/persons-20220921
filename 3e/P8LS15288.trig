@@ -1,0 +1,79 @@
+@base          <bdg:P8LS15288> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15288 {
+    bda:LG7412D80FA6ABBF18
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-05-22T15:53:36.585Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15288  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15288 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "3e/P8LS15288.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15288 ;
+        adm:logEntry        bda:LG7412D80FA6ABBF18 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15942E319BE3F034
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:EVC422B1E69A1EB3D2
+        a                   :PersonAssumesOffice ;
+        :onYear             "1704"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:EVCB51A40BF4D84A20
+        a                   :PersonLeavesOffice ;
+        :onYear             "1706"^^xsd:gYear ;
+        :personEventRole    bdr:R36 .
+    
+    bdr:EVD98A77976D912780
+        a                   :PersonDeath ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM0E8A9EE2E5CB556B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde srid ngag dbang rin chen/"@bo-x-ewts .
+    
+    bdr:NM3515D27821315736
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang rin chen/"@bo-x-ewts .
+    
+    bdr:NT63C20265DFAC5F02
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 481" ;
+        :noteSource         bdr:MW28263 ;
+        :noteText           "shing sprel 1704 lor/ \nsde srid rin po ches chab srid thugs 'gan bshol nas rigs sras ngag dbang rin chen la sde srid bsko bzhag gnang /"@bo-x-ewts .
+    
+    bdr:NTA9456611864E58DC
+        a                   :Note ;
+        :locationStatement  "p. 125" ;
+        :noteSource         bdr:MW1KG5727 ;
+        :noteText           "sangs rgyas rgya mtsho dang lhan sbrel thog srid bskyangs mthar mes rgyal nang khul du bros/"@bo-x-ewts .
+    
+    bdr:P8LS15288  a        :Person ;
+        skos:prefLabel      "ngag dbang rin chen/"@bo-x-ewts ;
+        :hasFather          bdr:P421 ;
+        :isRoot             true ;
+        :note               bdr:NT63C20265DFAC5F02 , bdr:NTA9456611864E58DC ;
+        :personEvent        bdr:EV15942E319BE3F034 , bdr:EVC422B1E69A1EB3D2 , bdr:EVCB51A40BF4D84A20 , bdr:EVD98A77976D912780 ;
+        :personName         bdr:NM0E8A9EE2E5CB556B , bdr:NM3515D27821315736 .
+}

@@ -1,0 +1,61 @@
+@base          <bdg:P939> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P939 {
+    bda:P939  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P939 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "e8/P939.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P939 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV15ED09B2C6D23569
+        a                   :PersonBirth ;
+        :onYear             "1639"^^xsd:gYear .
+    
+    bdr:EVC21E098A24EBBA1A
+        a                   :PersonDeath ;
+        :onYear             "1682"^^xsd:gYear .
+    
+    bdr:NM3D2B5651E1D6E10D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyid shod zhabs drung ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NM7FBB08A69241E900
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NTA799B83213B35DAF
+        a                   :Note ;
+        :locationStatement  "p. 350" ;
+        :noteSource         bdr:MW21015 ;
+        :noteText           "1639. born"@en .
+    
+    bdr:NTC589B1B29565D97B
+        a                   :Note ;
+        :locationStatement  "p. 238" ;
+        :noteSource         bdr:MW19836 .
+    
+    bdr:P939  a             :Person ;
+        skos:prefLabel      "ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA799B83213B35DAF , bdr:NTC589B1B29565D97B ;
+        :personEvent        bdr:EV15ED09B2C6D23569 , bdr:EVC21E098A24EBBA1A ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3D2B5651E1D6E10D , bdr:NM7FBB08A69241E900 ;
+        :personStudentOf    bdr:P1002 , bdr:P1786 , bdr:P2277 , bdr:P3368 , bdr:P719 ;
+        :personTeacherOf    bdr:P2277 , bdr:P2315 , bdr:P3308 , bdr:P3369 , bdr:P5749 .
+}

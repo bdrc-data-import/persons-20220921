@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12853> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12853 {
+    bda:LGEA7F7652E1268CA8
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T14:03:40.406Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12853  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12853 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "60/P8LS12853.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12853 ;
+        adm:logEntry        bda:LGEA7F7652E1268CA8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7B209C16EB884326
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1962 .
+    
+    bdr:EVA37A4F8570BA9719
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1962 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM987E444185E98912
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bkra khyom sprul sku/"@bo-x-ewts .
+    
+    bdr:NMEF228B40856DBB12
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "a mchog mtshan nyid dgon gyi gdan rabs 06"@bo-x-ewts .
+    
+    bdr:NT714A819C9DF688F0
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 21" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:P8LS12853  a        :Person ;
+        skos:prefLabel      "bkra khyom sprul sku/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT714A819C9DF688F0 ;
+        :personEvent        bdr:EV7B209C16EB884326 , bdr:EVA37A4F8570BA9719 ;
+        :personName         bdr:NM987E444185E98912 , bdr:NMEF228B40856DBB12 .
+}

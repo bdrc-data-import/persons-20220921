@@ -1,0 +1,68 @@
+@base          <bdg:P8LS12847> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12847 {
+    bda:LG3A8F3D95F6866FF3
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T11:00:30.535Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12847  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12847 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "e1/P8LS12847.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12847 ;
+        adm:logEntry        bda:LG3A8F3D95F6866FF3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV14DCA30EFB752D1F
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7D4CF63A9FB78BB0
+        a                   :PersonDeath ;
+        :onYear             "1991"^^xsd:gYear .
+    
+    bdr:EV8F816B53BDB0BCED
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVCC008D81484FB7EF
+        a                   :PersonBirth ;
+        :onYear             "1918"^^xsd:gYear .
+    
+    bdr:NM213E37DBE4FDD8D2
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang mkhan rabs 23"@bo-x-ewts .
+    
+    bdr:NMA098EC985103D0BE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rab brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NTB0EAD2AE2A95C3D2
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 16" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:P8LS12847  a        :Person ;
+        skos:prefLabel      "rab brtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB0EAD2AE2A95C3D2 ;
+        :personEvent        bdr:EV14DCA30EFB752D1F , bdr:EV7D4CF63A9FB78BB0 , bdr:EV8F816B53BDB0BCED , bdr:EVCC008D81484FB7EF ;
+        :personName         bdr:NM213E37DBE4FDD8D2 , bdr:NMA098EC985103D0BE .
+}

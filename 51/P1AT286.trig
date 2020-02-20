@@ -1,0 +1,71 @@
+@base          <bdg:P1AT286> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P1AT286 {
+    bda:LG4A258A89A43A40A3
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-18T12:02:15.483Z"^^xsd:dateTime ;
+        adm:logMessage      "added seeat"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG9977735CBD597424
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-06-11T15:53:22.262Z"^^xsd:dateTime ;
+        adm:logMessage      "edited name"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:LGA892002CD23948C3
+        a                   adm:LogEntry ;
+        adm:logDate         "2008-12-19T15:45:33.157Z"^^xsd:dateTime ;
+        adm:logMessage      "created person"@en .
+    
+    bda:P1AT286  a          adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P1AT286 ;
+        adm:facetIndex      9 ;
+        adm:gitPath         "51/P1AT286.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P1AT286 ;
+        adm:logEntry        bda:LG4A258A89A43A40A3 , bda:LG9977735CBD597424 , bda:LGA892002CD23948C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV5135C77856A8DADF
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVA0E8E19ABCDA6C17
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2652 .
+    
+    bdr:NM35D4ABEB4778A618
+        a                   :PersonPersonalName ;
+        rdfs:label          "karma mchog gsal pa/"@bo-x-ewts .
+    
+    bdr:NM55F71D523AF343AC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "zur ban kar+ma mchog gsal pa/"@bo-x-ewts .
+    
+    bdr:NTAA67BEEAF5F71425
+        a                   :Note ;
+        :noteText           "scribe of some of Kunzang Drodul's texts"@en .
+    
+    bdr:P1AT286  a          :Person ;
+        skos:prefLabel      "karma mchog gsal pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTAA67BEEAF5F71425 ;
+        :personEvent        bdr:EV5135C77856A8DADF , bdr:EVA0E8E19ABCDA6C17 ;
+        :personName         bdr:NM35D4ABEB4778A618 , bdr:NM55F71D523AF343AC ;
+        :personStudentOf    bdr:P6897 .
+}

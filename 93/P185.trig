@@ -1,0 +1,50 @@
+@base          <bdg:P185> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P185 {
+    bda:P185  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P185 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "93/P185.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P185 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDF9CA0AC32B7AC7C
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM3297ACA8D5F1BBDA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM57D648BE31E19CC3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug pa 'phrin las rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NTA0633BA5D41D019D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:P185  a             :Person ;
+        skos:prefLabel      "'phrin las rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTA0633BA5D41D019D ;
+        :personEvent        bdr:EVDF9CA0AC32B7AC7C ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM3297ACA8D5F1BBDA , bdr:NM57D648BE31E19CC3 ;
+        :personTeacherOf    bdr:P183 .
+}

@@ -1,0 +1,75 @@
+@base          <bdg:P3620> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3620 {
+    bda:LG03E002FF3ABFE645
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T16:50:10.183Z"^^xsd:dateTime ;
+        adm:logMessage      "mtshan gnas mnan yod"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P3620  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3620 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "a3/P3620.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3620 ;
+        adm:logEntry        bda:LG03E002FF3ABFE645 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV045A61268E52C161
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:EVB104FAAC93A3D4D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G160 .
+    
+    bdr:NM40AFA18C9D189971
+        a                   :PersonTitle ;
+        rdfs:label          "bka' 'gyur ba 'jam dbyangs tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM41EE6E3F36E68CE3
+        a                   :PersonTitle ;
+        rdfs:label          "zhabs drung ri khrod pa 'jam dbyangs tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM7BB1026E086578BD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCB18369987E90ED9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ri khrod pa 'jam dbyangs tshul khrims rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT7BAEBCF9CD5B906F
+        a                   :Note ;
+        :locationStatement  "p. 1140" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NT7F3CC0519041F5AA
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3620  a            :Person ;
+        skos:prefLabel      "'jam dbyangs tshul khrims rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT7BAEBCF9CD5B906F , bdr:NT7F3CC0519041F5AA ;
+        :personEvent        bdr:EV045A61268E52C161 , bdr:EVB104FAAC93A3D4D7 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM40AFA18C9D189971 , bdr:NM41EE6E3F36E68CE3 , bdr:NM7BB1026E086578BD , bdr:NMCB18369987E90ED9 ;
+        :personStudentOf    bdr:P122 ;
+        :personTeacherOf    bdr:P251 , bdr:P3616 , bdr:P5525 .
+}

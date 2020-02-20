@@ -1,0 +1,76 @@
+@base          <bdg:P8330> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8330 {
+    bda:LG7BBFE990823D9482
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-24T15:11:33.391Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8330  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8330 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "1e/P8330.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8330 ;
+        adm:logEntry        bda:LG7BBFE990823D9482 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV757E5CF19958B061
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3953 ;
+        :onYear             "1972"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:EV7A88570EDF3D79EB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3953 .
+    
+    bdr:EV9611DF90252F628D
+        a                   :PersonBirth ;
+        :onYear             "1972"^^xsd:gYear .
+    
+    bdr:NM188C583EB92249A8
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Gotsa Choktrul 04"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM3AA80D1BE4541787
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kun bzang chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM42C35A0A0640DDF6
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "mgo tsha mchog sprul 04"@bo-x-ewts .
+    
+    bdr:NM74DCA2BF3F2DB7D0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mgo tsha mchog sprul 04 kun bzang chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT673E5CEF30F6B86E
+        a                   :Note ;
+        :locationStatement  "v. 2, p. 236" ;
+        :noteSource         bdr:MW19997 ;
+        :noteText           "short biodata\nb. rab byung 16 chu byi\nrecognized by lab bsod nams rtse mo, rdo brag skyabs mgon 'jam dpal blo bzang, and mkhan chen yon tan bzang po"@en .
+    
+    bdr:P8330  a            :Person ;
+        skos:prefLabel      "kun bzang chos kyi rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P8329 ;
+        :isRoot             true ;
+        :note               bdr:NT673E5CEF30F6B86E ;
+        :personEvent        bdr:EV757E5CF19958B061 , bdr:EV7A88570EDF3D79EB , bdr:EV9611DF90252F628D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM188C583EB92249A8 , bdr:NM3AA80D1BE4541787 , bdr:NM42C35A0A0640DDF6 , bdr:NM74DCA2BF3F2DB7D0 .
+}

@@ -1,0 +1,55 @@
+@base          <bdg:P3072> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P3072 {
+    bda:LGFF00D59F8C1D5BE2
+        a                   adm:LogEntry ;
+        adm:logDate         "2019-03-14T11:22:08.288Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrwan infavor of P2285"@en ;
+        adm:logWho          bdr:U00017 .
+    
+    bda:P3072  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P3072 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a8/P3072.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P3072 ;
+        adm:logEntry        bda:LGFF00D59F8C1D5BE2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:replaceWith     bdr:P2285 ;
+        adm:status          bda:StatusWithdrawn .
+    
+    bdr:EV5BC55E82D0FD27E1
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM71D19EDD3B2FCA46
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTC02099869CC58DBB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P3072  a            :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC02099869CC58DBB ;
+        :personEvent        bdr:EV5BC55E82D0FD27E1 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM71D19EDD3B2FCA46 ;
+        :personStudentOf    bdr:P106 , bdr:P5693 ;
+        :personTeacherOf    bdr:P353 .
+}

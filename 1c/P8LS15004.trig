@@ -1,0 +1,57 @@
+@base          <bdg:P8LS15004> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS15004 {
+    bda:LG118E6CE61EE6310A
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-01-21T09:10:29.186Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS15004  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS15004 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "1c/P8LS15004.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS15004 ;
+        adm:logEntry        bda:LG118E6CE61EE6310A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV79A5695150EFA914
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM624605260DBE9F53
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe dbang rab brtan/"@bo-x-ewts .
+    
+    bdr:NMF9E31ED97D83A86E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "kar+ma tshe dbang rab brtan/"@bo-x-ewts .
+    
+    bdr:NTF5FBEC955FF0C469
+        a                   :Note ;
+        :locationStatement  "vol. e, f. 16a6" ;
+        :noteSource         bdr:MW29706 ;
+        :noteText           "physician name found in the Kongtrul's transmission lineage of medicine"@en .
+    
+    bdr:P8LS15004  a        :Person ;
+        skos:prefLabel      "tshe dbang rab brtan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF5FBEC955FF0C469 ;
+        :personEvent        bdr:EV79A5695150EFA914 ;
+        :personName         bdr:NM624605260DBE9F53 , bdr:NMF9E31ED97D83A86E .
+}

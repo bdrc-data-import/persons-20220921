@@ -1,0 +1,89 @@
+@base          <bdg:P8LS12369> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12369 {
+    bda:LG138DF7D58E84212A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T11:59:38.896Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGB0FF2B9D487C5A26
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-01T12:14:13.903Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12369  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12369 ;
+        adm:facetIndex      13 ;
+        adm:gitPath         "6b/P8LS12369.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12369 ;
+        adm:logEntry        bda:LG138DF7D58E84212A , bda:LGB0FF2B9D487C5A26 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3AB6485DD9F87531
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1931 .
+    
+    bdr:EV5E1404FE07E7B7B6
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1934"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:EVC8BF258E7FAA77BF
+        a                   :PersonDeath ;
+        :onYear             "1958"^^xsd:gYear .
+    
+    bdr:EVE39405E0033DBBBD
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EVE9C21DE5AE99A042
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1931 ;
+        :onYear             "1940"^^xsd:gYear ;
+        :personEventRole    bdr:R8LS12188 .
+    
+    bdr:NM4AE2644609B6D628
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 30"@bo-x-ewts .
+    
+    bdr:NMBC36961F329F372B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lo ras tshang blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NMD199780B7DC162FE
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "gtsang dgon gdan rabs 32"@bo-x-ewts .
+    
+    bdr:NME5010FE9FA6D5886
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang dar rgyas/"@bo-x-ewts .
+    
+    bdr:NT068805719C40A4F6
+        a                   :Note ;
+        :locationStatement  "p. 186-189" ;
+        :noteSource         bdr:MW19871 .
+    
+    bdr:P8LS12369  a        :Person ;
+        skos:prefLabel      "blo bzang dar rgyas/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT068805719C40A4F6 ;
+        :personEvent        bdr:EV3AB6485DD9F87531 , bdr:EV5E1404FE07E7B7B6 , bdr:EVC8BF258E7FAA77BF , bdr:EVE39405E0033DBBBD , bdr:EVE9C21DE5AE99A042 ;
+        :personName         bdr:NM4AE2644609B6D628 , bdr:NMBC36961F329F372B , bdr:NMD199780B7DC162FE , bdr:NME5010FE9FA6D5886 .
+}

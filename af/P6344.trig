@@ -1,0 +1,99 @@
+@base          <bdg:P6344> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P6344 {
+    bda:LG137E3586621FAFF9
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-05-09T12:19:54.84Z"^^xsd:dateTime ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG348E68E092CEA7EC
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-09-21T10:17:39.677Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG80FF1096F3DBC80A
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-11-27T15:23:47.261Z"^^xsd:dateTime ;
+        adm:logMessage      "attributed W00EGS1017362, added note"@en ;
+        adm:logWho          bdr:U00020 .
+    
+    bda:P6344  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P6344 ;
+        adm:facetIndex      15 ;
+        adm:gitPath         "af/P6344.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P6344 ;
+        adm:logEntry        bda:LG137E3586621FAFF9 , bda:LG348E68E092CEA7EC , bda:LG80FF1096F3DBC80A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C360FB51E483C37
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G523 .
+    
+    bdr:EV464D238F2F7F0CBA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1490 ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:EV705E90E8812DA554
+        a                   :PersonDeath ;
+        :onYear             "1995"^^xsd:gYear .
+    
+    bdr:EVB1823E200E3219D3
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G523 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM6DBCA5CB3E9010BB
+        a                   :PersonTitle ;
+        rdfs:label          "zhi li mkhan po bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NMA19419AECF80D91A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NMADDAEF66231E5469
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge rgan bstan 'dzin bzang po/"@bo-x-ewts .
+    
+    bdr:NMB63934A3DEE008BF
+        a                   :PersonPersonalName ;
+        rdfs:label          "thub bstan 'jigs med 'phrin las/"@bo-x-ewts .
+    
+    bdr:NMCC001B53646A685B
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "dar thang mkhan rabs 10"@bo-x-ewts .
+    
+    bdr:NT644C0296FB8E1F31
+        a                   :Note ;
+        :locationStatement  "p. 332-339" ;
+        :noteSource         bdr:MW20028 ;
+        :noteText           "source includes a short biographical sketch"@en .
+    
+    bdr:NTA36AC7157BEFB0A9
+        a                   :Note ;
+        :noteText           "born in mgo log and served as mkhan po of dpal yul dar thang dgon; dates of abbacy unknown"@en .
+    
+    bdr:P6344  a            :Person ;
+        skos:prefLabel      "bstan 'dzin bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT644C0296FB8E1F31 , bdr:NTA36AC7157BEFB0A9 ;
+        :personEvent        bdr:EV3C360FB51E483C37 , bdr:EV464D238F2F7F0CBA , bdr:EV705E90E8812DA554 , bdr:EVB1823E200E3219D3 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM6DBCA5CB3E9010BB , bdr:NMA19419AECF80D91A , bdr:NMADDAEF66231E5469 , bdr:NMB63934A3DEE008BF , bdr:NMCC001B53646A685B ;
+        :personStudentOf    bdr:P6338 , bdr:P9371 .
+}

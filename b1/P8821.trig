@@ -1,0 +1,50 @@
+@base          <bdg:P8821> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8821 {
+    bda:P8821  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8821 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "b1/P8821.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8821 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCF38773472963ED6
+        a                   :PersonBirth ;
+        :onYear             "1564"^^xsd:gYear .
+    
+    bdr:NM4DCB4E6A828B5DFC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sangs rgyas chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NMA7F01087CBDE3E17
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yab rje sprul sku sangs rgyas chos 'dzin/"@bo-x-ewts .
+    
+    bdr:NT2B1AF444FBEBDA88
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1564. yab sprul sku sangs rgyas chos 'dzin 'khrungs"@en .
+    
+    bdr:P8821  a            :Person ;
+        skos:prefLabel      "sangs rgyas chos 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B1AF444FBEBDA88 ;
+        :personEvent        bdr:EVCF38773472963ED6 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4DCB4E6A828B5DFC , bdr:NMA7F01087CBDE3E17 .
+}

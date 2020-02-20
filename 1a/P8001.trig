@@ -1,0 +1,46 @@
+@base          <bdg:P8001> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8001 {
+    bda:LG3EC379259FCE0EDA
+        a                   adm:LogEntry ;
+        adm:logDate         "2007-03-22T12:17:23.043Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P8001  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8001 ;
+        adm:facetIndex      4 ;
+        adm:gitPath         "1a/P8001.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8001 ;
+        adm:logEntry        bda:LG3EC379259FCE0EDA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFC634A8859CF2E23
+        a                   :PersonBirth ;
+        :onYear             "1979"^^xsd:gYear .
+    
+    bdr:NMD5105F3225707CD8
+        a                   :PersonPersonalName ;
+        rdfs:label          "'bum kho/"@bo-x-ewts .
+    
+    bdr:P8001  a            :Person ;
+        skos:prefLabel      "'bum kho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVFC634A8859CF2E23 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NMD5105F3225707CD8 .
+}

@@ -1,0 +1,58 @@
+@base          <bdg:P5675> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5675 {
+    bda:LG1DB2C4E64EBF97F0
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-10-04T11:37:41.491Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:P5675  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5675 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "3d/P5675.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5675 ;
+        adm:logEntry        bda:LG1DB2C4E64EBF97F0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV05BC54F5CC532295
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NM4B7EDC96008D8A94
+        a                   :PersonPersonalName ;
+        rdfs:label          "'ol kha ba byams pa rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NM6531BAADA145D9FA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byams pa rnam rgyal/"@bo-x-ewts .
+    
+    bdr:NT713EB4CC9F7ECB50
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:P5675  a            :Person ;
+        skos:prefLabel      "byams pa rnam rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT713EB4CC9F7ECB50 ;
+        :personEvent        bdr:EV05BC54F5CC532295 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM4B7EDC96008D8A94 , bdr:NM6531BAADA145D9FA ;
+        :personStudentOf    bdr:P5676 ;
+        :personTeacherOf    bdr:P5674 .
+}

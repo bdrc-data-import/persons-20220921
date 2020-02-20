@@ -1,0 +1,54 @@
+@base          <bdg:P9776> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P9776 {
+    bda:P9776  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P9776 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e6/P9776.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P9776 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV07BD3DBC8C8040B7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2749 .
+    
+    bdr:EVF8F185C6983A9C2B
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:NM7FD1CDEB0F20BD26
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal mthu stobs/"@bo-x-ewts .
+    
+    bdr:NM9E04C6C3174162E8
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha rams pa 'jam dpal mthu stobs/"@bo-x-ewts .
+    
+    bdr:NT2C4D1CE741B9178C
+        a                   :Note ;
+        :locationStatement  "p. 29" ;
+        :noteSource         bdr:MW29487 ;
+        :noteText           "this source notes that this lha rams pa ws born in 1908"@en .
+    
+    bdr:P9776  a            :Person ;
+        skos:prefLabel      "'jam dpal mthu stobs/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2C4D1CE741B9178C ;
+        :personEvent        bdr:EV07BD3DBC8C8040B7 , bdr:EVF8F185C6983A9C2B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM7FD1CDEB0F20BD26 , bdr:NM9E04C6C3174162E8 .
+}

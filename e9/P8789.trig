@@ -1,0 +1,56 @@
+@base          <bdg:P8789> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8789 {
+    bda:P8789  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8789 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "e9/P8789.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8789 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB75FB7CFD25C8EE5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G525 .
+    
+    bdr:EVBF7E188DBF1A719D
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM26DAC64C46C1BD4A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shAkya bzang po/"@bo-x-ewts .
+    
+    bdr:NM95496D665FEFE727
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zab lung pa shAkya bzang po/"@bo-x-ewts .
+    
+    bdr:NTB0F0E678C2E0E281
+        a                   :Note ;
+        :locationStatement  "p. 284" ;
+        :noteSource         bdr:MW27401 ;
+        :noteText           "noted as a teacher of rdzogs chen pa bsod nams rin chen"@en .
+    
+    bdr:P8789  a            :Person ;
+        skos:prefLabel      "shAkya bzang po/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB0F0E678C2E0E281 ;
+        :personEvent        bdr:EVB75FB7CFD25C8EE5 , bdr:EVBF7E188DBF1A719D ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM26DAC64C46C1BD4A , bdr:NM95496D665FEFE727 ;
+        :personTeacherOf    bdr:P4682 .
+}

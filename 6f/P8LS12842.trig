@@ -1,0 +1,60 @@
+@base          <bdg:P8LS12842> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS12842 {
+    bda:LG452ACFF10CD9BF90
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-02T09:08:04.909Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P8LS12842  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS12842 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "6f/P8LS12842.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS12842 ;
+        adm:logEntry        bda:LG452ACFF10CD9BF90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV74C0FD3C20462FC8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:EVAF42332160E2F803
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G3090 ;
+        :personEventRole    bdr:R30 .
+    
+    bdr:NM6C78705B99076709
+        a                   :PersonPrimaryName ;
+        rdfs:label          "khya dge"@bo-x-ewts .
+    
+    bdr:NM9E8C289581C18142
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "rnga yul sgo mang mkhan rabs 18"@bo-x-ewts .
+    
+    bdr:NTD662670F0F2C78FB
+        a                   :Note ;
+        :locationStatement  "vol. 1, p. 16" ;
+        :noteSource         bdr:MW1KG13431 .
+    
+    bdr:P8LS12842  a        :Person ;
+        skos:prefLabel      "khya dge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD662670F0F2C78FB ;
+        :personEvent        bdr:EV74C0FD3C20462FC8 , bdr:EVAF42332160E2F803 ;
+        :personName         bdr:NM6C78705B99076709 , bdr:NM9E8C289581C18142 .
+}

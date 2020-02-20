@@ -1,0 +1,109 @@
+@base          <bdg:P5553> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P5553 {
+    bda:LG909298CB8C8BA8F7
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-05-04T16:41:46.428Z"^^xsd:dateTime ;
+        adm:logMessage      "added title and seat"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGD94998898778C30E
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-07-07T16:31:24.796Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P5553  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P5553 ;
+        adm:facetIndex      16 ;
+        adm:gitPath         "0d/P5553.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P5553 ;
+        adm:logEntry        bda:LG909298CB8C8BA8F7 , bda:LGD94998898778C30E ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0C72348F65A956D7
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G337 .
+    
+    bdr:EV1F0ABAE264D71DC5
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1568"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EV7F52F4ABA3AAD765
+        a                   :PersonDeath ;
+        :onYear             "1576"^^xsd:gYear .
+    
+    bdr:EV8790891E1A340DCB
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G337 ;
+        :onYear             "1575"^^xsd:gYear ;
+        :personEventRole    bdr:R35 .
+    
+    bdr:EVBD6B22C41991624D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G607 .
+    
+    bdr:EVF1AA01887A94BA8D
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G304 .
+    
+    bdr:EVFDCF6FC77F437CCB
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2364 ;
+        :onYear             "1520"^^xsd:gYear .
+    
+    bdr:NM8EB5D6118694C0EC
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "khri 23 tshe brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMC75AF98ED13CBAE0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe brtan rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMD7279EB43FF9D2A9
+        a                   :PersonTitle ;
+        rdfs:label          "dga' ldan khri pa 23"@bo-x-ewts .
+    
+    bdr:NT63DB52B345309A95
+        a                   :Note ;
+        :locationStatement  "p. 23" ;
+        :noteSource         bdr:MW20212 ;
+        :noteText           "dga' ldan khri\non see: 1568-1575\nthe first dga' ldan khri to preside over the lha sa smon lam"@en .
+    
+    bdr:NT691D99C4E982E39C
+        a                   :Note ;
+        :locationStatement  "p. 2324" ;
+        :noteSource         bdr:MW26372 ;
+        :noteText           "1568. khri chen tshe brtan rgya mtsho dga' ldan gyi khrir phebs\n1576. khri chen tshe brtan rgya mtsho gshegs"@en .
+    
+    bdr:NTA97BB625B3688339
+        a                   :Note ;
+        :locationStatement  "p.. 55, 61" ;
+        :noteSource         bdr:MW19808 ;
+        :noteText           "dates"@en .
+    
+    bdr:P5553  a            :Person ;
+        skos:prefLabel      "tshe brtan rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT63DB52B345309A95 , bdr:NT691D99C4E982E39C , bdr:NTA97BB625B3688339 ;
+        :personEvent        bdr:EV0C72348F65A956D7 , bdr:EV1F0ABAE264D71DC5 , bdr:EV7F52F4ABA3AAD765 , bdr:EV8790891E1A340DCB , bdr:EVBD6B22C41991624D , bdr:EVF1AA01887A94BA8D , bdr:EVFDCF6FC77F437CCB ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM8EB5D6118694C0EC , bdr:NMC75AF98ED13CBAE0 , bdr:NMD7279EB43FF9D2A9 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Trichen-23-Tseten-Gyatso/8086"^^xsd:anyURI .
+}

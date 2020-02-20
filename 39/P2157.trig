@@ -1,0 +1,96 @@
+@base          <bdg:P2157> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2157 {
+    bda:LG5033E346C723928B
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-10T11:44:46.045Z"^^xsd:dateTime ;
+        adm:logMessage      "changed birth place from corporation to place"@en ;
+        adm:logWho          bdr:U00007 .
+    
+    bda:LG98456F39E43EC261
+        a                   adm:LogEntry ;
+        adm:logDate         "2014-03-20T14:27:21.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added tbrc phonetic tulku title"@en ;
+        adm:logWho          bdr:U00006 .
+    
+    bda:LGC0F5FD7B2D5DB866
+        a                   adm:LogEntry ;
+        adm:logDate         "2013-01-28T14:11:20.173Z"^^xsd:dateTime ;
+        adm:logMessage      "added tulku title and incarnation relation"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:P2157  a            adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2157 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "39/P2157.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2157 ;
+        adm:logEntry        bda:LG5033E346C723928B , bda:LG98456F39E43EC261 , bda:LGC0F5FD7B2D5DB866 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV086CC88E5A95CDF2
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G162 .
+    
+    bdr:EV888B47D1C90F0B28
+        a                   :PersonDeath ;
+        :onYear             "1737"^^xsd:gYear .
+    
+    bdr:EVD6096EEF64677D9B
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1202 ;
+        :onYear             "1662"^^xsd:gYear .
+    
+    bdr:NM1B51E16C9E11986D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha khang lung pa 03 dge 'dun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM23B7766DF7983618
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "Lhakang Lungpa 03"@bo-x-phon-en-m-tbrc .
+    
+    bdr:NM2F88792428964563
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "lha khang lung pa 03"@bo-x-ewts .
+    
+    bdr:NMBFF4AC6C76CE156D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT706F143E62E2BD7D
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+    
+    bdr:NT9C2A2B3978940CC5
+        a                   :Note ;
+        :locationStatement  "p. 1840" ;
+        :noteSource         bdr:MW19801 .
+    
+    bdr:NTF99836B742220D81
+        a                   :Note ;
+        :noteText           "1785. Confers the preliminary vows on Dkon-mchog-dam-chos-yar-'phel."@en .
+    
+    bdr:P2157  a            :Person ;
+        skos:prefLabel      "dge 'dun rgya mtsho/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P4133 ;
+        :isRoot             true ;
+        :note               bdr:NT706F143E62E2BD7D , bdr:NT9C2A2B3978940CC5 , bdr:NTF99836B742220D81 ;
+        :personEvent        bdr:EV086CC88E5A95CDF2 , bdr:EV888B47D1C90F0B28 , bdr:EVD6096EEF64677D9B ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM1B51E16C9E11986D , bdr:NM23B7766DF7983618 , bdr:NM2F88792428964563 , bdr:NMBFF4AC6C76CE156D ;
+        :personStudentOf    bdr:P1177 , bdr:P1630 , bdr:P169 , bdr:P201 , bdr:P410 , bdr:P4135 ;
+        :personTeacherOf    bdr:P1746 , bdr:P4517 .
+}

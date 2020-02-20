@@ -1,0 +1,98 @@
+@base          <bdg:P540> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P540 {
+    bda:LG3E010627E624314D
+        a                   adm:LogEntry ;
+        adm:logDate         "2012-07-24T11:55:19.449Z"^^xsd:dateTime ;
+        adm:logMessage      "added office title and event"@en ;
+        adm:logWho          bdr:U00013 .
+    
+    bda:LGA3B70564D72AF96B
+        a                   adm:LogEntry ;
+        adm:logDate         "2016-02-17T18:35:54.932Z"^^xsd:dateTime ;
+        adm:logMessage      "added external entry"@en ;
+        adm:logWho          bdr:U00027 .
+    
+    bda:P540  a             adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P540 ;
+        adm:facetIndex      14 ;
+        adm:gitPath         "a1/P540.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P540 ;
+        adm:logEntry        bda:LG3E010627E624314D , bda:LGA3B70564D72AF96B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV032FC36ACE8812EE
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G743 ;
+        :onYear             "1724"^^xsd:gYear .
+    
+    bdr:EV1DEF88A92402E7EA
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G54 .
+    
+    bdr:EV31455DBC8BEB610F
+        a                   :PersonDeath ;
+        :onYear             "1793"^^xsd:gYear .
+    
+    bdr:EVBE86C2807F33EE2B
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1784"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:EVF58B90D960C57508
+        a                   :PersonLeavesOffice ;
+        :eventWhere         bdr:G54 ;
+        :onYear             "1791"^^xsd:gYear ;
+        :personEventRole    bdr:R3AG22 .
+    
+    bdr:NM9717B21F7636CCC7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brug rje mkhan po 16 shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NMA5D1ABDCAAAC0CC2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shes rab seng+ge"@bo-x-ewts .
+    
+    bdr:NMD484ABEF20D7092D
+        a                   :PersonOfficeTitle ;
+        rdfs:label          "'brug rje mkhan po 16"@bo-x-ewts .
+    
+    bdr:NTB14EFD7AEA53036F
+        a                   :Note ;
+        :noteText           "Rje Mkhan-po of Bhutan: 1784-1791.\nBorn as the Dbon-sras of Mkhas-grub Bstan-'dzin-don-grub.\nServed as the Dbang Rdzong Gnas-brtan, Rdo-rje-slob-dpon, Rta-lang Bla-ma.\nDisliked by Bsod-nams-lhun-grub and so deprived of the opportunity to suceed Yon-tan-mtha'-yas.\nBuilt the Thed Gzhung Glang-po'i-ze. This had been prophesied by Zhang Bde-ba'i-rdo-rje.\nPerformed the funeral rites of Yon-tan-mtha'-yas at the order of Gong-sa 'Jigs-med-sengge.\n1789. Builds the Gsang-chen 'Og-min-gnyis-pa at Thub-bstan Bya-rgod-phung-po.\nBuilds the Jo-bo gnyis at Spa-gro 'Bras-la."@en .
+    
+    bdr:NTF49CC6C4C5B4FCC5
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Phag-mo-gru-pa\n\n-- 'Brug-pa Bka'-brgyud\n\n-- Rwa-lung transmissions\n\n-- Lho 'Brug transmissions"@en .
+    
+    bdr:NTF6EED866727EF0A2
+        a                   :Note ;
+        :locationStatement  "p. 152" ;
+        :noteSource         bdr:MW19809 .
+    
+    bdr:P540  a             :Person ;
+        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB14EFD7AEA53036F , bdr:NTF49CC6C4C5B4FCC5 , bdr:NTF6EED866727EF0A2 ;
+        :personEvent        bdr:EV032FC36ACE8812EE , bdr:EV1DEF88A92402E7EA , bdr:EV31455DBC8BEB610F , bdr:EVBE86C2807F33EE2B , bdr:EVF58B90D960C57508 ;
+        :personGender       bdr:GenderMale ;
+        :personName         bdr:NM9717B21F7636CCC7 , bdr:NMA5D1ABDCAAAC0CC2 , bdr:NMD484ABEF20D7092D ;
+        :personStudentOf    bdr:P527 , bdr:P530 ;
+        :personTeacherOf    bdr:P551 , bdr:P556 , bdr:P557 , bdr:P567 , bdr:P570 , bdr:P579 ;
+        adm:seeOtherToL     "https://www.treasuryoflives.org/biographies/view/Sherab-Sengge/7918"^^xsd:anyURI .
+}
