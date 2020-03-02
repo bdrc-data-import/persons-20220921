@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P3074 {
-    bda:LG1E623D9481E0F88F
+    bda:LG4BF0072C85202730
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-28T09:31:15.224Z"^^xsd:dateTime ;
+        adm:logMessage      "added name"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LG9F6810D8071BFCEB
         a                   adm:LogEntry ;
         adm:logDate         "2010-10-20T15:44:41.521Z"^^xsd:dateTime ;
         adm:logMessage      "added note"@en ;
         adm:logWho          bdr:U00007 .
     
-    bda:LG9F6810D8071BFCEB
+    bda:LGB28D0623411C365D
         a                   adm:LogEntry ;
         adm:logDate         "2010-10-26T11:59:58.148Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -27,15 +33,15 @@ bdg:P3074 {
     bda:P3074  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3074 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "2d/P3074.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3074 ;
-        adm:logEntry        bda:LG1E623D9481E0F88F , bda:LG9F6810D8071BFCEB ;
+        adm:logEntry        bda:LG4BF0072C85202730 , bda:LG9F6810D8071BFCEB , bda:LGB28D0623411C365D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV9164CF0650E0EE10
+    bdr:EVC4C2C94E1BF0379F
         a                   :PersonBirth ;
         :notAfter           "1099"^^xsd:gYear ;
         :notBefore          "1000"^^xsd:gYear .
@@ -48,27 +54,31 @@ bdg:P3074 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "mtshur ston dbang gi rdo rje/"@bo-x-ewts .
     
+    bdr:NM9164CF0650E0EE10
+        a                   :PersonOtherName ;
+        rdfs:label          "'tshur ston dbang nge /"@bo-x-ewts .
+    
     bdr:NMA42E2164661794A9
-        a                   :PersonFamilyName ;
-        rdfs:label          "mtshur/"@bo-x-ewts .
+        a                   :PersonOtherName ;
+        rdfs:label          "mtshur ston dbang nge /"@bo-x-ewts .
     
     bdr:NT0E169447997B3214
+        a                   :Note ;
+        :noteText           "TSD table tree: \n\n-- mar pa bka' brgyud"@en .
+    
+    bdr:NT1E623D9481E0F88F
         a                   :Note ;
         :contentLocationStatement  "p. 1405" ;
         :noteSource         bdr:MW19801 ;
         :noteText           "'di la mar pa'i gsang 'dus kyi bka' babs pa las phyis kyi slob brgyud bu ston rin po che brgyud sa dge gnyis dang dwags brgyud kyi gsang ba 'dus pa' bka' babs da bar ma nyams par bzhugs par 'khod"@en .
     
-    bdr:NTC4C2C94E1BF0379F
-        a                   :Note ;
-        :noteText           "TSD table tree: \n\n-- mar pa bka' brgyud"@en .
-    
     bdr:P3074  a            :Person ;
         skos:prefLabel      "dbang gi rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT0E169447997B3214 , bdr:NTC4C2C94E1BF0379F ;
-        :personEvent        bdr:EV9164CF0650E0EE10 ;
+        :note               bdr:NT0E169447997B3214 , bdr:NT1E623D9481E0F88F ;
+        :personEvent        bdr:EVC4C2C94E1BF0379F ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM211142E1E54F0A05 , bdr:NM53D58C789E86DA00 , bdr:NMA42E2164661794A9 ;
+        :personName         bdr:NM211142E1E54F0A05 , bdr:NM53D58C789E86DA00 , bdr:NM9164CF0650E0EE10 , bdr:NMA42E2164661794A9 ;
         :personStudentOf    bdr:P2636 ;
-        :personTeacherOf    bdr:P3075 .
+        :personTeacherOf    bdr:P3075 , bdr:P8LS15241 .
 }

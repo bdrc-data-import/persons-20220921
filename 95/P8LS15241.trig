@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS15241 {
-    bda:LG2F85110A469D73C1
+    bda:LGC5E05F1F488ACDDA
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-02-28T09:25:57.774Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and note"@en ;
+        adm:logWho          bdr:U00019 .
+    
+    bda:LGDC730DDE047B8C42
         a                   adm:LogEntry ;
         adm:logDate         "2014-02-11T10:57:41.874Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -21,13 +27,17 @@ bdg:P8LS15241 {
     bda:P8LS15241  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS15241 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "95/P8LS15241.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS15241 ;
-        adm:logEntry        bda:LG2F85110A469D73C1 ;
+        adm:logEntry        bda:LGC5E05F1F488ACDDA , bda:LGDC730DDE047B8C42 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:NM535E442A6BC51270
+        a                   :PersonOtherName ;
+        rdfs:label          "khams pa ro mnyam rdo rje/"@bo-x-ewts .
     
     bdr:NM70197669882080A2
         a                   :PersonPrimaryName ;
@@ -37,14 +47,19 @@ bdg:P8LS15241 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "lho brag gi ro mnyam rdo rje/"@bo-x-ewts .
     
-    bdr:NT535E442A6BC51270
+    bdr:NT2F85110A469D73C1
         a                   :Note ;
         :contentLocationStatement  "vol. e, f. 60a4" ;
         :noteSource         bdr:MW29706 .
     
+    bdr:NT35CC8C5D6D446C55
+        a                   :Note ;
+        :noteText           "W19802, vol. 3, p. 544"@en .
+    
     bdr:P8LS15241  a        :Person ;
         skos:prefLabel      "ro mnyam rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT535E442A6BC51270 ;
-        :personName         bdr:NM70197669882080A2 , bdr:NMF7CE07462A3F11F0 .
+        :note               bdr:NT2F85110A469D73C1 , bdr:NT35CC8C5D6D446C55 ;
+        :personName         bdr:NM535E442A6BC51270 , bdr:NM70197669882080A2 , bdr:NMF7CE07462A3F11F0 ;
+        :personStudentOf    bdr:P2636 , bdr:P3074 .
 }
