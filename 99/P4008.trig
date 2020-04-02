@@ -12,29 +12,40 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P4008 {
+    bda:LG1D3BE428EA85FA9E
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-03-24T11:56:18.186Z"^^xsd:dateTime ;
+        adm:logMessage      "added sanskirt name"@en ;
+        adm:logWho          bdr:U00016 .
+    
     bda:P4008  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4008 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "99/P4008.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4008 ;
+        adm:logEntry        bda:LG1D3BE428EA85FA9E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:NM1FDAB3D5432D47E7
         a                   :PersonPrimaryName ;
-        rdfs:label          "bud d+ha shrI"@sa-x-ewts .
+        rdfs:label          "bud d+ha shrI/"@bo-x-ewts .
     
-    bdr:NTFD01B13690E8DCCC
+    bdr:NMFD01B13690E8DCCC
+        a                   :PersonOtherName ;
+        rdfs:label          "buddha shrī"@sa-x-ndia .
+    
+    bdr:NTAC1EC4465887F998
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
     
     bdr:P4008  a            :Person ;
-        skos:prefLabel      "bud d+ha shrI"@sa-x-ewts ;
+        skos:prefLabel      "bud d+ha shrI/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTFD01B13690E8DCCC ;
+        :note               bdr:NTAC1EC4465887F998 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM1FDAB3D5432D47E7 ;
+        :personName         bdr:NM1FDAB3D5432D47E7 , bdr:NMFD01B13690E8DCCC ;
         :personTeacherOf    bdr:P4007 .
 }
