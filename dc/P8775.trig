@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8775 {
+    bda:LGAC18AFD165E79532
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-04-07T12:16:48.865Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher student"@en ;
+        adm:logWho          bdr:U00016 .
+    
     bda:P8775  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8775 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "dc/P8775.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8775 ;
+        adm:logEntry        bda:LGAC18AFD165E79532 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV098953453D7240A5
+    bdr:EV4054C354C896107E
         a                   :PersonBirth ;
         :notAfter           "1499"^^xsd:gYear ;
         :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:NM098953453D7240A5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "drung kun bzang rtse pa bsod nams rgyal mtshan/"@bo-x-ewts .
     
     bdr:NM24B41E86371CC54C
         a                   :PersonPrimaryTitle ;
@@ -35,7 +46,13 @@ bdg:P8775 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams rgyal mtshan/"@bo-x-ewts .
     
-    bdr:NT4054C354C896107E
+    bdr:NT8A8D93B65344FB51
+        a                   :Note ;
+        :contentLocationStatement  "p. 353" ;
+        :noteSource         bdr:MW30192 ;
+        :noteText           "sa skya teacher of gong dkar rdo rje gdan pa kun dga' rnam rgyal"@en .
+    
+    bdr:NT8E33FF8168E8F969
         a                   :Note ;
         :contentLocationStatement  "p. 279" ;
         :noteSource         bdr:MW27401 ;
@@ -44,9 +61,9 @@ bdg:P8775 {
     bdr:P8775  a            :Person ;
         skos:prefLabel      "bsod nams rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT4054C354C896107E ;
-        :personEvent        bdr:EV098953453D7240A5 ;
+        :note               bdr:NT8A8D93B65344FB51 , bdr:NT8E33FF8168E8F969 ;
+        :personEvent        bdr:EV4054C354C896107E ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM24B41E86371CC54C , bdr:NM34154632DBF0760E ;
-        :personTeacherOf    bdr:P8773 .
+        :personName         bdr:NM098953453D7240A5 , bdr:NM24B41E86371CC54C , bdr:NM34154632DBF0760E ;
+        :personTeacherOf    bdr:P3183 , bdr:P8773 .
 }
