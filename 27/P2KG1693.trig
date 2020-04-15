@@ -1,0 +1,72 @@
+@base          <bdg:P2KG1693> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG1693 {
+    bda:LG974849335B6B2566
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-04-14T18:19:12.463Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG1693  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG1693 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "27/P2KG1693.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG1693 ;
+        adm:logEntry        bda:LG974849335B6B2566 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4082A4792AC389C0
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4392 .
+    
+    bdr:EVAF930112CCA48177
+        a                   :PersonBirth ;
+        :onYear             "1602"^^xsd:gYear .
+    
+    bdr:EVC7AF9CCF36802008
+        a                   :PersonDeath ;
+        :onYear             "1622"^^xsd:gYear .
+    
+    bdr:NM01E2694EF02F2EC5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "gangs pa mchog rgyal/"@bo-x-ewts .
+    
+    bdr:NM344D7F62B6CFDC70
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje gangs pa mchog rgyal/"@bo-x-ewts .
+    
+    bdr:NM675C1887471ED566
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje 08 gangs pa mchog rgyal/"@bo-x-ewts .
+    
+    bdr:NMF79F0D49A779A11B
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brong ngur chos rje 08"@bo-x-ewts .
+    
+    bdr:NT6B29B71AE479BD47
+        a                   :Note ;
+        :noteSource         bdr:MW8LS34407 ;
+        :noteText           "'brong ngur chos rje gong ma na rim mdor tsam gleng ba tshes gnyis zla ba'i 'od zer/"@bo-x-ewts .
+    
+    bdr:P2KG1693  a         :Person ;
+        skos:prefLabel      "gangs pa mchog rgyal/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2KG1692 ;
+        :isRoot             true ;
+        :note               bdr:NT6B29B71AE479BD47 ;
+        :personEvent        bdr:EV4082A4792AC389C0 , bdr:EVAF930112CCA48177 , bdr:EVC7AF9CCF36802008 ;
+        :personName         bdr:NM01E2694EF02F2EC5 , bdr:NM344D7F62B6CFDC70 , bdr:NM675C1887471ED566 , bdr:NMF79F0D49A779A11B .
+}

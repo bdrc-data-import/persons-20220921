@@ -1,0 +1,72 @@
+@base          <bdg:P2KG1692> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG1692 {
+    bda:LG3031EC28EDC7342C
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-04-14T18:19:12.043Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG1692  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG1692 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "e8/P2KG1692.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG1692 ;
+        adm:logEntry        bda:LG3031EC28EDC7342C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6333C1828EB06CFD
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4392 .
+    
+    bdr:EV87B22B1B76ABF123
+        a                   :PersonDeath ;
+        :onYear             "1601"^^xsd:gYear .
+    
+    bdr:EV8D6574571C317298
+        a                   :PersonBirth ;
+        :onYear             "1587"^^xsd:gYear .
+    
+    bdr:NM18A2963A3DE72BB9
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje 07 karma dge dbang /"@bo-x-ewts .
+    
+    bdr:NM35D8B106F3742941
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje karma dge dbang /"@bo-x-ewts .
+    
+    bdr:NM8324A38D549AB58D
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma dge dbang /"@bo-x-ewts .
+    
+    bdr:NMDC3C1D13F67BC097
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brong ngur chos rje 07"@bo-x-ewts .
+    
+    bdr:NTC5EB271035A35936
+        a                   :Note ;
+        :noteSource         bdr:MW8LS34407 ;
+        :noteText           "'brong ngur chos rje gong ma na rim mdor tsam gleng ba tshes gnyis zla ba'i 'od zer/"@bo-x-ewts .
+    
+    bdr:P2KG1692  a         :Person ;
+        skos:prefLabel      "karma dge dbang /"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2KG1691 ;
+        :isRoot             true ;
+        :note               bdr:NTC5EB271035A35936 ;
+        :personEvent        bdr:EV6333C1828EB06CFD , bdr:EV87B22B1B76ABF123 , bdr:EV8D6574571C317298 ;
+        :personName         bdr:NM18A2963A3DE72BB9 , bdr:NM35D8B106F3742941 , bdr:NM8324A38D549AB58D , bdr:NMDC3C1D13F67BC097 .
+}

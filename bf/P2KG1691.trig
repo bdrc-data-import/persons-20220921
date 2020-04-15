@@ -1,0 +1,72 @@
+@base          <bdg:P2KG1691> .
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG1691 {
+    bda:LGD02F4AA538274CFD
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-04-14T18:19:11.684Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:P2KG1691  a         adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG1691 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "bf/P2KG1691.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG1691 ;
+        adm:logEntry        bda:LGD02F4AA538274CFD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6B1E6288C97CF679
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4392 .
+    
+    bdr:EVA1BA5325C6920AB8
+        a                   :PersonBirth ;
+        :onYear             "1534"^^xsd:gYear .
+    
+    bdr:EVDA5264BAE124B82A
+        a                   :PersonDeath ;
+        :onYear             "1586"^^xsd:gYear .
+    
+    bdr:NM17EA53355CC13AB8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "karma don grub/"@bo-x-ewts .
+    
+    bdr:NM66FAD17A17FF9C04
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje karma don grub/"@bo-x-ewts .
+    
+    bdr:NMDB8F396C8705FFD5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "'brong ngur chos rje 06 karma don grub/"@bo-x-ewts .
+    
+    bdr:NMF82D07DAB0094F12
+        a                   :PersonTulkuTitle ;
+        rdfs:label          "'brong ngur chos rje 06"@bo-x-ewts .
+    
+    bdr:NT0B66EF4A54C51788
+        a                   :Note ;
+        :noteSource         bdr:MW8LS34407 ;
+        :noteText           "'brong ngur chos rje gong ma na rim mdor tsam gleng ba tshes gnyis zla ba'i 'od zer/"@bo-x-ewts .
+    
+    bdr:P2KG1691  a         :Person ;
+        skos:prefLabel      "karma don grub/"@bo-x-ewts ;
+        :incarnationGeneral  bdr:P2KG1690 ;
+        :isRoot             true ;
+        :note               bdr:NT0B66EF4A54C51788 ;
+        :personEvent        bdr:EV6B1E6288C97CF679 , bdr:EVA1BA5325C6920AB8 , bdr:EVDA5264BAE124B82A ;
+        :personName         bdr:NM17EA53355CC13AB8 , bdr:NM66FAD17A17FF9C04 , bdr:NMDB8F396C8705FFD5 , bdr:NMF82D07DAB0094F12 .
+}
