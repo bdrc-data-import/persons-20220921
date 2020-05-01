@@ -12,41 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P3354 {
-    bda:LG2D5808A2398C3876
+    bda:LG85BAF34ACB9359E6
         a                   adm:LogEntry ;
         adm:logDate         "2020-04-16T14:39:38.58Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn"@en ;
         adm:logWho          bdr:U00007 .
     
+    bda:LGF515E90EF519B0FA
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-05-01T01:16:28.922Z"^^xsd:dateTime ;
+        adm:logMessage      "reused and added info"@en ;
+        adm:logWho          bdr:U00007 .
+    
     bda:P3354  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3354 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "54/P3354.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3354 ;
-        adm:logEntry        bda:LG2D5808A2398C3876 ;
+        adm:logEntry        bda:LG85BAF34ACB9359E6 , bda:LGF515E90EF519B0FA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusWithdrawn .
+        adm:status          bda:StatusReleased .
     
-    bdr:EV2BDCA5692DCEE3B7
+    bdr:EV2D5808A2398C3876
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G154 .
+    
+    bdr:EV95D03C7E6D69DD7F
         a                   :PersonBirth ;
-        :notAfter           "1399"^^xsd:gYear ;
-        :notBefore          "1300"^^xsd:gYear .
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM2BDCA5692DCEE3B7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sgrub khang blo bzang tshul khrims/"@bo-x-ewts .
     
     bdr:NMCB7642AB57AC42B2
         a                   :PersonPrimaryName ;
-        rdfs:label          "rgyal mtshan dpal bzang /"@bo-x-ewts .
-    
-    bdr:NT95D03C7E6D69DD7F
-        a                   :Note ;
-        :noteText           "Old TSD Schools table tree: \n\n-- Gcod"@en .
+        rdfs:label          "blo bzang tshul khrims/"@bo-x-ewts .
     
     bdr:P3354  a            :Person ;
-        skos:prefLabel      "rgyal mtshan dpal bzang /"@bo-x-ewts ;
+        skos:prefLabel      "blo bzang tshul khrims/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT95D03C7E6D69DD7F ;
-        :personEvent        bdr:EV2BDCA5692DCEE3B7 ;
+        :personEvent        bdr:EV2D5808A2398C3876 , bdr:EV95D03C7E6D69DD7F ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMCB7642AB57AC42B2 .
+        :personName         bdr:NM2BDCA5692DCEE3B7 , bdr:NMCB7642AB57AC42B2 ;
+        :personStudentOf    bdr:P179 .
 }
