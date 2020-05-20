@@ -12,27 +12,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2KG1683 {
-    bda:LG9827A7F8B9EF9CCE
+    bda:LG2598E17438DE2AE1
         a                   adm:LogEntry ;
         adm:logDate         "2020-04-13T14:23:35.905Z"^^xsd:dateTime ;
         adm:logMessage      "new record"@en ;
         adm:logWho          bdr:U00016 .
     
+    bda:LGE9F49F1D1763AF89
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-05-19T11:36:18.395Z"^^xsd:dateTime ;
+        adm:logMessage      "added year and seat"@en ;
+        adm:logWho          bdr:U00016 .
+    
     bda:P2KG1683  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2KG1683 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "e0/P2KG1683.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2KG1683 ;
-        adm:logEntry        bda:LG9827A7F8B9EF9CCE ;
+        adm:logEntry        bda:LG2598E17438DE2AE1 , bda:LGE9F49F1D1763AF89 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV8FFD6C610938AAC7
         a                   :PersonEventNotSpecified ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :onYear             "1960"^^xsd:gYear .
+    
+    bdr:EV9827A7F8B9EF9CCE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G185 .
     
     bdr:NM16C82F7FBBE6136B
         a                   :PersonPrimaryName ;
@@ -49,6 +58,6 @@ bdg:P2KG1683 {
     bdr:P2KG1683  a         :Person ;
         skos:prefLabel      "phun tshogs dge legs/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV8FFD6C610938AAC7 ;
+        :personEvent        bdr:EV8FFD6C610938AAC7 , bdr:EV9827A7F8B9EF9CCE ;
         :personName         bdr:NM16C82F7FBBE6136B , bdr:NM6F0C9206A0BC84E1 , bdr:NM756661EE79A756A9 .
 }
