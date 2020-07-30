@@ -11,31 +11,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P5199 {
-    bda:LGDE0FA7C1707DF47C
+    bda:LG819B5B23752113F6
         a                   adm:LogEntry ;
         adm:logDate         "2012-09-24T15:03:41.709Z"^^xsd:dateTime ;
         adm:logMessage      "added title"@en ;
         adm:logWho          bdr:U00013 .
     
+    bda:LGE866FB5ADC784A44
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-07-29T14:39:46.596Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and note"@en ;
+        adm:logWho          bdr:U00007 .
+    
     bda:P5199  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P5199 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5d/P5199.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P5199 ;
-        adm:logEntry        bda:LGDE0FA7C1707DF47C ;
+        adm:logEntry        bda:LG819B5B23752113F6 , bda:LGE866FB5ADC784A44 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVAD7654295A930D76
+    bdr:EV2E8F954C8E1844A3
         a                   :PersonBirth ;
         :notAfter           "1299"^^xsd:gYear ;
         :notBefore          "1200"^^xsd:gYear .
     
     bdr:NM28B5E52AABDFE251
-        a                   :PersonTitle ;
-        rdfs:label          "skyi ston/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "skyi ston chos kyi seng+ge"@bo-x-ewts .
     
     bdr:NM8512D4D7E4BE083D
         a                   :PersonPrimaryName ;
@@ -43,18 +49,26 @@ bdg:P5199 {
     
     bdr:NMA6935C406F279642
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "skyi ston chos kyi seng+ge"@bo-x-ewts .
+        rdfs:label          "skyi chos kyi seng+ge"@bo-x-ewts .
     
-    bdr:NT2E8F954C8E1844A3
+    bdr:NMAD7654295A930D76
+        a                   :PersonTitle ;
+        rdfs:label          "skyi ston/"@bo-x-ewts .
+    
+    bdr:NTB3A534B36D46C4EB
+        a                   :Note ;
+        :noteText           "se chen rgyal po dang thug pa'i lo rgys yod/"@en .
+    
+    bdr:NTDE0FA7C1707DF47C
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
     
     bdr:P5199  a            :Person ;
         skos:prefLabel      "chos kyi seng+ge"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT2E8F954C8E1844A3 ;
-        :personEvent        bdr:EVAD7654295A930D76 ;
+        :note               bdr:NTB3A534B36D46C4EB , bdr:NTDE0FA7C1707DF47C ;
+        :personEvent        bdr:EV2E8F954C8E1844A3 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM28B5E52AABDFE251 , bdr:NM8512D4D7E4BE083D , bdr:NMA6935C406F279642 ;
-        :personTeacherOf    bdr:P5197 .
+        :personName         bdr:NM28B5E52AABDFE251 , bdr:NM8512D4D7E4BE083D , bdr:NMA6935C406F279642 , bdr:NMAD7654295A930D76 ;
+        :personTeacherOf    bdr:P366 , bdr:P5197 .
 }
