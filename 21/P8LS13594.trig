@@ -11,7 +11,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS13594 {
-    bda:LG87A2A4BA9FCA2CBB
+    bda:LG28075D8FDEA55E3E
+        a                   adm:LogEntry ;
+        adm:logDate         "2020-08-01T14:05:46.528Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdr:U00016 .
+    
+    bda:LG549A6FFEF54F8512
         a                   adm:LogEntry ;
         adm:logDate         "2013-04-29T11:15:17.348Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -20,19 +26,28 @@ bdg:P8LS13594 {
     bda:P8LS13594  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS13594 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "21/P8LS13594.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS13594 ;
-        adm:logEntry        bda:LG87A2A4BA9FCA2CBB ;
+        adm:logEntry        bda:LG28075D8FDEA55E3E , bda:LG549A6FFEF54F8512 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV87A2A4BA9FCA2CBB
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
     
     bdr:NM745F334F99425285
         a                   :PersonPrimaryName ;
         rdfs:label          "sha bo sgang pa/"@bo-x-ewts .
     
-    bdr:NT8F7A0CA1BAAF60C7
+    bdr:NM8F7A0CA1BAAF60C7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sha bo pa/"@bo-x-ewts .
+    
+    bdr:NTE8B01742F1BC2599
         a                   :Note ;
         :contentLocationStatement  "vol. 1, p. 50" ;
         :noteSource         bdr:MW1PD107937 .
@@ -40,6 +55,7 @@ bdg:P8LS13594 {
     bdr:P8LS13594  a        :Person ;
         skos:prefLabel      "sha bo sgang pa/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT8F7A0CA1BAAF60C7 ;
-        :personName         bdr:NM745F334F99425285 .
+        :note               bdr:NTE8B01742F1BC2599 ;
+        :personEvent        bdr:EV87A2A4BA9FCA2CBB ;
+        :personName         bdr:NM745F334F99425285 , bdr:NM8F7A0CA1BAAF60C7 .
 }
