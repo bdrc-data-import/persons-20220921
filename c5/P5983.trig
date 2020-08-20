@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,25 +13,29 @@
 
 bdg:P5983 {
     bda:LG4ABF47C675344105
-        a                   adm:LogEntry ;
+        a                   adm:WithdrawData ;
         adm:logDate         "2019-01-04T10:59:12.554Z"^^xsd:dateTime ;
         adm:logMessage      "Withdrawn in favor of P6011"@en ;
-        adm:logWho          bdr:U00016 .
+        adm:logWho          bdu:U00016 .
     
     bda:LG6B85DA3FE7B487BF
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2011-12-21T10:48:46.874Z"^^xsd:dateTime ;
         adm:logMessage      "incarnation line"@en ;
-        adm:logWho          bdr:U00002 .
+        adm:logWho          bdu:U00002 .
+    
+    bda:LGCAA2379D3A2790DC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P5983  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P5983 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "c5/P5983.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P5983 ;
-        adm:logEntry        bda:LG4ABF47C675344105 , bda:LG6B85DA3FE7B487BF ;
+        adm:logEntry        bda:LG4ABF47C675344105 , bda:LG6B85DA3FE7B487BF , bda:LGCAA2379D3A2790DC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:replaceWith     bdr:P6011 ;
         adm:status          bda:StatusWithdrawn .

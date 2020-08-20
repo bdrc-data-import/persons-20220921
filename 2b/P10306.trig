@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,25 +13,29 @@
 
 bdg:P10306 {
     bda:LGAE0F9E0BDA174278
-        a                   adm:LogEntry ;
+        a                   adm:WithdrawData ;
         adm:logDate         "2008-11-04T14:03:04.231Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn because its a duplicate"@en ;
-        adm:logWho          bdr:U00020 .
+        adm:logWho          bdu:U00020 .
+    
+    bda:LGD33B1EC3EC2EB6B9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGFD107FBBB9353D56
-        a                   adm:LogEntry ;
+        a                   adm:WithdrawData ;
         adm:logDate         "2008-11-05T11:35:10.92Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn and revised"@en ;
-        adm:logWho          bdr:U00020 .
+        adm:logWho          bdu:U00020 .
     
     bda:P10306  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P10306 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "2b/P10306.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P10306 ;
-        adm:logEntry        bda:LGAE0F9E0BDA174278 , bda:LGFD107FBBB9353D56 ;
+        adm:logEntry        bda:LGAE0F9E0BDA174278 , bda:LGD33B1EC3EC2EB6B9 , bda:LGFD107FBBB9353D56 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusWithdrawn .
     

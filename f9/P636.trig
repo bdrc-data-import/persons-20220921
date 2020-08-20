@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,25 +13,29 @@
 
 bdg:P636 {
     bda:LGC31A14D7136BB496
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2007-08-17T11:29:45.687Z"^^xsd:dateTime ;
         adm:logMessage      "duplicate of P4043?"@en ;
-        adm:logWho          bdr:U00003 .
+        adm:logWho          bdu:U00003 .
+    
+    bda:LGE5D28F3485A65F92
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:LGF0AAFBA3B7FE889E
-        a                   adm:LogEntry ;
+        a                   adm:WithdrawData ;
         adm:logDate         "2019-01-07T14:00:24.393Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn in favor of P4043"@en ;
-        adm:logWho          bdr:U00016 .
+        adm:logWho          bdu:U00016 .
     
     bda:P636  a             adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P636 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f9/P636.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P636 ;
-        adm:logEntry        bda:LGC31A14D7136BB496 , bda:LGF0AAFBA3B7FE889E ;
+        adm:logEntry        bda:LGC31A14D7136BB496 , bda:LGE5D28F3485A65F92 , bda:LGF0AAFBA3B7FE889E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:replaceWith     bdr:P4043 ;
         adm:status          bda:StatusWithdrawn .

@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P1500 {
     bda:LG5EE146F9F04F1506
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2018-03-29T17:07:33.45Z"^^xsd:dateTime ;
         adm:logMessage      "added external entry"@en ;
-        adm:logWho          bdr:U00027 .
+        adm:logWho          bdu:U00027 .
+    
+    bda:LGB7EB31313CFA6BE7
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P1500  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1500 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "4c/P1500.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1500 ;
-        adm:logEntry        bda:LG5EE146F9F04F1506 ;
+        adm:logEntry        bda:LG5EE146F9F04F1506 , bda:LGB7EB31313CFA6BE7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:seeOtherToL     "https://treasuryoflives.org/biographies/view/Tsonawa-Sherab-Zangpo/2791"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .

@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P4280 {
     bda:LG5929842FDD6B65D9
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2012-10-04T16:37:28.322Z"^^xsd:dateTime ;
         adm:logMessage      "adde name"@en ;
-        adm:logWho          bdr:U00013 .
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGFD0D8CC756989472
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P4280  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4280 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "7b/P4280.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4280 ;
-        adm:logEntry        bda:LG5929842FDD6B65D9 ;
+        adm:logEntry        bda:LG5929842FDD6B65D9 , bda:LGFD0D8CC756989472 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     

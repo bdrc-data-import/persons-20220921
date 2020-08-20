@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,34 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P9947 {
+    bda:LG842A6B90EB297AC9
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-19T17:00:58.621Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG96E55613E23B6041
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-08-19T17:04:33.28Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher-student info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGD57E12AB353A90FD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:P9947  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P9947 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ff/P9947.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P9947 ;
+        adm:logEntry        bda:LG842A6B90EB297AC9 , bda:LG96E55613E23B6041 , bda:LGD57E12AB353A90FD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:NM26F938B1803E74ED
-        a                   :PersonPersonalName ;
-        rdfs:label          "sakyamati"@sa-alalc97 .
+        a                   :PersonPrimaryName ;
+        rdfs:label          "shA+kya ma ti/"@bo-x-ewts .
     
     bdr:NM63D013903D99F8A8
-        a                   :PersonPersonalName ;
-        rdfs:label          "shAkya blo gros"@bo-x-ewts .
+        a                   :PersonOtherName ;
+        rdfs:label          "sakyamati"@sa-alalc97 .
     
     bdr:NM85C46E3344061DA5
         a                   :PersonPersonalName ;
-        rdfs:label          "shAkya ma ti"@bo-x-ewts .
+        rdfs:label          "shA+kya blo gros/"@bo-x-ewts .
     
     bdr:NTA51AB76B4700C25E
         a                   :Note ;
         :noteText           "teacher in the transmission lineage of the pramanasamuccaya"@en .
     
     bdr:P9947  a            :Person ;
-        skos:prefLabel      "shAkya ma ti"@bo-x-ewts , "sakyamati"@sa-alalc97 ;
+        skos:prefLabel      "shA+kya ma ti/"@bo-x-ewts ;
         :isRoot             true ;
         :note               bdr:NTA51AB76B4700C25E ;
         :personGender       bdr:GenderMale ;

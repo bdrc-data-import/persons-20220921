@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P9432 {
     bda:LGE8480E7C86EA725A
-        a                   adm:LogEntry ;
+        a                   adm:WithdrawData ;
         adm:logDate         "2019-01-04T09:41:12.091Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn in favor of P1258"@en ;
-        adm:logWho          bdr:U00007 .
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGFD451675F585DCAC
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P9432  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P9432 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "08/P9432.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P9432 ;
-        adm:logEntry        bda:LGE8480E7C86EA725A ;
+        adm:logEntry        bda:LGE8480E7C86EA725A , bda:LGFD451675F585DCAC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:replaceWith     bdr:P1258 ;
         adm:status          bda:StatusWithdrawn .

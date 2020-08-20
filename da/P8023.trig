@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P8023 {
     bda:LG63791D6E307B3251
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2008-11-29T02:13:45.578Z"^^xsd:dateTime ;
         adm:logMessage      "revised p record"@en ;
-        adm:logWho          bdr:U00001 .
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGE677B08396FF8F41
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P8023  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8023 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "da/P8023.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8023 ;
-        adm:logEntry        bda:LG63791D6E307B3251 ;
+        adm:logEntry        bda:LG63791D6E307B3251 , bda:LGE677B08396FF8F41 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     

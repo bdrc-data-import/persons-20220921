@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P3387 {
     bda:LGAB552A8BFDC95061
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2019-01-29T12:50:07.123Z"^^xsd:dateTime ;
         adm:logMessage      "added teacher and student"@en ;
-        adm:logWho          bdr:U00016 .
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFF313729929FB856
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P3387  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3387 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "cd/P3387.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3387 ;
-        adm:logEntry        bda:LGAB552A8BFDC95061 ;
+        adm:logEntry        bda:LGAB552A8BFDC95061 , bda:LGFF313729929FB856 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     

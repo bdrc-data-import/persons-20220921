@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,18 +13,22 @@
 
 bdg:P407 {
     bda:LGA38D79BF410C074D
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2007-01-30T05:59:15.125Z"^^xsd:dateTime ;
-        adm:logWho          bdr:U00001 .
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGB6DA53161F3B4CE0
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P407  a             adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P407 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "76/P407.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P407 ;
-        adm:logEntry        bda:LGA38D79BF410C074D ;
+        adm:logEntry        bda:LGA38D79BF410C074D , bda:LGB6DA53161F3B4CE0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     

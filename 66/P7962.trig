@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P7962 {
     bda:LG5A8C2B84353007C6
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2007-02-20T10:43:24.941Z"^^xsd:dateTime ;
         adm:logMessage      "added event"@en ;
-        adm:logWho          bdr:U00002 .
+        adm:logWho          bdu:U00002 .
+    
+    bda:LGC0A81A73B8CA0EBD
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P7962  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7962 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "66/P7962.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7962 ;
-        adm:logEntry        bda:LG5A8C2B84353007C6 ;
+        adm:logEntry        bda:LG5A8C2B84353007C6 , bda:LGC0A81A73B8CA0EBD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     

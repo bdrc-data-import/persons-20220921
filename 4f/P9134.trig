@@ -3,6 +3,7 @@
 @prefix bda:   <http://purl.bdrc.io/admindata/> .
 @prefix bdg:   <http://purl.bdrc.io/graph/> .
 @prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,19 +13,23 @@
 
 bdg:P9134 {
     bda:LG91E2848383B96D9B
-        a                   adm:LogEntry ;
+        a                   adm:UpdateData ;
         adm:logDate         "2013-06-13T11:37:39.319Z"^^xsd:dateTime ;
         adm:logMessage      "teacher student"@en ;
-        adm:logWho          bdr:U00002 .
+        adm:logWho          bdu:U00002 .
+    
+    bda:LGD801CD81EC3E6504
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
     
     bda:P9134  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P9134 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "4f/P9134.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P9134 ;
-        adm:logEntry        bda:LG91E2848383B96D9B ;
+        adm:logEntry        bda:LG91E2848383B96D9B , bda:LGD801CD81EC3E6504 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
