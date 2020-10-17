@@ -12,25 +12,35 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2754 {
-    bda:LGA9A440042B39B893
+    bda:LGA20E3F0B5BAEBE3C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGE5AE968BFA376273
+        a                   adm:WithdrawData ;
+        adm:logDate         "2020-10-16T21:19:12.454Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P8LS13715"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P2754  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2754 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "4e/P2754.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2754 ;
-        adm:logEntry        bda:LGA9A440042B39B893 ;
+        adm:logEntry        bda:LGA20E3F0B5BAEBE3C , bda:LGE5AE968BFA376273 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
+        adm:replaceWith     bdr:P8LS13715 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:EV95E449505300E277
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1800"^^xsd:gYear .
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EVEEA5F7575C7F8FA5
+        a                   :PersonDeath ;
+        :onYear             "1980"^^xsd:gYear .
     
     bdr:NM921C630FE1A26559
         a                   :PersonPrimaryName ;
@@ -38,18 +48,17 @@ bdg:P2754 {
     
     bdr:NMA279AE80B70DB989
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "gcung ngag dbang chos kyi grags po/"@bo-x-ewts .
+        rdfs:label          "gcung ngag dbang chos kyi grags pa/"@bo-x-ewts .
     
-    bdr:NTEEA5F7575C7F8FA5
+    bdr:NTA9A440042B39B893
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
     
     bdr:P2754  a            :Person ;
         skos:prefLabel      "ngag dbang chos kyi grags pa/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTEEA5F7575C7F8FA5 ;
-        :personEvent        bdr:EV95E449505300E277 ;
+        :note               bdr:NTA9A440042B39B893 ;
+        :personEvent        bdr:EV95E449505300E277 , bdr:EVEEA5F7575C7F8FA5 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM921C630FE1A26559 , bdr:NMA279AE80B70DB989 ;
-        :personTeacherOf    bdr:P2749 .
+        :personName         bdr:NM921C630FE1A26559 , bdr:NMA279AE80B70DB989 .
 }

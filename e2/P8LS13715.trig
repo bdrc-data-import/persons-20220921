@@ -12,49 +12,74 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS13715 {
-    bda:LG83C2F21EDE5A2135
+    bda:LG14BEB450F7A086EA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-05-13T10:54:40.973Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGFF58EA985EAD8F17
+    bda:LGABC663A664F61F59
         a                   adm:UpdateData ;
         adm:logDate         "2015-05-28T09:23:16.737Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGD40DB0FB24DDA100
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-10-16T21:20:08.437Z"^^xsd:dateTime ;
+        adm:logMessage      "added years, teacher of, kinship"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P8LS13715  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS13715 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "e2/P8LS13715.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS13715 ;
-        adm:logEntry        bda:LG83C2F21EDE5A2135 , bda:LGFF58EA985EAD8F17 ;
+        adm:logEntry        bda:LG14BEB450F7A086EA , bda:LGABC663A664F61F59 , bda:LGD40DB0FB24DDA100 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV83C2F21EDE5A2135
+        a                   :PersonBirth ;
+        :onYear             "1908"^^xsd:gYear .
+    
+    bdr:EVFF58EA985EAD8F17
+        a                   :PersonDeath ;
+        :onYear             "1980"^^xsd:gYear .
+    
     bdr:NM24A5EF49550B19F2
-        a                   :PersonOtherName ;
-        rdfs:label          "ngag dbang chos kyi grags pa/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smyos ngag dbang chos kyi grags pa/"@bo-x-ewts .
     
     bdr:NM293ECCD3109A385B
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "brda myos ngag dbang chos grags/"@bo-x-ewts .
+        rdfs:label          "smyos ngag dbang chos grags/"@bo-x-ewts .
+    
+    bdr:NM8661231FEC90B4C7
+        a                   :PersonOtherName ;
+        rdfs:label          "gcung ngag dbang chos kyi grags pa/"@bo-x-ewts .
     
     bdr:NMA4BD77762F752D7D
         a                   :PersonPrimaryName ;
         rdfs:label          "ngag dbang chos grags/"@bo-x-ewts .
     
-    bdr:NT8661231FEC90B4C7
+    bdr:NT0491B75372A5206C
         a                   :Note ;
         :noteSource         bdr:MW8LS16558 ;
         :noteText           "Author of explanation of difficult points in the tantric commentary known as Sergyi Demig. The detail information about author is not known."@en .
     
+    bdr:NT976EAF50CD81E28C
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
+    
     bdr:P8LS13715  a        :Person ;
         skos:prefLabel      "ngag dbang chos grags/"@bo-x-ewts ;
+        :hasBrother         bdr:P8LS12192 ;
         :isRoot             true ;
-        :note               bdr:NT8661231FEC90B4C7 ;
-        :personName         bdr:NM24A5EF49550B19F2 , bdr:NM293ECCD3109A385B , bdr:NMA4BD77762F752D7D .
+        :note               bdr:NT0491B75372A5206C , bdr:NT976EAF50CD81E28C ;
+        :personEvent        bdr:EV83C2F21EDE5A2135 , bdr:EVFF58EA985EAD8F17 ;
+        :personName         bdr:NM24A5EF49550B19F2 , bdr:NM293ECCD3109A385B , bdr:NM8661231FEC90B4C7 , bdr:NMA4BD77762F752D7D ;
+        :personTeacherOf    bdr:P2749 .
 }
