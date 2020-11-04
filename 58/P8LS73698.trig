@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS73698 {
+    bda:LG8C157B7963F42DFD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-11-03T14:26:34.721Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS73698  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS73698 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "58/P8LS73698.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS73698 ;
+        adm:logEntry        bda:LG8C157B7963F42DFD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVFBF3BD96510AC5AA
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM953A97B30D284A21
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMCCA4C27E556FA27C
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "reb tsha 'jam dbyangs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT00D8B304255C0CB3
+        a                   :Note ;
+        :noteText           "author of work number W8LS73697"@en .
+    
+    bdr:P8LS73698  a        :Person ;
+        skos:prefLabel      "'jam dbyangs rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT00D8B304255C0CB3 ;
+        :personEvent        bdr:EVFBF3BD96510AC5AA ;
+        :personName         bdr:NM953A97B30D284A21 , bdr:NMCCA4C27E556FA27C .
+}
