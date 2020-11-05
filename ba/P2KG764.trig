@@ -12,35 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2KG764 {
-    bda:LG6F60E82A0697E650
+    bda:LG0D01D30AE7FE2568
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-11-30T21:00:24.451Z"^^xsd:dateTime ;
         adm:logMessage      "new record"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG3A84E2224F4E660C
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-04T14:27:01.851Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth, name and place"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:P2KG764  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2KG764 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "ba/P2KG764.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2KG764 ;
-        adm:logEntry        bda:LG6F60E82A0697E650 ;
+        adm:logEntry        bda:LG0D01D30AE7FE2568 , bda:LG3A84E2224F4E660C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV5F74AF714F17DE74
+    bdr:EV6F60E82A0697E650
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :eventWhere         bdr:G210 ;
+        :onYear             "1979"^^xsd:gYear .
     
     bdr:NM1308B62D60E34948
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bu chung /"@bo-x-ewts .
+    
+    bdr:NM5F74AF714F17DE74
+        a                   :PersonPenName ;
         rdfs:label          "rig zhol bu chung /"@bo-x-ewts .
     
     bdr:P2KG764  a          :Person ;
-        skos:prefLabel      "rig zhol bu chung /"@bo-x-ewts ;
+        skos:prefLabel      "bu chung /"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV5F74AF714F17DE74 ;
-        :personName         bdr:NM1308B62D60E34948 .
+        :personEvent        bdr:EV6F60E82A0697E650 ;
+        :personName         bdr:NM1308B62D60E34948 , bdr:NM5F74AF714F17DE74 .
 }
