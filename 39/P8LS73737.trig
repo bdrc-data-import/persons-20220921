@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS73737 {
+    bda:LG8D62E6AD1DCDA82D
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-11-05T14:49:54.991Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS73737  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS73737 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "39/P8LS73737.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS73737 ;
+        adm:logEntry        bda:LG8D62E6AD1DCDA82D ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV8A8C9EC39D2089B6
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM5DC81D59401D110E
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NMEDA9FC1FC6A1344E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag dkar 'jigs med rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT90433559C43E5C44
+        a                   :Note ;
+        :noteText           "author of work number W8LS73736"@en .
+    
+    bdr:P8LS73737  a        :Person ;
+        skos:prefLabel      "'jigs med rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT90433559C43E5C44 ;
+        :personEvent        bdr:EV8A8C9EC39D2089B6 ;
+        :personName         bdr:NM5DC81D59401D110E , bdr:NMEDA9FC1FC6A1344E .
+}
