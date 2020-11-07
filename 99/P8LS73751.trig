@@ -1,0 +1,63 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS73751 {
+    bda:LG74B4132B25628559
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-11-06T14:53:59.537Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS73751  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS73751 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "99/P8LS73751.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS73751 ;
+        adm:logEntry        bda:LG74B4132B25628559 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV525E0F34DDCE44E6
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1196 ;
+        :onYear             "1969"^^xsd:gYear .
+    
+    bdr:EVD574A81AFA7BB8AB
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3090 .
+    
+    bdr:NM0F06792DC689BE91
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rnam 'dren rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM229D2EBC25210F57
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sna shul rnam 'dren rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM824D83F4494637D6
+        a                   :PersonTitle ;
+        rdfs:label          "rdo rams pa sna shul rnam 'dren rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3283D7A8C64D0DA5
+        a                   :Note ;
+        :noteText           "author of work number W8LS73750"@en .
+    
+    bdr:P8LS73751  a        :Person ;
+        skos:prefLabel      "rnam 'dren rgya mtsho/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT3283D7A8C64D0DA5 ;
+        :personEvent        bdr:EV525E0F34DDCE44E6 , bdr:EVD574A81AFA7BB8AB ;
+        :personName         bdr:NM0F06792DC689BE91 , bdr:NM229D2EBC25210F57 , bdr:NM824D83F4494637D6 .
+}
