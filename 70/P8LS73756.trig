@@ -1,0 +1,58 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS73756 {
+    bda:LGC18B074D5B1D8ACA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2020-11-16T10:09:47.85Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS73756  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS73756 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "70/P8LS73756.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS73756 ;
+        adm:logEntry        bda:LGC18B074D5B1D8ACA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV6EE1459F0FFB23A4
+        a                   :PersonDeath ;
+        :onYear             "2016"^^xsd:gYear .
+    
+    bdr:EVB630ABE643D53F01
+        a                   :PersonBirth ;
+        :onYear             "1928"^^xsd:gYear .
+    
+    bdr:NM40B9AEEC764320FE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "e li wi bzel/"@bo-x-ewts .
+    
+    bdr:NM47C3F066CD6EC0DC
+        a                   :PersonOtherName ;
+        rdfs:label          "Elie Wiesel"@en .
+    
+    bdr:NT539B2B1E9CB2B6B2
+        a                   :Note ;
+        :noteText           "Noble laureate and author of La Nuit (Night)"@en .
+    
+    bdr:P8LS73756  a        :Person ;
+        skos:prefLabel      "e li wi bzel/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT539B2B1E9CB2B6B2 ;
+        :personEvent        bdr:EV6EE1459F0FFB23A4 , bdr:EVB630ABE643D53F01 ;
+        :personName         bdr:NM40B9AEEC764320FE , bdr:NM47C3F066CD6EC0DC .
+}
