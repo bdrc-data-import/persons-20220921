@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P0RK982 {
-    bda:LG134D611948BB1685
+    bda:LG3F7164B187723D42
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00023 .
     
-    bda:LGAAC457CA644D1FAF
+    bda:LGBDA51DDD0F2B3B30
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-24T09:57:52.164Z"^^xsd:dateTime ;
+        adm:logMessage      "added year and note from P10038"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGFB83E7A25F7C5011
         a                   adm:InitialDataImport ;
         adm:logDate         "2007-07-12T16:01:23.204Z"^^xsd:dateTime ;
         adm:logMessage      "first post to dlms"@en ;
@@ -25,23 +31,36 @@ bdg:P0RK982 {
     bda:P0RK982  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P0RK982 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "dc/P0RK982.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P0RK982 ;
-        adm:logEntry        bda:LG134D611948BB1685 , bda:LGAAC457CA644D1FAF ;
+        adm:logEntry        bda:LG3F7164B187723D42 , bda:LGBDA51DDD0F2B3B30 , bda:LGFB83E7A25F7C5011 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV134D611948BB1685
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
     
     bdr:NM2CEFDEB2D3D22886
         a                   :PersonPrimaryName ;
         rdfs:label          "'dul 'dzin dkar mo/"@bo-x-ewts .
     
+    bdr:NTAAC457CA644D1FAF
+        a                   :Note ;
+        :contentLocationStatement  "v. 1, p. 50" ;
+        :noteSource         bdr:MW174 ;
+        :noteText           "master in the transmission lineage of the rngog lugs of the prajnaparamita"@en .
+    
     bdr:P0RK982  a          :Person ;
         skos:prefLabel      "'dul 'dzin dkar mo/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTAAC457CA644D1FAF ;
+        :personEvent        bdr:EV134D611948BB1685 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM2CEFDEB2D3D22886 ;
         :personStudentOf    bdr:P2552 ;
-        :personTeacherOf    bdr:P10040 .
+        :personTeacherOf    bdr:P10039 , bdr:P10040 .
 }
