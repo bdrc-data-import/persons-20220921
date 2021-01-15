@@ -12,33 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7049 {
-    bda:LGF519E7DA8C86B3F4
+    bda:LG934616236FEC2C9E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-01-14T11:26:45.804Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year and note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF64E38691C99BC5A
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7049  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7049 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "76/P7049.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7049 ;
-        adm:logEntry        bda:LGF519E7DA8C86B3F4 ;
+        adm:logEntry        bda:LG934616236FEC2C9E , bda:LGF64E38691C99BC5A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV01BB4B97D7534843
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :onYear             "1948"^^xsd:gYear .
     
     bdr:NMECBF266F5BAF3758
         a                   :PersonPrimaryName ;
         rdfs:label          "mgon po dbang rgyal/"@bo-x-ewts .
     
+    bdr:NTF519E7DA8C86B3F4
+        a                   :Note ;
+        :contentLocationStatement  "W8LS16855" ;
+        :noteText           "A brief introduction of the author on French flips of this book."@en .
+    
     bdr:P7049  a            :Person ;
         skos:prefLabel      "mgon po dbang rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTF519E7DA8C86B3F4 ;
         :personEvent        bdr:EV01BB4B97D7534843 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMECBF266F5BAF3758 .
