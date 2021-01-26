@@ -12,32 +12,46 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P0RK1607 {
-    bda:LG62389D4C55D79FB5
+    bda:LG72DB955F87B4E3B5
         a                   adm:UpdateData ;
-        adm:logDate         "2014-09-05T10:18:26.268Z"^^xsd:dateTime ;
-        adm:logMessage      "name normalized"@en ;
-        adm:logWho          bdu:U00019 .
+        adm:logDate         "2021-01-25T11:01:12.275Z"^^xsd:dateTime ;
+        adm:logMessage      "added years and student"@en ;
+        adm:logWho          bdu:U00016 .
     
-    bda:LG9B4A7B3243FF4D15
+    bda:LG83C9EF24B2E20DA9
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00023 .
+    
+    bda:LGCB2F7E68AA6620BC
         a                   adm:InitialDataImport ;
         adm:logDate         "2007-07-12T14:52:34.59Z"^^xsd:dateTime ;
         adm:logMessage      "first post to dlms"@en ;
         adm:logWho          bdu:U00012 .
     
-    bda:LGF7380EA6F7573F11
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00023 .
+    bda:LGF44D3EE045D12C73
+        a                   adm:UpdateData ;
+        adm:logDate         "2014-09-05T10:18:26.268Z"^^xsd:dateTime ;
+        adm:logMessage      "name normalized"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P0RK1607  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P0RK1607 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "c7/P0RK1607.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P0RK1607 ;
-        adm:logEntry        bda:LG62389D4C55D79FB5 , bda:LG9B4A7B3243FF4D15 , bda:LGF7380EA6F7573F11 ;
+        adm:logEntry        bda:LG72DB955F87B4E3B5 , bda:LG83C9EF24B2E20DA9 , bda:LGCB2F7E68AA6620BC , bda:LGF44D3EE045D12C73 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV9B4A7B3243FF4D15
+        a                   :PersonDeath ;
+        :onYear             "1439"^^xsd:gYear .
+    
+    bdr:EVF7380EA6F7573F11
+        a                   :PersonBirth ;
+        :onYear             "1370"^^xsd:gYear .
     
     bdr:NMAD6116874FB12891
         a                   :PersonTitle ;
@@ -47,20 +61,26 @@ bdg:P0RK1607 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "mnga' ris bla chen chos dpal bzang po/"@bo-x-ewts .
     
+    bdr:NME4FFB7DABDC56A51
+        a                   :PersonOtherName ;
+        rdfs:label          "chos kyi rin chen/"@bo-x-ewts .
+    
     bdr:NME8CB76CEBE099DD0
         a                   :PersonPrimaryName ;
         rdfs:label          "chos dpal bzang po/"@bo-x-ewts .
     
-    bdr:NTE4FFB7DABDC56A51
+    bdr:NT62389D4C55D79FB5
         a                   :Note ;
-        :noteText           "Possible duplicate of TBRC =? P1032"@en .
+        :noteSource         bdr:MW2KG221284 ;
+        :noteText           "Detailed biography of Lama Choepal Zangpo."@en .
     
     bdr:P0RK1607  a         :Person ;
         skos:prefLabel      "chos dpal bzang po/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTE4FFB7DABDC56A51 ;
+        :note               bdr:NT62389D4C55D79FB5 ;
+        :personEvent        bdr:EV9B4A7B3243FF4D15 , bdr:EVF7380EA6F7573F11 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMAD6116874FB12891 , bdr:NMC913B568A8254662 , bdr:NME8CB76CEBE099DD0 ;
+        :personName         bdr:NMAD6116874FB12891 , bdr:NMC913B568A8254662 , bdr:NME4FFB7DABDC56A51 , bdr:NME8CB76CEBE099DD0 ;
         :personStudentOf    bdr:P0RK1791 , bdr:P1046 ;
-        :personTeacherOf    bdr:P0RK1608 , bdr:P2CZ7889 .
+        :personTeacherOf    bdr:P0RK1608 , bdr:P2CZ7889 , bdr:P4CZ15173 .
 }
