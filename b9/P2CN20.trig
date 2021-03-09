@@ -14,48 +14,54 @@
 bdg:P2CN20 {
     bda:LG08F9504A4A053FDA
         a                   adm:UpdateData ;
-        adm:logDate         "2010-10-26T13:13:10.865Z"^^xsd:dateTime ;
-        adm:logMessage      "released"@en ;
-        adm:logWho          bdu:U00020 .
-    
-    bda:LG231E3226A1325D17
-        a                   adm:UpdateData ;
         adm:logDate         "2010-10-04T12:39:04.184Z"^^xsd:dateTime ;
         adm:logMessage      "added person records"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LG8BDF3683B404BBAC
+    bda:LG231E3226A1325D17
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-10-04T12:19:50.292Z"^^xsd:dateTime ;
         adm:logMessage      "added persons records"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LG8E71C85F18E0E1D1
+    bda:LG2FE9C114D91A6DF0
         a                   adm:UpdateData ;
         adm:logDate         "2014-08-11T17:19:07.162Z"^^xsd:dateTime ;
         adm:logMessage      "added death date, 1319"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG8A478DB13FAB74AA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-08T12:55:48.769Z"^^xsd:dateTime ;
+        adm:logMessage      "added name variant"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG8E71C85F18E0E1D1
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-10-26T13:13:10.865Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00020 .
+    
     bda:P2CN20  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2CN20 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "b9/P2CN20.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2CN20 ;
-        adm:logEntry        bda:LG08F9504A4A053FDA , bda:LG231E3226A1325D17 , bda:LG8BDF3683B404BBAC , bda:LG8E71C85F18E0E1D1 ;
+        adm:logEntry        bda:LG08F9504A4A053FDA , bda:LG231E3226A1325D17 , bda:LG2FE9C114D91A6DF0 , bda:LG8A478DB13FAB74AA , bda:LG8E71C85F18E0E1D1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3777181319DFD6AD
+        a                   :PersonDeath ;
+        :onYear             "1319"^^xsd:gYear .
+    
+    bdr:EV7E33935341A0FA90
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G362 .
     
     bdr:EVB77B170F3036B5B1
-        a                   :PersonDeath ;
-        :onYear             "1319"^^xsd:gYear .
-    
-    bdr:EVDDCC8A627C96C64E
         a                   :PersonEventNotSpecified ;
         :eventWhere         bdr: ;
         :notAfter           "1269"^^xsd:gYear ;
@@ -69,20 +75,24 @@ bdg:P2CN20 {
         a                   :PersonPrimaryName ;
         rdfs:label          "gzhon nu grub/"@bo-x-ewts .
     
+    bdr:NMDDCC8A627C96C64E
+        a                   :PersonOtherName ;
+        rdfs:label          "ku su lu pa gzhon nu grub/"@bo-x-ewts .
+    
     bdr:NME835CAD2172D050E
         a                   :PersonPrimaryTitle ;
         rdfs:label          "bsam sdings pa gzhon nu grub/"@bo-x-ewts .
     
-    bdr:NT7E33935341A0FA90
+    bdr:NT8BDF3683B404BBAC
         a                   :Note ;
         :noteText           "important master of a shangs pa bka' brgyud transmission lineage.\n\nshangs pa bka' brgyud kyi brgyud 'dzin bla ma gal chen zhig yin te 'jag bsam rnam gnyis su grags pa'i ya gyal yin/ 'jag bsam gnyis kyi gdan slob brgyud pa ni mtha' yas pa zhig byung yod par gsal"@en .
     
     bdr:P2CN20  a           :Person ;
         skos:prefLabel      "gzhon nu grub/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT7E33935341A0FA90 ;
-        :personEvent        bdr:EV3777181319DFD6AD , bdr:EVB77B170F3036B5B1 , bdr:EVDDCC8A627C96C64E ;
-        :personName         bdr:NM43219B57A9AFC2F4 , bdr:NM693C944973986879 , bdr:NME835CAD2172D050E ;
+        :note               bdr:NT8BDF3683B404BBAC ;
+        :personEvent        bdr:EV3777181319DFD6AD , bdr:EV7E33935341A0FA90 , bdr:EVB77B170F3036B5B1 ;
+        :personName         bdr:NM43219B57A9AFC2F4 , bdr:NM693C944973986879 , bdr:NMDDCC8A627C96C64E , bdr:NME835CAD2172D050E ;
         :personStudentOf    bdr:P95 ;
         :personTeacherOf    bdr:P2847 .
 }

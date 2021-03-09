@@ -1,0 +1,61 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75170 {
+    bda:LG5296861303D52210
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-08T14:40:28.346Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG5C7433B6B2026E90
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-08T14:46:23.494Z"^^xsd:dateTime ;
+        adm:logMessage      "added year of birth"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75170  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75170 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "3e/P8LS75170.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75170 ;
+        adm:logEntry        bda:LG5296861303D52210 , bda:LG5C7433B6B2026E90 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF177E92FFBD8F2AA
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3503 ;
+        :onYear             "1973"^^xsd:gYear .
+    
+    bdr:NM04EFAF4B990121D8
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bstan/"@bo-x-ewts .
+    
+    bdr:NM0BACA4897E2B7D58
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "li thang blo bstan/"@bo-x-ewts .
+    
+    bdr:NT173DD7FC4E6BB5D5
+        a                   :Note ;
+        :noteText           "author of W8LS20722"@en .
+    
+    bdr:P8LS75170  a        :Person ;
+        skos:prefLabel      "blo bstan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT173DD7FC4E6BB5D5 ;
+        :personEvent        bdr:EVF177E92FFBD8F2AA ;
+        :personName         bdr:NM04EFAF4B990121D8 , bdr:NM0BACA4897E2B7D58 .
+}

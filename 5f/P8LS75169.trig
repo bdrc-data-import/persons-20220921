@@ -1,0 +1,56 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75169 {
+    bda:LG437D587D39452BFA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-08T14:37:29.928Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75169  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75169 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "5f/P8LS75169.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75169 ;
+        adm:logEntry        bda:LG437D587D39452BFA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA43F9BBC27E2DBA3
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2304 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM068821645D90F3DE
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang byams pa/"@bo-x-ewts .
+    
+    bdr:NMCB53F9A2C1FB11B1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "li thang blo bzang byams pa/"@bo-x-ewts .
+    
+    bdr:NT31224A9BD11DCCFD
+        a                   :Note ;
+        :noteText           "See work number W8LS20722\nformer army of six river and four ranges, also participated in Mustang camp"@en .
+    
+    bdr:P8LS75169  a        :Person ;
+        skos:prefLabel      "blo bzang byams pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT31224A9BD11DCCFD ;
+        :personEvent        bdr:EVA43F9BBC27E2DBA3 ;
+        :personName         bdr:NM068821645D90F3DE , bdr:NMCB53F9A2C1FB11B1 .
+}
