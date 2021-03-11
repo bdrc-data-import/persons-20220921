@@ -12,34 +12,65 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6982 {
-    bda:LGFDB9854244086EE8
+    bda:LG560912280A4DF7D5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-10T09:56:48.272Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA81987C155453C95
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-10T09:41:46.985Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAF355D13A96D3D4B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-10T09:40:34.022Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and place of birth"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGCDEC0EDB3923FC52
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6982  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6982 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "c0/P6982.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6982 ;
-        adm:logEntry        bda:LGFDB9854244086EE8 ;
+        adm:logEntry        bda:LG560912280A4DF7D5 , bda:LGA81987C155453C95 , bda:LGAF355D13A96D3D4B , bda:LGCDEC0EDB3923FC52 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV446332F6D69ED98B
+    bdr:EVFC4789C154BBD08C
         a                   :PersonBirth ;
+        :eventWhere         bdr:G3182 ;
         :notAfter           "1999"^^xsd:gYear ;
         :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM446332F6D69ED98B
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ngag dbang tshe ring shag po/"@bo-x-ewts .
     
     bdr:NM4A7CECFA496C4839
         a                   :PersonPrimaryName ;
         rdfs:label          "ngag dbang tshe ring /"@bo-x-ewts .
     
+    bdr:NMFDB9854244086EE8
+        a                   :PersonOtherName ;
+        rdfs:label          "Ngawang Tsering Shakpo"@en .
+    
+    bdr:NTB1BBB77EA3D7A0D3
+        a                   :Note ;
+        :noteText           "born in Mato village of Ladakh\n\nwell known Ladakh scholar\nteacher and writer\nauthored many books on religion and culture of Ladakh"@en .
+    
     bdr:P6982  a            :Person ;
         skos:prefLabel      "ngag dbang tshe ring /"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV446332F6D69ED98B ;
+        :note               bdr:NTB1BBB77EA3D7A0D3 ;
+        :personEvent        bdr:EVFC4789C154BBD08C ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM4A7CECFA496C4839 .
+        :personName         bdr:NM446332F6D69ED98B , bdr:NM4A7CECFA496C4839 , bdr:NMFDB9854244086EE8 .
 }
