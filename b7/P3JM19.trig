@@ -12,46 +12,41 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P3JM19 {
-    bda:LG5CCCCBF75C2F8169
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
-        adm:logMessage      "added event type=\"birth\""@en ;
-        adm:logWhoStr       "person-events-add-type-birth" .
-    
-    bda:LG9D86485D08893194
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2009-03-30T17:24:16.778Z"^^xsd:dateTime ;
-        adm:logMessage      "added records"@en ;
-        adm:logWho          bdu:U00014 .
-    
-    bda:LGFD4D05C92220352B
+    bda:LG201CDC431D62353A
         a                   adm:UpdateData ;
         adm:logDate         "2012-02-27T09:49:31.233Z"^^xsd:dateTime ;
         adm:logMessage      "added dates, seat, student"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG29C9FFFEBCB83D47
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2009-03-30T17:24:16.778Z"^^xsd:dateTime ;
+        adm:logMessage      "added records"@en ;
+        adm:logWho          bdu:U00014 .
+    
+    bda:LG9D86485D08893194
+        a                   adm:WithdrawData ;
+        adm:logDate         "2021-03-11T13:55:18.858Z"^^xsd:dateTime ;
+        adm:logMessage      "withdrawn in favor of P8930"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBC01595A6716FEFD
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added event type=\"birth\""@en ;
+        adm:logWhoStr       "person-events-add-type-birth" .
+    
     bda:P3JM19  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3JM19 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "b7/P3JM19.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3JM19 ;
-        adm:logEntry        bda:LG5CCCCBF75C2F8169 , bda:LG9D86485D08893194 , bda:LGFD4D05C92220352B ;
+        adm:logEntry        bda:LG201CDC431D62353A , bda:LG29C9FFFEBCB83D47 , bda:LG9D86485D08893194 , bda:LGBC01595A6716FEFD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusReleased .
-    
-    bdr:EV201CDC431D62353A
-        a                   :PersonDeath ;
-        :onYear             "1865"^^xsd:gYear .
-    
-    bdr:EV29C9FFFEBCB83D47
-        a                   :PersonBirth ;
-        :onYear             "1788"^^xsd:gYear .
-    
-    bdr:EVBC01595A6716FEFD
-        a                   :PersonOccupiesSeat ;
-        :eventWhere         bdr:G529 .
+        adm:replaceWith     bdr:P8930 ;
+        adm:status          bda:StatusWithdrawn .
     
     bdr:NMC4AC0ACBC1B23250
         a                   :PersonPrimaryName ;
@@ -60,7 +55,5 @@ bdg:P3JM19 {
     bdr:P3JM19  a           :Person ;
         skos:prefLabel      "ngag dbang chos 'phel rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV201CDC431D62353A , bdr:EV29C9FFFEBCB83D47 , bdr:EVBC01595A6716FEFD ;
-        :personName         bdr:NMC4AC0ACBC1B23250 ;
-        :personTeacherOf    bdr:P264 , bdr:P4799 .
+        :personName         bdr:NMC4AC0ACBC1B23250 .
 }
