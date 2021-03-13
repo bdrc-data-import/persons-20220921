@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75185 {
+    bda:LG826263264DCE033C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-12T09:45:08.077Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75185  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75185 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "cf/P8LS75185.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75185 ;
+        adm:logEntry        bda:LG826263264DCE033C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVD4AC5C7D83503488
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1390 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:NM2C71F134D79599B7
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dwags po blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NM7868953835EE63E0
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NTB2156E031D601237
+        a                   :Note ;
+        :noteText           "author of work record W8LS34835"@en .
+    
+    bdr:P8LS75185  a        :Person ;
+        skos:prefLabel      "blo bzang bstan 'dzin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2156E031D601237 ;
+        :personEvent        bdr:EVD4AC5C7D83503488 ;
+        :personName         bdr:NM2C71F134D79599B7 , bdr:NM7868953835EE63E0 .
+}
