@@ -12,48 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2CZ6614 {
-    bda:LG95BE776FF578C693
+    bda:LG44A41019CAAAB8E9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-01-22T14:01:20.002Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG81211C32F6085E92
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-15T11:54:19.957Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth and death date"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2CZ6614  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2CZ6614 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "cd/P2CZ6614.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2CZ6614 ;
-        adm:logEntry        bda:LG95BE776FF578C693 ;
+        adm:logEntry        bda:LG44A41019CAAAB8E9 , bda:LG81211C32F6085E92 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV4581CB41526D3498
+        a                   :PersonDeath ;
+        :onYear             "1751"^^xsd:gYear .
+    
+    bdr:EVC975F20945EFE353
+        a                   :PersonBirth ;
+        :onYear             "1687"^^xsd:gYear .
+    
+    bdr:EVDEFECDCCFC533B3A
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G185 .
     
-    bdr:EVC975F20945EFE353
-        a                   :PersonEventNotSpecified ;
-        :notAfter           "1799"^^xsd:gYear ;
-        :notBefore          "1700"^^xsd:gYear .
-    
     bdr:NM284C981E31718C6B
         a                   :PersonPrimaryName ;
-        rdfs:label          "mi pham dge legs rin chen/"@bo-x-ewts .
+        rdfs:label          "'dzi sgar dge legs rin chen/"@bo-x-ewts .
     
     bdr:NM2E1C62CD965DB9DC
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "'dzi sgar bla ma mi pham dge legs rin chen/"@bo-x-ewts .
+        rdfs:label          "'dzi sgar dbon mkhas grub dge legs rin chen/"@bo-x-ewts .
     
-    bdr:NTDEFECDCCFC533B3A
+    bdr:NT95BE776FF578C693
         a                   :Note ;
-        :noteText           "he was contemporary of the fourth 'dzi sgar mchog sprul, rdo rje drag po (1740-1798)"@en .
+        :noteText           "he was contemporary of the fourth 'dzi sgar mchog sprul, rdo rje drag po (1740-1798)\n\nyounger brother of the second zigar dge legs mchog grub bstan 'dzin"@en .
     
     bdr:P2CZ6614  a         :Person ;
-        skos:prefLabel      "mi pham dge legs rin chen/"@bo-x-ewts ;
+        skos:prefLabel      "'dzi sgar dge legs rin chen/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTDEFECDCCFC533B3A ;
-        :personEvent        bdr:EV4581CB41526D3498 , bdr:EVC975F20945EFE353 ;
+        :note               bdr:NT95BE776FF578C693 ;
+        :personEvent        bdr:EV4581CB41526D3498 , bdr:EVC975F20945EFE353 , bdr:EVDEFECDCCFC533B3A ;
         :personName         bdr:NM284C981E31718C6B , bdr:NM2E1C62CD965DB9DC .
 }

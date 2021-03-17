@@ -1,0 +1,62 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75197 {
+    bda:LGCE608BBB0E0FC214
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-16T14:23:24.921Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75197  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75197 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "86/P8LS75197.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75197 ;
+        adm:logEntry        bda:LGCE608BBB0E0FC214 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV042727F70ACD32E1
+        a                   :PersonDeath ;
+        :onYear             "1944"^^xsd:gYear .
+    
+    bdr:EVE79C4439DBB670C2
+        a                   :PersonBirth ;
+        :onYear             "1864"^^xsd:gYear .
+    
+    bdr:NM6F7E1C839D29AB38
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lu'u ye si/"@bo-x-ewts .
+    
+    bdr:NMB3AA1CDA87C96BC6
+        a                   :PersonOtherName ;
+        rdfs:label          "Louis Jean"@en .
+    
+    bdr:NT6D86138DFE4BE7FD
+        a                   :Note ;
+        :noteText           "born in Besancon, Frence\n\nreknown French movie director, brother of Auguste Lumiere"@en .
+    
+    bdr:NTF959CBE578338E9D
+        a                   :Note ;
+        :noteText           "see work record W8LS68316"@en .
+    
+    bdr:P8LS75197  a        :Person ;
+        skos:prefLabel      "lu'u ye si/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6D86138DFE4BE7FD , bdr:NTF959CBE578338E9D ;
+        :personEvent        bdr:EV042727F70ACD32E1 , bdr:EVE79C4439DBB670C2 ;
+        :personName         bdr:NM6F7E1C839D29AB38 , bdr:NMB3AA1CDA87C96BC6 .
+}
