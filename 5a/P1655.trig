@@ -12,48 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1655 {
-    bda:LG9B53C3283F0BB3F5
+    bda:LG0B009C58A78A7AB6
         a                   adm:UpdateData ;
         adm:logDate         "2018-05-16T11:35:53.011Z"^^xsd:dateTime ;
         adm:logMessage      "corrected typo"@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LGC1971247BC04A0A3
+    bda:LG50E6EB67C5443046
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-19T19:35:22.688Z"^^xsd:dateTime ;
+        adm:logMessage      "added techer and infos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG8D77EC43E5973C2A
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P1655  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1655 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "5a/P1655.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1655 ;
-        adm:logEntry        bda:LG9B53C3283F0BB3F5 , bda:LGC1971247BC04A0A3 ;
+        adm:logEntry        bda:LG0B009C58A78A7AB6 , bda:LG50E6EB67C5443046 , bda:LG8D77EC43E5973C2A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV2535282CCEB1B605
+    bdr:EV4A8E7B05B5E15D54
         a                   :PersonBirth ;
+        :eventWhere         bdr:G576 ;
         :onYear             "1926"^^xsd:gYear .
+    
+    bdr:EV9B53C3283F0BB3F5
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G4 .
     
     bdr:NM22979310169AFCCC
         a                   :PersonPrimaryTitle ;
         rdfs:label          "slob dpon bstan 'dzin rnam dag"@bo-x-ewts .
     
+    bdr:NM2535282CCEB1B605
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "yongs 'dzin bstan 'dzin rnam dag"@bo-x-ewts .
+    
     bdr:NM3B977510306050D2
         a                   :PersonPrimaryName ;
         rdfs:label          "bstan 'dzin rnam dag"@bo-x-ewts .
     
-    bdr:NT4A8E7B05B5E15D54
+    bdr:NTC1971247BC04A0A3
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Bon"@en .
     
     bdr:P1655  a            :Person ;
         skos:prefLabel      "slob dpon bstan 'dzin rnam dag"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT4A8E7B05B5E15D54 ;
-        :personEvent        bdr:EV2535282CCEB1B605 ;
+        :note               bdr:NTC1971247BC04A0A3 ;
+        :personEvent        bdr:EV4A8E7B05B5E15D54 , bdr:EV9B53C3283F0BB3F5 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM22979310169AFCCC , bdr:NM3B977510306050D2 .
+        :personName         bdr:NM22979310169AFCCC , bdr:NM2535282CCEB1B605 , bdr:NM3B977510306050D2 ;
+        :personStudentOf    bdr:P4CN12039 .
 }

@@ -1,0 +1,61 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75200 {
+    bda:LG670F65182C7DDC00
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-19T09:20:49.202Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth date and seat"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGECF50E611AF332D0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-19T09:14:34.315Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75200  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75200 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "01/P8LS75200.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75200 ;
+        adm:logEntry        bda:LG670F65182C7DDC00 , bda:LGECF50E611AF332D0 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D3BF105572A0450
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2148 ;
+        :onYear             "1947"^^xsd:gYear .
+    
+    bdr:EVD323814BFFCDFDAF
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3393 .
+    
+    bdr:NMF5DD42823AAA7FFD
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin chos grags/"@bo-x-ewts .
+    
+    bdr:NT2D24BE98BE56300A
+        a                   :Note ;
+        :noteText           "political prisoner\nsee work number W8LS24740"@en .
+    
+    bdr:P8LS75200  a        :Person ;
+        skos:prefLabel      "bstan 'dzin chos grags/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2D24BE98BE56300A ;
+        :personEvent        bdr:EV9D3BF105572A0450 , bdr:EVD323814BFFCDFDAF ;
+        :personName         bdr:NMF5DD42823AAA7FFD .
+}
