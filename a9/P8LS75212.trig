@@ -1,0 +1,52 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75212 {
+    bda:LG0AD3321DD6B5150A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-22T14:47:27.653Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75212  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75212 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a9/P8LS75212.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75212 ;
+        adm:logEntry        bda:LG0AD3321DD6B5150A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV9D11F44620924CA1
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMC7D07BD0C9A8D8AA
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NT1026CD11DB25A17E
+        a                   :Note ;
+        :noteText           "author of work record W8LS18463\n\none of the student of Drokmi Jampa Lodro"@en .
+    
+    bdr:P8LS75212  a        :Person ;
+        skos:prefLabel      "rdo rje dbang 'dus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1026CD11DB25A17E ;
+        :personEvent        bdr:EV9D11F44620924CA1 ;
+        :personName         bdr:NMC7D07BD0C9A8D8AA ;
+        :personStudentOf    bdr:P6109 .
+}

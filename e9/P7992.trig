@@ -12,42 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7992 {
-    bda:LG6354FFC6B9F05789
+    bda:LG0A1C33458DF24C01
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGA32D8F7AB91C0DAF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T11:16:14.422Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher & student info"@en ;
+        adm:logWho          bdu:U00007 .
     
     bda:P7992  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7992 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "e9/P7992.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7992 ;
-        adm:logEntry        bda:LG6354FFC6B9F05789 ;
+        adm:logEntry        bda:LG0A1C33458DF24C01 , bda:LGA32D8F7AB91C0DAF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV1DDC25CF8A523D83
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G584 ;
+        :notAfter           "1789"^^xsd:gYear ;
+        :notBefore          "1780"^^xsd:gYear .
+    
+    bdr:EV6354FFC6B9F05789
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G126 .
     
-    bdr:NM305125701497188A
-        a                   :PersonPrimaryName ;
-        rdfs:label          "blo bzang tshe brtan/"@bo-x-ewts .
+    bdr:EVC6B80D39DE470856
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
     
-    bdr:NM7106EE4C4001E803
+    bdr:NM305125701497188A
         a                   :PersonPrimaryTitle ;
         rdfs:label          "tshe brtan lha rams pa/"@bo-x-ewts .
     
-    bdr:NTC6B80D39DE470856
+    bdr:NM7106EE4C4001E803
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang tshe brtan/"@bo-x-ewts .
+    
+    bdr:NT2A4852971A4E4656
         a                   :Note ;
         :noteText           "dge lugs scholar of the 'bras spungs blo gsal gling tradition"@en .
     
     bdr:P7992  a            :Person ;
         skos:prefLabel      "tshe brtan lha rams pa/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTC6B80D39DE470856 ;
-        :personEvent        bdr:EV1DDC25CF8A523D83 ;
+        :note               bdr:NT2A4852971A4E4656 ;
+        :personEvent        bdr:EV1DDC25CF8A523D83 , bdr:EV6354FFC6B9F05789 , bdr:EVC6B80D39DE470856 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM305125701497188A , bdr:NM7106EE4C4001E803 .
+        :personName         bdr:NM305125701497188A , bdr:NM7106EE4C4001E803 ;
+        :personStudentOf    bdr:P179 , bdr:P182 , bdr:P290 , bdr:P304 .
 }

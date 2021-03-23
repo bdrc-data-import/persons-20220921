@@ -1,0 +1,73 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75209 {
+    bda:LG6BBEC6D0266B2DE0
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T14:10:05.909Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG860BD7C25AA2FE3F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-22T12:09:33.438Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75209  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75209 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "18/P8LS75209.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75209 ;
+        adm:logEntry        bda:LG6BBEC6D0266B2DE0 , bda:LG860BD7C25AA2FE3F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV024001CDEB3123DF
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G842 ;
+        :onYear             "1968"^^xsd:gYear .
+    
+    bdr:EVB188CE88BC50CF65
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
+    
+    bdr:EVB65AAE4284F6A6F3
+        a                   :PersonDeath ;
+        :onYear             "2019"^^xsd:gYear .
+    
+    bdr:NM0B85B2D5648BDAD4
+        a                   :PersonTitle ;
+        rdfs:label          "dge bshes 'jam dpal blo shes/"@bo-x-ewts .
+    
+    bdr:NM78F534C198BC1363
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jam dpal blo shes/"@bo-x-ewts .
+    
+    bdr:NME2044B10D3FE6506
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ser byes dge bshes 'jam dpal blo shes/"@bo-x-ewts .
+    
+    bdr:NT059960A8E3BB98C9
+        a                   :Note ;
+        :noteText           "born in 'dan yul ak phu bsam 'grub gling \n\nkhams klong thang sgrol ma lha khang du gangs sprul rin po che'i mdun nas bsnyen rdzogs kyi sdom pa bzhes/\n\nwell known tibetan buddhist teacher\nrevitalized buddhism in Tibet\n\nauthor of work record W8LS18445"@en .
+    
+    bdr:P8LS75209  a        :Person ;
+        skos:prefLabel      "ser byes dge bshes 'jam dpal blo shes/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT059960A8E3BB98C9 ;
+        :personEvent        bdr:EV024001CDEB3123DF , bdr:EVB188CE88BC50CF65 , bdr:EVB65AAE4284F6A6F3 ;
+        :personName         bdr:NM0B85B2D5648BDAD4 , bdr:NM78F534C198BC1363 , bdr:NME2044B10D3FE6506 .
+}

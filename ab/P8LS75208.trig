@@ -1,0 +1,51 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75208 {
+    bda:LGE17E46FAE8EA89B6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-22T09:49:27.123Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75208  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75208 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "ab/P8LS75208.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75208 ;
+        adm:logEntry        bda:LGE17E46FAE8EA89B6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVA38871BFA91A5744
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2318 ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:NM239EB72CA2FB46EF
+        a                   :PersonPrimaryName ;
+        rdfs:label          "lha sde gnam lo yag"@bo-x-ewts .
+    
+    bdr:NTE17684AED31BEFB2
+        a                   :Note ;
+        :noteText           "born in hang nga rdzong lha sde, mtsho sngon mtsho lho khul\n\nwriter and author of work record W8LS18231"@en .
+    
+    bdr:P8LS75208  a        :Person ;
+        skos:prefLabel      "lha sde gnam lo yag"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE17684AED31BEFB2 ;
+        :personEvent        bdr:EVA38871BFA91A5744 ;
+        :personName         bdr:NM239EB72CA2FB46EF .
+}

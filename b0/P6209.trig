@@ -13,14 +13,20 @@
 
 bdg:P6209 {
     bda:LG26F8EDF2EE1D2FAB
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
-    bda:LG319F11AFA55236CB
         a                   adm:UpdateData ;
         adm:logDate         "2014-03-21T15:22:05.741Z"^^xsd:dateTime .
     
-    bda:LG378CBF157F28A260
+    bda:LG289BBE5F251F5B2A
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGDAD67262C052A06A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-22T10:58:16.663Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat & note ....infos"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGF19B6E2AE033BE7E
         a                   adm:UpdateData ;
         adm:logDate         "2014-03-21T15:28:54.794Z"^^xsd:dateTime ;
         adm:logMessage      "added tulku title phonetic"@en .
@@ -28,11 +34,11 @@ bdg:P6209 {
     bda:P6209  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6209 ;
-        adm:facetIndex      11 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "b0/P6209.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6209 ;
-        adm:logEntry        bda:LG26F8EDF2EE1D2FAB , bda:LG319F11AFA55236CB , bda:LG378CBF157F28A260 ;
+        adm:logEntry        bda:LG26F8EDF2EE1D2FAB , bda:LG289BBE5F251F5B2A , bda:LGDAD67262C052A06A , bda:LGF19B6E2AE033BE7E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -42,7 +48,12 @@ bdg:P6209 {
     
     bdr:EVC3A14E62A45DC7D4
         a                   :PersonBirth ;
+        :eventWhere         bdr:G1480 ;
         :onYear             "1925"^^xsd:gYear .
+    
+    bdr:EVD5A7C7777BCBC39A
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G1KR2481 .
     
     bdr:NM1D93E1C400EED608
         a                   :PersonTulkuTitle ;
@@ -58,19 +69,25 @@ bdg:P6209 {
     
     bdr:NMD41728A377B1BF1C
         a                   :PersonTulkuTitle ;
-        rdfs:label          "Shingza 05"@bo-x-phon-en-m-tbrc .
+        rdfs:label          "Shingza 05"@en .
     
-    bdr:NTD5A7C7777BCBC39A
+    bdr:NT319F11AFA55236CB
         a                   :Note ;
         :noteSource         bdr:MW22354 ;
         :noteText           "biography"@en .
     
+    bdr:NT378CBF157F28A260
+        a                   :Note ;
+        :contentLocationStatement  "1v.15-25p." ;
+        :noteSource         bdr:MW1AC242 ;
+        :noteText           "འདིར་རྣམ་ཐར་མདོར་བསྡུས་གསལ།"@bo .
+    
     bdr:P6209  a            :Person ;
-        skos:prefLabel      "shing bza' 05 skal bzang chos kyi rgyal mtshan/"@bo-x-ewts ;
+        skos:prefLabel      "shing bza' 05 skal bzang chos kyi rgyal mtshan/"@bo-x-ewts , "Shingza 05"@en ;
         :incarnationGeneral  bdr:P7548 ;
         :isRoot             true ;
-        :note               bdr:NTD5A7C7777BCBC39A ;
-        :personEvent        bdr:EV5A0A16492B7BDDB5 , bdr:EVC3A14E62A45DC7D4 ;
+        :note               bdr:NT319F11AFA55236CB , bdr:NT378CBF157F28A260 ;
+        :personEvent        bdr:EV5A0A16492B7BDDB5 , bdr:EVC3A14E62A45DC7D4 , bdr:EVD5A7C7777BCBC39A ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1D93E1C400EED608 , bdr:NM9859017B1A603392 , bdr:NMB85A58075C3E081B , bdr:NMD41728A377B1BF1C .
 }

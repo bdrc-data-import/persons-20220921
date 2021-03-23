@@ -1,0 +1,51 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75206 {
+    bda:LG54FBB3C48A011DA1
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-22T09:23:21.433Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75206  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75206 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3c/P8LS75206.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75206 ;
+        adm:logEntry        bda:LG54FBB3C48A011DA1 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV609CE210C4EB6099
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM879A7AF73C6505A9
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin shes rab/"@bo-x-ewts .
+    
+    bdr:NTF6D0DAF86C956752
+        a                   :Note ;
+        :noteText           "author of work record W8LS18211"@en .
+    
+    bdr:P8LS75206  a        :Person ;
+        skos:prefLabel      "bstan 'dzin shes rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF6D0DAF86C956752 ;
+        :personEvent        bdr:EV609CE210C4EB6099 ;
+        :personName         bdr:NM879A7AF73C6505A9 .
+}
