@@ -1,0 +1,59 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75220 {
+    bda:LGFE1E913534B3000F
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-23T11:45:46.884Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75220  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75220 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "50/P8LS75220.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75220 ;
+        adm:logEntry        bda:LGFE1E913534B3000F ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4A175B1B019D56D7
+        a                   :PersonDeath ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVDAC75E5E5CB36D7B
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G47 .
+    
+    bdr:NM2CA636972BC57D6E
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bde chos ye shes stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NM50494D86F2554A35
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ye shes stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NT88F49BD8A0A9DB1C
+        a                   :Note ;
+        :noteText           "author of work record W8LS18511"@en .
+    
+    bdr:P8LS75220  a        :Person ;
+        skos:prefLabel      "bde chos ye shes stobs rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT88F49BD8A0A9DB1C ;
+        :personEvent        bdr:EV4A175B1B019D56D7 , bdr:EVDAC75E5E5CB36D7B ;
+        :personName         bdr:NM2CA636972BC57D6E , bdr:NM50494D86F2554A35 .
+}
