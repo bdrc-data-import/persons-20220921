@@ -1,0 +1,51 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75253 {
+    bda:LGA32E139702D0B857
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-03-29T11:49:17.03Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75253  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75253 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "a1/P8LS75253.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75253 ;
+        adm:logEntry        bda:LGA32E139702D0B857 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV7A74A39A346E3BCD
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NME84BDD1DBFCBEA2B
+        a                   :PersonPrimaryName ;
+        rdfs:label          "spen pa/"@bo-x-ewts .
+    
+    bdr:NT70B98B1DEAB17CE2
+        a                   :Note ;
+        :noteText           "editor of work record W8LS19123"@en .
+    
+    bdr:P8LS75253  a        :Person ;
+        skos:prefLabel      "spen pa/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT70B98B1DEAB17CE2 ;
+        :personEvent        bdr:EV7A74A39A346E3BCD ;
+        :personName         bdr:NME84BDD1DBFCBEA2B .
+}

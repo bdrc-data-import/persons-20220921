@@ -13,23 +13,29 @@
 
 bdg:P0RK86 {
     bda:LG3B0080CCA98DADC2
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00023 .
+    
+    bda:LG7926680A70BE2475
         a                   adm:InitialDataImport ;
         adm:logDate         "2007-07-12T15:52:43.526Z"^^xsd:dateTime ;
         adm:logMessage      "first post to dlms"@en ;
         adm:logWho          bdu:U00012 .
     
-    bda:LG81FC089A014C7641
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00023 .
+    bda:LG92B0D20C6CDCAB92
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-29T07:26:11.181Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P0RK86  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P0RK86 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "3f/P0RK86.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P0RK86 ;
-        adm:logEntry        bda:LG3B0080CCA98DADC2 , bda:LG81FC089A014C7641 ;
+        adm:logEntry        bda:LG3B0080CCA98DADC2 , bda:LG7926680A70BE2475 , bda:LG92B0D20C6CDCAB92 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -45,11 +51,19 @@ bdg:P0RK86 {
         a                   :PersonPrimaryName ;
         rdfs:label          "'khon shAkya blo gros/"@bo-x-ewts .
     
+    bdr:NT81FC089A014C7641
+        a                   :Note ;
+        :contentLocationStatement  "pp. 18-20" ;
+        :noteSource         bdr:MW28065 ;
+        :noteText           "hierarch of the 'khon family; father of dkon mchog rgyal po"@en .
+    
     bdr:P0RK86  a           :Person ;
         skos:prefLabel      "'khon shAkya blo gros/"@bo-x-ewts ;
+        :hasSon             bdr:P10152 ;
         :isRoot             true ;
+        :note               bdr:NT81FC089A014C7641 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1D607B544154AAB5 , bdr:NM72C4274E7EB9E7C8 , bdr:NMB6B4E369F60D3DD2 ;
         :personStudentOf    bdr:P0RK85 ;
-        :personTeacherOf    bdr:P0RK87 .
+        :personTeacherOf    bdr:P0RK87 , bdr:P3730 .
 }
