@@ -13,31 +13,37 @@
 
 bdg:P4CZ75588 {
     bda:LG0483BA0EF43CC522
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
-        adm:logMessage      "added event type=\"birth\""@en ;
-        adm:logWhoStr       "person-events-add-type-birth" .
-    
-    bda:LGB3D3A8AE8972C67D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-03-30T11:49:36.877Z"^^xsd:dateTime ;
         adm:logMessage      "new"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LG08C4FAF56148238F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-03-31T00:17:51.055Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth G# and note"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGC1FD4ADAD1252C39
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added event type=\"birth\""@en ;
+        adm:logWhoStr       "person-events-add-type-birth" .
+    
     bda:P4CZ75588  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4CZ75588 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "2d/P4CZ75588.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4CZ75588 ;
-        adm:logEntry        bda:LG0483BA0EF43CC522 , bda:LGB3D3A8AE8972C67D ;
+        adm:logEntry        bda:LG0483BA0EF43CC522 , bda:LG08C4FAF56148238F , bda:LGC1FD4ADAD1252C39 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV67551E133C0BA77E
         a                   :PersonBirth ;
-        :eventWhere         bdr:G2175 ;
+        :eventWhere         bdr:G3574 ;
         :onYear             "1970"^^xsd:gYear .
     
     bdr:NM2CCC8445DFD265D9
@@ -45,12 +51,17 @@ bdg:P4CZ75588 {
         rdfs:label          "nyi ma don grub/"@bo-x-ewts .
     
     bdr:NM8823BF2866AEBE2E
-        a                   :PersonFamilyName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "'brong rtse ba nyi ma don grub/"@bo-x-ewts .
     
+    bdr:NTB3D3A8AE8972C67D
+        a                   :Note ;
+        :noteText           "བོད་ལྗོངས་གཏམ་བརྗོད་ཟློས་གར་ཚོགས་པའི་ཟློས་གར་རྩོམ་པ་པོ།"@bo .
+    
     bdr:P4CZ75588  a        :Person ;
-        skos:prefLabel      "nyi ma don grub/"@bo-x-ewts ;
+        skos:prefLabel      "'brong rtse ba nyi ma don grub/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTB3D3A8AE8972C67D ;
         :personEvent        bdr:EV67551E133C0BA77E ;
         :personName         bdr:NM2CCC8445DFD265D9 , bdr:NM8823BF2866AEBE2E .
 }
