@@ -1,0 +1,51 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG228706 {
+    bda:LGD964018FEA61AA15
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-01T16:29:30.689Z"^^xsd:dateTime ;
+        adm:logMessage      "New record"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:P2KG228706  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG228706 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "0b/P2KG228706.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG228706 ;
+        adm:logEntry        bda:LGD964018FEA61AA15 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV772FA04565297511
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM286459A21A7415DB
+        a                   :PersonOtherName ;
+        rdfs:label          "tenzin dhondrup"@en .
+    
+    bdr:NM89F5976C23023D25
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bstan 'dzin don grub/"@bo-x-ewts .
+    
+    bdr:P2KG228706  a       :Person ;
+        skos:prefLabel      "bstan 'dzin don grub/"@bo-x-ewts , "tenzin dhondrup"@en ;
+        :isRoot             true ;
+        :personEvent        bdr:EV772FA04565297511 ;
+        :personName         bdr:NM286459A21A7415DB , bdr:NM89F5976C23023D25 ;
+        :personStudentOf    bdr:P2075 .
+}
