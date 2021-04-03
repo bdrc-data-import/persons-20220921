@@ -12,24 +12,34 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6757 {
-    bda:LGB960666429DFDA22
+    bda:LG241C59DA1619DB1E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-02T14:18:21.993Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of death and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA164FC9506DEA80F
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6757  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6757 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "b4/P6757.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6757 ;
-        adm:logEntry        bda:LGB960666429DFDA22 ;
+        adm:logEntry        bda:LG241C59DA1619DB1E , bda:LGA164FC9506DEA80F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7848945F7116367B
         a                   :PersonBirth ;
         :onYear             "1930"^^xsd:gYear .
+    
+    bdr:EV9239311CCC1ACD90
+        a                   :PersonDeath ;
+        :onYear             "2007"^^xsd:gYear .
     
     bdr:NM032A62BED6006854
         a                   :PersonPersonalName ;
@@ -47,7 +57,11 @@ bdg:P6757 {
         a                   :PersonPrimaryName ;
         rdfs:label          "grub rigs khyu mchog"@bo-x-ewts .
     
-    bdr:NT9239311CCC1ACD90
+    bdr:NT327C04335F12DF30
+        a                   :Note ;
+        :noteText           "dgung lo drug par nang chen skyabs mgon a lde'u rin po che sku phreng brgyad par ngos 'dzin thob cing nang chen tshes bcu dgon du gser khrir mnga' gsol/\tris med dge ba'i bshes gnyen du ma las gsan bsam dpyis phyin pa gnang bas mkhas pa'i phul du son/ bgrang bya du ma'i ring sgrub sder bzhugs nas mtshams sgrub nyams len thugs rus drag pos mdzad nas grub pa'i go sa mthon por gshegs/\n1958nas 1977\tlo bar khri mun du bzhugs dgos byung /\tde'i skabs su byang chub chub sems dpa'i spyod pa rlabs chen spyad cing zhor du brda dag gi bstan bcos du ma thugs thog nas brtsams/ \n1981 lo nas bstan dgon nyams gso'i chog mchan thob cing dgon du phebs/ bstan rtsa dge 'dun gyi sde btsugs/ \tbod yul dang phyi rgyal yul gru mang por chos kyi 'khor lo bskor zhing bstan pa'i me ro gsos/\trje nyid kyi bka' 'bum pod bco lnga brtsams shing /\t'brug lugs chos mdzod chen mo pod brgya dang bcu gsum gyi bdag nyid bsdu bsgrigs mdzad/ dgung grangs don brgyad bzhes pa phyi lo 2007 lor gzugs sku chos dbyings du bsdus/"@bo-x-ewts .
+    
+    bdr:NTB960666429DFDA22
         a                   :Note ;
         :contentLocationStatement  "pp. 1-5 (first group)" ;
         :noteSource         bdr:MW21938 ;
@@ -56,8 +70,8 @@ bdg:P6757 {
     bdr:P6757  a            :Person ;
         skos:prefLabel      "grub rigs khyu mchog"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT9239311CCC1ACD90 ;
-        :personEvent        bdr:EV7848945F7116367B ;
+        :note               bdr:NT327C04335F12DF30 , bdr:NTB960666429DFDA22 ;
+        :personEvent        bdr:EV7848945F7116367B , bdr:EV9239311CCC1ACD90 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM032A62BED6006854 , bdr:NM36BD8B6D3D092B57 , bdr:NMAD61E26749B0B175 , bdr:NMDB4B10F48438D9AD ;
         :personStudentOf    bdr:P8LS12750 ;

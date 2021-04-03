@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75289 {
+    bda:LGA74E2E9A6391B429
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-02T09:33:19.885Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75289  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75289 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "f4/P8LS75289.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75289 ;
+        adm:logEntry        bda:LGA74E2E9A6391B429 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV155EFB45C8788C85
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1976"^^xsd:gYear .
+    
+    bdr:NM878A09025B44DBBC
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod nams don grub/"@bo-x-ewts .
+    
+    bdr:NMEABE0B370BB23F21
+        a                   :PersonPenName ;
+        rdfs:label          "byang sgra snyan/"@bo-x-ewts .
+    
+    bdr:NT9D30BB1E85DEAFBD
+        a                   :Note ;
+        :noteText           "member of Malho writer association\n\n\nauthor of work record W8LS20468"@en .
+    
+    bdr:P8LS75289  a        :Person ;
+        skos:prefLabel      "bsod nams don grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT9D30BB1E85DEAFBD ;
+        :personEvent        bdr:EV155EFB45C8788C85 ;
+        :personName         bdr:NM878A09025B44DBBC , bdr:NMEABE0B370BB23F21 .
+}
