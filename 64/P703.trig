@@ -12,17 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P703 {
-    bda:LG5A02B71DA4610CA4
+    bda:LG14559942E0630B89
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG5B96201415078EBF
+    bda:LGD651546B9D1988FC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-12T11:50:14.293Z"^^xsd:dateTime ;
+        adm:logMessage      "added DoD"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGE2F11E22EE927E4E
         a                   adm:UpdateData ;
         adm:logDate         "2012-09-24T15:02:37.57Z"^^xsd:dateTime ;
         adm:logMessage      "added title"@en ;
         adm:logWho          bdu:U00013 .
     
-    bda:LGE2F11E22EE927E4E
+    bda:LGE4F138147E85E458
         a                   adm:UpdateData ;
         adm:logDate         "2013-03-13T15:42:06.443Z"^^xsd:dateTime ;
         adm:logMessage      "added seat"@en ;
@@ -38,21 +44,25 @@ bdg:P703 {
     bda:P703  a             adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P703 ;
-        adm:facetIndex      12 ;
+        adm:facetIndex      14 ;
         adm:gitPath         "64/P703.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P703 ;
-        adm:logEntry        bda:LG5A02B71DA4610CA4 , bda:LG5B96201415078EBF , bda:LGE2F11E22EE927E4E , bda:LGIM664D0289A7 ;
+        adm:logEntry        bda:LG14559942E0630B89 , bda:LGD651546B9D1988FC , bda:LGE2F11E22EE927E4E , bda:LGE4F138147E85E458 , bda:LGIM664D0289A7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVA04B7A5D42FE8FEE
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2843 .
     
     bdr:EVFA46F77587F62D4C
         a                   :PersonBirth ;
         :onYear             "1870"^^xsd:gYear .
     
     bdr:EVFBF3D49DBA7693BB
-        a                   :PersonOccupiesSeat ;
-        :eventWhere         bdr:G2843 .
+        a                   :PersonDeath ;
+        :onYear             "1930"^^xsd:gYear .
     
     bdr:NM6BBE8161602C60BB
         a                   :PersonPrimaryName ;
@@ -60,7 +70,7 @@ bdg:P703 {
     
     bdr:NM890FA642011F7A45
         a                   :PersonTulkuTitle ;
-        rdfs:label          "Khyuntul"@bo-x-phon-en-m-tbrc .
+        rdfs:label          "Khyuntul"@en-x-mixed .
     
     bdr:NM94F092FF28772526
         a                   :PersonTulkuTitle ;
@@ -70,15 +80,15 @@ bdg:P703 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "khyung sprul pad+ma dbang chen bstan 'dzin 'phrin las/"@bo-x-ewts .
     
-    bdr:NTA04B7A5D42FE8FEE
+    bdr:NT5B96201415078EBF
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma"@en .
     
     bdr:P703  a             :Person ;
-        skos:prefLabel      "khyung sprul pad+ma dbang chen bstan 'dzin 'phrin las/"@bo-x-ewts ;
+        skos:prefLabel      "khyung sprul pad+ma dbang chen bstan 'dzin 'phrin las/"@bo-x-ewts , "Khyuntul"@en-x-mixed ;
         :isRoot             true ;
-        :note               bdr:NTA04B7A5D42FE8FEE ;
-        :personEvent        bdr:EVFA46F77587F62D4C , bdr:EVFBF3D49DBA7693BB ;
+        :note               bdr:NT5B96201415078EBF ;
+        :personEvent        bdr:EVA04B7A5D42FE8FEE , bdr:EVFA46F77587F62D4C , bdr:EVFBF3D49DBA7693BB ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM6BBE8161602C60BB , bdr:NM890FA642011F7A45 , bdr:NM94F092FF28772526 , bdr:NME46F243D66048CD1 .
 }
