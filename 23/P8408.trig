@@ -12,25 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8408 {
-    bda:LG23931DE2F43B0A23
+    bda:LG27E599BBD9832007
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG971B2C88DD7CC873
         a                   adm:UpdateData ;
         adm:logDate         "2012-08-21T15:28:41.455Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
-    bda:LG402980AC67EBB003
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
+    bda:LGA4E5455C5ED5B7DA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-14T17:02:59.895Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and other name"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB86E218FA038B836
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-15T12:03:50.511Z"^^xsd:dateTime ;
+        adm:logMessage      "added tearcher student"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8408  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8408 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "23/P8408.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8408 ;
-        adm:logEntry        bda:LG23931DE2F43B0A23 , bda:LG402980AC67EBB003 ;
+        adm:logEntry        bda:LG27E599BBD9832007 , bda:LG971B2C88DD7CC873 , bda:LGA4E5455C5ED5B7DA , bda:LGB86E218FA038B836 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV0D3ACFC07C3AFFC0
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM23931DE2F43B0A23
+        a                   :PersonOtherName ;
+        rdfs:label          "dar ma dkon mchog"@bo-x-ewts .
+    
+    bdr:NM402980AC67EBB003
+        a                   :PersonOtherName ;
+        rdfs:label          "dha rma rad na/"@bo-x-ewts .
     
     bdr:NM630059C5324ECB6A
         a                   :PersonPersonalName ;
@@ -47,6 +72,8 @@ bdg:P8408 {
     bdr:P8408  a            :Person ;
         skos:prefLabel      "chos kyi rin chen/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV0D3ACFC07C3AFFC0 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM630059C5324ECB6A , bdr:NM6C484152869CE727 , bdr:NM6D313AE30BA9DA91 .
+        :personName         bdr:NM23931DE2F43B0A23 , bdr:NM402980AC67EBB003 , bdr:NM630059C5324ECB6A , bdr:NM6C484152869CE727 , bdr:NM6D313AE30BA9DA91 ;
+        :personStudentOf    bdr:P8724 .
 }

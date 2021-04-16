@@ -1,0 +1,59 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75383 {
+    bda:LG67921C0C86628CB6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-14T15:19:20.644Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75383  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75383 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "fe/P8LS75383.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75383 ;
+        adm:logEntry        bda:LG67921C0C86628CB6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV4E2A5D5940A82960
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:EVBA2DAD62ABF2A6B1
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:NM4BFF376277CEE305
+        a                   :PersonPrimaryName ;
+        rdfs:label          "dge 'dun mchog grub/"@bo-x-ewts .
+    
+    bdr:NMA1B1B1E0213407A8
+        a                   :PersonPenName ;
+        rdfs:label          "rong po spos dkar/"@bo-x-ewts .
+    
+    bdr:NTC4ECD887911E82E2
+        a                   :Note ;
+        :noteText           "writer, editor of Od and Nazhon Nyam kyod news paper\n\nauthor of work record W8LS41752"@en .
+    
+    bdr:P8LS75383  a        :Person ;
+        skos:prefLabel      "dge 'dun mchog grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTC4ECD887911E82E2 ;
+        :personEvent        bdr:EV4E2A5D5940A82960 , bdr:EVBA2DAD62ABF2A6B1 ;
+        :personName         bdr:NM4BFF376277CEE305 , bdr:NMA1B1B1E0213407A8 .
+}

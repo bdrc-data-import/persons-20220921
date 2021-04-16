@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG1684 {
-    bda:LGA9C44194190E1B90
+    bda:LG17002C603BAF6B6D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-15T19:44:03.731Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year and other names"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG6E198BCA3D06C209
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-03-04T15:19:51.159Z"^^xsd:dateTime ;
         adm:logMessage      "created person"@en ;
@@ -21,18 +27,18 @@ bdg:P1KG1684 {
     bda:P1KG1684  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG1684 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "92/P1KG1684.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG1684 ;
-        adm:logEntry        bda:LGA9C44194190E1B90 ;
+        adm:logEntry        bda:LG17002C603BAF6B6D , bda:LG6E198BCA3D06C209 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVD9089124A69D741E
+    bdr:EVA9C44194190E1B90
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :eventWhere         bdr:G1196 ;
+        :onYear             "1976"^^xsd:gYear .
     
     bdr:NM309452F758441594
         a                   :PersonPrimaryName ;
@@ -42,16 +48,24 @@ bdg:P1KG1684 {
         a                   :PersonPersonalName ;
         rdfs:label          "sgo shes rab rgya mtsho/"@bo-x-ewts .
     
-    bdr:NTC44A89EF321CD0EB
+    bdr:NMC44A89EF321CD0EB
+        a                   :PersonOtherName ;
+        rdfs:label          "sgo sher/"@bo-x-ewts .
+    
+    bdr:NMD9089124A69D741E
+        a                   :PersonOtherName ;
+        rdfs:label          "go sherab gyatso"@en .
+    
+    bdr:NTD4F763EA019B6E03
         a                   :Note ;
         :noteSource         bdr:MW1KG1682 ;
         :noteText           "author of"@en .
     
     bdr:P1KG1684  a         :Person ;
-        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts ;
+        skos:prefLabel      "shes rab rgya mtsho/"@bo-x-ewts , "go sherab gyatso"@en ;
         :isRoot             true ;
-        :note               bdr:NTC44A89EF321CD0EB ;
-        :personEvent        bdr:EVD9089124A69D741E ;
+        :note               bdr:NTD4F763EA019B6E03 ;
+        :personEvent        bdr:EVA9C44194190E1B90 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM309452F758441594 , bdr:NM6E80D0B56FFEDDBE .
+        :personName         bdr:NM309452F758441594 , bdr:NM6E80D0B56FFEDDBE , bdr:NMC44A89EF321CD0EB , bdr:NMD9089124A69D741E .
 }
