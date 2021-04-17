@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1610 {
-    bda:LG7F2F7C4A7DA8F8DB
+    bda:LG4D2DD3960095596D
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGD2935B8F6F4238C3
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T13:29:20.784Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected gender"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P1610  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1610 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "cc/P1610.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1610 ;
-        adm:logEntry        bda:LG7F2F7C4A7DA8F8DB ;
+        adm:logEntry        bda:LG4D2DD3960095596D , bda:LGD2935B8F6F4238C3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV7F2F7C4A7DA8F8DB
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
     
     bdr:NM3DE021B4A07961FC
         a                   :PersonPrimaryName ;
@@ -35,6 +46,7 @@ bdg:P1610 {
         skos:prefLabel      "skyid ko"@bo-x-ewts ;
         :hasSon             bdr:P217 ;
         :isRoot             true ;
-        :personGender       bdr:GenderMale ;
+        :personEvent        bdr:EV7F2F7C4A7DA8F8DB ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NM3DE021B4A07961FC .
 }

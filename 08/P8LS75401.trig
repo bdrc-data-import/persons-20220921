@@ -1,0 +1,51 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75401 {
+    bda:LGBC9685295FD1B34B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-16T15:32:17.808Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75401  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75401 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "08/P8LS75401.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75401 ;
+        adm:logEntry        bda:LGBC9685295FD1B34B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVBE895F361D546E0B
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMCB065D70E2483402
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mig dmar mtshams gcod/"@bo-x-ewts .
+    
+    bdr:NT1C4031F184E4159C
+        a                   :Note ;
+        :noteText           "former TCV teaching staff member\n\nauthor of work record W8LS42131"@en .
+    
+    bdr:P8LS75401  a        :Person ;
+        skos:prefLabel      "mig dmar mtshams gcod/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT1C4031F184E4159C ;
+        :personEvent        bdr:EVBE895F361D546E0B ;
+        :personName         bdr:NMCB065D70E2483402 .
+}

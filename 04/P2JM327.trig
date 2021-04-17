@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2JM327 {
-    bda:LGCC4EDD0A26D00B62
+    bda:LGAD743F1DC106D4E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T15:11:58.951Z"^^xsd:dateTime ;
+        adm:logMessage      "added gender"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBC705D48400877CA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-08-01T17:16:28.662Z"^^xsd:dateTime ;
         adm:logMessage      "added records"@en ;
@@ -21,13 +27,18 @@ bdg:P2JM327 {
     bda:P2JM327  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2JM327 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "04/P2JM327.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2JM327 ;
-        adm:logEntry        bda:LGCC4EDD0A26D00B62 ;
+        adm:logEntry        bda:LGAD743F1DC106D4E1 , bda:LGBC705D48400877CA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVCC4EDD0A26D00B62
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
     
     bdr:NM24A90441F6E5CCA7
         a                   :PersonPrimaryName ;
@@ -42,5 +53,7 @@ bdg:P2JM327 {
         :hasChild           bdr:P2JM325 ;
         :hasUnknownKinship  bdr:P2JM325 ;
         :isRoot             true ;
+        :personEvent        bdr:EVCC4EDD0A26D00B62 ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NM24A90441F6E5CCA7 , bdr:NM661444478CDB99A9 .
 }

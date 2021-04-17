@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1477 {
-    bda:LGB858F40858EFEF47
+    bda:LG28C2B8DB4147A11F
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGD530DE58D714B13A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T13:29:20.099Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected gender"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P1477  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1477 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "47/P1477.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1477 ;
-        adm:logEntry        bda:LGB858F40858EFEF47 ;
+        adm:logEntry        bda:LG28C2B8DB4147A11F , bda:LGD530DE58D714B13A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVB858F40858EFEF47
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
     
     bdr:NM7E69AF424307297D
         a                   :PersonPrimaryName ;
@@ -39,6 +50,7 @@ bdg:P1477 {
         skos:prefLabel      "mgar btsun ma shes rab rgyan/"@bo-x-ewts ;
         :hasSon             bdr:P1475 ;
         :isRoot             true ;
-        :personGender       bdr:GenderMale ;
+        :personEvent        bdr:EVB858F40858EFEF47 ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NM7E69AF424307297D , bdr:NME4A6B807341601DB .
 }

@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75403 {
+    bda:LG0C49CD45CFC41A63
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T16:09:59.451Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG5597219F0F0D5EA8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-16T15:50:50.853Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75403  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75403 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "4e/P8LS75403.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75403 ;
+        adm:logEntry        bda:LG0C49CD45CFC41A63 , bda:LG5597219F0F0D5EA8 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV02F283DC947AF403
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3CN564 ;
+        :onYear             "1970"^^xsd:gYear .
+    
+    bdr:EVB3925551EDC91860
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G126 .
+    
+    bdr:NM93E86BFA8A7F4179
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "brag smyon ya ma rA dzA/"@bo-x-ewts .
+    
+    bdr:NMD054E98AB1BD5EEB
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ya ma rA dzA/"@bo-x-ewts .
+    
+    bdr:NTDAA3C567A2B5E34B
+        a                   :Note ;
+        :noteText           "born in Norba in Kham Drago\n\neditor of Chitshok Melong and Shakye Odnang \n\nauthor of work record W8LS42132\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75403  a        :Person ;
+        skos:prefLabel      "brag smyon ya ma rA dzA/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTDAA3C567A2B5E34B ;
+        :personEvent        bdr:EV02F283DC947AF403 , bdr:EVB3925551EDC91860 ;
+        :personName         bdr:NM93E86BFA8A7F4179 , bdr:NMD054E98AB1BD5EEB .
+}

@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1372 {
-    bda:LG2DF07FA2ECC5CE3F
+    bda:LG659225F6908DD5A4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T13:29:19.189Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected gender"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB1D05FAB3D887C92
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P1372  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1372 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "a0/P1372.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1372 ;
-        adm:logEntry        bda:LG2DF07FA2ECC5CE3F ;
+        adm:logEntry        bda:LG659225F6908DD5A4 , bda:LGB1D05FAB3D887C92 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV2DF07FA2ECC5CE3F
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
     
     bdr:NM75058DF561C4B108
         a                   :PersonPrimaryName ;
@@ -35,6 +46,7 @@ bdg:P1372 {
         skos:prefLabel      "skal bzang sgrol ma/"@bo-x-ewts ;
         :hasSon             bdr:P563 ;
         :isRoot             true ;
-        :personGender       bdr:GenderMale ;
+        :personEvent        bdr:EV2DF07FA2ECC5CE3F ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NM75058DF561C4B108 .
 }

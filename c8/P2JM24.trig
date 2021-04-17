@@ -12,21 +12,32 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2JM24 {
-    bda:LGDEFF884E07E12197
+    bda:LG1E8AA22BAB927415
         a                   adm:InitialDataCreation ;
         adm:logDate         "2008-05-29T11:56:02.32Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00015 .
     
+    bda:LG5F745D6D8E3A6275
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-16T15:11:57.26Z"^^xsd:dateTime ;
+        adm:logMessage      "added gender"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P2JM24  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2JM24 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "c8/P2JM24.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2JM24 ;
-        adm:logEntry        bda:LGDEFF884E07E12197 ;
+        adm:logEntry        bda:LG1E8AA22BAB927415 , bda:LG5F745D6D8E3A6275 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVDEFF884E07E12197
+        a                   :PersonBirth ;
+        :notAfter           "0899"^^xsd:gYear ;
+        :notBefore          "0800"^^xsd:gYear .
     
     bdr:NMF4F127DBCB0B980E
         a                   :PersonPrimaryName ;
@@ -37,5 +48,7 @@ bdg:P2JM24 {
         :hasSon             bdr:P2JM21 ;
         :hasUnknownKinship  bdr:P2JM21 ;
         :isRoot             true ;
+        :personEvent        bdr:EVDEFF884E07E12197 ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NMF4F127DBCB0B980E .
 }
