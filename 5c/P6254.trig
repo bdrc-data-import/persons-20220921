@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6254 {
-    bda:LG322509BB29F99B88
+    bda:LG18BE18D66F95A462
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG34157AD3D8B2B697
+    bda:LG1EA33D1606D9174D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-20T18:39:27.55Z"^^xsd:dateTime ;
+        adm:logMessage      "added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG322509BB29F99B88
         a                   adm:UpdateData ;
         adm:logDate         "2012-05-15T16:05:55.868Z"^^xsd:dateTime ;
         adm:logMessage      "added birth date"@en ;
@@ -25,25 +31,31 @@ bdg:P6254 {
     bda:P6254  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6254 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "5c/P6254.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6254 ;
-        adm:logEntry        bda:LG322509BB29F99B88 , bda:LG34157AD3D8B2B697 ;
+        adm:logEntry        bda:LG18BE18D66F95A462 , bda:LG1EA33D1606D9174D , bda:LG322509BB29F99B88 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV54653B7D40C9B3CD
         a                   :PersonBirth ;
-        :onYear             "1979"^^xsd:gYear .
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NMA96A527AEB204650
         a                   :PersonPrimaryName ;
         rdfs:label          "dkon mchog rgya mtsho/"@bo-x-ewts .
     
+    bdr:NT34157AD3D8B2B697
+        a                   :Note ;
+        :noteText           "calligrapher of W1KG16578"@en .
+    
     bdr:P6254  a            :Person ;
         skos:prefLabel      "dkon mchog rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT34157AD3D8B2B697 ;
         :personEvent        bdr:EV54653B7D40C9B3CD ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMA96A527AEB204650 .
