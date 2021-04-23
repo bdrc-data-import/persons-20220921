@@ -12,7 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS13814 {
-    bda:LG82E8C1774F8D3997
+    bda:LG5B85ADD61389A31A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-22T11:20:35.387Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth and years passed"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG89F9382A6AB8680F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-22T11:19:16.766Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG8BD5161BEC29C2D4
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-05-22T09:32:02.957Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -21,13 +32,21 @@ bdg:P8LS13814 {
     bda:P8LS13814  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS13814 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "a3/P8LS13814.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS13814 ;
-        adm:logEntry        bda:LG82E8C1774F8D3997 ;
+        adm:logEntry        bda:LG5B85ADD61389A31A , bda:LG89F9382A6AB8680F , bda:LG8BD5161BEC29C2D4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV82E8C1774F8D3997
+        a                   :PersonDeath ;
+        :onYear             "1349"^^xsd:gYear .
+    
+    bdr:EVE439520CC926E015
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1283"^^xsd:gYear .
     
     bdr:NM88BD727817A5D899
         a                   :PersonPrimaryName ;
@@ -37,14 +56,16 @@ bdg:P8LS13814 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "rngog chos kyi rgyal mtshan/"@bo-x-ewts .
     
-    bdr:NTE439520CC926E015
+    bdr:NT335E08050732D317
         a                   :Note ;
         :contentLocationStatement  "vol. 1, p. 114" ;
-        :noteSource         bdr:MW1PD107937 .
+        :noteSource         bdr:MW1PD107937 ;
+        :noteText           "W1KG16666,  vol. 14, p.24-25"@en .
     
     bdr:P8LS13814  a        :Person ;
         skos:prefLabel      "rngog chos kyi rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTE439520CC926E015 ;
+        :note               bdr:NT335E08050732D317 ;
+        :personEvent        bdr:EV82E8C1774F8D3997 , bdr:EVE439520CC926E015 ;
         :personName         bdr:NM88BD727817A5D899 , bdr:NMCBEB4722386E2B37 .
 }
