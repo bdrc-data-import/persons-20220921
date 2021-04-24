@@ -1,0 +1,56 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75460 {
+    bda:LG5CB353886114255A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-23T09:45:25.187Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75460  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75460 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "18/P8LS75460.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75460 ;
+        adm:logEntry        bda:LG5CB353886114255A ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVC4BA843FB0AB5629
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMAFDE78BE89308916
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "kha sgang 'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NMBD9028D2C6452FC5
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'phrin las lhun grub/"@bo-x-ewts .
+    
+    bdr:NT25CDC7D52FE63994
+        a                   :Note ;
+        :noteSource         bdr:MW8LS66648 ;
+        :noteText           "editor of periodical publication of Namdrol Ling monastery"@en .
+    
+    bdr:P8LS75460  a        :Person ;
+        skos:prefLabel      "kha sgang 'phrin las lhun grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT25CDC7D52FE63994 ;
+        :personEvent        bdr:EVC4BA843FB0AB5629 ;
+        :personName         bdr:NMAFDE78BE89308916 , bdr:NMBD9028D2C6452FC5 .
+}

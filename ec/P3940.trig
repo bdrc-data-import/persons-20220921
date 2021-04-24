@@ -12,35 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P3940 {
-    bda:LG9C95648F3DC01E4E
+    bda:LG5E51E0E726ED52FA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-23T10:54:19.928Z"^^xsd:dateTime ;
+        adm:logMessage      "added name variant"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGBF62DB65734673A2
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P3940  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3940 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ec/P3940.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3940 ;
-        adm:logEntry        bda:LG9C95648F3DC01E4E ;
+        adm:logEntry        bda:LG5E51E0E726ED52FA , bda:LGBF62DB65734673A2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV446354979DC653F0
+    bdr:EV638D9D4A85B963A5
         a                   :PersonBirth ;
         :notAfter           "1299"^^xsd:gYear ;
         :notBefore          "1200"^^xsd:gYear .
+    
+    bdr:NM446354979DC653F0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bla ma dpal gyi rgyal mtshan/"@bo-x-ewts .
+    
+    bdr:NM475A60ED4E1C645B
+        a                   :PersonOtherName ;
+        rdfs:label          "'u yug kung ra ba bla ma dpal/"@bo-x-ewts .
     
     bdr:NM7483D22BAF2A22A0
         a                   :PersonPrimaryName ;
         rdfs:label          "dpal gyi rgyal mtshan/"@bo-x-ewts .
     
+    bdr:NM9C95648F3DC01E4E
+        a                   :PersonTitle ;
+        rdfs:label          "'u yug dpal/"@bo-x-ewts .
+    
     bdr:P3940  a            :Person ;
-        skos:prefLabel      "dpal gyi rgyal mtshan/"@bo-x-ewts ;
+        skos:prefLabel      "bla ma dpal gyi rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV446354979DC653F0 ;
+        :personEvent        bdr:EV638D9D4A85B963A5 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM7483D22BAF2A22A0 ;
-        :personStudentOf    bdr:P1244 .
+        :personName         bdr:NM446354979DC653F0 , bdr:NM475A60ED4E1C645B , bdr:NM7483D22BAF2A22A0 , bdr:NM9C95648F3DC01E4E ;
+        :personStudentOf    bdr:P1244 ;
+        :personTeacherOf    bdr:P0RK259 .
 }
