@@ -1,0 +1,53 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75523 {
+    bda:LGA73329B6C76EC440
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-04-29T14:31:15.21Z"^^xsd:dateTime ;
+        adm:logMessage      "new persn created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75523  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75523 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "e9/P8LS75523.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75523 ;
+        adm:logEntry        bda:LGA73329B6C76EC440 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVCEF07509838A9679
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMAFFF2F47DA14F14C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "blo brtan 'gyur med/"@bo-x-ewts .
+    
+    bdr:NT4C6902139029F977
+        a                   :Note ;
+        :noteSource         bdr:MW8LS67513 ;
+        :noteText           "author of Jadrel Rinpoche's biography\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75523  a        :Person ;
+        skos:prefLabel      "blo brtan 'gyur med/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT4C6902139029F977 ;
+        :personEvent        bdr:EVCEF07509838A9679 ;
+        :personName         bdr:NMAFFF2F47DA14F14C ;
+        :personStudentOf    bdr:P8LS67514 .
+}
