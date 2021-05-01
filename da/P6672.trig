@@ -12,51 +12,65 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6672 {
-    bda:LG6A153D5F3FDAE763
-        a                   adm:UpdateData ;
-        adm:logDate         "2011-06-09T09:42:12.457Z"^^xsd:dateTime ;
-        adm:logMessage      "created relationship"@en ;
-        adm:logWho          bdu:U00002 .
-    
-    bda:LGA6D5922D9265F951
+    bda:LG1E67CE6F714147D6
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGB268CABDC01DE84B
+    bda:LG2F35189DB1B031D9
         a                   adm:UpdateData ;
         adm:logDate         "2018-07-05T16:42:25.492Z"^^xsd:dateTime ;
         adm:logMessage      "added bith place"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LG3E718D8367002DBD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-04-30T18:39:59.027Z"^^xsd:dateTime ;
+        adm:logMessage      "added info"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGA6D5922D9265F951
+        a                   adm:UpdateData ;
+        adm:logDate         "2011-06-09T09:42:12.457Z"^^xsd:dateTime ;
+        adm:logMessage      "created relationship"@en ;
+        adm:logWho          bdu:U00002 .
+    
     bda:P6672  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6672 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "da/P6672.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6672 ;
-        adm:logEntry        bda:LG6A153D5F3FDAE763 , bda:LGA6D5922D9265F951 , bda:LGB268CABDC01DE84B ;
+        adm:logEntry        bda:LG1E67CE6F714147D6 , bda:LG2F35189DB1B031D9 , bda:LG3E718D8367002DBD , bda:LGA6D5922D9265F951 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA94575BC5390F72A
+    bdr:EV6A153D5F3FDAE763
         a                   :PersonBirth ;
         :eventWhere         bdr:G1366 ;
         :onYear             "1938"^^xsd:gYear .
     
+    bdr:EVB268CABDC01DE84B
+        a                   :PersonDeath ;
+        :onYear             "2018"^^xsd:gYear .
+    
     bdr:NM6AD0BB1D70DE55F3
         a                   :PersonPrimaryTitle ;
         rdfs:label          "chos rgyal nam mkha' nor bu/"@bo-x-ewts .
+    
+    bdr:NMA94575BC5390F72A
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Chogyal Namkhai Norbu"@en .
     
     bdr:NMDA6643DEA8642AFC
         a                   :PersonPrimaryName ;
         rdfs:label          "nam mkha'i nor bu/"@bo-x-ewts .
     
     bdr:P6672  a            :Person ;
-        skos:prefLabel      "chos rgyal nam mkha' nor bu/"@bo-x-ewts ;
+        skos:prefLabel      "chos rgyal nam mkha' nor bu/"@bo-x-ewts , "Chogyal Namkhai Norbu"@en ;
         :isRoot             true ;
-        :personEvent        bdr:EVA94575BC5390F72A ;
+        :personEvent        bdr:EV6A153D5F3FDAE763 , bdr:EVB268CABDC01DE84B ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM6AD0BB1D70DE55F3 , bdr:NMDA6643DEA8642AFC ;
+        :personName         bdr:NM6AD0BB1D70DE55F3 , bdr:NMA94575BC5390F72A , bdr:NMDA6643DEA8642AFC ;
         :personStudentOf    bdr:P3AG24 .
 }
