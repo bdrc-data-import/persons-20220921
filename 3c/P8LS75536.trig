@@ -1,0 +1,52 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75536 {
+    bda:LGEBC80CF0FD06B3C3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-04T14:14:27.101Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75536  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75536 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "3c/P8LS75536.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75536 ;
+        adm:logEntry        bda:LGEBC80CF0FD06B3C3 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV006DDFE6DD8E64C9
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMD0851F08726C6291
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rgya ye nyi ma/"@bo-x-ewts .
+    
+    bdr:NTD8FB68245B81908C
+        a                   :Note ;
+        :noteSource         bdr:MW8LS68183 ;
+        :noteText           "editor of  ancient Tibetan writings on medicine\n\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75536  a        :Person ;
+        skos:prefLabel      "rgya ye nyi ma/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTD8FB68245B81908C ;
+        :personEvent        bdr:EV006DDFE6DD8E64C9 ;
+        :personName         bdr:NMD0851F08726C6291 .
+}

@@ -1,0 +1,52 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75533 {
+    bda:LG4637156C77DA6AFD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-04T09:59:58.72Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75533  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75533 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "39/P8LS75533.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75533 ;
+        adm:logEntry        bda:LG4637156C77DA6AFD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV76F44E17FF1EF08D
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM4E0682017170E7A7
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Manfred Taube"@en .
+    
+    bdr:NTB11429EDB3081AC3
+        a                   :Note ;
+        :noteSource         bdr:MW8LS68048 ;
+        :noteText           "scholar\n\ncompiler of Tibetan handwritten and woodblock prints preserved in Germany"@en .
+    
+    bdr:P8LS75533  a        :Person ;
+        skos:prefLabel      "Manfred Taube"@en ;
+        :isRoot             true ;
+        :note               bdr:NTB11429EDB3081AC3 ;
+        :personEvent        bdr:EV76F44E17FF1EF08D ;
+        :personName         bdr:NM4E0682017170E7A7 .
+}
