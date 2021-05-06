@@ -1,0 +1,58 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75542 {
+    bda:LG1B5FB40DC76C7FD4
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-05T15:07:47.327Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG3E761AB656E560F6
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-05T15:08:41.696Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75542  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75542 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "38/P8LS75542.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75542 ;
+        adm:logEntry        bda:LG1B5FB40DC76C7FD4 , bda:LG3E761AB656E560F6 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV68178C1F02DCC613
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1227 ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMC48397271886EC49
+        a                   :PersonPrimaryName ;
+        rdfs:label          "tshe ring bsam 'grub/"@bo-x-ewts .
+    
+    bdr:NT6A9263910A9C3CC6
+        a                   :Note ;
+        :noteSource         bdr:MW8LS68286 ;
+        :noteText           "short bio\n\n\n1998 graduated from Kansu Tibetan medical college\n\nphysician and medical researcher"@en .
+    
+    bdr:P8LS75542  a        :Person ;
+        skos:prefLabel      "tshe ring bsam 'grub/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT6A9263910A9C3CC6 ;
+        :personEvent        bdr:EV68178C1F02DCC613 ;
+        :personName         bdr:NMC48397271886EC49 .
+}
