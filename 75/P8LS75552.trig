@@ -1,0 +1,57 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75552 {
+    bda:LGDB45697A2386A4D4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-06T14:31:02.145Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFF672B57E3100E17
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-06T14:27:24.108Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75552  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75552 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "75/P8LS75552.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75552 ;
+        adm:logEntry        bda:LGDB45697A2386A4D4 , bda:LGFF672B57E3100E17 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV2AA9F3DFFAEB2D03
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM0F15EC7D0559F780
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgon po stobs rgyal/"@bo-x-ewts .
+    
+    bdr:NTB55EACF41EA5B497
+        a                   :Note ;
+        :noteSource         bdr:MW8LS73787 ;
+        :noteText           "editor of Tibetan love songs from Nakshod\n\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75552  a        :Person ;
+        skos:prefLabel      "mgon po stobs rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB55EACF41EA5B497 ;
+        :personEvent        bdr:EV2AA9F3DFFAEB2D03 ;
+        :personName         bdr:NM0F15EC7D0559F780 .
+}

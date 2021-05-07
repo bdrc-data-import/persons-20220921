@@ -1,0 +1,52 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75548 {
+    bda:LG714D9CEFC21D6703
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-06T11:45:19.273Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75548  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75548 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "70/P8LS75548.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75548 ;
+        adm:logEntry        bda:LG714D9CEFC21D6703 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1EC021041CB98DFD
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NMDF3ADB6B279A8C35
+        a                   :PersonPrimaryName ;
+        rdfs:label          "klu mo tshe ring /"@bo-x-ewts .
+    
+    bdr:NTB2644C21CD5BC235
+        a                   :Note ;
+        :noteSource         bdr:MW8LS68439 ;
+        :noteText           "Phd from Qinghai university\n\nauthor of book on gnecology according to Tibetan medical system\n\n\ndetail unaavailable"@en .
+    
+    bdr:P8LS75548  a        :Person ;
+        skos:prefLabel      "klu mo tshe ring /"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTB2644C21CD5BC235 ;
+        :personEvent        bdr:EV1EC021041CB98DFD ;
+        :personName         bdr:NMDF3ADB6B279A8C35 .
+}

@@ -1,0 +1,58 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG228843 {
+    bda:LG432FCD186BC111FA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-06T11:47:35.684Z"^^xsd:dateTime ;
+        adm:logMessage      "new person record"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:P2KG228843  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG228843 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "27/P2KG228843.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG228843 ;
+        adm:logEntry        bda:LG432FCD186BC111FA ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV341C2F19A6AC039F
+        a                   :PersonBirth ;
+        :onYear             "1949"^^xsd:gYear .
+    
+    bdr:NM051E283DDE94A6EF
+        a                   :PersonPersonalName ;
+        rdfs:label          "claude apri"@en .
+    
+    bdr:NM29D6B2DC2C50A5EA
+        a                   :PersonOtherName ;
+        rdfs:label          "ko lo Da ar pi yi/"@bo-x-ewts .
+    
+    bdr:NM3536B5EB686F8B9C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "ko lo Da ar pi/"@bo-x-ewts .
+    
+    bdr:NT92BBDDF7054A51B0
+        a                   :Note ;
+        :noteText           "author of \"Dharamsala and Beijing: the negotiations that never were\""@en .
+    
+    bdr:P2KG228843  a       :Person ;
+        skos:prefLabel      "ko lo Da ar pi/"@bo-x-ewts , "claude apri"@en ;
+        :isRoot             true ;
+        :note               bdr:NT92BBDDF7054A51B0 ;
+        :personEvent        bdr:EV341C2F19A6AC039F ;
+        :personName         bdr:NM051E283DDE94A6EF , bdr:NM29D6B2DC2C50A5EA , bdr:NM3536B5EB686F8B9C .
+}
