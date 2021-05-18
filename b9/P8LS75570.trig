@@ -1,0 +1,56 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75570 {
+    bda:LGF6FC22146EF228B2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-17T09:12:34.542Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75570  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75570 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "b9/P8LS75570.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75570 ;
+        adm:logEntry        bda:LGF6FC22146EF228B2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDC3D65B379566BD1
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM2A2CF7C4E50F6C49
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rig 'dzin mthar phyin/"@bo-x-ewts .
+    
+    bdr:NME50F3AD938B3FB32
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya kong rig 'dzin mthar phyin/"@bo-x-ewts .
+    
+    bdr:NT2EC1B1F8A849B62C
+        a                   :Note ;
+        :noteSource         bdr:MW2PD17648 ;
+        :noteText           "writer \n\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75570  a        :Person ;
+        skos:prefLabel      "rgya kong rig 'dzin mthar phyin/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2EC1B1F8A849B62C ;
+        :personEvent        bdr:EVDC3D65B379566BD1 ;
+        :personName         bdr:NM2A2CF7C4E50F6C49 , bdr:NME50F3AD938B3FB32 .
+}
