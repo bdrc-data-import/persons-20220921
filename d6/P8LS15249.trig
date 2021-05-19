@@ -12,22 +12,33 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS15249 {
-    bda:LGAAD0224F1F32F8A1
+    bda:LG5E02ED04E8A55611
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-11T12:20:40.941Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGD384E8836BADD401
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T11:06:43.969Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of bith , name and teacher"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:P8LS15249  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS15249 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "d6/P8LS15249.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS15249 ;
-        adm:logEntry        bda:LGAAD0224F1F32F8A1 ;
+        adm:logEntry        bda:LG5E02ED04E8A55611 , bda:LGD384E8836BADD401 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV890055E790B0984B
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
     
     bdr:NM3575D8044BBB9664
         a                   :PersonPrimaryName ;
@@ -35,16 +46,18 @@ bdg:P8LS15249 {
     
     bdr:NM6889F8FBBE7A49D2
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "rgya sar ba rin chen 'bum/"@bo-x-ewts .
+        rdfs:label          "rgya ras pa rin chen 'bum/"@bo-x-ewts .
     
-    bdr:NT890055E790B0984B
+    bdr:NTAAD0224F1F32F8A1
         a                   :Note ;
         :contentLocationStatement  "vol. e, f. 60b4" ;
         :noteSource         bdr:MW29706 .
     
     bdr:P8LS15249  a        :Person ;
-        skos:prefLabel      "rgya sar ba rin chen 'bum/"@bo-x-ewts ;
+        skos:prefLabel      "rgya ras pa rin chen 'bum/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT890055E790B0984B ;
-        :personName         bdr:NM3575D8044BBB9664 , bdr:NM6889F8FBBE7A49D2 .
+        :note               bdr:NTAAD0224F1F32F8A1 ;
+        :personEvent        bdr:EV890055E790B0984B ;
+        :personName         bdr:NM3575D8044BBB9664 , bdr:NM6889F8FBBE7A49D2 ;
+        :personStudentOf    bdr:P4CZ366968 .
 }

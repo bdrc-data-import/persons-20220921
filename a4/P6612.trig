@@ -12,34 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6612 {
-    bda:LGA7974A92ECA0BBDE
+    bda:LG4F5197B4D6DECEA9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-18T09:46:35.947Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title, place of birth, note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6845F5B09031C269
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6612  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6612 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "a4/P6612.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6612 ;
-        adm:logEntry        bda:LGA7974A92ECA0BBDE ;
+        adm:logEntry        bda:LG4F5197B4D6DECEA9 , bda:LG6845F5B09031C269 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1EC5B0AAA81C92D1
+    bdr:EVA7974A92ECA0BBDE
         a                   :PersonBirth ;
+        :eventWhere         bdr:G1366 ;
         :notAfter           "1999"^^xsd:gYear ;
         :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM1EC5B0AAA81C92D1
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "smang sgang pa yon tan tshe ring /"@bo-x-ewts .
     
     bdr:NMD641F5DFBCB0659C
         a                   :PersonPrimaryName ;
         rdfs:label          "yon tan tshe ring /"@bo-x-ewts .
     
+    bdr:NTC9E0A557C3F90C9C
+        a                   :Note ;
+        :noteSource         bdr:MW2PD19116 ;
+        :noteText           "short bio\n\n\nthanka parinting artist\n\nstudent of Thanglha Tsewang"@en .
+    
     bdr:P6612  a            :Person ;
-        skos:prefLabel      "yon tan tshe ring /"@bo-x-ewts ;
+        skos:prefLabel      "smang sgang pa yon tan tshe ring /"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV1EC5B0AAA81C92D1 ;
+        :note               bdr:NTC9E0A557C3F90C9C ;
+        :personEvent        bdr:EVA7974A92ECA0BBDE ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMD641F5DFBCB0659C .
+        :personName         bdr:NM1EC5B0AAA81C92D1 , bdr:NMD641F5DFBCB0659C .
 }

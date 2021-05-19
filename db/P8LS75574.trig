@@ -1,0 +1,56 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75574 {
+    bda:LGAE012DD41BECB8FD
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-18T09:17:38.936Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75574  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75574 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "db/P8LS75574.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75574 ;
+        adm:logEntry        bda:LGAE012DD41BECB8FD ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3A3AEEEC32B6A6B1
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:EVDC76D9B49C390677
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G17 .
+    
+    bdr:NMFA35C2BE064CE99C
+        a                   :PersonPrimaryName ;
+        rdfs:label          "pad+ma mkhyen rab/"@bo-x-ewts .
+    
+    bdr:NTE4658ACF76212202
+        a                   :Note ;
+        :noteSource         bdr:MW2PD19113 ;
+        :noteText           "author of poetry collection\n\n\n\n\ndetail unavailable"@en .
+    
+    bdr:P8LS75574  a        :Person ;
+        skos:prefLabel      "pad+ma mkhyen rab/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTE4658ACF76212202 ;
+        :personEvent        bdr:EV3A3AEEEC32B6A6B1 , bdr:EVDC76D9B49C390677 ;
+        :personName         bdr:NMFA35C2BE064CE99C .
+}
