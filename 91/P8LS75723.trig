@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS75723 {
+    bda:LG2D73D8AA1F89CB46
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-05-24T09:09:36.913Z"^^xsd:dateTime ;
+        adm:logMessage      "new person created"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG40C2E6DCF6FC134C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-24T09:13:36.502Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS75723  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS75723 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "91/P8LS75723.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS75723 ;
+        adm:logEntry        bda:LG2D73D8AA1F89CB46 , bda:LG40C2E6DCF6FC134C ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV88A76912A88EFD70
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1281 ;
+        :onYear             "1952"^^xsd:gYear .
+    
+    bdr:NM58A645E7A46C5704
+        a                   :PersonPrimaryName ;
+        rdfs:label          "bsod rgyal/"@bo-x-ewts .
+    
+    bdr:NMC00C3E5C78CEB902
+        a                   :PersonTitle ;
+        rdfs:label          "dge bsnyen bsod rgyal/"@bo-x-ewts .
+    
+    bdr:NMDD235BD8E89FDC70
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mang ra'i dge bsnyen bsod rgyal/"@bo-x-ewts .
+    
+    bdr:NTF21E70AF480557F3
+        a                   :Note ;
+        :noteText           "short bio\n\nauthor of work record W8LS75693"@en .
+    
+    bdr:P8LS75723  a        :Person ;
+        skos:prefLabel      "mang ra'i dge bsnyen bsod rgyal/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NTF21E70AF480557F3 ;
+        :personEvent        bdr:EV88A76912A88EFD70 ;
+        :personName         bdr:NM58A645E7A46C5704 , bdr:NMC00C3E5C78CEB902 , bdr:NMDD235BD8E89FDC70 .
+}
