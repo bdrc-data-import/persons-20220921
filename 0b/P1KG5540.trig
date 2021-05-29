@@ -12,37 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG5540 {
-    bda:LG0BB8F7A185C07E55
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-06-29T16:32:55.756Z"^^xsd:dateTime ;
-        adm:logMessage      "created record"@en ;
-        adm:logWho          bdu:U00016 .
-    
     bda:LG3F59CBCE20D73B96
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
-        adm:logMessage      "added event type=\"birth\""@en ;
-        adm:logWhoStr       "person-events-add-type-birth" .
-    
-    bda:LG749FF104FF06DDEF
         a                   adm:UpdateData ;
         adm:logDate         "2010-08-09T15:12:12.921Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG4C8FAE41E70F8A8D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-28T09:22:54.953Z"^^xsd:dateTime ;
+        adm:logMessage      "added G# and note"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG749FF104FF06DDEF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-06-29T16:32:55.756Z"^^xsd:dateTime ;
+        adm:logMessage      "created record"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF465FD931D4A4AD8
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added event type=\"birth\""@en ;
+        adm:logWhoStr       "person-events-add-type-birth" .
+    
     bda:P1KG5540  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG5540 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0b/P1KG5540.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG5540 ;
-        adm:logEntry        bda:LG0BB8F7A185C07E55 , bda:LG3F59CBCE20D73B96 , bda:LG749FF104FF06DDEF ;
+        adm:logEntry        bda:LG3F59CBCE20D73B96 , bda:LG4C8FAE41E70F8A8D , bda:LG749FF104FF06DDEF , bda:LGF465FD931D4A4AD8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV658ABC0CFA20C746
         a                   :PersonBirth ;
+        :eventWhere         bdr:G1539 ;
         :onYear             "1965"^^xsd:gYear .
     
     bdr:NM7719138B90EA9319
@@ -53,6 +60,12 @@ bdg:P1KG5540 {
         a                   :PersonPrimaryName ;
         rdfs:label          "'chi med rdo rje/"@bo-x-ewts .
     
+    bdr:NT0BB8F7A185C07E55
+        a                   :Note ;
+        :contentLocationStatement  "2 p." ;
+        :noteSource         bdr:MW3CN26394 ;
+        :noteText           "1987ལོར་སི་ཁྲོན་བོད་ཡིག་སློབ་གྲྭ་ནས་ཐོན་རྗེས་དཀར་མཛེས་ཆབ་གྲོས་སུ་ཕྱག་ལས་གནང་བ་གསལ།"@bo .
+    
     bdr:NT235C682C90F9FC33
         a                   :Note ;
         :noteSource         bdr:MW1KG5539 ;
@@ -61,7 +74,7 @@ bdg:P1KG5540 {
     bdr:P1KG5540  a         :Person ;
         skos:prefLabel      "'chi med rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT235C682C90F9FC33 ;
+        :note               bdr:NT0BB8F7A185C07E55 , bdr:NT235C682C90F9FC33 ;
         :personEvent        bdr:EV658ABC0CFA20C746 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM7719138B90EA9319 , bdr:NMC8F889602928EB61 .
