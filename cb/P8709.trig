@@ -12,46 +12,64 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8709 {
-    bda:LG39B21B33B624A155
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
-    bda:LGDEC09A6641E5991A
+    bda:LG40D0AEB7FEE0C349
         a                   adm:UpdateData ;
         adm:logDate         "2010-01-21T11:05:37.411Z"^^xsd:dateTime ;
         adm:logMessage      "P8709 withdrawn in favor of P731"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG7F486DD23A3A2D30
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LG8A520C1C6174AFD4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-05-31T09:15:28.691Z"^^xsd:dateTime ;
+        adm:logMessage      "not a duplicate, released and added name, date, external link"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P8709  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8709 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "cb/P8709.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8709 ;
-        adm:logEntry        bda:LG39B21B33B624A155 , bda:LGDEC09A6641E5991A ;
+        adm:logEntry        bda:LG40D0AEB7FEE0C349 , bda:LG7F486DD23A3A2D30 , bda:LG8A520C1C6174AFD4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:replaceWith     bdr:P731 ;
-        adm:status          bda:StatusWithdrawn .
+        adm:status          bda:StatusReleased .
     
-    bdr:EVE7728C249DAAC367
+    bdr:EV39B21B33B624A155
+        a                   :PersonDeath ;
+        :onYear             "1904"^^xsd:gYear .
+    
+    bdr:EVDEC09A6641E5991A
         a                   :PersonBirth ;
-        :notAfter           "1899"^^xsd:gYear ;
-        :notBefore          "1800"^^xsd:gYear .
+        :onYear             "1852"^^xsd:gYear .
     
     bdr:NM3616B201E61B491A
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gling sprul pad+ma lung rtogs rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NM9D032432A6741372
+        a                   :PersonOtherName ;
+        rdfs:label          "mgo log dbang sde gling sprul/"@bo-x-ewts .
+    
+    bdr:NME7728C249DAAC367
+        a                   :PersonPrimaryName ;
         rdfs:label          "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts .
     
-    bdr:NT9D032432A6741372
+    bdr:NT9D4318B7A9DCFCF1
         a                   :Note ;
-        :noteText           "withdrawn in favor of P8709"@en .
+        :noteText           "Not to be confused with Golok Serta Rinpoche (b. 1891), who also was referred to as Pema Lungtok Gyatso."@en .
     
     bdr:P8709  a            :Person ;
-        skos:prefLabel      "pad+ma lung rtogs rgya mtsho/"@bo-x-ewts ;
+        rdfs:seeAlso        "https://www.rigpawiki.org/index.php?title=Pema_Lungtok_Gyatso#cite_note-1"^^xsd:anyURI ;
+        skos:prefLabel      "gling sprul pad+ma lung rtogs rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT9D032432A6741372 ;
-        :personEvent        bdr:EVE7728C249DAAC367 ;
+        :note               bdr:NT9D4318B7A9DCFCF1 ;
+        :personEvent        bdr:EV39B21B33B624A155 , bdr:EVDEC09A6641E5991A ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM3616B201E61B491A .
+        :personName         bdr:NM3616B201E61B491A , bdr:NM9D032432A6741372 , bdr:NME7728C249DAAC367 ;
+        :personStudentOf    bdr:P705 .
 }
