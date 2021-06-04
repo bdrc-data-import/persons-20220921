@@ -12,32 +12,42 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS4114 {
-    bda:LG3224A6690F0CF6E1
+    bda:LG0B0AD344CA0A9E7A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2011-04-20T10:03:47.432Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG15432B6DF3D5E9DC
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
         adm:logWhoStr       "person-events-add-type-birth" .
     
-    bda:LG5EDF0BEDECC49162
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2011-04-20T10:03:47.432Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
+    bda:LG9C396CF1B970773D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-03T16:17:54.929Z"^^xsd:dateTime ;
+        adm:logMessage      "added name, date, and notes"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8LS4114  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS4114 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "26/P8LS4114.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS4114 ;
-        adm:logEntry        bda:LG3224A6690F0CF6E1 , bda:LG5EDF0BEDECC49162 ;
+        adm:logEntry        bda:LG0B0AD344CA0A9E7A , bda:LG15432B6DF3D5E9DC , bda:LG9C396CF1B970773D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVAD147AB8FD89DA65
+    bdr:EV5EDF0BEDECC49162
         a                   :PersonOccupiesSeat .
     
-    bdr:EVEEBAAFF2FEE9BB13
+    bdr:EV8244948D2E1127AC
+        a                   :PersonDeath ;
+        :onYear             "1940"^^xsd:gYear .
+    
+    bdr:EVAD147AB8FD89DA65
         a                   :PersonBirth ;
         :onYear             "1881"^^xsd:gYear .
     
@@ -49,18 +59,34 @@ bdg:P8LS4114 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "lung shar rdo rje tshe rgyal/"@bo-x-ewts .
     
-    bdr:NT8244948D2E1127AC
+    bdr:NMEEBAAFF2FEE9BB13
+        a                   :PersonReversal ;
+        rdfs:label          "rdo rje tshe rgyal, lung shar/"@bo-x-ewts .
+    
+    bdr:NT3224A6690F0CF6E1
         a                   :Note ;
         :contentLocationStatement  "pp. 14-20" ;
         :noteSource         bdr:MW1PD96945 ;
         :noteText           "also see aristocracy and government in tibet (1728-1959) by luciano petech, pp. 48, 88, 97, 183, 226"@en .
+    
+    bdr:NTA73B832D0236BA84
+        a                   :Note ;
+        :contentLocationStatement  "p. 134" ;
+        :noteSource         bdr:MW30439 ;
+        :noteText           "dates given 1881-1940"@en .
+    
+    bdr:NTF7F1008AB99B6FC3
+        a                   :Note ;
+        :contentLocationStatement  "p. 1663" ;
+        :noteSource         bdr:MW19801 ;
+        :noteText           "biography; a member of the tibetan aristocracy; he was blinded so that he could never again attain power"@en .
     
     bdr:P8LS4114  a         :Person ;
         skos:prefLabel      "lung shar rdo rje tshe rgyal/"@bo-x-ewts ;
         :hasBrother         bdr:P8LS4116 , bdr:P8LS4117 ;
         :hasFather          bdr:P8LS4115 ;
         :isRoot             true ;
-        :note               bdr:NT8244948D2E1127AC ;
-        :personEvent        bdr:EVAD147AB8FD89DA65 , bdr:EVEEBAAFF2FEE9BB13 ;
-        :personName         bdr:NM0E21D7D12389FE82 , bdr:NME41772BB0BC45E64 .
+        :note               bdr:NT3224A6690F0CF6E1 , bdr:NTA73B832D0236BA84 , bdr:NTF7F1008AB99B6FC3 ;
+        :personEvent        bdr:EV5EDF0BEDECC49162 , bdr:EV8244948D2E1127AC , bdr:EVAD147AB8FD89DA65 ;
+        :personName         bdr:NM0E21D7D12389FE82 , bdr:NME41772BB0BC45E64 , bdr:NMEEBAAFF2FEE9BB13 .
 }
