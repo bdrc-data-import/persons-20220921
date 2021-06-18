@@ -12,28 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6569 {
-    bda:LG41BCD49564F667EC
+    bda:LG45C30C37631637A5
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGE33D9FDECA426E88
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T12:45:40.335Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected language encoding"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P6569  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6569 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "18/P6569.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6569 ;
-        adm:logEntry        bda:LG41BCD49564F667EC ;
+        adm:logEntry        bda:LG45C30C37631637A5 , bda:LGE33D9FDECA426E88 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV13BBE243776F7295
+        a                   :PersonDeath ;
+        :onYear             "2010"^^xsd:gYear .
+    
+    bdr:EVEF146D3E57D0CED4
+        a                   :PersonBirth ;
+        :onYear             "1914"^^xsd:gYear .
+    
     bdr:NM0AE92798AFA1A843
         a                   :PersonPrimaryName ;
-        rdfs:label          "petech, luciano/"@bo-x-ewts .
+        rdfs:label          "luciano petech"@en .
+    
+    bdr:NM41BCD49564F667EC
+        a                   :PersonPersonalName ;
+        rdfs:label          "petech, luciano"@en .
     
     bdr:P6569  a            :Person ;
-        skos:prefLabel      "petech, luciano/"@bo-x-ewts ;
+        skos:prefLabel      "luciano petech"@en ;
         :isRoot             true ;
+        :personEvent        bdr:EV13BBE243776F7295 , bdr:EVEF146D3E57D0CED4 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM0AE92798AFA1A843 .
+        :personName         bdr:NM0AE92798AFA1A843 , bdr:NM41BCD49564F667EC .
 }

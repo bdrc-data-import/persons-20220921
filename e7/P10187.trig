@@ -12,29 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P10187 {
-    bda:LG62DB1DA203651B0F
+    bda:LG3A406BD454EBC92B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T12:45:30.363Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected language encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG624EF1699F9F55F2
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P10187  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P10187 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "e7/P10187.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P10187 ;
-        adm:logEntry        bda:LG62DB1DA203651B0F ;
+        adm:logEntry        bda:LG3A406BD454EBC92B , bda:LG624EF1699F9F55F2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVD79E547C3E958130
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
+    bdr:NM62DB1DA203651B0F
+        a                   :PersonPersonalName ;
+        rdfs:label          "riggs, nicole"@en .
+    
     bdr:NMECDB6FA90BF0F5C7
         a                   :PersonPrimaryName ;
-        rdfs:label          "riggs, nicole/"@bo-x-ewts .
+        rdfs:label          "nicole riggs"@en .
     
     bdr:P10187  a           :Person ;
-        skos:prefLabel      "riggs, nicole/"@bo-x-ewts ;
+        skos:prefLabel      "nicole riggs"@en ;
         :isRoot             true ;
-        :personGender       bdr:GenderMale ;
-        :personName         bdr:NMECDB6FA90BF0F5C7 ;
+        :personEvent        bdr:EVD79E547C3E958130 ;
+        :personGender       bdr:GenderFemale ;
+        :personName         bdr:NM62DB1DA203651B0F , bdr:NMECDB6FA90BF0F5C7 ;
         :personStudentOf    bdr:P938 .
 }

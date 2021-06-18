@@ -12,28 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7263 {
-    bda:LGB1964D995E6C3E92
+    bda:LG1E0F2B41588477E3
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG31FBD11B6640293D
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T12:45:42.182Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected language encoding"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P7263  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7263 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "ca/P7263.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7263 ;
-        adm:logEntry        bda:LGB1964D995E6C3E92 ;
+        adm:logEntry        bda:LG1E0F2B41588477E3 , bda:LG31FBD11B6640293D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV4B796621A246BE58
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
     bdr:NM32807A6945B7A62D
         a                   :PersonPrimaryName ;
-        rdfs:label          "dixey, richard/"@bo-x-ewts .
+        rdfs:label          "richard dixey"@en .
+    
+    bdr:NMB1964D995E6C3E92
+        a                   :PersonPersonalName ;
+        rdfs:label          "dixey, richard"@en .
     
     bdr:P7263  a            :Person ;
-        skos:prefLabel      "dixey, richard/"@bo-x-ewts ;
+        skos:prefLabel      "richard dixey"@en ;
         :isRoot             true ;
+        :personEvent        bdr:EV4B796621A246BE58 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM32807A6945B7A62D .
+        :personName         bdr:NM32807A6945B7A62D , bdr:NMB1964D995E6C3E92 .
 }

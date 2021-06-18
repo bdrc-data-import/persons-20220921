@@ -12,44 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6438 {
-    bda:LGA5DA0126B136418C
+    bda:LG747F54B561E85382
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGA0431D4AC0D23E7B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T11:59:21.745Z"^^xsd:dateTime ;
+        adm:logMessage      "added names & G# & note"@en ;
+        adm:logWho          bdu:U00007 .
     
     bda:P6438  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6438 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0b/P6438.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6438 ;
-        adm:logEntry        bda:LGA5DA0126B136418C ;
+        adm:logEntry        bda:LG747F54B561E85382 , bda:LGA0431D4AC0D23E7B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVFF1A545CCF6B8693
+    bdr:EV5E211458237B912C
         a                   :PersonBirth ;
+        :eventWhere         bdr:G3180 ;
         :onYear             "1950"^^xsd:gYear .
     
     bdr:NMAFE2C27DE9413CEF
         a                   :PersonPrimaryName ;
-        rdfs:label          "don grub/"@bo-x-ewts .
-    
-    bdr:NMEAA93E0E8F5D8048
-        a                   :PersonPrimaryTitle ;
         rdfs:label          "gcod pa don grub/"@bo-x-ewts .
     
-    bdr:NT5E211458237B912C
+    bdr:NMEAA93E0E8F5D8048
+        a                   :PersonPrimaryName ;
+        rdfs:label          "角巴东主"@zh-hans .
+    
+    bdr:NMFF1A545CCF6B8693
+        a                   :PersonPrimaryName ;
+        rdfs:label          "Jopa Dondrup"@en .
+    
+    bdr:NT323144468A77C5A0
+        a                   :Note ;
+        :noteText           "གླིང་སྒྲུང་ཞིབ་འཇུག་པ་ཆེད་མཁས་གྲགས་ཅན།"@bo .
+    
+    bdr:NTA5DA0126B136418C
         a                   :Note ;
         :contentLocationStatement  "french flaps" ;
         :noteSource         bdr:MW29038 ;
         :noteText           "biodata of author:\nborn in mtsho lho khul of mtsho sngon province"@en .
     
     bdr:P6438  a            :Person ;
-        skos:prefLabel      "gcod pa don grub/"@bo-x-ewts ;
+        skos:prefLabel      "gcod pa don grub/"@bo-x-ewts , "Jopa Dondrup"@en , "角巴东主"@zh-hans ;
         :isRoot             true ;
-        :note               bdr:NT5E211458237B912C ;
-        :personEvent        bdr:EVFF1A545CCF6B8693 ;
+        :note               bdr:NT323144468A77C5A0 , bdr:NTA5DA0126B136418C ;
+        :personEvent        bdr:EV5E211458237B912C ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMAFE2C27DE9413CEF , bdr:NMEAA93E0E8F5D8048 .
+        :personName         bdr:NMAFE2C27DE9413CEF , bdr:NMEAA93E0E8F5D8048 , bdr:NMFF1A545CCF6B8693 .
 }

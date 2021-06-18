@@ -12,28 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6211 {
-    bda:LG3CEE02866D941204
+    bda:LG45809201A1F89BC4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-12T17:54:48.202Z"^^xsd:dateTime ;
+        adm:logMessage      "fixed and added note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGC02EC1FE6509DE0C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6211  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6211 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "00/P6211.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6211 ;
-        adm:logEntry        bda:LG3CEE02866D941204 ;
+        adm:logEntry        bda:LG45809201A1F89BC4 , bda:LGC02EC1FE6509DE0C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV3CEE02866D941204
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
     bdr:NM2BD1A3489DE29270
         a                   :PersonPrimaryName ;
-        rdfs:label          "don grub in Nub byang mi rigs slob grwa chen mo'i rig gzhung dus deb, 1991 2, pp. 73 83"@bo-x-ewts .
+        rdfs:label          "don grub/"@bo-x-ewts .
+    
+    bdr:NT243DCD41E72A2566
+        a                   :Note ;
+        :contentLocationStatement  "1991 2, pp. 73-83" ;
+        :noteSource         bdr:MW1PD45099 ;
+        :noteText           "in Nub byang mi rigs slob grwa chen mo'i rig gzhung dus deb, 1991 2, pp. 73 83"@en .
     
     bdr:P6211  a            :Person ;
-        skos:prefLabel      "don grub in Nub byang mi rigs slob grwa chen mo'i rig gzhung dus deb, 1991 2, pp. 73 83"@bo-x-ewts ;
+        skos:prefLabel      "don grub/"@bo-x-ewts ;
         :isRoot             true ;
-        :personGender       bdr:GenderFemale ;
+        :note               bdr:NT243DCD41E72A2566 ;
+        :personEvent        bdr:EV3CEE02866D941204 ;
+        :personGender       bdr:GenderMale ;
         :personName         bdr:NM2BD1A3489DE29270 .
 }

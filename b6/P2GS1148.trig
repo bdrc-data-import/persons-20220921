@@ -12,29 +12,52 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2GS1148 {
-    bda:LG1E08778B325F3632
+    bda:LG649F3903D4754436
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-07-01T01:25:56.232Z"^^xsd:dateTime ;
         adm:logMessage      "created"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LGE3262ECDA2FF6E58
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T12:45:38.609Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected language encoding"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P2GS1148  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2GS1148 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "b6/P2GS1148.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2GS1148 ;
-        adm:logEntry        bda:LG1E08778B325F3632 ;
+        adm:logEntry        bda:LG649F3903D4754436 , bda:LGE3262ECDA2FF6E58 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV378929915FD7B4B1
+        a                   :PersonBirth ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:EVD407044D888895D1
+        a                   :PersonDeath ;
+        :onYear             "2018"^^xsd:gYear .
+    
+    bdr:NM1E08778B325F3632
+        a                   :PersonPrimaryName ;
+        rdfs:label          "alexander william macdonald"@en .
+    
+    bdr:NMD2E53C04A0D71E86
+        a                   :PersonPersonalName ;
+        rdfs:label          "macdonald, alexander w."@en .
+    
     bdr:NME07CC8995806DD80
         a                   :PersonPrimaryName ;
-        rdfs:label          "macdonald, alexander w."@bo-x-ewts .
+        rdfs:label          "alexander w. macdonald"@en .
     
     bdr:P2GS1148  a         :Person ;
-        skos:prefLabel      "macdonald, alexander w."@bo-x-ewts ;
+        skos:prefLabel      "alexander w. macdonald"@en ;
         :isRoot             true ;
-        :personName         bdr:NME07CC8995806DD80 .
+        :personEvent        bdr:EV378929915FD7B4B1 , bdr:EVD407044D888895D1 ;
+        :personName         bdr:NM1E08778B325F3632 , bdr:NMD2E53C04A0D71E86 , bdr:NME07CC8995806DD80 .
 }

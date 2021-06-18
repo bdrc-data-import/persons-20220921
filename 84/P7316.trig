@@ -12,28 +12,47 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7316 {
-    bda:LGACF646DAC6485829
+    bda:LG69EE0D121A9405B0
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGA4D5E9D5CB8889B2
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T12:45:43.547Z"^^xsd:dateTime ;
+        adm:logMessage      "corrected language encoding"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P7316  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7316 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "84/P7316.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7316 ;
-        adm:logEntry        bda:LGACF646DAC6485829 ;
+        adm:logEntry        bda:LG69EE0D121A9405B0 , bda:LGA4D5E9D5CB8889B2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV15803F0D9AAFD514
+        a                   :PersonDeath ;
+        :onYear             "2004"^^xsd:gYear .
+    
+    bdr:EV49EDC23546B531FA
+        a                   :PersonBirth ;
+        :onYear             "1921"^^xsd:gYear .
+    
     bdr:NM761E70CF2F9A3955
+        a                   :PersonPrimaryName ;
+        rdfs:label          "alex wayman"@en .
+    
+    bdr:NMACF646DAC6485829
         a                   :PersonPersonalName ;
-        rdfs:label          "wayman, alex/"@bo-x-ewts .
+        rdfs:label          "wayman, alex"@en .
     
     bdr:P7316  a            :Person ;
-        skos:prefLabel      "wayman, alex/"@bo-x-ewts ;
+        skos:prefLabel      "alex wayman"@en ;
         :isRoot             true ;
+        :personEvent        bdr:EV15803F0D9AAFD514 , bdr:EV49EDC23546B531FA ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM761E70CF2F9A3955 .
+        :personName         bdr:NM761E70CF2F9A3955 , bdr:NMACF646DAC6485829 .
 }

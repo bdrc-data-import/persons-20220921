@@ -12,28 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8332 {
-    bda:LG4718B4777D262259
+    bda:LG12F66713822D53D9
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG58C8E13CBD274993
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T13:48:05.28Z"^^xsd:dateTime ;
+        adm:logMessage      "added note and other name"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8332  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8332 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "32/P8332.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8332 ;
-        adm:logEntry        bda:LG4718B4777D262259 ;
+        adm:logEntry        bda:LG12F66713822D53D9 , bda:LG58C8E13CBD274993 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:NM4718B4777D262259
+        a                   :PersonOtherName ;
+        rdfs:label          "'das log byang chub seng+ge"@bo-x-ewts .
+    
     bdr:NM9BB17CCA3F483E7F
-        a                   :PersonPersonalName ;
-        rdfs:label          "byang chub seng+ge ('das log)"@bo-x-ewts .
+        a                   :PersonPrimaryName ;
+        rdfs:label          "byang chub seng+ge"@bo-x-ewts .
+    
+    bdr:NT41E47EF6C07122C6
+        a                   :Note ;
+        :noteText           "Year unknown; experiences of a return from death"@en .
     
     bdr:P8332  a            :Person ;
-        skos:prefLabel      "byang chub seng+ge ('das log)"@bo-x-ewts ;
+        skos:prefLabel      "byang chub seng+ge"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT41E47EF6C07122C6 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM9BB17CCA3F483E7F .
+        :personName         bdr:NM4718B4777D262259 , bdr:NM9BB17CCA3F483E7F .
 }

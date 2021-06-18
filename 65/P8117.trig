@@ -12,28 +12,43 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8117 {
-    bda:LGA581937F20ABBFFC
+    bda:LG30E22D32C186A6CC
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGAB061FB8ACFC6563
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-14T13:48:04.402Z"^^xsd:dateTime ;
+        adm:logMessage      "added note and other name"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8117  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8117 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "65/P8117.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8117 ;
-        adm:logEntry        bda:LGA581937F20ABBFFC ;
+        adm:logEntry        bda:LG30E22D32C186A6CC , bda:LGAB061FB8ACFC6563 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:NMA581937F20ABBFFC
+        a                   :PersonOtherName ;
+        rdfs:label          "blon po mgar stong btsan/"@bo-x-ewts .
+    
     bdr:NMD55F8AA155E21E58
-        a                   :PersonPersonalName ;
-        rdfs:label          "mgar stong btsan (blon po)"@bo-x-ewts .
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mgar stong btsan/"@bo-x-ewts .
+    
+    bdr:NTD8F7AFB7E985DB8A
+        a                   :Note ;
+        :noteText           "a minester, year unknown"@en .
     
     bdr:P8117  a            :Person ;
-        skos:prefLabel      "mgar stong btsan (blon po)"@bo-x-ewts ;
+        skos:prefLabel      "mgar stong btsan/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTD8F7AFB7E985DB8A ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMD55F8AA155E21E58 .
+        :personName         bdr:NMA581937F20ABBFFC , bdr:NMD55F8AA155E21E58 .
 }
