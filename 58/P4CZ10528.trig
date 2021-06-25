@@ -12,28 +12,39 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P4CZ10528 {
-    bda:LG5E8B3382734A9FE1
+    bda:LG776350E87C8DFA76
         a                   adm:UpdateData ;
-        adm:logDate         "2019-09-09T10:36:50.543Z"^^xsd:dateTime ;
-        adm:logMessage      "added iats sanskrit name"@en ;
-        adm:logWho          bdu:U00019 .
+        adm:logDate         "2021-06-24T09:42:33.157Z"^^xsd:dateTime ;
+        adm:logMessage      "added tibetan names and date"@en ;
+        adm:logWho          bdu:U00016 .
     
-    bda:LGA73299AE292726E3
+    bda:LGD077987F3B51FE61
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-02-09T13:19:34.242Z"^^xsd:dateTime ;
         adm:logMessage      "New P"@en ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGD535D4305895DF13
+        a                   adm:UpdateData ;
+        adm:logDate         "2019-09-09T10:36:50.543Z"^^xsd:dateTime ;
+        adm:logMessage      "added iats sanskrit name"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P4CZ10528  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4CZ10528 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "58/P4CZ10528.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4CZ10528 ;
-        adm:logEntry        bda:LG5E8B3382734A9FE1 , bda:LGA73299AE292726E3 ;
+        adm:logEntry        bda:LG776350E87C8DFA76 , bda:LGD077987F3B51FE61 , bda:LGD535D4305895DF13 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV587DB341E1BE0C4D
+        a                   :PersonBirth ;
+        :notAfter           "0999"^^xsd:gYear ;
+        :notBefore          "0900"^^xsd:gYear .
     
     bdr:NM27E114CB95BB5D8F
         a                   :PersonPrimaryTitle ;
@@ -43,16 +54,32 @@ bdg:P4CZ10528 {
         a                   :PersonOtherName ;
         rdfs:label          "prajñendraruci"@sa-x-ndia .
     
+    bdr:NM5E8B3382734A9FE1
+        a                   :PersonOtherName ;
+        rdfs:label          "dpa' bo rdo rje/"@bo-x-ewts .
+    
     bdr:NM76D084C8D617EBD3
         a                   :PersonOtherName ;
-        rdfs:label          "prajnendraruci"@sa-x-ewts .
+        rdfs:label          "prajnendraruci"@sa-alalc97 .
     
     bdr:NMA31818B69B030761
         a                   :PersonPrimaryName ;
         rdfs:label          "pradz+nyA in+d+ra ru tsi/"@bo-x-ewts .
     
+    bdr:NMA73299AE292726E3
+        a                   :PersonOtherName ;
+        rdfs:label          "shes rab dbang po mdzes pa/"@bo-x-ewts .
+    
+    bdr:NT1760C476B2403CEB
+        a                   :Note ;
+        :noteText           "Old TSD Schools table tree: \n\n-- Indian Panditas"@en .
+    
     bdr:P4CZ10528  a        :Person ;
-        skos:prefLabel      "rgya gar gyi mkhan po pradz+nyA in+d+ra ru tsi/"@bo-x-ewts , "prajnendraruci"@sa-x-ewts ;
+        skos:prefLabel      "rgya gar gyi mkhan po pradz+nyA in+d+ra ru tsi/"@bo-x-ewts , "prajnendraruci"@sa-alalc97 ;
         :isRoot             true ;
-        :personName         bdr:NM27E114CB95BB5D8F , bdr:NM316C2B571161BD66 , bdr:NM76D084C8D617EBD3 , bdr:NMA31818B69B030761 .
+        :note               bdr:NT1760C476B2403CEB ;
+        :personEvent        bdr:EV587DB341E1BE0C4D ;
+        :personName         bdr:NM27E114CB95BB5D8F , bdr:NM316C2B571161BD66 , bdr:NM5E8B3382734A9FE1 , bdr:NM76D084C8D617EBD3 , bdr:NMA31818B69B030761 , bdr:NMA73299AE292726E3 ;
+        :personStudentOf    bdr:P0RK1021 , bdr:P3287 ;
+        :personTeacherOf    bdr:P3285 .
 }
