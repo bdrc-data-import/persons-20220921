@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS15241 {
-    bda:LGC5E05F1F488ACDDA
+    bda:LG0BD3E9F27AD83BFA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-25T12:53:37.57Z"^^xsd:dateTime ;
+        adm:logMessage      "added date and teacher"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGB26350CA6BB29530
         a                   adm:UpdateData ;
         adm:logDate         "2020-02-28T09:25:57.774Z"^^xsd:dateTime ;
         adm:logMessage      "added name and note"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGDC730DDE047B8C42
+    bda:LGC5E05F1F488ACDDA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-02-11T10:57:41.874Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -27,13 +33,18 @@ bdg:P8LS15241 {
     bda:P8LS15241  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS15241 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "95/P8LS15241.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS15241 ;
-        adm:logEntry        bda:LGC5E05F1F488ACDDA , bda:LGDC730DDE047B8C42 ;
+        adm:logEntry        bda:LG0BD3E9F27AD83BFA , bda:LGB26350CA6BB29530 , bda:LGC5E05F1F488ACDDA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV2F85110A469D73C1
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
     
     bdr:NM535E442A6BC51270
         a                   :PersonOtherName ;
@@ -47,19 +58,20 @@ bdg:P8LS15241 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "lho brag gi ro mnyam rdo rje/"@bo-x-ewts .
     
-    bdr:NT2F85110A469D73C1
+    bdr:NT35CC8C5D6D446C55
         a                   :Note ;
         :contentLocationStatement  "vol. e, f. 60a4" ;
         :noteSource         bdr:MW29706 .
     
-    bdr:NT35CC8C5D6D446C55
+    bdr:NTDC730DDE047B8C42
         a                   :Note ;
         :noteText           "W19802, vol. 3, p. 544"@en .
     
     bdr:P8LS15241  a        :Person ;
         skos:prefLabel      "lho brag gi ro mnyam rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT2F85110A469D73C1 , bdr:NT35CC8C5D6D446C55 ;
+        :note               bdr:NT35CC8C5D6D446C55 , bdr:NTDC730DDE047B8C42 ;
+        :personEvent        bdr:EV2F85110A469D73C1 ;
         :personName         bdr:NM535E442A6BC51270 , bdr:NM70197669882080A2 , bdr:NMF7CE07462A3F11F0 ;
         :personStudentOf    bdr:P2636 , bdr:P3074 .
 }
