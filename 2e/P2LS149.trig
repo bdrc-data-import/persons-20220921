@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS149 {
-    bda:LG320087A29F33618D
+    bda:LG4E4F26DE200A3CDC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T16:37:14.323Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBEE564F5139B1300
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-15T15:27:00.897Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGBEE564F5139B1300
+    bda:LGEBF0CFD41107D0E5
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:05:00.003Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,24 +32,29 @@ bdg:P2LS149 {
     bda:P2LS149  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS149 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "2e/P2LS149.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS149 ;
-        adm:logEntry        bda:LG320087A29F33618D , bda:LGBEE564F5139B1300 ;
+        adm:logEntry        bda:LG4E4F26DE200A3CDC , bda:LGBEE564F5139B1300 , bda:LGEBF0CFD41107D0E5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV9D1FC7DDF4A80833
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:NME43755F5E60ED128
         a                   :PersonPrimaryName ;
         rdfs:label          "'jam dpal dbang phyug"@bo-x-ewts .
     
+    bdr:NT320087A29F33618D
+        a                   :Note ;
+        :noteText           "belong to glang mdun family"@en .
+    
     bdr:P2LS149  a          :Person ;
         skos:prefLabel      "'jam dpal dbang phyug"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT320087A29F33618D ;
         :personEvent        bdr:EV9D1FC7DDF4A80833 ;
         :personName         bdr:NME43755F5E60ED128 .
 }

@@ -13,29 +13,35 @@
 
 bdg:P2LS177 {
     bda:LG130F213B8265160E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T12:04:33.194Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB8DF71427068AB64
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:06:29.013Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGB3BB689A0D77567B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T12:04:33.194Z"^^xsd:dateTime ;
+    bda:LGE087F1BB62602248
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T16:09:07.12Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS177  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS177 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "4a/P2LS177.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS177 ;
-        adm:logEntry        bda:LG130F213B8265160E , bda:LGB3BB689A0D77567B ;
+        adm:logEntry        bda:LG130F213B8265160E , bda:LGB8DF71427068AB64 , bda:LGE087F1BB62602248 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV952203B5D0CAF35E
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EVB4D0B5C6AD207E5F
         a                   :PersonDeath ;
@@ -45,10 +51,15 @@ bdg:P2LS177 {
         a                   :PersonPrimaryName ;
         rdfs:label          "dpal ldan don grub/"@bo-x-ewts .
     
+    bdr:NTB3BB689A0D77567B
+        a                   :Note ;
+        :noteText           "lha klu/"@bo-x-ewts .
+    
     bdr:P2LS177  a          :Person ;
         skos:prefLabel      "dpal ldan don grub/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P285 ;
         :isRoot             true ;
+        :note               bdr:NTB3BB689A0D77567B ;
         :personEvent        bdr:EV952203B5D0CAF35E , bdr:EVB4D0B5C6AD207E5F ;
         :personName         bdr:NM41CB9921B4C27BDA .
 }

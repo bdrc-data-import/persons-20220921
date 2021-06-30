@@ -12,17 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS159 {
-    bda:LG2FF712803D3BF612
+    bda:LG1028157D3896D0CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T15:24:21.59Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and normalized name"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6E8BFBDC51827E26
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-15T16:42:44.379Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG6A95CB639BD801B5
+    bda:LG6F19840167148354
         a                   adm:UpdateData ;
         adm:logDate         "2010-09-14T14:28:39.875Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG6E8BFBDC51827E26
+    bda:LG847E90D543AECCC1
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:13:03.424Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -31,29 +37,38 @@ bdg:P2LS159 {
     bda:P2LS159  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS159 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "88/P2LS159.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS159 ;
-        adm:logEntry        bda:LG2FF712803D3BF612 , bda:LG6A95CB639BD801B5 , bda:LG6E8BFBDC51827E26 ;
+        adm:logEntry        bda:LG1028157D3896D0CD , bda:LG6E8BFBDC51827E26 , bda:LG6F19840167148354 , bda:LG847E90D543AECCC1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV03E819237AEA0B94
+    bdr:EV2FF712803D3BF612
+        a                   :PersonInResidence .
+    
+    bdr:EVFD3EAFA47D433275
         a                   :PersonDeath ;
         :notAfter           "1913"^^xsd:gYear ;
         :notBefore          "1912"^^xsd:gYear .
     
-    bdr:EVFD3EAFA47D433275
-        a                   :PersonOccupiesSeat .
+    bdr:NM03E819237AEA0B94
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "g.yu thog mkhan chung 'jam dbyangs bstan 'dzin/"@bo-x-ewts .
     
     bdr:NM04C50B6DA4034FDE
         a                   :PersonPrimaryName ;
-        rdfs:label          "g.yu thog mkhan chung 'jam dbyangs bstan 'dzin/"@bo-x-ewts .
+        rdfs:label          "'jam dbyangs bstan 'dzin/"@bo-x-ewts .
+    
+    bdr:NT6A95CB639BD801B5
+        a                   :Note ;
+        :noteText           "g.yu thog family"@en .
     
     bdr:P2LS159  a          :Person ;
         skos:prefLabel      "g.yu thog mkhan chung 'jam dbyangs bstan 'dzin/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV03E819237AEA0B94 , bdr:EVFD3EAFA47D433275 ;
-        :personName         bdr:NM04C50B6DA4034FDE .
+        :note               bdr:NT6A95CB639BD801B5 ;
+        :personEvent        bdr:EV2FF712803D3BF612 , bdr:EVFD3EAFA47D433275 ;
+        :personName         bdr:NM03E819237AEA0B94 , bdr:NM04C50B6DA4034FDE .
 }

@@ -13,29 +13,35 @@
 
 bdg:P2LS178 {
     bda:LG171A145D90C93D62
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T12:04:36.103Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB123139EDB599099
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T16:11:20.053Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGDC0752B51C1C19AA
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:06:55.567Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG2BFA0527DE26077D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T12:04:36.103Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS178  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS178 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ba/P2LS178.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS178 ;
-        adm:logEntry        bda:LG171A145D90C93D62 , bda:LG2BFA0527DE26077D ;
+        adm:logEntry        bda:LG171A145D90C93D62 , bda:LGB123139EDB599099 , bda:LGDC0752B51C1C19AA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV5B0A2EE75BDACF3B
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EV79C575EB6DEA4865
         a                   :PersonDeath ;
@@ -45,9 +51,14 @@ bdg:P2LS178 {
         a                   :PersonPrimaryName ;
         rdfs:label          "rab brtan rnam rgyal/"@bo-x-ewts .
     
+    bdr:NT2BFA0527DE26077D
+        a                   :Note ;
+        :noteText           "lha klu/"@bo-x-ewts .
+    
     bdr:P2LS178  a          :Person ;
         skos:prefLabel      "rab brtan rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT2BFA0527DE26077D ;
         :personEvent        bdr:EV5B0A2EE75BDACF3B , bdr:EV79C575EB6DEA4865 ;
         :personName         bdr:NMF93BCDE52F001B1D .
 }

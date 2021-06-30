@@ -13,29 +13,35 @@
 
 bdg:P2LS176 {
     bda:LG252C5F22F163EA05
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T12:04:30.562Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA82426C8989BFB78
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T16:05:35.758Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAF0E8175D925C63B
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:06:00.787Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG9025245CCC6BEB4D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T12:04:30.562Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS176  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS176 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "a4/P2LS176.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS176 ;
-        adm:logEntry        bda:LG252C5F22F163EA05 , bda:LG9025245CCC6BEB4D ;
+        adm:logEntry        bda:LG252C5F22F163EA05 , bda:LGA82426C8989BFB78 , bda:LGAF0E8175D925C63B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVD1A5B65D7FB4830F
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EVD2C25CF76B933178
         a                   :PersonDeath ;
@@ -43,11 +49,16 @@ bdg:P2LS176 {
     
     bdr:NMBC0491C1D6685CB4
         a                   :PersonPrimaryName ;
-        rdfs:label          "blo bzang ge 'dun grags pa/"@bo-x-ewts .
+        rdfs:label          "blo bzang dge 'dun grags pa/"@bo-x-ewts .
+    
+    bdr:NT9025245CCC6BEB4D
+        a                   :Note ;
+        :noteText           "lha klu/"@bo-x-ewts .
     
     bdr:P2LS176  a          :Person ;
-        skos:prefLabel      "blo bzang ge 'dun grags pa/"@bo-x-ewts ;
+        skos:prefLabel      "blo bzang dge 'dun grags pa/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT9025245CCC6BEB4D ;
         :personEvent        bdr:EVD1A5B65D7FB4830F , bdr:EVD2C25CF76B933178 ;
         :personName         bdr:NMBC0491C1D6685CB4 .
 }

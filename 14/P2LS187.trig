@@ -12,25 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS187 {
-    bda:LG0B8F0D45199D5E7C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T14:39:40.672Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LG8503280E3A4EED08
+    bda:LG1BF994BE096673DA
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:12:06.79Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG2A9986933B1DF199
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T15:41:40.841Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8503280E3A4EED08
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T14:39:40.672Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS187  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS187 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "14/P2LS187.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS187 ;
-        adm:logEntry        bda:LG0B8F0D45199D5E7C , bda:LG8503280E3A4EED08 ;
+        adm:logEntry        bda:LG1BF994BE096673DA , bda:LG2A9986933B1DF199 , bda:LG8503280E3A4EED08 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -39,18 +45,22 @@ bdg:P2LS187 {
         :onYear             "1739"^^xsd:gYear .
     
     bdr:EVB2E3BBA502EADDEA
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+        a                   :PersonInResidence .
     
     bdr:NMCF99F9456085DC6D
         a                   :PersonPrimaryName ;
         rdfs:label          "rnam rgyal tshe brtan/"@bo-x-ewts .
+    
+    bdr:NT0B8F0D45199D5E7C
+        a                   :Note ;
+        :noteText           "dga' bzhi family"@en .
     
     bdr:P2LS187  a          :Person ;
         skos:prefLabel      "rnam rgyal tshe brtan/"@bo-x-ewts ;
         :hasBrother         bdr:P4090 ;
         :hasUnknownKinship  bdr:P2LS188 ;
         :isRoot             true ;
+        :note               bdr:NT0B8F0D45199D5E7C ;
         :personEvent        bdr:EV672A0754E336BFCF , bdr:EVB2E3BBA502EADDEA ;
         :personName         bdr:NMCF99F9456085DC6D .
 }

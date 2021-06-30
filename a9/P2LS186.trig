@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS186 {
-    bda:LG366C321C90E81271
+    bda:LG5F8EC304640DCCB9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T15:39:15.456Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and normalized name"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE37B14BF430D4BE5
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:11:00.942Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGD4996EB28105E1FC
+    bda:LGE7F94C439CC6060B
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T14:39:37.592Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,31 +32,39 @@ bdg:P2LS186 {
     bda:P2LS186  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS186 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "a9/P2LS186.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS186 ;
-        adm:logEntry        bda:LG366C321C90E81271 , bda:LGD4996EB28105E1FC ;
+        adm:logEntry        bda:LG5F8EC304640DCCB9 , bda:LGE37B14BF430D4BE5 , bda:LGE7F94C439CC6060B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVA17AD4A10B562248
+    bdr:EVB38BAFFC683107A3
         a                   :PersonDeath ;
         :onYear             "1727"^^xsd:gYear .
     
-    bdr:EVB38BAFFC683107A3
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+    bdr:EVD4996EB28105E1FC
+        a                   :PersonInResidence .
+    
+    bdr:NMA17AD4A10B562248
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dga' bzhi ba tshe brtan bkra shis/"@bo-x-ewts .
     
     bdr:NMA9241F9C0C684B30
         a                   :PersonPrimaryName ;
-        rdfs:label          "dga' bzhi ba tshe brtan bkra shis/"@bo-x-ewts .
+        rdfs:label          "tshe brtan bkra shis/"@bo-x-ewts .
+    
+    bdr:NT366C321C90E81271
+        a                   :Note ;
+        :noteText           "dga' bzhi family"@en .
     
     bdr:P2LS186  a          :Person ;
         skos:prefLabel      "dga' bzhi ba tshe brtan bkra shis/"@bo-x-ewts ;
         :hasSibling         bdr:P2LS185 ;
         :hasUnknownKinship  bdr:P2LS187 ;
         :isRoot             true ;
-        :personEvent        bdr:EVA17AD4A10B562248 , bdr:EVB38BAFFC683107A3 ;
-        :personName         bdr:NMA9241F9C0C684B30 .
+        :note               bdr:NT366C321C90E81271 ;
+        :personEvent        bdr:EVB38BAFFC683107A3 , bdr:EVD4996EB28105E1FC ;
+        :personName         bdr:NMA17AD4A10B562248 , bdr:NMA9241F9C0C684B30 .
 }

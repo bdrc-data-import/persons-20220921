@@ -12,42 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS184 {
+    bda:LG0918D62CB4C3F5CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T15:15:28.571Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and name normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG3FD020D553A80EA2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T13:47:23.895Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8CD5FF51CFF1183A
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:10:02.792Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGC28BB2AC61F4C445
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T13:47:23.895Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS184  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS184 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "29/P2LS184.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS184 ;
-        adm:logEntry        bda:LG3FD020D553A80EA2 , bda:LGC28BB2AC61F4C445 ;
+        adm:logEntry        bda:LG0918D62CB4C3F5CD , bda:LG3FD020D553A80EA2 , bda:LG8CD5FF51CFF1183A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVB86D852EB39D84D1
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:NM13CB1E3BEC90C175
         a                   :PersonPrimaryName ;
-        rdfs:label          "lha klu lha lcam/"@bo-x-ewts .
+        rdfs:label          "g.yang 'dzom/"@bo-x-ewts .
     
     bdr:NM98647B625D7B31D4
-        a                   :PersonPrimaryName ;
-        rdfs:label          "g+yang 'dzom/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha klu lha lcam g.yang 'dzom/"@bo-x-ewts .
+    
+    bdr:NTC28BB2AC61F4C445
+        a                   :Note ;
+        :noteText           "yab gzhis lha klu 2"@bo-x-ewts .
     
     bdr:P2LS184  a          :Person ;
-        skos:prefLabel      "lha klu lha lcam/"@bo-x-ewts ;
+        skos:prefLabel      "lha klu lha lcam g.yang 'dzom/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTC28BB2AC61F4C445 ;
         :personEvent        bdr:EVB86D852EB39D84D1 ;
         :personGender       bdr:GenderFemale ;
         :personName         bdr:NM13CB1E3BEC90C175 , bdr:NM98647B625D7B31D4 .

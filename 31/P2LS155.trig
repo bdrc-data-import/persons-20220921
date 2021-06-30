@@ -12,38 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS155 {
+    bda:LG1BFDE40222C9D5BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-29T15:57:27.21Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG1D38D348F7672450
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-15T16:42:33.131Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7A3A9258BE443D05
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:10:08.37Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG2AE0968CE39ECD38
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-15T16:42:33.131Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS155  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS155 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "31/P2LS155.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS155 ;
-        adm:logEntry        bda:LG1D38D348F7672450 , bda:LG2AE0968CE39ECD38 ;
+        adm:logEntry        bda:LG1BFDE40222C9D5BB , bda:LG1D38D348F7672450 , bda:LG7A3A9258BE443D05 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVF5CBF63F9BA8F333
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:NMC2703DEFC5472920
         a                   :PersonPrimaryName ;
         rdfs:label          "rdo rje rab brtan/"@bo-x-ewts .
     
+    bdr:NT2AE0968CE39ECD38
+        a                   :Note ;
+        :noteText           "g.yu thog family"@en .
+    
     bdr:P2LS155  a          :Person ;
         skos:prefLabel      "rdo rje rab brtan/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT2AE0968CE39ECD38 ;
         :personEvent        bdr:EVF5CBF63F9BA8F333 ;
         :personName         bdr:NMC2703DEFC5472920 .
 }
