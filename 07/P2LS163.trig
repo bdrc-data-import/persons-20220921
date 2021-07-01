@@ -13,24 +13,30 @@
 
 bdg:P2LS163 {
     bda:LG229A1D333A6131E5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:16.153Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG688BEB3916DA0BFD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:35:13.846Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9E11176CFFD64C9C
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:17:53.892Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG64DF26CA40CB8524
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:16.153Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS163  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS163 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "07/P2LS163.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS163 ;
-        adm:logEntry        bda:LG229A1D333A6131E5 , bda:LG64DF26CA40CB8524 ;
+        adm:logEntry        bda:LG229A1D333A6131E5 , bda:LG688BEB3916DA0BFD , bda:LG9E11176CFFD64C9C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -39,21 +45,25 @@ bdg:P2LS163 {
         :onYear             "1791"^^xsd:gYear .
     
     bdr:EVA65941D2FF232ABF
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:NM47D0C9A95AB2402D
         a                   :PersonPrimaryName ;
         rdfs:label          "bkra shis rnam rgyal/"@bo-x-ewts .
     
     bdr:NMAD90534283547DFA
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "kung bkra shis rnam rgyal/"@bo-x-ewts .
     
+    bdr:NT64DF26CA40CB8524
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS163  a          :Person ;
-        skos:prefLabel      "bkra shis rnam rgyal/"@bo-x-ewts ;
+        skos:prefLabel      "kung bkra shis rnam rgyal/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS164 ;
         :isRoot             true ;
+        :note               bdr:NT64DF26CA40CB8524 ;
         :personEvent        bdr:EV28E12B99A64FCB77 , bdr:EVA65941D2FF232ABF ;
         :personName         bdr:NM47D0C9A95AB2402D , bdr:NMAD90534283547DFA .
 }

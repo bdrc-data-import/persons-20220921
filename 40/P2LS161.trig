@@ -12,31 +12,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS161 {
+    bda:LG39C7DD14560B38D5
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:30:39.799Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG60F81BB6E047931B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:09.82Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD102C586850D5CC5
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:16:15.597Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG644F1BD7CC5D483C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:09.82Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS161  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS161 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "40/P2LS161.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS161 ;
-        adm:logEntry        bda:LG60F81BB6E047931B , bda:LG644F1BD7CC5D483C ;
+        adm:logEntry        bda:LG39C7DD14560B38D5 , bda:LG60F81BB6E047931B , bda:LGD102C586850D5CC5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV1F77EB545292940C
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:EVB29211ABEA9C8341
         a                   :PersonDeath ;
@@ -46,11 +51,16 @@ bdg:P2LS161 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams dar rgyas/"@bo-x-ewts .
     
+    bdr:NT644F1BD7CC5D483C
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS161  a          :Person ;
         skos:prefLabel      "bsod nams dar rgyas/"@bo-x-ewts ;
         :hasChild           bdr:P2LS162 ;
         :hasUnknownKinship  bdr:P179 , bdr:P2LS162 ;
         :isRoot             true ;
+        :note               bdr:NT644F1BD7CC5D483C ;
         :personEvent        bdr:EV1F77EB545292940C , bdr:EVB29211ABEA9C8341 ;
         :personName         bdr:NMB75159C5EE66418A .
 }

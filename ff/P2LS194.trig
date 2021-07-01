@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS194 {
-    bda:LG12E296E0A965ECD2
+    bda:LG4197E932300A9583
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T11:56:35.333Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD76CB8CFAE395629
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T14:40:02.842Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGD76CB8CFAE395629
+    bda:LGEE21EA52880D862E
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:15:46.583Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,29 +32,33 @@ bdg:P2LS194 {
     bda:P2LS194  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS194 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ff/P2LS194.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS194 ;
-        adm:logEntry        bda:LG12E296E0A965ECD2 , bda:LGD76CB8CFAE395629 ;
+        adm:logEntry        bda:LG4197E932300A9583 , bda:LGD76CB8CFAE395629 , bda:LGEE21EA52880D862E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV72007C9CE56D7EE4
         a                   :PersonDeath ;
-        :onOrAbout          "after1828" .
+        :onYear             "1828"^^xsd:gYear .
     
     bdr:EVBDBA2F6D1160A303
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+        a                   :PersonInResidence .
     
     bdr:NME361D9F2872DF77F
         a                   :PersonPrimaryName ;
         rdfs:label          "don grub tshe dbang /"@bo-x-ewts .
     
+    bdr:NT12E296E0A965ECD2
+        a                   :Note ;
+        :noteText           "dga' bzhi family\n\ndeath after 1828"@en .
+    
     bdr:P2LS194  a          :Person ;
         skos:prefLabel      "don grub tshe dbang /"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT12E296E0A965ECD2 ;
         :personEvent        bdr:EV72007C9CE56D7EE4 , bdr:EVBDBA2F6D1160A303 ;
         :personName         bdr:NME361D9F2872DF77F .
 }

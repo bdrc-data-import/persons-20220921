@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS252 {
-    bda:LG1CFEFB9C41048E1D
+    bda:LGA0948822071E7BA0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T12:27:25.62Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGA0948822071E7BA0
+    bda:LGC79B7F40EC0DD9E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T16:30:09.477Z"^^xsd:dateTime ;
+        adm:logMessage      "added  G-number , primary Titile and aristocracy"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGD73B209AB2DF52A4
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:55:57.598Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,25 +32,30 @@ bdg:P2LS252 {
     bda:P2LS252  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS252 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "24/P2LS252.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS252 ;
-        adm:logEntry        bda:LG1CFEFB9C41048E1D , bda:LGA0948822071E7BA0 ;
+        adm:logEntry        bda:LGA0948822071E7BA0 , bda:LGC79B7F40EC0DD9E1 , bda:LGD73B209AB2DF52A4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF833983D72D41DBD
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bkrasmthong" .
+    bdr:EV1CFEFB9C41048E1D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM24B6CD468AB60B75
-        a                   :PersonPrimaryName ;
+        a                   :PersonCommonName ;
         rdfs:label          "bstan 'dzin chos rgyal/"@bo-x-ewts .
     
+    bdr:NMF833983D72D41DBD
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bkras mthong bstan 'dzin chos rgyal/"@bo-x-ewts .
+    
     bdr:P2LS252  a          :Person ;
-        skos:prefLabel      "bstan 'dzin chos rgyal/"@bo-x-ewts ;
+        skos:prefLabel      "bkras mthong bstan 'dzin chos rgyal/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EVF833983D72D41DBD ;
-        :personName         bdr:NM24B6CD468AB60B75 .
+        :personEvent        bdr:EV1CFEFB9C41048E1D ;
+        :personName         bdr:NM24B6CD468AB60B75 , bdr:NMF833983D72D41DBD .
 }

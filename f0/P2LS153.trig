@@ -12,31 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS153 {
+    bda:LG1AA0DE1C18207C4E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:19:51.265Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG5E27EBAE6010B1F0
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-15T16:42:27.789Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGDC24ED641E6BBB0D
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:08:44.365Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGE7AD174472D916E8
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-15T16:42:27.789Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS153  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS153 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "f0/P2LS153.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS153 ;
-        adm:logEntry        bda:LG5E27EBAE6010B1F0 , bda:LGE7AD174472D916E8 ;
+        adm:logEntry        bda:LG1AA0DE1C18207C4E , bda:LG5E27EBAE6010B1F0 , bda:LGDC24ED641E6BBB0D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:seeOtherToL     "https://treasuryoflives.org/biographies/view/Lobzang-Nyendrak/13426"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
     
     bdr:EV0014099EA9D13742
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EV0DD25FCC1B310DD6
         a                   :PersonDeath ;
@@ -46,9 +52,14 @@ bdg:P2LS153 {
         a                   :PersonPrimaryName ;
         rdfs:label          "blo bzang snyan grags/"@bo-x-ewts .
     
+    bdr:NTE7AD174472D916E8
+        a                   :Note ;
+        :noteText           "g.yu thog family"@en .
+    
     bdr:P2LS153  a          :Person ;
         skos:prefLabel      "blo bzang snyan grags/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTE7AD174472D916E8 ;
         :personEvent        bdr:EV0014099EA9D13742 , bdr:EV0DD25FCC1B310DD6 ;
         :personName         bdr:NMEC65E7D3EAE368CE .
 }

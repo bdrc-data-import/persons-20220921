@@ -12,44 +12,58 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS168 {
-    bda:LG8295C72164304B0D
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:30.716Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LG86F60AD00E562954
+    bda:LG6EC4C0ACEFE53A95
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:21:44.976Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG8F62A87F75FC7958
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:30.716Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9F284E644C116E92
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:56:48.813Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and name normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS168  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS168 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "a1/P2LS168.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS168 ;
-        adm:logEntry        bda:LG8295C72164304B0D , bda:LG86F60AD00E562954 ;
+        adm:logEntry        bda:LG6EC4C0ACEFE53A95 , bda:LG8F62A87F75FC7958 , bda:LG9F284E644C116E92 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV78FF85DAB2BF2843
-        a                   :PersonDeath ;
-        :onOrAbout          "after1923" .
+    bdr:EV8295C72164304B0D
+        a                   :PersonInResidence .
     
     bdr:EVC4CB29CC74DA008A
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonDeath ;
+        :onYear             "1923"^^xsd:gYear .
+    
+    bdr:NM78FF85DAB2BF2843
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "the'i ji phyag rdor/"@bo-x-ewts .
     
     bdr:NMB01524EC56FFAA97
         a                   :PersonPrimaryName ;
-        rdfs:label          "taiji phyag rdor/"@bo-x-ewts .
+        rdfs:label          "phyag rdor/"@bo-x-ewts .
+    
+    bdr:NT86F60AD00E562954
+        a                   :Note ;
+        :noteText           "bsam pho family \n\ndeath after 1923"@en .
     
     bdr:P2LS168  a          :Person ;
-        skos:prefLabel      "taiji phyag rdor/"@bo-x-ewts ;
+        skos:prefLabel      "the'i ji phyag rdor/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS169 ;
         :isRoot             true ;
-        :personEvent        bdr:EV78FF85DAB2BF2843 , bdr:EVC4CB29CC74DA008A ;
-        :personName         bdr:NMB01524EC56FFAA97 .
+        :note               bdr:NT86F60AD00E562954 ;
+        :personEvent        bdr:EV8295C72164304B0D , bdr:EVC4CB29CC74DA008A ;
+        :personName         bdr:NM78FF85DAB2BF2843 , bdr:NMB01524EC56FFAA97 .
 }

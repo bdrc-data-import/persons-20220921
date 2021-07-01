@@ -12,43 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS170 {
-    bda:LG77681CA0A1ECAF59
+    bda:LG528430768E3585FE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:36.209Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB6FE496AF43CC71E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T10:02:21.728Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and name normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGDEAB994F6D4CA652
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-14T12:18:51.001Z"^^xsd:dateTime ;
         adm:logMessage      "withdrew due to duplicate"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGAA435003F545CE6B
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:36.209Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS170  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS170 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "35/P2LS170.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS170 ;
-        adm:logEntry        bda:LG77681CA0A1ECAF59 , bda:LGAA435003F545CE6B ;
+        adm:logEntry        bda:LG528430768E3585FE , bda:LGB6FE496AF43CC71E , bda:LGDEAB994F6D4CA652 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusWithdrawn .
     
-    bdr:EV7C1DFD44D1B92AD2
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+    bdr:EVAA435003F545CE6B
+        a                   :PersonInResidence .
+    
+    bdr:NM7C1DFD44D1B92AD2
+        a                   :PersonTitle ;
+        rdfs:label          "the'i ji bstan 'dzin don grub/"@bo-x-ewts .
     
     bdr:NM8473D0486C7E2609
         a                   :PersonPrimaryName ;
-        rdfs:label          "taiji bstan 'dzin don grub/"@bo-x-ewts .
+        rdfs:label          "bstan 'dzin don grub/"@bo-x-ewts .
     
     bdr:NMEAA5F93EE3372C09
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "bsam pho bstan 'dzin don grub/"@bo-x-ewts .
     
+    bdr:NT77681CA0A1ECAF59
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS170  a          :Person ;
-        skos:prefLabel      "taiji bstan 'dzin don grub/"@bo-x-ewts ;
+        skos:prefLabel      "bsam pho bstan 'dzin don grub/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV7C1DFD44D1B92AD2 ;
-        :personName         bdr:NM8473D0486C7E2609 , bdr:NMEAA5F93EE3372C09 .
+        :note               bdr:NT77681CA0A1ECAF59 ;
+        :personEvent        bdr:EVAA435003F545CE6B ;
+        :personName         bdr:NM7C1DFD44D1B92AD2 , bdr:NM8473D0486C7E2609 , bdr:NMEAA5F93EE3372C09 .
 }

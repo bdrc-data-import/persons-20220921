@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS172 {
-    bda:LG4FF214CDEBB6FE1A
+    bda:LG4585C8AFD81EEB1C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T10:22:30.73Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG488104A06B2279DB
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:03:37.526Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG9311D8B99AA98BF5
+    bda:LG4FF214CDEBB6FE1A
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T12:04:18.04Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,17 +32,17 @@ bdg:P2LS172 {
     bda:P2LS172  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS172 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "cb/P2LS172.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS172 ;
-        adm:logEntry        bda:LG4FF214CDEBB6FE1A , bda:LG9311D8B99AA98BF5 ;
+        adm:logEntry        bda:LG4585C8AFD81EEB1C , bda:LG488104A06B2279DB , bda:LG4FF214CDEBB6FE1A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:seeOtherToL     "https://treasuryoflives.org/biographies/view/Sonam-Dargye/13428"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
     
     bdr:EV9B4DB3F541AB0B92
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EVD420C227D4E3CE56
         a                   :PersonDeath ;
@@ -46,10 +52,15 @@ bdg:P2LS172 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams dar rgyas/"@bo-x-ewts .
     
+    bdr:NT9311D8B99AA98BF5
+        a                   :Note ;
+        :noteText           "lha klu family"@en .
+    
     bdr:P2LS172  a          :Person ;
         skos:prefLabel      "bsod nams dar rgyas/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P109 , bdr:P2LS173 , bdr:P2LS174 ;
         :isRoot             true ;
+        :note               bdr:NT9311D8B99AA98BF5 ;
         :personEvent        bdr:EV9B4DB3F541AB0B92 , bdr:EVD420C227D4E3CE56 ;
         :personName         bdr:NM55F4D8D18752482F .
 }

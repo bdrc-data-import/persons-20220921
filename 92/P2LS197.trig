@@ -12,37 +12,42 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS197 {
-    bda:LG28929EDF43796099
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T15:14:54.173Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:LGBA596EA66EE1AAC9
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
-        adm:logMessage      "added event type=\"birth\""@en ;
-        adm:logWhoStr       "person-events-add-type-birth" .
-    
-    bda:LGFADACFE9FCFC29A6
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:16:57.697Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGBF3334536B4A11B9
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added event type=\"birth\""@en ;
+        adm:logWhoStr       "person-events-add-type-birth" .
+    
+    bda:LGCA30B8A4B89E2DD9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T12:08:49.953Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFADACFE9FCFC29A6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T15:14:54.173Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS197  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS197 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "92/P2LS197.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS197 ;
-        adm:logEntry        bda:LG28929EDF43796099 , bda:LGBA596EA66EE1AAC9 , bda:LGFADACFE9FCFC29A6 ;
+        adm:logEntry        bda:LGBA596EA66EE1AAC9 , bda:LGBF3334536B4A11B9 , bda:LGCA30B8A4B89E2DD9 , bda:LGFADACFE9FCFC29A6 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV5F9219920B7217CB
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "thon" .
+        a                   :PersonInResidence .
     
     bdr:EV80210AA647BAD237
         a                   :PersonBirth ;
@@ -52,10 +57,15 @@ bdg:P2LS197 {
         a                   :PersonPrimaryName ;
         rdfs:label          "srid zhi dbang 'dus/"@bo-x-ewts .
     
+    bdr:NT28929EDF43796099
+        a                   :Note ;
+        :noteText           "thon pa sde dpon family"@en .
+    
     bdr:P2LS197  a          :Person ;
         skos:prefLabel      "srid zhi dbang 'dus/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS198 ;
         :isRoot             true ;
+        :note               bdr:NT28929EDF43796099 ;
         :personEvent        bdr:EV5F9219920B7217CB , bdr:EV80210AA647BAD237 ;
         :personName         bdr:NM876D7340C514EBCC .
 }

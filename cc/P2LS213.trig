@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS213 {
-    bda:LG18FEFD2EE492B36A
+    bda:LG835621B724EC17E0
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:27:41.054Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG7880336B8172D61A
+    bda:LG95B9A1D65AFE0036
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T15:28:02.064Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFDC7DC1148D97721
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T16:51:34.912Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,25 +32,33 @@ bdg:P2LS213 {
     bda:P2LS213  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS213 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "cc/P2LS213.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS213 ;
-        adm:logEntry        bda:LG18FEFD2EE492B36A , bda:LG7880336B8172D61A ;
+        adm:logEntry        bda:LG835621B724EC17E0 , bda:LG95B9A1D65AFE0036 , bda:LGFDC7DC1148D97721 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV19F2BCB68893B409
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+    bdr:EV7880336B8172D61A
+        a                   :PersonInResidence .
+    
+    bdr:NM19F2BCB68893B409
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "zur khang nor bu tshe ring /"@bo-x-ewts .
     
     bdr:NM2743C432F424A68C
         a                   :PersonPrimaryName ;
-        rdfs:label          "zur khang nor bu tshe ring /"@bo-x-ewts .
+        rdfs:label          "nor bu tshe ring /"@bo-x-ewts .
+    
+    bdr:NT18FEFD2EE492B36A
+        a                   :Note ;
+        :noteText           "zur khang family and also related to bsam pho"@en .
     
     bdr:P2LS213  a          :Person ;
         skos:prefLabel      "zur khang nor bu tshe ring /"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV19F2BCB68893B409 ;
-        :personName         bdr:NM2743C432F424A68C .
+        :note               bdr:NT18FEFD2EE492B36A ;
+        :personEvent        bdr:EV7880336B8172D61A ;
+        :personName         bdr:NM19F2BCB68893B409 , bdr:NM2743C432F424A68C .
 }

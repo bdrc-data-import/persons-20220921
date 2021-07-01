@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS190 {
-    bda:LGA64C3C2205B8EB40
+    bda:LG07F24B006FB4E185
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T11:47:52.136Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9606B31A79CAA6EE
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:13:35.28Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGE7C28DBD701E1200
+    bda:LGA64C3C2205B8EB40
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T14:39:49.433Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,26 +32,30 @@ bdg:P2LS190 {
     bda:P2LS190  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS190 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "dd/P2LS190.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS190 ;
-        adm:logEntry        bda:LGA64C3C2205B8EB40 , bda:LGE7C28DBD701E1200 ;
+        adm:logEntry        bda:LG07F24B006FB4E185 , bda:LG9606B31A79CAA6EE , bda:LGA64C3C2205B8EB40 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV5BA5F412437FA22B
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+        a                   :PersonInResidence .
     
     bdr:NMFB0D6FA5AEE02B3B
         a                   :PersonPrimaryName ;
         rdfs:label          "bde ldan sgrol ma/"@bo-x-ewts .
     
+    bdr:NTE7C28DBD701E1200
+        a                   :Note ;
+        :noteText           "dga' bzhi family"@en .
+    
     bdr:P2LS190  a          :Person ;
         skos:prefLabel      "bde ldan sgrol ma/"@bo-x-ewts ;
         :hasSon             bdr:P4090 ;
         :isRoot             true ;
+        :note               bdr:NTE7C28DBD701E1200 ;
         :personEvent        bdr:EV5BA5F412437FA22B ;
         :personGender       bdr:GenderFemale ;
         :personName         bdr:NMFB0D6FA5AEE02B3B .

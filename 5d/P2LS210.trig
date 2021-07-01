@@ -12,39 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS210 {
+    bda:LG9C79E6F5627D0A7B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T15:07:20.131Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LGC96A48DB3D70EE60
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T16:51:26.331Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE4C6083E23580A58
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:26:04.994Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGEC4116C4050A511C
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T16:51:26.331Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS210  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS210 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "5d/P2LS210.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS210 ;
-        adm:logEntry        bda:LGC96A48DB3D70EE60 , bda:LGEC4116C4050A511C ;
+        adm:logEntry        bda:LG9C79E6F5627D0A7B , bda:LGC96A48DB3D70EE60 , bda:LGE4C6083E23580A58 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV777C2422D4D231C7
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:NM967135C8CBF370A1
         a                   :PersonPrimaryName ;
         rdfs:label          "rgyal mtshan dngos grub/"@bo-x-ewts .
     
+    bdr:NTEC4116C4050A511C
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS210  a          :Person ;
         skos:prefLabel      "rgyal mtshan dngos grub/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTEC4116C4050A511C ;
         :personEvent        bdr:EV777C2422D4D231C7 ;
         :personName         bdr:NM967135C8CBF370A1 .
 }

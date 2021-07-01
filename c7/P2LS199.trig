@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS199 {
-    bda:LGAA40BA3944651B63
+    bda:LG97BE1D2D249B7F63
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T14:33:17.712Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE44E5D48FF548F8E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T15:15:01.378Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGE44E5D48FF548F8E
+    bda:LGFC0C2698ECE8B7C3
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:17:54.72Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,29 +32,33 @@ bdg:P2LS199 {
     bda:P2LS199  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS199 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "c7/P2LS199.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS199 ;
-        adm:logEntry        bda:LGAA40BA3944651B63 , bda:LGE44E5D48FF548F8E ;
+        adm:logEntry        bda:LG97BE1D2D249B7F63 , bda:LGE44E5D48FF548F8E , bda:LGFC0C2698ECE8B7C3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVEC32454704E3A09D
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "thon" .
+        a                   :PersonInResidence .
     
     bdr:NM71871C482454196C
         a                   :PersonPrimaryName ;
         rdfs:label          "phogs dpon thon sras/"@bo-x-ewts .
     
     bdr:NME60078B9C49621C1
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "bka' blon thon pa/"@bo-x-ewts .
     
+    bdr:NTAA40BA3944651B63
+        a                   :Note ;
+        :noteText           "thon pa family\n\nproper name is unavailable"@en .
+    
     bdr:P2LS199  a          :Person ;
-        skos:prefLabel      "phogs dpon thon sras/"@bo-x-ewts ;
+        skos:prefLabel      "bka' blon thon pa/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTAA40BA3944651B63 ;
         :personEvent        bdr:EVEC32454704E3A09D ;
         :personName         bdr:NM71871C482454196C , bdr:NME60078B9C49621C1 .
 }

@@ -12,32 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6241 {
-    bda:LG79122CFCCE4E4936
+    bda:LG517E7413EA062B7C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGF9401D308A56A0BB
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T14:22:46.072Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note, name normalized"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P6241  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6241 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "49/P6241.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6241 ;
-        adm:logEntry        bda:LG79122CFCCE4E4936 ;
+        adm:logEntry        bda:LG517E7413EA062B7C , bda:LGF9401D308A56A0BB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV99F56F29EC7FC600
+        a                   :PersonInResidence .
+    
     bdr:NM59D90A91C5BE34F6
         a                   :PersonPrimaryName ;
-        rdfs:label          "lha klu lha lcam g.yang 'dzoms tshe ring /"@bo-x-ewts .
+        rdfs:label          "g.yang 'dzoms tshe ring /"@bo-x-ewts .
+    
+    bdr:NM79122CFCCE4E4936
+        a                   :PersonOtherName ;
+        rdfs:label          "Yangzom Tsering, Lhalu Lhacham"@en .
     
     bdr:NM8EDA882AFD2C785F
-        a                   :PersonReversal ;
-        rdfs:label          "g.yang 'dzom tshe ring, lha lu lha lcam/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "lha klu lha lcam g.yang 'dzoms tshe ring /"@bo-x-ewts .
+    
+    bdr:NT84F1CAB98DAA7F7B
+        a                   :Note ;
+        :noteText           "yab gzhis lha klu 2"@bo-x-ewts .
     
     bdr:P6241  a            :Person ;
-        skos:prefLabel      "lha klu lha lcam g.yang 'dzoms tshe ring /"@bo-x-ewts ;
+        skos:prefLabel      "lha klu lha lcam g.yang 'dzoms tshe ring /"@bo-x-ewts , "Yangzom Tsering, Lhalu Lhacham"@en ;
         :isRoot             true ;
+        :note               bdr:NT84F1CAB98DAA7F7B ;
+        :personEvent        bdr:EV99F56F29EC7FC600 ;
         :personGender       bdr:GenderFemale ;
-        :personName         bdr:NM59D90A91C5BE34F6 , bdr:NM8EDA882AFD2C785F .
+        :personName         bdr:NM59D90A91C5BE34F6 , bdr:NM79122CFCCE4E4936 , bdr:NM8EDA882AFD2C785F .
 }

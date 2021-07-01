@@ -13,30 +13,35 @@
 
 bdg:P2LS164 {
     bda:LG16D83ADD69809C4B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:19.265Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG39B8AD5714CB6A50
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:18:39.751Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGBAEF179DC0923E2A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:19.265Z"^^xsd:dateTime ;
+    bda:LGD752A95FB153D5BD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:39:02.864Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS164  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS164 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "81/P2LS164.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS164 ;
-        adm:logEntry        bda:LG16D83ADD69809C4B , bda:LGBAEF179DC0923E2A ;
+        adm:logEntry        bda:LG16D83ADD69809C4B , bda:LG39B8AD5714CB6A50 , bda:LGD752A95FB153D5BD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV2BAD7E0FA7B34B37
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:EV79138F737DD8A00F
         a                   :PersonDeath ;
@@ -47,13 +52,18 @@ bdg:P2LS164 {
         rdfs:label          "phyag rdor dbang phyug"@bo-x-ewts .
     
     bdr:NMFE5CD9643713C2E1
-        a                   :PersonPrimaryName ;
-        rdfs:label          "taiji phyag rdor dbang phyug"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "the'i ji phyag rdor dbang phyug"@bo-x-ewts .
+    
+    bdr:NTBAEF179DC0923E2A
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
     
     bdr:P2LS164  a          :Person ;
-        skos:prefLabel      "phyag rdor dbang phyug"@bo-x-ewts ;
+        skos:prefLabel      "the'i ji phyag rdor dbang phyug"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS165 ;
         :isRoot             true ;
+        :note               bdr:NTBAEF179DC0923E2A ;
         :personEvent        bdr:EV2BAD7E0FA7B34B37 , bdr:EV79138F737DD8A00F ;
         :personName         bdr:NMC83A9C354BE8E4FD , bdr:NMFE5CD9643713C2E1 .
 }

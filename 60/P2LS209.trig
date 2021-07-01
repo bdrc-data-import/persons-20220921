@@ -12,39 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS209 {
+    bda:LG09F7F490DBE545EA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T14:52:51.219Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG1828265FB8D82EFF
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T16:51:23.204Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF7DB498475A4E946
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:25:19.922Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGDF5CC40272A943D0
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T16:51:23.204Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS209  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS209 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "60/P2LS209.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS209 ;
-        adm:logEntry        bda:LG1828265FB8D82EFF , bda:LGDF5CC40272A943D0 ;
+        adm:logEntry        bda:LG09F7F490DBE545EA , bda:LG1828265FB8D82EFF , bda:LGF7DB498475A4E946 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVD8B253B003506ECD
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:NMD61E4FFF9C7B6AC9
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod lhun phun tshogs/"@bo-x-ewts .
     
+    bdr:NTDF5CC40272A943D0
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS209  a          :Person ;
         skos:prefLabel      "bsod lhun phun tshogs/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTDF5CC40272A943D0 ;
         :personEvent        bdr:EVD8B253B003506ECD ;
         :personName         bdr:NMD61E4FFF9C7B6AC9 .
 }

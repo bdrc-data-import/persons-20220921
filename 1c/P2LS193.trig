@@ -12,44 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS193 {
-    bda:LG53C470A49CA9D1ED
+    bda:LG09EE9E42CCE11B9E
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:15:21.448Z"^^xsd:dateTime ;
         adm:logMessage      "releasaed"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGC2DE9C9C81DD0CA8
+    bda:LG53C470A49CA9D1ED
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T14:39:59.134Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6E9D8B0C6ECC2390
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T11:53:59.986Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS193  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS193 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "1c/P2LS193.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS193 ;
-        adm:logEntry        bda:LG53C470A49CA9D1ED , bda:LGC2DE9C9C81DD0CA8 ;
+        adm:logEntry        bda:LG09EE9E42CCE11B9E , bda:LG53C470A49CA9D1ED , bda:LG6E9D8B0C6ECC2390 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EVECFFF189B420E4CB
         a                   :PersonDeath ;
-        :onOrAbout          "after1860" .
+        :onYear             "1860"^^xsd:gYear .
     
     bdr:EVF27C6862B0C3E3BA
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+        a                   :PersonInResidence .
     
     bdr:NM97657F858C4D4606
         a                   :PersonPrimaryName ;
         rdfs:label          "nyi ma lhun grub/"@bo-x-ewts .
     
+    bdr:NTC2DE9C9C81DD0CA8
+        a                   :Note ;
+        :noteText           "dga' bzhi family\n\ndeath after 1860"@en .
+    
     bdr:P2LS193  a          :Person ;
         skos:prefLabel      "nyi ma lhun grub/"@bo-x-ewts ;
         :hasFather          bdr:P6132 ;
         :isRoot             true ;
+        :note               bdr:NTC2DE9C9C81DD0CA8 ;
         :personEvent        bdr:EVECFFF189B420E4CB , bdr:EVF27C6862B0C3E3BA ;
         :personName         bdr:NM97657F858C4D4606 .
 }

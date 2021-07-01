@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS253 {
-    bda:LG74E7FD9345B3E553
+    bda:LG09D0BD2632E78492
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T15:04:07.683Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGD4712610126D572F
+    bda:LG39629D1172741B94
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T16:30:09.924Z"^^xsd:dateTime ;
+        adm:logMessage      "added  G-number , primary Titile and aristocracy"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG74E7FD9345B3E553
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T12:27:28.229Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,25 +32,30 @@ bdg:P2LS253 {
     bda:P2LS253  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS253 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "ba/P2LS253.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS253 ;
-        adm:logEntry        bda:LG74E7FD9345B3E553 , bda:LGD4712610126D572F ;
+        adm:logEntry        bda:LG09D0BD2632E78492 , bda:LG39629D1172741B94 , bda:LG74E7FD9345B3E553 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVF6A7CF03F4EF712D
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bkrasmthong" .
+    bdr:EVD4712610126D572F
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM1C708B3117A43549
-        a                   :PersonPrimaryName ;
-        rdfs:label          "bstan 'dzin dge byed/"@bo-x-ewts .
+        a                   :PersonCommonName ;
+        rdfs:label          "bstan 'dzin dge bye/"@bo-x-ewts .
+    
+    bdr:NMF6A7CF03F4EF712D
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "bkras mthong bstan 'dzin dge bye/"@bo-x-ewts .
     
     bdr:P2LS253  a          :Person ;
-        skos:prefLabel      "bstan 'dzin dge byed/"@bo-x-ewts ;
+        skos:prefLabel      "bkras mthong bstan 'dzin dge bye/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EVF6A7CF03F4EF712D ;
-        :personName         bdr:NM1C708B3117A43549 .
+        :personEvent        bdr:EVD4712610126D572F ;
+        :personName         bdr:NM1C708B3117A43549 , bdr:NMF6A7CF03F4EF712D .
 }

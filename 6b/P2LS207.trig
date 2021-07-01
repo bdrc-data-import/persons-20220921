@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS207 {
-    bda:LG7C80433332488ABF
+    bda:LG1C9166B5A596FC01
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:24:18.537Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGFB11C45B91E7FEB1
+    bda:LG4B16B4B734C033AC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T14:51:08.12Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7C80433332488ABF
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T16:51:17.715Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,25 +32,29 @@ bdg:P2LS207 {
     bda:P2LS207  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS207 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "6b/P2LS207.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS207 ;
-        adm:logEntry        bda:LG7C80433332488ABF , bda:LGFB11C45B91E7FEB1 ;
+        adm:logEntry        bda:LG1C9166B5A596FC01 , bda:LG4B16B4B734C033AC , bda:LG7C80433332488ABF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV60A52F17ED250827
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:NMFDBC03136D2C06C3
         a                   :PersonPrimaryName ;
         rdfs:label          "bskal bzang bstan 'dzin rnam rgyal/"@bo-x-ewts .
     
+    bdr:NTFB11C45B91E7FEB1
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS207  a          :Person ;
         skos:prefLabel      "bskal bzang bstan 'dzin rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTFB11C45B91E7FEB1 ;
         :personEvent        bdr:EV60A52F17ED250827 ;
         :personName         bdr:NMFDBC03136D2C06C3 .
 }

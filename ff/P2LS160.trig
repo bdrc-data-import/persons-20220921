@@ -13,35 +13,41 @@
 
 bdg:P2LS160 {
     bda:LG2882DD936DE11358
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-15T16:42:47.288Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG3D323A48C62BE73A
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:27:48.155Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and name normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGC2BFF754DE94526A
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:15:29.717Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGC2BFF754DE94526A
+    bda:LGC9450DCA8BE46EE8
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
         adm:logWhoStr       "person-events-add-type-birth" .
     
-    bda:LGE4A57414D0B73540
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-15T16:42:47.288Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS160  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS160 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "ff/P2LS160.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS160 ;
-        adm:logEntry        bda:LG2882DD936DE11358 , bda:LGC2BFF754DE94526A , bda:LGE4A57414D0B73540 ;
+        adm:logEntry        bda:LG2882DD936DE11358 , bda:LG3D323A48C62BE73A , bda:LGC2BFF754DE94526A , bda:LGC9450DCA8BE46EE8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV9443BFA5A7C450EE
-        a                   :PersonOccupiesSeat .
+        a                   :PersonInResidence .
     
     bdr:EVBEE620306FAAD243
         a                   :PersonBirth ;
@@ -52,13 +58,18 @@ bdg:P2LS160 {
         rdfs:label          "tshe ring dbang 'dus/"@bo-x-ewts .
     
     bdr:NM57D9F0CBC571934E
-        a                   :PersonPrimaryName ;
-        rdfs:label          "sher dpang g+yu thog sras/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sher dpang g.yu thog sras tshe ring dbang 'dus/"@bo-x-ewts .
+    
+    bdr:NTE4A57414D0B73540
+        a                   :Note ;
+        :noteText           "g.yu thog family"@en .
     
     bdr:P2LS160  a          :Person ;
-        skos:prefLabel      "tshe ring dbang 'dus/"@bo-x-ewts ;
+        skos:prefLabel      "sher dpang g.yu thog sras tshe ring dbang 'dus/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P6722 ;
         :isRoot             true ;
+        :note               bdr:NTE4A57414D0B73540 ;
         :personEvent        bdr:EV9443BFA5A7C450EE , bdr:EVBEE620306FAAD243 ;
         :personName         bdr:NM1A58CF95B51AD8EC , bdr:NM57D9F0CBC571934E .
 }

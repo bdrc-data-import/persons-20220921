@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS200 {
-    bda:LG8302B5D8EAC2AFD2
+    bda:LG34B7199E70643D1F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T14:37:39.04Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAB0B798D3879751F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-16T15:15:03.965Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG8E5A20EAAEAD5D92
+    bda:LGE76620322D0C55EE
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:18:51.818Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,25 +32,33 @@ bdg:P2LS200 {
     bda:P2LS200  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS200 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "27/P2LS200.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS200 ;
-        adm:logEntry        bda:LG8302B5D8EAC2AFD2 , bda:LG8E5A20EAAEAD5D92 ;
+        adm:logEntry        bda:LG34B7199E70643D1F , bda:LGAB0B798D3879751F , bda:LGE76620322D0C55EE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVE7274C2B9395D98B
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "thon" .
+    bdr:EV8302B5D8EAC2AFD2
+        a                   :PersonInResidence .
     
     bdr:NM1A0EEB21816E785F
         a                   :PersonPrimaryName ;
+        rdfs:label          "rnam rgyal don grub/"@bo-x-ewts .
+    
+    bdr:NME7274C2B9395D98B
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "thon pa mda' dpon rnam rgyal don grub/"@bo-x-ewts .
+    
+    bdr:NT8E5A20EAAEAD5D92
+        a                   :Note ;
+        :noteText           "thon pa family"@en .
     
     bdr:P2LS200  a          :Person ;
         skos:prefLabel      "thon pa mda' dpon rnam rgyal don grub/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EVE7274C2B9395D98B ;
-        :personName         bdr:NM1A0EEB21816E785F .
+        :note               bdr:NT8E5A20EAAEAD5D92 ;
+        :personEvent        bdr:EV8302B5D8EAC2AFD2 ;
+        :personName         bdr:NM1A0EEB21816E785F , bdr:NME7274C2B9395D98B .
 }

@@ -12,44 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS169 {
+    bda:LG2397BB08B792E65B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-06-30T09:59:13.209Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, note and name normalized"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG626F783FE6C336DA
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-16T11:02:33.274Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6CB33DBE237641D0
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T13:22:23.167Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGFBADD63F1C16F732
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-16T11:02:33.274Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS169  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS169 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "72/P2LS169.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS169 ;
-        adm:logEntry        bda:LG626F783FE6C336DA , bda:LGFBADD63F1C16F732 ;
+        adm:logEntry        bda:LG2397BB08B792E65B , bda:LG626F783FE6C336DA , bda:LG6CB33DBE237641D0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV7A1E3006BAF0836E
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bsampho" .
+        a                   :PersonInResidence .
     
     bdr:NM7F9989F7F0673337
-        a                   :PersonPrimaryName ;
-        rdfs:label          "taiji tshe dbang rig 'dzin/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "the'i ji tshe dbang rig 'dzin/"@bo-x-ewts .
     
     bdr:NMBD0E816BAC382A10
         a                   :PersonPrimaryName ;
         rdfs:label          "tshe dbang rig 'dzin/"@bo-x-ewts .
     
+    bdr:NTFBADD63F1C16F732
+        a                   :Note ;
+        :noteText           "bsam pho family"@en .
+    
     bdr:P2LS169  a          :Person ;
-        skos:prefLabel      "tshe dbang rig 'dzin/"@bo-x-ewts ;
+        skos:prefLabel      "the'i ji tshe dbang rig 'dzin/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS170 ;
         :isRoot             true ;
+        :note               bdr:NTFBADD63F1C16F732 ;
         :personEvent        bdr:EV7A1E3006BAF0836E ;
         :personName         bdr:NM7F9989F7F0673337 , bdr:NMBD0E816BAC382A10 .
 }
