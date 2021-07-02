@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS233 {
-    bda:LGC7CFB2CFB94E6E7F
+    bda:LG487CACE9B2855DDC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:13:05.606Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG745BC4BC4145EE55
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:43:05.233Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGEA83CE90B1B3A1B4
+    bda:LGC7CFB2CFB94E6E7F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T10:36:03.887Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,17 +32,16 @@ bdg:P2LS233 {
     bda:P2LS233  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS233 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "03/P2LS233.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS233 ;
-        adm:logEntry        bda:LGC7CFB2CFB94E6E7F , bda:LGEA83CE90B1B3A1B4 ;
+        adm:logEntry        bda:LG487CACE9B2855DDC , bda:LG745BC4BC4145EE55 , bda:LGC7CFB2CFB94E6E7F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3F4A72886AAD37D7
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:EVC9CCA6D1D6CE7579
         a                   :PersonDeath ;
@@ -46,10 +51,15 @@ bdg:P2LS233 {
         a                   :PersonPrimaryName ;
         rdfs:label          "phun tshogs rab rgyas/"@bo-x-ewts .
     
+    bdr:NTEA83CE90B1B3A1B4
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS233  a          :Person ;
         skos:prefLabel      "phun tshogs rab rgyas/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS234 ;
         :isRoot             true ;
+        :note               bdr:NTEA83CE90B1B3A1B4 ;
         :personEvent        bdr:EV3F4A72886AAD37D7 , bdr:EVC9CCA6D1D6CE7579 ;
         :personName         bdr:NMF3A692CE652F584A .
 }

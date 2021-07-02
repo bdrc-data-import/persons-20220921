@@ -12,40 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS230 {
+    bda:LG0F6D0FA770192640
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:06:51.134Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG5D9ED0AC1A4E77AC
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T10:35:55.539Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8E97CF72E1E6D514
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:38:54.258Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGC9932E56E3687AD9
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T10:35:55.539Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS230  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS230 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f3/P2LS230.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS230 ;
-        adm:logEntry        bda:LG5D9ED0AC1A4E77AC , bda:LGC9932E56E3687AD9 ;
+        adm:logEntry        bda:LG0F6D0FA770192640 , bda:LG5D9ED0AC1A4E77AC , bda:LG8E97CF72E1E6D514 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV5A8D636819072F80
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:NM3A3478F1CD865696
         a                   :PersonPrimaryName ;
         rdfs:label          "tshe brtan dbang phyug"@bo-x-ewts .
     
+    bdr:NTC9932E56E3687AD9
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS230  a          :Person ;
         skos:prefLabel      "tshe brtan dbang phyug"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS231 , bdr:P2LS232 ;
         :isRoot             true ;
+        :note               bdr:NTC9932E56E3687AD9 ;
         :personEvent        bdr:EV5A8D636819072F80 ;
         :personName         bdr:NM3A3478F1CD865696 .
 }

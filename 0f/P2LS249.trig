@@ -12,31 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS249 {
-    bda:LG2CA6524E6E2F70A8
+    bda:LG3697D5631D37D8C4
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:49:04.827Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7E7F909E129866B9
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T12:27:17.522Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG7E7F909E129866B9
-        a                   adm:UpdateData ;
-        adm:logDate         "2010-10-25T14:50:53.491Z"^^xsd:dateTime ;
-        adm:logMessage      "released"@en ;
-        adm:logWho          bdu:U00020 .
-    
-    bda:LGA490BF309FA013E1
+    bda:LG930FF28E29E48FC8
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
         adm:logWhoStr       "person-events-add-type-birth" .
     
+    bda:LGA490BF309FA013E1
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-10-25T14:50:53.491Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00020 .
+    
     bda:P2LS249  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS249 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0f/P2LS249.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS249 ;
-        adm:logEntry        bda:LG2CA6524E6E2F70A8 , bda:LG7E7F909E129866B9 , bda:LGA490BF309FA013E1 ;
+        adm:logEntry        bda:LG3697D5631D37D8C4 , bda:LG7E7F909E129866B9 , bda:LG930FF28E29E48FC8 , bda:LGA490BF309FA013E1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -45,16 +51,20 @@ bdg:P2LS249 {
         :onYear             "1909"^^xsd:gYear .
     
     bdr:EVCD91663FC923EE9A
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bkrasmthong" .
+        a                   :PersonInResidence .
     
     bdr:NME7AED0A421D19F0E
         a                   :PersonPrimaryName ;
         rdfs:label          "blo bzang rnam rgyal/"@bo-x-ewts .
     
+    bdr:NT2CA6524E6E2F70A8
+        a                   :Note ;
+        :noteText           "bkras mthong family"@en .
+    
     bdr:P2LS249  a          :Person ;
         skos:prefLabel      "blo bzang rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT2CA6524E6E2F70A8 ;
         :personEvent        bdr:EVCAB3B92B28E9D52D , bdr:EVCD91663FC923EE9A ;
         :personName         bdr:NME7AED0A421D19F0E .
 }

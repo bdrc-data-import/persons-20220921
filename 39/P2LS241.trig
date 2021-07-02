@@ -12,39 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS241 {
-    bda:LG2EC6B8E9CDAB9117
+    bda:LG07A88B3CE81802B8
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T11:25:28.117Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG0A61AB90538F52A9
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:29:06.242Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation, name and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA82156706074A6C4
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:47:13.868Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGB5402A4CECD44250
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T11:25:28.117Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS241  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS241 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "39/P2LS241.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS241 ;
-        adm:logEntry        bda:LG2EC6B8E9CDAB9117 , bda:LGB5402A4CECD44250 ;
+        adm:logEntry        bda:LG07A88B3CE81802B8 , bda:LG0A61AB90538F52A9 , bda:LGA82156706074A6C4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV6BF5A08B99EF60DE
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "phalha" .
+    bdr:EVB5402A4CECD44250
+        a                   :PersonInResidence .
     
     bdr:NM15C2A399D216192E
         a                   :PersonPrimaryName ;
         rdfs:label          "thub bstan 'od ldan/"@bo-x-ewts .
     
+    bdr:NM6BF5A08B99EF60DE
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "pha lha thub bstan 'od ldan/"@bo-x-ewts .
+    
+    bdr:NT2EC6B8E9CDAB9117
+        a                   :Note ;
+        :noteText           "pha lha family"@en .
+    
     bdr:P2LS241  a          :Person ;
-        skos:prefLabel      "thub bstan 'od ldan/"@bo-x-ewts ;
+        skos:prefLabel      "pha lha thub bstan 'od ldan/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV6BF5A08B99EF60DE ;
-        :personName         bdr:NM15C2A399D216192E .
+        :note               bdr:NT2EC6B8E9CDAB9117 ;
+        :personEvent        bdr:EVB5402A4CECD44250 ;
+        :personName         bdr:NM15C2A399D216192E , bdr:NM6BF5A08B99EF60DE .
 }

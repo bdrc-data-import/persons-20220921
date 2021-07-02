@@ -12,43 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS232 {
-    bda:LG3C21CB8ED20832CA
+    bda:LG1312C22BBD477969
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:42:33.346Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGF9578EDE3DF5983A
+    bda:LG3C21CB8ED20832CA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T10:36:00.948Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGDD1CDB2CC86B739F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:11:22.234Z"^^xsd:dateTime ;
+        adm:logMessage      "corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS232  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS232 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "02/P2LS232.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS232 ;
-        adm:logEntry        bda:LG3C21CB8ED20832CA , bda:LGF9578EDE3DF5983A ;
+        adm:logEntry        bda:LG1312C22BBD477969 , bda:LG3C21CB8ED20832CA , bda:LGDD1CDB2CC86B739F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV23A79AD60320CA7D
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:EV9AE7793E3D1679A2
         a                   :PersonDeath ;
-        :onOrAbout          "after1924" .
+        :onYear             "1924"^^xsd:gYear .
     
     bdr:NMB1768FEA107CF5E3
         a                   :PersonPrimaryName ;
         rdfs:label          "tshe dbang rnam rgyal/"@bo-x-ewts .
     
+    bdr:NTF9578EDE3DF5983A
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS232  a          :Person ;
         skos:prefLabel      "tshe dbang rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTF9578EDE3DF5983A ;
         :personEvent        bdr:EV23A79AD60320CA7D , bdr:EV9AE7793E3D1679A2 ;
         :personName         bdr:NMB1768FEA107CF5E3 .
 }

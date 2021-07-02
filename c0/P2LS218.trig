@@ -12,39 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS218 {
+    bda:LG1A2D175AF5BF9D96
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T09:10:55.86Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:LG1D609818A7AD4B8C
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T09:38:35.82Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGA29D3481AD735387
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:29:44.115Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG463129C069206A50
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T09:38:35.82Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS218  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS218 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "c0/P2LS218.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS218 ;
-        adm:logEntry        bda:LG1D609818A7AD4B8C , bda:LG463129C069206A50 ;
+        adm:logEntry        bda:LG1A2D175AF5BF9D96 , bda:LG1D609818A7AD4B8C , bda:LGA29D3481AD735387 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV88F9EE99BB4C4090
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "dga'bzhi" .
+        a                   :PersonInResidence .
     
     bdr:NM434E01201E4B370A
         a                   :PersonPrimaryName ;
         rdfs:label          "blo bzang bshes gnyen grags pa rgyal mtshan/"@bo-x-ewts .
     
+    bdr:NT463129C069206A50
+        a                   :Note ;
+        :noteText           "dga' bzhi family"@en .
+    
     bdr:P2LS218  a          :Person ;
         skos:prefLabel      "blo bzang bshes gnyen grags pa rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT463129C069206A50 ;
         :personEvent        bdr:EV88F9EE99BB4C4090 ;
         :personName         bdr:NM434E01201E4B370A .
 }

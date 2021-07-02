@@ -13,24 +13,30 @@
 
 bdg:P2LS238 {
     bda:LG3C0B517741B5F48A
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T11:25:19.09Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAC19E3B8398680CA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:23:52.817Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE4477E0DEA0AD0DD
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:45:30.606Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGA7811BE6880393A5
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T11:25:19.09Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS238  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS238 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "78/P2LS238.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS238 ;
-        adm:logEntry        bda:LG3C0B517741B5F48A , bda:LGA7811BE6880393A5 ;
+        adm:logEntry        bda:LG3C0B517741B5F48A , bda:LGAC19E3B8398680CA , bda:LGE4477E0DEA0AD0DD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -39,16 +45,20 @@ bdg:P2LS238 {
         :onYear             "1891"^^xsd:gYear .
     
     bdr:EVBBC5406CDC776109
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "phalha" .
+        a                   :PersonInResidence .
     
     bdr:NMB88A153940E0E774
         a                   :PersonPrimaryName ;
         rdfs:label          "bkra shis dar rgyas/"@bo-x-ewts .
     
+    bdr:NTA7811BE6880393A5
+        a                   :Note ;
+        :noteText           "pha lha family"@en .
+    
     bdr:P2LS238  a          :Person ;
         skos:prefLabel      "bkra shis dar rgyas/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTA7811BE6880393A5 ;
         :personEvent        bdr:EVBB10F209FE103C62 , bdr:EVBBC5406CDC776109 ;
         :personName         bdr:NMB88A153940E0E774 .
 }

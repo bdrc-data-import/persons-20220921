@@ -13,24 +13,30 @@
 
 bdg:P2LS223 {
     bda:LG1AB85BAB31DAFFAE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T10:35:34.64Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG9D7233871CD0B8FF
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T10:52:26.71Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE6687C531CF52D66
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:31:59.006Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LG7BC414E0F36FC300
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T10:35:34.64Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
     bda:P2LS223  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS223 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "73/P2LS223.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS223 ;
-        adm:logEntry        bda:LG1AB85BAB31DAFFAE , bda:LG7BC414E0F36FC300 ;
+        adm:logEntry        bda:LG1AB85BAB31DAFFAE , bda:LG9D7233871CD0B8FF , bda:LGE6687C531CF52D66 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -39,17 +45,21 @@ bdg:P2LS223 {
         :onYear             "1763"^^xsd:gYear .
     
     bdr:EVDE9E5FEF04D3EC6B
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:NM7B6452F87506DA83
         a                   :PersonPrimaryName ;
         rdfs:label          "bkra shis dbang phyug legs pa/"@bo-x-ewts .
     
+    bdr:NT7BC414E0F36FC300
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS223  a          :Person ;
         skos:prefLabel      "bkra shis dbang phyug legs pa/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS224 , bdr:P2LS225 ;
         :isRoot             true ;
+        :note               bdr:NT7BC414E0F36FC300 ;
         :personEvent        bdr:EVCC0135F2465DBB85 , bdr:EVDE9E5FEF04D3EC6B ;
         :personName         bdr:NM7B6452F87506DA83 .
 }

@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1CZ1005 {
+    bda:LG91C96E6FF2A6E3B8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T11:38:00.294Z"^^xsd:dateTime ;
+        adm:logMessage      "changed G number and added Corporations"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:LGE4024BE138D2B112
         a                   adm:InitialDataCreation ;
         adm:logDate         "2007-05-16T13:45:25.604Z"^^xsd:dateTime ;
@@ -21,11 +27,11 @@ bdg:P1CZ1005 {
     bda:P1CZ1005  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1CZ1005 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "03/P1CZ1005.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1CZ1005 ;
-        adm:logEntry        bda:LGE4024BE138D2B112 ;
+        adm:logEntry        bda:LG91C96E6FF2A6E3B8 , bda:LGE4024BE138D2B112 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -34,20 +40,22 @@ bdg:P1CZ1005 {
         :notAfter           "1599"^^xsd:gYear ;
         :notBefore          "1500"^^xsd:gYear .
     
-    bdr:EV6543D80C2DC06E3D
-        a                   :PersonOccupiesSeat .
-    
     bdr:NM1132EB552B36C8FC
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "sgam po chos kyi rgyal mtshan/"@bo-x-ewts .
     
     bdr:NME01B18C6BD37B03D
         a                   :PersonPrimaryName ;
         rdfs:label          "chos kyi rgyal mtshan/"@bo-x-ewts .
     
+    bdr:NT6543D80C2DC06E3D
+        a                   :Note ;
+        :noteText           "dwaga po bka' brgyud."@en .
+    
     bdr:P1CZ1005  a         :Person ;
-        skos:prefLabel      "chos kyi rgyal mtshan/"@bo-x-ewts ;
+        skos:prefLabel      "sgam po chos kyi rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV55DF5F37D3C60646 , bdr:EV6543D80C2DC06E3D ;
+        :note               bdr:NT6543D80C2DC06E3D ;
+        :personEvent        bdr:EV55DF5F37D3C60646 ;
         :personName         bdr:NM1132EB552B36C8FC , bdr:NME01B18C6BD37B03D .
 }

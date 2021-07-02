@@ -12,13 +12,19 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS235 {
-    bda:LG2F909123CA8567AF
+    bda:LG05D0A350D72CF95B
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:44:01.955Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGA7908C4668F23BC6
+    bda:LG41365FEB0527EA89
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:17:30.055Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB7D4BA71E6A47DFB
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T11:25:11.224Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
@@ -26,29 +32,37 @@ bdg:P2LS235 {
     bda:P2LS235  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS235 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "8c/P2LS235.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS235 ;
-        adm:logEntry        bda:LG2F909123CA8567AF , bda:LGA7908C4668F23BC6 ;
+        adm:logEntry        bda:LG05D0A350D72CF95B , bda:LG41365FEB0527EA89 , bda:LGB7D4BA71E6A47DFB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV715DC95A4325E375
         a                   :PersonDeath ;
-        :onOrAbout          "after1801" .
+        :onYear             "1801"^^xsd:gYear .
     
-    bdr:EVECB563798B1D8F60
+    bdr:EVA7908C4668F23BC6
         a                   :PersonOccupiesSeat ;
         :onOrAbout          "phalha" .
+    
+    bdr:EVECB563798B1D8F60
+        a                   :PersonInResidence .
     
     bdr:NME8546E3167B7E52D
         a                   :PersonPrimaryName ;
         rdfs:label          "bstan 'dzin rnam rgyal/"@bo-x-ewts .
     
+    bdr:NT2F909123CA8567AF
+        a                   :Note ;
+        :noteText           "pha lha family\n\ndeath after 1801"@en .
+    
     bdr:P2LS235  a          :Person ;
         skos:prefLabel      "bstan 'dzin rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV715DC95A4325E375 , bdr:EVECB563798B1D8F60 ;
+        :note               bdr:NT2F909123CA8567AF ;
+        :personEvent        bdr:EV715DC95A4325E375 , bdr:EVA7908C4668F23BC6 , bdr:EVECB563798B1D8F60 ;
         :personName         bdr:NME8546E3167B7E52D .
 }

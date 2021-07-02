@@ -12,39 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS245 {
-    bda:LG0F17F829C777CB8A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T11:40:50.068Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LGFE5A828BEB28E12E
+    bda:LG7A03A3D84661250F
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:49:09.001Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGDBCA77403499AF56
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:34:26.931Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFE5A828BEB28E12E
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T11:40:50.068Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS245  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS245 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "23/P2LS245.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS245 ;
-        adm:logEntry        bda:LG0F17F829C777CB8A , bda:LGFE5A828BEB28E12E ;
+        adm:logEntry        bda:LG7A03A3D84661250F , bda:LGDBCA77403499AF56 , bda:LGFE5A828BEB28E12E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV42D857E2D67A5DCC
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "phalha" .
+        a                   :PersonInResidence .
     
     bdr:NMD2A649C6F8659859
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams dbang rgyal/"@bo-x-ewts .
     
+    bdr:NT0F17F829C777CB8A
+        a                   :Note ;
+        :noteText           "pha lha family"@en .
+    
     bdr:P2LS245  a          :Person ;
         skos:prefLabel      "bsod nams dbang rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT0F17F829C777CB8A ;
         :personEvent        bdr:EV42D857E2D67A5DCC ;
         :personName         bdr:NMD2A649C6F8659859 .
 }

@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS227 {
-    bda:LG1B0AEDAFF60EACCA
+    bda:LG60C4EB557EAB5183
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:01:59.954Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7331AB1AAD8357DA
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T10:35:47.037Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG4D4F7B37E0C8F1C3
+    bda:LGDD8FC5757B2497EA
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:34:08.277Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,30 +32,38 @@ bdg:P2LS227 {
     bda:P2LS227  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS227 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "43/P2LS227.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS227 ;
-        adm:logEntry        bda:LG1B0AEDAFF60EACCA , bda:LG4D4F7B37E0C8F1C3 ;
+        adm:logEntry        bda:LG60C4EB557EAB5183 , bda:LG7331AB1AAD8357DA , bda:LGDD8FC5757B2497EA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV1B0AEDAFF60EACCA
+        a                   :PersonOccupiesSeat ;
+        :onOrAbout          "mdomkhar" .
     
     bdr:EV590BD01D5F53A2B9
         a                   :PersonDeath ;
         :onYear             "1842"^^xsd:gYear .
     
     bdr:EVBD3DEB5B138051A7
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:NMFD5D254E160EA71D
         a                   :PersonPrimaryName ;
         rdfs:label          "'gyur med tshe dbang dpal 'byor/"@bo-x-ewts .
     
+    bdr:NT4D4F7B37E0C8F1C3
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS227  a          :Person ;
         skos:prefLabel      "'gyur med tshe dbang dpal 'byor/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS228 ;
         :isRoot             true ;
-        :personEvent        bdr:EV590BD01D5F53A2B9 , bdr:EVBD3DEB5B138051A7 ;
+        :note               bdr:NT4D4F7B37E0C8F1C3 ;
+        :personEvent        bdr:EV1B0AEDAFF60EACCA , bdr:EV590BD01D5F53A2B9 , bdr:EVBD3DEB5B138051A7 ;
         :personName         bdr:NMFD5D254E160EA71D .
 }

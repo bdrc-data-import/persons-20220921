@@ -13,24 +13,30 @@
 
 bdg:P2LS221 {
     bda:LG114FF26CB23996A3
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T10:35:29.144Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG2DB2600DE644594B
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:31:10.551Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
-    bda:LGC059317F6E7BAED6
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T10:35:29.144Z"^^xsd:dateTime ;
+    bda:LG33A442795C62FD89
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T09:53:33.418Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS221  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS221 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "a2/P2LS221.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS221 ;
-        adm:logEntry        bda:LG114FF26CB23996A3 , bda:LGC059317F6E7BAED6 ;
+        adm:logEntry        bda:LG114FF26CB23996A3 , bda:LG2DB2600DE644594B , bda:LG33A442795C62FD89 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -39,17 +45,21 @@ bdg:P2LS221 {
         :onYear             "1724"^^xsd:gYear .
     
     bdr:EVD780B5620658D13A
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:NM4AEB86BF47DD8679
         a                   :PersonPrimaryName ;
         rdfs:label          "ngag dbang tshangs pa/"@bo-x-ewts .
     
+    bdr:NTC059317F6E7BAED6
+        a                   :Note ;
+        :noteText           "mdo mkhar family"@en .
+    
     bdr:P2LS221  a          :Person ;
         skos:prefLabel      "ngag dbang tshangs pa/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS222 , bdr:P343 ;
         :isRoot             true ;
+        :note               bdr:NTC059317F6E7BAED6 ;
         :personEvent        bdr:EV7EF10BF96FB7B24F , bdr:EVD780B5620658D13A ;
         :personName         bdr:NM4AEB86BF47DD8679 .
 }

@@ -12,39 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS248 {
-    bda:LG3516E435782B0624
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T12:27:14.151Z"^^xsd:dateTime ;
+    bda:LG0B6A4F27EA677780
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:46:57.379Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
-    bda:LG5703833AEF35D50E
+    bda:LG25A0C2948771F7BC
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:50:28.238Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LG26CCAB3027AC89B2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T12:27:14.151Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS248  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS248 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "6d/P2LS248.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS248 ;
-        adm:logEntry        bda:LG3516E435782B0624 , bda:LG5703833AEF35D50E ;
+        adm:logEntry        bda:LG0B6A4F27EA677780 , bda:LG25A0C2948771F7BC , bda:LG26CCAB3027AC89B2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV5E1E78F13CD28B3E
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bkrasmthong" .
+    bdr:EV3516E435782B0624
+        a                   :PersonInResidence .
     
     bdr:NM2DC2FE1B284E2E24
         a                   :PersonPrimaryName ;
+        rdfs:label          "blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NM5E1E78F13CD28B3E
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "rje drung blo bzang sbyin pa/"@bo-x-ewts .
+    
+    bdr:NT5703833AEF35D50E
+        a                   :Note ;
+        :noteText           "bkras mthong family"@en .
     
     bdr:P2LS248  a          :Person ;
         skos:prefLabel      "rje drung blo bzang sbyin pa/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV5E1E78F13CD28B3E ;
-        :personName         bdr:NM2DC2FE1B284E2E24 .
+        :note               bdr:NT5703833AEF35D50E ;
+        :personEvent        bdr:EV3516E435782B0624 ;
+        :personName         bdr:NM2DC2FE1B284E2E24 , bdr:NM5E1E78F13CD28B3E .
 }

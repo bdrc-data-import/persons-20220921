@@ -12,43 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS225 {
-    bda:LGE73BC728D0F56C5A
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T10:35:40.693Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LGF7743F7411A7FC17
+    bda:LGA2FB43B1C0262B2E
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:32:51.426Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
         adm:logWho          bdu:U00020 .
     
+    bda:LGB6EF3773A4E53639
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T11:58:12.797Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGF7743F7411A7FC17
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T10:35:40.693Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P2LS225  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS225 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "78/P2LS225.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS225 ;
-        adm:logEntry        bda:LGE73BC728D0F56C5A , bda:LGF7743F7411A7FC17 ;
+        adm:logEntry        bda:LGA2FB43B1C0262B2E , bda:LGB6EF3773A4E53639 , bda:LGF7743F7411A7FC17 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV90E19CEFC0204C53
         a                   :PersonDeath ;
-        :onOrAbout          "after1791" .
+        :onYear             "1791"^^xsd:gYear .
     
     bdr:EVE14A9FAD43A68D2C
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "mdomkhar" .
+        a                   :PersonInResidence .
     
     bdr:NM8158548543689027
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams stobs rgyal/"@bo-x-ewts .
     
+    bdr:NTE73BC728D0F56C5A
+        a                   :Note ;
+        :noteText           "mdo mkhar family\n\ndeath after 1791"@en .
+    
     bdr:P2LS225  a          :Person ;
         skos:prefLabel      "bsod nams stobs rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTE73BC728D0F56C5A ;
         :personEvent        bdr:EV90E19CEFC0204C53 , bdr:EVE14A9FAD43A68D2C ;
         :personName         bdr:NM8158548543689027 .
 }

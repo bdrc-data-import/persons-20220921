@@ -12,12 +12,18 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS236 {
-    bda:LG8F38832BFBDBEF1A
+    bda:LG9936E56E99B3FA2E
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T12:19:46.025Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBB5DD6E80F8D566F
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T11:25:13.845Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00019 .
     
-    bda:LGBB5DD6E80F8D566F
+    bda:LGC1F2484D1B2F6D2F
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-25T14:44:28.148Z"^^xsd:dateTime ;
         adm:logMessage      "released"@en ;
@@ -26,30 +32,34 @@ bdg:P2LS236 {
     bda:P2LS236  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS236 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "ef/P2LS236.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS236 ;
-        adm:logEntry        bda:LG8F38832BFBDBEF1A , bda:LGBB5DD6E80F8D566F ;
+        adm:logEntry        bda:LG9936E56E99B3FA2E , bda:LGBB5DD6E80F8D566F , bda:LGC1F2484D1B2F6D2F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV12F3AB5278F77573
         a                   :PersonEventNotSpecified ;
-        :onOrAbout          "after1851" .
+        :onYear             "1851"^^xsd:gYear .
     
     bdr:EV7EFDACC3FBB992AE
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "phalha" .
+        a                   :PersonInResidence .
     
     bdr:NMB59DCD7213C85AFC
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams rgyal po/"@bo-x-ewts .
     
+    bdr:NT8F38832BFBDBEF1A
+        a                   :Note ;
+        :noteText           "pha lha family\n\ndeath after 1851"@en .
+    
     bdr:P2LS236  a          :Person ;
         skos:prefLabel      "bsod nams rgyal po/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS237 ;
         :isRoot             true ;
+        :note               bdr:NT8F38832BFBDBEF1A ;
         :personEvent        bdr:EV12F3AB5278F77573 , bdr:EV7EFDACC3FBB992AE ;
         :personName         bdr:NMB59DCD7213C85AFC .
 }

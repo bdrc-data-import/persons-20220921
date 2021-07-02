@@ -12,31 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS240 {
-    bda:LG39B32B302CEBCE33
-        a                   adm:UpdateData ;
-        adm:logDate         "2010-10-25T14:46:32.628Z"^^xsd:dateTime ;
-        adm:logMessage      "released"@en ;
-        adm:logWho          bdu:U00020 .
-    
-    bda:LG3AC4B686F4C23310
+    bda:LG16A27FA0613D3EF5
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
         adm:logWhoStr       "person-events-add-type-birth" .
     
-    bda:LGAFC3A4EA4A22AF21
+    bda:LG39B32B302CEBCE33
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-03-17T11:25:25.109Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG3AC4B686F4C23310
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-10-25T14:46:32.628Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00020 .
+    
+    bda:LG685139B78DD8E2EC
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:27:15.445Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
         adm:logWho          bdu:U00019 .
     
     bda:P2LS240  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS240 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "03/P2LS240.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS240 ;
-        adm:logEntry        bda:LG39B32B302CEBCE33 , bda:LG3AC4B686F4C23310 , bda:LGAFC3A4EA4A22AF21 ;
+        adm:logEntry        bda:LG16A27FA0613D3EF5 , bda:LG39B32B302CEBCE33 , bda:LG3AC4B686F4C23310 , bda:LG685139B78DD8E2EC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
@@ -45,17 +51,21 @@ bdg:P2LS240 {
         :onYear             "1940"^^xsd:gYear .
     
     bdr:EV5F6B66072C076511
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "phalha" .
+        a                   :PersonInResidence .
     
     bdr:NM06C6616236D90B9C
         a                   :PersonPrimaryName ;
         rdfs:label          "phun tshogs rnam rgyal/"@bo-x-ewts .
     
+    bdr:NTAFC3A4EA4A22AF21
+        a                   :Note ;
+        :noteText           "pha lha family"@en .
+    
     bdr:P2LS240  a          :Person ;
         skos:prefLabel      "phun tshogs rnam rgyal/"@bo-x-ewts ;
         :hasUnknownKinship  bdr:P2LS241 , bdr:P2LS242 ;
         :isRoot             true ;
+        :note               bdr:NTAFC3A4EA4A22AF21 ;
         :personEvent        bdr:EV04B839EF46F9137E , bdr:EV5F6B66072C076511 ;
         :personName         bdr:NM06C6616236D90B9C .
 }

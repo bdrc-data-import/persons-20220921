@@ -12,37 +12,42 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2LS250 {
-    bda:LG64E07F3259335514
-        a                   adm:UpdateData ;
-        adm:logDate         "2010-10-25T14:52:37.968Z"^^xsd:dateTime ;
-        adm:logMessage      "released"@en ;
-        adm:logWho          bdu:U00020 .
-    
     bda:LG81B895356F477FA6
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2010-03-17T12:27:20.234Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGADC234A73A0BD369
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-07-01T14:51:06.329Z"^^xsd:dateTime ;
+        adm:logMessage      "added corporation and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGCE84D015455531F0
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
         adm:logWhoStr       "person-events-add-type-birth" .
     
-    bda:LGE04CF48DDA6A3218
-        a                   adm:InitialDataCreation ;
-        adm:logDate         "2010-03-17T12:27:20.234Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
+    bda:LGDBE1130F2FF43F15
+        a                   adm:UpdateData ;
+        adm:logDate         "2010-10-25T14:52:37.968Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00020 .
     
     bda:P2LS250  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2LS250 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "9f/P2LS250.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2LS250 ;
-        adm:logEntry        bda:LG64E07F3259335514 , bda:LG81B895356F477FA6 , bda:LGE04CF48DDA6A3218 ;
+        adm:logEntry        bda:LG81B895356F477FA6 , bda:LGADC234A73A0BD369 , bda:LGCE84D015455531F0 , bda:LGDBE1130F2FF43F15 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV0956905BB421E6DF
-        a                   :PersonOccupiesSeat ;
-        :onOrAbout          "bkrasmthong" .
+        a                   :PersonInResidence .
     
     bdr:EV1D081DC36992F788
         a                   :PersonBirth ;
@@ -52,13 +57,22 @@ bdg:P2LS250 {
         a                   :PersonDeath ;
         :onYear             "1967"^^xsd:gYear .
     
+    bdr:EVE04CF48DDA6A3218
+        a                   :PersonOccupiesSeat ;
+        :onOrAbout          "bkrasmthong" .
+    
     bdr:NM26191C5F92119C22
         a                   :PersonPrimaryName ;
         rdfs:label          "dpal ldan rgya mtsho/"@bo-x-ewts .
     
+    bdr:NT64E07F3259335514
+        a                   :Note ;
+        :noteText           "bkras mthong family"@en .
+    
     bdr:P2LS250  a          :Person ;
         skos:prefLabel      "dpal ldan rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV0956905BB421E6DF , bdr:EV1D081DC36992F788 , bdr:EV3F86A76E8E3E66AB ;
+        :note               bdr:NT64E07F3259335514 ;
+        :personEvent        bdr:EV0956905BB421E6DF , bdr:EV1D081DC36992F788 , bdr:EV3F86A76E8E3E66AB , bdr:EVE04CF48DDA6A3218 ;
         :personName         bdr:NM26191C5F92119C22 .
 }
