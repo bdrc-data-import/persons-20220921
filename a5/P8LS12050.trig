@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS12050 {
-    bda:LGD00FA405563793CA
+    bda:LG1867A0E494D69851
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-06-12T15:24:01.124Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
         adm:logWho          bdu:U00019 .
+    
+    bda:LGD00FA405563793CA
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-08-06T13:07:46.55Z"^^xsd:dateTime ;
+        adm:logMessage      "removed empty field"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8LS12050  a        adm:AdminData ;
         :isRoot             true ;
@@ -25,33 +31,28 @@ bdg:P8LS12050 {
         adm:gitPath         "a5/P8LS12050.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS12050 ;
-        adm:logEntry        bda:LGD00FA405563793CA ;
+        adm:logEntry        bda:LG1867A0E494D69851 , bda:LGD00FA405563793CA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV2857A07CEABFFE09
-        a                   :PersonEventNotSpecified ;
-        :eventWhere         bdr: ;
-        :personEventRole    bdr: .
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G109 ;
+        :onYear             "1919"^^xsd:gYear ;
+        :personEventRole    bdr:R30 .
     
     bdr:EV312A06BEDA84A11C
-        a                   :PersonEventNotSpecified ;
+        a                   :PersonBirth ;
         :eventWhere         bdr:G1301 .
     
     bdr:EV97EC5EA1F04D7005
-        a                   :PersonLeavesOffice ;
-        :eventWhere         bdr:G109 ;
-        :onYear             "1928"^^xsd:gYear ;
-        :personEventRole    bdr:R30 .
-    
-    bdr:EVB4036FAF4057BACE
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G109 .
     
     bdr:EVEA39513266FB71F5
-        a                   :PersonAssumesOffice ;
+        a                   :PersonLeavesOffice ;
         :eventWhere         bdr:G109 ;
-        :onYear             "1919"^^xsd:gYear ;
+        :onYear             "1928"^^xsd:gYear ;
         :personEventRole    bdr:R30 .
     
     bdr:NM1EB4B1317F04B112
@@ -66,7 +67,7 @@ bdg:P8LS12050 {
         a                   :PersonTitle ;
         rdfs:label          "'jur byed mkhan chen 'od zer rdo rje/"@bo-x-ewts .
     
-    bdr:NT1867A0E494D69851
+    bdr:NTB4036FAF4057BACE
         a                   :Note ;
         :contentLocationStatement  "vol. 1, p. 162-169" ;
         :noteSource         bdr:MW28810 ;
@@ -75,7 +76,7 @@ bdg:P8LS12050 {
     bdr:P8LS12050  a        :Person ;
         skos:prefLabel      "'od zer rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT1867A0E494D69851 ;
-        :personEvent        bdr:EV2857A07CEABFFE09 , bdr:EV312A06BEDA84A11C , bdr:EV97EC5EA1F04D7005 , bdr:EVB4036FAF4057BACE , bdr:EVEA39513266FB71F5 ;
+        :note               bdr:NTB4036FAF4057BACE ;
+        :personEvent        bdr:EV2857A07CEABFFE09 , bdr:EV312A06BEDA84A11C , bdr:EV97EC5EA1F04D7005 , bdr:EVEA39513266FB71F5 ;
         :personName         bdr:NM1EB4B1317F04B112 , bdr:NM29E1093B5A6AA0C8 , bdr:NMDC6669F8B6DE4B4C .
 }

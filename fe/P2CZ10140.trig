@@ -13,16 +13,22 @@
 
 bdg:P2CZ10140 {
     bda:LG58982CD4D5E97160
-        a                   adm:UpdateData ;
-        adm:logDate         "2016-04-19T10:53:51.369Z"^^xsd:dateTime ;
-        adm:logWho          bdu:U00019 .
-    
-    bda:LG86BC3729D0978A66
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-04-22T09:48:34.989Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00017 .
     
+    bda:LGB26CAE79DAC4E613
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-08-06T12:52:18.245Z"^^xsd:dateTime ;
+        adm:logMessage      "added seat, birth place"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGC4ECD1EB4733D397
+        a                   adm:UpdateData ;
+        adm:logDate         "2016-04-19T10:53:51.369Z"^^xsd:dateTime ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE15119FEE512E167
         a                   adm:UpdateData ;
         adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
         adm:logMessage      "added event type=\"birth\""@en ;
@@ -31,24 +37,29 @@ bdg:P2CZ10140 {
     bda:P2CZ10140  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2CZ10140 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "fe/P2CZ10140.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2CZ10140 ;
-        adm:logEntry        bda:LG58982CD4D5E97160 , bda:LG86BC3729D0978A66 , bda:LGC4ECD1EB4733D397 ;
+        adm:logEntry        bda:LG58982CD4D5E97160 , bda:LGB26CAE79DAC4E613 , bda:LGC4ECD1EB4733D397 , bda:LGE15119FEE512E167 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV61E56055B7815909
         a                   :PersonBirth ;
-        :eventWhere         bdr: ;
+        :eventWhere         bdr:G4647 ;
         :onYear             "1925"^^xsd:gYear .
     
     bdr:EV6CC0DF302ED01BAC
-        a                   :PersonOccupiesSeat .
+        a                   :PersonDeath ;
+        :onYear             "2014"^^xsd:gYear .
+    
+    bdr:EVFB093359533C88C6
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G155 .
     
     bdr:NM4625D3AFD6D4D2DB
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "bka' 'gyur ba blo bzang thub bstan/"@bo-x-ewts .
     
     bdr:NMBAB983C6358E5D46
@@ -56,18 +67,18 @@ bdg:P2CZ10140 {
         rdfs:label          "ser byes mkhan zur blo bzang thub bstan/"@bo-x-ewts .
     
     bdr:NME03206312BA3F28B
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "blo bzang thub bstan/"@bo-x-ewts .
     
-    bdr:NTFB093359533C88C6
+    bdr:NT86BC3729D0978A66
         a                   :Note ;
         :noteText           "he became a monk at the age of 7 and entered sera byes monastery in lhasa at the age of 18.\nin 1959, he followed his holiness the dalai lama into exile in india.   he continued his monastic studies, attaining his lha rams pa dge bshes degree, \nhe is an accomplished meditator having completed the three and a half year great retreat of the vajrayogini deity.  he is a highly respected scholar having been invited by the dalai lama to give the oral transmission of the complete tibetan canon, the kangyur to an assembly of monks in dharamsala, an event which occurs only about once a generation and over a period of six months.   his title, \"kangyurwa\" is a reflection of this great honour.   his ability as an administrator is reflected in his holiness' personal selection of rinpoche to become the abbot of sera byes monastery in south india.\nfor the last decade, rinpoche has, upon the invitation of lama zopa rinpoche, served as the resident geshe of buddha house in adelaide, australia."@en .
     
     bdr:P2CZ10140  a        :Person ;
-        skos:prefLabel      "ser byes mkhan zur blo bzang thub bstan/"@bo-x-ewts ;
+        skos:prefLabel      "bka' 'gyur ba blo bzang thub bstan/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTFB093359533C88C6 ;
-        :personEvent        bdr:EV61E56055B7815909 , bdr:EV6CC0DF302ED01BAC ;
+        :note               bdr:NT86BC3729D0978A66 ;
+        :personEvent        bdr:EV61E56055B7815909 , bdr:EV6CC0DF302ED01BAC , bdr:EVFB093359533C88C6 ;
         :personName         bdr:NM4625D3AFD6D4D2DB , bdr:NMBAB983C6358E5D46 , bdr:NME03206312BA3F28B ;
         :personStudentOf    bdr:P1PD92831 ;
         :personTeacherOf    bdr:P8LS17464 .
