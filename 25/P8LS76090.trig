@@ -1,0 +1,54 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS76090 {
+    bda:LG05B2B3A73CEACA4B
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-08-12T14:33:33.475Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS76090  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS76090 ;
+        adm:facetIndex      5 ;
+        adm:gitPath         "25/P8LS76090.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS76090 ;
+        adm:logEntry        bda:LG05B2B3A73CEACA4B ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV0DE98C083317D3EB
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
+    bdr:NMEFB3A0F031D14FD2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "sbyin pa 'od zer/"@bo-x-ewts .
+    
+    bdr:NT2B9BBC1E8C752095
+        a                   :Note ;
+        :contentLocationStatement  "folio 59" ;
+        :noteSource         bdr:MW1NLM2265 ;
+        :noteText           "lineage holder of Zurka empowerment\n\ndetail unknown"@en .
+    
+    bdr:P8LS76090  a        :Person ;
+        skos:prefLabel      "sbyin pa 'od zer/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT2B9BBC1E8C752095 ;
+        :personEvent        bdr:EV0DE98C083317D3EB ;
+        :personName         bdr:NMEFB3A0F031D14FD2 ;
+        :personStudentOf    bdr:P8816 .
+}
