@@ -1,0 +1,60 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS76300 {
+    bda:LG683A3F8AF1B69683
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-08-31T09:04:30.367Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS76300  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS76300 ;
+        adm:facetIndex      7 ;
+        adm:gitPath         "56/P8LS76300.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS76300 ;
+        adm:logEntry        bda:LG683A3F8AF1B69683 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVF48BF46232E488F8
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G163 .
+    
+    bdr:EVFEFF442284209450
+        a                   :PersonBirth ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
+    bdr:NMBAE6D2811D114597
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'jigs med brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NMBE235493F94FE3E5
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dge bshes 'jigs med brtson 'grus/"@bo-x-ewts .
+    
+    bdr:NT91999B2398DD445D
+        a                   :Note ;
+        :noteText           "See work number W8LS76299\n\nphysician of gso rig kun phan gling of rong bo dgon chen"@en .
+    
+    bdr:P8LS76300  a        :Person ;
+        skos:prefLabel      "dge bshes 'jigs med brtson 'grus/"@bo-x-ewts ;
+        :isRoot             true ;
+        :note               bdr:NT91999B2398DD445D ;
+        :personEvent        bdr:EVF48BF46232E488F8 , bdr:EVFEFF442284209450 ;
+        :personName         bdr:NMBAE6D2811D114597 , bdr:NMBE235493F94FE3E5 ;
+        :personStudentOf    bdr:P711 .
+}
