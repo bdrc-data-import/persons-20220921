@@ -12,22 +12,32 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P850 {
-    bda:LGC87910A8BEB0EA8B
+    bda:LG5A228ED4F4D83CE8
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGF0E5012A732694FD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-16T09:29:22.386Z"^^xsd:dateTime ;
+        adm:logMessage      "added date and name"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P850  a             adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P850 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "89/P850.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P850 ;
-        adm:logEntry        bda:LGC87910A8BEB0EA8B ;
+        adm:logEntry        bda:LG5A228ED4F4D83CE8 , bda:LGF0E5012A732694FD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV6FE213FDB4395FBC
+    bdr:EVC87910A8BEB0EA8B
+        a                   :PersonDeath ;
+        :onYear             "2012"^^xsd:gYear .
+    
+    bdr:EVDC3605BE8E4D6541
         a                   :PersonBirth ;
         :onYear             "1932"^^xsd:gYear .
     
@@ -35,15 +45,19 @@ bdg:P850 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bstan dga' rin po che/"@bo-x-ewts .
     
-    bdr:NTDC3605BE8E4D6541
+    bdr:NM6FE213FDB4395FBC
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "karma bstan 'dzin 'phrin las/"@bo-x-ewts .
+    
+    bdr:NT4A64A849E71FF324
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
     
     bdr:P850  a             :Person ;
         skos:prefLabel      "bstan dga' rin po che/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTDC3605BE8E4D6541 ;
-        :personEvent        bdr:EV6FE213FDB4395FBC ;
+        :note               bdr:NT4A64A849E71FF324 ;
+        :personEvent        bdr:EVC87910A8BEB0EA8B , bdr:EVDC3605BE8E4D6541 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM2EA765698697DF4D .
+        :personName         bdr:NM2EA765698697DF4D , bdr:NM6FE213FDB4395FBC .
 }
