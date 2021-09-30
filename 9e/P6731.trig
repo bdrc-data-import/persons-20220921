@@ -12,20 +12,29 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6731 {
-    bda:LG0FE51F03B16F0F68
+    bda:LG6CC85B03E0F871FD
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-29T15:06:03.622Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of death, son and corporation name"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGAC3AFECCFC5AD940
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6731  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6731 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "9e/P6731.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6731 ;
-        adm:logEntry        bda:LG0FE51F03B16F0F68 ;
+        adm:logEntry        bda:LG6CC85B03E0F871FD , bda:LGAC3AFECCFC5AD940 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV0FE51F03B16F0F68
+        a                   :PersonInResidence .
     
     bdr:EV458A932CD2BA1E6A
         a                   :PersonLeavesOffice ;
@@ -42,6 +51,10 @@ bdg:P6731 {
         :notAfter           "1899"^^xsd:gYear ;
         :notBefore          "1800"^^xsd:gYear .
     
+    bdr:EVE0E8C4075CD50EC0
+        a                   :PersonDeath ;
+        :onYear             "1902"^^xsd:gYear .
+    
     bdr:NM3BCBDCE21FB6BA94
         a                   :PersonPersonalName ;
         rdfs:label          "mdo mkhar tshe dbang nor bu/"@bo-x-ewts .
@@ -54,7 +67,7 @@ bdg:P6731 {
         a                   :PersonPersonalName ;
         rdfs:label          "tshe dbang nor bu, rag kha shar/"@bo-x-ewts .
     
-    bdr:NTE0E8C4075CD50EC0
+    bdr:NTAF5DFEDCA44CE425
         a                   :Note ;
         :contentLocationStatement  "p. 232" ;
         :noteSource         bdr:MW20167 ;
@@ -62,9 +75,10 @@ bdg:P6731 {
     
     bdr:P6731  a            :Person ;
         skos:prefLabel      "rag kha shar tshe dbang nor bu/"@bo-x-ewts ;
+        :hasSon             bdr:P2LS230 ;
         :isRoot             true ;
-        :note               bdr:NTE0E8C4075CD50EC0 ;
-        :personEvent        bdr:EV458A932CD2BA1E6A , bdr:EV52688C68B4C5BDF3 , bdr:EV7129B356CD0D3A63 ;
+        :note               bdr:NTAF5DFEDCA44CE425 ;
+        :personEvent        bdr:EV0FE51F03B16F0F68 , bdr:EV458A932CD2BA1E6A , bdr:EV52688C68B4C5BDF3 , bdr:EV7129B356CD0D3A63 , bdr:EVE0E8C4075CD50EC0 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM3BCBDCE21FB6BA94 , bdr:NM50666258BEC0D6A8 , bdr:NME06BAE938F18299C .
 }

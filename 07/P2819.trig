@@ -12,44 +12,92 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2819 {
-    bda:LG0E79C6AF21015B73
+    bda:LG549CBB2C9933222C
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-29T17:15:10.82Z"^^xsd:dateTime ;
+        adm:logMessage      "added names, teacher & birth date with note"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LG6EBD77F4FE19B3B0
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG96C12D70F3A0EB5F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-29T17:27:49.312Z"^^xsd:dateTime ;
+        adm:logMessage      "added student: karma stobs rgyal"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGE1C47B4CAAD9B956
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-09-29T17:41:15.783Z"^^xsd:dateTime ;
+        adm:logMessage      "added studdent: mkhan thub rgyal"@en ;
+        adm:logWho          bdu:U00007 .
     
     bda:P2819  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2819 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      16 ;
         adm:gitPath         "07/P2819.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2819 ;
-        adm:logEntry        bda:LG0E79C6AF21015B73 ;
+        adm:logEntry        bda:LG549CBB2C9933222C , bda:LG6EBD77F4FE19B3B0 , bda:LG96C12D70F3A0EB5F , bda:LGE1C47B4CAAD9B956 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV7AB826DF5DA7B090
+    bdr:EVC25DB26778DE6322
         a                   :PersonBirth ;
-        :notAfter           "1899"^^xsd:gYear ;
-        :notBefore          "1800"^^xsd:gYear .
+        :onYear             "1906"^^xsd:gYear .
+    
+    bdr:EVEC95E77F88B56B12
+        a                   :PersonDeath ;
+        :onYear             "1984"^^xsd:gYear .
+    
+    bdr:NM0E79C6AF21015B73
+        a                   :PersonFirstOrdinationName ;
+        rdfs:label          "karma nor bu bzang po/"@bo-x-ewts .
+    
+    bdr:NM13DDE8235C4579F7
+        a                   :PersonFamilyName ;
+        rdfs:label          "mgar chung /"@bo-x-ewts .
     
     bdr:NM3450763A208ABD9A
         a                   :PersonPrimaryTitle ;
-        rdfs:label          "grub dbang karma nor bu/"@bo-x-ewts .
+        rdfs:label          "grub chen karma nor bu/"@bo-x-ewts .
+    
+    bdr:NM46F31A298DD526BE
+        a                   :PersonFinalOrdinationName ;
+        rdfs:label          "karma gzhan phan chos kyi rgya mtsho/"@bo-x-ewts .
     
     bdr:NM5E5A25552EDAD07B
         a                   :PersonPrimaryName ;
         rdfs:label          "karma nor bu/"@bo-x-ewts .
     
-    bdr:NTFF3FC4C7BEA05F77
+    bdr:NM7AB826DF5DA7B090
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub dbang karma nor bu/"@bo-x-ewts .
+    
+    bdr:NMFF3FC4C7BEA05F77
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grub pa'i dbang phyug karma gzhan phan chos kyi rgya mtsho/"@bo-x-ewts .
+    
+    bdr:NT3D98BEAE032FFDA1
+        a                   :Note ;
+        :contentLocationStatement  "p. 9 & p. 105" ;
+        :noteSource         bdr:MW3CN26885 ;
+        :noteText           "རབ་བྱུང་བཅོ་ལྔ་པའི་མེ་ཕོ་རྟའི་ལོར་(1906)འཁྲུངས་པ་དང་། ཤིང་ཕོ་བྱི་ལོར་(1984)འདས་པ་སོགས་གསལ།"@en .
+    
+    bdr:NTA31F7549B33D269E
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Mar-pa Bka'-brgyud\n\n-- Dwags-po Bka'-brgyud\n\n-- Kam-tshang transmissions"@en .
     
     bdr:P2819  a            :Person ;
-        skos:prefLabel      "grub dbang karma nor bu/"@bo-x-ewts ;
+        skos:prefLabel      "grub chen karma nor bu/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTFF3FC4C7BEA05F77 ;
-        :personEvent        bdr:EV7AB826DF5DA7B090 ;
+        :note               bdr:NT3D98BEAE032FFDA1 , bdr:NTA31F7549B33D269E ;
+        :personEvent        bdr:EVC25DB26778DE6322 , bdr:EVEC95E77F88B56B12 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM3450763A208ABD9A , bdr:NM5E5A25552EDAD07B ;
-        :personTeacherOf    bdr:P264 .
+        :personName         bdr:NM0E79C6AF21015B73 , bdr:NM13DDE8235C4579F7 , bdr:NM3450763A208ABD9A , bdr:NM46F31A298DD526BE , bdr:NM5E5A25552EDAD07B , bdr:NM7AB826DF5DA7B090 , bdr:NMFF3FC4C7BEA05F77 ;
+        :personStudentOf    bdr:P865 ;
+        :personTeacherOf    bdr:P264 , bdr:P3CN26886 , bdr:P3CN26887 .
 }
