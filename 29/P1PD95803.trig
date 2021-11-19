@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1PD95803 {
-    bda:LG132CBCF5934C47DB
+    bda:LGAEF045FD2D56691F
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-11-18T22:22:58.165Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and dates"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGF2F50E2D1BB400F1
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-11-13T11:37:40.785Z"^^xsd:dateTime ;
         adm:logMessage      "gsar du bcug"@en ;
@@ -21,30 +27,41 @@ bdg:P1PD95803 {
     bda:P1PD95803  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1PD95803 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "29/P1PD95803.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1PD95803 ;
-        adm:logEntry        bda:LG132CBCF5934C47DB ;
+        adm:logEntry        bda:LGAEF045FD2D56691F , bda:LGF2F50E2D1BB400F1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV002D93198D27A4E7
+    bdr:EV5C9B75662CCFC6F6
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :onYear             "1820"^^xsd:gYear .
+    
+    bdr:EV655CAD5B1CF90602
+        a                   :PersonDeath ;
+        :onYear             "1907"^^xsd:gYear .
+    
+    bdr:NM002D93198D27A4E7
+        a                   :PersonOtherName ;
+        rdfs:label          "blo bzang rin chen/"@bo-x-ewts .
     
     bdr:NM0DE6ADE6ECFF4079
         a                   :PersonPrimaryName ;
-        rdfs:label          "sumati ratna"@sa-x-ewts .
+        rdfs:label          "sumati ratna"@sa-alalc97 .
+    
+    bdr:NM132CBCF5934C47DB
+        a                   :PersonPersonalName ;
+        rdfs:label          "luvsanrinchen"@en .
     
     bdr:NMF75590B1DBBFD495
         a                   :PersonPrimaryName ;
         rdfs:label          "su ma ti rat+na/"@bo-x-ewts .
     
     bdr:P1PD95803  a        :Person ;
-        skos:prefLabel      "su ma ti rat+na/"@bo-x-ewts , "sumati ratna"@sa-x-ewts ;
+        skos:prefLabel      "su ma ti rat+na/"@bo-x-ewts , "luvsanrinchen"@en , "sumati ratna"@sa-alalc97 ;
         :isRoot             true ;
-        :personEvent        bdr:EV002D93198D27A4E7 ;
-        :personName         bdr:NM0DE6ADE6ECFF4079 , bdr:NMF75590B1DBBFD495 .
+        :personEvent        bdr:EV5C9B75662CCFC6F6 , bdr:EV655CAD5B1CF90602 ;
+        :personName         bdr:NM002D93198D27A4E7 , bdr:NM0DE6ADE6ECFF4079 , bdr:NM132CBCF5934C47DB , bdr:NMF75590B1DBBFD495 .
 }
