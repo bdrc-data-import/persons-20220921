@@ -1,0 +1,77 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS76450 {
+    bda:LG31B1348A3EF43DC5
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-12-16T09:49:51.74Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB162A126BC781580
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-16T11:09:39.25Z"^^xsd:dateTime ;
+        adm:logMessage      "added office"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS76450  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS76450 ;
+        adm:facetIndex      10 ;
+        adm:gitPath         "34/P8LS76450.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS76450 ;
+        adm:logEntry        bda:LG31B1348A3EF43DC5 , bda:LGB162A126BC781580 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV3C82636183E5871C
+        a                   :PersonBirth ;
+        :onYear             "1877"^^xsd:gYear .
+    
+    bdr:EV9FE66BBD023A061E
+        a                   :PersonAssumesOffice ;
+        :eventWhere         bdr:G1366 ;
+        :role               bdr:R44 .
+    
+    bdr:EVA3D81DA4ECAEC334
+        a                   :PersonDeath ;
+        :onYear             "1919"^^xsd:gYear .
+    
+    bdr:NM2EAB488D255C996C
+        a                   :PersonOtherName ;
+        rdfs:label          "Dorje Sengge"@en .
+    
+    bdr:NMB5037249F63788E2
+        a                   :PersonPrimaryName ;
+        rdfs:label          "rdo rje seng+ge"@bo-x-ewts .
+    
+    bdr:NMF513FCAC03AAE254
+        a                   :PersonCommonName ;
+        rdfs:label          "a ja/"@bo-x-ewts .
+    
+    bdr:NT8F3148D4CDCBDC6B
+        a                   :Note ;
+        :contentLocationStatement  "pp. 80-86" ;
+        :noteSource         bdr:MW26569 ;
+        :noteText           "In this source, \nborn in 1865 and died in 1919\n\ngdung rabs lnga bcu pa/ rgyal rabs nyer gcig khri rabs bcu gsum pa'i skabs/\n\nhe was the elder son of 'chi me rtag pa'i rdo rje, the king of Derge\nhis father died in 1896 at Khren tu'u\nhe also reached Khren tu'u with assistance of Tibetan government\nTibetan government endowed the title of Derge king\n1906 he reached Lhasa\n1907 as marriage arranged by the Tibetan government. Sger ram pa's daughter Sonam Tsho became the wife of Dorje Senge\nthen returned back to Derge\nDorje Senge and his wife supported for the establishment of school in Batang\nsnye thang nor bu sgang family's duaghter Namgyal Peldzom was his second wife \n1911\treinstaded to the throne of Derge king\ndied in 1919"@en .
+    
+    bdr:P8LS76450  a        :Person ;
+        skos:prefLabel      "rdo rje seng+ge"@bo-x-ewts , "Dorje Sengge"@en ;
+        :hasBrother         bdr:P8LS76451 ;
+        :hasSibling         bdr:P8LS76451 ;
+        :isRoot             true ;
+        :note               bdr:NT8F3148D4CDCBDC6B ;
+        :personEvent        bdr:EV3C82636183E5871C , bdr:EV9FE66BBD023A061E , bdr:EVA3D81DA4ECAEC334 ;
+        :personName         bdr:NM2EAB488D255C996C , bdr:NMB5037249F63788E2 , bdr:NMF513FCAC03AAE254 .
+}
