@@ -1,0 +1,65 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P8LS76454 {
+    bda:LG2F309A72F294A3DE
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2021-12-17T09:07:31.901Z"^^xsd:dateTime ;
+        adm:logMessage      "created new person record"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:P8LS76454  a        adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P8LS76454 ;
+        adm:facetIndex      8 ;
+        adm:gitPath         "10/P8LS76454.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P8LS76454 ;
+        adm:logEntry        bda:LG2F309A72F294A3DE ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EV1EE31FE84014ED25
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1365 ;
+        :onYear             "1905"^^xsd:gYear .
+    
+    bdr:EV3AAEC9F876FE53E7
+        a                   :PersonDeath ;
+        :onYear             "1939"^^xsd:gYear .
+    
+    bdr:NM9249F7BCD4F04A1F
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rgya ri 'chi med sgrol ma/"@bo-x-ewts .
+    
+    bdr:NMD2F953039CF0EF83
+        a                   :PersonPrimaryName ;
+        rdfs:label          "'chi med sgrol ma/"@bo-x-ewts .
+    
+    bdr:NMEC49AEEA4BA516AA
+        a                   :PersonOtherName ;
+        rdfs:label          "Gyari Chime Dolma"@en .
+    
+    bdr:NTD224B056345C49ED
+        a                   :Note ;
+        :contentLocationStatement  "pp. 189" ;
+        :noteSource         bdr:MW26569 ;
+        :noteText           "khams nyag rong nas yin pa/\n\nbya rgod tshe dbang sgrol ma dang khang gsar dbyang can mkha 'gro dus mnyam/\nkhong gsum la khams pa'i bdud mo gsum du yang 'bod/\n\ndetail unavailable"@en .
+    
+    bdr:P8LS76454  a        :Person ;
+        skos:prefLabel      "rgya ri 'chi med sgrol ma/"@bo-x-ewts , "Gyari Chime Dolma"@en ;
+        :isRoot             true ;
+        :note               bdr:NTD224B056345C49ED ;
+        :personEvent        bdr:EV1EE31FE84014ED25 , bdr:EV3AAEC9F876FE53E7 ;
+        :personName         bdr:NM9249F7BCD4F04A1F , bdr:NMD2F953039CF0EF83 , bdr:NMEC49AEEA4BA516AA .
+}
