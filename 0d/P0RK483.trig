@@ -12,36 +12,62 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P0RK483 {
-    bda:LGBF8DBCE4FA889C7B
+    bda:LG15DD55C7C324EFB5
         a                   adm:InitialDataImport ;
         adm:logDate         "2007-07-12T15:24:55.805Z"^^xsd:dateTime ;
         adm:logMessage      "first post to dlms"@en ;
         adm:logWho          bdu:U00012 .
     
-    bda:LGF7FB07C164E8FC0D
+    bda:LG5FD13C81EA21016B
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-20T13:39:40.253Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates and note"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDB39A29976ACDB77
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00023 .
     
     bda:P0RK483  a          adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P0RK483 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0d/P0RK483.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P0RK483 ;
-        adm:logEntry        bda:LGBF8DBCE4FA889C7B , bda:LGF7FB07C164E8FC0D ;
+        adm:logEntry        bda:LG15DD55C7C324EFB5 , bda:LG5FD13C81EA21016B , bda:LGDB39A29976ACDB77 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV7E89FA4E49E48209
+        a                   :PersonDeath ;
+        :onYear             "1133"^^xsd:gYear .
+    
+    bdr:EVBF8DBCE4FA889C7B
+        a                   :PersonBirth ;
+        :onYear             "1123"^^xsd:gYear .
+    
     bdr:NME831FD434A2226F7
         a                   :PersonPrimaryName ;
+        rdfs:label          "jo bde/"@bo-x-ewts .
+    
+    bdr:NMF7FB07C164E8FC0D
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "gze ba jo bde/"@bo-x-ewts .
+    
+    bdr:NT847626D4B3EE1F39
+        a                   :Note ;
+        :contentLocationStatement  "p. 54" ;
+        :noteSource         bdr:MW27302 ;
+        :noteText           "chung ba jo bde chu mo yos lo ngo bcu gcig glang lo'i stod la grongs/"@bo-x-ewts .
     
     bdr:P0RK483  a          :Person ;
         skos:prefLabel      "gze ba jo bde/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT847626D4B3EE1F39 ;
+        :personEvent        bdr:EV7E89FA4E49E48209 , bdr:EVBF8DBCE4FA889C7B ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NME831FD434A2226F7 ;
+        :personName         bdr:NME831FD434A2226F7 , bdr:NMF7FB07C164E8FC0D ;
         :personStudentOf    bdr:P3823 ;
         :personTeacherOf    bdr:P0RK484 .
 }

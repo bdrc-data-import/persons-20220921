@@ -12,17 +12,23 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P0RK1294 {
-    bda:LG9A5FCCCE0FF4607C
+    bda:LG4499F2E5D628CD0D
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00023 .
+    
+    bda:LG7C554079A082D3DB
         a                   adm:UpdateData ;
         adm:logDate         "2019-03-01T15:06:33.163Z"^^xsd:dateTime ;
         adm:logMessage      "added name \"rngog gzi brjod grags pa/\""@en ;
         adm:logWho          bdu:U00007 .
     
-    bda:LGAA39BC4DDB214ADC
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00023 .
+    bda:LG86F78E36447AB934
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-20T13:38:24.544Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates and note"@en ;
+        adm:logWho          bdu:U00016 .
     
-    bda:LGEEFC71ABCEE854E1
+    bda:LGAF896712617929F2
         a                   adm:InitialDataImport ;
         adm:logDate         "2007-07-12T14:26:45.086Z"^^xsd:dateTime ;
         adm:logMessage      "first post to dlms"@en ;
@@ -31,13 +37,21 @@ bdg:P0RK1294 {
     bda:P0RK1294  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P0RK1294 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "0a/P0RK1294.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P0RK1294 ;
-        adm:logEntry        bda:LG9A5FCCCE0FF4607C , bda:LGAA39BC4DDB214ADC , bda:LGEEFC71ABCEE854E1 ;
+        adm:logEntry        bda:LG4499F2E5D628CD0D , bda:LG7C554079A082D3DB , bda:LG86F78E36447AB934 , bda:LGAF896712617929F2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVAA39BC4DDB214ADC
+        a                   :PersonBirth ;
+        :onYear             "1190"^^xsd:gYear .
+    
+    bdr:EVEEFC71ABCEE854E1
+        a                   :PersonDeath ;
+        :onYear             "1269"^^xsd:gYear .
     
     bdr:NM80AACE7CA1CB37E3
         a                   :PersonPrimaryTitle ;
@@ -47,9 +61,15 @@ bdg:P0RK1294 {
         a                   :PersonPrimaryName ;
         rdfs:label          "gzi brjid grags pa/"@bo-x-ewts .
     
+    bdr:NT9A5FCCCE0FF4607C
+        a                   :Note ;
+        :noteText           "Dates in deb ther sngon po (1202-1281)"@en .
+    
     bdr:P0RK1294  a         :Person ;
         skos:prefLabel      "rngog gzi brjid grags pa/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT9A5FCCCE0FF4607C ;
+        :personEvent        bdr:EVAA39BC4DDB214ADC , bdr:EVEEFC71ABCEE854E1 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM80AACE7CA1CB37E3 , bdr:NME6E5E57731006818 ;
         :personStudentOf    bdr:P8729 ;

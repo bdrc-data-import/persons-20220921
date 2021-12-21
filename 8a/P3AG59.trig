@@ -13,18 +13,24 @@
 
 bdg:P3AG59 {
     bda:LG1BE1A613F2BE5878
-        a                   adm:UpdateData ;
-        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
-        adm:logMessage      "added event type=\"birth\""@en ;
-        adm:logWhoStr       "person-events-add-type-birth" .
-    
-    bda:LG4F0AD5883DEC87D0
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-05-02T15:16:57.864Z"^^xsd:dateTime ;
         adm:logMessage      "created"@en ;
         adm:logWho          bdu:U00002 .
     
-    bda:LGB068A10BE77E708C
+    bda:LGB18DE41A1B938FCA
+        a                   adm:UpdateData ;
+        adm:logDate         "2020-11-05T18:43:46.684Z"^^xsd:dateTime ;
+        adm:logMessage      "added event type=\"birth\""@en ;
+        adm:logWhoStr       "person-events-add-type-birth" .
+    
+    bda:LGC4F712319A673F69
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-20T13:29:50.916Z"^^xsd:dateTime ;
+        adm:logMessage      "dates corrected"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDEDAF34A428B4341
         a                   adm:UpdateData ;
         adm:logDate         "2016-06-27T13:20:38.037Z"^^xsd:dateTime ;
         adm:logMessage      "treasury links"@en ;
@@ -33,28 +39,32 @@ bdg:P3AG59 {
     bda:P3AG59  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P3AG59 ;
-        adm:facetIndex      9 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "8a/P3AG59.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P3AG59 ;
-        adm:logEntry        bda:LG1BE1A613F2BE5878 , bda:LG4F0AD5883DEC87D0 , bda:LGB068A10BE77E708C ;
+        adm:logEntry        bda:LG1BE1A613F2BE5878 , bda:LGB18DE41A1B938FCA , bda:LGC4F712319A673F69 , bda:LGDEDAF34A428B4341 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:seeOtherToL     "https://treasuryoflives.org/biographies/view/Ngok-Jo-Tsultrim-Sherab/13061"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
     
     bdr:EV370310D1E59275F6
-        a                   :PersonDeath ;
-        :onYear             "1158"^^xsd:gYear .
-    
-    bdr:EVE0F1C19673822B34
         a                   :PersonBirth ;
-        :onYear             "1115"^^xsd:gYear .
+        :onYear             "1103"^^xsd:gYear .
+    
+    bdr:EV4F0AD5883DEC87D0
+        a                   :PersonDeath ;
+        :onYear             "1154"^^xsd:gYear .
     
     bdr:NM97C1F904FEB48D7C
-        a                   :PersonTitle ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "rngog jo tshul khrims shes rab/"@bo-x-ewts .
     
     bdr:NMB1DC469E65BF1D86
+        a                   :PersonPersonalName ;
+        rdfs:label          "jo btsun tshul khrims shes rab/"@bo-x-ewts .
+    
+    bdr:NME0F1C19673822B34
         a                   :PersonTitle ;
         rdfs:label          "rngog jo/"@bo-x-ewts .
     
@@ -62,12 +72,19 @@ bdg:P3AG59 {
         a                   :PersonPrimaryName ;
         rdfs:label          "tshul khrims shes rab/"@bo-x-ewts .
     
+    bdr:NTB068A10BE77E708C
+        a                   :Note ;
+        :contentLocationStatement  "p. 55-57" ;
+        :noteSource         bdr:MW27302 ;
+        :noteText           "A short biography of rngog jo tshul khrims shes rab."@en .
+    
     bdr:P3AG59  a           :Person ;
-        skos:prefLabel      "tshul khrims shes rab/"@bo-x-ewts ;
+        skos:prefLabel      "rngog jo tshul khrims shes rab/"@bo-x-ewts ;
         :hasFather          bdr:P2102 ;
         :hasUnknownKinship  bdr:P8729 ;
         :isRoot             true ;
-        :personEvent        bdr:EV370310D1E59275F6 , bdr:EVE0F1C19673822B34 ;
-        :personName         bdr:NM97C1F904FEB48D7C , bdr:NMB1DC469E65BF1D86 , bdr:NMFF05823049AEB1C2 ;
+        :note               bdr:NTB068A10BE77E708C ;
+        :personEvent        bdr:EV370310D1E59275F6 , bdr:EV4F0AD5883DEC87D0 ;
+        :personName         bdr:NM97C1F904FEB48D7C , bdr:NMB1DC469E65BF1D86 , bdr:NME0F1C19673822B34 , bdr:NMFF05823049AEB1C2 ;
         :personStudentOf    bdr:P1844 .
 }
