@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG23542 {
-    bda:LG38F4B22215F96EC2
+    bda:LG80FFE74BB3F0D8C8
+        a                   adm:UpdateData ;
+        adm:logDate         "2021-12-22T19:36:13.633Z"^^xsd:dateTime ;
+        adm:logMessage      "added names and dates"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGA7623C1BBBB08844
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-04-29T15:34:37.908Z"^^xsd:dateTime ;
         adm:logMessage      "new record"@en ;
@@ -21,35 +27,45 @@ bdg:P1KG23542 {
     bda:P1KG23542  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG23542 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "0f/P1KG23542.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG23542 ;
-        adm:logEntry        bda:LG38F4B22215F96EC2 ;
+        adm:logEntry        bda:LG80FFE74BB3F0D8C8 , bda:LGA7623C1BBBB08844 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVB3B47C0119916917
-        a                   :PersonEventNotSpecified ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+    bdr:EV38F4B22215F96EC2
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1398 ;
+        :onYear             "1868"^^xsd:gYear .
+    
+    bdr:EVE7865C9934FD4C82
+        a                   :PersonDeath ;
+        :onYear             "1922"^^xsd:gYear .
+    
+    bdr:NM66D632A6370D91AD
+        a                   :PersonOtherName ;
+        rdfs:label          "kazi dawa samdup"@en .
     
     bdr:NM6D91319709871C4D
         a                   :PersonPrimaryName ;
         rdfs:label          "zla ba bsam 'grub/"@bo-x-ewts .
     
     bdr:NM72C089A34D72A9C3
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "ka dzi zla ba bsam 'grub/"@bo-x-ewts .
+    
+    bdr:NMB3B47C0119916917
         a                   :PersonOtherName ;
         rdfs:label          "dousamdup kazi"@en .
     
-    bdr:NT66D632A6370D91AD
-        a                   :Note ;
-        :noteSource         bdr:MW1KG23537 .
-    
     bdr:P1KG23542  a        :Person ;
-        skos:prefLabel      "zla ba bsam 'grub/"@bo-x-ewts , "dousamdup kazi"@en ;
+        skos:prefLabel      "ka dzi zla ba bsam 'grub/"@bo-x-ewts , "dousamdup kazi"@en ;
+        :hasBrother         bdr:P2KG230205 ;
+        :hasFather          bdr:P2KG230206 ;
+        :hasParent          bdr:P2KG230206 ;
         :isRoot             true ;
-        :note               bdr:NT66D632A6370D91AD ;
-        :personEvent        bdr:EVB3B47C0119916917 ;
-        :personName         bdr:NM6D91319709871C4D , bdr:NM72C089A34D72A9C3 .
+        :personEvent        bdr:EV38F4B22215F96EC2 , bdr:EVE7865C9934FD4C82 ;
+        :personName         bdr:NM66D632A6370D91AD , bdr:NM6D91319709871C4D , bdr:NM72C089A34D72A9C3 , bdr:NMB3B47C0119916917 .
 }
