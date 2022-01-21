@@ -12,27 +12,37 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG15232 {
-    bda:LGCFFB1BE7ACBE061D
+    bda:LG1F124F1BCB7C3AE6
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-09-17T17:01:39.086Z"^^xsd:dateTime ;
         adm:logMessage      "created person record"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG5FAAA93B54A888CB
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-01-20T11:46:04.253Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth and pen name"@en ;
+        adm:logWho          bdu:U00017 .
+    
     bda:P1KG15232  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG15232 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "f8/P1KG15232.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG15232 ;
-        adm:logEntry        bda:LGCFFB1BE7ACBE061D ;
+        adm:logEntry        bda:LG1F124F1BCB7C3AE6 , bda:LG5FAAA93B54A888CB ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV2C7F96F66DD00D3C
+    bdr:EVCFFB1BE7ACBE061D
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :eventWhere         bdr:G2369 ;
+        :onYear             "1982"^^xsd:gYear .
+    
+    bdr:NM2C7F96F66DD00D3C
+        a                   :PersonPenName ;
+        rdfs:label          "'dre rig ldan/"@bo-x-ewts .
     
     bdr:NM80AE847CCD9C185D
         a                   :PersonPrimaryName ;
@@ -45,7 +55,7 @@ bdg:P1KG15232 {
     bdr:P1KG15232  a        :Person ;
         skos:prefLabel      "sangs rgyas bkra shis/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV2C7F96F66DD00D3C ;
+        :personEvent        bdr:EVCFFB1BE7ACBE061D ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM80AE847CCD9C185D , bdr:NMF2DE14892FD16709 .
+        :personName         bdr:NM2C7F96F66DD00D3C , bdr:NM80AE847CCD9C185D , bdr:NMF2DE14892FD16709 .
 }
