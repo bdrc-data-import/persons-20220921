@@ -12,24 +12,27 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2KG229524 {
-    bda:LGD695CB7B379BF310
+    bda:LG5CD5A7245A589413
         a                   adm:InitialDataCreation ;
-        adm:logDate         "2021-11-10T15:36:52.648Z"^^xsd:dateTime ;
+        adm:logDate         "2022-02-04T11:09:01.802Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en ;
         adm:logWho          bdu:U00016 .
     
     bda:P2KG229524  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2KG229524 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "12/P2KG229524.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2KG229524 ;
-        adm:logEntry        bda:LGD695CB7B379BF310 ;
+        adm:logEntry        bda:LG5CD5A7245A589413 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV412607B85FA384E5
-        a                   :PersonBirth .
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM6C3EF18DBA6527A4
         a                   :PersonPersonalName ;
@@ -39,9 +42,14 @@ bdg:P2KG229524 {
         a                   :PersonPrimaryName ;
         rdfs:label          "tshe dpal/"@bo-x-ewts .
     
+    bdr:NTD695CB7B379BF310
+        a                   :Note ;
+        :noteText           "Co-author of W2KG5065"@en .
+    
     bdr:P2KG229524  a       :Person ;
         skos:prefLabel      "tshe dpal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTD695CB7B379BF310 ;
         :personEvent        bdr:EV412607B85FA384E5 ;
         :personName         bdr:NM6C3EF18DBA6527A4 , bdr:NM969F3462D083B101 .
 }
