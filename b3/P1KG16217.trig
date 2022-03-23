@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG16217 {
-    bda:LGB84A4F1F6B839138
+    bda:LG8C6CB5D084C4F323
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-03-22T13:35:38.772Z"^^xsd:dateTime ;
+        adm:logMessage      "add date of birth ans death"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGFAAD626AB0F6888E
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-01-06T12:50:23.997Z"^^xsd:dateTime ;
         adm:logMessage      "created person record"@en ;
@@ -21,22 +27,25 @@ bdg:P1KG16217 {
     bda:P1KG16217  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG16217 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b3/P1KG16217.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG16217 ;
-        adm:logEntry        bda:LGB84A4F1F6B839138 ;
+        adm:logEntry        bda:LG8C6CB5D084C4F323 , bda:LGFAAD626AB0F6888E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV2B0B61E0CC991D9E
-        a                   :PersonOccupiesSeat ;
-        :eventWhere         bdr:G3190 .
+        a                   :PersonDeath ;
+        :onYear             "1998"^^xsd:gYear .
     
     bdr:EV8F774CD1398F85D0
         a                   :PersonEventNotSpecified ;
-        :notAfter           "1899"^^xsd:gYear ;
-        :notBefore          "1800"^^xsd:gYear .
+        :onYear             "1947"^^xsd:gYear .
+    
+    bdr:EVB84A4F1F6B839138
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G3190 .
     
     bdr:NM84126B81D2D4EA31
         a                   :PersonPrimaryName ;
@@ -45,6 +54,6 @@ bdg:P1KG16217 {
     bdr:P1KG16217  a        :Person ;
         skos:prefLabel      "blo bzang 'jam dbyangs bstan pa'i nyi ma/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV2B0B61E0CC991D9E , bdr:EV8F774CD1398F85D0 ;
+        :personEvent        bdr:EV2B0B61E0CC991D9E , bdr:EV8F774CD1398F85D0 , bdr:EVB84A4F1F6B839138 ;
         :personName         bdr:NM84126B81D2D4EA31 .
 }
