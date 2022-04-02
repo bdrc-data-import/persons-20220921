@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8890 {
-    bda:LGC0366423197F59C6
+    bda:LG922B58A09476A765
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGDE57E3D05FD1AA68
+    bda:LGB46DB4836B8DEAEF
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-01T07:37:06.282Z"^^xsd:dateTime ;
+        adm:logMessage      "released"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGB7ACA2832E43380B
         a                   adm:WithdrawData ;
         adm:logDate         "2007-05-01T01:44:33.437Z"^^xsd:dateTime ;
         adm:logMessage      "withdrawn"@en ;
@@ -25,21 +31,32 @@ bdg:P8890 {
     bda:P8890  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8890 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "0e/P8890.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8890 ;
-        adm:logEntry        bda:LGC0366423197F59C6 , bda:LGDE57E3D05FD1AA68 ;
+        adm:logEntry        bda:LG922B58A09476A765 , bda:LGB46DB4836B8DEAEF , bda:LGB7ACA2832E43380B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
-        adm:status          bda:StatusWithdrawn .
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVDE57E3D05FD1AA68
+        a                   :PersonBirth ;
+        :notAfter           "1299"^^xsd:gYear ;
+        :notBefore          "1200"^^xsd:gYear .
     
     bdr:NMEB8A4B42DD83E15D
         a                   :PersonPrimaryName ;
         rdfs:label          "dar pan a tsA rya/"@bo-x-ewts .
     
+    bdr:NTC0366423197F59C6
+        a                   :Note ;
+        :noteText           "Indian Padita"@en .
+    
     bdr:P8890  a            :Person ;
         skos:prefLabel      "dar pan a tsA rya/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTC0366423197F59C6 ;
+        :personEvent        bdr:EVDE57E3D05FD1AA68 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMEB8A4B42DD83E15D .
 }
