@@ -12,6 +12,12 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG1352 {
+    bda:LGA73D4B81AE89B2D6
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T21:55:34.591Z"^^xsd:dateTime ;
+        adm:logMessage      "added date"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:LGC10C7C8B46DDD593
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-01-08T11:57:10.115Z"^^xsd:dateTime ;
@@ -27,19 +33,17 @@ bdg:P1KG1352 {
     bda:P1KG1352  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG1352 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "ac/P1KG1352.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG1352 ;
-        adm:logEntry        bda:LGC10C7C8B46DDD593 , bda:LGC39DBCA5C36ABE7F ;
+        adm:logEntry        bda:LGA73D4B81AE89B2D6 , bda:LGC10C7C8B46DDD593 , bda:LGC39DBCA5C36ABE7F ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EVAD5D3550EDD57922
-        a                   :PersonBirth .
-    
     bdr:EVDB8DC8C51B3742B4
-        a                   :PersonDeath .
+        a                   :PersonBirth ;
+        :onYear             "1932"^^xsd:gYear .
     
     bdr:NM75C18E28E082FE44
         a                   :PersonPrimaryName ;
@@ -49,16 +53,20 @@ bdg:P1KG1352 {
         a                   :PersonPersonalName ;
         rdfs:label          "ding ri ngag dbang /"@bo-x-ewts .
     
+    bdr:NMAD5D3550EDD57922
+        a                   :PersonOtherName ;
+        rdfs:label          "dhingri ngawang"@en .
+    
     bdr:NTEA81DD4BD7774219
         a                   :Note ;
         :noteSource         bdr:MW1KG1350 ;
         :noteText           "biograph of dingri nawang"@en .
     
     bdr:P1KG1352  a         :Person ;
-        skos:prefLabel      "ngag dbang /"@bo-x-ewts ;
+        skos:prefLabel      "ngag dbang /"@bo-x-ewts , "dhingri ngawang"@en ;
         :isRoot             true ;
         :note               bdr:NTEA81DD4BD7774219 ;
-        :personEvent        bdr:EVAD5D3550EDD57922 , bdr:EVDB8DC8C51B3742B4 ;
+        :personEvent        bdr:EVDB8DC8C51B3742B4 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM75C18E28E082FE44 , bdr:NMA98B6F2D0217BFC9 .
+        :personName         bdr:NM75C18E28E082FE44 , bdr:NMA98B6F2D0217BFC9 , bdr:NMAD5D3550EDD57922 .
 }

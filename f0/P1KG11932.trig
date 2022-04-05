@@ -12,22 +12,33 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG11932 {
-    bda:LGC365C92C865468E6
+    bda:LG826AAB279919B4BE
         a                   adm:InitialDataCreation ;
         adm:logDate         "2012-02-21T10:40:47.447Z"^^xsd:dateTime ;
         adm:logMessage      "created person record"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGE5630D88EE2B9396
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T21:42:18.916Z"^^xsd:dateTime ;
+        adm:logMessage      "added cent."@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P1KG11932  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG11932 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "f0/P1KG11932.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG11932 ;
-        adm:logEntry        bda:LGC365C92C865468E6 ;
+        adm:logEntry        bda:LG826AAB279919B4BE , bda:LGE5630D88EE2B9396 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVC365C92C865468E6
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM74340991A9BF38A4
         a                   :PersonPrimaryName ;
@@ -52,5 +63,7 @@ bdg:P1KG11932 {
     bdr:P1KG11932  a        :Person ;
         skos:prefLabel      "blo yangs rgyal/"@bo-x-ewts , "lu ya jun"@zh-latn-pinyin-x-ndia ;
         :isRoot             true ;
+        :personEvent        bdr:EVC365C92C865468E6 ;
+        :personGender       bdr:GenderMale ;
         :personName         bdr:NM74340991A9BF38A4 , bdr:NM8046AD3D519996E9 , bdr:NM8D973DBE995AFA37 , bdr:NMD26C51224E6285ED , bdr:NMEDF62EBC581A9A10 .
 }

@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1KG1389 {
-    bda:LG53A78DE4FCA5A543
+    bda:LG0C866C144F7C3365
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T22:04:42.811Z"^^xsd:dateTime ;
+        adm:logMessage      "added dates"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG718CF2B2A2996AC2
         a                   adm:InitialDataCreation ;
         adm:logDate         "2009-01-21T16:16:24.386Z"^^xsd:dateTime ;
         adm:logMessage      "created person"@en ;
@@ -21,34 +27,39 @@ bdg:P1KG1389 {
     bda:P1KG1389  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1KG1389 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "f3/P1KG1389.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1KG1389 ;
-        adm:logEntry        bda:LG53A78DE4FCA5A543 ;
+        adm:logEntry        bda:LG0C866C144F7C3365 , bda:LG718CF2B2A2996AC2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV9A2BF2AD77C57F28
-        a                   :PersonBirth .
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
+    
+    bdr:EVD6E5B0F3DC7B0995
+        a                   :PersonDeath ;
+        :onYear             "1932"^^xsd:gYear .
     
     bdr:NM7CBA902311998478
         a                   :PersonPrimaryName ;
-        rdfs:label          "tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+        rdfs:label          "tshul khrims bstan pa'i rgyal mtshan།"@bo-x-ewts .
     
     bdr:NMCE22C28CB6E337B7
-        a                   :PersonPersonalName ;
-        rdfs:label          "gshen gyi dge sbyong pa tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts .
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "gshen gyi dge sbyong pa tshul khrims bstan pa'i rgyal mtshan།"@bo-x-ewts .
     
-    bdr:NTD6E5B0F3DC7B0995
+    bdr:NT53A78DE4FCA5A543
         a                   :Note ;
         :noteText           "a Bonpo master"@en .
     
     bdr:P1KG1389  a         :Person ;
-        skos:prefLabel      "tshul khrims bstan pa'i rgyal mtshan/"@bo-x-ewts ;
+        skos:prefLabel      "gshen gyi dge sbyong pa tshul khrims bstan pa'i rgyal mtshan།"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTD6E5B0F3DC7B0995 ;
-        :personEvent        bdr:EV9A2BF2AD77C57F28 ;
+        :note               bdr:NT53A78DE4FCA5A543 ;
+        :personEvent        bdr:EV9A2BF2AD77C57F28 , bdr:EVD6E5B0F3DC7B0995 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM7CBA902311998478 , bdr:NMCE22C28CB6E337B7 .
 }

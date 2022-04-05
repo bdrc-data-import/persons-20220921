@@ -12,33 +12,46 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P10188 {
-    bda:LG52D9D8B59AE2B797
+    bda:LG037657D9383DD298
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T14:56:08.276Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher and cent."@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LGDA7CE887FA6635C1
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P10188  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P10188 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "f2/P10188.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P10188 ;
-        adm:logEntry        bda:LG52D9D8B59AE2B797 ;
+        adm:logEntry        bda:LG037657D9383DD298 , bda:LGDA7CE887FA6635C1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV2208FE5B93B7FEC3
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
     bdr:NM7DCA5F6417742B7D
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "nam mkha' bsam grub rgyal mtshan/"@bo-x-ewts .
     
-    bdr:NT2208FE5B93B7FEC3
+    bdr:NT52D9D8B59AE2B797
         a                   :Note ;
         :noteText           "a bka' rgyud bla ma who transmitted both shangs pa and mar pa tearchings"@en .
     
     bdr:P10188  a           :Person ;
         skos:prefLabel      "nam mkha' bsam grub rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT2208FE5B93B7FEC3 ;
+        :note               bdr:NT52D9D8B59AE2B797 ;
+        :personEvent        bdr:EV2208FE5B93B7FEC3 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM7DCA5F6417742B7D .
+        :personName         bdr:NM7DCA5F6417742B7D ;
+        :personStudentOf    bdr:P10550 .
 }

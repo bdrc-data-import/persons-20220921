@@ -12,38 +12,57 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7314 {
-    bda:LG6894FBBC173F2086
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
-    
-    bda:LGB67F9F0FD3C16646
+    bda:LG175F9E7EA871644C
         a                   adm:UpdateData ;
-        adm:logDate         "2012-08-13T17:16:07.558Z"^^xsd:dateTime ;
-        adm:logMessage      "change nonSubject to nonActor"@en .
+        adm:logDate         "2022-04-04T11:23:32.439Z"^^xsd:dateTime ;
+        adm:logMessage      "added years"@en ;
+        adm:logWho          bdu:U00016 .
     
-    bda:LGE510F50027D94791
+    bda:LG86AE47E8209B7F7E
         a                   adm:UpdateData ;
         adm:logDate         "2012-08-13T16:20:11.527Z"^^xsd:dateTime ;
         adm:logMessage      "marked as non subject"@en .
     
+    bda:LG93CF70AA19E7FF48
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-08-13T17:16:07.558Z"^^xsd:dateTime ;
+        adm:logMessage      "change nonSubject to nonActor"@en .
+    
+    bda:LGDCC65837A242DBFF
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:P7314  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7314 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "7c/P7314.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7314 ;
-        adm:logEntry        bda:LG6894FBBC173F2086 , bda:LGB67F9F0FD3C16646 , bda:LGE510F50027D94791 ;
+        adm:logEntry        bda:LG175F9E7EA871644C , bda:LG86AE47E8209B7F7E , bda:LG93CF70AA19E7FF48 , bda:LGDCC65837A242DBFF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV6894FBBC173F2086
+        a                   :PersonDeath ;
+        :onYear             "1999"^^xsd:gYear .
+    
+    bdr:EVB67F9F0FD3C16646
+        a                   :PersonBirth ;
+        :onYear             "1946"^^xsd:gYear .
+    
     bdr:NME4ED5F4ABCE1D717
-        a                   :PersonPersonalName ;
-        rdfs:label          "aris, michael/"@bo-x-ewts .
+        a                   :PersonPrimaryName ;
+        rdfs:label          "michael vaillancourt aris"@en .
+    
+    bdr:NME510F50027D94791
+        a                   :PersonReversal ;
+        rdfs:label          "aris, michael"@en .
     
     bdr:P7314  a            :Person ;
-        skos:prefLabel      "aris, michael/"@bo-x-ewts ;
+        skos:prefLabel      "michael vaillancourt aris"@en ;
         :isRoot             true ;
+        :personEvent        bdr:EV6894FBBC173F2086 , bdr:EVB67F9F0FD3C16646 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NME4ED5F4ABCE1D717 .
+        :personName         bdr:NME4ED5F4ABCE1D717 , bdr:NME510F50027D94791 .
 }

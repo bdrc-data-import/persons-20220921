@@ -12,41 +12,59 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P1022 {
-    bda:LG71EF23FE14E12EFE
+    bda:LG2600D1463EAEFE2D
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG5F8E75CF0B8E4D99
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T15:25:01.766Z"^^xsd:dateTime ;
+        adm:logMessage      "added other name and cent."@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P1022  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P1022 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "d6/P1022.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P1022 ;
-        adm:logEntry        bda:LG71EF23FE14E12EFE ;
+        adm:logEntry        bda:LG2600D1463EAEFE2D , bda:LG5F8E75CF0B8E4D99 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVE5D9076D3993199F
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
+    
     bdr:NM0D11219C4CA78A12
-        a                   :PersonPersonalName ;
-        rdfs:label          "sngon mo, lha btsun/"@bo-x-ewts .
+        a                   :PersonOtherName ;
+        rdfs:label          "lha dbang rgya mtsho blo gros/"@bo-x-ewts .
     
     bdr:NM194C3EF3A4BF4F04
         a                   :PersonPrimaryName ;
         rdfs:label          "lha btsun sngon po/"@bo-x-ewts .
     
-    bdr:NTACA37C3FDB166885
+    bdr:NT71EF23FE14E12EFE
         a                   :Note ;
         :noteText           "MR: 11th or 12th century"@en .
     
-    bdr:NTE5D9076D3993199F
+    bdr:NT79B9AAE55ED2018C
+        a                   :Note ;
+        :contentLocationStatement  "p. 43" ;
+        :noteSource         bdr:MW00KG09761 ;
+        :noteText           "other name on page 43."@en .
+    
+    bdr:NTACA37C3FDB166885
         a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Rnying-ma\n\n-- Gter-ma"@en .
     
     bdr:P1022  a            :Person ;
         skos:prefLabel      "lha btsun sngon po/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTACA37C3FDB166885 , bdr:NTE5D9076D3993199F ;
+        :note               bdr:NT71EF23FE14E12EFE , bdr:NT79B9AAE55ED2018C , bdr:NTACA37C3FDB166885 ;
+        :personEvent        bdr:EVE5D9076D3993199F ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM0D11219C4CA78A12 , bdr:NM194C3EF3A4BF4F04 .
 }

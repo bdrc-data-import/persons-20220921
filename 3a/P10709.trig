@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P10709 {
-    bda:LG8A32BA2829D21BE9
+    bda:LG36F96BBDDA416F89
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG4FEBC7B755307E55
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T15:49:40.532Z"^^xsd:dateTime ;
+        adm:logMessage      "added teacher, cent. and note"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P10709  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P10709 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "3a/P10709.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P10709 ;
-        adm:logEntry        bda:LG8A32BA2829D21BE9 ;
+        adm:logEntry        bda:LG36F96BBDDA416F89 , bda:LG4FEBC7B755307E55 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV533EE82B4B2C14D6
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
     
     bdr:NMCCF8813127FCB975
         a                   :PersonPrimaryTitle ;
@@ -35,14 +46,22 @@ bdg:P10709 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bsod nams dpal/"@bo-x-ewts .
     
-    bdr:NT533EE82B4B2C14D6
+    bdr:NT8A32BA2829D21BE9
         a                   :Note ;
         :noteText           "follower of the mar pa bka' brgyud tradition"@en .
+    
+    bdr:NTD153E18854AFB975
+        a                   :Note ;
+        :contentLocationStatement  "v. 31, pp. 117" ;
+        :noteSource         bdr:MW1PD180878 ;
+        :noteText           "Source of teacher and date"@en .
     
     bdr:P10709  a           :Person ;
         skos:prefLabel      "chos sgo ba bsod nams dpal/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT533EE82B4B2C14D6 ;
+        :note               bdr:NT8A32BA2829D21BE9 , bdr:NTD153E18854AFB975 ;
+        :personEvent        bdr:EV533EE82B4B2C14D6 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMCCF8813127FCB975 , bdr:NMF693A214BF0EAF90 .
+        :personName         bdr:NMCCF8813127FCB975 , bdr:NMF693A214BF0EAF90 ;
+        :personStudentOf    bdr:P127 .
 }

@@ -12,20 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7867 {
-    bda:LG069DBF87F12D25BE
+    bda:LG6A7EA5BC682C1928
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG6B239220FF88B72B
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-04T11:25:27.99Z"^^xsd:dateTime ;
+        adm:logMessage      "added birth year"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P7867  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7867 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "a4/P7867.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7867 ;
-        adm:logEntry        bda:LG069DBF87F12D25BE ;
+        adm:logEntry        bda:LG6A7EA5BC682C1928 , bda:LG6B239220FF88B72B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV069DBF87F12D25BE
+        a                   :PersonBirth ;
+        :onYear             "1717"^^xsd:gYear .
     
     bdr:NMA093B644D9041481
         a                   :PersonPersonalName ;
@@ -34,6 +44,7 @@ bdg:P7867 {
     bdr:P7867  a            :Person ;
         skos:prefLabel      "'jigs med 'phrin las rnam rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV069DBF87F12D25BE ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMA093B644D9041481 .
 }
