@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7856 {
-    bda:LG281A172DDB63301A
+    bda:LG12E875B932DE2F50
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T13:43:51.626Z"^^xsd:dateTime ;
+        adm:logMessage      "added century, place of birth, teacher, note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG60EA61ADF9F556AD
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG738C0635D3898A68
+    bda:LGB4F4EBF1C1DB2891
         a                   adm:UpdateData ;
         adm:logDate         "2008-11-17T07:20:01.828Z"^^xsd:dateTime ;
         adm:logMessage      "removed karma to karma"@en ;
@@ -25,13 +31,19 @@ bdg:P7856 {
     bda:P7856  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7856 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "e1/P7856.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7856 ;
-        adm:logEntry        bda:LG281A172DDB63301A , bda:LG738C0635D3898A68 ;
+        adm:logEntry        bda:LG12E875B932DE2F50 , bda:LG60EA61ADF9F556AD , bda:LGB4F4EBF1C1DB2891 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV738C0635D3898A68
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G1366 ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
     
     bdr:NM1B0DF55524F2F50A
         a                   :PersonPrimaryTitle ;
@@ -41,9 +53,16 @@ bdg:P7856 {
         a                   :PersonPrimaryName ;
         rdfs:label          "karma bstan 'dzin/"@bo-x-ewts .
     
+    bdr:NT281A172DDB63301A
+        a                   :Note ;
+        :noteText           "born in the klu dga' clan\nage nine went to central Tibetn\nvisited pilgrimage sites in kham, china, four horn of central Tibet, Nepal, Mount Kailash and Mansarovar lake, \nfrom Ngari Guge reached Garsha or Lahaul\nwent to Zanskar to receive teaching from Lama Zhedpa Dorjee Rinpoche\nvisited Jalandhar"@en .
+    
     bdr:P7856  a            :Person ;
         skos:prefLabel      "zangs dkar bla ma karma bstan 'dzin/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT281A172DDB63301A ;
+        :personEvent        bdr:EV738C0635D3898A68 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM1B0DF55524F2F50A , bdr:NMD59701D221AA236B .
+        :personName         bdr:NM1B0DF55524F2F50A , bdr:NMD59701D221AA236B ;
+        :personStudentOf    bdr:P828 , bdr:P841 .
 }

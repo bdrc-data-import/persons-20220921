@@ -12,28 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7850 {
-    bda:LG92903A81E70E8485
+    bda:LG2356F1CE3C2CF045
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG5C71110645243657
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T13:23:36.044Z"^^xsd:dateTime ;
+        adm:logMessage      "added name and century"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P7850  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7850 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "ae/P7850.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7850 ;
-        adm:logEntry        bda:LG92903A81E70E8485 ;
+        adm:logEntry        bda:LG2356F1CE3C2CF045 , bda:LG5C71110645243657 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV87AE4F3C34FB2D07
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
     
     bdr:NM10898D1360106FA5
         a                   :PersonPersonalName ;
         rdfs:label          "ri khrod dbang phyug"@bo-x-ewts .
     
+    bdr:NM92903A81E70E8485
+        a                   :PersonPersonalName ;
+        rdfs:label          "g.yung drung dpal/"@bo-x-ewts .
+    
     bdr:P7850  a            :Person ;
         skos:prefLabel      "ri khrod dbang phyug"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV87AE4F3C34FB2D07 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM10898D1360106FA5 .
+        :personName         bdr:NM10898D1360106FA5 , bdr:NM92903A81E70E8485 .
 }

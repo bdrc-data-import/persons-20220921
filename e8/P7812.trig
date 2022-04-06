@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7812 {
-    bda:LG9DB3D0CB84B2723F
+    bda:LG72A14E7E0CCBDC96
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T09:04:17.465Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG99CAD204DEF28B1D
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7812  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7812 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "e8/P7812.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7812 ;
-        adm:logEntry        bda:LG9DB3D0CB84B2723F ;
+        adm:logEntry        bda:LG72A14E7E0CCBDC96 , bda:LG99CAD204DEF28B1D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV9DB3D0CB84B2723F
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM1A2CF231A515640D
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P7812 {
     bdr:P7812  a            :Person ;
         skos:prefLabel      "blo gling tre hor blo bzang thabs mkhas/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV9DB3D0CB84B2723F ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1A2CF231A515640D , bdr:NM80AFC449E5D9C506 .
 }

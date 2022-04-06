@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P5010 {
-    bda:LG232E2E73CFE5BD75
+    bda:LG0BF87D71EA6F9FEB
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGE68FF8D6CAB159AE
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T09:50:35.644Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P5010  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P5010 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "26/P5010.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P5010 ;
-        adm:logEntry        bda:LG232E2E73CFE5BD75 ;
+        adm:logEntry        bda:LG0BF87D71EA6F9FEB , bda:LGE68FF8D6CAB159AE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV300CF04471594C53
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
     
     bdr:NM79BFC295880CBE8C
         a                   :PersonTitle ;
@@ -39,20 +50,27 @@ bdg:P5010 {
         a                   :PersonPrimaryName ;
         rdfs:label          "phyag rdor mgon po/"@bo-x-ewts .
     
-    bdr:NT300CF04471594C53
-        a                   :Note ;
-        :noteText           "physician"@en .
-    
-    bdr:NTDE2A824A4BD2C9A9
+    bdr:NT232E2E73CFE5BD75
         a                   :Note ;
         :contentLocationStatement  "p. 166" ;
         :noteSource         bdr:MW19835 ;
         :noteText           "biobibliography"@en .
     
+    bdr:NTB0183EA8F6B00AF9
+        a                   :Note ;
+        :contentLocationStatement  "p. 1 (4th group)" ;
+        :noteSource         bdr:MW1GS8 ;
+        :noteText           "རྩོམ་པ་པོ ༼ཕྱག་རྡོར་མགོན་པོ༽ ངོ་སྤྲོད་མདོར་བསྡུས།"@bo .
+    
+    bdr:NTDE2A824A4BD2C9A9
+        a                   :Note ;
+        :noteText           "physician"@en .
+    
     bdr:P5010  a            :Person ;
         skos:prefLabel      "zur 'tsho ba phyag rdor mgon po/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT300CF04471594C53 , bdr:NTDE2A824A4BD2C9A9 ;
+        :note               bdr:NT232E2E73CFE5BD75 , bdr:NTB0183EA8F6B00AF9 , bdr:NTDE2A824A4BD2C9A9 ;
+        :personEvent        bdr:EV300CF04471594C53 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM79BFC295880CBE8C , bdr:NMA0AAC3A88DDDDA0F , bdr:NMACEB4826EBAB92D6 .
 }

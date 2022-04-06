@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P5012 {
-    bda:LG0C4B898E3E8BC21E
+    bda:LG2790E52456A9748C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG7A9D153E642F35A3
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T09:50:35.851Z"^^xsd:dateTime ;
+        adm:logMessage      "test"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P5012  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P5012 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "15/P5012.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P5012 ;
-        adm:logEntry        bda:LG0C4B898E3E8BC21E ;
+        adm:logEntry        bda:LG2790E52456A9748C , bda:LG7A9D153E642F35A3 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVA4B75944F02C5F90
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
     
     bdr:NM93375965556FC347
         a                   :PersonPrimaryTitle ;
@@ -37,18 +48,19 @@ bdg:P5012 {
     
     bdr:NT063AA8635BB73AB7
         a                   :Note ;
+        :noteText           "famous figure in the transmission of tibetan medicine"@en .
+    
+    bdr:NT0C4B898E3E8BC21E
+        a                   :Note ;
         :contentLocationStatement  "p. 168" ;
         :noteSource         bdr:MW19835 ;
         :noteText           "bio-bibliography"@en .
     
-    bdr:NTA4B75944F02C5F90
-        a                   :Note ;
-        :noteText           "famous figure in the transmission of tibetan medicine"@en .
-    
     bdr:P5012  a            :Person ;
         skos:prefLabel      "bi ji tsan pa shi la ha/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT063AA8635BB73AB7 , bdr:NTA4B75944F02C5F90 ;
+        :note               bdr:NT063AA8635BB73AB7 , bdr:NT0C4B898E3E8BC21E ;
+        :personEvent        bdr:EVA4B75944F02C5F90 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM93375965556FC347 , bdr:NMB71A02A13EEE5D2F .
 }

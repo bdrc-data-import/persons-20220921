@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7807 {
-    bda:LG8DDD8AC7A091E1E2
+    bda:LG619DF1DE0001EEE1
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-05T08:33:46.223Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and teacher"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGABD40FB24F567803
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7807  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7807 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "d3/P7807.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7807 ;
-        adm:logEntry        bda:LG8DDD8AC7A091E1E2 ;
+        adm:logEntry        bda:LG619DF1DE0001EEE1 , bda:LGABD40FB24F567803 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV8DDD8AC7A091E1E2
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
     
     bdr:NM3E7F889C0659ACE2
         a                   :PersonPersonalName ;
@@ -38,6 +49,8 @@ bdg:P7807 {
     bdr:P7807  a            :Person ;
         skos:prefLabel      "blo bzang thogs med/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV8DDD8AC7A091E1E2 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM3E7F889C0659ACE2 , bdr:NM85D05B041B28AD9D .
+        :personName         bdr:NM3E7F889C0659ACE2 , bdr:NM85D05B041B28AD9D ;
+        :personStudentOf    bdr:P108 .
 }
