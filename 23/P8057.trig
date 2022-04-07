@@ -14,46 +14,57 @@
 bdg:P8057 {
     bda:LG092F2D8C18A07F9A
         a                   adm:UpdateData ;
-        adm:logDate         "2012-10-02T12:15:04.436Z"^^xsd:dateTime ;
-        adm:logMessage      "ཡིག་ནོར་"@en ;
-        adm:logWho          bdu:U00013 .
-    
-    bda:LG5442CE6D9762D986
-        a                   adm:UpdateData ;
-        adm:logDate         "2012-10-04T09:49:33.191Z"^^xsd:dateTime ;
-        adm:logMessage      "ཤད་འཐེན་པ་"@en ;
-        adm:logWho          bdu:U00013 .
-    
-    bda:LG611C6A48BF7B4F37
-        a                   adm:UpdateData ;
         adm:logDate         "2012-02-29T12:44:24.744Z"^^xsd:dateTime ;
         adm:logMessage      "added 20th cent."@en ;
         adm:logWho          bdu:U00016 .
     
-    bda:LGA3C96E00712A9809
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
+    bda:LG0F10B8D3CE19564E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-06T13:50:00.067Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth and death also note"@en ;
+        adm:logWho          bdu:U00019 .
     
-    bda:LGCE33D652CD8D9E56
+    bda:LG5442CE6D9762D986
         a                   adm:UpdateData ;
         adm:logDate         "2012-02-29T15:57:51.671Z"^^xsd:dateTime ;
         adm:logMessage      "added grammatical name"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LG66898B3DA5DA091B
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
+    bda:LGA3C96E00712A9809
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-10-02T12:15:04.436Z"^^xsd:dateTime ;
+        adm:logMessage      "ཡིག་ནོར་"@en ;
+        adm:logWho          bdu:U00013 .
+    
+    bda:LGDDE1832326C3923E
+        a                   adm:UpdateData ;
+        adm:logDate         "2012-10-04T09:49:33.191Z"^^xsd:dateTime ;
+        adm:logMessage      "ཤད་འཐེན་པ་"@en ;
+        adm:logWho          bdu:U00013 .
+    
     bda:P8057  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8057 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      13 ;
         adm:gitPath         "23/P8057.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8057 ;
-        adm:logEntry        bda:LG092F2D8C18A07F9A , bda:LG5442CE6D9762D986 , bda:LG611C6A48BF7B4F37 , bda:LGA3C96E00712A9809 , bda:LGCE33D652CD8D9E56 ;
+        adm:logEntry        bda:LG092F2D8C18A07F9A , bda:LG0F10B8D3CE19564E , bda:LG5442CE6D9762D986 , bda:LG66898B3DA5DA091B , bda:LGA3C96E00712A9809 , bda:LGDDE1832326C3923E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV611C6A48BF7B4F37
+        a                   :PersonDeath ;
+        :onYear             "1985"^^xsd:gYear .
+    
     bdr:EVFF0E2A06A8C0EECE
         a                   :PersonBirth ;
-        :eventWhen          "20thcent."^^<http://id.loc.gov/datatypes/edtf> .
+        :notAfter           "1954"^^xsd:gYear ;
+        :notBefore          "1953"^^xsd:gYear .
     
     bdr:NM1A2FFC65872CC695
         a                   :PersonGrammatical ;
@@ -67,10 +78,15 @@ bdg:P8057 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "'ba' don grub rgyal/"@bo-x-ewts .
     
+    bdr:NTCE33D652CD8D9E56
+        a                   :Note ;
+        :noteText           "seems to be duplicate of P5110"@en .
+    
     bdr:P8057  a            :Person ;
         skos:prefLabel      "'ba' don grub rgyal/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EVFF0E2A06A8C0EECE ;
+        :note               bdr:NTCE33D652CD8D9E56 ;
+        :personEvent        bdr:EV611C6A48BF7B4F37 , bdr:EVFF0E2A06A8C0EECE ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1A2FFC65872CC695 , bdr:NM27369AC827AF4EB3 , bdr:NM3A86346D8BFFE7D6 .
 }

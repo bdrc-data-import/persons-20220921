@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7862 {
-    bda:LG3CAC5C36D886631E
+    bda:LG1C53B5AE07A2FD21
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-06T08:20:45.205Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG7C4B37E7A0DFB180
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7862  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7862 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "90/P7862.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7862 ;
-        adm:logEntry        bda:LG3CAC5C36D886631E ;
+        adm:logEntry        bda:LG1C53B5AE07A2FD21 , bda:LG7C4B37E7A0DFB180 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV3CAC5C36D886631E
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
     
     bdr:NM0625E0E371D59D88
         a                   :PersonPrimaryTitle ;
@@ -39,9 +50,15 @@ bdg:P7862 {
         a                   :PersonPersonalName ;
         rdfs:label          "dge 'dun/"@bo-x-ewts .
     
+    bdr:NTB8C719DB6D20A1D0
+        a                   :Note ;
+        :noteText           "born in sga stod in Kham"@en .
+    
     bdr:P7862  a            :Person ;
         skos:prefLabel      "sga stod gnas bzang ba dge 'dun/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTB8C719DB6D20A1D0 ;
+        :personEvent        bdr:EV3CAC5C36D886631E ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM0625E0E371D59D88 , bdr:NMEB66E3A119D90436 , bdr:NMFF123B5BB2775388 .
 }

@@ -12,26 +12,40 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8258 {
-    bda:LG5E3DC3668AD12478
+    bda:LG5B1A2E562BAB52C9
         a                   adm:UpdateData ;
         adm:logDate         "2012-08-21T14:52:41.266Z"^^xsd:dateTime ;
         adm:logWho          bdu:U00021 .
     
-    bda:LGC043A35D0D7BD5A4
+    bda:LG5B7671F6F4A07DEE
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-06T14:11:04.759Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth and death, also note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG876FD69DD0F5DA6C
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P8258  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8258 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "c9/P8258.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8258 ;
-        adm:logEntry        bda:LG5E3DC3668AD12478 , bda:LGC043A35D0D7BD5A4 ;
+        adm:logEntry        bda:LG5B1A2E562BAB52C9 , bda:LG5B7671F6F4A07DEE , bda:LG876FD69DD0F5DA6C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:seeOtherToL     "https://treasuryoflives.org/biographies/view/Hortsun-Tenzin-Lodro-Gyatso/10961"^^xsd:anyURI ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV5E3DC3668AD12478
+        a                   :PersonDeath ;
+        :onYear             "1975"^^xsd:gYear .
+    
+    bdr:EVC61F4276FC17CD8D
+        a                   :PersonBirth ;
+        :onYear             "1888"^^xsd:gYear .
     
     bdr:NM016AC453943E40E1
         a                   :PersonPrimaryTitle ;
@@ -45,14 +59,19 @@ bdg:P8258 {
         a                   :PersonGrammatical ;
         rdfs:label          "smra dbang kun dga' rang grol/"@bo-x-ewts .
     
-    bdr:NTC61F4276FC17CD8D
+    bdr:NT43DB17DB5ED2B018
+        a                   :Note ;
+        :noteText           "a mdo zung chu skyang tshang hor ba tshang du 'khrungs/\nskyang tshang dgon du bon sgo zhugs/"@bo-x-ewts .
+    
+    bdr:NTC043A35D0D7BD5A4
         a                   :Note ;
         :noteText           "this was a bon monk who describes himself and his birth year: g.yung drung gling ngam dpal gshen bstan rnam rgyal kun grags gling rab 'byams pa ho btsun bstan 'dzin rgya mtsho'i brda sprod pa'i lung las smra dbang kun dga' rang grol 'bod pa des rang lo don drug khro mo 'am kun dga' zhes shing pho 'brug gi hor zla bdun pa'i tshes gyi dkar phyogs rgyas pa gnyis pa'i gdugs la ye shes dbal mo'i zhal lung bzhin du bskrun pa..."@en .
     
     bdr:P8258  a            :Person ;
         skos:prefLabel      "ho btsun bstan 'dzin blo gros rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTC61F4276FC17CD8D ;
+        :note               bdr:NT43DB17DB5ED2B018 , bdr:NTC043A35D0D7BD5A4 ;
+        :personEvent        bdr:EV5E3DC3668AD12478 , bdr:EVC61F4276FC17CD8D ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM016AC453943E40E1 , bdr:NMD5EE2865DA3D6751 , bdr:NMF803EFA349691AA5 .
 }
