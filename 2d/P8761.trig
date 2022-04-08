@@ -12,28 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8761 {
-    bda:LG3CD60152EB599FD0
+    bda:LG92CBAEE84D2E58F4
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGCABD1BF05524E2BF
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T10:44:55.146Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and name"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P8761  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8761 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "2d/P8761.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8761 ;
-        adm:logEntry        bda:LG3CD60152EB599FD0 ;
+        adm:logEntry        bda:LG92CBAEE84D2E58F4 , bda:LGCABD1BF05524E2BF ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVC62486A7FB27AA06
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
+    
+    bdr:NM3CD60152EB599FD0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "rnal 'byor pa las rab rdo rje/"@bo-x-ewts .
+    
     bdr:NMADEC77F3BC630783
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "las rab rdo rje/"@bo-x-ewts .
     
     bdr:P8761  a            :Person ;
-        skos:prefLabel      "las rab rdo rje/"@bo-x-ewts ;
+        skos:prefLabel      "rnal 'byor pa las rab rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EVC62486A7FB27AA06 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMADEC77F3BC630783 .
+        :personName         bdr:NM3CD60152EB599FD0 , bdr:NMADEC77F3BC630783 .
 }

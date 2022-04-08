@@ -12,22 +12,33 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2KG230113 {
-    bda:LG796E71BE8EFED0E3
+    bda:LG3C13F1F67FE1BA13
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-01-31T13:27:48.49Z"^^xsd:dateTime ;
         adm:logMessage      "person record"@en ;
         adm:logWho          bdu:U00016 .
     
+    bda:LGBE00EACF9746447E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T11:30:01.593Z"^^xsd:dateTime ;
+        adm:logMessage      "added cents and note"@en ;
+        adm:logWho          bdu:U00016 .
+    
     bda:P2KG230113  a       adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2KG230113 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "07/P2KG230113.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2KG230113 ;
-        adm:logEntry        bda:LG796E71BE8EFED0E3 ;
+        adm:logEntry        bda:LG3C13F1F67FE1BA13 , bda:LGBE00EACF9746447E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV77895FCE035F56B2
+        a                   :PersonBirth ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
     
     bdr:NM685A93F950008A18
         a                   :PersonPrimaryName ;
@@ -37,13 +48,14 @@ bdg:P2KG230113 {
         a                   :PersonOtherName ;
         rdfs:label          "grags pa rdo rje/"@bo-x-ewts .
     
-    bdr:NT77895FCE035F56B2
+    bdr:NT796E71BE8EFED0E3
         a                   :Note ;
-        :noteText           "Mongolian scholar, date unknown"@en .
+        :noteText           "Author's dictionary was published between 1750 and 1930."@en .
     
     bdr:P2KG230113  a       :Person ;
         skos:prefLabel      "kIrti badz+ra/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT77895FCE035F56B2 ;
+        :note               bdr:NT796E71BE8EFED0E3 ;
+        :personEvent        bdr:EV77895FCE035F56B2 ;
         :personName         bdr:NM685A93F950008A18 , bdr:NMC6E7403DA9A1E092 .
 }

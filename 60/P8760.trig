@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8760 {
-    bda:LGD9C4CA1607DA826D
+    bda:LG61A43B86239A4A25
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGF24F968400DC641F
+    bda:LGA6982B68D5058E0B
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T10:40:01.649Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGD9C4CA1607DA826D
         a                   adm:UpdateData ;
         adm:logDate         "2015-07-15T12:45:26.928Z"^^xsd:dateTime ;
         adm:logMessage      "added other name"@en ;
@@ -25,13 +31,18 @@ bdg:P8760 {
     bda:P8760  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8760 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "60/P8760.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8760 ;
-        adm:logEntry        bda:LGD9C4CA1607DA826D , bda:LGF24F968400DC641F ;
+        adm:logEntry        bda:LG61A43B86239A4A25 , bda:LGA6982B68D5058E0B , bda:LGD9C4CA1607DA826D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVF24F968400DC641F
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM00C7037311D757A3
         a                   :PersonPrimaryName ;
@@ -44,6 +55,7 @@ bdg:P8760 {
     bdr:P8760  a            :Person ;
         skos:prefLabel      "'phrin las chos 'phel/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EVF24F968400DC641F ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM00C7037311D757A3 , bdr:NM6A0FAEE0B98620C1 .
 }

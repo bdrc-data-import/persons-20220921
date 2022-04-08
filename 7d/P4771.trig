@@ -12,24 +12,39 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P4771 {
-    bda:LG8DD0EDDA2D2C6278
+    bda:LG680E9B9167F836BF
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T12:11:24.206Z"^^xsd:dateTime ;
+        adm:logMessage      "added cent. and teacher"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG961AD6BA44EB7AE2
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P4771  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4771 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "7d/P4771.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4771 ;
-        adm:logEntry        bda:LG8DD0EDDA2D2C6278 ;
+        adm:logEntry        bda:LG680E9B9167F836BF , bda:LG961AD6BA44EB7AE2 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV1CC0CE4B1E2422A0
+    bdr:EV8DD0EDDA2D2C6278
+        a                   :PersonBirth ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
+    
+    bdr:EVA7E68F4B081B03CB
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G104 .
+    
+    bdr:NM1CC0CE4B1E2422A0
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "grwa chung pa yon tan rgya mtsho/"@bo-x-ewts .
     
     bdr:NM53AA3EC504560349
         a                   :PersonPrimaryName ;
@@ -42,8 +57,9 @@ bdg:P4771 {
     bdr:P4771  a            :Person ;
         skos:prefLabel      "gra chung pa yon tan rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV1CC0CE4B1E2422A0 ;
+        :personEvent        bdr:EV8DD0EDDA2D2C6278 , bdr:EVA7E68F4B081B03CB ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM53AA3EC504560349 , bdr:NM7AF6559C03B6FE0A ;
+        :personName         bdr:NM1CC0CE4B1E2422A0 , bdr:NM53AA3EC504560349 , bdr:NM7AF6559C03B6FE0A ;
+        :personStudentOf    bdr:P65 ;
         :personTeacherOf    bdr:P4928 .
 }

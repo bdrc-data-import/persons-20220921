@@ -12,28 +12,50 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8838 {
-    bda:LG486C323DACFDA2DC
+    bda:LG2FC2EDF7B3369F9B
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T13:20:02.885Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth/death, place of birth, also note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGE915971C79F0F556
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P8838  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8838 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "8f/P8838.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8838 ;
-        adm:logEntry        bda:LG486C323DACFDA2DC ;
+        adm:logEntry        bda:LG2FC2EDF7B3369F9B , bda:LGE915971C79F0F556 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV486C323DACFDA2DC
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G3165 ;
+        :onYear             "1203"^^xsd:gYear .
+    
+    bdr:EV4DD1EEFF48818DBB
+        a                   :PersonDeath ;
+        :notAfter           "1264"^^xsd:gYear ;
+        :notBefore          "1252"^^xsd:gYear .
     
     bdr:NM0189895653B22222
         a                   :PersonPersonalName ;
         rdfs:label          "rdo rje mdzes 'od/"@bo-x-ewts .
     
+    bdr:NT64A19E353B974760
+        a                   :Note ;
+        :noteText           "early drikung kayyu master\nborn in Purang in western Tibet\nguzur phuk monastery\n\nSee \nmnga' ris dgon sde'i dkar chag/ stod cha, p. 88-92\nstod mnga' ris gu ge'i ma nam byang chub dge gnas gling dgon pa'i chags rabs kyi lo rgyus yig rigs phyogs bsrigs bde bar bzhugs/, p, 41, 63\ngangs can mkhas grub rim byon ming mdzod/, p. 280-281"@en .
+    
     bdr:P8838  a            :Person ;
         skos:prefLabel      "rdo rje mdzes 'od/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT64A19E353B974760 ;
+        :personEvent        bdr:EV486C323DACFDA2DC , bdr:EV4DD1EEFF48818DBB ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM0189895653B22222 .
 }

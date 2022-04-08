@@ -12,24 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P2GS1011 {
-    bda:LG827EB567EFF4DE2E
+    bda:LG18A520EE13AB4A52
         a                   adm:InitialDataCreation ;
         adm:logDate         "2010-05-11T16:53:12.93Z"^^xsd:dateTime ;
         adm:logMessage      "created"@en ;
         adm:logWho          bdu:U00001 .
     
+    bda:LG233BF0C38CC38693
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T10:31:19.653Z"^^xsd:dateTime ;
+        adm:logMessage      "added student and note"@en ;
+        adm:logWho          bdu:U00007 .
+    
     bda:P2GS1011  a         adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P2GS1011 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "56/P2GS1011.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P2GS1011 ;
-        adm:logEntry        bda:LG827EB567EFF4DE2E ;
+        adm:logEntry        bda:LG18A520EE13AB4A52 , bda:LG233BF0C38CC38693 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV8CF2C1CCC8A98C19
+    bdr:EVC9869D84FF9260EF
         a                   :PersonEventNotSpecified ;
         :notAfter           "1599"^^xsd:gYear ;
         :notBefore          "1400"^^xsd:gYear .
@@ -38,18 +44,29 @@ bdg:P2GS1011 {
         a                   :PersonPrimaryName ;
         rdfs:label          "bde bzang pa/"@bo-x-ewts .
     
+    bdr:NM8CF2C1CCC8A98C19
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "paN chen bde bzang pa/"@bo-x-ewts .
+    
     bdr:NMB3B79B5B5BB583B9
-        a                   :PersonPrimaryName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "rab 'byam pa bde bzang pa/"@bo-x-ewts .
     
-    bdr:NTC9869D84FF9260EF
+    bdr:NT827EB567EFF4DE2E
         a                   :Note ;
         :noteText           "teacher at whose behest the 4th zhwa dmar chos grags ye shes wrote his commentary on the dwags po'i chos bzhi"@en .
     
+    bdr:NT8867B86A43B4EF2E
+        a                   :Note ;
+        :contentLocationStatement  "p. 19" ;
+        :noteSource         bdr:MW1KG9259 ;
+        :noteText           "rje karma phrin las pas paN chen bde bznag pa la \"ka la pa dang sum rtags sogs thun mong rig pa'i skor rnams zhus/\" zhes gsal/"@en .
+    
     bdr:P2GS1011  a         :Person ;
-        skos:prefLabel      "bde bzang pa/"@bo-x-ewts ;
+        skos:prefLabel      "rab 'byam pa bde bzang pa/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTC9869D84FF9260EF ;
-        :personEvent        bdr:EV8CF2C1CCC8A98C19 ;
-        :personName         bdr:NM5CBCAB2B5C314A9B , bdr:NMB3B79B5B5BB583B9 .
+        :note               bdr:NT827EB567EFF4DE2E , bdr:NT8867B86A43B4EF2E ;
+        :personEvent        bdr:EVC9869D84FF9260EF ;
+        :personName         bdr:NM5CBCAB2B5C314A9B , bdr:NM8CF2C1CCC8A98C19 , bdr:NMB3B79B5B5BB583B9 ;
+        :personTeacherOf    bdr:P815 .
 }

@@ -12,28 +12,48 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7571 {
-    bda:LG9F13370959DCAE38
+    bda:LG844EB461205B0245
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T10:56:31.316Z"^^xsd:dateTime ;
+        adm:logMessage      "added student with note"@en ;
+        adm:logWho          bdu:U00007 .
+    
+    bda:LGC312B91F456158E8
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7571  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7571 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "6e/P7571.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7571 ;
-        adm:logEntry        bda:LG9F13370959DCAE38 ;
+        adm:logEntry        bda:LG844EB461205B0245 , bda:LGC312B91F456158E8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV9F13370959DCAE38
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1499"^^xsd:gYear ;
+        :notBefore          "1400"^^xsd:gYear .
     
     bdr:NMD9150B9F923730EF
         a                   :PersonPersonalName ;
         rdfs:label          "don grub rgyal mtshan/"@bo-x-ewts .
     
+    bdr:NTB6E25DEE17B5E3A6
+        a                   :Note ;
+        :contentLocationStatement  "19 p." ;
+        :noteSource         bdr:MW1KG9259 ;
+        :noteText           "rje kar ma 'phrin las pa yis rje 'di las \"phar phyin dang dpag bsam 'khri shing / sdeb sbyor me tog chun po sogs gsan\" zhes gsal/"@bo-x-ewts .
+    
     bdr:P7571  a            :Person ;
         skos:prefLabel      "don grub rgyal mtshan/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTB6E25DEE17B5E3A6 ;
+        :personEvent        bdr:EV9F13370959DCAE38 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMD9150B9F923730EF .
+        :personName         bdr:NMD9150B9F923730EF ;
+        :personTeacherOf    bdr:P815 .
 }

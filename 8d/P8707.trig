@@ -12,33 +12,51 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8707 {
-    bda:LG35438078FB9F06CE
+    bda:LGB366AA26AA8FC382
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGBF6CAC448BEFBC7B
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T08:56:24.396Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and note"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P8707  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8707 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "8d/P8707.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8707 ;
-        adm:logEntry        bda:LG35438078FB9F06CE ;
+        adm:logEntry        bda:LGB366AA26AA8FC382 , bda:LGBF6CAC448BEFBC7B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV5772341CAE8C2640
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM8D6367DDEB904111
         a                   :PersonPrimaryName ;
         rdfs:label          "ye shes chos 'phel/"@bo-x-ewts .
     
-    bdr:NT5772341CAE8C2640
+    bdr:NT0ECC40D86C086236
+        a                   :Note ;
+        :contentLocationStatement  "p. 590" ;
+        :noteSource         bdr:MW27413 ;
+        :noteText           "In colophon,\nsnye mo rgyal byed dgon gyi rtsis slob dge tshul ye shes chos 'phel/"@en .
+    
+    bdr:NT35438078FB9F06CE
         a                   :Note ;
         :noteText           "writer on predictive astrology"@en .
     
     bdr:P8707  a            :Person ;
         skos:prefLabel      "ye shes chos 'phel/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT5772341CAE8C2640 ;
+        :note               bdr:NT0ECC40D86C086236 , bdr:NT35438078FB9F06CE ;
+        :personEvent        bdr:EV5772341CAE8C2640 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM8D6367DDEB904111 .
 }

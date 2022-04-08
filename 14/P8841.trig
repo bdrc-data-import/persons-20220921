@@ -12,26 +12,42 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8841 {
-    bda:LG8C08C68BFF444C8F
+    bda:LG2462E8EC62C568D9
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGA3CFF180E9605C6E
+    bda:LG8519EABFDE17DC8D
         a                   adm:UpdateData ;
         adm:logDate         "2012-10-05T15:52:35.996Z"^^xsd:dateTime ;
         adm:logMessage      "shad 'then yod"@en ;
         adm:logWho          bdu:U00013 .
     
+    bda:LGDDB06B97FA18B16B
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T13:35:02.266Z"^^xsd:dateTime ;
+        adm:logMessage      "added century, names, place of birht, note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P8841  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8841 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      17 ;
         adm:gitPath         "14/P8841.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8841 ;
-        adm:logEntry        bda:LG8C08C68BFF444C8F , bda:LGA3CFF180E9605C6E ;
+        adm:logEntry        bda:LG2462E8EC62C568D9 , bda:LG8519EABFDE17DC8D , bda:LGDDB06B97FA18B16B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV2AD8BF299180192C
+        a                   :PersonBirth ;
+        :eventWhere         bdr:G4144 ;
+        :notAfter           "1899"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM2B3251DE49EF5EAF
+        a                   :PersonOtherName ;
+        rdfs:label          "'das log drung chen 'dan ma sangs rgyas/"@bo-x-ewts .
     
     bdr:NM3C8A792E444FFB71
         a                   :PersonPrimaryName ;
@@ -41,22 +57,48 @@ bdg:P8841 {
         a                   :PersonTitle ;
         rdfs:label          "'das log sangs rgyas seng+ge"@bo-x-ewts .
     
+    bdr:NM8C08C68BFF444C8F
+        a                   :PersonOtherName ;
+        rdfs:label          "'das log 'dan ma grub thob/"@bo-x-ewts .
+    
     bdr:NM9881ABC4C0D798D3
         a                   :PersonPrimaryTitle ;
         rdfs:label          "'dan ma sangs rgyas seng+ge"@bo-x-ewts .
+    
+    bdr:NMA3CFF180E9605C6E
+        a                   :PersonOtherName ;
+        rdfs:label          "'das smyon 'dan ma sangs rgyas/"@bo-x-ewts .
+    
+    bdr:NMACE5BEAE522BFD5C
+        a                   :PersonOtherName ;
+        rdfs:label          "drung chen 'das log 'dan ma sangs rgyas/"@bo-x-ewts .
     
     bdr:NMD37E9F1696D37C5E
         a                   :PersonTitle ;
         rdfs:label          "mkha' spyod mkhas grub chos sku/"@bo-x-ewts .
     
-    bdr:NTF5FCB2F894C71393
+    bdr:NMDA4E6BFDE655B99C
+        a                   :PersonOtherName ;
+        rdfs:label          "drung chen mkha' spyod he ru ka"@bo-x-ewts .
+    
+    bdr:NMF5FCB2F894C71393
+        a                   :PersonTitle ;
+        rdfs:label          "dge rgyal gsho thang 'das log"@bo-x-ewts .
+    
+    bdr:NT8855DBD20FD61067
+        a                   :Note ;
+        :noteText           "born in dge rgyal gsho thang, Nangchen"@en .
+    
+    bdr:NT8E5C008133AA2C2B
         a                   :Note ;
         :noteText           "this was a khams pa who returned from the dead ('das log); his dates are as yet unknown"@en .
     
     bdr:P8841  a            :Person ;
         skos:prefLabel      "'dan ma sangs rgyas seng+ge"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTF5FCB2F894C71393 ;
+        :note               bdr:NT8855DBD20FD61067 , bdr:NT8E5C008133AA2C2B ;
+        :personEvent        bdr:EV2AD8BF299180192C ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM3C8A792E444FFB71 , bdr:NM6A16074CF7939055 , bdr:NM9881ABC4C0D798D3 , bdr:NMD37E9F1696D37C5E .
+        :personName         bdr:NM2B3251DE49EF5EAF , bdr:NM3C8A792E444FFB71 , bdr:NM6A16074CF7939055 , bdr:NM8C08C68BFF444C8F , bdr:NM9881ABC4C0D798D3 , bdr:NMA3CFF180E9605C6E , bdr:NMACE5BEAE522BFD5C , bdr:NMD37E9F1696D37C5E , bdr:NMDA4E6BFDE655B99C , bdr:NMF5FCB2F894C71393 ;
+        :personStudentOf    bdr:P562 .
 }

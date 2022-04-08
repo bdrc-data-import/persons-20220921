@@ -12,33 +12,45 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8708 {
-    bda:LGEB00723D79F0D5A0
+    bda:LG46364B8123FBD4D0
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG76EE334CFA860E6A
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T09:08:43.37Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P8708  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8708 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "9c/P8708.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8708 ;
-        adm:logEntry        bda:LGEB00723D79F0D5A0 ;
+        adm:logEntry        bda:LG46364B8123FBD4D0 , bda:LG76EE334CFA860E6A ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVD9C8BE5677876236
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
+    
     bdr:NMD7763E0584692D98
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "kun dga' phun tshogs/"@bo-x-ewts .
     
-    bdr:NTD9C8BE5677876236
+    bdr:NTEB00723D79F0D5A0
         a                   :Note ;
         :noteText           "writer on mathematical calculations"@en .
     
     bdr:P8708  a            :Person ;
         skos:prefLabel      "kun dga' phun tshogs/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTD9C8BE5677876236 ;
+        :note               bdr:NTEB00723D79F0D5A0 ;
+        :personEvent        bdr:EVD9C8BE5677876236 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMD7763E0584692D98 .
 }

@@ -12,28 +12,44 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8758 {
-    bda:LG0B0402D8C384FFE6
+    bda:LG430AD90F8915A630
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG4B535847F3B01BFE
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T09:41:52.506Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and name"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P8758  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8758 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "21/P8758.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8758 ;
-        adm:logEntry        bda:LG0B0402D8C384FFE6 ;
+        adm:logEntry        bda:LG430AD90F8915A630 , bda:LG4B535847F3B01BFE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVB866EF29245687E7
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM0B0402D8C384FFE6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "sde snod 'dzin pa shes rab seng+ge"@bo-x-ewts .
+    
     bdr:NMFFC37CC49C051D71
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "shes rab seng+ge"@bo-x-ewts .
     
     bdr:P8758  a            :Person ;
-        skos:prefLabel      "shes rab seng+ge"@bo-x-ewts ;
+        skos:prefLabel      "sde snod 'dzin pa shes rab seng+ge"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EVB866EF29245687E7 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NMFFC37CC49C051D71 .
+        :personName         bdr:NM0B0402D8C384FFE6 , bdr:NMFFC37CC49C051D71 .
 }

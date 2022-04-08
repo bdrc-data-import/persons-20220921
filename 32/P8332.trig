@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8332 {
-    bda:LG12F66713822D53D9
+    bda:LG34C240395A572AEE
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LG58C8E13CBD274993
+    bda:LG7122A033E7BDE875
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-07T08:28:45.716Z"^^xsd:dateTime ;
+        adm:logMessage      "added century, name and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG8EAD3CA1F85F4DD9
         a                   adm:UpdateData ;
         adm:logDate         "2021-06-14T13:48:05.28Z"^^xsd:dateTime ;
         adm:logMessage      "added note and other name"@en ;
@@ -25,30 +31,49 @@ bdg:P8332 {
     bda:P8332  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8332 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      11 ;
         adm:gitPath         "32/P8332.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8332 ;
-        adm:logEntry        bda:LG12F66713822D53D9 , bda:LG58C8E13CBD274993 ;
+        adm:logEntry        bda:LG34C240395A572AEE , bda:LG7122A033E7BDE875 , bda:LG8EAD3CA1F85F4DD9 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV12F66713822D53D9
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
+    
+    bdr:NM41E47EF6C07122C6
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "nyag bla byang chub seng+ge"@bo-x-ewts .
     
     bdr:NM4718B4777D262259
         a                   :PersonOtherName ;
         rdfs:label          "'das log byang chub seng+ge"@bo-x-ewts .
     
+    bdr:NM58C8E13CBD274993
+        a                   :PersonOtherName ;
+        rdfs:label          "nyag phrug byang chub seng+ge"@bo-x-ewts .
+    
     bdr:NM9BB17CCA3F483E7F
         a                   :PersonPrimaryName ;
         rdfs:label          "byang chub seng+ge"@bo-x-ewts .
     
-    bdr:NT41E47EF6C07122C6
+    bdr:NT0C78B7EA979490CF
         a                   :Note ;
         :noteText           "Year unknown; experiences of a return from death"@en .
     
+    bdr:NT3BF23BBA0AEC73B8
+        a                   :Note ;
+        :contentLocationStatement  "p. 64, n.104-110" ;
+        :noteSource         bdr:MW21720 .
+    
     bdr:P8332  a            :Person ;
-        skos:prefLabel      "byang chub seng+ge"@bo-x-ewts ;
+        skos:prefLabel      "nyag bla byang chub seng+ge"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT41E47EF6C07122C6 ;
+        :note               bdr:NT0C78B7EA979490CF , bdr:NT3BF23BBA0AEC73B8 ;
+        :personEvent        bdr:EV12F66713822D53D9 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM4718B4777D262259 , bdr:NM9BB17CCA3F483E7F .
+        :personName         bdr:NM41E47EF6C07122C6 , bdr:NM4718B4777D262259 , bdr:NM58C8E13CBD274993 , bdr:NM9BB17CCA3F483E7F .
 }
