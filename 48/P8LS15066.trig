@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS15066 {
-    bda:LGF72B81D6697634C5
+    bda:LG7ACB6E8375929531
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-12T14:01:04.625Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and primary title"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGCBF71811BD110C05
         a                   adm:InitialDataCreation ;
         adm:logDate         "2014-01-27T12:49:36.055Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -21,13 +27,22 @@ bdg:P8LS15066 {
     bda:P8LS15066  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS15066 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "48/P8LS15066.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS15066 ;
-        adm:logEntry        bda:LGF72B81D6697634C5 ;
+        adm:logEntry        bda:LG7ACB6E8375929531 , bda:LGCBF71811BD110C05 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVF72B81D6697634C5
+        a                   :PersonBirth ;
+        :notAfter           "0899"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
+    
+    bdr:NM2365B41DE120CFEB
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "slob dpon kha che dge 'dun bzang po/"@bo-x-ewts .
     
     bdr:NM502B6A2701C0050B
         a                   :PersonOtherName ;
@@ -41,14 +56,15 @@ bdg:P8LS15066 {
         a                   :PersonOtherName ;
         rdfs:label          "saM g+h b+h dra/"@bo-x-ewts .
     
-    bdr:NT2365B41DE120CFEB
+    bdr:NTAF7D42189C368919
         a                   :Note ;
         :contentLocationStatement  "vol. e, f. 29b7" ;
         :noteSource         bdr:MW29706 .
     
     bdr:P8LS15066  a        :Person ;
-        skos:prefLabel      "dge 'dun bzang po/"@bo-x-ewts , "samghabhadra"@sa-x-ndia ;
+        skos:prefLabel      "slob dpon kha che dge 'dun bzang po/"@bo-x-ewts , "samghabhadra"@sa-x-ndia ;
         :isRoot             true ;
-        :note               bdr:NT2365B41DE120CFEB ;
-        :personName         bdr:NM502B6A2701C0050B , bdr:NMBCAA8EE4D7376789 , bdr:NMD08EC32EB16A713E .
+        :note               bdr:NTAF7D42189C368919 ;
+        :personEvent        bdr:EVF72B81D6697634C5 ;
+        :personName         bdr:NM2365B41DE120CFEB , bdr:NM502B6A2701C0050B , bdr:NMBCAA8EE4D7376789 , bdr:NMD08EC32EB16A713E .
 }

@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS17581 {
-    bda:LG6AED233FC25C5560
+    bda:LG1C29E5F1927C5BA3
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-12T14:06:20.5Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG6CE056BE191BBE2D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2016-05-04T08:54:57.928Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
@@ -21,13 +27,17 @@ bdg:P8LS17581 {
     bda:P8LS17581  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS17581 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "b3/P8LS17581.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS17581 ;
-        adm:logEntry        bda:LG6AED233FC25C5560 ;
+        adm:logEntry        bda:LG1C29E5F1927C5BA3 , bda:LG6CE056BE191BBE2D ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV818713CAB5CB8E0B
+        a                   :PersonBirth ;
+        :onYear             "1977"^^xsd:gYear .
     
     bdr:NM58FDBC7D0113223A
         a                   :PersonPrimaryTitle ;
@@ -37,13 +47,14 @@ bdg:P8LS17581 {
         a                   :PersonPrimaryName ;
         rdfs:label          "ye shes blo gros/"@bo-x-ewts .
     
-    bdr:NT818713CAB5CB8E0B
+    bdr:NT6AED233FC25C5560
         a                   :Note ;
         :noteText           "see W8LS17577"@en .
     
     bdr:P8LS17581  a        :Person ;
         skos:prefLabel      "bon nag tshang ye shes blo gros/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT818713CAB5CB8E0B ;
+        :note               bdr:NT6AED233FC25C5560 ;
+        :personEvent        bdr:EV818713CAB5CB8E0B ;
         :personName         bdr:NM58FDBC7D0113223A , bdr:NMFD199D2AA41D742E .
 }

@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS13620 {
-    bda:LGF1CDFA6207500327
+    bda:LG5D64D52D498CCE4E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-12T13:49:25.858Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and name"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGB7347382F1258CDC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-05-01T09:37:00.297Z"^^xsd:dateTime ;
         adm:logMessage      "created new person"@en ;
@@ -21,23 +27,32 @@ bdg:P8LS13620 {
     bda:P8LS13620  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS13620 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "92/P8LS13620.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS13620 ;
-        adm:logEntry        bda:LGF1CDFA6207500327 ;
+        adm:logEntry        bda:LG5D64D52D498CCE4E , bda:LGB7347382F1258CDC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVF1CDFA6207500327
+        a                   :PersonBirth ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
     
     bdr:NM4679809472A3CF7F
         a                   :PersonPrimaryName ;
         rdfs:label          "dkon mchog rgya mtsho/"@bo-x-ewts .
     
+    bdr:NM7D0CB4005A11146F
+        a                   :PersonTitle ;
+        rdfs:label          "dwags po spyan snga ba dkon mchog rgya mtsho/"@bo-x-ewts .
+    
     bdr:NME4327EF29BC62CD5
         a                   :PersonPrimaryTitle ;
         rdfs:label          "spyan snga dkon mchog rgya mtsho/"@bo-x-ewts .
     
-    bdr:NT7D0CB4005A11146F
+    bdr:NT5DB590C266022DF3
         a                   :Note ;
         :contentLocationStatement  "vol. 1, p. 52" ;
         :noteSource         bdr:MW1PD107937 .
@@ -45,6 +60,7 @@ bdg:P8LS13620 {
     bdr:P8LS13620  a        :Person ;
         skos:prefLabel      "spyan snga dkon mchog rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT7D0CB4005A11146F ;
-        :personName         bdr:NM4679809472A3CF7F , bdr:NME4327EF29BC62CD5 .
+        :note               bdr:NT5DB590C266022DF3 ;
+        :personEvent        bdr:EVF1CDFA6207500327 ;
+        :personName         bdr:NM4679809472A3CF7F , bdr:NM7D0CB4005A11146F , bdr:NME4327EF29BC62CD5 .
 }

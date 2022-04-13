@@ -12,45 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS12993 {
-    bda:LG9D14A0B113DB9D7B
+    bda:LG3A2EA48569FF1F9C
         a                   adm:InitialDataCreation ;
         adm:logDate         "2013-01-10T10:19:36.924Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGC28761A527FC5609
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-12T13:17:33.182Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birth and death"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P8LS12993  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS12993 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "c3/P8LS12993.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS12993 ;
-        adm:logEntry        bda:LG9D14A0B113DB9D7B ;
+        adm:logEntry        bda:LG3A2EA48569FF1F9C , bda:LGC28761A527FC5609 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EV6CD5B9BAC7D0DF45
+        a                   :PersonBirth ;
+        :onYear             "1744"^^xsd:gYear .
+    
+    bdr:EV9D14A0B113DB9D7B
+        a                   :PersonDeath ;
+        :onYear             "1798"^^xsd:gYear .
+    
     bdr:NM1065D6DCAC41A3B5
         a                   :PersonTulkuTitle ;
-        rdfs:label          "mkhar rtse na len+d+ra gzims 'og sprul sku 02"@bo-x-ewts .
+        rdfs:label          "mkhar rtse na len+d+ra gzims 'og sprul sku 02/03"@bo-x-ewts .
     
     bdr:NM16955504850061A8
         a                   :PersonTulkuTitle ;
-        rdfs:label          "Kartse Nalendra Zimok Tulku 02"@bo-x-phon-en-m-tbrc .
+        rdfs:label          "Kartse Nalendra Zimok Tulku 02/03"@en .
     
     bdr:NM3270BCAA8003B24B
         a                   :PersonPrimaryName ;
         rdfs:label          "byams pa ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts .
     
-    bdr:NT6CD5B9BAC7D0DF45
+    bdr:NT52E0708D8DB1A837
         a                   :Note ;
         :contentLocationStatement  "p. 343" ;
         :noteSource         bdr:MW19220 ;
         :noteText           "1) zhabs drung ngag dbang sangs rgyas bstan 'dzin/ 'phan yul du 'khrungs/ dgung lo nga gsum par gshegs/\n2) de'i skye ba byams pa ngag dbang bstan 'dzin 'phrin las/ 'phan yul rgyal btsan zhol du 'khrungs/ dgung lo lnga bcu nga lnga la gshegs/"@bo-x-ewts .
     
     bdr:P8LS12993  a        :Person ;
-        skos:prefLabel      "byams pa ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts ;
+        skos:prefLabel      "byams pa ngag dbang bstan 'dzin 'phrin las/"@bo-x-ewts , "Kartse Nalendra Zimok Tulku 02/03"@en ;
         :incarnationGeneral  bdr:P8LS12992 ;
         :isRoot             true ;
-        :note               bdr:NT6CD5B9BAC7D0DF45 ;
+        :note               bdr:NT52E0708D8DB1A837 ;
+        :personEvent        bdr:EV6CD5B9BAC7D0DF45 , bdr:EV9D14A0B113DB9D7B ;
         :personName         bdr:NM1065D6DCAC41A3B5 , bdr:NM16955504850061A8 , bdr:NM3270BCAA8003B24B .
 }
