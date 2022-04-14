@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6217 {
-    bda:LG63CFD7C87B8BA17B
+    bda:LG16CEC726AC6C3C21
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:03.789Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG20090C23E3DEE5C5
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6217  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6217 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "bf/P6217.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6217 ;
-        adm:logEntry        bda:LG63CFD7C87B8BA17B ;
+        adm:logEntry        bda:LG16CEC726AC6C3C21 , bda:LG20090C23E3DEE5C5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV63CFD7C87B8BA17B
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NMA578CE14A874FB2F
         a                   :PersonPrimaryName ;
@@ -34,6 +45,6 @@ bdg:P6217 {
     bdr:P6217  a            :Person ;
         skos:prefLabel      "bla ma skyabs/"@bo-x-ewts ;
         :isRoot             true ;
-        :personGender       bdr:GenderFemale ;
+        :personEvent        bdr:EV63CFD7C87B8BA17B ;
         :personName         bdr:NMA578CE14A874FB2F .
 }

@@ -12,42 +12,54 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P5283 {
-    bda:LG796F30BCB74D1AFF
+    bda:LGADAAF4F9A2C7F7CF
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:03.019Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGC9BB9737D8D626D5
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P5283  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P5283 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "96/P5283.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P5283 ;
-        adm:logEntry        bda:LG796F30BCB74D1AFF ;
+        adm:logEntry        bda:LGADAAF4F9A2C7F7CF , bda:LGC9BB9737D8D626D5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVDBC66CF769214F6D
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1599"^^xsd:gYear ;
+        :notBefore          "1500"^^xsd:gYear .
+    
     bdr:NMF170B959EF65C1CD
         a                   :PersonPrimaryName ;
-        rdfs:label          "tshe ring mgon po/"@bo-x-ewts .
+        rdfs:label          "tshe ring mgon/"@bo-x-ewts .
     
     bdr:NT17DBD6BF6B955ECC
+        a                   :Note ;
+        :noteText           "Regarded as the embodiment of Kri Mi-nyag Rdo-rje-bzang-po"@en .
+    
+    bdr:NT796F30BCB74D1AFF
         a                   :Note ;
         :contentLocationStatement  "Vol. 3, p. 505" ;
         :noteSource         bdr:MW19802 .
     
     bdr:NTD258FA0903ECC3F9
         a                   :Note ;
-        :noteText           "Regarded as the embodiment of Kri Mi-nyag Rdo-rje-bzang-po"@en .
-    
-    bdr:NTDBC66CF769214F6D
-        a                   :Note ;
         :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
     
     bdr:P5283  a            :Person ;
-        skos:prefLabel      "tshe ring mgon po/"@bo-x-ewts ;
+        skos:prefLabel      "tshe ring mgon/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT17DBD6BF6B955ECC , bdr:NTD258FA0903ECC3F9 , bdr:NTDBC66CF769214F6D ;
+        :note               bdr:NT17DBD6BF6B955ECC , bdr:NT796F30BCB74D1AFF , bdr:NTD258FA0903ECC3F9 ;
+        :personEvent        bdr:EVDBC66CF769214F6D ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMF170B959EF65C1CD .
 }

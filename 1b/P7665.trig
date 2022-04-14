@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7665 {
-    bda:LGB7359E29D7735975
+    bda:LG32F186A7DABDA983
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:10.761Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG7B78A8BB793778B8
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7665  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7665 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "1b/P7665.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7665 ;
-        adm:logEntry        bda:LGB7359E29D7735975 ;
+        adm:logEntry        bda:LG32F186A7DABDA983 , bda:LG7B78A8BB793778B8 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVB7359E29D7735975
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1399"^^xsd:gYear ;
+        :notBefore          "1300"^^xsd:gYear .
     
     bdr:NMDDE27A9D08D1F2B0
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P7665 {
     bdr:P7665  a            :Person ;
         skos:prefLabel      "gong dkar ba kun bzang /"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EVB7359E29D7735975 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMDDE27A9D08D1F2B0 , bdr:NMEEF4791B3D073EEA .
 }

@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7490 {
-    bda:LG70E592112A9808FE
+    bda:LG27F14C129A9CF295
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGED9784F43277BFF7
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:08.789Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P7490  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7490 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "19/P7490.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7490 ;
-        adm:logEntry        bda:LG70E592112A9808FE ;
+        adm:logEntry        bda:LG27F14C129A9CF295 , bda:LGED9784F43277BFF7 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV70E592112A9808FE
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM580020D6B16F2FD1
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P7490 {
     bdr:P7490  a            :Person ;
         skos:prefLabel      "nang so blo bstan/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV70E592112A9808FE ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM580020D6B16F2FD1 , bdr:NM7F37C58FCF379350 .
 }

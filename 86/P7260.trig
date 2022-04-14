@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7260 {
-    bda:LGCD6AEF7BB6140CC8
+    bda:LG3FB6766049EC784D
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:06.465Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG4031AEA90DC45572
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7260  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7260 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "86/P7260.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7260 ;
-        adm:logEntry        bda:LGCD6AEF7BB6140CC8 ;
+        adm:logEntry        bda:LG3FB6766049EC784D , bda:LG4031AEA90DC45572 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVCD6AEF7BB6140CC8
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
     
     bdr:NM0DB759BB7A3AF78C
         a                   :PersonTitle ;
@@ -43,9 +54,15 @@ bdg:P7260 {
         a                   :PersonPrimaryName ;
         rdfs:label          "pad dkar rgya mtsho/"@bo-x-ewts .
     
+    bdr:NTEE27C60C3C10D00D
+        a                   :Note ;
+        :noteText           "རྩེ་ལེ་སྣ་ཚོགས་རང་གྲོལ་གྱི་གསུང་འབུམ་ལས་་་་མོན་ སྤ་གྲོ་ཆོས་རྗེའི ་དྲུང་ལ་བླ་པ་ནོར་བུ་པད་འཕྲེང་གི་ཧཱུྃ་སྒྲུབ་དང་ཚེ་དབང་སོགས་ཕུལ།\nཞེས་གསལ།"@bo .
+    
     bdr:P7260  a            :Person ;
         skos:prefLabel      "spa gro chos rje pad dkar rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTEE27C60C3C10D00D ;
+        :personEvent        bdr:EVCD6AEF7BB6140CC8 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM0DB759BB7A3AF78C , bdr:NM3890C94E422A1128 , bdr:NM8D3A4616B217DDE9 , bdr:NMAD29019F725C3582 .
 }

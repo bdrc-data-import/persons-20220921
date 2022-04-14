@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7322 {
-    bda:LG7FA6ADBB524803E4
+    bda:LG5B0F9E03E07BAB89
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGD5416FB0F30C3392
+    bda:LG5BCFEBD02177EB26
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:07.631Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGE0110B842FDF5EF4
         a                   adm:UpdateData ;
         adm:logDate         "2010-10-26T10:52:15.674Z"^^xsd:dateTime ;
         adm:logMessage      "bcos"@en ;
@@ -25,13 +31,17 @@ bdg:P7322 {
     bda:P7322  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7322 ;
-        adm:facetIndex      7 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "b1/P7322.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7322 ;
-        adm:logEntry        bda:LG7FA6ADBB524803E4 , bda:LGD5416FB0F30C3392 ;
+        adm:logEntry        bda:LG5B0F9E03E07BAB89 , bda:LG5BCFEBD02177EB26 , bda:LGE0110B842FDF5EF4 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVD5416FB0F30C3392
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1960"^^xsd:gYear .
     
     bdr:NM8A985F262EFFDBE7
         a                   :PersonFamilyName ;
@@ -49,9 +59,15 @@ bdg:P7322 {
         a                   :PersonPersonalName ;
         rdfs:label          "tashi tsering"@en .
     
+    bdr:NT7FA6ADBB524803E4
+        a                   :Note ;
+        :noteText           "He is a founding director of the Amnye Machen Institute. He is also affiliated with the Library of Tibetan Works and Archives, and editor of several Tibetan journals, including the Journal of Tibet."@en .
+    
     bdr:P7322  a            :Person ;
         skos:prefLabel      "bkra shis tshe ring /"@bo-x-ewts , "joysama, tashi tsering"@en ;
         :isRoot             true ;
+        :note               bdr:NT7FA6ADBB524803E4 ;
+        :personEvent        bdr:EVD5416FB0F30C3392 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM8A985F262EFFDBE7 , bdr:NMA7A046485FFB5B82 , bdr:NMAADF016544999F94 , bdr:NME727659A4475C256 .
 }

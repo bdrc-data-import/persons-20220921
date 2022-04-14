@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS43864 {
-    bda:LGF6075B61C8ECE1B2
+    bda:LG3AFB08C63FD9C799
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T08:27:27.227Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGFAD62C6B377D3008
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-03-19T15:03:27.973Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
@@ -21,13 +27,18 @@ bdg:P8LS43864 {
     bda:P8LS43864  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS43864 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "f6/P8LS43864.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS43864 ;
-        adm:logEntry        bda:LGF6075B61C8ECE1B2 ;
+        adm:logEntry        bda:LG3AFB08C63FD9C799 , bda:LGFAD62C6B377D3008 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV50C1A5F841DE17FA
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM0A2909D1D1940CDF
         a                   :PersonPrimaryName ;
@@ -41,13 +52,14 @@ bdg:P8LS43864 {
         a                   :PersonTitle ;
         rdfs:label          "rta wang mkhan zur rgyal sras sprul sku/"@bo-x-ewts .
     
-    bdr:NT50C1A5F841DE17FA
+    bdr:NTF6075B61C8ECE1B2
         a                   :Note ;
         :noteText           "See W8LS43863"@en .
     
     bdr:P8LS43864  a        :Person ;
         skos:prefLabel      "'dan ma rgyal sras sprul sku/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT50C1A5F841DE17FA ;
+        :note               bdr:NTF6075B61C8ECE1B2 ;
+        :personEvent        bdr:EV50C1A5F841DE17FA ;
         :personName         bdr:NM0A2909D1D1940CDF , bdr:NMBED68C3AA4168694 , bdr:NMC07BF286846C496C .
 }

@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P9459 {
-    bda:LG21E05F17AAFF012B
+    bda:LG6D475CA63C07A545
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T13:56:05.385Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LG78E64BCB4730ED79
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P9459  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P9459 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "40/P9459.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P9459 ;
-        adm:logEntry        bda:LG21E05F17AAFF012B ;
+        adm:logEntry        bda:LG6D475CA63C07A545 , bda:LG78E64BCB4730ED79 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV21E05F17AAFF012B
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM8C8FD607B142C49B
         a                   :PersonPersonalName ;
@@ -35,9 +46,15 @@ bdg:P9459 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "gser tshang phun tshogs bkra shis/"@bo-x-ewts .
     
+    bdr:NTB2788E3BE078956E
+        a                   :Note ;
+        :noteText           "a mdo smad kyi cha tsong chu lho ngos kyi phu lam zhes pa'i lung khug tu skye/"@bo-x-ewts .
+    
     bdr:P9459  a            :Person ;
         skos:prefLabel      "gser tshang phun tshogs bkra shis/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTB2788E3BE078956E ;
+        :personEvent        bdr:EV21E05F17AAFF012B ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM8C8FD607B142C49B , bdr:NMBB44A5BD81EA5259 .
 }

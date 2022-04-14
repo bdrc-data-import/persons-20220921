@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7257 {
-    bda:LGC3721448644B7FF7
+    bda:LG07FB15171279811F
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG8A482CFFDFEDA0CD
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:06.082Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P7257  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7257 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "52/P7257.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7257 ;
-        adm:logEntry        bda:LGC3721448644B7FF7 ;
+        adm:logEntry        bda:LG07FB15171279811F , bda:LG8A482CFFDFEDA0CD ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVC3721448644B7FF7
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "0799"^^xsd:gYear ;
+        :notBefore          "0700"^^xsd:gYear .
     
     bdr:NM1D22710FBFCEFAD2
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P7257 {
     bdr:P7257  a            :Person ;
         skos:prefLabel      "kha che'i mkhan po d+harma shrI/"@bo-x-ewts , "dharmasri"@sa-alalc97 ;
         :isRoot             true ;
+        :personEvent        bdr:EVC3721448644B7FF7 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1D22710FBFCEFAD2 , bdr:NMC1D1B7C9F8A7620B .
 }

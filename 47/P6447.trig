@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6447 {
-    bda:LG8F6E6DBD3322D5B8
+    bda:LG38008D3626726BDC
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:04.586Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGF5C49BF0228DA61B
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P6447  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6447 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "47/P6447.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6447 ;
-        adm:logEntry        bda:LG8F6E6DBD3322D5B8 ;
+        adm:logEntry        bda:LG38008D3626726BDC , bda:LGF5C49BF0228DA61B ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV8F6E6DBD3322D5B8
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM0FD1D235E05E6E1E
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P6447 {
     bdr:P6447  a            :Person ;
         skos:prefLabel      "bsod gnam rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV8F6E6DBD3322D5B8 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM0FD1D235E05E6E1E , bdr:NM93575ACBD9A94547 .
 }

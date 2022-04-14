@@ -12,26 +12,40 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS66561 {
-    bda:LG0065F581DCCF6AE1
+    bda:LGC7427FE501FE981D
         a                   adm:InitialDataCreation ;
         adm:logDate         "2019-08-14T10:19:02.941Z"^^xsd:dateTime ;
         adm:logMessage      "new person record created"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGFA67624783A5949C
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T08:40:31.483Z"^^xsd:dateTime ;
+        adm:logMessage      "added date of birht, office assume date and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P8LS66561  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS66561 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      10 ;
         adm:gitPath         "a8/P8LS66561.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS66561 ;
-        adm:logEntry        bda:LG0065F581DCCF6AE1 ;
+        adm:logEntry        bda:LGC7427FE501FE981D , bda:LGFA67624783A5949C ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV82FD123714E974B9
+    bdr:EV0065F581DCCF6AE1
+        a                   :PersonAssumesOffice ;
+        :onYear             "1836"^^xsd:gYear .
+    
+    bdr:EV229654194ADD667F
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G4 .
+    
+    bdr:EV82FD123714E974B9
+        a                   :PersonBirth ;
+        :onYear             "1813"^^xsd:gYear .
     
     bdr:NMF42C56ADBAD9E552
         a                   :PersonPrimaryName ;
@@ -45,10 +59,15 @@ bdg:P8LS66561 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "kun mkhyen nyi ma bstan 'dzin/"@bo-x-ewts .
     
+    bdr:NT02E4AEDFBB6B47D7
+        a                   :Note ;
+        :noteText           "in other source recorded 24th abbot of Menri monastery"@en .
+    
     bdr:P8LS66561  a        :Person ;
         skos:prefLabel      "kun mkhyen nyi ma bstan 'dzin/"@bo-x-ewts ;
         :associatedTradition  bdr:TraditionBon ;
         :isRoot             true ;
-        :personEvent        bdr:EV82FD123714E974B9 ;
+        :note               bdr:NT02E4AEDFBB6B47D7 ;
+        :personEvent        bdr:EV0065F581DCCF6AE1 , bdr:EV229654194ADD667F , bdr:EV82FD123714E974B9 ;
         :personName         bdr:NMF42C56ADBAD9E552 , bdr:NMF63476CE0069EC6B , bdr:NMFF73D7662D445A9A .
 }

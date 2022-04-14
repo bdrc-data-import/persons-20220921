@@ -12,28 +12,46 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7342 {
-    bda:LG9558ACC303C058A1
+    bda:LG402AA4473946F892
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:08.014Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG88A518B08CB16B41
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7342  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7342 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "de/P7342.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7342 ;
-        adm:logEntry        bda:LG9558ACC303C058A1 ;
+        adm:logEntry        bda:LG402AA4473946F892 , bda:LG88A518B08CB16B41 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV9558ACC303C058A1
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1699"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
     
     bdr:NM7F6B7A47194CADD9
         a                   :PersonPersonalName ;
         rdfs:label          "tsha'o zha'o chin/"@bo-x-ewts .
     
+    bdr:NTA5A2FD80F9B62D7F
+        a                   :Note ;
+        :noteSource         bdr:MW21765 ;
+        :noteText           "in publication's description"@en .
+    
     bdr:P7342  a            :Person ;
         skos:prefLabel      "tsha'o zha'o chin/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NTA5A2FD80F9B62D7F ;
+        :personEvent        bdr:EV9558ACC303C058A1 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM7F6B7A47194CADD9 .
 }

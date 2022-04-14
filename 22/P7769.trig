@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7769 {
-    bda:LG0C9E13D75624E9B4
+    bda:LGD0DEC2AB92518FD8
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:12.254Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LGF36137C17E9DB7B0
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7769  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7769 ;
-        adm:facetIndex      3 ;
+        adm:facetIndex      5 ;
         adm:gitPath         "22/P7769.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7769 ;
-        adm:logEntry        bda:LG0C9E13D75624E9B4 ;
+        adm:logEntry        bda:LGD0DEC2AB92518FD8 , bda:LGF36137C17E9DB7B0 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV0C9E13D75624E9B4
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
     
     bdr:NMFC63F2D90E049859
         a                   :PersonPersonalName ;
@@ -34,6 +45,7 @@ bdg:P7769 {
     bdr:P7769  a            :Person ;
         skos:prefLabel      "rong dge chos dbyings/"@bo-x-ewts ;
         :isRoot             true ;
+        :personEvent        bdr:EV0C9E13D75624E9B4 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMFC63F2D90E049859 .
 }

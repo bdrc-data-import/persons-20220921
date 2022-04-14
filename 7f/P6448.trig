@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P6448 {
-    bda:LGAA373B82540E131A
+    bda:LG4A76FBE33A0065DC
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG9AD9B2391CBCCB40
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:04.967Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P6448  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P6448 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      6 ;
         adm:gitPath         "7f/P6448.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P6448 ;
-        adm:logEntry        bda:LGAA373B82540E131A ;
+        adm:logEntry        bda:LG4A76FBE33A0065DC , bda:LG9AD9B2391CBCCB40 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVAA373B82540E131A
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1900"^^xsd:gYear .
     
     bdr:NM186321D768DEFB1B
         a                   :PersonPrimaryName ;
@@ -38,6 +49,7 @@ bdg:P6448 {
     bdr:P6448  a            :Person ;
         skos:prefLabel      "nor bu sgrol dkar/"@bo-x-ewts ;
         :isRoot             true ;
-        :personGender       bdr:GenderMale ;
+        :personEvent        bdr:EVAA373B82540E131A ;
+        :personGender       bdr:GenderFemale ;
         :personName         bdr:NM186321D768DEFB1B , bdr:NM8450083F95C22E61 .
 }

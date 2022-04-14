@@ -12,22 +12,33 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS26219 {
-    bda:LG963BE02AA3BAE6DB
+    bda:LG5C6BF7CAF7916B38
         a                   adm:InitialDataCreation ;
         adm:logDate         "2017-09-21T10:20:51.889Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
         adm:logWho          bdu:U00019 .
     
+    bda:LGB3C8D61D2CEF0C21
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T08:13:40.073Z"^^xsd:dateTime ;
+        adm:logMessage      "added century and note"@en ;
+        adm:logWho          bdu:U00019 .
+    
     bda:P8LS26219  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS26219 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "66/P8LS26219.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS26219 ;
-        adm:logEntry        bda:LG963BE02AA3BAE6DB ;
+        adm:logEntry        bda:LG5C6BF7CAF7916B38 , bda:LGB3C8D61D2CEF0C21 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVB7723C8F782EB015
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1700"^^xsd:gYear .
     
     bdr:NM04B2484C619E5796
         a                   :PersonPrimaryTitle ;
@@ -37,13 +48,14 @@ bdg:P8LS26219 {
         a                   :PersonPrimaryName ;
         rdfs:label          "don brgyud bstan 'dzin/"@bo-x-ewts .
     
-    bdr:NTB7723C8F782EB015
+    bdr:NT963BE02AA3BAE6DB
         a                   :Note ;
-        :noteText           "W8LS26218\n\ngnas chen ti se dang mtsho ma pham bcas kyi gnas yig skal ldan thar lam 'dren pai lcags kyu zhes pa mdzad pa po yin/\tkhong ni phal pher 'brug pa bka' brgyud kyi bla ma zhig min nam snyam/"@en .
+        :noteText           "See work number W8LS26218\ngnas chen ti se dang mtsho ma pham bcas kyi gnas yig skal ldan thar lam 'dren pai lcags kyu zhes pa mdzad pa po yin/\tkhong ni phal pher 'brug pa bka' brgyud kyi bla ma zhig min nam snyam/\n\n1798 seems to be possible date of writing this guide book, see introduction of this book, p. 4"@en .
     
     bdr:P8LS26219  a        :Person ;
         skos:prefLabel      "gangs ri ba don brgyud bstan 'dzin/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTB7723C8F782EB015 ;
+        :note               bdr:NT963BE02AA3BAE6DB ;
+        :personEvent        bdr:EVB7723C8F782EB015 ;
         :personName         bdr:NM04B2484C619E5796 , bdr:NMBA99C9433730BD76 .
 }

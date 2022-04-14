@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7282 {
-    bda:LGF2E22289B5B43340
+    bda:LG5DC4DADEE4EEC9A8
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:06.85Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG8FC6EAE6DF534FC1
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7282  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7282 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "6e/P7282.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7282 ;
-        adm:logEntry        bda:LGF2E22289B5B43340 ;
+        adm:logEntry        bda:LG5DC4DADEE4EEC9A8 , bda:LG8FC6EAE6DF534FC1 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVF2E22289B5B43340
+        a                   :PersonEventNotSpecified ;
+        :eventWhere         bdr:G984 ;
+        :onYear             "1970"^^xsd:gYear .
     
     bdr:NM3E432C986DC57C28
         a                   :PersonPrimaryName ;
@@ -35,9 +46,16 @@ bdg:P7282 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "snyan bzang yum skyabs rgyal/"@bo-x-ewts .
     
+    bdr:NT82EF929664F1F983
+        a                   :Note ;
+        :noteSource         bdr:MW30025 ;
+        :noteText           "back cover, Introduction to writers"@en .
+    
     bdr:P7282  a            :Person ;
         skos:prefLabel      "snyan bzang yum skyabs rgyal/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT82EF929664F1F983 ;
+        :personEvent        bdr:EVF2E22289B5B43340 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM3E432C986DC57C28 , bdr:NM64B47A8BFECA7AC5 .
 }

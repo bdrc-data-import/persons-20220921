@@ -12,20 +12,34 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7790 {
-    bda:LG5E51DAB728146A7A
+    bda:LG6671A14908760129
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGD9D35141C2F3E6AA
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:12.955Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P7790  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7790 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "cf/P7790.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7790 ;
-        adm:logEntry        bda:LG5E51DAB728146A7A ;
+        adm:logEntry        bda:LG6671A14908760129 , bda:LGD9D35141C2F3E6AA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV5E51DAB728146A7A
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1910"^^xsd:gYear .
+    
+    bdr:EVE197C9DFE6675CF4
+        a                   :PersonDeath ;
+        :onYear             "1973"^^xsd:gYear .
     
     bdr:NM2DD84E228B996E8C
         a                   :PersonPrimaryName ;
@@ -35,9 +49,17 @@ bdg:P7790 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "'jam sprul 03 'jam dbyangs shes rab 'od zer/"@bo-x-ewts .
     
+    bdr:NT350E1F9FE8A8CA46
+        a                   :Note ;
+        :contentLocationStatement  "p.5-13" ;
+        :noteSource         bdr:MW23806 ;
+        :noteText           "རྩོམ་པ་པོའི་ལོ་རྒྱུས་མདོར་བསྡུས་ངོ་སྤྲོད།"@bo .
+    
     bdr:P7790  a            :Person ;
         skos:prefLabel      "'jam sprul 03 'jam dbyangs shes rab 'od zer/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT350E1F9FE8A8CA46 ;
+        :personEvent        bdr:EV5E51DAB728146A7A , bdr:EVE197C9DFE6675CF4 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM2DD84E228B996E8C , bdr:NM386B68FD044D9276 .
 }

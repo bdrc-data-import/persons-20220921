@@ -12,20 +12,30 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7636 {
-    bda:LG2DAEC278135C0EE8
+    bda:LG14836E0DE399F0D8
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG42C3ABEE63BC15FE
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:09.562Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
     
     bda:P7636  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7636 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "5c/P7636.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7636 ;
-        adm:logEntry        bda:LG2DAEC278135C0EE8 ;
+        adm:logEntry        bda:LG14836E0DE399F0D8 , bda:LG42C3ABEE63BC15FE ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV2DAEC278135C0EE8
+        a                   :PersonEventNotSpecified ;
+        :onYear             "1656"^^xsd:gYear .
     
     bdr:NMA95744FBE0B49FA0
         a                   :PersonPrimaryTitle ;
@@ -35,10 +45,17 @@ bdg:P7636 {
         a                   :PersonPrimaryName ;
         rdfs:label          "dkon mchog don grub chos dbang /"@bo-x-ewts .
     
+    bdr:NT64AB1111E671BDAA
+        a                   :Note ;
+        :contentLocationStatement  "in introduction page." ;
+        :noteSource         bdr:MW1KG10605 .
+    
     bdr:P7636  a            :Person ;
         skos:prefLabel      "nyin rdzong khri pa dkon mchog don grub chos dbang /"@bo-x-ewts ;
         :associatedTradition  bdr:TraditionDrigungKagyu ;
         :isRoot             true ;
+        :note               bdr:NT64AB1111E671BDAA ;
+        :personEvent        bdr:EV2DAEC278135C0EE8 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NMA95744FBE0B49FA0 , bdr:NMD36A42AEC22ECD21 .
 }

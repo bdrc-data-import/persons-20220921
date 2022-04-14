@@ -12,20 +12,31 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P7048 {
-    bda:LGCA723078D66F2BF7
+    bda:LG0D0B20C77CB2A9BC
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T10:32:05.71Z"^^xsd:dateTime ;
+        adm:logMessage      "add note, date of bitth, and birth place"@en ;
+        adm:logWho          bdu:U00017 .
+    
+    bda:LG4FD9F17FB43FFBEA
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
     bda:P7048  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P7048 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "c0/P7048.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P7048 ;
-        adm:logEntry        bda:LGCA723078D66F2BF7 ;
+        adm:logEntry        bda:LG0D0B20C77CB2A9BC , bda:LG4FD9F17FB43FFBEA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EVCA723078D66F2BF7
+        a                   :PersonEventNotSpecified ;
+        :notAfter           "1099"^^xsd:gYear ;
+        :notBefore          "1000"^^xsd:gYear .
     
     bdr:NM3D5E415B24F16D7D
         a                   :PersonPrimaryName ;
@@ -42,6 +53,7 @@ bdg:P7048 {
     bdr:P7048  a            :Person ;
         skos:prefLabel      "nyi ma sbas pa/"@bo-x-ewts , "suryagupta"@sa-alalc97 ;
         :isRoot             true ;
+        :personEvent        bdr:EVCA723078D66F2BF7 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM3D5E415B24F16D7D , bdr:NM8AA32B0A9B9EC7D8 , bdr:NMF068C21E57FF091A .
 }

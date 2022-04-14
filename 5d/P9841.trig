@@ -12,32 +12,49 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P9841 {
-    bda:LGCD131FF434B6E73D
+    bda:LG4D454227E2B6D9CF
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG7851C1C87AC07A8E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-13T14:51:52.667Z"^^xsd:dateTime ;
+        adm:logMessage      "added century"@en ;
+        adm:logWho          bdu:U00019 .
     
     bda:P9841  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P9841 ;
-        adm:facetIndex      4 ;
+        adm:facetIndex      7 ;
         adm:gitPath         "5d/P9841.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P9841 ;
-        adm:logEntry        bda:LGCD131FF434B6E73D ;
+        adm:logEntry        bda:LG4D454227E2B6D9CF , bda:LG7851C1C87AC07A8E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
+    bdr:EVCD131FF434B6E73D
+        a                   :PersonBirth ;
+        :notAfter           "1799"^^xsd:gYear ;
+        :notBefore          "1600"^^xsd:gYear .
+    
     bdr:NM93AA740A4275C626
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryTitle ;
         rdfs:label          "rdo rje dbang phyug ngag dbang dpal bzang po/"@bo-x-ewts .
     
     bdr:NMFA6080DE095E79A0
         a                   :PersonPrimaryName ;
         rdfs:label          "ngag dbang rig gnas rgya mtsho/"@bo-x-ewts .
     
+    bdr:NT1FA80533EBC74531
+        a                   :Note ;
+        :noteText           "born in the vicinity of gad kyi phug ri in yarlung"@en .
+    
     bdr:P9841  a            :Person ;
-        skos:prefLabel      "ngag dbang rig gnas rgya mtsho/"@bo-x-ewts ;
+        skos:prefLabel      "rdo rje dbang phyug ngag dbang dpal bzang po/"@bo-x-ewts ;
         :isRoot             true ;
+        :note               bdr:NT1FA80533EBC74531 ;
+        :personEvent        bdr:EVCD131FF434B6E73D ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM93AA740A4275C626 , bdr:NMFA6080DE095E79A0 .
 }
