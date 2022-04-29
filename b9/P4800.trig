@@ -12,25 +12,34 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P4800 {
-    bda:LG3824265936125913
+    bda:LG22B798559AD4D7C7
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LG4A0A7B23CEC4F292
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-04-28T16:51:08.854Z"^^xsd:dateTime ;
+        adm:logMessage      "added date and note"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P4800  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4800 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "b9/P4800.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4800 ;
-        adm:logEntry        bda:LG3824265936125913 ;
+        adm:logEntry        bda:LG22B798559AD4D7C7 , bda:LG4A0A7B23CEC4F292 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
     bdr:EV3C5E462C050F20AE
         a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+        :onYear             "1894"^^xsd:gYear .
+    
+    bdr:EV94EBED513EDC6911
+        a                   :PersonDeath ;
+        :onYear             "1967"^^xsd:gYear .
     
     bdr:NM1266FD5915568F38
         a                   :PersonPrimaryTitle ;
@@ -52,19 +61,21 @@ bdg:P4800 {
         a                   :PersonPrimaryName ;
         rdfs:label          "'jam dbyangs sbyin pa rgya mtsho/"@bo-x-ewts .
     
-    bdr:NT94EBED513EDC6911
+    bdr:NT3824265936125913
         a                   :Note ;
-        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
+        :contentLocationStatement  "p. 45-48" ;
+        :noteSource         bdr:MW8LS22953 ;
+        :noteText           "a brif biography"@en .
     
     bdr:NTE1173A1F854149A1
         a                   :Note ;
-        :contentLocationStatement  "p. 78-79" .
+        :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
     
     bdr:P4800  a            :Person ;
         skos:prefLabel      "rdo rams pa 'jam dbyangs sbyin pa rgya mtsho/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NT94EBED513EDC6911 , bdr:NTE1173A1F854149A1 ;
-        :personEvent        bdr:EV3C5E462C050F20AE ;
+        :note               bdr:NT3824265936125913 , bdr:NTE1173A1F854149A1 ;
+        :personEvent        bdr:EV3C5E462C050F20AE , bdr:EV94EBED513EDC6911 ;
         :personGender       bdr:GenderMale ;
         :personName         bdr:NM1266FD5915568F38 , bdr:NM6E012E0FE5B3F563 , bdr:NM7864622580ADC5E5 , bdr:NMBCB3A91CC2266A09 , bdr:NMF97A6BAE1A9B636C .
 }
