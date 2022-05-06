@@ -12,11 +12,17 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P10190 {
-    bda:LG52D099ACBACA5BBA
+    bda:LG13B7B33A5162E27B
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
     
-    bda:LGE28C524BDD182E1A
+    bda:LG38ABFC4B9E703930
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-05-05T15:41:01.378Z"^^xsd:dateTime ;
+        adm:logMessage      "added primary title"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:LG52D099ACBACA5BBA
         a                   adm:UpdateData ;
         adm:logDate         "2022-04-26T17:33:01.278Z"^^xsd:dateTime ;
         adm:logMessage      "added cent."@en ;
@@ -25,32 +31,36 @@ bdg:P10190 {
     bda:P10190  a           adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P10190 ;
-        adm:facetIndex      6 ;
+        adm:facetIndex      8 ;
         adm:gitPath         "60/P10190.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P10190 ;
-        adm:logEntry        bda:LG52D099ACBACA5BBA , bda:LGE28C524BDD182E1A ;
+        adm:logEntry        bda:LG13B7B33A5162E27B , bda:LG38ABFC4B9E703930 , bda:LG52D099ACBACA5BBA ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV46E90080864FF2CA
+    bdr:EVA5E752378C88C602
         a                   :PersonBirth ;
         :notAfter           "1499"^^xsd:gYear ;
         :notBefore          "1400"^^xsd:gYear .
     
+    bdr:NM46E90080864FF2CA
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "dus 'khor ba mang thos rdo rje/"@bo-x-ewts .
+    
     bdr:NM609C0FDE048998BB
-        a                   :PersonPersonalName ;
+        a                   :PersonPrimaryName ;
         rdfs:label          "mang thos rdo rje/"@bo-x-ewts .
     
-    bdr:NTA5E752378C88C602
+    bdr:NTE28C524BDD182E1A
         a                   :Note ;
         :noteText           "scholar on the phug lugs of astrology and astronomy, presumably from khams"@en .
     
     bdr:P10190  a           :Person ;
-        skos:prefLabel      "mang thos rdo rje/"@bo-x-ewts ;
+        skos:prefLabel      "dus 'khor ba mang thos rdo rje/"@bo-x-ewts ;
         :isRoot             true ;
-        :note               bdr:NTA5E752378C88C602 ;
-        :personEvent        bdr:EV46E90080864FF2CA ;
+        :note               bdr:NTE28C524BDD182E1A ;
+        :personEvent        bdr:EVA5E752378C88C602 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM609C0FDE048998BB .
+        :personName         bdr:NM46E90080864FF2CA , bdr:NM609C0FDE048998BB .
 }
