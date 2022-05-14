@@ -1,0 +1,55 @@
+@prefix :      <http://purl.bdrc.io/ontology/core/> .
+@prefix adm:   <http://purl.bdrc.io/ontology/admin/> .
+@prefix bda:   <http://purl.bdrc.io/admindata/> .
+@prefix bdg:   <http://purl.bdrc.io/graph/> .
+@prefix bdr:   <http://purl.bdrc.io/resource/> .
+@prefix bdu:   <http://purl.bdrc.io/resource-nc/user/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+bdg:P2KG235388 {
+    bda:LG3A10EF69DE3EF4C2
+        a                   adm:InitialDataCreation ;
+        adm:logDate         "2022-05-12T15:04:54.443Z"^^xsd:dateTime ;
+        adm:logMessage      "new person"@en ;
+        adm:logWho          bdu:U00016 .
+    
+    bda:P2KG235388  a       adm:AdminData ;
+        :isRoot             true ;
+        adm:adminAbout      bdr:P2KG235388 ;
+        adm:facetIndex      6 ;
+        adm:gitPath         "be/P2KG235388.trig" ;
+        adm:gitRepo         bda:GR0006 ;
+        adm:graphId         bdg:P2KG235388 ;
+        adm:logEntry        bda:LG3A10EF69DE3EF4C2 ;
+        adm:metadataLegal   bda:LD_BDRC_CC0 ;
+        adm:status          bda:StatusReleased .
+    
+    bdr:EVB325DD0CDEA5B4F9
+        a                   :PersonBirth ;
+        :notAfter           "1999"^^xsd:gYear ;
+        :notBefore          "1800"^^xsd:gYear .
+    
+    bdr:NM934CA778859CA989
+        a                   :PersonPrimaryTitle ;
+        rdfs:label          "mkhan po legs bshad 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NMA1D5E9598E85415F
+        a                   :PersonOtherName ;
+        rdfs:label          "kaH thog mkhan po legs bshad 'byor ldan/"@bo-x-ewts .
+    
+    bdr:NMED7676F4F515B606
+        a                   :PersonPrimaryName ;
+        rdfs:label          "legs bshad 'byor ldan/"@bo-x-ewts .
+    
+    bdr:P2KG235388  a       :Person ;
+        skos:prefLabel      "mkhan po legs bshad 'byor ldan/"@bo-x-ewts ;
+        :isRoot             true ;
+        :personEvent        bdr:EVB325DD0CDEA5B4F9 ;
+        :personName         bdr:NM934CA778859CA989 , bdr:NMA1D5E9598E85415F , bdr:NMED7676F4F515B606 ;
+        :personTeacherOf    bdr:P2370 .
+}
