@@ -12,39 +12,60 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8165 {
-    bda:LG18DB37BEE00FE306
+    bda:LG422FB3A61674DA06
         a                   adm:UpdateData ;
         adm:logDate         "2012-07-18T11:58:12.417Z"^^xsd:dateTime ;
         adm:logMessage      "གསར་དུ་བསྣན།"@en ;
         adm:logWho          bdu:U00017 .
     
-    bda:LG4ECC40E96FA6EE02
+    bda:LGA7B370CC6D3882D7
         a                   adm:InitialDataCreation ;
         adm:logWho          bdu:U00001 .
+    
+    bda:LGFE9C256CE2D1E96E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-06-28T09:29:29.536Z"^^xsd:dateTime ;
+        adm:logMessage      "added tibetan name and date"@en ;
+        adm:logWho          bdu:U00016 .
     
     bda:P8165  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8165 ;
-        adm:facetIndex      5 ;
+        adm:facetIndex      9 ;
         adm:gitPath         "6e/P8165.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8165 ;
-        adm:logEntry        bda:LG18DB37BEE00FE306 , bda:LG4ECC40E96FA6EE02 ;
+        adm:logEntry        bda:LG422FB3A61674DA06 , bda:LGA7B370CC6D3882D7 , bda:LGFE9C256CE2D1E96E ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
+    
+    bdr:EV4ECC40E96FA6EE02
+        a                   :PersonBirth ;
+        :notAfter           "1199"^^xsd:gYear ;
+        :notBefore          "1100"^^xsd:gYear .
+    
+    bdr:NM18DB37BEE00FE306
+        a                   :PersonPrimaryName ;
+        rdfs:label          "paN+Di ta mi mnyam khol po/"@bo-x-ewts .
+    
+    bdr:NM2E1E25706EC53DC3
+        a                   :PersonPrimaryName ;
+        rdfs:label          "mi mnyam khol po/"@bo-x-ewts .
     
     bdr:NM8EFA2EF5A8CEC01A
         a                   :PersonPrimaryName ;
         rdfs:label          "atuladasa"@sa-alalc97 .
     
-    bdr:NT2E1E25706EC53DC3
+    bdr:NT1A27258278583943
         a                   :Note ;
         :noteText           "Indian Panditas"@en .
     
     bdr:P8165  a            :Person ;
-        skos:prefLabel      "atuladasa"@sa-alalc97 ;
+        skos:prefLabel      "mi mnyam khol po/"@bo-x-ewts , "atuladasa"@sa-alalc97 ;
         :isRoot             true ;
-        :note               bdr:NT2E1E25706EC53DC3 ;
+        :note               bdr:NT1A27258278583943 ;
+        :personEvent        bdr:EV4ECC40E96FA6EE02 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM8EFA2EF5A8CEC01A .
+        :personName         bdr:NM18DB37BEE00FE306 , bdr:NM2E1E25706EC53DC3 , bdr:NM8EFA2EF5A8CEC01A ;
+        :personTeacherOf    bdr:P2551 .
 }
