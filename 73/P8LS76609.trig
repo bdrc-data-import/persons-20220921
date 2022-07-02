@@ -12,7 +12,13 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P8LS76609 {
-    bda:LG0E38F8D3178EA572
+    bda:LGB31F134CFF05842E
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-07-01T08:30:10.91Z"^^xsd:dateTime ;
+        adm:logMessage      "added name, date of birth and death, note"@en ;
+        adm:logWho          bdu:U00019 .
+    
+    bda:LGBCBC1FC78A87FEFC
         a                   adm:InitialDataCreation ;
         adm:logDate         "2022-02-16T15:08:37.776Z"^^xsd:dateTime ;
         adm:logMessage      "created new person record"@en ;
@@ -21,26 +27,29 @@ bdg:P8LS76609 {
     bda:P8LS76609  a        adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P8LS76609 ;
-        adm:facetIndex      8 ;
+        adm:facetIndex      12 ;
         adm:gitPath         "73/P8LS76609.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P8LS76609 ;
-        adm:logEntry        bda:LG0E38F8D3178EA572 ;
+        adm:logEntry        bda:LGB31F134CFF05842E , bda:LGBCBC1FC78A87FEFC ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV41E4189D1E2E65D3
+    bdr:EV0E38F8D3178EA572
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G77 .
+    
+    bdr:EV130866357403F348
         a                   :PersonOccupiesSeat ;
         :eventWhere         bdr:G4249 .
     
-    bdr:EV87309FB7288E2810
-        a                   :PersonBirth ;
-        :notAfter           "1999"^^xsd:gYear ;
-        :notBefore          "1900"^^xsd:gYear .
+    bdr:EV41E4189D1E2E65D3
+        a                   :PersonDeath ;
+        :onYear             "1977"^^xsd:gYear .
     
     bdr:EVCE48A4D9EE378DF8
-        a                   :PersonOccupiesSeat ;
-        :eventWhere         bdr:G77 .
+        a                   :PersonBirth ;
+        :onYear             "1911"^^xsd:gYear .
     
     bdr:NM027EB3AF409C512D
         a                   :PersonTitle ;
@@ -54,9 +63,18 @@ bdg:P8LS76609 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "dga' byang rab 'byams pa blo bzang don grub/"@bo-x-ewts .
     
+    bdr:NM87309FB7288E2810
+        a                   :PersonOtherName ;
+        rdfs:label          "dga' byang pha ra rnam grwa mkhan zur bsam gtan chos 'phel/"@bo-x-ewts .
+    
+    bdr:NTEED106CC3394DB4A
+        a                   :Note ;
+        :noteText           "See work number W8LS77319, p.i-iv"@en .
+    
     bdr:P8LS76609  a        :Person ;
         skos:prefLabel      "dga' byang rab 'byams pa blo bzang don grub/"@bo-x-ewts ;
         :isRoot             true ;
-        :personEvent        bdr:EV41E4189D1E2E65D3 , bdr:EV87309FB7288E2810 , bdr:EVCE48A4D9EE378DF8 ;
-        :personName         bdr:NM027EB3AF409C512D , bdr:NM382F8F8F1C310F94 , bdr:NM78A6DE5C20A3943E .
+        :note               bdr:NTEED106CC3394DB4A ;
+        :personEvent        bdr:EV0E38F8D3178EA572 , bdr:EV130866357403F348 , bdr:EV41E4189D1E2E65D3 , bdr:EVCE48A4D9EE378DF8 ;
+        :personName         bdr:NM027EB3AF409C512D , bdr:NM382F8F8F1C310F94 , bdr:NM78A6DE5C20A3943E , bdr:NM87309FB7288E2810 .
 }
