@@ -12,35 +12,53 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 bdg:P4611 {
-    bda:LG9D4E7C398EBB4499
-        a                   adm:InitialDataCreation ;
-        adm:logWho          bdu:U00001 .
+    bda:LG7690952FF4B43F69
+        a                   adm:UpdateData ;
+        adm:logDate         "2022-09-29T15:43:09.403Z"^^xsd:dateTime ;
+        adm:logMessage      "added date and note"@en ;
+        adm:logWho          bdu:U00016 .
     
-    bda:LGB022AEA1C27292A4
+    bda:LG7C6EFD95AD14BCEF
         a                   adm:UpdateData ;
         adm:logDate         "2014-11-10T12:21:05.431Z"^^xsd:dateTime ;
         adm:logMessage      "update birth place's name"@en ;
         adm:logWho          bdu:U00007 .
     
+    bda:LGB3DDF044C437BEE5
+        a                   adm:InitialDataCreation ;
+        adm:logWho          bdu:U00001 .
+    
     bda:P4611  a            adm:AdminData ;
         :isRoot             true ;
         adm:adminAbout      bdr:P4611 ;
-        adm:facetIndex      10 ;
+        adm:facetIndex      15 ;
         adm:gitPath         "ee/P4611.trig" ;
         adm:gitRepo         bda:GR0006 ;
         adm:graphId         bdg:P4611 ;
-        adm:logEntry        bda:LG9D4E7C398EBB4499 , bda:LGB022AEA1C27292A4 ;
+        adm:logEntry        bda:LG7690952FF4B43F69 , bda:LG7C6EFD95AD14BCEF , bda:LGB3DDF044C437BEE5 ;
         adm:metadataLegal   bda:LD_BDRC_CC0 ;
         adm:status          bda:StatusReleased .
     
-    bdr:EV7564A07E839A0994
+    bdr:EV0DAC351C1F89CF46
         a                   :PersonBirth ;
         :eventWhere         bdr:G1329 ;
         :onYear             "1734"^^xsd:gYear .
     
+    bdr:EV5EB46119DD779900
+        a                   :PersonOccupiesSeat ;
+        :eventWhere         bdr:G2KR46 .
+    
+    bdr:EVE3EE86D359B96ED5
+        a                   :PersonDeath ;
+        :onYear             "1803"^^xsd:gYear .
+    
     bdr:NM671624EA9435CA4C
         a                   :PersonPrimaryName ;
         rdfs:label          "blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts .
+    
+    bdr:NM7564A07E839A0994
+        a                   :PersonPersonalName ;
+        rdfs:label          "grags pa dar rgyas/"@bo-x-ewts .
     
     bdr:NM82874D8CD8638102
         a                   :PersonPersonalName ;
@@ -50,28 +68,32 @@ bdg:P4611 {
         a                   :PersonPrimaryTitle ;
         rdfs:label          "er te ni jo bo bla ma blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts .
     
-    bdr:NT0DAC351C1F89CF46
+    bdr:NT80EE4FCA340E6BBB
+        a                   :Note ;
+        :noteSource         bdr:MW20115 ;
+        :noteText           "dates"@en .
+    
+    bdr:NT9D4E7C398EBB4499
+        a                   :Note ;
+        :noteText           "gsung 'bum is supposed to have filled more than 30 volumes."@en .
+    
+    bdr:NTB022AEA1C27292A4
         a                   :Note ;
         :contentLocationStatement  "p. 21 (1st group)" ;
         :noteSource         bdr:MW27905 ;
         :noteText           "Old TSD Schools table tree: \n\n-- Bka'-gdams-pa\n\n-- Dga'-ldan-pa"@en .
     
-    bdr:NT5EB46119DD779900
+    bdr:NTD7B0AB628C9E5749
         a                   :Note ;
-        :noteSource         bdr:MW20115 ;
-        :noteText           "dates"@en .
-    
-    bdr:NTE3EE86D359B96ED5
-        a                   :Note ;
-        :noteText           "gsung 'bum is supposed to have filled more than 30 volumes."@en .
+        :noteText           "mongol master, the first of the incarnation lineage of erdeni ju monastery; he was born in the territory of the tushiyetu khan in khalkha\naccording to ye shes thabs mkhas his dates are 1723-1803"@en .
     
     bdr:P4611  a            :Person ;
         skos:prefLabel      "er te ni jo bo bla ma blo bzang grags pa bstan pa dar rgyas/"@bo-x-ewts ;
         :associatedTradition  bdr:TraditionGeluk ;
         :isRoot             true ;
-        :note               bdr:NT0DAC351C1F89CF46 , bdr:NT5EB46119DD779900 , bdr:NTE3EE86D359B96ED5 ;
-        :personEvent        bdr:EV7564A07E839A0994 ;
+        :note               bdr:NT80EE4FCA340E6BBB , bdr:NT9D4E7C398EBB4499 , bdr:NTB022AEA1C27292A4 , bdr:NTD7B0AB628C9E5749 ;
+        :personEvent        bdr:EV0DAC351C1F89CF46 , bdr:EV5EB46119DD779900 , bdr:EVE3EE86D359B96ED5 ;
         :personGender       bdr:GenderMale ;
-        :personName         bdr:NM671624EA9435CA4C , bdr:NM82874D8CD8638102 , bdr:NMEB1085D455B9C40D ;
+        :personName         bdr:NM671624EA9435CA4C , bdr:NM7564A07E839A0994 , bdr:NM82874D8CD8638102 , bdr:NMEB1085D455B9C40D ;
         :personStudentOf    bdr:P411 , bdr:P4612 , bdr:P4613 , bdr:P4614 .
 }
